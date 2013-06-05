@@ -480,28 +480,15 @@ input[type="text"], textarea {
     list-style: none;
     margin: 0;
     font-family: Helvetica, Arial, "Lucida Grande", sans-serif; }
-    .mobile-nav ul li {
-      font-size: 13px;
-      line-height: 19.5px;
-      font-size: 1.3rem;
-      line-height: 1.95rem; }
-      .mobile-nav ul li a,
-      .mobile-nav ul li a:visited {
-        color: #d9d9d9;
-        display: block;
-        padding: 10px 0; }
+    .mobile-nav ul a, .mobile-nav ul a:visited {
+      color: #fff;
+      display: block;
+      padding: 10px 0; }
     .mobile-nav ul > li {
       border-top: 1px solid #4f4f4f;
       border-bottom: 1px solid #1c1c1c; }
-      .mobile-nav ul > li:first {
-        border-top: none; }
-      .mobile-nav ul > li a,
-      .mobile-nav ul > li a:visited {
+      .mobile-nav ul > li a, .mobile-nav ul > li a:visited {
         padding-left: 15px; }
-    .mobile-nav ul .parent {
-      background-image: url("../../images/downarrow.png");
-      background-repeat: no-repeat;
-      background-position: 95% 15px; }
     .mobile-nav ul .current_page_item {
       border-top: none; }
 
