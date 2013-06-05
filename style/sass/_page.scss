@@ -1,0 +1,13 @@
+// PAGE (content+sidebars)
+//
+// Styling of the page area (formerly content-container but changed to be less confusing)
+
+.content{
+	@include clearfix();
+	@include container();
+}
+
+	.main-content{
+		@include at-breakpoint($tablet){ @include span-columns(5,8); }	
+		@include at-breakpoint($desktop){ @include span-columns(8,12); } 
+	}

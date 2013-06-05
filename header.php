@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width" user-scalable="no" />
+	<title>
+	<?php
+		global $page, $paged;
+		wp_title( '|', true, 'right' );
+		bloginfo( 'name' );
+		$site_description = get_bloginfo( 'description', 'display' ); 
+		if ( $site_description && ( is_home() || is_front_page() ) ){ echo " | $site_description"; }
+		if ( $paged >= 2 || $page >= 2 ){ echo ' | ' . sprintf( 'Page %s', max( $paged, $page ) ); }
+	?>
+	</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
+	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/style.css" />
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+	<?php  wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+
+<!-- visible on mobile only -->
+
+<header class="mobile-header">
+	
+	<a href="#" class="mobile-header--button">Menu</a>
+	
+</header>
+
+<nav class="mobile-nav">
+	<ul>
+		<?php $mobile_pages = wp_list_pages('title_li='); ?>
+	</ul>
+</nav>
+
+<!-- .visible on mobile only -->
+	
+<header class="site-header">
+	
+	<a href="<?php echo get_home_url(); ?>">
+		<img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Logo">
+	</a>
+
+	<nav class="primary-nav">
+		<?php wp_nav_menu(); ?>
+	</nav>
+</header>

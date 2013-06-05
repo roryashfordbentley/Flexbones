@@ -1,0 +1,113 @@
+// SLIDER CONTROLS
+//
+// Basic slider styling
+
+.slider{
+	@include box-shadow(#c2c2c2 1px 1px 5px);
+	margin-bottom: 20px;
+}
+
+.nivoSlider {
+	position:relative;
+	//background:#fff url(../../images/loading.gif) no-repeat 50% 50%;
+	background: green;
+}
+.slider .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.slider .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.slider .nivo-controlNav {
+	text-align: center;
+	padding: 20px 0;
+}
+.slider .nivo-controlNav a {
+	display:inline-block;
+	
+}
+.slider .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.slider .nivo-directionNav a {
+	display:block;
+	overflow: visible;
+	width:41px;
+	height:120px;
+	background: url(../../images/arrows.png) no-repeat;
+	background-position: 0 0;
+	text-indent:-9999px;
+	border:0;
+	opacity: 0.5;
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.slider:hover .nivo-directionNav a { opacity: 1; }
+
+.slider a.nivo-nextNav {
+	background-position:-41px 0;
+	right:0px;
+}
+
+.slider a.nivo-prevNav {
+	left:0px;
+}
+
+.slider .nivo-caption {
+    background: none;
+    opacity: 1;
+	width: 40%;
+	bottom: 12%;
+	left:8%;
+	
+	h3{	
+		background: $dark_gray;
+		display: inline;
+		line-height: 64px;
+		padding: 0 5px;
+		font-size: 48px;
+		
+		font-weight: 600;
+		font-family: "kulturista-web", Helvetica, Arial, "Lucida Grande", sans-serif;
+		color: #fff;
+
+		@include font-size(2,2.2);
+		@include at-breakpoint($tablet){ @include font-size(2.6,3.5); }
+		@include at-breakpoint($desktop){ @include font-size(3.5,5); }	
+	}
+	
+}
+
+.slider .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+
+.slider .nivo-caption a:hover {
+    color:#fff;
+}
+
+.slider .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+
+.slider .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+
+.slider .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}

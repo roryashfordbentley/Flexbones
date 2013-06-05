@@ -1,0 +1,85 @@
+// Typography
+// 
+// Global font styles go here
+
+a,
+a:visited{
+	color: $link;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: $link_hover;
+}
+
+p,h1,h2,h3,h4,h4,h5,h6,ul,ol,blockquote{
+	margin-bottom: 20px;
+}
+
+p{
+	@include font-size(1);
+	font-weight: normal;
+	color: $text;
+	
+}
+
+strong{ font-weight: bold; }
+
+em{ font-style: italic; }
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $heading_font;
+	color: $text;
+	font-weight: 800;
+	letter-spacing: -0.15rem;
+}
+
+h1{ @include font-size(3); }
+
+h2{ @include font-size(2); }
+
+h3{ @include font-size(1.7); }
+
+h4{ @include font-size(1.4); }
+
+h5{ @include font-size(1); }
+
+ul {	
+	list-style-type: disc;
+	@include font-size(1);
+	font-weight: normal;
+	margin-left: 20px;
+	
+	li{	
+		span{ color: $text;	}
+	}
+}
+
+ol {
+	list-style-type: decimal;
+	@include font-size(1);
+	font-weight: normal;
+	margin: 0 0 20px 40px;
+	
+	li{
+		span{ color: $text; }
+	}
+	
+	li ol{
+		list-style-type: decimal;
+		margin: 0 0 0 20px;
+	}
+}
+
+blockquote {
+	margin: 0 0 20px 20px;
+	padding: 20px 0;
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	
+	@include at-breakpoint($tablet){ margin: 0 0 20px 0; }
+	@include at-breakpoint($desktop){ width: 40%; float:right; }
+	
+	p{ @include font-size(1.4); text-align: right; }
+}

@@ -1,0 +1,19 @@
+// ASIDE
+//
+// Aside is used to style all the sidebars/ Asides throughout the site
+// If a sidebar is big enough to require its own template us _sidebar-{name}.scss
+
+.sidebar {
+	
+	//background: $lighter_gray;
+	@include at-breakpoint($tablet){ @include span-columns(3 omega,8); }	
+	@include at-breakpoint($desktop){ @include span-columns(4 omega,12); }
+	
+	> ul {
+		margin: 0;
+		> li{
+			margin: 0 0 20px 0;
+			list-style: none;
+		}
+	}
+}

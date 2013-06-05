@@ -1,0 +1,31 @@
+// COLOUR
+// 
+// Colours and gradients are defined as variables for reuse throughout the site.
+// Rather than calling colours directly on anchors we use a reference for convenience.
+
+// Solid Colours
+
+$red: 		#E1433E;
+$orange: 	#FEAD3E;
+$yellow: 	#FDF148;
+$green: 	#007B5F;
+$blue: 		#2382CD;
+$purple: 	#4F4376;
+
+
+
+// Gradients
+
+$blue_gradient:			linear-gradient(lighten($blue,10%), $blue 50%);
+
+// Links / Anchors
+
+$link: 					$blue;
+$link_hover: 			$dark_blue;
+$link_visited: 			$blue;
+
+// Element Colours / Gradients
+
+$body_bg:				$lightest_gray;
+$text:					$dark_gray;
+	 

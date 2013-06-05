@@ -1,0 +1,19 @@
+// Blog
+// 
+// The blog template is used to contain the styles of the post-archives, post-pages etc
+
+.blog-content{
+
+	@include at-breakpoint($tablet){ @include span-columns(6,8); }	
+	@include at-breakpoint($desktop){ @include span-columns(8,12); } 
+}
+
+// ARTICLE
+.main-article {
+	padding: 30px;
+	background: #fff;
+	margin-bottom: 20px;
+	@include box-shadow(#c2c2c2 1px 1px 5px);
+}
+
+// BLOG

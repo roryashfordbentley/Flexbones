@@ -1,0 +1,30 @@
+/* _config.scss */
+
+
+// SUSY Grid Settings
+
+$total-columns: 6;  
+$column-width: 	60%;  
+$gutter-width: 	20%;  
+$grid-padding: 	0;
+
+//$media-layout: min-width mq | total columns | max-width mq
+$mobile: 	0 6 650px;
+$tablet: 	651px 8 900px;
+$desktop: 	901px 12;
+
+// Font Stack
+
+$heading_font: 'Open Sans', Helvetica, Arial, "Lucida Grande", sans-serif;
+$body_font: helvetica, arial, sans-serif;
+
+// Font Sizes
+
+$desktop_font_size: 100%; // 16px
+$tablet_font_size: 	93.75; // 15px
+$mobile_font_size: 	87.5%; // 14px
+
+
+// Box sizing
+$border_box: true;
+

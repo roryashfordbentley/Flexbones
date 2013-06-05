@@ -1,0 +1,65 @@
+// GLOBAL
+// 
+// Global styles are tools/declarations that appear near the top of the stylesheet
+// useful for global declarations and helper classes
+
+*{ @include box-sizing(border-box); }
+
+img{ max-width: 100%; }
+
+html { 
+	font-size: $mobile_font_size;
+	@include at-breakpoint($tablet){ font-size: $tablet_font_size; }
+	@include at-breakpoint($desktop){ font-size: $desktop_font_size; }
+}
+
+body {
+	//background: $body_bg;
+	width: 100%;
+	color: $text;
+	font-family: helvetica, arial, sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	@include clearfix();
+}
+
+.alignleft{
+	float: none;
+	margin: 0 0 20px 0;
+	display: block;
+	@include at-breakpoint($tablet){ float: left; padding: 0 20px 40px 0; }
+	@include at-breakpoint($desktop){ float: left; padding: 0 20px 40px 0; }
+}
+
+.alignright{
+	float: none;
+	margin: 0 0 20px 0;
+	display: block;
+	@include at-breakpoint($tablet){ float: right; padding: 0 0 40px 20px; }
+	@include at-breakpoint($desktop){ float: right; padding: 0 0 40px 20px; }
+}
+
+// MOBILE HIDE/SHOW 
+
+.show-mobile{
+	display: block;
+	@include at-breakpoint($tablet){ display: none; }
+	@include at-breakpoint($desktop){ display: none; }
+}
+
+.hide-mobile{
+	display: none;
+	@include at-breakpoint($tablet){ display: block; }
+	@include at-breakpoint($desktop){ display: block; }
+}
+
+// CONTAINERS
+
+.header-container, .slider-container, .content-container, .footer-container{
+	@include container($total-columns, $tablet, $desktop);
+	//@include susy-grid-background;
+	width: 95%;
+	@include at-breakpoint($desktop){ width: 85%; max-width: 1200px; margin: 0 auto;  }
+	@include at-breakpoint($tablet){ max-width: 95%; margin: 0 auto;  }
+	@include clearfix();
+}	

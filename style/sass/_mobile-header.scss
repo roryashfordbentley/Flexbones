@@ -1,0 +1,20 @@
+// MOBILE TOP BAR
+//
+// Mobile Nav Toggle + Search field
+	
+	.mobile-header{
+		
+		@include background( $main_nav_bg );
+		@include at-breakpoint($tablet){  display: none; }
+		@include at-breakpoint($desktop){ display: none; }
+		@include clearfix();
+	}
+
+		.mobile-header--button{
+			display: block;
+			margin:  10px;
+			padding: 6px 10px;
+			border: 1px solid #000;
+			background: black;
+			width: 25%;
+		}

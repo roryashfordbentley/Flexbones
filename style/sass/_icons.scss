@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "icons";
+	src:url("../../fonts/icons.eot");
+	src:url("../../fonts/icons.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/icons.svg#icons") format("svg"),
+		url("../../fonts/icons.woff") format("woff"),
+		url("../../fonts/icons.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/*[data-icon]:before {
+	font-family: 'icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}*/
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'icons';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-star:before {
+	content: "\31";
+}
+.icon-cancel:before {
+	content: "\32";
+}
+.icon-checkmark:before {
+	content: "\33";
+}
+.icon-arrow-left:before {
+	content: "\34";
+}
+.icon-arrow-down:before {
+	content: "\35";
+}
+.icon-arrow-up:before {
+	content: "\6c";
+}
+.icon-arrow-right:before {
+	content: "\37";
+}
+.icon-facebook:before {
+	content: "\38";
+}
+.icon-twitter:before {
+	content: "\39";
+}
+.icon-linkedin:before {
+	content: "\76";
+}
+.icon-facebook-2:before {
+	content: "\62";
+}
+.icon-twitter-2:before {
+	content: "\6e";
+}
+.icon-undo:before {
+	content: "\36";
+}
+.icon-redo:before {
+	content: "\6d";
+}
