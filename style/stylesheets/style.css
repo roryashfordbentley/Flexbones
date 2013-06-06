@@ -492,7 +492,7 @@ input[type="text"], textarea {
     .mobile-nav ul .current_page_item {
       border-top: none; }
 
-.site-header--logo {
+.site-header--logo__big {
   display: block;
   padding: 20px 0; }
 
