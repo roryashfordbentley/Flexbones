@@ -2,3 +2,9 @@
 //
 // header specific declarations. Note: navigation has its own document _navigation.scss
 
+.site-header{}
+
+	.site-header--logo{
+		display: block;
+		padding: 20px 0;
+	}

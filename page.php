@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-<section class="slider-container">
-	<section class="slider">
-		<?php echo do_shortcode('[nivoslider slug="home-slider"]'); ?>
-	</section>
-</section>
-
 <section class="content-container">
 	<section class="content">
 	

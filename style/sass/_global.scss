@@ -55,11 +55,11 @@ body {
 
 // CONTAINERS
 
-.header-container, .slider-container, .content-container, .footer-container{
+.wrapper{
 	@include container($total-columns, $tablet, $desktop);
 	//@include susy-grid-background;
 	width: 95%;
 	@include at-breakpoint($desktop){ width: 85%; max-width: 1200px; margin: 0 auto;  }
-	@include at-breakpoint($tablet){ max-width: 95%; margin: 0 auto;  }
+	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto;  }
 	@include clearfix();
 }	

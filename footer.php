@@ -1,10 +1,10 @@
-</section>
-<section class="footer-container">
 	<footer class="site-footer">
-			<p>All content &copy; Code Blue Group 2012</p>
+		<p>All content &copy; Code Blue Group 2012</p>
 	</footer>
 </section>
+
 <pre><?php //print_r( debug_backtrace() ); ?></pre>
+
 <!-- Application Javascript, safe to override -->
 <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/scripts.js"></script>
 <script type="text/javascript">
@@ -20,10 +20,6 @@ jQuery(document).ready(function(){
 	});
 	
 	jPM.on();
-	
-	
-	
-	
 });
 
 </script>

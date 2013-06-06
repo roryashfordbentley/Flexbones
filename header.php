@@ -42,14 +42,14 @@
 </nav>
 
 <!-- .visible on mobile only -->
-	
-<header class="site-header">
-	
-	<a href="<?php echo get_home_url(); ?>">
-		<img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Logo">
-	</a>
+<section class="wrapper">
+	<header class="site-header">
+		
+		<a href="<?php echo get_home_url(); ?>" class="site-header--logo">
+			<img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Logo">
+		</a>
 
-	<nav class="primary-nav">
-		<?php wp_nav_menu(); ?>
-	</nav>
-</header>
+		<nav class="primary-nav">
+			<?php wp_nav_menu(); ?>
+		</nav>
+	</header>
