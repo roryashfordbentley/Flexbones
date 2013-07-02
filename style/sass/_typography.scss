@@ -1,6 +1,8 @@
-// Typography
-// 
-// Global font styles go here
+/* -- _TYPOGRAPHY.SCSS -- */
+
+/*
+ * All Font / Type styles go here
+ */
 
 a,
 a:visited{
@@ -14,14 +16,13 @@ a:hover{
 }
 
 p,h1,h2,h3,h4,h4,h5,h6,ul,ol,blockquote{
-	margin-bottom: 20px;
+	margin: $base_unit 0;
+	line-height: 150%;
 }
 
 p{
-	@include font-size(1);
+	@include font-size(1.6);
 	font-weight: normal;
-	color: $text;
-	
 }
 
 strong{ font-weight: bold; }
@@ -30,56 +31,49 @@ em{ font-style: italic; }
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
-	color: $text;
-	font-weight: 800;
-	letter-spacing: -0.15rem;
+	font-weight: bold;
 }
 
-h1{ @include font-size(3); }
+h1{ @include font-size(4); }
 
-h2{ @include font-size(2); }
+h2{ @include font-size(3); }
 
-h3{ @include font-size(1.7); }
+h3{ @include font-size(2); }
 
-h4{ @include font-size(1.4); }
+h4{ @include font-size(1.8); }
 
-h5{ @include font-size(1); }
+h5{ @include font-size(1.6); }
 
 ul {	
 	list-style-type: disc;
-	@include font-size(1);
+	@include font-size(1.6);
 	font-weight: normal;
-	margin-left: 20px;
+	margin-left: 2 * $base_unit;
 	
 	li{	
-		span{ color: $text;	}
+		span{ } //give the span and li differnt colours if you like
 	}
 }
 
 ol {
 	list-style-type: decimal;
-	@include font-size(1);
+	@include font-size(1.6);
 	font-weight: normal;
-	margin: 0 0 20px 40px;
+	margin-left: 2 * $base_unit;
 	
 	li{
-		span{ color: $text; }
-	}
-	
-	li ol{
-		list-style-type: decimal;
-		margin: 0 0 0 20px;
+		span{  } //give the span and li differnt colours if you like
 	}
 }
 
 blockquote {
-	margin: 0 0 20px 20px;
-	padding: 20px 0;
-	border-top: 1px solid $gray;
-	border-bottom: 1px solid $gray;
+	margin: 0 0 (2 * $base_unit) (2 * $base_unit);
+	padding: (2 * $base_unit) 0;
+	border-top: 1px solid  #666;
+	border-bottom: 1px solid #666;
 	
-	@include at-breakpoint($tablet){ margin: 0 0 20px 0; }
+	@include at-breakpoint($tablet){ margin: 0 0 (2 * $base_unit) 0; }
 	@include at-breakpoint($desktop){ width: 40%; float:right; }
 	
-	p{ @include font-size(1.4); text-align: right; }
+	p{ @include font-size(1.6); text-align: right; }
 }

@@ -28,18 +28,9 @@ b. Javascript libraries
 --------
 
 * [Advanced Custom Fields] (http://www.advancedcustomfields.com/)
-* [Nivo Slider*] (http://nivo.dev7studios.com/pricing/)
-
-*Nivo slider can easily be replaced at this time by any other slider.
 
 4. Development Roadmap
 --------
 
-* Seperate utility SASS from the basic styling elements to increase code reuseability - **Priority, High**
-* Improve Theme to account for as much out of the box Wordpress functionality as possible - **Priority, High**
-* Check Wordpress code for deprecated/ outdated code blocks - **Priority, High**
-
-* Replace Nivo with a free open source slider - **Priority, Medium**
-* Refactor HTML - **Priority, Low**
-* Refactor stylesheets  - **Priority, Low**
-* Include a common design pattern library. E.g. horizontal/vertical menus. - **Priority, Low**
+* Use OOCSS + BEM rules
+* Remove all the bloat

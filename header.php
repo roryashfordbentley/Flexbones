@@ -18,12 +18,11 @@
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/style.css" />
+	
+	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
 	<![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-	<?php  wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
@@ -44,11 +43,7 @@
 <!-- .visible on mobile only -->
 <section class="wrapper">
 	<header class="site-header">
-		
-		<a href="<?php echo get_home_url(); ?>" class="site-header--logo">
-			<img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Logo">
-		</a>
-
+		<a href="<?php echo get_home_url(); ?>" class="site-header__logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="Logo"></a>
 		<nav class="primary-nav">
 			<?php wp_nav_menu(); ?>
 		</nav>

@@ -1,6 +1,8 @@
-// Tables
-//
-// Table Design based on Zurb Foundation
+/* -- _TABLES.SCSS -- */
+
+/*
+ * All Font / Type styles go here
+ */
 
 table { 
 	width: 100%;
@@ -10,42 +12,3 @@ table {
 	margin-bottom: 20px;	
 }
 
-table thead, 
-table tfoot { background: lighten(#666, 30%); }
-
-table thead tr th, 
-table tfoot tr th, 
-table tbody tr td, 
-table tr td, 
-table tfoot tr td { 
-	display: table-cell; 
-	font-size: 14px; 
-	line-height: 18px; 
-	text-align: left;
-}
-
-table thead tr th, 
-table tfoot tr td { 
-	padding: 8px 10px 9px; 
-	font-size: 14px; 
-	font-weight: bold; 
-	color: #ccc; 
-}
-
-table thead tr th:first-child, 
-table tfoot tr td:first-child { border-left: none; }
-
-table thead tr th:last-child, 
-table tfoot tr td:last-child { border-right: none; }
-
-table tbody tr.even, 
-table tbody tr.alt { background: lighten(#666, 35%); }
-
-table tbody tr:nth-child(even) { background: lighten(#666, 35%); }
-
-table tbody tr td { 
-	color: #ccc; 
-	padding: 9px 10px; 
-	vertical-align: 
-	top; border: none; 
-}

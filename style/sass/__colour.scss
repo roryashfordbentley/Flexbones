@@ -1,25 +1,11 @@
-// COLOUR
-// 
-// Colours and gradients are defined as variables for reuse throughout the site.
-// Rather than calling colours directly on anchors we use a reference for convenience.
+// HELPER - COLOUR
 
-// Solid Colours
+// Core design/ brand colours are defined here
+// Default Link Colours are also defined here
+
 
 $blue:					#03a7ff;
 $dark_blue:				#077bdd;
-
-//$darkest_blue: 		#1d273e;
-$gray:					#9a9a9a;
-$dark_gray:				#353535;
-
-$lightest_gray:			#f3f4f6;
-$lighter_gray:			#dedfe2;
-$light_gray:			#dedfe2;
-
-
-// Gradients
-
-$darkest_blue_grad:		linear-gradient(lighten($blue,10%), $blue 50%);
 
 // Links / Anchors
 
@@ -28,10 +14,4 @@ $link_hover: 			$dark_blue;
 $link_visited: 			$blue;
 
 // Element Colours / Gradients
-
-$body_bg:				$lightest_gray;
-
-$text:					$dark_gray;
-
-$main_nav_bg: 			$dark_gray;	
-$main_nav_link:			#fff;		 
+ 

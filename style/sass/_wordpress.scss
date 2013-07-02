@@ -1,0 +1,39 @@
+.alignleft{
+	float: none;
+	margin: 0 0 20px 0;
+	display: block;
+	@include at-breakpoint($tablet){ float: left; padding: 0 20px 40px 0; }
+	@include at-breakpoint($desktop){ float: left; padding: 0 20px 40px 0; }
+}
+
+.alignright{
+	float: none;
+	margin: 0 0 20px 0;
+	display: block;
+	@include at-breakpoint($tablet){ float: right; padding: 0 0 40px 20px; }
+	@include at-breakpoint($desktop){ float: right; padding: 0 0 40px 20px; }
+}
+
+.wp-caption{
+	background: red;
+}
+
+	.wp-caption-text{
+		color: #fff;
+	}
+
+.sticky{
+	font-weight: bold;
+} 
+
+.gallery-caption{
+	background: red;
+}
+
+.bypostauthor{
+	font-weight: bold;
+}
+
+.aligncenter{
+	margin: 0 auto;
+}

@@ -58,7 +58,6 @@
 /* SET THE EXCERPT LENGTH
 /*==================================================================== */
 
-
 	function cbg_excerpt_length( $length ) {
 		return 55;
 	}
@@ -117,9 +116,8 @@ function filter_ptags_on_images($content){
 add_filter('the_content', 'filter_ptags_on_images');
 
 /*==================================================================== */
-/* REMOVE IMAGE DIMENSIONS 
+/* REMOVE IMAGE DIMENSIONS (for responsive imgs)
 /*==================================================================== */
-
 
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
 add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 ); 
@@ -129,22 +127,11 @@ function remove_thumbnail_dimensions( $html ) {
 	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); return $html; 
 }
 
-
 /*==================================================================== */
 /* REMOVE ADMIN BAR 
 /*==================================================================== */
 
 add_filter('show_admin_bar', '__return_false');
-
-/*==================================================================== */
-/* MEDIA OPTIONS
-/*==================================================================== */
-
-/*if(!get_option("medium_size_crop")){
-    add_option("medium_size_crop", "1");
-} else {
-    update_option("medium_size_crop", "1");
-}*/
 
 /*==================================================================== */
 /* SUB MENU
@@ -174,7 +161,7 @@ function sub_menu(){
 
 function span_li($content){
 	
-	$content = str_replace( '<li>','<li><span>' ,$content );
+	$content = str_replace( '<li>','<li><span>',$content );
 	$content = str_replace( '</li>','</span></li>',$content );
 	return $content;
 	
@@ -204,3 +191,21 @@ function jquery_loader() {
  
 add_action('wp_enqueue_scripts', 'jquery_loader'); // For use on the Front end (ie. Theme)
 
+/*==================================================================== */
+/* Enque Stylesheet
+/*==================================================================== */
+
+function stylesheet_loader() {
+	wp_register_style( 
+		'page-style', 
+    	get_template_directory_uri() . '/style.css', 
+    	array(), 
+    	'3.0', 
+    	'all' 
+    );
+
+  // enqueing:
+  wp_enqueue_style( 'page-style' );
+}
+
+add_action( 'wp_enqueue_scripts', 'stylesheet_loader' );

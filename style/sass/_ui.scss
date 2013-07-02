@@ -1,0 +1,58 @@
+/* -- UI -- */
+
+/*
+ * forms, buttons, icons, breadcrumbs, pagination
+ */
+
+// Forms
+
+fieldset{
+	margin: $base_unit 0;
+}
+
+legend{
+	@extend h2;
+}
+
+label {
+	margin-bottom: $base_unit;
+	@include font-size(1.6);
+}
+
+input[type="text"], input[type="password"]{
+	border: 1px solid #ccc;
+	padding: $base_unit;
+	margin: $base_unit 0;
+}
+
+textarea{
+	border: 1px solid #ccc;
+	padding: $base_unit;
+	margin: $base_unit 0;
+}
+
+// BUTTONS
+	
+.button {
+	background: $blue;
+	padding: $base_unit;
+	margin: $base_unit 0;
+	display: inline-block;
+	@include font-size(1.6);
+	font-weight: bold;
+	color: #fff;
+
+	&:hover{
+		background: darken($blue,5%);
+		color: #fff;
+	}
+
+	&:visited{
+		color: #fff;
+	}
+}  
+
+	.button--warning{
+		background: red;
+	}
+

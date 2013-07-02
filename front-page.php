@@ -53,7 +53,7 @@
 			
 			<p>This is a text <a href="#">Link</a></p>
 				
-			<a href="#" class="button icon-button">This is a button <span aria-hidden="true" class="icon-arrow-right"></span></a>
+			<a href="#" class="button">This is a button</a>
 			
 			<form>
 				<fieldset>
@@ -86,13 +86,39 @@
 						<input type="checkbox" name="checkbox_3" /><label>Checkbox 3</label>
 					</div>
 					
-					
 				</fieldset>
 			</form>
+			
+			<table>
+	            <thead>
+	                <tr>
+	                    <th>File</th>
+	                    <th>Description</th>
+	                    <th>Size</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr>
+	                    <td>Content test</td>
+	                    <td>Content test</td>
+	                    <td>Content test</td>
+	                </tr>
+	                <tr>
+	                    <td>Content test</td>
+	                    <td>Content test</td>
+	                    <td>Content test</td>
+	                </tr>
+	                <tr>
+	                    <td>Content test</td>
+	                    <td>Content test</td>
+	                    <td>Content test</td>
+	                </tr>
+	            </tbody>
+        </table>
 
-			<footer>
-				<!-- author/ social etc -->
-			</footer>
+		<footer>
+			<!-- author/ social etc -->
+		</footer>
 			
 		<?php //endwhile; ?>
 	

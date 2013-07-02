@@ -1,10 +1,11 @@
-// MOBILE TOP BAR
-//
-// Mobile Nav Toggle + Search field
+/* -- _MOBILE-HEADER.SCSS -- */
+
+/*
+ * Style for a mobile header to contain menu button/ search etc
+ */
 	
 	.mobile-header{
-		
-		@include background( $main_nav_bg );
+		background: $blue;
 		@include at-breakpoint($tablet){  display: none; }
 		@include at-breakpoint($desktop){ display: none; }
 		@include clearfix();

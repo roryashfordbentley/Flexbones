@@ -1,8 +1,8 @@
-// Navigation
-//
-// Styles for each of the navigation items go here
+/* -- _NAVIGATION.SCSS -- */
 
-// HORIZONTAL NAV
+/*
+ * All nav menu styles go here
+ */
 
 .primary-nav{
 	
@@ -12,8 +12,8 @@
 	@include at-breakpoint($tablet){ display:block; }
 	@include at-breakpoint($desktop){ display: block; }
 	
-	border-top: 1px solid $gray;
-	border-bottom: 1px solid $gray;
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
 
 	ul{
 		list-style: none;
@@ -30,8 +30,8 @@
 	
 	.current-menu-item{
 		a,a:visited{
-			color: $text;
-			background: $gray;
+			color: #000;
+			background: $dark_blue;
 		}
 	}
 }
@@ -52,8 +52,8 @@
 		}
 
 		> li{
-			border-top: 1px solid lighten( $main_nav_bg, 10%);
-			border-bottom: 1px solid darken( $main_nav_bg, 10%);
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
 			
 			a, a:visited{ padding-left: 15px; }
 		}
