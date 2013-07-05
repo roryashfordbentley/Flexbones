@@ -1,7 +1,8 @@
-	<footer class="site-footer">
+<div class="site-footer">
+	<footer class="wrapper">
 		<p>All content &copy; Code Blue Group 2012</p>
 	</footer>
-</section>
+</div>
 
 <pre><?php //print_r( debug_backtrace() ); ?></pre>
 

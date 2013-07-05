@@ -34,7 +34,7 @@ body {
 
 // width with defined width (not 100% of page)
 
-.wrapper{
+.wrapper {
 	@include container($total-columns, $tablet, $desktop);
 	width: 95%;
 	@include at-breakpoint($desktop){ width: 85%; max-width: 1200px; margin: 0 auto;  }

@@ -203,10 +203,10 @@ a:hover {
 p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol, blockquote {
   margin: 10px 0; }
 
-p, ul, ol, blockquote {
+p, ul, ol {
   line-height: 150%; }
 
-h1, h2, legend, h3, h4, h5, h6 {
+h1, h2, legend, h3, h4, h5, h6, blockquote {
   font-family: helvetica, arial, sans-serif;
   font-weight: bold;
   line-height: 120%;
@@ -270,8 +270,8 @@ blockquote {
       width: 40%;
       float: right; } }
   blockquote p {
-    font-size: 16pxpx;
-    font-size: 1.6rem;
+    font-size: 24pxpx;
+    font-size: 2.4rem;
     text-align: right; }
 
 /* -- _TABLES.SCSS -- */

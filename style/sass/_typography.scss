@@ -19,11 +19,11 @@ p,h1,h2,h3,h4,h4,h5,h6,ul,ol,blockquote{
 	margin: $base_unit 0;
 }
 
-p,ul,ol,blockquote{
+p,ul,ol{
 	line-height: 150%;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,blockquote{
 	font-family: $heading_font;
 	font-weight: bold;
 	line-height: 120%;
@@ -80,5 +80,5 @@ blockquote {
 	@include at-breakpoint($tablet){ margin: 0 0 (2 * $base_unit) 0; }
 	@include at-breakpoint($desktop){ width: 40%; float:right; }
 	
-	p{ @include font-size(1.6); text-align: right; }
+	p{ @include font-size(2.4); text-align: right; }
 }
