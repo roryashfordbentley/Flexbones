@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 		// instantiate
 		var jPM = jQuery.jPanelMenu({
 		    menu: '.mobile-nav',
-		    trigger: '.mobile-header--button',
+		    trigger: '#jpanel-trigger', //if this css changes OBVIOUSLY it will break functionality
 		    keyboardShortcuts: false
 		});
 		

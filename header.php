@@ -29,11 +29,13 @@
 <!-- visible on mobile only -->
 
 <header class="mobile-header">
-	<a href="#" class="mobile-header__button">Menu</a>
+	<a href="#" id="jpanel-trigger" class="mobile-header__button">Menu</a>
 </header>
 
 <nav class="mobile-nav">
-	<?php wp_nav_menu(); ?>
+	<?php 
+	 	wp_nav_menu(); 
+	 ?>
 </nav>
 
 <!-- .visible on mobile only -->

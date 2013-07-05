@@ -5,8 +5,6 @@
 
 <pre><?php //print_r( debug_backtrace() ); ?></pre>
 
-<!-- Application Javascript, safe to override -->
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/scripts.js"></script>
 <script type="text/javascript">
 	/* Analytics */
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

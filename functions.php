@@ -32,15 +32,6 @@
 			// Add default posts and comments RSS feed links to head
 			add_theme_support( 'automatic-feed-links' );
 		
-			// Make theme available for translation
-			// Translations can be filed in the /languages/ directory
-			load_theme_textdomain( 'twentyten', get_template_directory() . '/languages' );
-		
-			$locale = get_locale();
-			$locale_file = get_template_directory() . "/languages/$locale.php";
-			if ( is_readable( $locale_file ) )
-				require_once( $locale_file );
-		
 			// This theme uses wp_nav_menu() in one location.
 			register_nav_menus( array(
 				'primary' => 'Primary Navigation',
@@ -48,8 +39,6 @@
 			
 			//register sidebars
 			register_sidebar();
-			
-		
 		}
 		
 	}
@@ -131,7 +120,7 @@ function remove_thumbnail_dimensions( $html ) {
 /* REMOVE ADMIN BAR 
 /*==================================================================== */
 
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 /*==================================================================== */
 /* SUB MENU
@@ -156,6 +145,17 @@ function sub_menu(){
 }
 
 /*==================================================================== */
+/* Add parent class to Wp list pages! great for recursive menus!
+/*==================================================================== */	
+
+function add_parent_class( $css_class, $page, $depth, $args ){
+    if ( ! empty( $args['has_children'] ) )
+        $css_class[] = 'parent slide_down';
+    return $css_class;
+}
+add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
+
+/*==================================================================== */
 /* Wrap Li's in spans from the content to allow for greater styling control
 /*==================================================================== */	
 
@@ -170,26 +170,25 @@ function span_li($content){
 add_filter( 'the_content', 'span_li' );
 
 /*==================================================================== */
-/* Add parent class to Wp list pages! great for recursive menus!
-/*==================================================================== */	
-
-function add_parent_class( $css_class, $page, $depth, $args ){
-    if ( ! empty( $args['has_children'] ) )
-        $css_class[] = 'parent slide_down';
-    return $css_class;
-}
-add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
-
-/*==================================================================== */
-/* Enque JQUERY UI
+/* Enque JS Files 
 /*==================================================================== */
 
-function jquery_loader() {
-    wp_enqueue_script('jquery-ui-core');  
-    wp_enqueue_script('jquery-ui-accordion');            
-}    
+
+function barebones_load_js() {
+ 	//register sitewide scripts and request JQUERY 1.8.3 as a dependency
+ 	// NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
+  	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'jquery-ui-core' );  
+	wp_enqueue_script( 'jquery-ui-accordion' );    
+  	wp_enqueue_script( 'sitewide-scripts' );
+  
+	/* if ( is_front_page() ) {
+		wp_enqueue_script('home-page-main-flex-slider');
+	}*/
  
-add_action('wp_enqueue_scripts', 'jquery_loader'); // For use on the Front end (ie. Theme)
+}
+ 
+add_action('wp_enqueue_scripts', 'barebones_load_js'); // For use on the Front end (ie. Theme)
 
 /*==================================================================== */
 /* Enque Stylesheet
