@@ -26,8 +26,8 @@ html {
 
 body {
 	width: 100%;
-	color: #000;
-	font-family: helvetica, arial, sans-serif;
+	color: #5a5a5a;
+	font-family: $body_font;
 	-webkit-font-smoothing: antialiased;
 	@include clearfix();
 }
@@ -36,9 +36,8 @@ body {
 
 .wrapper{
 	@include container($total-columns, $tablet, $desktop);
-	//@include susy-grid-background;
 	width: 95%;
-	@include at-breakpoint($desktop){ width: 85%; max-width: 120 * $base_unit; margin: 0 auto;  }
-	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto;  }
+	@include at-breakpoint($desktop){ width: 85%; max-width: 1200px; margin: 0 auto;  }
+	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto; }
 	@include clearfix();
 }	

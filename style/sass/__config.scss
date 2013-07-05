@@ -2,6 +2,10 @@
 // Document and Grid setup
 // Font default declarations
 
+// Base Unit
+
+$base_unit: 		10px;	//same as desktop font base
+
 // Grid settings (SUSY)
 
 $total-columns: 	6;  
@@ -21,13 +25,9 @@ $body_font: 		helvetica, arial, sans-serif;
 
 // Font Sizes
 
-$desktop_font_size: 62.5%; 	// 10px
-$tablet_font_size: 	56.2%; 	// 9px
-$mobile_font_size: 	50%; 	// 8px
-
-// Base Unit
-
-$base_unit: 		10px;	//same as desktop font base
+$desktop_font_size: $base_unit; 	// 10px
+$tablet_font_size: 	$base_unit - 1; // 9px
+$mobile_font_size: 	$base_unit - 2; // 8px
 
 // Box sizing
 $border_box: true;

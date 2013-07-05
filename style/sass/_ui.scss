@@ -16,19 +16,21 @@ legend{
 
 label {
 	margin-bottom: $base_unit;
-	@include font-size(1.6);
+	@include font-size(1.4);
 }
 
 input[type="text"], input[type="password"]{
 	border: 1px solid #ccc;
 	padding: $base_unit;
 	margin: $base_unit 0;
+	display: inline-block;
 }
 
 textarea{
 	border: 1px solid #ccc;
 	padding: $base_unit;
 	margin: $base_unit 0;
+	display: block;
 }
 
 // BUTTONS
@@ -50,9 +52,24 @@ textarea{
 	&:visited{
 		color: #fff;
 	}
-}  
+} 
 
-	.button--warning{
-		background: red;
+input[type="submit"]{
+	background: $blue;
+	padding: ($base_unit - 1) ($base_unit) ($base_unit) ($base_unit);
+	margin: $base_unit 0;
+	font-family: $body_font;
+	@include font-size(1.4);
+	font-weight: bold;
+	color: #fff;
+	border: 0;
+
+	&:hover{
+		background: darken($blue,5%);
+		color: #fff;
 	}
 
+	&:visited{
+		color: #fff;
+	}
+}

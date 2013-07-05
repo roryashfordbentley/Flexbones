@@ -29,20 +29,26 @@
 <!-- visible on mobile only -->
 
 <header class="mobile-header">
-	<a href="#" class="mobile-header--button">Menu</a>
+	<a href="#" class="mobile-header__button">Menu</a>
 </header>
 
 <nav class="mobile-nav">
-	<ul>
-		<?php $mobile_pages = wp_list_pages('title_li='); ?>
-	</ul>
+	<?php wp_nav_menu(); ?>
 </nav>
 
 <!-- .visible on mobile only -->
 <section class="wrapper">
 	<header class="site-header">
-		<a href="<?php echo get_home_url(); ?>" class="site-header__logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="Logo"></a>
+		<a href="<?php echo get_home_url(); ?>" class="site-header__logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo"></a>
 		<nav class="primary-nav">
-			<?php wp_nav_menu(); ?>
+			<?php 
+				//this will fail unless location is defined
+				$args = array(
+					'menu'            => '',
+					'container' => false,
+					'items_wrap'      => '%3$s'
+				);
+			 	wp_nav_menu( $args ); 
+			 ?>
 		</nav>
 	</header>

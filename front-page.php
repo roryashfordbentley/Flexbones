@@ -58,7 +58,7 @@
 			<form>
 				<fieldset>
 					
-					<legend>Contact Form</legend>
+					<legend>Form Elements</legend>
 					<div>
 						<label>First Name</label>
 						<input type="text" name="first_name" />
@@ -88,7 +88,7 @@
 					
 				</fieldset>
 			</form>
-			
+			<h2>Table Style</h2>
 			<table>
 	            <thead>
 	                <tr>

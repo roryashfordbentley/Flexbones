@@ -7,8 +7,25 @@
 table { 
 	width: 100%;
 	background: #fff;
-	@include border-radius(3px); 
-	border: 1px solid #666;
-	margin-bottom: 20px;	
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	@include font-size(1.4);
 }
+
+	thead{
+		background: #ccc;
+	}
+
+	tbody tr:nth-child(odd) {background: #f1f1f1}
+	tbody tr:nth-child(even) {background: #FFF}
+
+	th,td{
+		padding: $base_unit;
+	}
+
+	th{
+		font-weight: bold;
+	}
+
+	
 

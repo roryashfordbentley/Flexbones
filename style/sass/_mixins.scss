@@ -17,6 +17,6 @@
 //font size/line height mixin using 'rem' -a non cascading modular unit of measurement
 
 @mixin font-size($size:1.6){
-	font-size:   ($size * 10) + px;
+	font-size:   ($size * $base_unit) + px;
 	font-size:   $size + rem;
 }

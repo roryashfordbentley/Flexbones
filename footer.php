@@ -8,22 +8,7 @@
 <!-- Application Javascript, safe to override -->
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/scripts.js"></script>
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-		
-		/* JPanel Menu */
-		
-		// instantiate
-		var jPM = jQuery.jPanelMenu({
-		    menu: '.mobile-nav',
-		    trigger: '.mobile-header--button',
-		    keyboardShortcuts: false
-		});
-		
-		jPM.on();
-	});
-
 	/* Analytics */
-
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 
