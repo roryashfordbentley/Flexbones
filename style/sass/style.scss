@@ -7,11 +7,27 @@ Author URI:     http://codebluegroup.co.uk/
 Version:        3.0
 License:		All work is the property of Rory Ashford
 License URI:	n/a
+
+CONTENTS
+
+- Global
+- Wordpress
+- Typography
+- Tables
+- UI
+- Mobile Header
+- Page
+- Navigation
+- Header
+- Footer
+- Sidebar
+- Blog
+- Home
+
 */
 
-
 // COMPASS HELPERS
-
+/* Style Reset */
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/box-sizing";
@@ -22,9 +38,11 @@ License URI:	n/a
 
 @import "_mixins.scss";
 
-// GLOBAL STYLES
- 
+// CONFIG
+
 @import "__config.scss";
+
+// GLOBAL STYLES
 @import "__colour.scss";
 @import "_global.scss";
 @import "_wordpress.scss";

@@ -5,12 +5,11 @@
 
 
 $blue:					#03a7ff;
-$dark_blue:				#077bdd;
 
 // Links / Anchors
 
 $link: 					$blue;
-$link_hover: 			$dark_blue;
+$link_hover: 			darken($blue,5%);
 $link_visited: 			$blue;
 
 // Element Colours / Gradients

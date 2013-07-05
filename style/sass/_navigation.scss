@@ -11,9 +11,6 @@
 	
 	@include at-breakpoint($tablet){ display:block; }
 	@include at-breakpoint($desktop){ display: block; }
-	
-	border-top: 1px solid #666;
-	border-bottom: 1px solid #666;
 
 	ul{
 		list-style: none;
@@ -25,13 +22,13 @@
 	
 	a,  a:visited{
 		display: block;
-		padding: 5px 20px 5px 0;
+		padding: ($base_unit/2) (2*$base_unit) ($base_unit/2) 0;
 	}
 	
 	.current-menu-item{
 		a,a:visited{
 			color: #000;
-			background: $dark_blue;
+			background: $blue;
 		}
 	}
 }

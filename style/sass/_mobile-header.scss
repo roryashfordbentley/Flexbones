@@ -5,17 +5,21 @@
  */
 	
 	.mobile-header{
-		background: $blue;
+		background: #ccc;
 		@include at-breakpoint($tablet){  display: none; }
 		@include at-breakpoint($desktop){ display: none; }
 		@include clearfix();
 	}
 
 		.mobile-header--button{
-			display: block;
+			display: inline-block;
 			margin:  10px;
 			padding: 6px 10px;
-			border: 1px solid #000;
-			background: black;
-			width: 25%;
+			border: 1px solid #666;
+			@include font-size(1.6);
+			font-weight: bold;
+			color: #fff;
+			&:visited{
+				color: #fff;
+			}
 		}

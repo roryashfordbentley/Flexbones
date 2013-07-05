@@ -29,9 +29,7 @@
 <!-- visible on mobile only -->
 
 <header class="mobile-header">
-	
 	<a href="#" class="mobile-header--button">Menu</a>
-	
 </header>
 
 <nav class="mobile-nav">

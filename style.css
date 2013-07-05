@@ -7,7 +7,25 @@ Author URI:     http://codebluegroup.co.uk/
 Version:        3.0
 License:		All work is the property of Rory Ashford
 License URI:	n/a
+
+CONTENTS
+
+- Global
+- Wordpress
+- Typography
+- Tables
+- UI
+- Mobile Header
+- Page
+- Navigation
+- Header
+- Footer
+- Sidebar
+- Blog
+- Home
+
 */
+/* Style Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, legend, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -180,7 +198,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #077bdd; }
+  color: #0097e9; }
 
 p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol, blockquote {
   margin: 10px 0;
@@ -312,7 +330,7 @@ textarea {
  * Style for a mobile header to contain menu button/ search etc
  */
 .mobile-header {
-  background: #03a7ff;
+  background: #ccc;
   *zoom: 1; }
   @media (min-width: 651px) and (max-width: 900px) {
     .mobile-header {
@@ -327,12 +345,16 @@ textarea {
     clear: both; }
 
 .mobile-header--button {
-  display: block;
+  display: inline-block;
   margin: 10px;
   padding: 6px 10px;
-  border: 1px solid black;
-  background: black;
-  width: 25%; }
+  border: 1px solid #666666;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff; }
+  .mobile-header--button:visited {
+    color: #fff; }
 
 .content {
   *zoom: 1;
@@ -370,9 +392,7 @@ textarea {
  */
 .primary-nav {
   display: none;
-  margin: 0 0 20px 0;
-  border-top: 1px solid #666666;
-  border-bottom: 1px solid #666666; }
+  margin: 0 0 20px 0; }
   @media (min-width: 651px) and (max-width: 900px) {
     .primary-nav {
       display: block; } }
@@ -395,7 +415,7 @@ textarea {
     padding: 5px 20px 5px 0; }
   .primary-nav .current-menu-item a, .primary-nav .current-menu-item a:visited {
     color: #000;
-    background: #077bdd; }
+    background: #03a7ff; }
 
 .mobile-nav {
   display: none;
@@ -423,7 +443,6 @@ textarea {
  * Footer Styles go here
  */
 .site-footer {
-  border-top: 1px solid #666666;
   padding-top: 10px; }
 
 @media (min-width: 651px) and (max-width: 900px) {
