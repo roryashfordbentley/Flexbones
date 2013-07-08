@@ -443,10 +443,27 @@ input[type="submit"] {
     float: left; }
   .primary-nav a, .primary-nav a:visited {
     display: block;
-    padding: 5px 20px 5px 0; }
+    padding: 5px 20px; }
+  .primary-nav a:hover {
+    background: #ccc; }
   .primary-nav .current-menu-item a, .primary-nav .current-menu-item a:visited {
-    color: #000;
-    background: #03a7ff; }
+    color: #fff;
+    background: #03a7ff;
+    font-weight: bold; }
+  .primary-nav .parent {
+    position: relative; }
+  .primary-nav .parent:hover {
+    background: #ccc; }
+  .primary-nav .parent > .sub-menu {
+    display: none; }
+  .primary-nav .parent:hover > .sub-menu {
+    display: block;
+    position: absolute;
+    background: #ccc; }
+  .primary-nav .sub-menu > li a {
+    width: 200px; }
+  .primary-nav .sub-menu > li a:hover {
+    background: #e6e6e6; }
 
 .mobile-nav {
   display: none;

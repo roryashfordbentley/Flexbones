@@ -156,6 +156,28 @@ function add_parent_class( $css_class, $page, $depth, $args ){
 add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
 
 /*==================================================================== */
+/* Add parent class to wp_nav_menu
+/*==================================================================== */       
+
+add_filter('wp_nav_menu_objects', function ($items) {
+    $hasSub = function ($menu_item_id, $items) {
+        foreach ($items as $item) {
+            if ($item->menu_item_parent && $item->menu_item_parent==$menu_item_id) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    foreach ($items as $item) {
+        if ($hasSub($item->ID, $items)) {
+            $item->classes[] = 'parent';
+        }
+    }
+    return $items;    
+});
+
+/*==================================================================== */
 /* Wrap Li's in spans from the content to allow for greater styling control
 /*==================================================================== */	
 

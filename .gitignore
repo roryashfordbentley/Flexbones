@@ -1,3 +1,4 @@
 style/fire_app_log.txt
 # Ignore sass-cache files.
 *.sass-cache*
+*.scssc

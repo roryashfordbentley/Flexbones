@@ -5,33 +5,67 @@
  */
 
 .primary-nav{
-	
-	display: none;
-	margin: 0 0 20px 0;
-	
-	@include at-breakpoint($tablet){ display:block; }
-	@include at-breakpoint($desktop){ display: block; }
+        
+        display: none;
+        margin: 0 0 20px 0;
+        
+        @include at-breakpoint($tablet){ display:block; }
+        @include at-breakpoint($desktop){ display: block; }
 
-	ul{
-		list-style: none;
-		@include clearfix();
-		margin: 0;
-	}
-	
-	li{ float: left; }
-	
-	a,  a:visited{
-		display: block;
-		padding: ($base_unit/2) (2*$base_unit) ($base_unit/2) 0;
-	}
-	
-	.current-menu-item{
-		a,a:visited{
-			color: #000;
-			background: $blue;
-		}
-	}
+        ul{
+                list-style: none;
+                @include clearfix();
+                margin: 0;
+        }
+        
+        li{ float: left; }
+        
+        a,  a:visited{
+                display: block;
+                padding: ($base_unit/2) (2*$base_unit);
+        }
+        
+        a:hover{
+                background: #ccc;
+        }
+
+        .current-menu-item{
+                a,a:visited{
+                        color: #fff;
+                        background: $blue;
+                        font-weight: bold;
+                }
+        }
+
+        //dropdown menu main link
+        .parent{
+                position: relative;
+        }
+
+                .parent:hover{
+                        background: #ccc;
+                }
+
+        //sub menu
+        .parent > .sub-menu{
+                display: none;
+        }
+                //show the menu on hover
+                .parent:hover > .sub-menu{
+                        display: block;
+                        position: absolute;
+                        background: #ccc;
+                }
+
+                .sub-menu > li a{
+                        width: 200px;
+                }
+
+                .sub-menu > li a:hover{
+                        background: lighten(#ccc,10%);
+                }
 }
+
 
 // MOBILE NAVIGATION
 
