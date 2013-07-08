@@ -407,12 +407,12 @@ input[type="submit"] {
     clear: both; }
 
 @media (min-width: 651px) and (max-width: 900px) {
-  .main-content {
+  .main {
     width: 61.29032%;
     float: left;
     margin-right: 3.22581%; } }
 @media (min-width: 901px) {
-  .main-content {
+  .main {
     width: 65.95745%;
     float: left;
     margin-right: 2.12766%; } }
@@ -443,7 +443,8 @@ input[type="submit"] {
     float: left; }
   .primary-nav a, .primary-nav a:visited {
     display: block;
-    padding: 5px 20px; }
+    padding: 5px 10px;
+    margin: 0 5px; }
   .primary-nav a:hover {
     background: #ccc; }
   .primary-nav .current-menu-item a, .primary-nav .current-menu-item a:visited {

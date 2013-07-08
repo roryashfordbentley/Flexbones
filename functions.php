@@ -169,9 +169,11 @@ add_filter('wp_nav_menu_objects', function ($items) {
         return false;
     };
 
+    $i=1;
     foreach ($items as $item) {
         if ($hasSub($item->ID, $items)) {
-            $item->classes[] = 'parent';
+            $item->classes[] = 'parent parent-' . $i;
+            $i++;
         }
     }
     return $items;    
