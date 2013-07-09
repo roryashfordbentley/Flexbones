@@ -4,7 +4,7 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
 			<header>
 				<h2><?php the_title(); ?></h2>
-				<p class="article-meta"><?php the_time('dS F Y'); ?></p>
+				<time datetime="<?php echo the_date('Y-m-d');?>" class="article-date" ><?php the_time(get_option('date_format')); ?></time>
 			</header>
 	
 			<?php the_content(); ?>

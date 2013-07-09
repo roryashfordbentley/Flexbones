@@ -16,56 +16,62 @@
         @include clearfix();
         margin: 0;
     }
-    
-    li{ float: left; }
-    
-    a, a:visited{
+
+	.menu-item{ float: left; }
+
+	.menu-item a, .menu-item a:visited{
     	display: block;
     	padding: ($base_unit/2) $base_unit;
     	margin: 0 ($base_unit/2);
     }
-    
-    a:hover{
-            background: #ccc;
-    }
 
     .current-menu-item{
-            a,a:visited{
-                    color: #fff;
-                    background: $blue;
-                    font-weight: bold;
-            }
+        a,a:visited{
+            color: #fff;
+            background: $blue;
+            font-weight: bold;
+        }
     }
 
-    //dropdown menu main link
-    .parent{
-            position: relative;
-    }
-
-            .parent:hover{
-                    background: #ccc;
-            }
-
-    //sub menu
-    .parent > .sub-menu{
-            display: none;
-    }
-            //show the menu on hover
-            .parent:hover > .sub-menu{
-                    display: block;
-                    position: absolute;
-                    background: #ccc;
-            }
-
-            .sub-menu > li a{
-                    width: 200px;
-            }
-
-            .sub-menu > li a:hover{
-                    background: lighten(#ccc,10%);
-            }
 }
 
+	//dropdown menu main link
+    .primary-nav .parent-1{
+    	position: relative;
+		
+		//sub menu
+    	> .sub-menu{
+            display: none;
+            background: #ccc;
+    	}
+		
+		// hover state stuff
+		&:hover{
+	     	background: #ccc;
+				
+			> .sub-menu{
+	            display: block;
+	           
+	    	}
+	    } 
+    }
+
+	.sub-menu{
+
+		position: absolute;
+	            
+		li a{
+			width: 200px;
+
+			&:hover{
+				background: lighten(#ccc,10%);
+			}
+		}
+
+		.menu-item{ float: none; }
+	}
+    
+   
 
 // MOBILE NAVIGATION
 

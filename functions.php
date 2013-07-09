@@ -162,7 +162,7 @@ add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
 add_filter('wp_nav_menu_objects', function ($items) {
     $hasSub = function ($menu_item_id, $items) {
         foreach ($items as $item) {
-            if ($item->menu_item_parent && $item->menu_item_parent==$menu_item_id) {
+            if ($item->menu_item_parent && $item->menu_item_parent == $menu_item_id) {
                 return true;
             }
         }
