@@ -17,6 +17,8 @@
 //font size/line height mixin using 'rem' -a non cascading modular unit of measurement
 
 @mixin font-size($size:1.6){
-	font-size: ($size * $base_unit);
+	font-size: $size * $mobile_font_size;
+	@include at-breakpoint($tablet){ font-size: ($size * $tablet_font_size); }
+	@include at-breakpoint($desktop){ font-size: ($size * $desktop_font_size); }
 	font-size: $size + rem;
 }

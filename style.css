@@ -218,29 +218,65 @@ h1, h2, legend, h3, h4, h5, h6, blockquote {
   color: #292929; }
 
 h1 {
-  font-size: 40px;
+  font-size: 32px;
   font-size: 4rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    h1 {
+      font-size: 36px; } }
+  @media (min-width: 901px) {
+    h1 {
+      font-size: 40px; } }
 
 h2, legend {
-  font-size: 30px;
+  font-size: 24px;
   font-size: 3rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    h2, legend {
+      font-size: 27px; } }
+  @media (min-width: 901px) {
+    h2, legend {
+      font-size: 30px; } }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-size: 2rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    h3 {
+      font-size: 18px; } }
+  @media (min-width: 901px) {
+    h3 {
+      font-size: 20px; } }
 
 h4 {
-  font-size: 18px;
+  font-size: 14.4px;
   font-size: 1.8rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    h4 {
+      font-size: 16.2px; } }
+  @media (min-width: 901px) {
+    h4 {
+      font-size: 18px; } }
 
 h5 {
-  font-size: 16px;
+  font-size: 12.8px;
   font-size: 1.6rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    h5 {
+      font-size: 14.4px; } }
+  @media (min-width: 901px) {
+    h5 {
+      font-size: 16px; } }
 
 p {
-  font-size: 16px;
+  font-size: 12.8px;
   font-size: 1.6rem;
   font-weight: normal; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    p {
+      font-size: 14.4px; } }
+  @media (min-width: 901px) {
+    p {
+      font-size: 16px; } }
 
 strong {
   font-weight: bold; }
@@ -250,17 +286,29 @@ em {
 
 ul {
   list-style-type: disc;
-  font-size: 16px;
+  font-size: 12.8px;
   font-size: 1.6rem;
   font-weight: normal;
   margin-left: 20px; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    ul {
+      font-size: 14.4px; } }
+  @media (min-width: 901px) {
+    ul {
+      font-size: 16px; } }
 
 ol {
   list-style-type: decimal;
-  font-size: 16px;
+  font-size: 12.8px;
   font-size: 1.6rem;
   font-weight: normal;
   margin-left: 20px; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    ol {
+      font-size: 14.4px; } }
+  @media (min-width: 901px) {
+    ol {
+      font-size: 16px; } }
 
 blockquote {
   margin: 0 0 20px 20px;
@@ -275,9 +323,15 @@ blockquote {
       width: 40%;
       float: right; } }
   blockquote p {
-    font-size: 24px;
+    font-size: 19.2px;
     font-size: 2.4rem;
     text-align: right; }
+    @media (min-width: 651px) and (max-width: 900px) {
+      blockquote p {
+        font-size: 21.6px; } }
+    @media (min-width: 901px) {
+      blockquote p {
+        font-size: 24px; } }
 
 /* -- _TABLES.SCSS -- */
 /*
@@ -288,8 +342,14 @@ table {
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 11.2px;
   font-size: 1.4rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    table {
+      font-size: 12.6px; } }
+  @media (min-width: 901px) {
+    table {
+      font-size: 14px; } }
 
 thead {
   background: #ccc; }
@@ -315,8 +375,14 @@ fieldset {
 
 label {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 11.2px;
   font-size: 1.4rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    label {
+      font-size: 12.6px; } }
+  @media (min-width: 901px) {
+    label {
+      font-size: 14px; } }
 
 input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
@@ -335,10 +401,16 @@ textarea {
   padding: 10px;
   margin: 10px 0;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12.8px;
   font-size: 1.6rem;
   font-weight: bold;
   color: #fff; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    .button {
+      font-size: 14.4px; } }
+  @media (min-width: 901px) {
+    .button {
+      font-size: 16px; } }
   .button:hover {
     background: #0097e9;
     color: #fff; }
@@ -350,11 +422,17 @@ input[type="submit"] {
   padding: 9px 10px 10px 10px;
   margin: 10px 0;
   font-family: helvetica, arial, sans-serif;
-  font-size: 14px;
+  font-size: 11.2px;
   font-size: 1.4rem;
   font-weight: bold;
   color: #fff;
   border: 0; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    input[type="submit"] {
+      font-size: 12.6px; } }
+  @media (min-width: 901px) {
+    input[type="submit"] {
+      font-size: 14px; } }
   input[type="submit"]:hover {
     background: #0097e9;
     color: #fff; }
@@ -384,10 +462,16 @@ input[type="submit"] {
   display: inline-block;
   padding: 15px;
   border-right: 1px solid #0087cf;
-  font-size: 18px;
+  font-size: 14.4px;
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    .mobile-header__button {
+      font-size: 16.2px; } }
+  @media (min-width: 901px) {
+    .mobile-header__button {
+      font-size: 18px; } }
   .mobile-header__button:visited {
     color: #fff; }
 
