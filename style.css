@@ -143,6 +143,11 @@ body {
   .wrapper:after {
     clear: both; }
 
+/* -- _WORDPRESS.SCSS -- */
+/*
+ * Styles for Wordpress Specific Classes
+ * Required if the theme is to go on the wp.org repo
+ */
 .alignleft {
   float: none;
   margin: 0 0 20px 0;
@@ -386,6 +391,11 @@ input[type="submit"] {
   .mobile-header__button:visited {
     color: #fff; }
 
+/* -- _PAGE.SCSS -- */
+/*
+ * Styles for Wordpress Pages
+ * Includes styles for for specific page templates
+ */
 .content {
   *zoom: 1;
   *zoom: 1;
@@ -522,6 +532,11 @@ input[type="submit"] {
 .mobile-nav__menu .sub-menu a:before {
   content: "- "; }
 
+/* -- _HEADER.SCSS -- */
+/*
+ * Header specific declarations
+ * Note: navigation has its own document _navigation.scss
+ */
 .site-header__logo {
   display: block;
   padding: 20px 0; }
@@ -533,6 +548,10 @@ input[type="submit"] {
 .site-footer {
   padding-top: 5px; }
 
+/* -- SIDEBAR.SCSS -- */
+/*
+ * All sidebar(s) style here
+ */
 @media (min-width: 651px) and (max-width: 900px) {
   .sidebar {
     width: 35.48387%;
@@ -548,3 +567,13 @@ input[type="submit"] {
   .sidebar > ul > li {
     margin: 0 0 20px 0;
     list-style: none; }
+
+/* -- _BLOG.SCSS -- */
+/*
+ * All blog/news styles go here
+ * Archives and single article styles
+ */
+/* -- _HOME.SCSS -- */
+/*
+ * Homepage Specific Styles
+ */

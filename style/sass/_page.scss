@@ -1,7 +1,11 @@
-// PAGE (content+sidebars)
-//
-// Styling of the page area (formerly content-container but changed to be less confusing)
+/* -- _PAGE.SCSS -- */
 
+/*
+ * Styles for Wordpress Pages
+ * Includes styles for for specific page templates
+ */
+
+// Container for the main content area and sidebar
 .content{
 	@include clearfix();
 	@include container();

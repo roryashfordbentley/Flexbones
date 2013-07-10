@@ -36,14 +36,17 @@ CONTENTS
 
 // MIXINS
 
-@import "_mixins.scss";
+@import "__mixins.scss";
 
 // CONFIG
 
 @import "__config.scss";
 
-// GLOBAL STYLES
+// VARS
+
 @import "__colour.scss";
+
+// GLOBAL STYLES
 @import "_global.scss";
 @import "_wordpress.scss";
 @import "_typography.scss";
