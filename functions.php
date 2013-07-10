@@ -120,7 +120,7 @@ function remove_thumbnail_dimensions( $html ) {
 /* REMOVE ADMIN BAR 
 /*==================================================================== */
 
-//add_filter('show_admin_bar', '__return_false');
+add_filter('show_admin_bar', '__return_false');
 
 /*==================================================================== */
 /* SUB MENU

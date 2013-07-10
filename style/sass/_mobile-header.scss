@@ -5,7 +5,7 @@
  */
 	
 	.mobile-header{
-		background: #ccc;
+		background: $blue;
 		@include at-breakpoint($tablet){  display: none; }
 		@include at-breakpoint($desktop){ display: none; }
 		@include clearfix();
@@ -13,10 +13,9 @@
 
 		.mobile-header__button{
 			display: inline-block;
-			margin:  10px;
-			padding: 6px 10px;
-			border: 1px solid #666;
-			@include font-size(1.6);
+			padding: $base_unit*1.5;
+			border-right: 1px solid darken($blue,10%);
+			@include font-size(1.8);
 			font-weight: bold;
 			color: #fff;
 			&:visited{

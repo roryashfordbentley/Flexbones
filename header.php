@@ -33,9 +33,17 @@
 </header>
 
 <nav class="mobile-nav">
-	<?php 
-	 	wp_nav_menu(); 
-	 ?>
+	<ul class="mobile-nav__menu">
+		<?php 
+			//this will fail unless location is defined
+			$args = array(
+				'menu'            => '',
+				'container' => false,
+				'items_wrap'      => '%3$s'
+			);
+		 	wp_nav_menu( $args ); 
+		 ?>
+	</ul>
 </nav>
 
 <!-- .visible on mobile only -->
@@ -43,7 +51,7 @@
 	<div class="wrapper">
 		<a href="<?php echo get_home_url(); ?>" class="site-header__logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo"></a>
 		<nav class="primary-nav">
-			<ul>
+			<ul class="primary-nav__menu">
 			<?php 
 				//this will fail unless location is defined
 				$args = array(

@@ -116,7 +116,7 @@ body {
   padding-right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 95%;
+  width: 90%;
   *zoom: 1; }
   .wrapper:after {
     content: "";
@@ -213,27 +213,27 @@ h1, h2, legend, h3, h4, h5, h6, blockquote {
   color: #292929; }
 
 h1 {
-  font-size: 40pxpx;
+  font-size: 40px;
   font-size: 4rem; }
 
 h2, legend {
-  font-size: 30pxpx;
+  font-size: 30px;
   font-size: 3rem; }
 
 h3 {
-  font-size: 20pxpx;
+  font-size: 20px;
   font-size: 2rem; }
 
 h4 {
-  font-size: 18pxpx;
+  font-size: 18px;
   font-size: 1.8rem; }
 
 h5 {
-  font-size: 16pxpx;
+  font-size: 16px;
   font-size: 1.6rem; }
 
 p {
-  font-size: 16pxpx;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal; }
 
@@ -245,14 +245,14 @@ em {
 
 ul {
   list-style-type: disc;
-  font-size: 16pxpx;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
   margin-left: 20px; }
 
 ol {
   list-style-type: decimal;
-  font-size: 16pxpx;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
   margin-left: 20px; }
@@ -270,7 +270,7 @@ blockquote {
       width: 40%;
       float: right; } }
   blockquote p {
-    font-size: 24pxpx;
+    font-size: 24px;
     font-size: 2.4rem;
     text-align: right; }
 
@@ -283,7 +283,7 @@ table {
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  font-size: 14pxpx;
+  font-size: 14px;
   font-size: 1.4rem; }
 
 thead {
@@ -310,7 +310,7 @@ fieldset {
 
 label {
   margin-bottom: 10px;
-  font-size: 14pxpx;
+  font-size: 14px;
   font-size: 1.4rem; }
 
 input[type="text"], input[type="password"] {
@@ -330,7 +330,7 @@ textarea {
   padding: 10px;
   margin: 10px 0;
   display: inline-block;
-  font-size: 16pxpx;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: bold;
   color: #fff; }
@@ -345,7 +345,7 @@ input[type="submit"] {
   padding: 9px 10px 10px 10px;
   margin: 10px 0;
   font-family: helvetica, arial, sans-serif;
-  font-size: 14pxpx;
+  font-size: 14px;
   font-size: 1.4rem;
   font-weight: bold;
   color: #fff;
@@ -361,7 +361,7 @@ input[type="submit"] {
  * Style for a mobile header to contain menu button/ search etc
  */
 .mobile-header {
-  background: #ccc;
+  background: #03a7ff;
   *zoom: 1; }
   @media (min-width: 651px) and (max-width: 900px) {
     .mobile-header {
@@ -377,11 +377,10 @@ input[type="submit"] {
 
 .mobile-header__button {
   display: inline-block;
-  margin: 10px;
-  padding: 6px 10px;
-  border: 1px solid #666;
-  font-size: 16pxpx;
-  font-size: 1.6rem;
+  padding: 15px;
+  border-right: 1px solid #0087cf;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #fff; }
   .mobile-header__button:visited {
@@ -420,6 +419,8 @@ input[type="submit"] {
 /* -- _NAVIGATION.SCSS -- */
 /*
  * All nav menu styles go here
+ * Currently the Dropdown only supports 1 level
+ * This can be extended by using the class .parent-x (where x is the depth).
  */
 .primary-nav {
   display: none;
@@ -430,61 +431,96 @@ input[type="submit"] {
   @media (min-width: 901px) {
     .primary-nav {
       display: block; } }
-  .primary-nav ul {
-    list-style: none;
-    *zoom: 1;
-    margin: 0; }
-    .primary-nav ul:before, .primary-nav ul:after {
-      content: "";
-      display: table; }
-    .primary-nav ul:after {
-      clear: both; }
-  .primary-nav .menu-item {
-    float: left; }
-  .primary-nav .menu-item a, .primary-nav .menu-item a:visited {
-    display: block;
-    padding: 5px 10px;
-    margin: 0 5px; }
-  .primary-nav .current-menu-item a, .primary-nav .current-menu-item a:visited {
-    color: #fff;
-    background: #03a7ff;
-    font-weight: bold; }
 
-.primary-nav .parent-1 {
+.primary-nav__menu {
+  list-style: none;
+  *zoom: 1;
+  margin: 0; }
+  .primary-nav__menu:before, .primary-nav__menu:after {
+    content: "";
+    display: table; }
+  .primary-nav__menu:after {
+    clear: both; }
+
+.primary-nav__menu > .menu-item {
+  float: left;
+  margin: 0 5px; }
+
+.primary-nav__menu > .menu-item a {
+  display: block;
+  padding: 5px 10px;
+  color: #03a7ff; }
+
+.primary-nav__menu .menu-item:hover {
+  background: #03a7ff; }
+  .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited {
+    color: #fff; }
+
+.primary-nav__menu > .current-menu-item a,
+.primary-nav__menu > .current-menu-ancestor a {
+  color: #fff;
+  background: #03a7ff;
+  font-weight: bold; }
+
+.primary-nav__menu .parent-1 {
   position: relative; }
-  .primary-nav .parent-1 > .sub-menu {
-    display: none;
-    background: #ccc; }
-  .primary-nav .parent-1:hover {
-    background: #ccc; }
-    .primary-nav .parent-1:hover > .sub-menu {
-      display: block; }
 
-.sub-menu {
-  position: absolute; }
-  .sub-menu li a {
-    width: 200px; }
-    .sub-menu li a:hover {
-      background: #e6e6e6; }
-  .sub-menu .menu-item {
-    float: none; }
+.primary-nav__menu .parent-1 > .sub-menu {
+  display: none;
+  list-style: none;
+  margin: 0; }
+
+.primary-nav__menu .parent-1:hover > .sub-menu {
+  display: block; }
+
+.primary-nav__menu .sub-menu {
+  position: absolute;
+  background: #03a7ff; }
+
+.primary-nav__menu .sub-menu .menu-item a {
+  width: 200px;
+  color: #fff; }
+  .primary-nav__menu .sub-menu .menu-item a:hover {
+    background: #0097e9;
+    margin: 0; }
+
+.primary-nav__menu .sub-menu > .current-menu-item a,
+.primary-nav__menu .sub-menu > .current-menu-ancestor a {
+  color: #fff;
+  background: #0087cf;
+  font-weight: bold; }
 
 .mobile-nav {
   display: none;
-  background: black; }
-  .mobile-nav ul {
-    list-style: none;
-    margin: 0; }
-    .mobile-nav ul a, .mobile-nav ul a:visited {
-      color: #fff;
-      padding: 10px 0; }
-    .mobile-nav ul > li {
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc; }
-      .mobile-nav ul > li a, .mobile-nav ul > li a:visited {
-        padding-left: 15px; }
-    .mobile-nav ul .current_page_item {
-      border-top: none; }
+  background: #2f3942;
+  -webkit-box-shadow: inset -2px 0px 2px 0px #0f1215;
+  -moz-box-shadow: inset -2px 0px 2px 0px #0f1215;
+  box-shadow: inset -2px 0px 2px 0px #0f1215; }
+
+.mobile-nav__menu {
+  margin: 0 10px;
+  list-style: none; }
+  .mobile-nav__menu .current_page_item {
+    border-top: none; }
+
+.mobile-nav__menu .menu-item a {
+  border-bottom: 1px solid #45535e; }
+
+.mobile-nav__menu .menu-item a,
+.mobile-nav__menu .menu-item a:visited {
+  display: block;
+  color: #fff;
+  padding: 10px 0; }
+
+.mobile-nav__menu .sub-menu {
+  list-style: none;
+  margin: 0; }
+
+.mobile-nav__menu .sub-menu a {
+  padding-left: 10px; }
+
+.mobile-nav__menu .sub-menu a:before {
+  content: "- "; }
 
 .site-header__logo {
   display: block;

@@ -2,103 +2,139 @@
 
 /*
  * All nav menu styles go here
+ * Currently the Dropdown only supports 1 level
+ * This can be extended by using the class .parent-x (where x is the depth).
  */
 
-.primary-nav{
-        
+// Primary nav container
+.primary-nav{   
     display: none;
-    margin: 0 0 20px 0;
+    margin: 0 0 ($base_unit*2) 0;
     @include at-breakpoint($tablet){ display:block; }
     @include at-breakpoint($desktop){ display: block; }
+}
 
-    ul{
+	// the first ul
+	.primary-nav__menu{
         list-style: none;
         @include clearfix();
         margin: 0;
     }
-
-	.menu-item{ float: left; }
-
-	.menu-item a, .menu-item a:visited{
+	
+	// menu item
+	.primary-nav__menu > .menu-item{ 
+		float: left; 
+		margin: 0 ($base_unit/2);
+	}
+	
+	// menu item link (block level element with padding + margin applied)
+	.primary-nav__menu > .menu-item a{
     	display: block;
     	padding: ($base_unit/2) $base_unit;
-    	margin: 0 ($base_unit/2);
+    	color: $blue;
+    }
+	
+	//menu item hover
+    .primary-nav__menu .menu-item:hover{
+		background: $blue;
+		a,a:visited{color: #fff;}
     }
 
-    .current-menu-item{
-        a,a:visited{
-            color: #fff;
-            background: $blue;
-            font-weight: bold;
-        }
+	// the active page
+    .primary-nav__menu > .current-menu-item a,
+    .primary-nav__menu > .current-menu-ancestor a{
+        color: #fff;
+        background: $blue;
+        font-weight: bold;
     }
 
-}
+	// DELETE BELOW IF IT IS A SINGLE TIER MENU
 
-	//dropdown menu main link
-    .primary-nav .parent-1{
-    	position: relative;
-		
+
+	// Dropdown Parent Style
+
+    .primary-nav__menu .parent-1{
+    	position: relative;	
+    }
 		//sub menu
-    	> .sub-menu{
-            display: none;
-            background: #ccc;
+		.primary-nav__menu .parent-1 > .sub-menu{
+            display: none; 
+            list-style: none;
+            margin: 0;
     	}
 		
 		// hover state stuff
-		&:hover{
-	     	background: #ccc;
-				
-			> .sub-menu{
-	            display: block;
-	           
-	    	}
+    	.primary-nav__menu .parent-1:hover > .sub-menu{
+	        display: block;
 	    } 
-    }
 
-	.sub-menu{
+		// Styling for sub-menu items
 
-		position: absolute;
-	            
-		li a{
-			width: 200px;
-
-			&:hover{
-				background: lighten(#ccc,10%);
-			}
+		.primary-nav__menu .sub-menu{
+			position: absolute;	
+			background: $blue;
 		}
 
-		.menu-item{ float: none; }
-	}
-    
-   
+			.primary-nav__menu .sub-menu .menu-item a{
+				width: 200px;
+				color: #fff;
+				&:hover{ 
+					background: darken($blue,5%);
+					margin:0;
+				}
+			}
+
+			.primary-nav__menu .sub-menu > .current-menu-item a,
+		    .primary-nav__menu .sub-menu > .current-menu-ancestor a{
+		        color: #fff;
+		        background: darken($blue,10%);
+		        font-weight: bold;
+		    }
 
 // MOBILE NAVIGATION
 
 .mobile-nav{	
 	display: none;
-	background: black;
-	
-	ul{
+	background: #2f3942;
+	@include box-shadow( inset -2px 0px 2px 0px darken(#2f3942, 15%) );
+}
+	// main ul
+	.mobile-nav__menu{
+		margin: 0 $base_unit;
 		list-style: none;
-		margin: 0;
-		
-		a, a:visited{
-			color: #fff;
-			padding:10px 0;
-		}
-
-		> li{
-			border-top: 1px solid #ccc;
-			border-bottom: 1px solid #ccc;
-			
-			a, a:visited{ padding-left: 15px; }
-		}
-		
-		.parent {}
 		
 		.current_page_item{
 			border-top: none;
 		}	
 	}
-}
+
+		//menu item
+		.mobile-nav__menu .menu-item a{
+			border-bottom: 1px solid #45535e;
+		}
+
+			.mobile-nav__menu .menu-item a, 
+			.mobile-nav__menu .menu-item a:visited{
+				display: block;
+				color: #fff;
+				padding:$base_unit 0;
+			}
+
+			//parent style
+	
+			.mobile-nav__menu .parent a{
+
+			}
+
+			.mobile-nav__menu .sub-menu{
+				list-style: none;
+				margin:0;
+			}
+
+				.mobile-nav__menu .sub-menu a{
+					padding-left: $base_unit;
+				}
+
+				.mobile-nav__menu .sub-menu a:before{
+					content: "- ";
+				}
