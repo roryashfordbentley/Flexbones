@@ -8,9 +8,9 @@
 
 		<?php endwhile; ?>			
 		<?php endif; ?>	
+		<?php //remove below in production ?>
 		<?php get_template_part( 'inc/dummy', 'content' ); ?>
 	</section>
 	<?php get_sidebar(); ?>	
-
 <?php get_template_part( 'inc/content', 'footer' ); ?>
 <?php get_footer(); ?>
