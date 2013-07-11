@@ -19,6 +19,44 @@ jQuery(document).ready(function($) {
 		
 		jPM.on();
 
+	/* Jenkins.js */
+
+		//initialise the module
+
+		$('body').append('<div class="jenkins" style="background:#0c263c;display:inline-block;color:#fff;font-family:arial,helvetica,sans-serif;position:absolute;bottom:10px;right:10px;font-size:13px;z-index:100;"><ul style="list-style: none; margin:0; padding:0;"></ul></div>');
+		//add the page dimensions when page loads
+		$('.jenkins ul').append( '<li class="dimensions" style="display:inline-block; padding:10px;">' + $(window).width() + ' x ' + $(window).height() + '</li>' );
+		//dummy breakpoint
+		$('.jenkins ul').append( '<li class="breakpoint" style="display:inline-block; padding:10px;">init</li>' );
+
+		//add the x+y dimensions to elements with the .dimention class
+		dimensionDisplay = function() {
+			$('.dimensions').html( $(window).width() + ' x ' + $(window).height() );
+		}
+
+		//	
+		setBreakpoint = function(bpname,start,end){
+
+			if( $(window).width() >= start && $(window).width() <= end ){
+				$('.breakpoint').html( bpname );
+			}
+		}
+
+		/*storeBreakpoint = function() {
+			localStorage.setItem('breakpointName', 'Bugs');
+		}*/
+
+
+
+		$(window).resize(function() {
+	        dimensionDisplay();
+	        $(window).resize(setBreakpoint('mobile',0,649));
+			$(window).resize(setBreakpoint('tablet',650,899));
+			$(window).resize(setBreakpoint('desktop',900,1199));
+			$(window).resize(setBreakpoint('bigscreen',1200,10000));
+	    });	
+
+
 });
 
 // Analytics
@@ -30,4 +68,3 @@ try {
 var pageTracker = _gat._getTracker("XX-XXXXXX-X");
 pageTracker._trackPageview();
 } catch(err) {}
-

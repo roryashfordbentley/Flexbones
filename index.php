@@ -8,7 +8,7 @@
 
 		<?php endwhile; ?>			
 		<?php endif; ?>	
-		<?php //remove below in production ?>
+		<?php //FILLER TEXT FOR TESTING OUT THE THEME ?>
 		<?php get_template_part( 'inc/dummy', 'content' ); ?>
 	</section>
 	<?php get_sidebar(); ?>	

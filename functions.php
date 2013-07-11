@@ -1,4 +1,5 @@
 <?php
+
 /*==================================================================== */
 /* CONTENT WIDTH
 /*==================================================================== */
@@ -196,19 +197,18 @@ add_filter( 'the_content', 'span_li' );
 /* Enque JS Files 
 /*==================================================================== */
 
+
 function barebones_load_js() {
  	//register sitewide scripts and request JQUERY 1.8.3 as a dependency
  	// NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
- 	// Uncomment below if needed
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
+  	wp_enqueue_script( 'sitewide-scripts' );
 	//wp_enqueue_script( 'jquery-ui-core' );  
 	//wp_enqueue_script( 'jquery-ui-accordion' );    
-  	//wp_enqueue_script( 'sitewide-scripts' );
+  	wp_enqueue_script( 'sitewide-scripts' );
   
-  	//can load conditionally!
-
 	/* if ( is_front_page() ) {
-		
+		wp_enqueue_script('home-page-main-flex-slider');
 	}*/
  
 }

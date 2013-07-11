@@ -9,16 +9,16 @@
 	float: none;
 	margin: 0 0 20px 0;
 	display: block;
-	@include at-breakpoint($tablet){ float: left; padding: 0 20px 40px 0; }
-	@include at-breakpoint($desktop){ float: left; padding: 0 20px 40px 0; }
+	@include at-breakpoint($tablet){ float: left; padding: 0 ($base_unit * 2) ($base_unit * 4) 0; }
+	@include at-breakpoint($desktop){ float: left; padding: 0 ($base_unit * 2) ($base_unit * 4) 0; }
 }
 
 .alignright{
 	float: none;
 	margin: 0 0 20px 0;
 	display: block;
-	@include at-breakpoint($tablet){ float: right; padding: 0 0 40px 20px; }
-	@include at-breakpoint($desktop){ float: right; padding: 0 0 40px 20px; }
+	@include at-breakpoint($tablet){ float: right; padding: 0 0 ($base_unit * 4) ($base_unit * 2); }
+	@include at-breakpoint($desktop){ float: right; padding: 0 0 ($base_unit * 4) ($base_unit * 2); }
 }
 
 .wp-caption{
