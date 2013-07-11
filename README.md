@@ -23,10 +23,10 @@ The included sass styles are focused on functional CSS rather than presentationa
 *Responsive typography sizes are not based on the sort of in depth research that IA (http://ia.net/) have conducted. That is up to you. To begin with the base typographic units are set to 10px desktop 9px tablet and 8px mobile. This decision was made to make the source understandable not to provide an optimal reading experience. Perhaps this will come in the future.
 
 
-2. Dependencies
+3. Dependencies
 --------
 
-a. CSS Preprocessor tools
+CSS Preprocessing tools
 
 * [SASS](http://sass-lang.com)
 * [Compass](http://compass-style.org)
