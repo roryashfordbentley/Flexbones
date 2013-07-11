@@ -1,14 +1,26 @@
-Barebones Wordpress theme V2
+Flexbones Wordpress Theme
 =========
 
-1. Overview
+1. Features
 --------
 
-Not another barebones theme! I built this to speed up the process of developing responsive wordpress themes (non responsive version to come). It uses SASS/ Compass and the Susy Grid system to allow speedy development.
+* __Lightweight__
+* __Responsive__ 
+* __Minimalistic Template Approach__ 
+* __Modular SASS__ 
+* __Facebook style slideout menu__
+* __JenkinsBreakpoint.js__
 
-The original Barebones contained everything and the kitchen sink, I kept updating one template fine and forgetting another so for this version I have stripped it all back to the bare essentials.
+2. Overview
+--------
 
-The stylesheet is where the magic happens and again it has been stripped back to give you a framework to quickly establish typography, responsive grids, forms and tables. The CSS is very minimal, this theme is not a plug and play solution but will speed up conveting concepts to production code that is flexible and maintainable.
+Not another barebones theme! I built this to speed up the process of developing responsive wordpress themes. It uses SASS/ Compass and the Susy Grid system to allow speedy development.
+
+The original Barebones theme contained everything and the kitchen sink, This time around I have removed as much uneccesary bloat as possible.
+
+The included sass styles are focused on functional CSS rather than presentational CSS. Flexbones provides not only a responsive grid system but responsive images and typography.* 
+
+*Responsive typography sizes are not based on the sort of in depth research that IA (http://ia.net/) have conducted. That is up to you. To begin with the base typographic units are set to 10px desktop 9px tablet and 8px mobile. This decision was made to make the source understandable not to provide an optimal reading experience. Perhaps this will come in the future.
 
 
 2. Dependencies
@@ -20,12 +32,4 @@ a. CSS Preprocessor tools
 * [Compass](http://compass-style.org)
 * [Susy](http://susy.oddbird.net/)
 
-b. Javascript libraries
 
-* [jQuery](http://jquery.com/)
-* [jPanelMenu 1.3.0] (http://jpanelmenu.com)
-
-3. Recommended plugins
---------
-
-* [Advanced Custom Fields] (http://www.advancedcustomfields.com/)
