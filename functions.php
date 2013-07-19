@@ -14,33 +14,29 @@
 /*==================================================================== */
 
 
-	add_action( 'after_setup_theme', 'cbg_setup' );
+	add_action( 'after_setup_theme', 'flexbones_setup' );
 	
-	if (!function_exists( 'cbg_setup' )){
+	function flexbones_setup() {
 	
-		function cbg_setup() {
+		// This theme styles the visual editor with editor-style.css to match the theme style.
+		add_editor_style('editor-style.css?' . time());
+	
+		// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
+		add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+	
+		// This theme uses post thumbnails
+		add_theme_support( 'post-thumbnails' );
+	
+		// Add default posts and comments RSS feed links to head
+		add_theme_support( 'automatic-feed-links' );
+	
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' => 'Primary Navigation',
+		) );
 		
-			// This theme styles the visual editor with editor-style.css to match the theme style.
-			add_editor_style('editor-style.css?' . time());
-		
-			// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
-			add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
-		
-			// This theme uses post thumbnails
-			add_theme_support( 'post-thumbnails' );
-		
-			// Add default posts and comments RSS feed links to head
-			add_theme_support( 'automatic-feed-links' );
-		
-			// This theme uses wp_nav_menu() in one location.
-			register_nav_menus( array(
-				'primary' => 'Primary Navigation',
-			) );
-			
-			//register sidebars
-			register_sidebar();
-		}
-		
+		//register sidebars
+		register_sidebar();
 	}
 
 /*==================================================================== */
