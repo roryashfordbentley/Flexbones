@@ -159,6 +159,7 @@ add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
 /*==================================================================== */       
 
 add_filter('wp_nav_menu_objects', function ($items) {
+
     $hasSub = function ($menu_item_id, $items) {
         foreach ($items as $item) {
             if ($item->menu_item_parent && $item->menu_item_parent == $menu_item_id) {
@@ -168,14 +169,13 @@ add_filter('wp_nav_menu_objects', function ($items) {
         return false;
     };
 
-    $i=1;
     foreach ($items as $item) {
         if ($hasSub($item->ID, $items)) {
-            $item->classes[] = 'parent parent-' . $i;
-            $i++;
+            $item->classes[] = 'parent';
         }
     }
     return $items;    
+
 });
 
 /*==================================================================== */
@@ -195,7 +195,6 @@ add_filter( 'the_content', 'span_li' );
 /*==================================================================== */
 /* Enque JS Files 
 /*==================================================================== */
-
 
 function barebones_load_js() {
  	//register sitewide scripts and request JQUERY 1.8.3 as a dependency

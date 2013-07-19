@@ -53,18 +53,18 @@
 
 	// Dropdown Parent Style
 
-    .primary-nav__menu .parent-1{
+    .primary-nav__menu .parent{
     	position: relative;	
     }
 		//sub menu
-		.primary-nav__menu .parent-1 > .sub-menu{
+		.primary-nav__menu .parent > .sub-menu{
             display: none; 
             list-style: none;
             margin: 0;
     	}
 		
 		// hover state stuff
-    	.primary-nav__menu .parent-1:hover > .sub-menu{
+    	.primary-nav__menu .parent:hover > .sub-menu{
 	        display: block;
 	    } 
 

@@ -1,12 +1,12 @@
 /*
-Theme Name:     Flexbones Theme 1.0
-Theme URI:      http://roikles.com
+Theme Name:     Barebones Theme 3.0
+Theme URI:      http://codebluegroup.co.uk/
 Description:    A Responsive barebones theme to massively speed up development
 Author:         Rory Ashford
 Author URI:     http://codebluegroup.co.uk/
-Version:        1.0
-License:		    All work is the property of Rory Ashford
-License URI:	  n/a
+Version:        3.0
+License:		All work is the property of Rory Ashford
+License URI:	n/a
 
 CONTENTS
 
@@ -556,15 +556,15 @@ input[type="submit"] {
   background: #03a7ff;
   font-weight: bold; }
 
-.primary-nav__menu .parent-1 {
+.primary-nav__menu .parent {
   position: relative; }
 
-.primary-nav__menu .parent-1 > .sub-menu {
+.primary-nav__menu .parent > .sub-menu {
   display: none;
   list-style: none;
   margin: 0; }
 
-.primary-nav__menu .parent-1:hover > .sub-menu {
+.primary-nav__menu .parent:hover > .sub-menu {
   display: block; }
 
 .primary-nav__menu .sub-menu {
