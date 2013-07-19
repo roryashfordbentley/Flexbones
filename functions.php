@@ -53,19 +53,18 @@
 	
 	add_filter( 'excerpt_length', 'cbg_excerpt_length' );
 	
-	/* Returns a "Continue Reading" link for excerpts */
-	function continue_reading_link() {
-		return ' <a href="'. get_permalink() . '">' . 'Continue Reading <span class="meta-nav">&raquo;</span>' . '</a>';
+
+/*==================================================================== */
+/* SET THE READ MORE TEXT
+/*==================================================================== */
+
+	/* Replaces the excerpt "more" text by a link */
+
+	function new_excerpt_more($more) {
+	    global $post;
+	    return '... <a href="'. get_permalink($post->ID) . '" class="read-more">' . 'View more.' . '</a>';
 	}
-	
-	
-	function custom_excerpt_more( $output ) {
-		if ( has_excerpt() && ! is_attachment() ) {
-			$output .= continue_reading_link();
-		}
-		return $output;
-	}
-	add_filter( 'get_the_excerpt', 'custom_excerpt_more' );
+	add_filter('excerpt_more', 'new_excerpt_more');
 
 
 /*==================================================================== */
