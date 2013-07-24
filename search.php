@@ -40,20 +40,31 @@ $args = array(
 <?php get_template_part( 'inc/content', 'header' ); ?>
 	<section class="main-content" role="main"> 
 
+	<?php if (!empty($search_query['s'])) : ?>
+
 		<h1>Search Results ( <?php echo $total_results; ?> found)</h1>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 		    <article class="post">
 		    	<h2><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 		        <?php the_excerpt(); ?>
 		    </article>
+		    
 		<?php endwhile; ?>
+
 			<div class="pagination">
 				<?php echo paginate_links( $args ); ?> 
 			</div>
-		<?php else : ?>
-        	<p>Sorry, there are no pages matching your search criteria</p>
-        <?php endif; ?>		
+
+		<?php endif; ?>
+
+	<?php else : $total_results = 0; ?>
+
+		<h1>Search Results ( <?php echo $total_results; ?> found)</h1>
+		<p>Sorry, there are no pages matching your search criteria</p>
+
+	<?php endif; ?>		
 
 	</section>
 	<?php get_sidebar(); ?>	
