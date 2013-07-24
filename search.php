@@ -37,13 +37,12 @@ $args = array(
 ?>
 
 <?php get_header(); ?>
-<?php get_header(); ?>
 <?php get_template_part( 'inc/content', 'header' ); ?>
 	<section class="main-content" role="main"> 
 
 		<h1>Search Results ( <?php echo $total_results; ?> found)</h1>
 
-		<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		    <article class="post">
 		    	<h2><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 		        <?php the_excerpt(); ?>
