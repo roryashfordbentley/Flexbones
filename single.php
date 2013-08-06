@@ -10,9 +10,6 @@
 		
 				<?php the_content(); ?>
 				
-				<footer>
-					<!-- social etc -->
-				</footer>
 			<?php endwhile; endif; ?>
 		</article>
 		<?php get_sidebar(); ?>	

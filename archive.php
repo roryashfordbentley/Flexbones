@@ -1,7 +1,3 @@
-<?php 
-	$args = array( 'post_type' => 'attachment','numberposts' => 1, 'post_status' => null,'post_parent' => $post->ID,'order' => 'ASC' );
-	$attachments = get_posts( $args );
-?>
 <?php get_header(); ?>
 <div class="content">
 	<div class="wrapper">
@@ -15,13 +11,6 @@
 						<date class="article-meta"><?php the_time(get_option('date_format')); ?></date>
 					</header>
 			        
-			        <?php if ( $attachments ): foreach ( $attachments as $attachment ): ?>
-		        		<?php $full_img_url = wp_get_attachment_image_src( $attachment->ID, 'full' ); ?>
-		        		<figure class="archive-thumbnail">
-	        				<a href="<?php get_permalink(); ?>"><?php wp_get_attachment_image( $attachment->ID, 'thumbnail' ); ?></a>
-	        			</figure>
-		        	<?php endforeach; endif;  ?>
-			        
 					<?php the_excerpt(); ?>
 
 				</article>
@@ -29,8 +18,8 @@
 			<?php endwhile; endif; ?>	
 
 			<menu class="pagination">
-				<div class="newer"><p><?php previous_posts_link('&laquo; Newer Entries') ?></p></div>
-				<div class="older"><p><?php next_posts_link('Older Entries &raquo;','') ?></p></div>
+				<div class="newer"><p><?php previous_posts_link('Newer Entries') ?></p></div>
+				<div class="older"><p><?php next_posts_link('Older Entries ','') ?></p></div>
 			</menu>
 		</section>
 		<?php get_sidebar(); ?>	
