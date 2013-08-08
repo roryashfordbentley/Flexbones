@@ -23,11 +23,19 @@ $desktop: 			901px 12;
 $heading_font: 		helvetica, arial, sans-serif;
 $body_font: 		helvetica, arial, sans-serif;
 
-// Font Sizes
+// Typographic units (golden ratioish shizzle)
 
-$desktop_font_size: $base_unit; 	// 10px
-$tablet_font_size: 	$base_unit - 1; // 9px
-$mobile_font_size: 	$base_unit - 2; // 8px
+$bigscreen_font_size: 		19px;
+$bigscreen_line_height: 	19px;
+
+$desktop_font_size: 		$base_unit; 	// 10px
+$bigscreen_line_height: 	19px;
+
+$tablet_font_size: 			$base_unit - 1; // 9px
+$bigscreen_line_height: 	19px;
+
+$mobile_font_size: 			$base_unit - 2; // 8px
+$bigscreen_line_height: 	19px;
 
 // Box sizing
 $border_box: true;

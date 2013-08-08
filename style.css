@@ -108,6 +108,60 @@ body {
   body:after {
     clear: both; }
 
+body:after {
+  position: absolute;
+  width: auto;
+  height: 10000px;
+  overflow: hidden;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(http://basehold.it/i/21) repeat top left; }
+
+body:active:after {
+  display: none; }
+
+@media (min-width: 651px) and (max-width: 900px) {
+  body:after {
+    position: absolute;
+    width: auto;
+    height: 10000px;
+    overflow: hidden;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(http://basehold.it/i/22) repeat top left; }
+
+  body:active:after {
+    display: none; } }
+@media (min-width: 901px) {
+  body:after {
+    position: absolute;
+    width: auto;
+    height: 10000px;
+    overflow: hidden;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(http://basehold.it/i/24) repeat top left; }
+
+  body:active:after {
+    display: none; } }
 .wrapper {
   *zoom: 1;
   max-width: 460%;

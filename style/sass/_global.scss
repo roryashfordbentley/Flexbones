@@ -32,6 +32,10 @@ body {
 	@include clearfix();
 }
 
+@include baseline-grid(body,21);
+@include at-breakpoint($tablet){ @include baseline-grid(body,22); }
+@include at-breakpoint($desktop){ @include baseline-grid(body,24); }
+
 // width with defined width (not 100% of page)
 
 .wrapper {

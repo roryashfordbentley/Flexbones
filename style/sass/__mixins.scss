@@ -22,3 +22,30 @@
 	@include at-breakpoint($desktop){ font-size: ($size * $desktop_font_size); }
 	font-size: $size + rem;
 }
+
+//baseline mixin
+
+
+@mixin baseline-grid($element, $size){
+	#{$element}:after {
+		position: absolute;
+		width: auto;
+		height: 10000px;
+		overflow: hidden;
+		z-index: 9999;
+		content: '';
+		display: block;
+		pointer-events: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url(http://basehold.it/i/#{$size}) repeat top left;
+		
+	}
+
+	#{$element}:active:after {
+		display: none;
+	}
+}
+
