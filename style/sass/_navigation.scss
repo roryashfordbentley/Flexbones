@@ -9,11 +9,10 @@
 // Primary nav container
 .primary-nav{   
     display: none;
-    //background: pink;
-	@include vr(margin-bottom,$vr_mobile,1);
-	@include at-breakpoint($tablet){ display:block; @include vr(margin-bottom,$vr_tablet,1);}	
-	@include at-breakpoint($desktop){ display: block; @include vr(margin-bottom,$vr_desktop,1);}
-	@include at-breakpoint($bigscreen){ @include vr(margin-bottom,$vr_bigscreen,1);}
+    //background: pink; 
+	@include at-breakpoint($tablet){ display:block;  @include vr(margin-bottom,$vr_tablet,2);}	
+	@include at-breakpoint($desktop){ display: block;  @include vr(margin-bottom,$vr_desktop,2);}
+	@include at-breakpoint($bigscreen){ @include vr(margin-bottom,$vr_bigscreen,2);}
 }
 
 	// the first ul
@@ -21,6 +20,7 @@
         list-style: none;
         @include clearfix();
         margin: 0;
+        font-family: $heading_font;
     }
 	
 	// menu item
@@ -33,7 +33,21 @@
 	.primary-nav__menu > .menu-item a{
     	display: block;
     	color: $blue;
+    	padding: 0 $base_unit*2;
     	@include font-size();
+
+		@include line_height($vr_mobile,2);
+		@include at-breakpoint($tablet){ 
+			@include line_height($vr_tablet,2);
+		}	
+		
+		@include at-breakpoint($desktop){ 
+			@include line_height($vr_desktop,2);
+		} 
+
+		@include at-breakpoint($bigscreen){ 
+			@include line_height($vr_bigscreen,2);
+		} 
 }
 	
 	//menu item hover
@@ -104,6 +118,7 @@
 	.mobile-nav__menu{
 		margin: 0 $base_unit;
 		list-style: none;
+		font-family: $heading_font;
 		
 		.current_page_item{
 			border-top: none;

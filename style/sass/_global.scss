@@ -28,11 +28,12 @@ body {
 	-webkit-font-smoothing: antialiased;
 	@include clearfix();
 }
-
-@include baseline-grid(body,$vr_mobile * 10);
-@include at-breakpoint($tablet){ @include baseline-grid(body,$vr_tablet * 10); }
-@include at-breakpoint($desktop){ @include baseline-grid(body,$vr_desktop * 10); }
-@include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }
+	.baseline-bg:after {
+		@include baseline-grid(body,$vr_mobile * 10);
+		@include at-breakpoint($tablet){ @include baseline-grid(body,$vr_tablet * 10); }
+		@include at-breakpoint($desktop){ @include baseline-grid(body,$vr_desktop * 10); }
+		@include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }
+	}
 
 // width with defined width (not 100% of page)
 
@@ -42,4 +43,8 @@ body {
 	@include at-breakpoint($desktop){ width: 85%; max-width: 1200px; margin: 0 auto;  }
 	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto; }
 	@include clearfix();
-}	
+}
+
+	.grid-bg{
+		@include susy-grid-background;
+	}	

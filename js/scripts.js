@@ -28,12 +28,23 @@ jQuery(document).ready(function($) {
 		$('.jenkins ul').append( '<li class="dimensions" style="display:inline-block; padding:10px;">' + $(window).width() + ' x ' + $(window).height() + '</li>' );
 		//dummy breakpoint
 		$('.jenkins ul').append( '<li class="breakpoint" style="display:inline-block; padding:10px;">init</li>' );
+		//baseline toggle button
+		$('.jenkins ul').append( '<li style="display:inline-block; padding:10px;"><a href="#" id="baselinetoggle">Baseline</a></li>' );
+		//background grid toggle button
+		$('.jenkins ul').append( '<li style="display:inline-block; padding:10px;"><a href="#" id="gridtoggle">Grid</a></li>' );
 
 		//add the x+y dimensions to elements with the .dimention class
 		dimensionDisplay = function() {
 			$('.dimensions').html( $(window).width() + ' x ' + $(window).height() );
 		}
 
+		$('#baselinetoggle').click(function() {
+			$('body').toggleClass('baseline-bg');
+		});
+
+		$('#gridtoggle').click(function() {
+			$('.wrapper').toggleClass('grid-bg');
+		});
 		//	
 		setBreakpoint = function(bpname,start,end){
 
