@@ -9,6 +9,12 @@
 .site-header{}
 
 	.site-header__logo{
-		display: block;
-		padding: (2 * $base_unit) 0;
+		
+		img{
+			display: block;
+			@include vr(height,$vr_mobile,2); 
+			@include at-breakpoint($tablet){ @include vr(height,$vr_tablet,2);  }	
+			@include at-breakpoint($desktop){ @include vr(height,$vr_desktop,2);  } 
+			@include at-breakpoint($bigscreen){ @include vr(height,$vr_bigscreen,2);  } 
+		}
 	}

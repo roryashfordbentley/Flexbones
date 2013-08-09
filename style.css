@@ -87,19 +87,12 @@ img {
   max-width: 100%; }
 
 html {
-  font-size: 8px;
-  font-weight: normal; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    html {
-      font-size: 9px; } }
-  @media (min-width: 901px) {
-    html {
-      font-size: 10px; } }
+  font-size: 62.5%; }
 
 body {
   width: 100%;
-  color: #5a5a5a;
-  font-family: helvetica, arial, sans-serif;
+  color: #3e3e3e;
+  font-family: georgia, times, "times new roman" sans-serif;
   -webkit-font-smoothing: antialiased;
   *zoom: 1; }
   body:before, body:after {
@@ -121,7 +114,7 @@ body:after {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(http://basehold.it/i/21) repeat top left; }
+  background: url(http://basehold.it/i/24) repeat top left; }
 
 body:active:after {
   display: none; }
@@ -140,7 +133,7 @@ body:active:after {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(http://basehold.it/i/22) repeat top left; }
+    background: url(http://basehold.it/i/23) repeat top left; }
 
   body:active:after {
     display: none; } }
@@ -158,7 +151,25 @@ body:active:after {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(http://basehold.it/i/24) repeat top left; }
+    background: url(http://basehold.it/i/26) repeat top left; }
+
+  body:active:after {
+    display: none; } }
+@media (min-width: 1201px) {
+  body:after {
+    position: absolute;
+    width: auto;
+    height: 10000px;
+    overflow: hidden;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(http://basehold.it/i/28) repeat top left; }
 
   body:active:after {
     display: none; } }
@@ -166,10 +177,10 @@ body:active:after {
   *zoom: 1;
   max-width: 460%;
   _width: 460%;
-  padding-left: 0;
-  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
   width: 90%;
   *zoom: 1; }
   .wrapper:after {
@@ -178,7 +189,7 @@ body:active:after {
     clear: both; }
   @media (min-width: 651px) and (max-width: 900px) {
     .wrapper {
-      max-width: 620%; } }
+      max-width: 940%; } }
   @media (min-width: 901px) {
     .wrapper {
       max-width: 940%; } }
@@ -260,77 +271,84 @@ a:hover {
   color: #0097e9; }
 
 p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol, blockquote {
-  margin: 10px 0; }
-
-p, ul, ol {
-  line-height: 150%; }
+  line-height: 24px;
+  line-height: 2.4rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol, blockquote {
+      line-height: 23px;
+      line-height: 2.3rem;
+      margin-bottom: 23px;
+      margin-bottom: 2.3rem; } }
+  @media (min-width: 901px) {
+    p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol, blockquote {
+      line-height: 26px;
+      line-height: 2.6rem;
+      margin-bottom: 26px;
+      margin-bottom: 2.6rem; } }
+  @media (min-width: 1201px) {
+    p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol, blockquote {
+      line-height: 28px;
+      line-height: 2.8rem;
+      margin-bottom: 28px;
+      margin-bottom: 2.8rem; } }
 
 h1, h2, legend, h3, h4, h5, h6, blockquote {
   font-family: helvetica, arial, sans-serif;
-  font-weight: bold;
-  line-height: 120%;
-  color: #292929; }
-
-h1 {
-  font-size: 32px;
-  font-size: 4rem; }
+  font-weight: 300;
+  color: #292929;
+  line-height: 48px;
+  line-height: 4.8rem; }
   @media (min-width: 651px) and (max-width: 900px) {
-    h1 {
-      font-size: 36px; } }
+    h1, h2, legend, h3, h4, h5, h6, blockquote {
+      line-height: 46px;
+      line-height: 4.6rem; } }
   @media (min-width: 901px) {
-    h1 {
-      font-size: 40px; } }
-
-h2, legend {
-  font-size: 24px;
-  font-size: 3rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    h2, legend {
-      font-size: 27px; } }
-  @media (min-width: 901px) {
-    h2, legend {
-      font-size: 30px; } }
-
-h3 {
-  font-size: 16px;
-  font-size: 2rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    h3 {
-      font-size: 18px; } }
-  @media (min-width: 901px) {
-    h3 {
-      font-size: 20px; } }
-
-h4 {
-  font-size: 14.4px;
-  font-size: 1.8rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    h4 {
-      font-size: 16.2px; } }
-  @media (min-width: 901px) {
-    h4 {
-      font-size: 18px; } }
-
-h5 {
-  font-size: 12.8px;
-  font-size: 1.6rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    h5 {
-      font-size: 14.4px; } }
-  @media (min-width: 901px) {
-    h5 {
-      font-size: 16px; } }
+    h1, h2, legend, h3, h4, h5, h6, blockquote {
+      line-height: 52px;
+      line-height: 5.2rem; } }
+  @media (min-width: 1201px) {
+    h1, h2, legend, h3, h4, h5, h6, blockquote {
+      line-height: 56px;
+      line-height: 5.6rem; } }
 
 p {
-  font-size: 12.8px;
-  font-size: 1.6rem;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 15px;
+  font-size: 1.5rem; }
   @media (min-width: 651px) and (max-width: 900px) {
     p {
-      font-size: 14.4px; } }
+      font-size: 14px;
+      font-size: 1.4rem; } }
   @media (min-width: 901px) {
     p {
-      font-size: 16px; } }
+      font-size: 16px;
+      font-size: 1.6rem; } }
+  @media (min-width: 1201px) {
+    p {
+      font-size: 17px;
+      font-size: 1.7rem; } }
+
+h1 {
+  font-size: 40px;
+  font-size: 4rem; }
+
+h2, legend {
+  font-size: 30px;
+  font-size: 3rem; }
+
+h3 {
+  font-size: 20px;
+  font-size: 2rem; }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.8rem; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem; }
 
 strong {
   font-weight: bold; }
@@ -340,29 +358,17 @@ em {
 
 ul {
   list-style-type: disc;
-  font-size: 12.8px;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
   margin-left: 20px; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    ul {
-      font-size: 14.4px; } }
-  @media (min-width: 901px) {
-    ul {
-      font-size: 16px; } }
 
 ol {
   list-style-type: decimal;
-  font-size: 12.8px;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
   margin-left: 20px; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    ol {
-      font-size: 14.4px; } }
-  @media (min-width: 901px) {
-    ol {
-      font-size: 16px; } }
 
 blockquote {
   margin: 0 0 20px 20px;
@@ -377,15 +383,9 @@ blockquote {
       width: 40%;
       float: right; } }
   blockquote p {
-    font-size: 19.2px;
+    font-size: 24px;
     font-size: 2.4rem;
     text-align: right; }
-    @media (min-width: 651px) and (max-width: 900px) {
-      blockquote p {
-        font-size: 21.6px; } }
-    @media (min-width: 901px) {
-      blockquote p {
-        font-size: 24px; } }
 
 /* -- _TABLES.SCSS -- */
 /*
@@ -396,14 +396,8 @@ table {
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  font-size: 11.2px;
+  font-size: 14px;
   font-size: 1.4rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    table {
-      font-size: 12.6px; } }
-  @media (min-width: 901px) {
-    table {
-      font-size: 14px; } }
 
 thead {
   background: #ccc; }
@@ -429,14 +423,8 @@ fieldset {
 
 label {
   margin-bottom: 10px;
-  font-size: 11.2px;
+  font-size: 14px;
   font-size: 1.4rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    label {
-      font-size: 12.6px; } }
-  @media (min-width: 901px) {
-    label {
-      font-size: 14px; } }
 
 input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
@@ -455,16 +443,10 @@ textarea {
   padding: 10px;
   margin: 10px 0;
   display: inline-block;
-  font-size: 12.8px;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: bold;
   color: #fff; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    .button {
-      font-size: 14.4px; } }
-  @media (min-width: 901px) {
-    .button {
-      font-size: 16px; } }
   .button:hover {
     background: #0097e9;
     color: #fff; }
@@ -475,18 +457,12 @@ input[type="submit"] {
   background: #03a7ff;
   padding: 9px 10px 10px 10px;
   margin: 10px 0;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 11.2px;
+  font-family: georgia, times, "times new roman" sans-serif;
+  font-size: 14px;
   font-size: 1.4rem;
   font-weight: bold;
   color: #fff;
   border: 0; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    input[type="submit"] {
-      font-size: 12.6px; } }
-  @media (min-width: 901px) {
-    input[type="submit"] {
-      font-size: 14px; } }
   input[type="submit"]:hover {
     background: #0097e9;
     color: #fff; }
@@ -516,16 +492,10 @@ input[type="submit"] {
   display: inline-block;
   padding: 15px;
   border-right: 1px solid #0087cf;
-  font-size: 14.4px;
+  font-size: 18px;
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff; }
-  @media (min-width: 651px) and (max-width: 900px) {
-    .mobile-header__button {
-      font-size: 16.2px; } }
-  @media (min-width: 901px) {
-    .mobile-header__button {
-      font-size: 18px; } }
   .mobile-header__button:visited {
     color: #fff; }
 
@@ -539,10 +509,10 @@ input[type="submit"] {
   *zoom: 1;
   max-width: 460%;
   _width: 460%;
-  padding-left: 0;
-  padding-right: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0; }
   .content:before, .content:after {
     content: "";
     display: table; }
@@ -555,9 +525,9 @@ input[type="submit"] {
 
 @media (min-width: 651px) and (max-width: 900px) {
   .main {
-    width: 61.29032%;
+    width: 65.95745%;
     float: left;
-    margin-right: 3.22581%; } }
+    margin-right: 2.12766%; } }
 @media (min-width: 901px) {
   .main {
     width: 65.95745%;
@@ -572,13 +542,22 @@ input[type="submit"] {
  */
 .primary-nav {
   display: none;
-  margin: 0 0 20px 0; }
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem; }
   @media (min-width: 651px) and (max-width: 900px) {
     .primary-nav {
-      display: block; } }
+      display: block;
+      margin-bottom: 23px;
+      margin-bottom: 2.3rem; } }
   @media (min-width: 901px) {
     .primary-nav {
-      display: block; } }
+      display: block;
+      margin-bottom: 26px;
+      margin-bottom: 2.6rem; } }
+  @media (min-width: 1201px) {
+    .primary-nav {
+      margin-bottom: 28px;
+      margin-bottom: 2.8rem; } }
 
 .primary-nav__menu {
   list-style: none;
@@ -596,8 +575,9 @@ input[type="submit"] {
 
 .primary-nav__menu > .menu-item a {
   display: block;
-  padding: 5px 10px;
-  color: #03a7ff; }
+  color: #03a7ff;
+  font-size: 15px;
+  font-size: 1.5rem; }
 
 .primary-nav__menu .menu-item:hover {
   background: #03a7ff; }
@@ -675,9 +655,22 @@ input[type="submit"] {
  * Header specific declarations
  * Note: navigation has its own document _navigation.scss
  */
-.site-header__logo {
+.site-header__logo img {
   display: block;
-  padding: 20px 0; }
+  height: 48px;
+  height: 4.8rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    .site-header__logo img {
+      height: 46px;
+      height: 4.6rem; } }
+  @media (min-width: 901px) {
+    .site-header__logo img {
+      height: 52px;
+      height: 5.2rem; } }
+  @media (min-width: 1201px) {
+    .site-header__logo img {
+      height: 56px;
+      height: 5.6rem; } }
 
 /* -- _FOOTER.SCSS -- */
 /*
@@ -692,7 +685,7 @@ input[type="submit"] {
  */
 @media (min-width: 651px) and (max-width: 900px) {
   .sidebar {
-    width: 35.48387%;
+    width: 31.91489%;
     float: right;
     margin-right: 0; } }
 @media (min-width: 901px) {

@@ -14,17 +14,28 @@
 	&:after { clear:both; }
 }
 
-//font size/line height mixin using 'rem' -a non cascading modular unit of measurement
+// Font size/line height mixin using 'rem' -a non cascading modular unit of measurement
+// Responsive typography implemented
 
-@mixin font-size($size:1.6){
-	font-size: $size * $mobile_font_size;
-	@include at-breakpoint($tablet){ font-size: ($size * $tablet_font_size); }
-	@include at-breakpoint($desktop){ font-size: ($size * $desktop_font_size); }
+
+@mixin font-size($size:$font_mobile){
+	font-size: $size * 10px;
 	font-size: $size + rem;
 }
 
-//baseline mixin
+@mixin line-height($lh:$vr_mobile,$multiplier:1){
+	line-height: $multiplier * $lh * 10px;
+	line-height: $multiplier * $lh + rem;
+}
 
+// margins with vertical rhythm
+
+@mixin vr($element,$line_height,$multiplier){
+	#{$element}: $multiplier * $line_height * 10px;
+	#{$element}: $multiplier * $line_height + rem;
+}
+
+// Baseline mixin
 
 @mixin baseline-grid($element, $size){
 	#{$element}:after {

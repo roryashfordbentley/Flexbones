@@ -15,27 +15,29 @@ $grid-padding: 		0;
 
 //$media-layout: min-width mq | total columns | max-width mq
 $mobile: 			0 6 650px;
-$tablet: 			651px 8 900px;
+$tablet: 			651px 12 900px;
 $desktop: 			901px 12;
+$bigscreen: 		1201px 12;
 
 // Font Stack
 
 $heading_font: 		helvetica, arial, sans-serif;
-$body_font: 		helvetica, arial, sans-serif;
+$body_font: 		georgia, times, "times new roman" sans-serif;
 
 // Typographic units (golden ratioish shizzle)
 
-$bigscreen_font_size: 		19px;
-$bigscreen_line_height: 	19px;
+$font_mobile: 	1.5;
+$vr_mobile: 	2.4;
 
-$desktop_font_size: 		$base_unit; 	// 10px
-$bigscreen_line_height: 	19px;
+$font_tablet: 	1.4; 
+$vr_tablet: 	2.3;
 
-$tablet_font_size: 			$base_unit - 1; // 9px
-$bigscreen_line_height: 	19px;
+$font_desktop: 	1.6;
+$vr_desktop: 	2.6;
 
-$mobile_font_size: 			$base_unit - 2; // 8px
-$bigscreen_line_height: 	19px;
+$font_bigscreen:1.7;
+$vr_bigscreen: 	2.8;
+
 
 // Box sizing
 $border_box: true;

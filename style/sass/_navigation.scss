@@ -9,9 +9,11 @@
 // Primary nav container
 .primary-nav{   
     display: none;
-    margin: 0 0 ($base_unit*2) 0;
-    @include at-breakpoint($tablet){ display:block; }
-    @include at-breakpoint($desktop){ display: block; }
+    //background: pink;
+	@include vr(margin-bottom,$vr_mobile,1);
+	@include at-breakpoint($tablet){ display:block; @include vr(margin-bottom,$vr_tablet,1);}	
+	@include at-breakpoint($desktop){ display: block; @include vr(margin-bottom,$vr_desktop,1);}
+	@include at-breakpoint($bigscreen){ @include vr(margin-bottom,$vr_bigscreen,1);}
 }
 
 	// the first ul
@@ -30,9 +32,9 @@
 	// menu item link (block level element with padding + margin applied)
 	.primary-nav__menu > .menu-item a{
     	display: block;
-    	padding: ($base_unit/2) $base_unit;
     	color: $blue;
-    }
+    	@include font-size();
+}
 	
 	//menu item hover
     .primary-nav__menu .menu-item:hover{

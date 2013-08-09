@@ -18,23 +18,21 @@ img{ max-width: 100%; }
 // html/body
 
 html { 
-	font-size: $mobile_font_size;
-	font-weight: normal;
-	@include at-breakpoint($tablet){ font-size: $tablet_font_size; }
-	@include at-breakpoint($desktop){ font-size: $desktop_font_size; }
+	font-size: 62.5%;
 }
 
 body {
 	width: 100%;
-	color: #5a5a5a;
+	color: #3e3e3e;
 	font-family: $body_font;
 	-webkit-font-smoothing: antialiased;
 	@include clearfix();
 }
 
-@include baseline-grid(body,21);
-@include at-breakpoint($tablet){ @include baseline-grid(body,22); }
-@include at-breakpoint($desktop){ @include baseline-grid(body,24); }
+@include baseline-grid(body,$vr_mobile * 10);
+@include at-breakpoint($tablet){ @include baseline-grid(body,$vr_tablet * 10); }
+@include at-breakpoint($desktop){ @include baseline-grid(body,$vr_desktop * 10); }
+@include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }
 
 // width with defined width (not 100% of page)
 

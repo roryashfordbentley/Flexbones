@@ -12,6 +12,6 @@
 }
 
 	.main{
-		@include at-breakpoint($tablet){ @include span-columns(5,8); }	
+		@include at-breakpoint($tablet){ @include span-columns(8,12); }	
 		@include at-breakpoint($desktop){ @include span-columns(8,12); } 
 	}

@@ -16,21 +16,38 @@ a:hover{
 }
 
 p,h1,h2,h3,h4,h4,h5,h6,ul,ol,blockquote{
-	margin: $base_unit 0;
+	@include line-height($vr_mobile);
+	@include vr(margin-bottom,$vr_mobile,1);
+	@include at-breakpoint($tablet){ @include line-height($vr_tablet); @include vr(margin-bottom,$vr_tablet,1);}	
+	@include at-breakpoint($desktop){ @include line-height($vr_desktop); @include vr(margin-bottom,$vr_desktop,1);}
+	@include at-breakpoint($bigscreen){ @include line-height($vr_bigscreen); @include vr(margin-bottom,$vr_bigscreen,1);}
 }
 
 p,ul,ol{
-	line-height: 150%;
+	//line-height: 150%;
 }
 
 h1,h2,h3,h4,h5,h6,blockquote{
 	font-family: $heading_font;
-	font-weight: bold;
-	line-height: 120%;
+	font-weight: 300;
 	color: #292929;
+	//background: pink;
+	@include line-height($vr_mobile,2);
+	@include at-breakpoint($tablet){ @include line-height($vr_tablet,2); }	
+	@include at-breakpoint($desktop){ @include line-height($vr_desktop,2); }
+	@include at-breakpoint($bigscreen){ @include line-height($vr_bigscreen,2); }
 }
 
-h1{ @include font-size(4); }
+p{
+	font-weight: normal;
+	@include font-size($font_mobile);
+	@include at-breakpoint($tablet){ @include font-size($font_tablet); }	
+	@include at-breakpoint($desktop){ @include font-size($font_desktop); }
+	@include at-breakpoint($bigscreen){ @include font-size($font_bigscreen); }
+}
+
+h1{ 
+	@include font-size(4); }
 
 h2{ @include font-size(3); }
 
@@ -39,11 +56,6 @@ h3{ @include font-size(2); }
 h4{ @include font-size(1.8); }
 
 h5{ @include font-size(1.6); }
-
-p{
-	@include font-size(1.6);
-	font-weight: normal;
-}
 
 strong{ font-weight: bold; }
 
