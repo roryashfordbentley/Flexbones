@@ -28,12 +28,49 @@ body {
 	-webkit-font-smoothing: antialiased;
 	@include clearfix();
 }
-	.baseline-bg:after {
-		@include baseline-grid(body,$vr_mobile * 10);
+	body:after {
+		/*@include baseline-grid(body,$vr_mobile * 10);
 		@include at-breakpoint($tablet){ @include baseline-grid(body,$vr_tablet * 10); }
 		@include at-breakpoint($desktop){ @include baseline-grid(body,$vr_desktop * 10); }
-		@include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }
+		@include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }*/
+		position: absolute;
+		width: auto;
+		height: 10000px;
+		overflow: hidden;
+		z-index: 9999;
+		content: '';
+		display: block;
+		pointer-events: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: url("images/baseline.png"); 
+		//genius!!!! using a 50px high background image but resizing it down to 
+		//realistic baseline heights it appears as a hairline stroke!
+		background-size: 100% $vr_mobile + rem;
+		@include at-breakpoint($tablet){ background-size: 100% $vr_tablet + rem; }
+		@include at-breakpoint($desktop){ background-size: 100% $vr_desktop + rem; }
+		@include at-breakpoint($bigscreen){ background-size: 100% $vr_bigscreen + rem; }
 	}
+
+
+.grid-overlay{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	pointer-events: none;
+	.row{ 
+		border-left: 1px solid rgba(210,210,210,0.5);
+		border-right: 1px solid rgba(210,210,210,0.5);
+		min-height: 800px;
+		//background: rgba(20,255,200,0.1);
+		@include span-columns(1,12); 
+		&:nth-child(12){ @include span-columns(1 omega,12); }
+	}
+}
 
 // width with defined width (not 100% of page)
 

@@ -101,7 +101,11 @@ body {
   body:after {
     clear: both; }
 
-.baseline-bg:after {
+body:after {
+  /*@include baseline-grid(body,$vr_mobile * 10);
+  @include at-breakpoint($tablet){ @include baseline-grid(body,$vr_tablet * 10); }
+  @include at-breakpoint($desktop){ @include baseline-grid(body,$vr_desktop * 10); }
+  @include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }*/
   position: absolute;
   width: auto;
   height: 10000px;
@@ -114,64 +118,39 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(http://basehold.it/i/24) repeat top left;
-  /*body:active:after {
-  	display: none;
-  }*/ }
+  background-image: url("images/baseline.png");
+  background-size: 100% 2.4rem; }
   @media (min-width: 651px) and (max-width: 900px) {
-    .baseline-bg:after {
-      position: absolute;
-      width: auto;
-      height: 10000px;
-      overflow: hidden;
-      z-index: 9999;
-      content: '';
-      display: block;
-      pointer-events: none;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: url(http://basehold.it/i/23) repeat top left;
-      /*body:active:after {
-      	display: none;
-      }*/ } }
+    body:after {
+      background-size: 100% 2.3rem; } }
   @media (min-width: 901px) {
-    .baseline-bg:after {
-      position: absolute;
-      width: auto;
-      height: 10000px;
-      overflow: hidden;
-      z-index: 9999;
-      content: '';
-      display: block;
-      pointer-events: none;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: url(http://basehold.it/i/26) repeat top left;
-      /*body:active:after {
-      	display: none;
-      }*/ } }
+    body:after {
+      background-size: 100% 2.6rem; } }
   @media (min-width: 1201px) {
-    .baseline-bg:after {
-      position: absolute;
-      width: auto;
-      height: 10000px;
-      overflow: hidden;
-      z-index: 9999;
-      content: '';
-      display: block;
-      pointer-events: none;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: url(http://basehold.it/i/28) repeat top left;
-      /*body:active:after {
-      	display: none;
-      }*/ } }
+    body:after {
+      background-size: 100% 2.8rem; } }
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; }
+  .grid-overlay .row {
+    border-left: 1px solid rgba(210, 210, 210, 0.5);
+    border-right: 1px solid rgba(210, 210, 210, 0.5);
+    min-height: 800px;
+    width: 6.38298%;
+    float: left;
+    margin-right: 2.12766%;
+    display: inline; }
+    .grid-overlay .row:nth-child(12) {
+      width: 6.38298%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -20%;
+      display: inline; }
 
 .wrapper {
   *zoom: 1;
@@ -347,8 +326,8 @@ p {
       font-size: 1.7rem; } }
 
 h1 {
-  font-size: 45px;
-  font-size: 4.5rem; }
+  font-size: 30px;
+  font-size: 3rem; }
   @media (min-width: 651px) and (max-width: 900px) {
     h1 {
       font-size: 42.0px;
@@ -363,8 +342,8 @@ h1 {
       font-size: 5.1rem; } }
 
 h2, legend {
-  font-size: 37.5px;
-  font-size: 3.75rem; }
+  font-size: 22.5px;
+  font-size: 2.25rem; }
   @media (min-width: 651px) and (max-width: 900px) {
     h2, legend {
       font-size: 35px;
@@ -379,8 +358,8 @@ h2, legend {
       font-size: 4.25rem; } }
 
 h3 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 18.75px;
+  font-size: 1.875rem; }
   @media (min-width: 651px) and (max-width: 900px) {
     h3 {
       font-size: 28px;
@@ -395,8 +374,8 @@ h3 {
       font-size: 3.4rem; } }
 
 h4 {
-  font-size: 22.5px;
-  font-size: 2.25rem; }
+  font-size: 15px;
+  font-size: 1.5rem; }
   @media (min-width: 651px) and (max-width: 900px) {
     h4 {
       font-size: 21.0px;
