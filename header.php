@@ -19,7 +19,8 @@
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	
+	<script type="text/javascript" src="//use.typekit.net/ufc6zmo.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />

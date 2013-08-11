@@ -10,7 +10,7 @@
 			<li>Remember, a Jedi can feel the Force flowing through him.</li>
 			</ul>
 		<h3>The Phantom Menace</h3>
-		<blockquote><p>The Phantom Menace sucks.</p></blockquote>
+		<blockquote><p>The Phantom Menace sucks. It was the biggest failure in the franchise.</p></blockquote>
 		<p>Don't underestimate the Force. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. You're all clear, kid. Let's blow this thing and go home! What good is a reward if you ain't around to use it? Besides, attacking that battle station ain't my idea of courage. It's more like&hellip;suicide.</p>
 		<h4>Return of the Jedi</h4>
 		<p>Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. I'm surprised you had the courage to take the responsibility yourself. Dantooine. They're on Dantooine. Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you.</p>
@@ -45,16 +45,10 @@
 											
 					<div>
 						<input type="radio" name="radio_1" /><label>Radio 1</label>
-						<input type="radio" name="radio_1" /><label>Radio 2</label>
-						<input type="radio" name="radio_1" /><label>Radio 3</label>
-						<input type="radio" name="radio_1" /><label>Radio 4</label>
-						<input type="radio" name="radio_1" /><label>Radio 5</label>
 					</div>
 					
 					<div>
 						<input type="checkbox" name="checkbox_1" /><label>Checkbox 1</label>
-						<input type="checkbox" name="checkbox_2" /><label>Checkbox 2</label>
-						<input type="checkbox" name="checkbox_3" /><label>Checkbox 3</label>
 					</div>
 					
 				</fieldset>

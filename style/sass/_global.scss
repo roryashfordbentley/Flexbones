@@ -23,7 +23,7 @@ html {
 	
 	@include at-breakpoint($tablet){ font-size: 16px; } 
 	@include at-breakpoint($desktop){ font-size: 16px; } 
-	@include at-breakpoint($bigscreen){ font-size: 20px; } 
+	@include at-breakpoint($bigscreen){ font-size: 18px; } 
 	line-height: $vertical_unit;
 }
 
@@ -64,8 +64,8 @@ body {
 .grid-overlay{
 	position: absolute;
 	width: auto;
-	height: 10000px;
-	overflow: hidden;
+	
+
 	z-index: 100;
 	content: '';
 	display: block;
@@ -78,7 +78,7 @@ body {
 	.col{ 
 		border-left: 1px solid rgba(210,210,210,0.5);
 		border-right: 1px solid rgba(210,210,210,0.5);
-		min-height: 800px;
+		height: 10000px;
 		//background: rgba(20,255,200,0.1);
 		@include span-columns(1,6); 
 		@include at-breakpoint($mobile){ &:nth-child(6){ @include span-columns(1 omega,6); } }

@@ -15,7 +15,7 @@ a:hover{
 	color: $link_hover;
 }
 
-p,h1,h2,h3,h4,h4,h5,h6,ul,ol,blockquote{
+p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
 	line-height: $vertical_unit;
 	margin-bottom: $vertical_unit;
 	//background: pink;
@@ -25,7 +25,7 @@ p,ul,ol{
 	//line-height: 150%;
 }
 
-h1,h2,h3,h4,h5,h6,blockquote{
+h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
 	font-weight: 300;
 	color: #292929;
@@ -82,13 +82,19 @@ ol {
 }
 
 blockquote {
-	
-	border-top: 1px solid  #666;
-	border-bottom: 1px solid #666;
-	width: 40%; float:right;
-	line-height:$vertical_unit;
+	display:block;
+
+	@include span-columns(3 omega,7);
+	float:right;
+	margin-left: gutter();
 	margin-bottom:$vertical_unit;
 
-	
-	p{ @include font-size(2); text-align: right; }
+	p{ 
+		@include font-size(1.2); 
+		text-align: right; 
+		line-height:$vertical_unit*1;
+		font-style: italic;
+		padding: 0 $base_unit;
+		margin: 0;
+	}
 }

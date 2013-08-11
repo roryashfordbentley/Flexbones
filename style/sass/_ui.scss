@@ -7,7 +7,11 @@
 // Forms
 
 fieldset{
-	margin: $base_unit 0;
+	div{
+		//margin-top: -0.24rem;
+		@include clearfix();
+	}
+
 }
 
 legend{
@@ -15,37 +19,51 @@ legend{
 }
 
 label {
-	margin-bottom: $base_unit;
-	@include font-size(1.4);
+	@include font-size(1);
+	line-height: $vertical_unit;
+	margin-bottom: $vertical_unit;
+
+	display: block;
+	@include span-columns(2,8);
 }
 
 input[type="text"], input[type="password"]{
 	border: 1px solid #ccc;
-	padding: $base_unit;
-	margin: $base_unit 0;
-	display: inline-block;
+	height: $vertical_unit*1;
+	margin-bottom: $vertical_unit;
+	float: left;
+	display: block;
+	@include span-columns(2,8);
 }
 
 textarea{
 	border: 1px solid #ccc;
-	padding: $base_unit;
-	margin: $base_unit 0;
+	line-height: $vertical_unit;
+	height: $vertical_unit*4;
+	margin-bottom: $vertical_unit;
 	display: block;
+	@include span-columns(4,8);
+}
+
+.input[type="radio"]{
+	float: left;
 }
 
 // BUTTONS
 	
 .button {
 	background: $blue;
-	padding: $base_unit;
-	margin: $base_unit 0;
+	padding: 0 $vertical_unit;
+	line-height: $vertical_unit*2;
+	margin: 0 0 $vertical_unit 0;
 	display: inline-block;
-	@include font-size(1.6);
+	@include font-size(1);
+	font-family: $heading_font;
 	font-weight: bold;
 	color: #fff;
 
 	&:hover{
-		background: darken($blue,5%);
+		background: lighten($blue,3%);
 		color: #fff;
 	}
 

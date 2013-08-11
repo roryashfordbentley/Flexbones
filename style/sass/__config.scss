@@ -11,8 +11,8 @@ $vertical_unit:		1.5rem;
 // Susy vars don't follow underscore rules 
 
 //$total-columns: 	6;  
-$column-width: 		40%;  
-$gutter-width: 		30%;  
+$column-width: 		60%;  
+$gutter-width: 		20%;  
 $grid-padding: 		0;
 
 //Column
@@ -29,16 +29,16 @@ $bigscreen: 		1201px $columns_bigscreen;
 
 // Font Stack
 
-$heading_font: 		helvetica, arial, sans-serif;
-$body_font: 		georgia, times, "times new roman" sans-serif;
+$heading_font: 		"brandon-grotesque",helvetica, arial, sans-serif;
+$body_font: 		"ff-tisa-web-pro",georgia, times, "times new roman" sans-serif;
 
 // Typographic units (golden ratioish shizzle)
 
-$paragraph_size:	1; //16 desktop
-$h1_size:			3;  //36
-$h2_size:			2.5;  //36
-$h3_size:			2;  //36
-$h4_size:			1.5;  //36
+$paragraph_size:	1; 
+$h1_size:			2.3;  
+$h2_size:			2;  
+$h3_size:			1.8;  
+$h4_size:			1.5;  
 
 // Wrapper width
 
