@@ -29,22 +29,15 @@ jQuery(document).ready(function($) {
 		//dummy breakpoint
 		$('.jenkins ul').append( '<li class="breakpoint" style="display:inline-block; padding:10px;">init</li>' );
 		//baseline toggle button
-		$('.jenkins ul').append( '<li style="display:inline-block; padding:10px;"><a href="#" id="baselinetoggle">Baseline</a></li>' );
+		$('.jenkins ul').append( '<li style="display:inline-block; padding:10px;"><a href="#" class="baseline-toggle">Baseline</a></li>' );
 		//background grid toggle button
-		$('.jenkins ul').append( '<li style="display:inline-block; padding:10px;"><a href="#" id="gridtoggle">Grid</a></li>' );
+		$('.jenkins ul').append( '<li style="display:inline-block; padding:10px;"><a href="#" class="grid-toggle">Grid</a></li>' );
 
 		//add the x+y dimensions to elements with the .dimention class
 		dimensionDisplay = function() {
 			$('.dimensions').html( $(window).width() + ' x ' + $(window).height() );
 		}
 
-		$('#baselinetoggle').click(function() {
-			$('body').toggleClass('baseline-bg');
-		});
-
-		$('#gridtoggle').click(function() {
-			$('.wrapper').toggleClass('grid-bg');
-		});
 		//	
 		setBreakpoint = function(bpname,start,end){
 
@@ -57,8 +50,6 @@ jQuery(document).ready(function($) {
 			localStorage.setItem('breakpointName', 'Bugs');
 		}*/
 
-
-
 		$(window).resize(function() {
 	        dimensionDisplay();
 	        $(window).resize(setBreakpoint('mobile',0,649));
@@ -66,6 +57,36 @@ jQuery(document).ready(function($) {
 			$(window).resize(setBreakpoint('desktop',900,1199));
 			$(window).resize(setBreakpoint('bigscreen',1200,10000));
 	    });	
+
+
+
+		
+		//toggle 
+
+		$('.baseline-toggle').toggle(function() {
+			//$('body').toggleClass('baseline-bg');
+			//add baseline-overlay div
+			$('body').append( '<div class="baseline-overlay"></div>' );
+			//add 200 divs, seems extreme but this method is the most accurate
+			for(var i=1;i <= 200;i++){
+				$('.baseline-overlay').append( '<div class="row"></div>' );
+			}
+		}, function() {
+			$('.baseline-overlay').remove();
+		});
+
+		$('.grid-toggle').toggle(function() {
+			//add baseline-overlay div
+			$('body').append( '<div class="grid-overlay"></div>' );
+			$('.grid-overlay').append('<div class="wrapper"></div>');
+			//add 200 divs, seems extreme but this method is the most accurate
+			for(var i=1;i <= 12;i++){
+				$('.grid-overlay .wrapper').append( '<div class="col"></div>' );
+			}
+		}, function(){
+			$('.grid-overlay').remove();
+			
+		});
 
 
 });

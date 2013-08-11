@@ -9,10 +9,10 @@
 // Primary nav container
 .primary-nav{   
     display: none;
-    //background: pink; 
-	@include at-breakpoint($tablet){ display:block;  @include vr(margin-bottom,$vr_tablet,2);}	
-	@include at-breakpoint($desktop){ display: block;  @include vr(margin-bottom,$vr_desktop,2);}
-	@include at-breakpoint($bigscreen){ @include vr(margin-bottom,$vr_bigscreen,2);}
+    //background: pink;
+    margin-bottom:$vertical_unit; 
+	@include at-breakpoint($tablet){ display:block;  }	
+	@include at-breakpoint($desktop){ display: block; }
 }
 
 	// the first ul
@@ -34,20 +34,8 @@
     	display: block;
     	color: $blue;
     	padding: 0 $base_unit*2;
-    	@include font-size();
-
-		@include line_height($vr_mobile,2);
-		@include at-breakpoint($tablet){ 
-			@include line_height($vr_tablet,2);
-		}	
-		
-		@include at-breakpoint($desktop){ 
-			@include line_height($vr_desktop,2);
-		} 
-
-		@include at-breakpoint($bigscreen){ 
-			@include line_height($vr_bigscreen,2);
-		} 
+    	@include font-size(1);
+    	line-height: $vertical_unit*2;
 }
 	
 	//menu item hover

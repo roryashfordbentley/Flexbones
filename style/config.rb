@@ -12,3 +12,4 @@ preferred_syntax = :scss
 
 line_comments = false # by Fire.app 
 output_style = :nested # by Fire.app 
+Sass::Script::Number.precision = 10

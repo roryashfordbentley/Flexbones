@@ -26,22 +26,7 @@
 	<![endif]-->
 </head>
 <body <?php body_class(); ?>>
-<div class="grid-overlay">
-	<div class="wrapper">
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-		<div class="row"></div>
-	</div>
-</div>
+
 <!-- visible on mobile only -->
 
 <header class="mobile-header">

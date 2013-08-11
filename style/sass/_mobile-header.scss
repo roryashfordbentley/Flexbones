@@ -13,11 +13,12 @@
 
 		.mobile-header__button{
 			display: inline-block;
-			padding: $base_unit*1.5;
 			border-right: 1px solid darken($blue,10%);
 			@include font-size(1.6);
 			font-weight: bold;
 			font-family: $heading_font;
+			line-height: $vertical_unit*2;
+			padding: 0 $base_unit;
 			color: #fff;
 			&:visited{
 				color: #fff;

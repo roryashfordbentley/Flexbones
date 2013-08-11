@@ -18,8 +18,8 @@
 // Responsive typography implemented
 
 
-@mixin font-size($size:$font_mobile){
-	font-size: $size * 10px;
+@mixin font-size($size:1){
+	font-size: $size * 16px;
 	font-size: $size + rem;
 }
 
@@ -43,7 +43,7 @@
 	width: auto;
 	height: 10000px;
 	overflow: hidden;
-	z-index: 9999;
+	z-index: 100;
 	content: '';
 	display: block;
 	pointer-events: none;
@@ -54,10 +54,10 @@
 	background-image: url("images/baseline.png"); 
 	//genius!!!! using a 50px high background image but resizing it down to 
 	//realistic baseline heights it appears as a hairline stroke!
-	background-size: 100% $vr_mobile + rem; 
-	@include at-breakpoint($tablet){ background-size: 100% $vr_tablet + rem; }
+	background-size: 100% $vertical_unit; 
+	/*@include at-breakpoint($tablet){ background-size: 100% $vr_tablet + rem; }
 	@include at-breakpoint($desktop){ background-size: 100% $vr_desktop + rem; }
-	@include at-breakpoint($bigscreen){ background-size: 100% $vr_bigscreen + rem; }
+	@include at-breakpoint($bigscreen){ background-size: 100% $vr_bigscreen + rem; }*/
 	/*&:active:after {
 		display: none;
 	}*/

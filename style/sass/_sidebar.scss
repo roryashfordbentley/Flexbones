@@ -10,11 +10,16 @@
 	@include at-breakpoint($tablet){ @include span-columns(4 omega,12); }	
 	@include at-breakpoint($desktop){ @include span-columns(4 omega,12); }
 	
-	> ul {
+	h2{
+		@extend h4;
+		margin-bottom: 0;
+	}
+
+	ul {
 		margin: 0;
-		> li{
-			
+		li{
 			list-style: none;
+			@include font-size(0.75);
 		}
 	}
 }

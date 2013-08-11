@@ -2,16 +2,17 @@
 // Document and Grid setup
 // Font default declarations
 
-// Base Unit
+// Base Units
 
-$base_unit: 		10px;	//same as desktop font base
+$base_unit: 		0.625rem;	//same as desktop font base
+$vertical_unit:		1.5rem;
 
 // Grid settings (SUSY)
 // Susy vars don't follow underscore rules 
 
 //$total-columns: 	6;  
-$column-width: 		60%;  
-$gutter-width: 		20%;  
+$column-width: 		40%;  
+$gutter-width: 		30%;  
 $grid-padding: 		0;
 
 //Column
@@ -33,36 +34,15 @@ $body_font: 		georgia, times, "times new roman" sans-serif;
 
 // Typographic units (golden ratioish shizzle)
 
-$vr_mobile: 	2.4;
-$vr_tablet: 	2.3;
-$vr_desktop: 	2.6;
-$vr_bigscreen: 	2.8;
+$paragraph_size:	1; //16 desktop
+$h1_size:			3;  //36
+$h2_size:			2.5;  //36
+$h3_size:			2;  //36
+$h4_size:			1.5;  //36
 
-$font_mobile: 	1.5;
-$font_tablet: 	1.4; 
-$font_desktop: 	1.6;
-$font_bigscreen:1.7;
+// Wrapper width
 
-$h1_mobile:		$font_mobile * 2;
-$h1_tablet:		$font_tablet * 3;
-$h1_desktop:	$font_desktop * 3;
-$h1_bigscreen:	$font_bigscreen * 3;
-
-$h2_mobile:		$font_mobile * 1.5;
-$h2_tablet:		$font_tablet * 2.5;
-$h2_desktop:	$font_desktop * 2.5;
-$h2_bigscreen:	$font_bigscreen * 2.5;
-
-$h3_mobile:		$font_mobile * 1.25;
-$h3_tablet:		$font_tablet * 2;
-$h3_desktop:	$font_desktop * 2;
-$h3_bigscreen:	$font_bigscreen * 2;
-
-$h4_mobile:		$font_mobile * 1;
-$h4_tablet:		$font_tablet * 1.5;
-$h4_desktop:	$font_desktop * 1.5;
-$h4_bigscreen:	$font_bigscreen * 1.5;
-
+//$wrapper_width_desktop:
 
 // Box sizing
-$border_box: true;
+$border_box: 		true;
