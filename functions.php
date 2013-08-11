@@ -218,7 +218,7 @@ function stylesheet_loader() {
 		'page-style', 
     	get_template_directory_uri() . '/style.css', 
     	array(), 
-    	'3.0', 
+    	'4.0', 
     	'all' 
     );
 

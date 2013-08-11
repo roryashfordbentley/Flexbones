@@ -29,29 +29,8 @@ body {
 	@include clearfix();
 }
 	body:after {
-		/*@include baseline-grid(body,$vr_mobile * 10);
-		@include at-breakpoint($tablet){ @include baseline-grid(body,$vr_tablet * 10); }
-		@include at-breakpoint($desktop){ @include baseline-grid(body,$vr_desktop * 10); }
-		@include at-breakpoint($bigscreen){ @include baseline-grid(body,$vr_bigscreen * 10); }*/
-		position: absolute;
-		width: auto;
-		height: 10000px;
-		overflow: hidden;
-		z-index: 9999;
-		content: '';
-		display: block;
-		pointer-events: none;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: url("images/baseline.png"); 
-		//genius!!!! using a 50px high background image but resizing it down to 
-		//realistic baseline heights it appears as a hairline stroke!
-		background-size: 100% $vr_mobile + rem;
-		@include at-breakpoint($tablet){ background-size: 100% $vr_tablet + rem; }
-		@include at-breakpoint($desktop){ background-size: 100% $vr_desktop + rem; }
-		@include at-breakpoint($bigscreen){ background-size: 100% $vr_bigscreen + rem; }
+		@include baseline-grid();
+		
 	}
 
 

@@ -7,17 +7,24 @@
 $base_unit: 		10px;	//same as desktop font base
 
 // Grid settings (SUSY)
+// Susy vars don't follow underscore rules 
 
-$total-columns: 	6;  
+//$total-columns: 	6;  
 $column-width: 		60%;  
 $gutter-width: 		20%;  
 $grid-padding: 		0;
 
+//Column
+$columns_mobile:	6;
+$columns_tablet:	12;
+$columns_desktop:	12;
+$columns_bigscreen:	12;
+
 //$media-layout: min-width mq | total columns | max-width mq
-$mobile: 			0 6 650px;
-$tablet: 			651px 12 900px;
-$desktop: 			901px 12;
-$bigscreen: 		1201px 12;
+$mobile: 			0 $columns_mobile 650px;
+$tablet: 			651px $columns_tablet 900px;
+$desktop: 			901px $columns_desktop;
+$bigscreen: 		1201px $columns_bigscreen;
 
 // Font Stack
 
@@ -59,4 +66,3 @@ $h4_bigscreen:	$font_bigscreen * 1.5;
 
 // Box sizing
 $border_box: true;
-
