@@ -33,7 +33,7 @@ input[type="text"], input[type="password"]{
 	margin-bottom: $vertical_unit;
 	float: left;
 	display: block;
-	@include span-columns(2,8);
+	//@include span-columns(2,8);
 }
 
 textarea{
@@ -49,7 +49,29 @@ textarea{
 	float: left;
 }
 
-// BUTTONS
+input[type="submit"]{
+	background: $blue;
+	padding: 0 $base_unit;
+	height: $vertical_unit;
+	font-family: $body_font;
+	@include font-size(1);
+	font-weight: bold;
+	color: #fff;
+	border: 0;
+	float: left;
+	font-family: $heading_font;
+
+	&:hover{
+		background: darken($blue,5%);
+		color: #fff;
+	}
+
+	&:visited{
+		color: #fff;
+	}
+}
+
+// Buttons
 	
 .button {
 	background: $blue;
@@ -72,22 +94,17 @@ textarea{
 	}
 } 
 
-input[type="submit"]{
-	background: $blue;
-	padding: ($base_unit - 1) ($base_unit) ($base_unit) ($base_unit);
-	margin: $base_unit 0;
-	font-family: $body_font;
-	@include font-size(1.4);
-	font-weight: bold;
-	color: #fff;
-	border: 0;
+// Search form
 
-	&:hover{
-		background: darken($blue,5%);
-		color: #fff;
-	}
-
-	&:visited{
-		color: #fff;
-	}
+.search-form{
+	@include clearfix();
 }
+
+	.search-input{
+		@include span-columns(2,3);
+	}
+
+	.search-button{
+		@include span-columns(1 omega,3);
+		@include font-size(1);
+	}

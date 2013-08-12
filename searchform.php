@@ -3,7 +3,7 @@
     <div class="search-con">
     	<div class="search-form">
 			<input type="text" value="" name="s" class="search-input" placeholder="Search">
-    		<input type="submit" value="Search" name="search-button" class="search-button">
+    		<input type="submit" value="Go" name="search-button" class="search-button">
     	</div>
     </div>
-</form> 
+</form>
