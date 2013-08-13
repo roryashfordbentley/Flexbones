@@ -11,8 +11,7 @@
     display: none;
     //background: pink;
     margin-bottom:$vertical_unit; 
-	@include at-breakpoint($tablet){ display:block;  }	
-	@include at-breakpoint($desktop){ display: block; }
+	@include at-breakpoint($tablet_up){ display:block;  }	
 }
 
 	// the first ul
