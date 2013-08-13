@@ -24,7 +24,9 @@ $columns_bigscreen:	12;
 //$media-layout: min-width mq | total columns | max-width mq
 $mobile: 			0 $columns_mobile 650px;
 $tablet: 			651px $columns_tablet 900px;
-$desktop: 			901px $columns_desktop;
+$tablet_up: 		651px $columns_tablet;
+$desktop: 			901px $columns_desktop 1200px;
+$desktop_up: 		901px $columns_desktop;
 $bigscreen: 		1201px $columns_bigscreen;
 
 // Font Stack
