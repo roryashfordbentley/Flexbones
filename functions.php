@@ -197,10 +197,18 @@ function barebones_load_js() {
  	// NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
   	wp_enqueue_script( 'sitewide-scripts' );
+  	wp_register_script( 'jenkins', get_template_directory_uri( ) . '/js/jenkins.js', array( 'jquery' ), '1', true );
+  	wp_enqueue_script( 'jenkins' );
 	//wp_enqueue_script( 'jquery-ui-core' );  
 	//wp_enqueue_script( 'jquery-ui-accordion' );    
   	wp_enqueue_script( 'sitewide-scripts' );
   
+  	$stylesheet_root = array( 'dir' => get_stylesheet_directory_uri() );
+    wp_localize_script( 'sitewide-scripts', 'stylesheet_root', $stylesheet_root );
+    wp_localize_script( 'jenkins', 'stylesheet_root', $stylesheet_root );
+
+    //useage in JS : stylesheet_root.dir
+
 	/* if ( is_front_page() ) {
 		wp_enqueue_script('home-page-main-flex-slider');
 	}*/

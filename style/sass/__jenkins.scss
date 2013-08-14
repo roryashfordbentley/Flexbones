@@ -1,0 +1,61 @@
+.jenkins{
+	display:inline-block;
+	color:#fff;
+	font-family:arial,helvetica,sans-serif;
+	position:fixed;
+	bottom:0;
+	right:0;
+	z-index:10000;
+	width: 55px;
+
+	ul{
+		list-style: none; 
+		margin:0; 
+		padding:0;
+		font-size:13px;
+		line-height: 18px;
+		font-family: Monaco, "Courier New", Courier, monospace;
+	}
+
+		li{
+			display: block;
+			padding:10px;
+		}
+
+		a{
+			display: block;
+		}
+
+		img{
+			display: block;
+		}
+
+}
+
+	.jenkins__width{
+		background:#41bd89;
+	}
+
+	.jenkins__height{
+		background:#2a4c5f;
+	}
+		
+		.jenkins__width__bg{
+			position: absolute;
+			color: #33996e;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+	.jenkins__breakpoint{
+		background:#d06857;
+	}
+	
+	.jenkins__baseline-toggle{
+		background:#b7c725;
+	}
+	
+	.jenkins__grid-toggle{
+		background:#41bdb6;
+	}
