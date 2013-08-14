@@ -28,13 +28,6 @@
 	line-height: $multiplier * $lh + rem;
 }
 
-// margins with vertical rhythm
-
-@mixin vr($element,$line_height,$multiplier){
-	#{$element}: $multiplier * $line_height * 10px;
-	#{$element}: $multiplier * $line_height + rem;
-}
-
 // Baseline mixin
 
 @mixin baseline-grid(){

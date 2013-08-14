@@ -6,8 +6,7 @@
 	
 	.mobile-header{
 		background: $blue;
-		@include at-breakpoint($tablet){  display: none; }
-		@include at-breakpoint($desktop){ display: none; }
+		@include at-breakpoint($tablet_up){  display: none; }
 		@include clearfix();
 	}
 

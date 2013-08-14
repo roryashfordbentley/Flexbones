@@ -7,8 +7,7 @@
 .sidebar {
 	
 	//background: $lighter_gray;
-	@include at-breakpoint($tablet){ @include span-columns(3 omega,12); }	
-	@include at-breakpoint($desktop){ @include span-columns(3 omega,12); }
+	@include at-breakpoint($tablet_up){ @include span-columns(3 omega,12); }	
 	
 	h2{
 		@extend h4;

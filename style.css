@@ -157,6 +157,7 @@ body {
         width: 13.0434782609%;
         float: right;
         margin-right: 0; } }
+<<<<<<< HEAD
     @media (min-width: 651px) and (max-width: 900px) {
       .grid-overlay .col {
         width: 6.3829787234%;
@@ -167,6 +168,9 @@ body {
           float: right;
           margin-right: 0; } }
     @media (min-width: 901px) and (max-width: 1200px) {
+=======
+    @media (min-width: 651px) {
+>>>>>>> d4520da56db6f26ca36a7e848300dcc0906b5409
       .grid-overlay .col {
         width: 6.3829787234%;
         float: left;
@@ -203,7 +207,7 @@ body {
   @media (min-width: 901px) and (max-width: 1200px) {
     .wrapper {
       width: 85%;
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto; } }
   .wrapper:before, .wrapper:after {
     content: "";
@@ -220,27 +224,34 @@ body {
   float: none;
   margin: 0 0 20px 0;
   display: block; }
-  @media (min-width: 651px) and (max-width: 900px) {
+  @media (min-width: 651px) {
     .alignleft {
+<<<<<<< HEAD
       float: left;
       padding: 0 1.25rem 2.5rem 0; } }
   @media (min-width: 901px) and (max-width: 1200px) {
     .alignleft {
       float: left;
       padding: 0 1.25rem 2.5rem 0; } }
+=======
+      float: left; } }
+>>>>>>> d4520da56db6f26ca36a7e848300dcc0906b5409
 
 .alignright {
   float: none;
   margin: 0 0 20px 0;
   display: block; }
+<<<<<<< HEAD
   @media (min-width: 651px) and (max-width: 900px) {
     .alignright {
       float: right;
       padding: 0 0 2.5rem 1.25rem; } }
   @media (min-width: 901px) and (max-width: 1200px) {
+=======
+  @media (min-width: 651px) {
+>>>>>>> d4520da56db6f26ca36a7e848300dcc0906b5409
     .alignright {
-      float: right;
-      padding: 0 0 2.5rem 1.25rem; } }
+      float: right; } }
 
 .wp-caption {
   background: red; }
@@ -485,10 +496,14 @@ input[type="submit"] {
 .mobile-header {
   background: #03a7ff;
   *zoom: 1; }
+<<<<<<< HEAD
   @media (min-width: 651px) and (max-width: 900px) {
     .mobile-header {
       display: none; } }
   @media (min-width: 901px) and (max-width: 1200px) {
+=======
+  @media (min-width: 651px) {
+>>>>>>> d4520da56db6f26ca36a7e848300dcc0906b5409
     .mobile-header {
       display: none; } }
   .mobile-header:before, .mobile-header:after {
@@ -554,10 +569,14 @@ input[type="submit"] {
 .primary-nav {
   display: none;
   margin-bottom: 1.5rem; }
+<<<<<<< HEAD
   @media (min-width: 651px) and (max-width: 900px) {
     .primary-nav {
       display: block; } }
   @media (min-width: 901px) and (max-width: 1200px) {
+=======
+  @media (min-width: 651px) {
+>>>>>>> d4520da56db6f26ca36a7e848300dcc0906b5409
     .primary-nav {
       display: block; } }
 
@@ -703,12 +722,16 @@ input[type="submit"] {
 /*
  * All sidebar(s) style here
  */
+<<<<<<< HEAD
 @media (min-width: 651px) and (max-width: 900px) {
   .sidebar {
     width: 23.4042553191%;
     float: right;
     margin-right: 0; } }
 @media (min-width: 901px) and (max-width: 1200px) {
+=======
+@media (min-width: 651px) {
+>>>>>>> d4520da56db6f26ca36a7e848300dcc0906b5409
   .sidebar {
     width: 23.4042553191%;
     float: right;

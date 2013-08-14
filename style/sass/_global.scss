@@ -5,7 +5,6 @@
  * Font default declarations
  */
 
-
 // If $border-box is true then use box sizing border box
 @if($border_box == true){
 	*{ @include box-sizing(border-box); }
@@ -20,7 +19,6 @@ img{ max-width: 100%; }
 html { 
 	// The magic, it happens right here
 	font-size: 14px; //10px
-	
 	@include at-breakpoint($tablet){ font-size: 16px; } 
 	@include at-breakpoint($desktop){ font-size: 16px; } 
 	@include at-breakpoint($bigscreen){ font-size: 18px; } 
@@ -82,8 +80,7 @@ body {
 		//background: rgba(20,255,200,0.1);
 		@include span-columns(1,6); 
 		@include at-breakpoint($mobile){ &:nth-child(6){ @include span-columns(1 omega,6); } }
-		@include at-breakpoint($tablet){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}	
-		@include at-breakpoint($desktop){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}
+		@include at-breakpoint($tablet_up){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}	
 	}
 }
 
@@ -93,7 +90,6 @@ body {
 	@include container($total-columns, $tablet, $desktop);
 	width: 90%;
 	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto; }
-	@include at-breakpoint($desktop){ width: 85%; max-width: 1200px; margin: 0 auto;  }
-
+	@include at-breakpoint($desktop_up){ width: 85%; max-width: 1300px; margin: 0 auto;  }
 	@include clearfix();
 }
