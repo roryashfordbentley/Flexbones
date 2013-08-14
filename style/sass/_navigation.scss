@@ -97,16 +97,44 @@
 
 // MOBILE NAVIGATION
 
+
+.sidr {
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 260px;
+    overflow-x: none;
+    overflow-y: auto;
+    background: #333;
+    color: #fff;
+}
+.sidr .sidr-inner {
+    padding: 0 0 15px;
+}
+.sidr.right {
+    left: auto;
+    right: -260px;
+}
+.sidr.left {
+    left: -260px;
+    right: auto;
+}
+
 .mobile-nav{	
 	display: none;
 	background: #2f3942;
 	@include box-shadow( inset -2px 0px 2px 0px darken(#2f3942, 15%) );
+
 }
 	// main ul
 	.mobile-nav__menu{
 		margin: 0 $base_unit;
 		list-style: none;
 		font-family: $heading_font;
+		@include font-size(1.2);
 		
 		.current_page_item{
 			border-top: none;

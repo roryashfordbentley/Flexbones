@@ -31,10 +31,10 @@
 <!-- visible on mobile only -->
 
 <header class="mobile-header">
-	<a href="#" id="jpanel-trigger" class="mobile-header__button">Menu</a>
+	<a href="#" id="simple-menu" class="mobile-header__button">Menu</a>
 </header>
 
-<nav class="mobile-nav">
+<nav id="sidr"class="mobile-nav">
 	<ul class="mobile-nav__menu">
 		<?php 
 			//this will fail unless location is defined
@@ -47,7 +47,7 @@
 		 ?>
 	</ul>
 </nav>
-
+ 
 <!-- .visible on mobile only -->
 <header class="site-header">
 	<div class="wrapper">
