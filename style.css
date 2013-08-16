@@ -528,7 +528,7 @@ table {
   width: 100%;
   background: #fff;
   border: 1px solid #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   font-size: 12px;
   font-size: 0.75rem;
 }
@@ -911,31 +911,13 @@ input[type="submit"]:visited {
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 260px;
   overflow-x: none;
   overflow-y: auto;
   background: #333;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003113}}
-.sidr .sidr-inner {
-  padding: 0 0 15px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003116}}
-.sidr.right {
-  left: auto;
-  right: -260px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003120}}
-.sidr.left {
-  left: -260px;
-  right: auto;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003114}}
 .mobile-nav {
   display: none;
   background: #2f3942;
@@ -944,7 +926,7 @@ input[type="submit"]:visited {
   box-shadow: inset -2px 0px 2px 0px #0f1215;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003121}}
 .mobile-nav__menu {
   margin: 0 0.625rem;
   list-style: none;
@@ -952,17 +934,17 @@ input[type="submit"]:visited {
   font-size: 19.2px;
   font-size: 1.2rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003127}}
 .mobile-nav__menu .current_page_item {
   border-top: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003133}}
 .mobile-nav__menu .menu-item a {
   border-bottom: 1px solid #45535e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003138}}
 .mobile-nav__menu .menu-item a,
 .mobile-nav__menu .menu-item a:visited {
   display: block;
@@ -970,18 +952,18 @@ input[type="submit"]:visited {
   padding: 0.625rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003150}}
 .mobile-nav__menu .sub-menu {
   list-style: none;
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003155}}
 .mobile-nav__menu .sub-menu a {
   padding-left: 0.625rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003159}}
 .mobile-nav__menu .sub-menu a:before {
   content: "- ";
 }

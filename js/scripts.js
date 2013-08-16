@@ -8,7 +8,10 @@ jQuery(document).ready(function($) {
 
 	/* Mobile Navigation Slider */
 
-		$('#simple-menu').sidr();
+	$('.mobile-header__button').sidr({
+    	name: 'mobile-nav',
+    	source: '.primary-nav'
+    });
 
 });
 

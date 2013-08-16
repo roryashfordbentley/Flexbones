@@ -31,23 +31,9 @@
 <!-- visible on mobile only -->
 
 <header class="mobile-header">
-	<a href="#" id="simple-menu" class="mobile-header__button">Menu</a>
+	<a href="#" class="mobile-header__button">Menu</a>
 </header>
 
-<nav id="sidr"class="mobile-nav">
-	<ul class="mobile-nav__menu">
-		<?php 
-			//this will fail unless location is defined
-			$args = array(
-				'menu'            => '',
-				'container' => false,
-				'items_wrap'      => '%3$s'
-			);
-		 	wp_nav_menu( $args ); 
-		 ?>
-	</ul>
-</nav>
- 
 <!-- .visible on mobile only -->
 <header class="site-header">
 	<div class="wrapper">
