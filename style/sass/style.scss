@@ -33,19 +33,22 @@ CONTENTS
 @import "compass/css3/box-sizing";
 @import "compass/typography/text/force-wrap"; 
 @import "susy";
-@import "__jenkins.scss";
-
-// MIXINS
-
-@import "__mixins.scss";
 
 // CONFIG
 
 @import "__config.scss";
 
+// MIXINS
+
+@import "__mixins.scss";
+
 // VARS
 
 @import "__colour.scss";
+
+// DEV TOOLS
+
+@import "__jenkins.scss";
 
 // GLOBAL STYLES
 @import "_global.scss";

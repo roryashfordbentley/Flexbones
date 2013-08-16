@@ -26,7 +26,6 @@ CONTENTS
 
 */
 /* Style Reset */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000317}}
 html, body, div, span, applet, object, iframe,
 h1, h2, legend, h3, h4, .sidebar h2, .sidebar legend, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,53 +44,35 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000322}}
 html {
-  line-height: 1;
-}
+  line-height: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000324}}
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000326}}
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000328}}
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000330}}
 q, blockquote {
-  quotes: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003103}}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000332}}
 a img {
-  border: none;
-}
+  border: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003116}}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
+  display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\000031}}
 .jenkins {
   display: inline-block;
   color: #fff;
@@ -100,125 +81,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   bottom: 0;
   right: 0;
   z-index: 10000;
-  width: 55px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000311}}
-.jenkins ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  line-height: 18px;
-  font-family: Monaco, "Courier New", Courier, monospace;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000320}}
-.jenkins li {
-  display: block;
-  padding: 10px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000325}}
-.jenkins a {
-  display: block;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000329}}
-.jenkins img {
-  display: block;
-}
+  width: 55px; }
+  .jenkins ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: Monaco, "Courier New", Courier, monospace; }
+  .jenkins li {
+    display: block;
+    padding: 10px; }
+  .jenkins a {
+    display: block; }
+  .jenkins img {
+    display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000335}}
 .jenkins__width {
-  background: #41bd89;
-}
+  background: #41bd89; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000339}}
 .jenkins__height {
-  background: #2a4c5f;
-}
+  background: #2a4c5f; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000343}}
 .jenkins__width__bg {
   position: absolute;
   color: #33996e;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
-}
+  text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000351}}
 .jenkins__breakpoint {
-  background: #d06857;
-}
+  background: #d06857; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000355}}
 .jenkins__baseline-toggle {
-  background: #b7c725;
-}
+  background: #b7c725; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__jenkins\.scss}line{font-family:\0000359}}
 .jenkins__grid-toggle {
-  background: #41bdb6;
-}
+  background: #41bdb6; }
 
-/* -- _GLOBAL.SCSS -- */
-/*
- * Document and Grid setup
- * Font default declarations
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000310}}
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000315}}
-img {
-  max-width: 100%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000319}}
-html {
-  font-size: 14px;
-  line-height: 1.5rem;
-}
-@media (min-width: 651px) and (max-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000319}}
-  html {
-    font-size: 16px;
-  }
-}
-@media (min-width: 901px) and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000319}}
-  html {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1201px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000319}}
-  html {
-    font-size: 18px;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000328}}
-body {
-  width: 100%;
-  color: #3e3e3e;
-  font-family: "ff-tisa-web-pro", georgia, times, "times new roman" sans-serif;
-  -webkit-font-smoothing: antialiased;
-  *zoom: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-body:before, body:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-body:after {
-  clear: both;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000336}}
 .baseline-overlay {
   position: absolute;
   width: auto;
@@ -231,360 +131,280 @@ body:after {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000351}}
-.baseline-overlay .row {
-  border-bottom: 1px solid rgba(210, 210, 210, 0.5);
-  height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  /*&:nth-child(even){
-  	background: rgba(210,210,210,0.5);
-  }*/
-}
+  left: 0; }
+  .baseline-overlay .row {
+    border-bottom: 1px solid rgba(210, 210, 210, 0.5);
+    height: 1.5rem;
+    margin: 0;
+    padding: 0;
+    /*&:nth-child(even){
+    	background: rgba(210,210,210,0.5);
+    }*/ }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000362}}
 .grid-overlay {
   position: absolute;
   width: auto;
   z-index: 100;
-  content: '';
   display: block;
   pointer-events: none;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000376}}
-.grid-overlay .col {
-  border-left: 1px solid rgba(210, 210, 210, 0.5);
-  border-right: 1px solid rgba(210, 210, 210, 0.5);
-  height: 10000px;
-  width: 13.0434782609%;
-  float: left;
-  margin-right: 4.347826087%;
-  display: inline;
-}
-@media (max-width: 650px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000382}}
-  .grid-overlay .col:nth-child(6) {
-    width: 13.0434782609%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 651px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000376}}
+  left: 0; }
   .grid-overlay .col {
-    width: 6.3829787234%;
+    border-left: 1px solid rgba(210, 210, 210, 0.5);
+    border-right: 1px solid rgba(210, 210, 210, 0.5);
+    height: 10000px;
+    width: 13.0434782609%;
     float: left;
-    margin-right: 2.1276595745%;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000383}}
-  .grid-overlay .col:nth-child(12) {
-    width: 6.3829787234%;
-    float: right;
-    margin-right: 0;
-  }
-}
+    margin-right: 4.347826087%;
+    display: inline; }
+    @media (max-width: 650px) {
+      .grid-overlay .col:nth-child(6) {
+        width: 13.0434782609%;
+        float: right;
+        margin-right: 0; } }
+    @media (min-width: 651px) {
+      .grid-overlay .col {
+        width: 6.3829787234%;
+        float: left;
+        margin-right: 2.1276595745%; }
+        .grid-overlay .col:nth-child(12) {
+          width: 6.3829787234%;
+          float: right;
+          margin-right: 0; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000389}}
+/* -- _GLOBAL.SCSS -- */
+/*
+ * Document and Grid setup
+ * Font default declarations
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+html {
+  font-size: 87.5%;
+  line-height: 1.5rem; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 901px) and (max-width: 1200px) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 1201px) {
+    html {
+      font-size: 112.5%; } }
+
+body {
+  width: 100%;
+  color: #3e3e3e;
+  font-family: "ff-tisa-web-pro", georgia, times, "times new roman" sans-serif;
+  -webkit-font-smoothing: antialiased;
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+
 .wrapper {
   *zoom: 1;
   max-width: 940%;
   _width: 940%;
-  padding-left: 0;
-  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
   width: 90%;
-  *zoom: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media (min-width: 651px) and (max-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000389}}
-  .wrapper {
-    max-width: 940%;
-  }
-}
-@media (min-width: 901px) and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000389}}
-  .wrapper {
-    max-width: 940%;
-  }
-}
-@media (min-width: 651px) and (max-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000389}}
-  .wrapper {
-    max-width: 85%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 901px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_global\.scss}line{font-family:\0000389}}
-  .wrapper {
-    width: 85%;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-.wrapper:before, .wrapper:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-.wrapper:after {
-  clear: both;
-}
+  *zoom: 1; }
+  .wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 651px) and (max-width: 900px) {
+    .wrapper {
+      max-width: 940%; } }
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .wrapper {
+      max-width: 940%; } }
+  @media (min-width: 651px) and (max-width: 900px) {
+    .wrapper {
+      max-width: 85%;
+      margin: 0 auto; } }
+  @media (min-width: 901px) {
+    .wrapper {
+      width: 85%;
+      max-width: 1300px;
+      margin: 0 auto; } }
+  .wrapper:before, .wrapper:after {
+    content: "";
+    display: table; }
+  .wrapper:after {
+    clear: both; }
 
 /* -- _WORDPRESS.SCSS -- */
 /*
  * Styles for Wordpress Specific Classes
  * Required if the theme is to go on the wp.org repo
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\000038}}
 .alignleft {
   float: none;
   margin: 0 0 20px 0;
-  display: block;
-}
-@media (min-width: 651px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\000038}}
-  .alignleft {
-    float: left;
-  }
-}
+  display: block; }
+  @media (min-width: 651px) {
+    .alignleft {
+      float: left; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000315}}
 .alignright {
   float: none;
   margin: 0 0 20px 0;
-  display: block;
-}
-@media (min-width: 651px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000315}}
-  .alignright {
-    float: right;
-  }
-}
+  display: block; }
+  @media (min-width: 651px) {
+    .alignright {
+      float: right; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000322}}
 .wp-caption {
-  background: red;
-}
+  background: red; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000326}}
 .wp-caption-text {
-  color: #fff;
-}
+  color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000330}}
 .sticky {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000334}}
 .gallery-caption {
-  background: red;
-}
+  background: red; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000338}}
 .bypostauthor {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_wordpress\.scss}line{font-family:\0000342}}
 .aligncenter {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 /* -- _TYPOGRAPHY.SCSS -- */
 /*
  * All Font / Type styles go here
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\000038}}
 a,
 a:visited {
   color: #03a7ff;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000313}}
 a:hover {
   text-decoration: none;
-  color: #0097e9;
-}
+  color: #0097e9; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000318}}
 p, h1, h2, legend, h3, h4, .sidebar h2, .sidebar legend, h4, .sidebar h2, .sidebar legend, h5, h6, ul, ol {
   line-height: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+  margin-bottom: 1.5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000328}}
 h1, h2, legend, h3, h4, .sidebar h2, .sidebar legend, h5, h6 {
   font-family: "brandon-grotesque", helvetica, arial, sans-serif;
   font-weight: 300;
   color: #292929;
-  line-height: 3rem;
-}
+  line-height: 3rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000336}}
 p {
   font-weight: normal;
-  font-size: 16px;
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000341}}
 h1 {
-  font-size: 36.8px;
-  font-size: 2.3rem;
-}
+  font-size: 2.3rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000345}}
 h2, legend {
-  font-size: 32px;
-  font-size: 2rem;
-}
+  font-size: 2rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000349}}
 h3 {
-  font-size: 28.8px;
-  font-size: 1.8rem;
-}
+  font-size: 1.8rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000353}}
 h4, .sidebar h2, .sidebar legend {
-  font-size: 24px;
-  font-size: 1.5rem;
-}
+  font-size: 1.5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000358}}
 strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000360}}
 em {
-  font-style: italic;
-}
+  font-style: italic; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000362}}
 ul {
   list-style-type: disc;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: normal;
-  margin-left: 1.25rem;
-}
+  margin-left: 1.25rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000373}}
 ol {
   list-style-type: decimal;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: normal;
-  margin-left: 1.25rem;
-}
+  margin-left: 1.25rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000384}}
 blockquote {
   display: block;
   width: 40.7407407407%;
   float: right;
   margin-right: 0;
-  *margin-left: -20%;
+  #margin-left: -20%;
   display: inline;
   float: right;
   margin-left: 2.1276595745%;
-  margin-bottom: 1.5rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_typography\.scss}line{font-family:\0000392}}
-blockquote p {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  text-align: right;
-  line-height: 1.5rem;
-  font-style: italic;
-  padding: 0 0.625rem;
-  margin: 0;
-}
+  margin-bottom: 1.5rem; }
+  blockquote p {
+    font-size: 1.2;
+    text-align: right;
+    line-height: 1.5rem;
+    font-style: italic;
+    padding: 0 0.625rem;
+    margin: 0; }
 
 /* -- _TABLES.SCSS -- */
 /*
  * All Font / Type styles go here
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_tables\.scss}line{font-family:\000037}}
 table {
   width: 100%;
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 1.5rem;
-  font-size: 12px;
-  font-size: 0.75rem;
-}
+  font-size: 0.75rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_tables\.scss}line{font-family:\0000315}}
 thead {
   background: #03a7ff;
-  color: #fff;
-}
+  color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_tables\.scss}line{font-family:\0000320}}
 tbody tr:nth-child(odd) {
-  background: #f1f1f1;
-}
+  background: #f1f1f1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_tables\.scss}line{font-family:\0000321}}
 tbody tr:nth-child(even) {
-  background: #FFF;
-}
+  background: #FFF; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_tables\.scss}line{font-family:\0000323}}
 th, td {
   height: 1.5rem;
-  padding: 0 0.625rem;
-}
+  padding: 0 0.625rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_tables\.scss}line{font-family:\0000328}}
 th {
   font-weight: bold;
   height: 3rem;
   font-family: "brandon-grotesque", helvetica, arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
 /* -- UI -- */
 /*
  * forms, buttons, icons, breadcrumbs, pagination
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000310}}
 fieldset div {
-  *zoom: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-fieldset div:before, fieldset div:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-fieldset div:after {
-  clear: both;
-}
+  *zoom: 1; }
+  fieldset div:before, fieldset div:after {
+    content: "";
+    display: table; }
+  fieldset div:after {
+    clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000321}}
 label {
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
@@ -592,19 +412,15 @@ label {
   width: 22.5806451613%;
   float: left;
   margin-right: 3.2258064516%;
-  display: inline;
-}
+  display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000330}}
 input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
   height: 1.5rem;
   margin-bottom: 1.5rem;
   float: left;
-  display: block;
-}
+  display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000339}}
 textarea {
   border: 1px solid #ccc;
   line-height: 1.5rem;
@@ -614,184 +430,128 @@ textarea {
   width: 48.3870967742%;
   float: left;
   margin-right: 3.2258064516%;
-  display: inline;
-}
+  display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000348}}
 .input[type="radio"] {
-  float: left;
-}
+  float: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000352}}
 input[type="submit"] {
   background: #03a7ff;
   padding: 0 0.625rem;
   height: 1.5rem;
   font-family: "ff-tisa-web-pro", georgia, times, "times new roman" sans-serif;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
   border: 0;
   float: left;
-  font-family: "brandon-grotesque", helvetica, arial, sans-serif;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000364}}
-input[type="submit"]:hover {
-  background: #0097e9;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000369}}
-input[type="submit"]:visited {
-  color: #fff;
-}
+  font-family: "brandon-grotesque", helvetica, arial, sans-serif; }
+  input[type="submit"]:hover {
+    background: #0097e9;
+    color: #fff; }
+  input[type="submit"]:visited {
+    color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000376}}
 .button {
   background: #03a7ff;
   padding: 0 1.5rem;
   line-height: 3rem;
   margin: 0 0 1.5rem 0;
   display: inline-block;
-  font-size: 16px;
   font-size: 1rem;
   font-family: "brandon-grotesque", helvetica, arial, sans-serif;
   font-weight: bold;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000387}}
-.button:hover {
-  background: #12acff;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000392}}
-.button:visited {
-  color: #fff;
-}
+  color: #fff; }
+  .button:hover {
+    background: #12acff;
+    color: #fff; }
+  .button:visited {
+    color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\0000399}}
 .search-form {
-  *zoom: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-.search-form:before, .search-form:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-.search-form:after {
-  clear: both;
-}
+  *zoom: 1; }
+  .search-form:before, .search-form:after {
+    content: "";
+    display: table; }
+  .search-form:after {
+    clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\00003103}}
 .search-input {
   width: 63.6363636364%;
   float: left;
   margin-right: 9.0909090909%;
-  display: inline;
-}
+  display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_ui\.scss}line{font-family:\00003107}}
 .search-button {
   width: 27.2727272727%;
   float: right;
   margin-right: 0;
-  *margin-left: -20%;
+  #margin-left: -20%;
   display: inline;
-  font-size: 16px;
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
 /* -- _MOBILE-HEADER.SCSS -- */
 /*
  * Style for a mobile header to contain menu button/ search etc
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_mobile-header\.scss}line{font-family:\000037}}
 .mobile-header {
   background: #03a7ff;
-  *zoom: 1;
-}
-@media (min-width: 651px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_mobile-header\.scss}line{font-family:\000037}}
-  .mobile-header {
-    display: none;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-.mobile-header:before, .mobile-header:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-.mobile-header:after {
-  clear: both;
-}
+  *zoom: 1; }
+  @media (min-width: 651px) {
+    .mobile-header {
+      display: none; } }
+  .mobile-header:before, .mobile-header:after {
+    content: "";
+    display: table; }
+  .mobile-header:after {
+    clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_mobile-header\.scss}line{font-family:\0000313}}
 .mobile-header__button {
   display: inline-block;
   border-right: 1px solid #0087cf;
-  font-size: 19.2px;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "brandon-grotesque", helvetica, arial, sans-serif;
   line-height: 3rem;
   padding: 0 0.625rem;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_mobile-header\.scss}line{font-family:\0000322}}
-.mobile-header__button:visited {
-  color: #fff;
-}
+  color: #fff; }
+  .mobile-header__button:visited {
+    color: #fff; }
 
 /* -- _PAGE.SCSS -- */
 /*
  * Styles for Wordpress Pages
  * Includes styles for for specific page templates
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_page\.scss}line{font-family:\000039}}
 .content {
   *zoom: 1;
   *zoom: 1;
   max-width: 940%;
   _width: 940%;
-  padding-left: 0;
-  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-.content:before, .content:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-.content:after {
-  clear: both;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/Fire\.app\/Contents\/Resources\/lib\/ruby\/compass_0\.12\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
-.content:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  padding-left: 0;
+  padding-right: 0; }
+  .content:before, .content:after {
+    content: "";
+    display: table; }
+  .content:after {
+    clear: both; }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 @media (min-width: 651px) and (max-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_page\.scss}line{font-family:\0000314}}
   .main {
     width: 74.4680851064%;
     float: left;
-    margin-right: 2.1276595745%;
-  }
-}
+    margin-right: 2.1276595745%; } }
 @media (min-width: 901px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_page\.scss}line{font-family:\0000314}}
   .main {
     width: 65.9574468085%;
     float: left;
-    margin-right: 2.1276595745%;
-  }
-}
+    margin-right: 2.1276595745%; } }
 
 /* -- _NAVIGATION.SCSS -- */
 /*
@@ -799,111 +559,74 @@ input[type="submit"]:visited {
  * Currently the Dropdown only supports 1 level
  * This can be extended by using the class .parent-x (where x is the depth).
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000310}}
 .primary-nav {
   display: none;
-  margin-bottom: 1.5rem;
-}
-@media (min-width: 651px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000310}}
-  .primary-nav {
-    display: block;
-  }
-}
+  margin-bottom: 1.5rem; }
+  @media (min-width: 651px) {
+    .primary-nav {
+      display: block; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000318}}
 .primary-nav__menu {
   list-style: none;
   *zoom: 1;
   margin: 0;
-  font-family: "brandon-grotesque", helvetica, arial, sans-serif;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000310}}
-.primary-nav__menu:before, .primary-nav__menu:after {
-  content: "";
-  display: table;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/__mixins\.scss}line{font-family:\0000314}}
-.primary-nav__menu:after {
-  clear: both;
-}
+  font-family: "brandon-grotesque", helvetica, arial, sans-serif; }
+  .primary-nav__menu:before, .primary-nav__menu:after {
+    content: "";
+    display: table; }
+  .primary-nav__menu:after {
+    clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000326}}
 .primary-nav__menu > .menu-item {
   float: left;
-  margin: 0 0.625rem 0 0;
-}
+  margin: 0 0.625rem 0 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000332}}
 .primary-nav__menu > .menu-item a {
   display: block;
   color: #03a7ff;
   padding: 0 1.25rem;
-  font-size: 16px;
   font-size: 1rem;
-  line-height: 3rem;
-}
+  line-height: 3rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000341}}
 .primary-nav__menu .menu-item:hover {
-  background: #03a7ff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000343}}
-.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited {
-  color: #fff;
-}
+  background: #03a7ff; }
+  .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited {
+    color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000348}}
 .primary-nav__menu > .current-menu-item a,
 .primary-nav__menu > .current-menu-ancestor a {
   color: #fff;
   background: #03a7ff;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000359}}
 .primary-nav__menu .parent {
-  position: relative;
-}
+  position: relative; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000363}}
 .primary-nav__menu .parent > .sub-menu {
   display: none;
   list-style: none;
-  margin: 0;
-}
+  margin: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000370}}
 .primary-nav__menu .parent:hover > .sub-menu {
-  display: block;
-}
+  display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000376}}
 .primary-nav__menu .sub-menu {
   position: absolute;
-  background: #03a7ff;
-}
+  background: #03a7ff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000381}}
 .primary-nav__menu .sub-menu .menu-item a {
   width: 200px;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000384}}
-.primary-nav__menu .sub-menu .menu-item a:hover {
-  background: #0097e9;
-  margin: 0;
-}
+  color: #fff; }
+  .primary-nav__menu .sub-menu .menu-item a:hover {
+    background: #0097e9;
+    margin: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\0000391}}
 .primary-nav__menu .sub-menu > .current-menu-item a,
 .primary-nav__menu .sub-menu > .current-menu-ancestor a {
   color: #fff;
   background: #0087cf;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003100}}
 .sidr {
   display: none;
   position: absolute;
@@ -914,107 +637,75 @@ input[type="submit"]:visited {
   overflow-x: none;
   overflow-y: auto;
   background: #333;
-  color: #fff;
-}
+  color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003114}}
 .mobile-nav {
   display: none;
   background: #2f3942;
   -webkit-box-shadow: inset -2px 0px 2px 0px #0f1215;
   -moz-box-shadow: inset -2px 0px 2px 0px #0f1215;
-  box-shadow: inset -2px 0px 2px 0px #0f1215;
-}
+  box-shadow: inset -2px 0px 2px 0px #0f1215; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003121}}
 .mobile-nav__menu {
   margin: 0 0.625rem;
   list-style: none;
   font-family: "brandon-grotesque", helvetica, arial, sans-serif;
-  font-size: 19.2px;
-  font-size: 1.2rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003127}}
-.mobile-nav__menu .current_page_item {
-  border-top: none;
-}
+  font-size: 1.2rem; }
+  .mobile-nav__menu .current_page_item {
+    border-top: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003133}}
 .mobile-nav__menu .menu-item a {
-  border-bottom: 1px solid #45535e;
-}
+  border-bottom: 1px solid #45535e; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003138}}
 .mobile-nav__menu .menu-item a,
 .mobile-nav__menu .menu-item a:visited {
   display: block;
   color: #fff;
-  padding: 0.625rem 0;
-}
+  padding: 0.625rem 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003150}}
 .mobile-nav__menu .sub-menu {
   list-style: none;
-  margin: 0;
-}
+  margin: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003155}}
 .mobile-nav__menu .sub-menu a {
-  padding-left: 0.625rem;
-}
+  padding-left: 0.625rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_navigation\.scss}line{font-family:\00003159}}
 .mobile-nav__menu .sub-menu a:before {
-  content: "- ";
-}
+  content: "- "; }
 
 /* -- _HEADER.SCSS -- */
 /*
  * Header specific declarations
  * Note: navigation has its own document _navigation.scss
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_header\.scss}line{font-family:\0000313}}
 .site-header__logo img {
   display: block;
   height: 3rem;
-  margin: 1.5rem 0;
-}
+  margin: 1.5rem 0; }
 
 /* -- _FOOTER.SCSS -- */
 /*
  * Footer Styles go here
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_footer\.scss}line{font-family:\000037}}
 .site-footer {
-  padding-top: 0.3125rem;
-}
+  padding-top: 1.5rem; }
 
 /* -- SIDEBAR.SCSS -- */
 /*
  * All sidebar(s) style here
  */
 @media (min-width: 651px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_sidebar\.scss}line{font-family:\000037}}
   .sidebar {
     width: 23.4042553191%;
     float: right;
-    margin-right: 0;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_sidebar\.scss}line{font-family:\0000312}}
+    margin-right: 0; } }
 .sidebar h2, .sidebar legend {
-  margin-bottom: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_sidebar\.scss}line{font-family:\0000317}}
+  margin-bottom: 0; }
 .sidebar ul {
-  margin: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/barebones\/wp-content\/themes\/flexbones-wp-theme\/style\/sass\/_sidebar\.scss}line{font-family:\0000319}}
-.sidebar ul li {
-  list-style: none;
-  font-size: 12px;
-  font-size: 0.75rem;
-}
+  margin: 0; }
+  .sidebar ul li {
+    list-style: none;
+    font-size: 0.75rem; }
 
 /* -- _BLOG.SCSS -- */
 /*

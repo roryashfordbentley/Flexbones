@@ -34,13 +34,20 @@ $bigscreen: 		1201px $columns_bigscreen;
 $heading_font: 		"brandon-grotesque",helvetica, arial, sans-serif;
 $body_font: 		"ff-tisa-web-pro",georgia, times, "times new roman" sans-serif;
 
-// Typographic units (golden ratioish shizzle)
+// Base Type sizes for (The key to everything!)
 
-$paragraph_size:	1; 
-$h1_size:			2.3;  
-$h2_size:			2;  
-$h3_size:			1.8;  
-$h4_size:			1.5;  
+$mobile_font_base: 87.5%;
+$tablet_font_base: 100%;
+$desktop_font_base: 100%;
+$bigscreen_font_base: 112.5%;
+
+// Typographic units
+
+$paragraph_size:	1rem; 
+$h1_size:			2.3rem;  
+$h2_size:			2rem;  
+$h3_size:			1.8rem;  
+$h4_size:			1.5rem;  
 
 // Wrapper width
 

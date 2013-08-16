@@ -18,7 +18,7 @@
 		margin: 0;
 		li{
 			list-style: none;
-			@include font-size(0.75);
+			font-size: 0.75rem;
 		}
 	}
 }

@@ -18,10 +18,10 @@ img{ max-width: 100%; }
 
 html { 
 	// The magic, it happens right here
-	font-size: 14px; //10px
-	@include at-breakpoint($tablet){ font-size: 16px; } 
-	@include at-breakpoint($desktop){ font-size: 16px; } 
-	@include at-breakpoint($bigscreen){ font-size: 18px; } 
+	font-size: $mobile_font_base; //10px
+	@include at-breakpoint($tablet){ font-size: $tablet_font_base } 
+	@include at-breakpoint($desktop){ font-size: $desktop_font_base } 
+	@include at-breakpoint($bigscreen){ font-size: $bigscreen_font_base } 
 	line-height: $vertical_unit;
 }
 
@@ -31,57 +31,6 @@ body {
 	font-family: $body_font;
 	-webkit-font-smoothing: antialiased;
 	@include clearfix();
-}
-
-.baseline-overlay{
-	//background:pink;
-	position: absolute;
-	width: auto;
-	height: 10000px;
-	overflow: hidden;
-	z-index: 100;
-	content: '';
-	display: block;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-
-	.row{
-		border-bottom: 1px solid rgba(210,210,210,0.5);
-		height: $vertical_unit;
-		margin: 0;
-		padding: 0;
-		/*&:nth-child(even){
-			background: rgba(210,210,210,0.5);
-		}*/
-	}
-}
-
-.grid-overlay{
-	position: absolute;
-	width: auto;
-	
-
-	z-index: 100;
-	content: '';
-	display: block;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	
-	.col{ 
-		border-left: 1px solid rgba(210,210,210,0.5);
-		border-right: 1px solid rgba(210,210,210,0.5);
-		height: 10000px;
-		//background: rgba(20,255,200,0.1);
-		@include span-columns(1,6); 
-		@include at-breakpoint($mobile){ &:nth-child(6){ @include span-columns(1 omega,6); } }
-		@include at-breakpoint($tablet_up){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}	
-	}
 }
 
 // width with defined width (not 100% of page)

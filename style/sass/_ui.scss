@@ -19,7 +19,7 @@ legend{
 }
 
 label {
-	@include font-size(1);
+	font-size: 1rem;
 	line-height: $vertical_unit;
 	margin-bottom: $vertical_unit;
 
@@ -54,7 +54,7 @@ input[type="submit"]{
 	padding: 0 $base_unit;
 	height: $vertical_unit;
 	font-family: $body_font;
-	@include font-size(1);
+	font-size: 1rem;
 	font-weight: bold;
 	color: #fff;
 	border: 0;
@@ -79,7 +79,7 @@ input[type="submit"]{
 	line-height: $vertical_unit*2;
 	margin: 0 0 $vertical_unit 0;
 	display: inline-block;
-	@include font-size(1);
+	font-size: 1rem;
 	font-family: $heading_font;
 	font-weight: bold;
 	color: #fff;
@@ -106,5 +106,5 @@ input[type="submit"]{
 
 	.search-button{
 		@include span-columns(1 omega,3);
-		@include font-size(1);
+		font-size: 1rem;
 	}

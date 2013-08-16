@@ -9,7 +9,7 @@ table {
 	background: #fff;
 	border: 1px solid #ccc;
 	margin-bottom: $vertical_unit;
-	@include font-size(0.75);
+	font-size: 0.75rem;
 }
 
 	thead{
@@ -29,7 +29,7 @@ table {
 		font-weight: bold;
 		height: $vertical_unit*2;
 		font-family: $heading_font;
-		@include font-size(1);
+		font-size:1rem;
 	}
 
 	

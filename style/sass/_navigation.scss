@@ -33,7 +33,7 @@
     	display: block;
     	color: $blue;
     	padding: 0 $base_unit*2;
-    	@include font-size(1);
+    	font-size: 1rem;
     	line-height: $vertical_unit*2;
 }
 	
@@ -122,7 +122,7 @@
 		margin: 0 $base_unit;
 		list-style: none;
 		font-family: $heading_font;
-		@include font-size(1.2);
+		font-size: 1.2rem;
 		
 		.current_page_item{
 			border-top: none;
