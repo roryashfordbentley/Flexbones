@@ -22,12 +22,12 @@ $columns_desktop:	12;
 $columns_bigscreen:	12;
 
 //$media-layout: min-width mq | total columns | max-width mq
-$mobile: 			0 $columns_mobile 650px;
-$tablet: 			651px $columns_tablet 900px;
-$tablet_up: 		651px $columns_tablet;
-$desktop: 			901px $columns_desktop 1200px;
-$desktop_up: 		901px $columns_desktop;
-$bigscreen: 		1201px $columns_bigscreen;
+$mobile: 			0 $columns_mobile 40rem;
+$tablet: 			40rem $columns_tablet 55rem;
+$tablet_up: 		40rem $columns_tablet;
+$desktop: 			55rem $columns_desktop 75rem;
+$desktop_up: 		55rem $columns_desktop;
+$bigscreen: 		75rem $columns_bigscreen;
 
 // Font Stack
 

@@ -48,13 +48,8 @@ jQuery(document).ready(function($) {
 	//toggle 
 
 	$('.jenkins__baseline-toggle').toggle(function() {
-		//$('body').toggleClass('baseline-bg');
-		//add baseline-overlay div
 		$('body').append( '<div class="baseline-overlay"></div>' );
-		//add 200 divs, seems extreme but this method is the most accurate
-		for(var i=1;i <= 200;i++){
-			$('.baseline-overlay').append( '<div class="row"></div>' );
-		}
+		$('.baseline-overlay').height( $(document).height() );
 	}, function() {
 		$('.baseline-overlay').remove();
 	});
@@ -63,10 +58,10 @@ jQuery(document).ready(function($) {
 		//add baseline-overlay div
 		$('body').append( '<div class="grid-overlay"></div>' );
 		$('.grid-overlay').append('<div class="wrapper"></div>');
-		//add 200 divs, seems extreme but this method is the most accurate
 		for(var i=1;i <= 12;i++){
 			$('.grid-overlay .wrapper').append( '<div class="col"></div>' );
 		}
+		$('.grid-overlay .col').height( $(document).height() );
 	}, function(){
 		$('.grid-overlay').remove();
 		

@@ -1,3 +1,9 @@
+// Gridtacular
+// 
+// A js/css
+//
+
+
 .jenkins{
 	display:inline-block;
 	color:#fff;
@@ -64,26 +70,18 @@
 	//background:pink;
 	position: absolute;
 	width: auto;
-	height: 10000px;
 	overflow: hidden;
 	z-index: 100;
-	content: '';
 	display: block;
 	pointer-events: none;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-
-	.row{
-		border-bottom: 1px solid rgba(210,210,210,0.5);
-		height: $vertical_unit;
-		margin: 0;
-		padding: 0;
-		/*&:nth-child(even){
-			background: rgba(210,210,210,0.5);
-		}*/
-	}
+	//genius!!!! using a 50px high background image but resizing it down to 
+	background-image: url("images/baseline.png"); 
+	//realistic baseline heights it appears as a hairline stroke!
+	background-size: 100% $vertical_unit;
 }
 
 .grid-overlay{
@@ -100,7 +98,6 @@
 	.col{ 
 		border-left: 1px solid rgba(210,210,210,0.5);
 		border-right: 1px solid rgba(210,210,210,0.5);
-		height: 10000px;
 		//background: rgba(20,255,200,0.1);
 		@include span-columns(1,6); 
 		@include at-breakpoint($mobile){ &:nth-child(6){ @include span-columns(1 omega,6); } }

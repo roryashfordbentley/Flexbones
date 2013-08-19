@@ -96,19 +96,22 @@
 
 // MOBILE NAVIGATION
 
-
 .sidr {
-    display: none;
-    position: absolute;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    z-index: 999999;
+	display:none;
+	position:absolute;
+	position:fixed;
+	top:0;
+	height:100%;
+	z-index:999999;
+	width:260px;
+	overflow-x:none;
+	overflow-y:auto;
+	background: #333;
+}
 
-    overflow-x: none;
-    overflow-y: auto;
-    background: #333;
-    color: #fff;
+.sidr.left {
+	left:-260px;
+	right:auto;
 }
 
 .mobile-nav{	

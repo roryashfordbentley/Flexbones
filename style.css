@@ -122,24 +122,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .baseline-overlay {
   position: absolute;
   width: auto;
-  height: 10000px;
   overflow: hidden;
   z-index: 100;
-  content: '';
   display: block;
   pointer-events: none;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
-  .baseline-overlay .row {
-    border-bottom: 1px solid rgba(210, 210, 210, 0.5);
-    height: 1.5rem;
-    margin: 0;
-    padding: 0;
-    /*&:nth-child(even){
-    	background: rgba(210,210,210,0.5);
-    }*/ }
+  left: 0;
+  background-image: url("images/baseline.png");
+  background-size: 100% 1.5rem; }
 
 .grid-overlay {
   position: absolute;
@@ -154,17 +146,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   .grid-overlay .col {
     border-left: 1px solid rgba(210, 210, 210, 0.5);
     border-right: 1px solid rgba(210, 210, 210, 0.5);
-    height: 10000px;
     width: 13.0434782609%;
     float: left;
     margin-right: 4.347826087%;
     display: inline; }
-    @media (max-width: 650px) {
+    @media (max-width: 40rem) {
       .grid-overlay .col:nth-child(6) {
         width: 13.0434782609%;
         float: right;
         margin-right: 0; } }
-    @media (min-width: 651px) {
+    @media (min-width: 40rem) {
       .grid-overlay .col {
         width: 6.3829787234%;
         float: left;
@@ -188,19 +179,21 @@ img {
   max-width: 100%; }
 
 html {
+  height: 100%;
   font-size: 87.5%;
   line-height: 1.5rem; }
-  @media (min-width: 651px) and (max-width: 900px) {
+  @media (min-width: 40rem) and (max-width: 55rem) {
     html {
       font-size: 100%; } }
-  @media (min-width: 901px) and (max-width: 1200px) {
+  @media (min-width: 55rem) and (max-width: 75rem) {
     html {
       font-size: 100%; } }
-  @media (min-width: 1201px) {
+  @media (min-width: 75rem) {
     html {
       font-size: 112.5%; } }
 
 body {
+  min-height: 100%;
   width: 100%;
   color: #3e3e3e;
   font-family: "ff-tisa-web-pro", georgia, times, "times new roman" sans-serif;
@@ -226,17 +219,17 @@ body {
     content: "";
     display: table;
     clear: both; }
-  @media (min-width: 651px) and (max-width: 900px) {
+  @media (min-width: 40rem) and (max-width: 55rem) {
     .wrapper {
       max-width: 940%; } }
-  @media (min-width: 901px) and (max-width: 1200px) {
+  @media (min-width: 55rem) and (max-width: 75rem) {
     .wrapper {
       max-width: 940%; } }
-  @media (min-width: 651px) and (max-width: 900px) {
+  @media (min-width: 40rem) and (max-width: 55rem) {
     .wrapper {
       max-width: 85%;
       margin: 0 auto; } }
-  @media (min-width: 901px) {
+  @media (min-width: 55rem) {
     .wrapper {
       width: 85%;
       max-width: 1300px;
@@ -256,7 +249,7 @@ body {
   float: none;
   margin: 0 0 20px 0;
   display: block; }
-  @media (min-width: 651px) {
+  @media (min-width: 40rem) {
     .alignleft {
       float: left; } }
 
@@ -264,7 +257,7 @@ body {
   float: none;
   margin: 0 0 20px 0;
   display: block; }
-  @media (min-width: 651px) {
+  @media (min-width: 40rem) {
     .alignright {
       float: right; } }
 
@@ -497,7 +490,7 @@ input[type="submit"] {
 .mobile-header {
   background: #03a7ff;
   *zoom: 1; }
-  @media (min-width: 651px) {
+  @media (min-width: 40rem) {
     .mobile-header {
       display: none; } }
   .mobile-header:before, .mobile-header:after {
@@ -542,12 +535,12 @@ input[type="submit"] {
     display: table;
     clear: both; }
 
-@media (min-width: 651px) and (max-width: 900px) {
+@media (min-width: 40rem) and (max-width: 55rem) {
   .main {
     width: 74.4680851064%;
     float: left;
     margin-right: 2.1276595745%; } }
-@media (min-width: 901px) {
+@media (min-width: 55rem) {
   .main {
     width: 65.9574468085%;
     float: left;
@@ -562,7 +555,7 @@ input[type="submit"] {
 .primary-nav {
   display: none;
   margin-bottom: 1.5rem; }
-  @media (min-width: 651px) {
+  @media (min-width: 40rem) {
     .primary-nav {
       display: block; } }
 
@@ -634,10 +627,14 @@ input[type="submit"] {
   top: 0;
   height: 100%;
   z-index: 999999;
+  width: 260px;
   overflow-x: none;
   overflow-y: auto;
-  background: #333;
-  color: #fff; }
+  background: #333; }
+
+.sidr.left {
+  left: -260px;
+  right: auto; }
 
 .mobile-nav {
   display: none;
@@ -694,7 +691,7 @@ input[type="submit"] {
 /*
  * All sidebar(s) style here
  */
-@media (min-width: 651px) {
+@media (min-width: 40rem) {
   .sidebar {
     width: 23.4042553191%;
     float: right;
