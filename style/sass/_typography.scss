@@ -18,14 +18,15 @@ a:hover{
 p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
 	line-height: $vertical_unit;
 	margin-bottom: $vertical_unit;
-	//background: pink;
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
-	font-weight: 300;
+	font-weight: 700;
 	color: #292929;
 	line-height:$vertical_unit*2;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 p{

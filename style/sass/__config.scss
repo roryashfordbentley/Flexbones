@@ -36,15 +36,14 @@ $body_font: 		"ff-tisa-web-pro",georgia, times, "times new roman" sans-serif;
 
 // Base Type sizes for (The key to everything!)
 
-$mobile_font_base: 87.5%;
-$tablet_font_base: 100%;
-$desktop_font_base: 100%;
-$bigscreen_font_base: 112.5%;
-
+$mobile_font_base: 		87.5%;	//14px
+$tablet_font_base: 		100%;  	//16px
+$desktop_font_base: 	100%; 	//16px
+$bigscreen_font_base: 	112.5%; //18px
 // Typographic units
 
 $paragraph_size:	1rem; 
-$h1_size:			2.3rem;  
+$h1_size:			3.2rem;  
 $h2_size:			2rem;  
 $h3_size:			1.8rem;  
 $h4_size:			1.5rem;  

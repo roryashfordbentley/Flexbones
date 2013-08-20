@@ -193,19 +193,20 @@ add_filter( 'the_content', 'span_li' );
 /*==================================================================== */
 
 function barebones_load_js() {
- 	//register sitewide scripts and request JQUERY 1.8.3 as a dependency
  	// NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
   	wp_enqueue_script( 'sitewide-scripts' );
-  	wp_register_script( 'jenkins', get_template_directory_uri( ) . '/js/jenkins.js', array( 'jquery' ), '1', true );
-  	wp_enqueue_script( 'jenkins' );
+  	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular.js', array( 'jquery' ), '1', true );
+  	wp_enqueue_script( 'gridtacular' );
 	//wp_enqueue_script( 'jquery-ui-core' );  
 	//wp_enqueue_script( 'jquery-ui-accordion' );    
   	wp_enqueue_script( 'sitewide-scripts' );
-  
+  	
+  	//set the stylesheet directory uri to var 'stylesheet_root' and pass the var to documents that require it
+
   	$stylesheet_root = array( 'dir' => get_stylesheet_directory_uri() );
     wp_localize_script( 'sitewide-scripts', 'stylesheet_root', $stylesheet_root );
-    wp_localize_script( 'jenkins', 'stylesheet_root', $stylesheet_root );
+    wp_localize_script( 'gridtacular', 'stylesheet_root', $stylesheet_root );
 
     //useage in JS : stylesheet_root.dir
 
@@ -251,3 +252,16 @@ function SearchFilter($query) {
 }
 
 add_filter('pre_get_posts','SearchFilter');
+
+/*==================================================================== */
+/* Wrap images in div
+/*==================================================================== */
+
+if( is_admin() ) {
+ 
+    add_filter( 'image_send_to_editor', 'wp_image_wrap_init', 10, 8 );    
+    function wp_image_wrap_init( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
+        return '<div class="content-image">'. $html .'</div>';
+    }
+ 
+}

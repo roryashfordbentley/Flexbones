@@ -18,6 +18,10 @@ jQuery(document).ready(function($) {
     	source: '.primary-nav'
     });
 
+    /*$('.content-image').css({
+
+    });*/
+
 });
 
 /* Google Analytics */

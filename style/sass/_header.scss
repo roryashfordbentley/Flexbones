@@ -9,10 +9,12 @@
 .site-header{}
 
 	.site-header__logo{
-		
+		display: block;
+		height: $vertical_unit*2;
+		margin: $vertical_unit*2 0;
+
 		img{
 			display: block;
-			height: $vertical_unit*2;
-			margin: $vertical_unit 0;
+			margin: 0 auto;
 		}
 	}

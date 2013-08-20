@@ -1,13 +1,11 @@
 <div class="site-footer">
 	<footer class="wrapper">
-		<p>All content &copy; Code Blue Group 2012</p>
+		<p>Built by <a href="https://twitter.com/roikles">@roikles</a> and <a href="https://twitter.com/davies93">@davies93</a></p>
 	</footer>
 </div>
+<div class="gridtacular"></div>
+<?php //print_r( debug_backtrace() ); ?>
 
-<pre>
-	<?php //use the code below to see what template(s) the current page is using ?>
-	<?php //print_r( debug_backtrace() ); ?>
-</pre>
 
 <?php wp_footer(); //important! ?>
 </body>

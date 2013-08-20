@@ -12,7 +12,7 @@
 			<?php //FILLER TEXT FOR TESTING OUT THE THEME ?>
 			<?php get_template_part( 'dummy', 'content' ); ?>
 		</section>
-		<?php get_sidebar(); ?>	
+		<?php //get_sidebar(); ?>	
 	</div>
 </div>
 <?php get_template_part( 'inc/content', 'footer' ); ?>

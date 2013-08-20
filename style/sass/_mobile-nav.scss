@@ -1,0 +1,72 @@
+/* -- _MOBILE_NAV.SCSS -- */
+
+/*
+ * Mobile nav menu styling goes here
+ */
+
+.sidr {
+	display:none;
+	position:absolute;
+	position:fixed;
+	top:0;
+	height:100%;
+	z-index:999999;
+	width:260px;
+	overflow-x:none;
+	overflow-y:auto;
+	background: #333;
+}
+
+.sidr.left {
+	left:-260px;
+	right:auto;
+}
+
+.mobile-nav{	
+	display: none;
+	background: #2f3942;
+	@include box-shadow( inset -2px 0px 2px 0px darken(#2f3942, 15%) );
+
+}
+	// main ul
+	.mobile-nav__menu{
+		margin: 0 $base_unit;
+		list-style: none;
+		font-family: $heading_font;
+		font-size: 1.2rem;
+		
+		.current_page_item{
+			border-top: none;
+		}	
+	}
+
+		//menu item
+		.mobile-nav__menu .menu-item a{
+			border-bottom: 1px solid #45535e;
+		}
+
+			.mobile-nav__menu .menu-item a, 
+			.mobile-nav__menu .menu-item a:visited{
+				display: block;
+				color: #fff;
+				padding:$base_unit 0;
+			}
+
+			//parent style
+	
+			.mobile-nav__menu .parent a{
+
+			}
+
+			.mobile-nav__menu .sub-menu{
+				list-style: none;
+				margin:0;
+			}
+
+				.mobile-nav__menu .sub-menu a{
+					padding-left: $base_unit;
+				}
+
+				.mobile-nav__menu .sub-menu a:before{
+					content: "- ";
+				}

@@ -9,45 +9,55 @@
 // Primary nav container
 .primary-nav{   
     display: none;
-    //background: pink;
-    margin-bottom:$vertical_unit; 
-	@include at-breakpoint($tablet_up){ display:block;  }	
+    margin-bottom:$vertical_unit*3; 
+    height: $vertical_unit*2;
+	@include at-breakpoint($tablet_up){ display:block;  }
 }
 
 	// the first ul
 	.primary-nav__menu{
         list-style: none;
         @include clearfix();
-        margin: 0;
         font-family: $heading_font;
+        margin: 0 auto; 
+        text-align: center;
+        border-bottom: 1px solid #ccc;
     }
 	
 	// menu item
 	.primary-nav__menu > .menu-item{ 
-		float: left; 
-		margin: 0 $base_unit 0 0;
+		//float: left; 
+		margin: 0 0 0 0;
+		display: inline;
 	}
 	
 	// menu item link (block level element with padding + margin applied)
 	.primary-nav__menu > .menu-item a{
-    	display: block;
-    	color: $blue;
+    	display: inline-block;
+    	color: $text_colour;
     	padding: 0 $base_unit*2;
-    	font-size: 1rem;
+    	font-size: 1.2rem;
     	line-height: $vertical_unit*2;
 }
 	
 	//menu item hover
     .primary-nav__menu .menu-item:hover{
-		background: $blue;
-		a,a:visited{color: #fff;}
+		
+		a,a:visited{
+			//background: $blue; 
+			color: $blue;
+		}
     }
 
 	// the active page
     .primary-nav__menu > .current-menu-item a,
-    .primary-nav__menu > .current-menu-ancestor a{
-        color: #fff;
-        background: $blue;
+    .primary-nav__menu > .current-menu-item a:visited,
+    .primary-nav__menu > .current-menu-ancestor a,
+    .primary-nav__menu > .current-menu-ancestor a:visited,
+    .primary-nav__menu > .current-post-parent a,
+	.primary-nav__menu > .current-post-parent a:visited{
+        color: $blue;
+        //background: $blue;
         font-weight: bold;
     }
 
@@ -64,6 +74,7 @@
             display: none; 
             list-style: none;
             margin: 0;
+            text-align: left;
     	}
 		
 		// hover state stuff
@@ -75,90 +86,25 @@
 
 		.primary-nav__menu .sub-menu{
 			position: absolute;	
-			background: $blue;
+			background: #e7e7e7;
 		}
 
-			.primary-nav__menu .sub-menu .menu-item a{
+			.primary-nav__menu .sub-menu .menu-item a, 
+			.primary-nav__menu .sub-menu .menu-item a:visited{
 				width: 200px;
-				color: #fff;
+				color: $blue;
 				&:hover{ 
 					background: darken($blue,5%);
 					margin:0;
+					color: #fff;
 				}
 			}
 
 			.primary-nav__menu .sub-menu > .current-menu-item a,
-		    .primary-nav__menu .sub-menu > .current-menu-ancestor a{
+			.primary-nav__menu .sub-menu > .current-menu-item a:visited,
+		    .primary-nav__menu .sub-menu > .current-menu-ancestor a,
+		    .primary-nav__menu .sub-menu > .current-menu-ancestor a:visited,{
 		        color: #fff;
-		        background: darken($blue,10%);
+		        background: lighten($blue,10%);
 		        font-weight: bold;
 		    }
-
-// MOBILE NAVIGATION
-
-.sidr {
-	display:none;
-	position:absolute;
-	position:fixed;
-	top:0;
-	height:100%;
-	z-index:999999;
-	width:260px;
-	overflow-x:none;
-	overflow-y:auto;
-	background: #333;
-}
-
-.sidr.left {
-	left:-260px;
-	right:auto;
-}
-
-.mobile-nav{	
-	display: none;
-	background: #2f3942;
-	@include box-shadow( inset -2px 0px 2px 0px darken(#2f3942, 15%) );
-
-}
-	// main ul
-	.mobile-nav__menu{
-		margin: 0 $base_unit;
-		list-style: none;
-		font-family: $heading_font;
-		font-size: 1.2rem;
-		
-		.current_page_item{
-			border-top: none;
-		}	
-	}
-
-		//menu item
-		.mobile-nav__menu .menu-item a{
-			border-bottom: 1px solid #45535e;
-		}
-
-			.mobile-nav__menu .menu-item a, 
-			.mobile-nav__menu .menu-item a:visited{
-				display: block;
-				color: #fff;
-				padding:$base_unit 0;
-			}
-
-			//parent style
-	
-			.mobile-nav__menu .parent a{
-
-			}
-
-			.mobile-nav__menu .sub-menu{
-				list-style: none;
-				margin:0;
-			}
-
-				.mobile-nav__menu .sub-menu a{
-					padding-left: $base_unit;
-				}
-
-				.mobile-nav__menu .sub-menu a:before{
-					content: "- ";
-				}

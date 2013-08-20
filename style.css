@@ -73,50 +73,47 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-.jenkins {
-  display: inline-block;
-  color: #fff;
-  font-family: arial,helvetica,sans-serif;
+.gridtacular {
   position: fixed;
   bottom: 0;
   right: 0;
   z-index: 10000;
-  width: 55px; }
-  .jenkins ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    line-height: 18px;
-    font-family: Monaco, "Courier New", Courier, monospace; }
-  .jenkins li {
+  width: 55px;
+  color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: Monaco, "Courier New", Courier, monospace; }
+  .gridtacular li {
     display: block;
     padding: 10px; }
-  .jenkins a {
+  .gridtacular a {
     display: block; }
-  .jenkins img {
+  .gridtacular img {
     display: block; }
 
-.jenkins__width {
+.gridtacular__width {
   background: #41bd89; }
 
-.jenkins__height {
+.gridtacular__height {
   background: #2a4c5f; }
 
-.jenkins__width__bg {
+.gridtacular__width__bg {
   position: absolute;
   color: #33996e;
   font-size: 20px;
   font-weight: bold;
   text-align: center; }
 
-.jenkins__breakpoint {
+.gridtacular__breakpoint {
   background: #d06857; }
 
-.jenkins__baseline-toggle {
+.gridtacular__baseline-toggle {
   background: #b7c725; }
 
-.jenkins__grid-toggle {
+.gridtacular__grid-toggle {
   background: #41bdb6; }
 
 .baseline-overlay {
@@ -150,12 +147,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     float: left;
     margin-right: 4.347826087%;
     display: inline; }
-    @media (max-width: 40rem) {
+    @media (max-width: 40em) {
       .grid-overlay .col:nth-child(6) {
         width: 13.0434782609%;
         float: right;
         margin-right: 0; } }
-    @media (min-width: 40rem) {
+    @media (min-width: 40em) {
       .grid-overlay .col {
         width: 6.3829787234%;
         float: left;
@@ -182,13 +179,13 @@ html {
   height: 100%;
   font-size: 87.5%;
   line-height: 1.5rem; }
-  @media (min-width: 40rem) and (max-width: 55rem) {
+  @media (min-width: 40em) and (max-width: 55em) {
     html {
       font-size: 100%; } }
-  @media (min-width: 55rem) and (max-width: 75rem) {
+  @media (min-width: 55em) and (max-width: 75em) {
     html {
       font-size: 100%; } }
-  @media (min-width: 75rem) {
+  @media (min-width: 75em) {
     html {
       font-size: 112.5%; } }
 
@@ -209,27 +206,27 @@ body {
   *zoom: 1;
   max-width: 940%;
   _width: 940%;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 0;
   padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
   *zoom: 1; }
   .wrapper:after {
     content: "";
     display: table;
     clear: both; }
-  @media (min-width: 40rem) and (max-width: 55rem) {
+  @media (min-width: 40em) and (max-width: 55em) {
     .wrapper {
       max-width: 940%; } }
-  @media (min-width: 55rem) and (max-width: 75rem) {
+  @media (min-width: 55em) and (max-width: 75em) {
     .wrapper {
       max-width: 940%; } }
-  @media (min-width: 40rem) and (max-width: 55rem) {
+  @media (min-width: 40em) and (max-width: 55em) {
     .wrapper {
       max-width: 85%;
       margin: 0 auto; } }
-  @media (min-width: 55rem) {
+  @media (min-width: 55em) {
     .wrapper {
       width: 85%;
       max-width: 1300px;
@@ -249,7 +246,7 @@ body {
   float: none;
   margin: 0 0 20px 0;
   display: block; }
-  @media (min-width: 40rem) {
+  @media (min-width: 40em) {
     .alignleft {
       float: left; } }
 
@@ -257,7 +254,7 @@ body {
   float: none;
   margin: 0 0 20px 0;
   display: block; }
-  @media (min-width: 40rem) {
+  @media (min-width: 40em) {
     .alignright {
       float: right; } }
 
@@ -298,16 +295,18 @@ p, h1, h2, legend, h3, h4, .sidebar h2, .sidebar legend, h4, .sidebar h2, .sideb
 
 h1, h2, legend, h3, h4, .sidebar h2, .sidebar legend, h5, h6 {
   font-family: "brandon-grotesque", helvetica, arial, sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   color: #292929;
-  line-height: 3rem; }
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase; }
 
 p {
   font-weight: normal;
   font-size: 1rem; }
 
 h1 {
-  font-size: 2.3rem; }
+  font-size: 3.2rem; }
 
 h2, legend {
   font-size: 2rem; }
@@ -341,7 +340,7 @@ blockquote {
   width: 40.7407407407%;
   float: right;
   margin-right: 0;
-  #margin-left: -20%;
+  *margin-left: -20%;
   display: inline;
   float: right;
   margin-left: 2.1276595745%;
@@ -479,7 +478,7 @@ input[type="submit"] {
   width: 27.2727272727%;
   float: right;
   margin-right: 0;
-  #margin-left: -20%;
+  *margin-left: -20%;
   display: inline;
   font-size: 1rem; }
 
@@ -490,7 +489,7 @@ input[type="submit"] {
 .mobile-header {
   background: #03a7ff;
   *zoom: 1; }
-  @media (min-width: 40rem) {
+  @media (min-width: 40em) {
     .mobile-header {
       display: none; } }
   .mobile-header:before, .mobile-header:after {
@@ -521,10 +520,10 @@ input[type="submit"] {
   *zoom: 1;
   max-width: 940%;
   _width: 940%;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto; }
   .content:before, .content:after {
     content: "";
     display: table; }
@@ -535,16 +534,18 @@ input[type="submit"] {
     display: table;
     clear: both; }
 
-@media (min-width: 40rem) and (max-width: 55rem) {
-  .main {
-    width: 74.4680851064%;
-    float: left;
-    margin-right: 2.1276595745%; } }
-@media (min-width: 55rem) {
+@media (min-width: 40em) and (max-width: 55em) {
   .main {
     width: 65.9574468085%;
     float: left;
-    margin-right: 2.1276595745%; } }
+    margin-right: 2.1276595745%;
+    margin-left: 17.0212765957%; } }
+@media (min-width: 55em) {
+  .main {
+    width: 65.9574468085%;
+    float: left;
+    margin-right: 2.1276595745%;
+    margin-left: 17.0212765957%; } }
 
 /* -- _NAVIGATION.SCSS -- */
 /*
@@ -554,16 +555,19 @@ input[type="submit"] {
  */
 .primary-nav {
   display: none;
-  margin-bottom: 1.5rem; }
-  @media (min-width: 40rem) {
+  margin-bottom: 4.5rem;
+  height: 3rem; }
+  @media (min-width: 40em) {
     .primary-nav {
       display: block; } }
 
 .primary-nav__menu {
   list-style: none;
   *zoom: 1;
-  margin: 0;
-  font-family: "brandon-grotesque", helvetica, arial, sans-serif; }
+  font-family: "brandon-grotesque", helvetica, arial, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #ccc; }
   .primary-nav__menu:before, .primary-nav__menu:after {
     content: "";
     display: table; }
@@ -571,25 +575,26 @@ input[type="submit"] {
     clear: both; }
 
 .primary-nav__menu > .menu-item {
-  float: left;
-  margin: 0 0.625rem 0 0; }
+  margin: 0 0 0 0;
+  display: inline; }
 
 .primary-nav__menu > .menu-item a {
-  display: block;
-  color: #03a7ff;
+  display: inline-block;
+  color: #3e3e3e;
   padding: 0 1.25rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 3rem; }
 
-.primary-nav__menu .menu-item:hover {
-  background: #03a7ff; }
-  .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited {
-    color: #fff; }
+.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited {
+  color: #03a7ff; }
 
 .primary-nav__menu > .current-menu-item a,
-.primary-nav__menu > .current-menu-ancestor a {
-  color: #fff;
-  background: #03a7ff;
+.primary-nav__menu > .current-menu-item a:visited,
+.primary-nav__menu > .current-menu-ancestor a,
+.primary-nav__menu > .current-menu-ancestor a:visited,
+.primary-nav__menu > .current-post-parent a,
+.primary-nav__menu > .current-post-parent a:visited {
+  color: #03a7ff;
   font-weight: bold; }
 
 .primary-nav__menu .parent {
@@ -598,28 +603,38 @@ input[type="submit"] {
 .primary-nav__menu .parent > .sub-menu {
   display: none;
   list-style: none;
-  margin: 0; }
+  margin: 0;
+  text-align: left; }
 
 .primary-nav__menu .parent:hover > .sub-menu {
   display: block; }
 
 .primary-nav__menu .sub-menu {
   position: absolute;
-  background: #03a7ff; }
+  background: #e7e7e7; }
 
-.primary-nav__menu .sub-menu .menu-item a {
+.primary-nav__menu .sub-menu .menu-item a,
+.primary-nav__menu .sub-menu .menu-item a:visited {
   width: 200px;
-  color: #fff; }
-  .primary-nav__menu .sub-menu .menu-item a:hover {
+  color: #03a7ff; }
+  .primary-nav__menu .sub-menu .menu-item a:hover,
+  .primary-nav__menu .sub-menu .menu-item a:visited:hover {
     background: #0097e9;
-    margin: 0; }
+    margin: 0;
+    color: #fff; }
 
 .primary-nav__menu .sub-menu > .current-menu-item a,
-.primary-nav__menu .sub-menu > .current-menu-ancestor a {
+.primary-nav__menu .sub-menu > .current-menu-item a:visited,
+.primary-nav__menu .sub-menu > .current-menu-ancestor a,
+.primary-nav__menu .sub-menu > .current-menu-ancestor a:visited {
   color: #fff;
-  background: #0087cf;
+  background: #36b9ff;
   font-weight: bold; }
 
+/* -- _MOBILE_NAV.SCSS -- */
+/*
+ * Mobile nav menu styling goes here
+ */
 .sidr {
   display: none;
   position: absolute;
@@ -675,10 +690,13 @@ input[type="submit"] {
  * Header specific declarations
  * Note: navigation has its own document _navigation.scss
  */
-.site-header__logo img {
+.site-header__logo {
   display: block;
   height: 3rem;
-  margin: 1.5rem 0; }
+  margin: 3rem 0; }
+  .site-header__logo img {
+    display: block;
+    margin: 0 auto; }
 
 /* -- _FOOTER.SCSS -- */
 /*
@@ -691,7 +709,7 @@ input[type="submit"] {
 /*
  * All sidebar(s) style here
  */
-@media (min-width: 40rem) {
+@media (min-width: 40em) {
   .sidebar {
     width: 23.4042553191%;
     float: right;
@@ -709,6 +727,33 @@ input[type="submit"] {
  * All blog/news styles go here
  * Archives and single article styles
  */
+.article-date {
+  text-align: center; }
+
+.article-meta {
+  *zoom: 1;
+  max-width: 940%;
+  _width: 940%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "brandon-grotesque", helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center; }
+  .article-meta:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.article-meta__time {
+  display: inline;
+  line-height: 3rem; }
+
+.article-meta__author {
+  line-height: 3rem; }
+
 /* -- _HOME.SCSS -- */
 /*
  * Homepage Specific Styles
