@@ -1,6 +1,6 @@
 <div class="site-footer">
 	<footer class="wrapper">
-		<p>Built by <a href="https://twitter.com/roikles">@roikles</a> and <a href="https://twitter.com/davies93">@davies93</a></p>
+		<p>Built by <a href="https://twitter.com/roikles">@roikles</a> and <a href="https://twitter.com/butthurt">@butthurt93</a></p>
 	</footer>
 </div>
 <div class="gridtacular"></div>
