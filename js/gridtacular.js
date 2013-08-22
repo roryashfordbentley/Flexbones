@@ -16,7 +16,7 @@
 	        showBaseline:	true,
 	        showGrid: 		true,
 	        gridColumnsMax: 12, 
-	        container: 		window
+	        container: 		window,
 	        gridContainer:  'wrapper'
 
         }, userSettings );
@@ -30,8 +30,8 @@
 	    	height: 		"gridtacular__height",
 	    	baselineToggle: "gridtacular__baseline-toggle",
 	    	gridToggle: 	"gridtacular__grid-toggle",
-	    	baseline: 		"baseline-overlay",
-	    	grid: 	 		"grid-overlay"
+	    	baseline: 		"gridtacular__baseline-overlay",
+	    	grid: 	 		"gridtacular__grid-overlay"
 	    };
 
 	    // Breakpoints Object
@@ -82,70 +82,75 @@
 
 		// Plugin output
  
-			//first output html
+		//first output html
 
-			if(defaults.showBreakpoint){
-				obj.append('<li class="' + components.breakpoint + '"></li>');
-			}
+		if(defaults.showBreakpoint){
+			obj.append('<li class="' + components.breakpoint + '"></li>');
+		}
 
-			if(defaults.showWidth){
-				obj.append('<li class="' + components.width + '"></li>');
-			}
+		if(defaults.showWidth){
+			obj.append('<li class="' + components.width + '"></li>');
+		}
 
-			if(defaults.showHeight){
-				obj.append('<li class="' + components.height + '"></li>');
-			}
+		if(defaults.showHeight){
+			obj.append('<li class="' + components.height + '"></li>');
+		}
 
-			if(defaults.showBaseline){
-				obj.append('<li class="' + components.baselineToggle + '"></li>');
-			}
+		if(defaults.showBaseline){
+			obj.append('<li class="' + components.baselineToggle + '"></li>');
+		}
 
-			if(defaults.showGrid){
-				obj.append('<li class="' + components.gridToggle + '"></li>');
-			}
-			// setBreakpoint Content
+		if(defaults.showGrid){
+			obj.append('<li class="' + components.gridToggle + '"></li>');
+		}
+		// setBreakpoint Content
+		setBreakpoint('.' + components.breakpoint);
+
+		//Document Width/Height
+
+		$('.' + components.width).html( '<strong>W:</strong><br>' + setWidth( defaults.container ) );
+		$('.' + components.height).html( '<strong>H:</strong><br>' + setHeight( defaults.container ) );
+
+
+		//update on window resize
+		$(window).resize(function() {
 			setBreakpoint('.' + components.breakpoint);
-
-			//Document Width/Height
-
 			$('.' + components.width).html( '<strong>W:</strong><br>' + setWidth( defaults.container ) );
 			$('.' + components.height).html( '<strong>H:</strong><br>' + setHeight( defaults.container ) );
+		});
 
 
-			//update on window resize
-			$(window).resize(function() {
-				setBreakpoint('.' + components.breakpoint);
-				$('.' + components.width).html( '<strong>W:</strong><br>' + setWidth( defaults.container ) );
-				$('.' + components.height).html( '<strong>H:</strong><br>' + setHeight( defaults.container ) );
-			});
+		// Grid Overlays
+
+		//baseline toggle button
+		$('.gridtacular__baseline-toggle').append( '<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNrs1jkVACAQxNCFhzH8Nzji6BHA8eMgzUxSn8Tb1BwfQJIkybMoa30ed2wB3ENSPC6EJEmSikfxQPEoHhdCkiRJxbMvniHAABwMEBgkKHhDAAAAAElFTkSuQmCC" /></a>' );
+		//background grid toggle button
+		$('.gridtacular__grid-toggle').append( '<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNrsz7EJACAMAMEgDqb7N26kliLY2Yj3kCIkzUU/V2Lp5b8UHwQJCQkJCQkJCQkJCQkJCQkJCQkJCXm3PKcebm3bn/0bAgwAH0Cpe8V3YHEAAAAASUVORK5CYII=" /></a>' );
+
+		$('.' + components.baselineToggle).toggle(function() {
+		
+			$('body').append( '<div class="' + components.baseline + '"></div>' );
+		
+			$(components.baseline).height( $(defaults.container).height() );
+		}, function() {
+			$(components.baseline).remove();
+		});
 
 
-			// Grid Overlays
-
-			$(components.baselineToggle).toggle(function() {
+		$('.' + components.gridToggle).toggle(function() {
+			$('body').append( '<div class="' + components.grid + '"></div>' );
 			
-				$('body').append( '<div class="' + components.baseline + '"></div>' );
+			$('.' + components.grid).append('<div class="' + defaults.gridContainer + '"></div>');
 			
-				$('.baseline-overlay').height( $(document).height() );
-			}, function() {
-				$('.baseline-overlay').remove();
-			});
+			for(var i=1;i <= defaults.gridColumnsMax;i++){
+				$('.' + components.grid + ' .wrapper').append( '<div class="col"></div>' );
+			}
+			
+			$('.' + components.grid + ' .col').height( $(defaults.container).height() );
 
-
-			$(components.gridToggle).toggle(function() {
-				//add baseline-overlay div
-				$('body').append( '<div class="' + components.grid + '"></div>' );
-				$('.' + components.grid).append('<div class="'+gridContainer+'"></div>');
-				
-				for(var i=1;i <= 12;i++){
-					$('.' + components.grid .wrapper').append( '<div class="col"></div>' );
-				}
-				$('.grid-overlay .col').height( $('body').height() );
-
-			}, function(){
-				$('.grid-overlay').remove();
-				
-			});
+		}, function(){
+			$(components.grid).remove();
+		});
 			
 
 	}

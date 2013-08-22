@@ -25,7 +25,6 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: 700;
 	color: #292929;
 	line-height:$vertical_unit*2;
-	text-align: center;
 	text-transform: uppercase;
 }
 
@@ -36,6 +35,7 @@ p{
 
 h1{ 
 	font-size: $h1_size;
+	text-align: center;
 }
 
 h2{ 

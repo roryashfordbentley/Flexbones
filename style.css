@@ -116,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .gridtacular__grid-toggle {
   background: #41bdb6; }
 
-.baseline-overlay {
+.gridtacular__baseline-overlay {
   position: absolute;
   width: auto;
   overflow: hidden;
@@ -130,7 +130,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: url("images/baseline.png");
   background-size: 100% 1.5rem; }
 
-.grid-overlay {
+.gridtacular__grid-overlay {
   position: absolute;
   width: auto;
   z-index: 100;
@@ -140,7 +140,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   right: 0;
   bottom: 0;
   left: 0; }
-  .grid-overlay .col {
+  .gridtacular__grid-overlay .col {
     border-left: 1px solid rgba(210, 210, 210, 0.5);
     border-right: 1px solid rgba(210, 210, 210, 0.5);
     width: 13.0434782609%;
@@ -148,16 +148,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     margin-right: 4.347826087%;
     display: inline; }
     @media (max-width: 40em) {
-      .grid-overlay .col:nth-child(6) {
+      .gridtacular__grid-overlay .col:nth-child(6) {
         width: 13.0434782609%;
         float: right;
         margin-right: 0; } }
     @media (min-width: 40em) {
-      .grid-overlay .col {
+      .gridtacular__grid-overlay .col {
         width: 6.3829787234%;
         float: left;
         margin-right: 2.1276595745%; }
-        .grid-overlay .col:nth-child(12) {
+        .gridtacular__grid-overlay .col:nth-child(12) {
           width: 6.3829787234%;
           float: right;
           margin-right: 0; } }
@@ -298,7 +298,6 @@ h1, h2, legend, h3, h4, .sidebar h2, .sidebar legend, h5, h6 {
   font-weight: 700;
   color: #292929;
   line-height: 3rem;
-  text-align: center;
   text-transform: uppercase; }
 
 p {
@@ -306,7 +305,8 @@ p {
   font-size: 1rem; }
 
 h1 {
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  text-align: center; }
 
 h2, legend {
   font-size: 2rem; }
