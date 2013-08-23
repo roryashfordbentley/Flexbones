@@ -131,9 +131,9 @@
 		
 			$('body').append( '<div class="' + components.baseline + '"></div>' );
 		
-			$(components.baseline).height( $(defaults.container).height() );
+			$('.' + components.baseline).height( $(defaults.container).height() );
 		}, function() {
-			$(components.baseline).remove();
+			$('.' + components.baseline).remove();
 		});
 
 
@@ -149,7 +149,7 @@
 			$('.' + components.grid + ' .col').height( $(defaults.container).height() );
 
 		}, function(){
-			$(components.grid).remove();
+			$('.' + components.grid).remove();
 		});
 			
 
