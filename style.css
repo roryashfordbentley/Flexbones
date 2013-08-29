@@ -73,6 +73,9 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+body {
+  position: relative; }
+
 .gridtacular {
   position: fixed;
   bottom: 0;
@@ -151,7 +154,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       .gridtacular__grid-overlay .col:nth-child(6) {
         width: 13.0434782609%;
         float: right;
-        margin-right: 0; } }
+        margin-right: 0; }
+      .gridtacular__grid-overlay .col:nth-child(n+7) {
+        display: none; } }
     @media (min-width: 40em) {
       .gridtacular__grid-overlay .col {
         width: 6.3829787234%;
@@ -176,7 +181,6 @@ img {
   max-width: 100%; }
 
 html {
-  height: 100%;
   font-size: 87.5%;
   line-height: 1.5rem; }
   @media (min-width: 40em) and (max-width: 55em) {
@@ -190,8 +194,6 @@ html {
       font-size: 112.5%; } }
 
 body {
-  min-height: 100%;
-  width: 100%;
   color: #3e3e3e;
   font-family: "ff-tisa-web-pro", georgia, times, "times new roman" sans-serif;
   -webkit-font-smoothing: antialiased;

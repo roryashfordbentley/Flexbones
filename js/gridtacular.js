@@ -131,7 +131,7 @@
 		
 			$('body').append( '<div class="' + components.baseline + '"></div>' );
 		
-			$('.' + components.baseline).height( $(defaults.container).height() );
+			$('.' + components.baseline).height( $('body').height() );
 		}, function() {
 			$('.' + components.baseline).remove();
 		});
@@ -146,7 +146,7 @@
 				$('.' + components.grid + ' .wrapper').append( '<div class="col"></div>' );
 			}
 			
-			$('.' + components.grid + ' .col').height( $(defaults.container).height() );
+			$('.' + components.grid + ' .col').height( $('body').height() );
 
 		}, function(){
 			$('.' + components.grid).remove();

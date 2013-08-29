@@ -3,12 +3,19 @@
 // A js/css
 //
 
+// I know its bad practice to redeclare an element but as
+// this is just a development tool it shouldn't matter
+
+body{
+	//ensures that gridtaculars 
+	//position fixed doesnt screw with the html element height
+	position: relative;
+}
 
 .gridtacular{
 		position:fixed;
 		bottom:0;
 		right:0;
-	
 		z-index:10000;
 		width: 55px;
 		color: #fff;
@@ -63,41 +70,49 @@
 	}
 
 	.gridtacular__baseline-overlay{
-	//background:pink;
-	position: absolute;
-	width: auto;
-	overflow: hidden;
-	z-index: 100;
-	display: block;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	//genius!!!! using a 50px high background image but resizing it down to 
-	background-image: url("images/baseline.png"); 
-	//realistic baseline heights it appears as a hairline stroke!
-	background-size: 100% $vertical_unit;
-}
-
-.gridtacular__grid-overlay{
-	position: absolute;
-	width: auto;
-	z-index: 100;
-	display: block;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	
-	.col{ 
-		border-left: 1px solid rgba(210,210,210,0.5);
-		border-right: 1px solid rgba(210,210,210,0.5);
-		//background: rgba(20,255,200,0.1);
-		@include span-columns(1,6); 
-		@include at-breakpoint($mobile){ &:nth-child(6){ @include span-columns(1 omega,6); } }
-		@include at-breakpoint($tablet_up){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}	
+		//background:pink;
+		position: absolute;
+		width: auto;
+		overflow: hidden;
+		z-index: 100;
+		display: block;
+		pointer-events: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		//genius!!!! using a 50px high background image but resizing it down to 
+		background-image: url("images/baseline.png"); 
+		//realistic baseline heights it appears as a hairline stroke!
+		background-size: 100% $vertical_unit;
 	}
-}
+
+	.gridtacular__grid-overlay{
+		position: absolute;
+		width: auto;
+		z-index: 100;
+		display: block;
+		pointer-events: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+		.col{ 
+			border-left: 1px solid rgba(210,210,210,0.5);
+			border-right: 1px solid rgba(210,210,210,0.5);
+			//background: rgba(20,255,200,0.1);
+			@include span-columns(1,6); 
+			@include at-breakpoint($mobile){ 
+				&:nth-child(6){ 
+					@include span-columns(1 omega,6); 
+				} 
+				&:nth-child(n+7){
+					display: none;
+				}
+			}
+
+			@include at-breakpoint($tablet_up){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}	
+		}
+	}
 
