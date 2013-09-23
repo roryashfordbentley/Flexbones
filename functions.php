@@ -200,7 +200,6 @@ function barebones_load_js() {
   	wp_enqueue_script( 'gridtacular' );
 	//wp_enqueue_script( 'jquery-ui-core' );  
 	//wp_enqueue_script( 'jquery-ui-accordion' );    
-  	wp_enqueue_script( 'sitewide-scripts' );
   	
   	//set the stylesheet directory uri to var 'stylesheet_root' and pass the var to documents that require it
 
