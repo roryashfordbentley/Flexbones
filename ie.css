@@ -39,6 +39,7 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
+/** IE fixes Remove media query blocks (leaves bloated code but works) */
 /** config.scss variables that control global stuff: grids, units font sizes etc */
 /** mixins.scss all mixins go here */
 /** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
@@ -62,40 +63,32 @@ body { position: relative; }
 
 .gridtacular__grid-toggle { background: #41bdb6; }
 
-.gridtacular__baseline-overlay { position: absolute; width: auto; overflow: hidden; z-index: 100; display: block; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 1.5rem; }
+.gridtacular__baseline-overlay { position: absolute; width: auto; overflow: hidden; z-index: 100; display: block; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 24px; }
 
 .gridtacular__grid-overlay { position: absolute; width: auto; z-index: 100; display: block; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
-.gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.5); border-right: 1px solid rgba(210, 210, 210, 0.5); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
-@media (max-width: 40em) { .gridtacular__grid-overlay .col:nth-child(6) { width: 13.0434782609%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n+7) { display: none; } }
-@media (min-width: 40em) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; }
-  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; } }
+.gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.5); border-right: 1px solid rgba(210, 210, 210, 0.5); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; width: 6.3829787234%; float: left; margin-right: 2.1276595745%; display: inline; }
+.gridtacular__grid-overlay .col:nth-child(6) { width: 13.0434782609%; float: right; margin-right: 0; *margin-left: -20%; display: inline; }
+.gridtacular__grid-overlay .col:nth-child(n+7) { display: none; }
+.gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; *margin-left: -20%; display: inline; }
 
 /** global.scss Document and Grid setup Font default declarations */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 img { max-width: 100%; }
 
-html { font-size: 87.5%; line-height: 1.5rem; }
-@media (min-width: 40em) and (max-width: 55em) { html { font-size: 100%; } }
-@media (min-width: 55em) and (max-width: 75em) { html { font-size: 100%; } }
-@media (min-width: 75em) { html { font-size: 112.5%; } }
+html { font-size: 87.5%; font-size: 100%; font-size: 100%; font-size: 112.5%; line-height: 24px; }
 
 body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper { width: 90%; *zoom: 1; }
-@media (min-width: 40em) and (max-width: 55em) { .wrapper { max-width: 85%; margin: 0 auto; } }
-@media (min-width: 55em) { .wrapper { width: 85%; max-width: 1300px; margin: 0 auto; } }
+.wrapper { width: 90%; max-width: 85%; margin: 0 auto; width: 85%; max-width: 1300px; margin: 0 auto; *zoom: 1; }
 .wrapper:before, .wrapper:after { content: ""; display: table; }
 .wrapper:after { clear: both; }
 
 /* -- _WORDPRESS.SCSS -- */
 /* Styles for Wordpress Specific Classes Required if the theme is to go on the wp.org repo */
-.alignleft { float: none; display: block; }
-@media (min-width: 40em) { .alignleft { float: left; } }
+.alignleft { float: none; display: block; float: left; }
 
-.alignright { float: none; display: block; }
-@media (min-width: 40em) { .alignright { float: right; } }
+.alignright { float: none; display: block; float: right; }
 
 .wp-caption { background: red; }
 
@@ -114,9 +107,9 @@ a, a:visited { color: #03a7ff; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #0097e9; }
 
-p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 1.5rem; margin-bottom: 1.5rem; }
+p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 24px; margin-bottom: 24px; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 3rem; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 48px; }
 
 p { font-weight: normal; font-size: 1rem; }
 
@@ -132,15 +125,15 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-ul { list-style-type: disc; font-size: 1rem; font-weight: normal; margin-left: 3rem; }
+ul { list-style-type: disc; font-size: 1rem; font-weight: normal; margin-left: 48px; }
 
-ol { list-style-type: decimal; font-size: 1rem; font-weight: normal; margin-left: 3rem; }
+ol { list-style-type: decimal; font-size: 1rem; font-weight: normal; margin-left: 48px; }
 
-blockquote { display: block; width: 40.7407407407%; float: right; margin-right: 0; *margin-left: -20%; display: inline; float: right; margin-left: 2.1276595745%; margin-bottom: 1.5rem; }
-blockquote p { font-size: 1.2; text-align: right; line-height: 1.5rem; font-style: italic; padding: 0 1.5rem; margin: 0; }
+blockquote { display: block; width: 40.7407407407%; float: right; margin-right: 0; *margin-left: -20%; display: inline; float: right; margin-left: 2.1276595745%; margin-bottom: 24px; }
+blockquote p { font-size: 1.2; text-align: right; line-height: 24px; font-style: italic; padding: 0 24px; margin: 0; }
 
 /** tables.scss Table styling */
-table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 1.5rem; font-size: 0.75rem; }
+table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 24px; font-size: 0.75rem; }
 
 thead { background: #03a7ff; color: #fff; }
 
@@ -148,28 +141,28 @@ tbody tr:nth-child(odd) { background: #f1f1f1; }
 
 tbody tr:nth-child(even) { background: #FFF; }
 
-th, td { height: 1.5rem; padding: 0 1.5rem; }
+th, td { height: 24px; padding: 0 24px; }
 
-th { font-weight: bold; height: 3rem; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
+th { font-weight: bold; height: 48px; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
 
 /** ui.scss Forms, buttons, icons, breadcrumbs, pagination */
 fieldset div { *zoom: 1; }
 fieldset div:before, fieldset div:after { content: ""; display: table; }
 fieldset div:after { clear: both; }
 
-label { font-size: 1rem; line-height: 1.5rem; margin-bottom: 1.5rem; display: block; }
+label { font-size: 1rem; line-height: 24px; margin-bottom: 24px; display: block; }
 
-input[type="text"], input[type="password"] { border: 1px solid #ccc; height: 1.5rem; margin-bottom: 1.5rem; float: left; display: block; }
+input[type="text"], input[type="password"] { border: 1px solid #ccc; height: 24px; margin-bottom: 24px; float: left; display: block; }
 
-textarea { border: 1px solid #ccc; line-height: 1.5rem; height: 6rem; margin-bottom: 1.5rem; display: block; width: 48.3870967742%; float: left; margin-right: 3.2258064516%; display: inline; }
+textarea { border: 1px solid #ccc; line-height: 24px; height: 96px; margin-bottom: 24px; display: block; width: 48.3870967742%; float: left; margin-right: 3.2258064516%; display: inline; }
 
 .input[type="radio"] { float: left; }
 
-input[type="submit"] { background: #03a7ff; padding: 0 1.5rem; height: 1.5rem; font-family: georgia, times, "times new roman" sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
+input[type="submit"] { background: #03a7ff; padding: 0 24px; height: 24px; font-family: georgia, times, "times new roman" sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
 input[type="submit"]:hover { background: #0097e9; color: #fff; }
 input[type="submit"]:visited { color: #fff; }
 
-.button { background: #03a7ff; padding: 0 1.5rem; line-height: 3rem; margin: 0 0 1.5rem 0; display: inline-block; font-size: 1rem; font-family: helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
+.button { background: #03a7ff; padding: 0 24px; line-height: 48px; margin: 0 0 24px 0; display: inline-block; font-size: 1rem; font-family: helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
 .button:hover { background: #12acff; color: #fff; }
 .button:visited { color: #fff; }
 
@@ -188,12 +181,10 @@ input[type="submit"]:visited { color: #fff; }
 .content:after { clear: both; }
 .content:after { content: ""; display: table; clear: both; }
 
-@media (min-width: 40em) and (max-width: 55em) { .main { width: 65.9574468085%; float: left; margin-right: 2.1276595745%; margin-left: 17.0212765957%; } }
-@media (min-width: 55em) { .main { width: 65.9574468085%; float: left; margin-right: 2.1276595745%; margin-left: 17.0212765957%; } }
+.main { width: 65.9574468085%; float: left; margin-right: 2.1276595745%; display: inline; margin-left: 17.0212765957%; width: 65.9574468085%; float: left; margin-right: 2.1276595745%; display: inline; margin-left: 17.0212765957%; }
 
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { display: none; margin-bottom: 3rem; height: 3rem; }
-@media (min-width: 40em) { .primary-nav { display: block; } }
+.primary-nav { display: none; margin-bottom: 48px; height: 48px; display: block; }
 
 .primary-nav__menu { list-style: none; *zoom: 1; font-family: helvetica, arial, sans-serif; margin: 0; border-bottom: 1px solid #ccc; }
 .primary-nav__menu:before, .primary-nav__menu:after { content: ""; display: table; }
@@ -201,7 +192,7 @@ input[type="submit"]:visited { color: #fff; }
 
 .primary-nav__menu > .menu-item { margin: 0 0 0 0; display: inline; }
 
-.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0 1.5rem; font-size: 1.2rem; line-height: 3rem; }
+.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0 24px; font-size: 1.2rem; line-height: 48px; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
 
@@ -222,6 +213,6 @@ input[type="submit"]:visited { color: #fff; }
 
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
 .site-header__logo { display: block; }
-.site-header__logo img { display: block; margin: 1.5rem 0; height: 3rem; }
+.site-header__logo img { display: block; margin: 24px 0; height: 48px; }
 
 /** footer.scss all footer styles go here */

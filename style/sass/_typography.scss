@@ -1,7 +1,7 @@
-/* -- _TYPOGRAPHY.SCSS -- */
-
-/*
- * All Font / Type styles go here
+/**
+ * typography.scss
+ * all base font styles,
+ * paragraphs, headings, lists
  */
 
 a,
@@ -16,16 +16,15 @@ a:hover{
 }
 
 p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
-	line-height: $vertical_unit;
-	margin-bottom: $vertical_unit;
+	line-height: $base;
+	margin-bottom: $base;
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
 	font-weight: 700;
 	color: #292929;
-	line-height:$vertical_unit*2;
-	text-transform: uppercase;
+	line-height: $base*2;
 }
 
 p{
@@ -35,7 +34,6 @@ p{
 
 h1{ 
 	font-size: $h1_size;
-	text-align: center;
 }
 
 h2{ 
@@ -59,7 +57,7 @@ ul {
 	list-style-type: disc;
 	font-size: 1rem;
 	font-weight: normal;
-	margin-left: 2 * $base_unit;
+	margin-left: $base*2;
 	
 	li{	
 		span{ } //give the span and li differnt colours if you like
@@ -70,7 +68,7 @@ ol {
 	list-style-type: decimal;
 	font-size: 1rem;
 	font-weight: normal;
-	margin-left: 2 * $base_unit;
+	margin-left: $base*2;
 	
 	li{
 		span{  } //give the span and li differnt colours if you like
@@ -83,14 +81,14 @@ blockquote {
 	@include span-columns(3 omega,7);
 	float: right;
 	margin-left: gutter();
-	margin-bottom: $vertical_unit;
+	margin-bottom: $base;
 
 	p{ 
 		font-size: 1.2; 
 		text-align: right; 
-		line-height: $vertical_unit*1;
+		line-height: $base;
 		font-style: italic;
-		padding: 0 $base_unit;
+		padding: 0 $base;
 		margin: 0;
 	}
 }

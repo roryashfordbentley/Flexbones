@@ -192,15 +192,27 @@ add_filter( 'the_content', 'span_li' );
 /* Enque JS Files 
 /*==================================================================== */
 
+//remove wordpress jquery
+
+function remove_wp_jquery() {
+	wp_deregister_script('jquery');
+}
+
+
+// add our own blend of javascript goodness to the footer
+
+add_action('init', 'remove_wp_jquery'); // will deregister from head
+
 function barebones_load_js() {
  	// NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
+  	wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
+  	wp_enqueue_script( 'jquery' );
+  	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
+  	wp_enqueue_script( 'modernizr' );
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
   	wp_enqueue_script( 'sitewide-scripts' );
   	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular.js', array( 'jquery' ), '1', true );
-  	wp_enqueue_script( 'gridtacular' );
-	//wp_enqueue_script( 'jquery-ui-core' );  
-	//wp_enqueue_script( 'jquery-ui-accordion' );    
-  	wp_enqueue_script( 'sitewide-scripts' );
+  	wp_enqueue_script( 'gridtacular' );   
   	
   	//set the stylesheet directory uri to var 'stylesheet_root' and pass the var to documents that require it
 

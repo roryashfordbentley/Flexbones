@@ -7,14 +7,12 @@
 
 .alignleft{
 	float: none;
-	margin: 0 0 20px 0;
 	display: block;
 	@include at-breakpoint($tablet_up){ float: left;  }
 }
 
 .alignright{
 	float: none;
-	margin: 0 0 20px 0;
 	display: block;
 	@include at-breakpoint($tablet_up){ float: right;  }
 }

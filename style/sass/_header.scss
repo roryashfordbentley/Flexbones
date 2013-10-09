@@ -1,6 +1,4 @@
-/* -- _HEADER.SCSS -- */
-
-/*
+/**
  * Header specific declarations
  * Note: navigation has its own document _navigation.scss
  */
@@ -10,11 +8,10 @@
 
 	.site-header__logo{
 		display: block;
-		height: $vertical_unit*2;
-		margin: $vertical_unit*2 0;
 
 		img{
 			display: block;
-			margin: 0 auto;
+			margin: $base 0;
+			height: $base*2;
 		}
 	}

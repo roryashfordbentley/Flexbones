@@ -1,38 +1,39 @@
-// HELPER - CONFIG
-// Document and Grid setup
-// Font default declarations
+/**
+ * config.scss
+ * variables that control global stuff:
+ * grids, units font sizes etc
+ */
 
 // Base Units
 
-$base_unit: 		0.625rem;	//same as desktop font base
-$vertical_unit:		1.5rem;
+$base:			1.5rem;
 
 // Grid settings (SUSY)
 // Susy vars don't follow underscore rules 
 
-//$total-columns: 	6;  
-$column-width: 		60%;  
-$gutter-width: 		20%;  
-$grid-padding: 		0;
+//$total-columns: 		6;  
+$column-width: 			60%;  
+$gutter-width: 			20%;  
+$grid-padding: 			0;
 
 //Column
-$columns_mobile:	6;
-$columns_tablet:	12;
-$columns_desktop:	12;
-$columns_bigscreen:	12;
+$columns_mobile:		6;
+$columns_tablet:		12;
+$columns_desktop:		12;
+$columns_bigscreen:		12;
 
 //$media-layout: min-width mq | total columns | max-width mq
-$mobile: 			0 $columns_mobile 40rem;
-$tablet: 			40rem $columns_tablet 55rem;
-$tablet_up: 		40rem $columns_tablet;
-$desktop: 			55rem $columns_desktop 75rem;
-$desktop_up: 		55rem $columns_desktop;
-$bigscreen: 		75rem $columns_bigscreen;
+$mobile: 				0 $columns_mobile 40rem;
+$tablet: 				40rem $columns_tablet 55rem;
+$tablet_up: 			40rem $columns_tablet;
+$desktop: 				55rem $columns_desktop 75rem;
+$desktop_up: 			55rem $columns_desktop;
+$bigscreen: 			75rem $columns_bigscreen;
 
 // Font Stack
 
-$heading_font: 		"brandon-grotesque",helvetica, arial, sans-serif;
-$body_font: 		"ff-tisa-web-pro",georgia, times, "times new roman" sans-serif;
+$heading_font: 			helvetica, arial, sans-serif;
+$body_font: 			georgia, times, "times new roman" sans-serif;
 
 // Base Type sizes for (The key to everything!)
 
@@ -40,13 +41,14 @@ $mobile_font_base: 		87.5%;	//14px
 $tablet_font_base: 		100%;  	//16px
 $desktop_font_base: 	100%; 	//16px
 $bigscreen_font_base: 	112.5%; //18px
+
 // Typographic units
 
-$paragraph_size:	1rem; 
-$h1_size:			3.2rem;  
-$h2_size:			2rem;  
-$h3_size:			1.8rem;  
-$h4_size:			1.5rem;  
+$paragraph_size:		1rem; 
+$h1_size:				3.2rem;  
+$h2_size:				2rem;  
+$h3_size:				1.8rem;  
+$h4_size:				1.5rem;  
 
 // Wrapper width
 

@@ -29,9 +29,23 @@ CONTENTS
 @import "compass/css3/box-sizing";
 @import "susy";
 
+/**
+ * IE fixes
+ * Remove media query blocks
+ * (leaves bloated code but works)
+ */
+
+$breakpoint-media-output: false;
+$breakpoint-ie-output: false;
+$breakpoint-raw-output: true;
+
 // Config
 
 @import "__config.scss";
+
+// IE REM Override
+
+$base:		24px;
 
 // Mixins
 

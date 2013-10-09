@@ -8,8 +8,7 @@ Flexbones Wordpress Theme
 * __Responsive__ 
 * __Minimalistic Template Approach__ 
 * __Modular SASS__ 
-* __Facebook style slideout menu__
-* __JenkinsBreakpoint.js__
+* __gridtacular.js__
 
 2. Overview
 --------

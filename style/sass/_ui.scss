@@ -1,7 +1,6 @@
-/* -- UI -- */
-
-/*
- * forms, buttons, icons, breadcrumbs, pagination
+/**
+ * ui.scss
+ * Forms, buttons, icons, breadcrumbs, pagination
  */
 
 // Forms
@@ -11,7 +10,6 @@ fieldset{
 		//margin-top: -0.24rem;
 		@include clearfix();
 	}
-
 }
 
 legend{
@@ -20,27 +18,24 @@ legend{
 
 label {
 	font-size: 1rem;
-	line-height: $vertical_unit;
-	margin-bottom: $vertical_unit;
-
+	line-height: $base;
+	margin-bottom: $base;
 	display: block;
-	@include span-columns(2,8);
 }
 
 input[type="text"], input[type="password"]{
 	border: 1px solid #ccc;
-	height: $vertical_unit*1;
-	margin-bottom: $vertical_unit;
+	height: $base;
+	margin-bottom: $base;
 	float: left;
 	display: block;
-	//@include span-columns(2,8);
 }
 
 textarea{
 	border: 1px solid #ccc;
-	line-height: $vertical_unit;
-	height: $vertical_unit*4;
-	margin-bottom: $vertical_unit;
+	line-height: $base;
+	height: $base*4;
+	margin-bottom: $base;
 	display: block;
 	@include span-columns(4,8);
 }
@@ -51,8 +46,8 @@ textarea{
 
 input[type="submit"]{
 	background: $blue;
-	padding: 0 $base_unit;
-	height: $vertical_unit;
+	padding: 0 $base;
+	height: $base;
 	font-family: $body_font;
 	font-size: 1rem;
 	font-weight: bold;
@@ -75,9 +70,9 @@ input[type="submit"]{
 	
 .button {
 	background: $blue;
-	padding: 0 $vertical_unit;
-	line-height: $vertical_unit*2;
-	margin: 0 0 $vertical_unit 0;
+	padding: 0 $base;
+	line-height: $base*2;
+	margin: 0 0 $base 0;
 	display: inline-block;
 	font-size: 1rem;
 	font-family: $heading_font;

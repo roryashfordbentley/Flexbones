@@ -1,14 +1,11 @@
-// Gridtacular
-// 
-// A js/css
-//
-
-// I know its bad practice to redeclare an element but as
-// this is just a development tool it shouldn't matter
+/**
+ * gridtacular.scss:
+ * Grid and baseline overlay combined with breakpoint
+ * Information
+ */
 
 body{
-	//ensures that gridtaculars 
-	//position fixed doesnt screw with the html element height
+	// Ensures that gridtaculars position fixed doesnt screw with the html element height
 	position: relative;
 }
 
@@ -28,7 +25,7 @@ body{
 
 		li{
 			display: block;
-			padding:10px;
+			padding: 10px;
 		}
 
 		a{
@@ -81,10 +78,10 @@ body{
 		right: 0;
 		bottom: 0;
 		left: 0;
-		//genius!!!! using a 50px high background image but resizing it down to 
+		// Genius!!!! using a 50px high background image but resizing it down to 
 		background-image: url("images/baseline.png"); 
-		//realistic baseline heights it appears as a hairline stroke!
-		background-size: 100% $vertical_unit;
+		// Realistic baseline heights it appears as a hairline stroke!
+		background-size: 100% $base;
 	}
 
 	.gridtacular__grid-overlay{
@@ -112,7 +109,11 @@ body{
 				}
 			}
 
-			@include at-breakpoint($tablet_up){ @include span-columns(1,12); &:nth-child(12){ @include span-columns(1 omega,12); }}	
+			@include at-breakpoint($tablet_up){ 
+				@include span-columns(1,12); 
+				&:nth-child(12){ 
+					@include span-columns(1 omega,12); 
+				}
+			}	
 		}
 	}
-

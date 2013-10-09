@@ -1,14 +1,13 @@
-/* -- _TABLES.SCSS -- */
-
-/*
- * All Font / Type styles go here
+/**
+ * tables.scss
+ * Table styling
  */
 
 table { 
 	width: 100%;
 	background: #fff;
 	border: 1px solid #ccc;
-	margin-bottom: $vertical_unit;
+	margin-bottom: $base;
 	font-size: 0.75rem;
 }
 
@@ -21,13 +20,13 @@ table {
 	tbody tr:nth-child(even) {background: #FFF}
 
 	th,td{
-		height: $vertical_unit;
-		padding: 0 $base_unit;
+		height: $base;
+		padding: 0 $base;
 	}
 
 	th{
 		font-weight: bold;
-		height: $vertical_unit*2;
+		height: $base*2;
 		font-family: $heading_font;
 		font-size:1rem;
 	}

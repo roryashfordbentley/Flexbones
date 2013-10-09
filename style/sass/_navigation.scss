@@ -1,46 +1,42 @@
-/* -- _NAVIGATION.SCSS -- */
-
-/*
+/**
+ * navigation.scss
  * All nav menu styles go here
  * Currently the Dropdown only supports 1 level
- * This can be extended by using the class .parent-x (where x is the depth).
  */
 
 // Primary nav container
 .primary-nav{   
     display: none;
-    margin-bottom:$vertical_unit*3; 
-    height: $vertical_unit*2;
+    margin-bottom:$base*2; 
+    height: $base*2;
 	@include at-breakpoint($tablet_up){ display:block;  }
 }
 
-	// the first ul
+	// The first ul
 	.primary-nav__menu{
         list-style: none;
         @include clearfix();
         font-family: $heading_font;
-        margin: 0 auto; 
-        text-align: center;
+		margin: 0;
         border-bottom: 1px solid #ccc;
     }
 	
-	// menu item
+	// Menu item
 	.primary-nav__menu > .menu-item{ 
-		//float: left; 
 		margin: 0 0 0 0;
 		display: inline;
 	}
 	
-	// menu item link (block level element with padding + margin applied)
+	// Menu item link (block level element with padding + margin applied)
 	.primary-nav__menu > .menu-item a{
     	display: inline-block;
     	color: $text_colour;
-    	padding: 0 $base_unit*2;
+    	padding: 0 $base;
     	font-size: 1.2rem;
-    	line-height: $vertical_unit*2;
+    	line-height: $base*2;
 }
 	
-	//menu item hover
+	// Menu item hover
     .primary-nav__menu .menu-item:hover{
 		
 		a,a:visited{
@@ -49,7 +45,7 @@
 		}
     }
 
-	// the active page
+	// The active page
     .primary-nav__menu > .current-menu-item a,
     .primary-nav__menu > .current-menu-item a:visited,
     .primary-nav__menu > .current-menu-ancestor a,
@@ -57,7 +53,6 @@
     .primary-nav__menu > .current-post-parent a,
 	.primary-nav__menu > .current-post-parent a:visited{
         color: $blue;
-        //background: $blue;
         font-weight: bold;
     }
 
@@ -69,7 +64,7 @@
     .primary-nav__menu .parent{
     	position: relative;	
     }
-		//sub menu
+		// Sub menu
 		.primary-nav__menu .parent > .sub-menu{
             display: none; 
             list-style: none;
@@ -77,7 +72,7 @@
             text-align: left;
     	}
 		
-		// hover state stuff
+		// Hover state stuff
     	.primary-nav__menu .parent:hover > .sub-menu{
 	        display: block;
 	    } 

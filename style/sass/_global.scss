@@ -1,6 +1,5 @@
-/* -- _GLOBAL.SCSS -- */
-
-/*
+/**
+ * global.scss
  * Document and Grid setup
  * Font default declarations
  */
@@ -14,30 +13,24 @@
 
 img{ max-width: 100%; }  
 
-// html/body
-
 html { 
 	// The magic, it happens right here
 	font-size: $mobile_font_base; //10px
 	@include at-breakpoint($tablet){ font-size: $tablet_font_base } 
 	@include at-breakpoint($desktop){ font-size: $desktop_font_base } 
 	@include at-breakpoint($bigscreen){ font-size: $bigscreen_font_base } 
-	line-height: $vertical_unit;
+	line-height: $base;
 }
 
 body {
 	color: $text_colour;
 	font-family: $body_font;
 	-webkit-font-smoothing: antialiased;
-	@include clearfix();
 }
 
-// width with defined width (not 100% of page)
-
 .wrapper {
-	@include container($total-columns, $tablet, $desktop);
 	width: 90%;
 	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto; }
-	@include at-breakpoint($desktop_up){ width: 85%; max-width: 1300px; margin: 0 auto;  }
+	@include at-breakpoint($desktop_up){ width: 85%; max-width: 1300px; margin: 0 auto; }
 	@include clearfix();
 }
