@@ -36,8 +36,8 @@ CONTENTS
  */
 
 $breakpoint-media-output: false;
-$breakpoint-ie-output: false;
-$breakpoint-raw-output: true;
+$breakpoint-ie-output: true;
+$breakpoint-raw-output: false;
 
 // Config
 
@@ -45,7 +45,7 @@ $breakpoint-raw-output: true;
 
 // IE REM Override
 
-$base:		24px;
+$base: 24px;
 
 // Mixins
 

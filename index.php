@@ -15,5 +15,4 @@
 		<?php //get_sidebar(); ?>	
 	</div>
 </div>
-<?php get_template_part( 'inc/content', 'footer' ); ?>
 <?php get_footer(); ?>

@@ -22,7 +22,7 @@
 				<div class="older"><p><?php next_posts_link('Older Entries ','') ?></p></div>
 			</menu>
 		</section>
-		<?php get_sidebar(); ?>	
+		<?php //get_sidebar(); ?>	
 	</div>
 </div>
 <?php get_template_part( 'inc/content', 'footer' ); ?>

@@ -5,12 +5,8 @@
  * Includes styles for for specific page templates
  */
 
-// Container for the main content area and sidebar
-.content{
-	@include clearfix();
-	@include container();
+// basic article seperation can be scrapped
+article{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: $base;
 }
-
-	.main{
-
-	}

@@ -23,12 +23,12 @@ $columns_l:				12;
 $columns_xl:			12;
 
 // $media-layout: min-width mq | total columns | max-width mq
-$s: 					0 $columns_s 640px;
-$m: 					641px $columns_m 880px;
-$m_up: 					881px $columns_m  lt-ie9;
-$l: 					881px $columns_l 1200px;
-$l_up: 					881px $columns_l  lt-ie9;
-$xl: 					1200px $columns_xl;					
+$s: 					0 $columns_s 640px lt-ie9;
+$m: 					641px $columns_m 880px lt-ie9;
+$m_up: 					881px $columns_m lt-ie9;
+$l: 					881px $columns_l 1200px lt-ie9;
+$l_up: 					881px $columns_l lt-ie9;
+$xl: 					1200px $columns_xl lt-ie9;					
 
 // Font Stack
 

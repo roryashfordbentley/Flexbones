@@ -21,7 +21,7 @@
 			display: none;
 		}
 		
-		//background: rgba(20,255,160,0.1);
+		background: rgba(20,255,160,0.1);
 	}
 }
 
@@ -115,10 +115,10 @@ body{
 	bottom: 0;
 	left: 0;
 	
-	.col{ 
+	.col{
 		border-left: 1px solid rgba(210,210,210,0.5);
 		border-right: 1px solid rgba(210,210,210,0.5);
-		@include span-columns(1,$columns_s); 
+		@include span-columns(1,$columns_s);
 		
 		// Small breakpoint
 		@include gridtacular_columns($s,$columns_s);
