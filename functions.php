@@ -212,7 +212,13 @@ function barebones_load_js() {
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
   	wp_enqueue_script( 'sitewide-scripts' );
   	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular.js', array( 'jquery' ), '1', true );
+<<<<<<< .merge_file_yy2KKb
   	wp_enqueue_script( 'gridtacular' );   
+=======
+  	wp_enqueue_script( 'gridtacular' );
+	//wp_enqueue_script( 'jquery-ui-core' );  
+	//wp_enqueue_script( 'jquery-ui-accordion' );    
+>>>>>>> .merge_file_eZiDPE
   	
   	//set the stylesheet directory uri to var 'stylesheet_root' and pass the var to documents that require it
 
