@@ -24,7 +24,3 @@
 		<h4>The Empire Strikes Back</h4>
 		
 		<p>Hokey religions and ancient weapons are no match for a good blaster at your side, kid. Hey, Luke! May the Force be with you. Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</p>
-					
-		<p>This is a text <a href="#">Link</a></p>
-				
-		<a href="#" class="button">This is a button</a>

@@ -6,10 +6,8 @@
 
 // Primary nav container
 .primary-nav{   
-    display: none;
     margin-bottom:$base*2; 
     height: $base*2;
-	@include at-breakpoint($tablet_up){ display:block;  }
 }
 
 	// The first ul

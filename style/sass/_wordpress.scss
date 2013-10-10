@@ -8,13 +8,12 @@
 .alignleft{
 	float: none;
 	display: block;
-	@include at-breakpoint($tablet_up){ float: left;  }
 }
 
 .alignright{
 	float: none;
 	display: block;
-	@include at-breakpoint($tablet_up){ float: right;  }
+
 }
 
 .wp-caption{

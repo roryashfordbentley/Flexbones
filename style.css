@@ -43,6 +43,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /** mixins.scss all mixins go here */
 /** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
 /** gridtacular.scss: Grid and baseline overlay combined with breakpoint Information */
+/* Columns Mixin */
 body { position: relative; }
 
 .gridtacular { position: fixed; bottom: 0; right: 0; z-index: 10000; width: 55px; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 13px; line-height: 18px; font-family: Monaco, "Courier New", Courier, monospace; }
@@ -62,14 +63,22 @@ body { position: relative; }
 
 .gridtacular__grid-toggle { background: #41bdb6; }
 
-.gridtacular__baseline-overlay { position: absolute; width: auto; overflow: hidden; z-index: 100; display: block; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 1.5rem; }
+.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 1.5rem; }
 
-.gridtacular__grid-overlay { position: absolute; width: auto; z-index: 100; display: block; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
+.gridtacular__grid-overlay { display: none; position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
 .gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.5); border-right: 1px solid rgba(210, 210, 210, 0.5); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
-@media (max-width: 40em) { .gridtacular__grid-overlay .col:nth-child(6) { width: 13.0434782609%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n+7) { display: none; } }
-@media (min-width: 40em) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; }
-  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; } }
+@media (max-width: 640px) { .gridtacular__grid-overlay .col { width: 13.0434782609%; float: left; margin-right: 4.347826087%; }
+  .gridtacular__grid-overlay .col:nth-child(6) { width: 13.0434782609%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 7) { display: none; } }
+@media (min-width: 641px) and (max-width: 880px) { .gridtacular__grid-overlay .col { width: 9.6774193548%; float: left; margin-right: 3.2258064516%; }
+  .gridtacular__grid-overlay .col:nth-child(8) { width: 9.6774193548%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 9) { display: none; } }
+@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; }
+  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
+@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; }
+  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
 
 /** global.scss Document and Grid setup Font default declarations */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -77,25 +86,23 @@ body { position: relative; }
 img { max-width: 100%; }
 
 html { font-size: 87.5%; line-height: 1.5rem; }
-@media (min-width: 40em) and (max-width: 55em) { html { font-size: 100%; } }
-@media (min-width: 55em) and (max-width: 75em) { html { font-size: 100%; } }
-@media (min-width: 75em) { html { font-size: 112.5%; } }
+@media (min-width: 641px) and (max-width: 880px) { html { font-size: 100%; } }
+@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 100%; } }
+@media (min-width: 1200px) { html { font-size: 150%; } }
 
 body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper { width: 90%; *zoom: 1; }
-@media (min-width: 40em) and (max-width: 55em) { .wrapper { max-width: 85%; margin: 0 auto; } }
-@media (min-width: 55em) { .wrapper { width: 85%; max-width: 1300px; margin: 0 auto; } }
+.wrapper { width: 90%; margin: 0 auto; *zoom: 1; }
+@media (min-width: 641px) and (max-width: 880px) { .wrapper { max-width: 85%; } }
+@media (min-width: 881px) { .wrapper { width: 85%; max-width: 1300px; } }
 .wrapper:before, .wrapper:after { content: ""; display: table; }
 .wrapper:after { clear: both; }
 
 /* -- _WORDPRESS.SCSS -- */
 /* Styles for Wordpress Specific Classes Required if the theme is to go on the wp.org repo */
 .alignleft { float: none; display: block; }
-@media (min-width: 40em) { .alignleft { float: left; } }
 
 .alignright { float: none; display: block; }
-@media (min-width: 40em) { .alignright { float: right; } }
 
 .wp-caption { background: red; }
 
@@ -116,7 +123,7 @@ a:hover { text-decoration: none; color: #0097e9; }
 
 p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 1.5rem; margin-bottom: 1.5rem; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 3rem; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 300; color: #292929; line-height: 3rem; }
 
 p { font-weight: normal; font-size: 1rem; }
 
@@ -136,7 +143,7 @@ ul { list-style-type: disc; font-size: 1rem; font-weight: normal; margin-left: 3
 
 ol { list-style-type: decimal; font-size: 1rem; font-weight: normal; margin-left: 3rem; }
 
-blockquote { display: block; width: 40.7407407407%; float: right; margin-right: 0; *margin-left: -20%; display: inline; float: right; margin-left: 2.1276595745%; margin-bottom: 1.5rem; }
+blockquote { display: block; background: #ccc; border-left: 10px solid #666; width: 40.7407407407%; float: right; margin-right: 0; *margin-left: -20%; display: inline; float: right; padding: 0.75rem 0; margin: 0 0 1.5rem 2.1276595745%; }
 blockquote p { font-size: 1.2; text-align: right; line-height: 1.5rem; font-style: italic; padding: 0 1.5rem; margin: 0; }
 
 /** tables.scss Table styling */
@@ -188,12 +195,8 @@ input[type="submit"]:visited { color: #fff; }
 .content:after { clear: both; }
 .content:after { content: ""; display: table; clear: both; }
 
-@media (min-width: 40em) and (max-width: 55em) { .main { width: 65.9574468085%; float: left; margin-right: 2.1276595745%; margin-left: 17.0212765957%; } }
-@media (min-width: 55em) { .main { width: 65.9574468085%; float: left; margin-right: 2.1276595745%; margin-left: 17.0212765957%; } }
-
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { display: none; margin-bottom: 3rem; height: 3rem; }
-@media (min-width: 40em) { .primary-nav { display: block; } }
+.primary-nav { margin-bottom: 3rem; height: 3rem; }
 
 .primary-nav__menu { list-style: none; *zoom: 1; font-family: helvetica, arial, sans-serif; margin: 0; border-bottom: 1px solid #ccc; }
 .primary-nav__menu:before, .primary-nav__menu:after { content: ""; display: table; }
@@ -225,3 +228,5 @@ input[type="submit"]:visited { color: #fff; }
 .site-header__logo img { display: block; margin: 1.5rem 0; height: 3rem; }
 
 /** footer.scss all footer styles go here */
+.site-footer { background: #1e242a; }
+.site-footer p { line-height: 3rem; margin: 0; color: #fff; }

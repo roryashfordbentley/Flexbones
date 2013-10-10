@@ -13,10 +13,4 @@
 
 	.main{
 
-		> p{
-			//@include column-count(2);
-		}
-
-		@include at-breakpoint($tablet){ @include span-columns(8,12); @include push(2); }	
-		@include at-breakpoint($desktop_up){ @include span-columns(8,12); @include push(2); } 
 	}

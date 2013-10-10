@@ -2,3 +2,12 @@
  * footer.scss
  * all footer styles go here
  */
+
+.site-footer{
+	background: #1e242a;
+	p {
+		line-height: $base*2;
+		margin: 0;	
+		color: #fff;	
+	}
+}

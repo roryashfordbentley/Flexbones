@@ -22,7 +22,7 @@ p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
-	font-weight: 700;
+	font-weight: 300;
 	color: #292929;
 	line-height: $base*2;
 }
@@ -60,7 +60,7 @@ ul {
 	margin-left: $base*2;
 	
 	li{	
-		span{ } //give the span and li differnt colours if you like
+		span{ } //give the span and li different colours if you like
 	}
 }
 
@@ -71,17 +71,19 @@ ol {
 	margin-left: $base*2;
 	
 	li{
-		span{  } //give the span and li differnt colours if you like
+		span{  } //give the span and li different colours if you like
 	}
 } 
 
 blockquote {
 	display:block;
-
+	background: #ccc;
+	border-left: 10px solid #666;
 	@include span-columns(3 omega,7);
 	float: right;
-	margin-left: gutter();
-	margin-bottom: $base;
+	padding: $base/2 0;
+
+	margin: 0 0 $base gutter();
 
 	p{ 
 		font-size: 1.2; 

@@ -35,6 +35,7 @@
 	    };
 
 	    // Breakpoints Object
+
 	    var breakpoints = [{
     		label: 'mobile',
     		enter: 0,
@@ -58,7 +59,7 @@
     	}];
 
 	    var setBreakpoint = function(selector){
-	    	//check each breakpoint when page loads
+	    	// Check each breakpoint when page loads
 	    	jQuery.each(breakpoints, function(i,val) {
 
 		    	if( $(window).width() >= breakpoints[i].enter && $(window).width() <= breakpoints[i].exit ){
@@ -82,7 +83,8 @@
 
 		// Plugin output
  
-		//first output html
+
+		// First output html
 
 		if(defaults.showBreakpoint){
 			obj.append('<li class="' + components.breakpoint + '"></li>');
@@ -106,13 +108,13 @@
 		// setBreakpoint Content
 		setBreakpoint('.' + components.breakpoint);
 
-		//Document Width/Height
+		// Document Width/Height
 
 		$('.' + components.width).html( '<strong>W:</strong><br>' + setWidth( defaults.container ) );
 		$('.' + components.height).html( '<strong>H:</strong><br>' + setHeight( defaults.container ) );
 
 
-		//update on window resize
+		// Update on window resize
 		$(window).resize(function() {
 			setBreakpoint('.' + components.breakpoint);
 			$('.' + components.width).html( '<strong>W:</strong><br>' + setWidth( defaults.container ) );
@@ -122,34 +124,36 @@
 
 		// Grid Overlays
 
-		//baseline toggle button
-		$('.gridtacular__baseline-toggle').append( '<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNrs1jkVACAQxNCFhzH8Nzji6BHA8eMgzUxSn8Tb1BwfQJIkybMoa30ed2wB3ENSPC6EJEmSikfxQPEoHhdCkiRJxbMvniHAABwMEBgkKHhDAAAAAElFTkSuQmCC" /></a>' );
-		//background grid toggle button
-		$('.gridtacular__grid-toggle').append( '<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNrsz7EJACAMAMEgDqb7N26kliLY2Yj3kCIkzUU/V2Lp5b8UHwQJCQkJCQkJCQkJCQkJCQkJCQkJCXm3PKcebm3bn/0bAgwAH0Cpe8V3YHEAAAAASUVORK5CYII=" /></a>' );
+		// Baseline toggle button
 
-		$('.' + components.baselineToggle).toggle(function() {
+		$('.gridtacular__baseline-toggle').append( '<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNrs1jkVACAQxNCFhzH8Nzji6BHA8eMgzUxSn8Tb1BwfQJIkybMoa30ed2wB3ENSPC6EJEmSikfxQPEoHhdCkiRJxbMvniHAABwMEBgkKHhDAAAAAElFTkSuQmCC" /></a>' );
+
+		$('body').append( '<div class="' + components.baseline + '"></div>' );
 		
-			$('body').append( '<div class="' + components.baseline + '"></div>' );
-		
-			$('.' + components.baseline).height( $('body').height() );
-		}, function() {
-			$('.' + components.baseline).remove();
+		$('.gridtacular__baseline-toggle').click(function() {
+			
+			$('.' + components.baseline).toggle();
+
 		});
 
 
-		$('.' + components.gridToggle).toggle(function() {
-			$('body').append( '<div class="' + components.grid + '"></div>' );
-			
-			$('.' + components.grid).append('<div class="' + defaults.gridContainer + '"></div>');
-			
-			for(var i=1;i <= defaults.gridColumnsMax;i++){
-				$('.' + components.grid + ' .wrapper').append( '<div class="col"></div>' );
-			}
-			
-			$('.' + components.grid + ' .col').height( $('body').height() );
+		// Background grid toggle button
 
-		}, function(){
-			$('.' + components.grid).remove();
+		$('.gridtacular__grid-toggle').append( '<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNrsz7EJACAMAMEgDqb7N26kliLY2Yj3kCIkzUU/V2Lp5b8UHwQJCQkJCQkJCQkJCQkJCQkJCQkJCXm3PKcebm3bn/0bAgwAH0Cpe8V3YHEAAAAASUVORK5CYII=" /></a>' );
+
+		$('body').append( '<div class="' + components.grid + '"></div>' );
+			
+		$('.' + components.grid).append('<div class="' + defaults.gridContainer + '"></div>');
+		
+		for(var i=1;i <= defaults.gridColumnsMax;i++){
+			$('.' + components.grid + ' .wrapper').append( '<div class="col"></div>' );
+		}
+		
+		$('.' + components.grid + ' .col').height( $('body').height() );
+
+		$('.' + components.gridToggle).click(function() {
+			$('.' + components.grid).toggle();
+
 		});
 			
 

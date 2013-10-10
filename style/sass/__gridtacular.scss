@@ -4,6 +4,27 @@
  * Information
  */
 
+
+/* Columns Mixin */
+
+@mixin gridtacular_columns($breakpoint,$columns) {
+	
+	@include at-breakpoint($breakpoint){ 
+		
+		@include span-columns(1,$columns); 
+
+		&:nth-child(#{$columns}){ 
+			@include span-columns(1 omega,$columns); 
+		}
+
+		&:nth-child(n + #{$columns + 1} ){
+			display: none;
+		}
+		
+		//background: rgba(20,255,160,0.1);
+	}
+}
+
 body{
 	// Ensures that gridtaculars position fixed doesnt screw with the html element height
 	position: relative;
@@ -66,54 +87,43 @@ body{
 		background:#41bdb6;
 	}
 
-	.gridtacular__baseline-overlay{
-		//background:pink;
-		position: absolute;
-		width: auto;
-		overflow: hidden;
-		z-index: 100;
-		display: block;
-		pointer-events: none;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		// Genius!!!! using a 50px high background image but resizing it down to 
-		background-image: url("images/baseline.png"); 
-		// Realistic baseline heights it appears as a hairline stroke!
-		background-size: 100% $base;
-	}
+.gridtacular__baseline-overlay{
+	display: none;
+	position: absolute;
+	width: auto;
+	overflow: hidden;
+	z-index: 100;
+	pointer-events: none;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	// Using a 50px high background image but resizing it down to 
+	background-image: url("images/baseline.png"); 
+	// Realistic baseline heights it appears as a hairline stroke!
+	background-size: 100% $base;
+}
 
-	.gridtacular__grid-overlay{
-		position: absolute;
-		width: auto;
-		z-index: 100;
-		display: block;
-		pointer-events: none;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+.gridtacular__grid-overlay{
+	display: none;
+	position: absolute;
+	width: auto;
+	z-index: 100;
+	pointer-events: none;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	.col{ 
+		border-left: 1px solid rgba(210,210,210,0.5);
+		border-right: 1px solid rgba(210,210,210,0.5);
+		@include span-columns(1,$columns_s); 
 		
-		.col{ 
-			border-left: 1px solid rgba(210,210,210,0.5);
-			border-right: 1px solid rgba(210,210,210,0.5);
-			//background: rgba(20,255,200,0.1);
-			@include span-columns(1,6); 
-			@include at-breakpoint($mobile){ 
-				&:nth-child(6){ 
-					@include span-columns(1 omega,6); 
-				} 
-				&:nth-child(n+7){
-					display: none;
-				}
-			}
-
-			@include at-breakpoint($tablet_up){ 
-				@include span-columns(1,12); 
-				&:nth-child(12){ 
-					@include span-columns(1 omega,12); 
-				}
-			}	
-		}
+		// Small breakpoint
+		@include gridtacular_columns($s,$columns_s);
+		@include gridtacular_columns($m,$columns_m);
+		@include gridtacular_columns($l,$columns_l);
+		@include gridtacular_columns($xl,$columns_xl);
 	}
+}

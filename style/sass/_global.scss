@@ -15,10 +15,10 @@ img{ max-width: 100%; }
 
 html { 
 	// The magic, it happens right here
-	font-size: $mobile_font_base; //10px
-	@include at-breakpoint($tablet){ font-size: $tablet_font_base } 
-	@include at-breakpoint($desktop){ font-size: $desktop_font_base } 
-	@include at-breakpoint($bigscreen){ font-size: $bigscreen_font_base } 
+	font-size: $s_font_base; //10px
+	@include at-breakpoint($m){ font-size: $m_font_base }
+	@include at-breakpoint($l){ font-size: $l_font_base }
+	@include at-breakpoint($xl){ font-size: $xl_font_base }
 	line-height: $base;
 }
 
@@ -30,7 +30,8 @@ body {
 
 .wrapper {
 	width: 90%;
-	@include at-breakpoint($tablet){ max-width: 85%; margin: 0 auto; }
-	@include at-breakpoint($desktop_up){ width: 85%; max-width: 1300px; margin: 0 auto; }
+	margin: 0 auto;
+	@include at-breakpoint($m){ max-width: 85%; }
+	@include at-breakpoint($l_up){ width: 85%; max-width: 1300px; }
 	@include clearfix();
 }
