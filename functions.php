@@ -189,44 +189,57 @@ function span_li($content){
 add_filter( 'the_content', 'span_li' );
 
 /*==================================================================== */
-/* Enque JS Files 
+/* Dequeue Wordpress JS Files 
 /*==================================================================== */
 
 //remove wordpress jquery
 
 function remove_wp_jquery() {
 	wp_deregister_script('jquery');
+	wp_deregister_script('jquery-ui');
 }
-
-
-// add our own blend of javascript goodness to the footer
 
 add_action('init', 'remove_wp_jquery'); // will deregister from head
 
+/*==================================================================== */
+/* Enque JS Files 
+/*==================================================================== */
+
+
 function barebones_load_js() {
- 	// NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
+
+ 	/* NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false) */
+  	
+	// Jquery
+
   	wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
   	wp_enqueue_script( 'jquery' );
+  	
+  	// Jquery UI
+
+  	// wp_register_script('jquery-ui','//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', array(), '1.10.3', true);
+  	// wp_enqueue_script( 'jquery-ui' );
+
+  	// Modernizr
+
   	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
   	wp_enqueue_script( 'modernizr' );
+  	
+  	// Sitewide Scripts
+
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
   	wp_enqueue_script( 'sitewide-scripts' );
-  	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular.js', array( 'jquery' ), '1', true );
-<<<<<<< .merge_file_yy2KKb
-  	wp_enqueue_script( 'gridtacular' );   
-=======
-  	wp_enqueue_script( 'gridtacular' );
-	//wp_enqueue_script( 'jquery-ui-core' );  
-	//wp_enqueue_script( 'jquery-ui-accordion' );    
->>>>>>> .merge_file_eZiDPE
   	
-  	//set the stylesheet directory uri to var 'stylesheet_root' and pass the var to documents that require it
+  	// Gridtacular
+
+  	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular.js', array( 'jquery' ), '1', true );
+  	wp_enqueue_script( 'gridtacular' );   
+
+  	// set the stylesheet directory uri to var 'stylesheet_root' and pass the var to documents that require it
 
   	$stylesheet_root = array( 'dir' => get_stylesheet_directory_uri() );
     wp_localize_script( 'sitewide-scripts', 'stylesheet_root', $stylesheet_root );
     wp_localize_script( 'gridtacular', 'stylesheet_root', $stylesheet_root );
-
-    //useage in JS : stylesheet_root.dir
 
 	/* if ( is_front_page() ) {
 		wp_enqueue_script('home-page-main-flex-slider');
