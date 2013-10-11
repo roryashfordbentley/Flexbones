@@ -156,7 +156,6 @@ body {
 }
 
 .gridtacular__baseline-overlay {
-  display: none;
   position: absolute;
   width: auto;
   overflow: hidden;
@@ -171,7 +170,6 @@ body {
 }
 
 .gridtacular__grid-overlay {
-  display: none;
   position: absolute;
   width: auto;
   z-index: 100;
@@ -323,6 +321,10 @@ body {
   clear: both;
 }
 
+.lt-ie9 .wrapper {
+  width: 1000px;
+}
+
 /* -- _WORDPRESS.SCSS -- */
 /*
  * Styles for Wordpress Specific Classes
@@ -455,9 +457,9 @@ blockquote p {
   margin: 0;
 }
 
-date {
-  line-height: 1.5rem;
+date p {
   font-weight: bold;
+  font-family: helvetica, arial, sans-serif;
 }
 
 /**
@@ -615,8 +617,11 @@ input[type="submit"]:visited {
  * Includes styles for for specific page templates
  */
 article {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1.5rem;
+  border-bottom: 0.1rem solid #ccc;
+  margin-bottom: 1.4rem;
+}
+article h2, article legend {
+  margin: 0;
 }
 
 /**

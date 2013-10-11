@@ -17,9 +17,9 @@ Not another barebones theme! I built this to speed up the process of developing 
 
 The original Barebones theme contained everything and the kitchen sink, This time around I have removed as much uneccesary bloat as possible.
 
-The included sass styles are focused on functional CSS rather than presentational CSS. Flexbones provides not only a responsive grid system but responsive images and typography.* 
+The included sass styles are focused on functional CSS rather than presentational CSS. Flexbones provides not only a responsive grid system but responsive images, typography and a responsive baseline grid!
 
-*Responsive typography sizes are not based on the sort of in depth research that IA (http://ia.net/) have conducted. That is up to you. To begin with the base typographic units are set to 10px desktop 9px tablet and 8px mobile. This decision was made to make the source understandable not to provide an optimal reading experience. Perhaps this will come in the future.
+Also bundled is our up coming browser tool Gridtacular that give at-a-glance information on the current page dimensions and breakpoint along with the ability to toggle both a grid overlay and a baseline grid overlay.
 
 
 3. Dependencies
@@ -30,5 +30,3 @@ CSS Preprocessing tools
 * [SASS](http://sass-lang.com)
 * [Compass](http://compass-style.org)
 * [Susy](http://susy.oddbird.net/)
-
-

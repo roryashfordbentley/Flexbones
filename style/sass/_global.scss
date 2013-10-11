@@ -35,3 +35,7 @@ body {
 	@include at-breakpoint($l_up){ width: 85%; max-width: 1300px; }
 	@include clearfix();
 }
+
+.lt-ie9 .wrapper{
+	width: 1000px;
+}

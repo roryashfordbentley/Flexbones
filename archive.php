@@ -8,7 +8,7 @@
 							
 					<header>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<date class="article-meta"><?php the_time(get_option('date_format')); ?></date>
+						<date class="article-meta"><p><?php the_time(get_option('date_format')); ?></p></date>
 					</header>
 			        
 					<?php the_excerpt(); ?>

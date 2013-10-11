@@ -95,7 +95,7 @@ blockquote {
 	}
 }
 
-date{
-	line-height:$base;
+date p{
 	font-weight:bold;
+	font-family: $heading_font;
 }
