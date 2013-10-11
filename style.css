@@ -285,7 +285,7 @@ html {
 }
 @media (min-width: 1200px) {
   html {
-    font-size: 150%;
+    font-size: 125%;
   }
 }
 
@@ -733,7 +733,7 @@ article {
   background: #1e242a;
 }
 .site-footer p {
-  line-height: 3rem;
   margin: 0;
   color: #fff;
+  padding: 1.5rem 0;
 }

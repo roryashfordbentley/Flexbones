@@ -648,7 +648,7 @@ article {
   background: #1e242a;
 }
 .site-footer p {
-  line-height: 48px;
   margin: 0;
   color: #fff;
+  padding: 24px 0;
 }
