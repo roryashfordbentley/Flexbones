@@ -92,10 +92,10 @@ body { position: relative; }
 
 img { max-width: 100%; }
 
-html { font-size: 95.8333333333%; line-height: 1.5rem; }
-@media (min-width: 641px) and (max-width: 880px) { html { font-size: 100%; } }
-@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 112.5%; } }
-@media (min-width: 1200px) { html { font-size: 125%; } }
+html { font-size: 87.5%; line-height: 1.5rem; }
+@media (min-width: 641px) and (max-width: 880px) { html { font-size: 112.5%; } }
+@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 158.3333333333%; } }
+@media (min-width: 1200px) { html { font-size: 187.5%; } }
 
 body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
 

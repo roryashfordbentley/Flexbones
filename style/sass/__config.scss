@@ -19,10 +19,10 @@ function createBreakpoint(){
 
 $base: 1.5rem;
 
-$s_font_size: 			whole_baseline(15,$base);
-$m_font_size: 			whole_baseline(16,$base);
-$l_font_size: 			whole_baseline(18,$base);
-$xl_font_size: 			whole_baseline(20,$base);
+$s_font_size: 			whole_baseline(14,$base);
+$m_font_size: 			whole_baseline(18,$base);
+$l_font_size: 			whole_baseline(25,$base);
+$xl_font_size: 			whole_baseline(30,$base);
 
 // Grid settings (SUSY)
 
