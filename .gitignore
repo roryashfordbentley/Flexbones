@@ -3,3 +3,4 @@ style/fire_app_log.txt
 *.sass-cache*
 *.scssc
 fire_app_log.txt
+node_modules/
