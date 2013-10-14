@@ -22,723 +22,213 @@ CONTENTS
 - Sidebar
 
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, legend, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, legend, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/** funtions.scss all functions go here */
+/** Whole Baseline This function checks to see if the font size multiplied by the baseline is a whole number. If not it rounds up the font size to ensure that  the baseline is a whole number, therefore a whole pixel. This fixes browser inconsistencies of rendering sub pixels. */
+/** config.scss variables that control global stuff: grids, units font sizes etc */
+/*
+function createBreakpoint(){
+	
 }
 
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/**
- * config.scss
- * variables that control global stuff:
- * grids, units font sizes etc
- */
-/**
- * mixins.scss
- * all mixins go here
- */
-/**
- * colour.scss
- * define basic colours and then apply them to vars
- * e.g. $blue and $nav_bg: $blue;
- */
-/**
- * gridtacular.scss:
- * Grid and baseline overlay combined with breakpoint
- * Information
- */
+*/
+/** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
+/** gridtacular.scss: Grid and baseline overlay combined with breakpoint Information */
 /* Columns Mixin */
-body {
-  position: relative;
-}
+body { position: relative; }
 
-.gridtacular {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 10000;
-  width: 55px;
-  color: #fff;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  line-height: 18px;
-  font-family: Monaco, "Courier New", Courier, monospace;
-}
-.gridtacular li {
-  display: block;
-  padding: 10px;
-}
-.gridtacular a {
-  display: block;
-}
-.gridtacular img {
-  display: block;
-}
+.gridtacular { position: fixed; bottom: 0; right: 0; z-index: 10000; width: 55px; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 13px; line-height: 18px; font-family: Monaco, "Courier New", Courier, monospace; }
+.gridtacular li { display: block; padding: 10px; }
+.gridtacular a { display: block; }
+.gridtacular img { display: block; }
 
-.gridtacular__width {
-  background: #41bd89;
-}
+.gridtacular__width { background: #41bd89; }
 
-.gridtacular__height {
-  background: #2a4c5f;
-}
+.gridtacular__height { background: #2a4c5f; }
 
-.gridtacular__width__bg {
-  position: absolute;
-  color: #33996e;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
+.gridtacular__width__bg { position: absolute; color: #33996e; font-size: 20px; font-weight: bold; text-align: center; }
 
-.gridtacular__breakpoint {
-  background: #d06857;
-}
+.gridtacular__breakpoint { background: #d06857; }
 
-.gridtacular__baseline-toggle {
-  background: #b7c725;
-}
+.gridtacular__baseline-toggle { background: #b7c725; }
 
-.gridtacular__grid-toggle {
-  background: #41bdb6;
-}
+.gridtacular__grid-toggle { background: #41bdb6; }
 
-.gridtacular__baseline-overlay {
-  position: absolute;
-  width: auto;
-  overflow: hidden;
-  z-index: 100;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("images/baseline.png");
-  background-size: 100% 1.5rem;
-}
+.gridtacular__baseline-overlay { position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 1.5rem; }
 
-.gridtacular__grid-overlay {
-  position: absolute;
-  width: auto;
-  z-index: 100;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.gridtacular__grid-overlay .col {
-  border-left: 1px solid rgba(210, 210, 210, 0.5);
-  border-right: 1px solid rgba(210, 210, 210, 0.5);
-  width: 13.0434782609%;
-  float: left;
-  margin-right: 4.347826087%;
-  display: inline;
-}
-@media (max-width: 640px) {
-  .gridtacular__grid-overlay .col {
-    width: 13.0434782609%;
-    float: left;
-    margin-right: 4.347826087%;
-    background: rgba(20, 255, 160, 0.1);
-  }
-  .gridtacular__grid-overlay .col:nth-child(6) {
-    width: 13.0434782609%;
-    float: right;
-    margin-right: 0;
-  }
-  .gridtacular__grid-overlay .col:nth-child(n + 7) {
-    display: none;
-  }
-}
-@media (min-width: 641px) and (max-width: 880px) {
-  .gridtacular__grid-overlay .col {
-    width: 9.6774193548%;
-    float: left;
-    margin-right: 3.2258064516%;
-    background: rgba(20, 255, 160, 0.1);
-  }
-  .gridtacular__grid-overlay .col:nth-child(8) {
-    width: 9.6774193548%;
-    float: right;
-    margin-right: 0;
-  }
-  .gridtacular__grid-overlay .col:nth-child(n + 9) {
-    display: none;
-  }
-}
-@media (min-width: 881px) and (max-width: 1200px) {
-  .gridtacular__grid-overlay .col {
-    width: 6.3829787234%;
-    float: left;
-    margin-right: 2.1276595745%;
-    background: rgba(20, 255, 160, 0.1);
-  }
-  .gridtacular__grid-overlay .col:nth-child(12) {
-    width: 6.3829787234%;
-    float: right;
-    margin-right: 0;
-  }
-  .gridtacular__grid-overlay .col:nth-child(n + 13) {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .gridtacular__grid-overlay .col {
-    width: 6.3829787234%;
-    float: left;
-    margin-right: 2.1276595745%;
-    background: rgba(20, 255, 160, 0.1);
-  }
-  .gridtacular__grid-overlay .col:nth-child(12) {
-    width: 6.3829787234%;
-    float: right;
-    margin-right: 0;
-  }
-  .gridtacular__grid-overlay .col:nth-child(n + 13) {
-    display: none;
-  }
-}
+.gridtacular__grid-overlay { position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
+.gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.5); border-right: 1px solid rgba(210, 210, 210, 0.5); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
+@media (max-width: 640px) { .gridtacular__grid-overlay .col { width: 13.0434782609%; float: left; margin-right: 4.347826087%; background: rgba(20, 255, 160, 0.1); }
+  .gridtacular__grid-overlay .col:nth-child(6) { width: 13.0434782609%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 7) { display: none; } }
+@media (min-width: 641px) and (max-width: 880px) { .gridtacular__grid-overlay .col { width: 9.6774193548%; float: left; margin-right: 3.2258064516%; background: rgba(20, 255, 160, 0.1); }
+  .gridtacular__grid-overlay .col:nth-child(8) { width: 9.6774193548%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 9) { display: none; } }
+@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(20, 255, 160, 0.1); }
+  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
+@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(20, 255, 160, 0.1); }
+  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
 
-/**
- * global.scss
- * Document and Grid setup
- * Font default declarations
- */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/** global.scss Document and Grid setup Font default declarations */
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-img {
-  max-width: 100%;
-}
+img { max-width: 100%; }
 
-html {
-  font-size: 87.5%;
-  line-height: 1.5rem;
-}
-@media (min-width: 641px) and (max-width: 880px) {
-  html {
-    font-size: 100%;
-  }
-}
-@media (min-width: 881px) and (max-width: 1200px) {
-  html {
-    font-size: 112.5%;
-  }
-}
-@media (min-width: 1200px) {
-  html {
-    font-size: 125%;
-  }
-}
+html { font-size: 95.8333333333%; line-height: 1.5rem; }
+@media (min-width: 641px) and (max-width: 880px) { html { font-size: 100%; } }
+@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 112.5%; } }
+@media (min-width: 1200px) { html { font-size: 125%; } }
 
-body {
-  color: #3e3e3e;
-  font-family: georgia, times, "times new roman" sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-  *zoom: 1;
-}
-@media (min-width: 641px) and (max-width: 880px) {
-  .wrapper {
-    max-width: 85%;
-  }
-}
-@media (min-width: 881px) {
-  .wrapper {
-    width: 85%;
-    max-width: 1300px;
-  }
-}
-.lt-ie9 .wrapper {
-  width: 85%;
-  max-width: 1300px;
-}
-.wrapper:before, .wrapper:after {
-  content: "";
-  display: table;
-}
-.wrapper:after {
-  clear: both;
-}
+.wrapper { width: 90%; margin: 0 auto; overflow: hidden; *zoom: 1; }
+@media (min-width: 641px) and (max-width: 880px) { .wrapper { max-width: 85%; } }
+@media (min-width: 881px) { .wrapper { width: 85%; max-width: 1300px; } }
+.lt-ie9 .wrapper { width: 85%; max-width: 1300px; }
 
-.lt-ie9 .wrapper {
-  width: 1000px;
-}
+.lt-ie9 .wrapper { width: 1000px; }
 
 /* -- _WORDPRESS.SCSS -- */
-/*
- * Styles for Wordpress Specific Classes
- * Required if the theme is to go on the wp.org repo
- */
-.alignleft {
-  float: none;
-  display: block;
-}
+/* Styles for Wordpress Specific Classes Required if the theme is to go on the wp.org repo */
+.alignleft { float: none; display: block; }
 
-.alignright {
-  float: none;
-  display: block;
-}
+.alignright { float: none; display: block; }
 
-.wp-caption {
-  background: red;
-}
+.wp-caption { background: red; }
 
-.wp-caption-text {
-  color: #fff;
-}
+.wp-caption-text { color: #fff; }
 
-.sticky {
-  font-weight: bold;
-}
+.sticky { font-weight: bold; }
 
-.gallery-caption {
-  background: red;
-}
+.gallery-caption { background: red; }
 
-.bypostauthor {
-  font-weight: bold;
-}
+.bypostauthor { font-weight: bold; }
 
-.aligncenter {
-  margin: 0 auto;
-}
+.aligncenter { margin: 0 auto; }
 
-/**
- * typography.scss
- * all base font styles,
- * paragraphs, headings, lists
- */
-a,
-a:visited {
-  color: #03a7ff;
-  text-decoration: none;
-}
+/** typography.scss all base font styles, paragraphs, headings, lists */
+a, a:visited { color: #03a7ff; text-decoration: none; }
 
-a:hover {
-  text-decoration: none;
-  color: #0097e9;
-}
+a:hover { text-decoration: none; color: #0097e9; }
 
-p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol {
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 1.5rem; margin-bottom: 1.5rem; }
 
-h1, h2, legend, h3, h4, h5, h6 {
-  font-family: helvetica, arial, sans-serif;
-  font-weight: 300;
-  color: #292929;
-  line-height: 3rem;
-}
+h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 300; color: #292929; line-height: 3rem; }
 
-p {
-  font-weight: normal;
-  font-size: 1rem;
-}
+p { font-weight: normal; font-size: 1rem; }
 
-h1 {
-  font-size: 3.2rem;
-}
+h1 { font-size: 3.2rem; }
 
-h2, legend {
-  font-size: 2rem;
-}
+h2, legend { font-size: 2rem; }
 
-h3 {
-  font-size: 1.8rem;
-}
+h3 { font-size: 1.8rem; }
 
-h4 {
-  font-size: 1.5rem;
-}
+h4 { font-size: 1.5rem; }
 
-strong {
-  font-weight: bold;
-}
+strong { font-weight: bold; }
 
-em {
-  font-style: italic;
-}
+em { font-style: italic; }
 
-ul {
-  list-style-type: disc;
-  font-size: 1rem;
-  font-weight: normal;
-  margin-left: 3rem;
-}
+ul { list-style-type: disc; font-size: 1rem; font-weight: normal; margin-left: 3rem; }
 
-ol {
-  list-style-type: decimal;
-  font-size: 1rem;
-  font-weight: normal;
-  margin-left: 3rem;
-}
+ol { list-style-type: decimal; font-size: 1rem; font-weight: normal; margin-left: 3rem; }
 
-blockquote {
-  display: block;
-  background: #ccc;
-  border-left: 10px solid #666;
-  width: 40.7407407407%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20%;
-  display: inline;
-  float: right;
-  padding: 0.75rem 0;
-  margin: 0 0 1.5rem 2.1276595745%;
-}
-blockquote p {
-  font-size: 1.2;
-  text-align: right;
-  line-height: 1.5rem;
-  font-style: italic;
-  padding: 0 1.5rem;
-  margin: 0;
-}
+blockquote { display: block; background: #ccc; border-left: 10px solid #666; width: 40.7407407407%; float: right; margin-right: 0; #margin-left: -20%; display: inline; float: right; padding: 0.75rem 0; margin: 0 0 1.5rem 2.1276595745%; }
+blockquote p { font-size: 1.2; text-align: right; line-height: 1.5rem; font-style: italic; padding: 0 1.5rem; margin: 0; }
 
-date p {
-  font-weight: bold;
-  font-family: helvetica, arial, sans-serif;
-}
+date p { font-weight: bold; font-family: helvetica, arial, sans-serif; }
 
-/**
- * tables.scss
- * Table styling
- */
-table {
-  width: 100%;
-  background: #fff;
-  border: 1px solid #ccc;
-  margin-bottom: 1.5rem;
-  font-size: 0.75rem;
-}
+/** tables.scss Table styling */
+table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 1.5rem; font-size: 0.75rem; }
 
-thead {
-  background: #03a7ff;
-  color: #fff;
-}
+thead { background: #03a7ff; color: #fff; }
 
-tbody tr:nth-child(odd) {
-  background: #f1f1f1;
-}
+tbody tr:nth-child(odd) { background: #f1f1f1; }
 
-tbody tr:nth-child(even) {
-  background: #FFF;
-}
+tbody tr:nth-child(even) { background: #FFF; }
 
-th, td {
-  height: 1.5rem;
-  padding: 0 1.5rem;
-}
+th, td { height: 1.5rem; padding: 0 1.5rem; }
 
-th {
-  font-weight: bold;
-  height: 3rem;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 1rem;
-}
+th { font-weight: bold; height: 3rem; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
 
-/**
- * ui.scss
- * Forms, buttons, icons, breadcrumbs, pagination
- */
-fieldset div {
-  *zoom: 1;
-}
-fieldset div:before, fieldset div:after {
-  content: "";
-  display: table;
-}
-fieldset div:after {
-  clear: both;
-}
+/** ui.scss Forms, buttons, icons, breadcrumbs, pagination */
+fieldset div { overflow: hidden; *zoom: 1; }
 
-label {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: block;
-}
+label { font-size: 1rem; line-height: 1.5rem; margin-bottom: 1.5rem; display: block; }
 
-input[type="text"], input[type="password"] {
-  border: 1px solid #ccc;
-  height: 1.5rem;
-  margin-bottom: 1.5rem;
-  float: left;
-  display: block;
-}
+input[type="text"], input[type="password"] { border: 1px solid #ccc; height: 1.5rem; margin-bottom: 1.5rem; float: left; display: block; }
 
-textarea {
-  border: 1px solid #ccc;
-  line-height: 1.5rem;
-  height: 6rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  width: 48.3870967742%;
-  float: left;
-  margin-right: 3.2258064516%;
-  display: inline;
-}
+textarea { border: 1px solid #ccc; line-height: 1.5rem; height: 6rem; margin-bottom: 1.5rem; display: block; width: 48.3870967742%; float: left; margin-right: 3.2258064516%; display: inline; }
 
-.input[type="radio"] {
-  float: left;
-}
+.input[type="radio"] { float: left; }
 
-input[type="submit"] {
-  background: #03a7ff;
-  padding: 0 1.5rem;
-  height: 1.5rem;
-  font-family: georgia, times, "times new roman" sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  border: 0;
-  float: left;
-  font-family: helvetica, arial, sans-serif;
-}
-input[type="submit"]:hover {
-  background: #0097e9;
-  color: #fff;
-}
-input[type="submit"]:visited {
-  color: #fff;
-}
+input[type="submit"] { background: #03a7ff; padding: 0 1.5rem; height: 1.5rem; font-family: georgia, times, "times new roman" sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
+input[type="submit"]:hover { background: #0097e9; color: #fff; }
+input[type="submit"]:visited { color: #fff; }
 
-.button {
-  background: #03a7ff;
-  padding: 0 1.5rem;
-  line-height: 3rem;
-  margin: 0 0 1.5rem 0;
-  display: inline-block;
-  font-size: 1rem;
-  font-family: helvetica, arial, sans-serif;
-  font-weight: bold;
-  color: #fff;
-}
-.button:hover {
-  background: #12acff;
-  color: #fff;
-}
-.button:visited {
-  color: #fff;
-}
+.button { background: #03a7ff; padding: 0 1.5rem; line-height: 3rem; margin: 0 0 1.5rem 0; display: inline-block; font-size: 1rem; font-family: helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
+.button:hover { background: #12acff; color: #fff; }
+.button:visited { color: #fff; }
 
-.search-form {
-  *zoom: 1;
-}
-.search-form:before, .search-form:after {
-  content: "";
-  display: table;
-}
-.search-form:after {
-  clear: both;
-}
+.search-form { overflow: hidden; *zoom: 1; }
 
-.search-input {
-  width: 63.6363636364%;
-  float: left;
-  margin-right: 9.0909090909%;
-  display: inline;
-}
+.search-input { width: 63.6363636364%; float: left; margin-right: 9.0909090909%; display: inline; }
 
-.search-button {
-  width: 27.2727272727%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20%;
-  display: inline;
-  font-size: 1rem;
-}
+.search-button { width: 27.2727272727%; float: right; margin-right: 0; #margin-left: -20%; display: inline; font-size: 1rem; }
 
 /* -- _PAGE.SCSS -- */
-/*
- * Styles for Wordpress Pages
- * Includes styles for for specific page templates
- */
-article {
-  border-bottom: 0.1rem solid #ccc;
-  margin-bottom: 1.4rem;
-}
-article h2, article legend {
-  margin: 0;
-}
+/* Styles for Wordpress Pages Includes styles for for specific page templates */
+article { border-bottom: 0.1rem solid #ccc; margin-bottom: 1.4rem; }
+article h2, article legend { margin: 0; }
 
-/**
- * navigation.scss
- * All nav menu styles go here
- * Currently the Dropdown only supports 1 level
- */
-.primary-nav {
-  margin-bottom: 3rem;
-  height: 3rem;
-}
+/** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
+.primary-nav { margin-bottom: 3rem; height: 3rem; }
 
-.primary-nav__menu {
-  list-style: none;
-  *zoom: 1;
-  font-family: helvetica, arial, sans-serif;
-  margin: 0;
-  border-bottom: 1px solid #ccc;
-}
-.primary-nav__menu:before, .primary-nav__menu:after {
-  content: "";
-  display: table;
-}
-.primary-nav__menu:after {
-  clear: both;
-}
+.primary-nav__menu { list-style: none; overflow: hidden; *zoom: 1; font-family: helvetica, arial, sans-serif; margin: 0; border-bottom: 1px solid #ccc; }
 
-.primary-nav__menu > .menu-item {
-  margin: 0 0 0 0;
-  display: inline;
-}
+.primary-nav__menu > .menu-item { margin: 0 0 0 0; display: inline; }
 
-.primary-nav__menu > .menu-item a {
-  display: inline-block;
-  color: #3e3e3e;
-  padding: 0 1.5rem;
-  font-size: 1.2rem;
-  line-height: 3rem;
-}
+.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0 1.5rem; font-size: 1.2rem; line-height: 3rem; }
 
-.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited {
-  color: #03a7ff;
-}
+.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
 
-.primary-nav__menu > .current-menu-item a,
-.primary-nav__menu > .current-menu-item a:visited,
-.primary-nav__menu > .current-menu-ancestor a,
-.primary-nav__menu > .current-menu-ancestor a:visited,
-.primary-nav__menu > .current-post-parent a,
-.primary-nav__menu > .current-post-parent a:visited {
-  color: #03a7ff;
-  font-weight: bold;
-}
+.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #03a7ff; font-weight: bold; }
 
-.primary-nav__menu .parent {
-  position: relative;
-}
+.primary-nav__menu .parent { position: relative; }
 
-.primary-nav__menu .parent > .sub-menu {
-  display: none;
-  list-style: none;
-  margin: 0;
-  text-align: left;
-}
+.primary-nav__menu .parent > .sub-menu { display: none; list-style: none; margin: 0; text-align: left; }
 
-.primary-nav__menu .parent:hover > .sub-menu {
-  display: block;
-}
+.primary-nav__menu .parent:hover > .sub-menu { display: block; }
 
-.primary-nav__menu .sub-menu {
-  position: absolute;
-  background: #e7e7e7;
-}
+.primary-nav__menu .sub-menu { position: absolute; background: #e7e7e7; }
 
-.primary-nav__menu .sub-menu .menu-item a,
-.primary-nav__menu .sub-menu .menu-item a:visited {
-  width: 250px;
-  color: #03a7ff;
-}
-.primary-nav__menu .sub-menu .menu-item a:hover,
-.primary-nav__menu .sub-menu .menu-item a:visited:hover {
-  background: #0097e9;
-  margin: 0;
-  color: #fff;
-}
+.primary-nav__menu .sub-menu .menu-item a, .primary-nav__menu .sub-menu .menu-item a:visited { width: 250px; color: #03a7ff; }
+.primary-nav__menu .sub-menu .menu-item a:hover, .primary-nav__menu .sub-menu .menu-item a:visited:hover { background: #0097e9; margin: 0; color: #fff; }
 
-.primary-nav__menu .sub-menu > .current-menu-item a,
-.primary-nav__menu .sub-menu > .current-menu-item a:visited,
-.primary-nav__menu .sub-menu > .current-menu-ancestor a,
-.primary-nav__menu .sub-menu > .current-menu-ancestor a:visited {
-  color: #fff;
-  background: #36b9ff;
-  font-weight: bold;
-}
+.primary-nav__menu .sub-menu > .current-menu-item a, .primary-nav__menu .sub-menu > .current-menu-item a:visited, .primary-nav__menu .sub-menu > .current-menu-ancestor a, .primary-nav__menu .sub-menu > .current-menu-ancestor a:visited { color: #fff; background: #36b9ff; font-weight: bold; }
 
-/**
- * Header specific declarations
- * Note: navigation has its own document _navigation.scss
- */
-.site-header__logo {
-  display: block;
-}
-.site-header__logo img {
-  display: block;
-  margin: 1.5rem 0;
-  height: 3rem;
-}
+/** Header specific declarations Note: navigation has its own document _navigation.scss */
+.site-header__logo { display: block; }
+.site-header__logo img { display: block; margin: 1.5rem 0; height: 3rem; }
 
-/**
- * footer.scss
- * all footer styles go here
- */
-.site-footer {
-  background: #1e242a;
-}
-.site-footer p {
-  margin: 0;
-  color: #fff;
-  padding: 1.5rem 0;
-}
+/** footer.scss all footer styles go here */
+.site-footer { background: #1e242a; }
+.site-footer p { margin: 0; color: #fff; padding: 1.5rem 0; }

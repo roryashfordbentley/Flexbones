@@ -39,6 +39,14 @@ $breakpoint-media-output: false;
 $breakpoint-ie-output: true;
 $breakpoint-raw-output: false;
 
+// Funtions
+
+@import "__functions.scss";
+
+// Mixins
+
+@import "__mixins.scss";
+
 // Config
 
 @import "__config.scss";
@@ -46,10 +54,6 @@ $breakpoint-raw-output: false;
 // IE REM Override
 
 $base: 24px;
-
-// Mixins
-
-@import "__mixins.scss";
 
 // Vars
 

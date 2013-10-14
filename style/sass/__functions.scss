@@ -1,0 +1,24 @@
+/**
+ * funtions.scss
+ * all functions go here
+ */
+
+/**
+ * Whole Baseline
+ * This function checks to see if the font size
+ * multiplied by the baseline is a whole number.
+ * If not it rounds up the font size to ensure that 
+ * the baseline is a whole number, therefore a whole
+ * pixel. This fixes browser inconsistencies of rendering
+ * sub pixels.
+ */
+
+@function whole_baseline($font_size,$baseline){
+
+	// If its a whole number
+	@if( round($font_size * $baseline) == $font_size * $baseline ){
+		@return percentage($font_size / 16);
+	} @else {
+		@return percentage(round($font_size * $baseline) / $baseline / 16);
+	}
+}

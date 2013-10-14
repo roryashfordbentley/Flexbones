@@ -29,13 +29,13 @@ CONTENTS
 @import "compass/css3/box-sizing";
 @import "susy";
 
+// Funtions
+
+@import "__functions.scss";
+
 // Config
 
 @import "__config.scss";
-
-// Mixins
-
-@import "__mixins.scss";
 
 // Vars
 

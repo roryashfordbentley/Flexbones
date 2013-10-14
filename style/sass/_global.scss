@@ -15,10 +15,10 @@ img{ max-width: 100%; }
 
 html { 
 	// The magic, it happens right here
-	font-size: $s_font_base; //10px
-	@include at-breakpoint($m){ font-size: $m_font_base }
-	@include at-breakpoint($l){ font-size: $l_font_base }
-	@include at-breakpoint($xl){ font-size: $xl_font_base }
+	font-size: $s_font_size; 
+	@include at-breakpoint($m){ font-size: $m_font_size }
+	@include at-breakpoint($l){ font-size: $l_font_size }
+	@include at-breakpoint($xl){ font-size: $xl_font_size }
 	line-height: $base;
 }
 
