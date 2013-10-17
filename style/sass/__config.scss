@@ -4,25 +4,14 @@
  * grids, units font sizes etc
  */
 
-
-// function to create variables below
-
-/*
-function createBreakpoint(){
-	
-}
-
-*/
-
-
 // Scale & Type
 
 $base: 1.5rem;
 
 $s_font_size: 			whole_baseline(14,$base);
-$m_font_size: 			whole_baseline(18,$base);
-$l_font_size: 			whole_baseline(25,$base);
-$xl_font_size: 			whole_baseline(30,$base);
+$m_font_size: 			whole_baseline(16,$base);
+$l_font_size: 			whole_baseline(18,$base);
+$xl_font_size: 			whole_baseline(20,$base);
 
 // Grid settings (SUSY)
 
@@ -54,7 +43,7 @@ $body_font: 			georgia, times, "times new roman" sans-serif;
 // Typographic units
 
 $paragraph_size:		1rem; 
-$h1_size:				3.2rem;  
+$h1_size:				3rem;  
 $h2_size:				2rem;  
 $h3_size:				1.8rem;  
 $h4_size:				1.5rem;  

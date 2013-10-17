@@ -42,12 +42,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /** funtions.scss all functions go here */
 /** Whole Baseline This function checks to see if the font size multiplied by the baseline is a whole number. If not it rounds up the font size to ensure that  the baseline is a whole number, therefore a whole pixel. This fixes browser inconsistencies of rendering sub pixels. */
 /** config.scss variables that control global stuff: grids, units font sizes etc */
-/*
-function createBreakpoint(){
-	
-}
-
-*/
 /** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
 /** gridtacular.scss: Grid and baseline overlay combined with breakpoint Information */
 /* Columns Mixin */
@@ -93,9 +87,9 @@ body { position: relative; }
 img { max-width: 100%; }
 
 html { font-size: 87.5%; line-height: 1.5rem; }
-@media (min-width: 641px) and (max-width: 880px) { html { font-size: 112.5%; } }
-@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 158.3333333333%; } }
-@media (min-width: 1200px) { html { font-size: 187.5%; } }
+@media (min-width: 641px) and (max-width: 880px) { html { font-size: 100%; } }
+@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 112.5%; } }
+@media (min-width: 1200px) { html { font-size: 125%; } }
 
 body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
 
@@ -135,7 +129,7 @@ h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font
 
 p { font-weight: normal; font-size: 1rem; }
 
-h1 { font-size: 3.2rem; }
+h1 { font-size: 3rem; }
 
 h2, legend { font-size: 2rem; }
 
@@ -151,7 +145,7 @@ ul { list-style-type: disc; font-size: 1rem; font-weight: normal; margin-left: 3
 
 ol { list-style-type: decimal; font-size: 1rem; font-weight: normal; margin-left: 3rem; }
 
-blockquote { display: block; background: #ccc; border-left: 10px solid #666; width: 40.7407407407%; float: right; margin-right: 0; #margin-left: -20%; display: inline; float: right; padding: 0.75rem 0; margin: 0 0 1.5rem 2.1276595745%; }
+blockquote { display: block; background: #ccc; border-left: 10px solid #666; width: 40.7407407407%; float: right; margin-right: 0; *margin-left: -20%; display: inline; float: right; padding: 0.75rem 0; margin: 0 0 1.5rem 2.1276595745%; }
 blockquote p { font-size: 1.2; text-align: right; line-height: 1.5rem; font-style: italic; padding: 0 1.5rem; margin: 0; }
 
 date p { font-weight: bold; font-family: helvetica, arial, sans-serif; }
@@ -192,7 +186,7 @@ input[type="submit"]:visited { color: #fff; }
 
 .search-input { width: 63.6363636364%; float: left; margin-right: 9.0909090909%; display: inline; }
 
-.search-button { width: 27.2727272727%; float: right; margin-right: 0; #margin-left: -20%; display: inline; font-size: 1rem; }
+.search-button { width: 27.2727272727%; float: right; margin-right: 0; *margin-left: -20%; display: inline; font-size: 1rem; }
 
 /* -- _PAGE.SCSS -- */
 /* Styles for Wordpress Pages Includes styles for for specific page templates */
