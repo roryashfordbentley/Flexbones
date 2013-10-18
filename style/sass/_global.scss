@@ -9,6 +9,12 @@
 	*{ @include box-sizing(border-box); }
 }
 
+// Clearfix
+
+.clear{
+	@include clearfix();
+}
+
 // Responsive Images
 
 img{ max-width: 100%; }  
@@ -33,7 +39,6 @@ body {
 	margin: 0 auto;
 	@include at-breakpoint($m){ max-width: 85%; }
 	@include at-breakpoint($l_up){ width: 85%; max-width: 1300px; }
-	@include clearfix();
 }
 
 .lt-ie9 .wrapper{

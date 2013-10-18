@@ -22,9 +22,9 @@ p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
-	font-weight: 300;
+	font-weight: normal;
 	color: #292929;
-	line-height: $base*2;
+	line-height: $base;
 }
 
 p{
@@ -34,6 +34,7 @@ p{
 
 h1{ 
 	font-size: $h1_size;
+	line-height: $base*2;
 }
 
 h2{ 

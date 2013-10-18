@@ -21,7 +21,7 @@
 			display: none;
 		}
 		
-		background: rgba(20,255,160,0.1);
+		background: rgba(0,0,0,0.02);
 	}
 }
 
@@ -31,32 +31,31 @@ body{
 }
 
 .gridtacular{
-		position:fixed;
-		bottom:0;
-		right:0;
-		z-index:10000;
-		width: 55px;
-		color: #fff;
-		list-style: none; 
-		margin:0; 
-		padding:0;
-		font-size:13px;
-		line-height: 18px;
-		font-family: Monaco, "Courier New", Courier, monospace;
+	position:fixed;
+	bottom:0;
+	right:0;
+	z-index:10000;
+	width: 55px;
+	color: #fff;
+	list-style: none; 
+	margin:0; 
+	padding:0;
+	font-size:13px;
+	line-height: 18px;
+	font-family: Monaco, "Courier New", Courier, monospace;
 
-		li{
-			display: block;
-			padding: 10px;
-		}
+	li{
+		display: block;
+		padding: 10px;
+	}
 
-		a{
-			display: block;
-		}
+	a{
+		display: block;
+	}
 
-		img{
-			display: block;
-		}
-
+	img{
+		display: block;
+	}
 }
 
 	.gridtacular__width{
@@ -116,8 +115,8 @@ body{
 	left: 0;
 	
 	.col{
-		border-left: 1px solid rgba(210,210,210,0.5);
-		border-right: 1px solid rgba(210,210,210,0.5);
+		border-left: 1px solid rgba(210,210,210,0.3);
+		border-right: 1px solid rgba(210,210,210,0.3);
 		@include span-columns(1,$columns_s);
 		
 		// Small breakpoint

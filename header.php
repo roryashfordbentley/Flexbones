@@ -17,9 +17,8 @@
 	<![endif]-->
 </head>
 <body <?php body_class(); ?>>
-
 <header class="site-header">
-	<div class="wrapper">
+	<div class="wrapper clear">
 		<a href="<?php echo get_home_url(); ?>" class="site-header__logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo"></a>
 		<nav class="primary-nav">
 			<ul class="primary-nav__menu">

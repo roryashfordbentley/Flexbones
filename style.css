@@ -67,22 +67,24 @@ body { position: relative; }
 .gridtacular__baseline-overlay { position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 1.5rem; }
 
 .gridtacular__grid-overlay { position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
-.gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.5); border-right: 1px solid rgba(210, 210, 210, 0.5); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
-@media (max-width: 640px) { .gridtacular__grid-overlay .col { width: 13.0434782609%; float: left; margin-right: 4.347826087%; background: rgba(20, 255, 160, 0.1); }
+.gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.3); border-right: 1px solid rgba(210, 210, 210, 0.3); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
+@media (max-width: 640px) { .gridtacular__grid-overlay .col { width: 13.0434782609%; float: left; margin-right: 4.347826087%; background: rgba(0, 0, 0, 0.02); }
   .gridtacular__grid-overlay .col:nth-child(6) { width: 13.0434782609%; float: right; margin-right: 0; }
   .gridtacular__grid-overlay .col:nth-child(n + 7) { display: none; } }
-@media (min-width: 641px) and (max-width: 880px) { .gridtacular__grid-overlay .col { width: 9.6774193548%; float: left; margin-right: 3.2258064516%; background: rgba(20, 255, 160, 0.1); }
+@media (min-width: 641px) and (max-width: 880px) { .gridtacular__grid-overlay .col { width: 9.6774193548%; float: left; margin-right: 3.2258064516%; background: rgba(0, 0, 0, 0.02); }
   .gridtacular__grid-overlay .col:nth-child(8) { width: 9.6774193548%; float: right; margin-right: 0; }
   .gridtacular__grid-overlay .col:nth-child(n + 9) { display: none; } }
-@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(20, 255, 160, 0.1); }
+@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(0, 0, 0, 0.02); }
   .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
   .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
-@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(20, 255, 160, 0.1); }
+@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(0, 0, 0, 0.02); }
   .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
   .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
 
 /** global.scss Document and Grid setup Font default declarations */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.clear { overflow: hidden; *zoom: 1; }
 
 img { max-width: 100%; }
 
@@ -93,7 +95,7 @@ html { font-size: 87.5%; line-height: 1.5rem; }
 
 body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper { width: 90%; margin: 0 auto; overflow: hidden; *zoom: 1; }
+.wrapper { width: 90%; margin: 0 auto; }
 @media (min-width: 641px) and (max-width: 880px) { .wrapper { max-width: 85%; } }
 @media (min-width: 881px) { .wrapper { width: 85%; max-width: 1300px; } }
 .lt-ie9 .wrapper { width: 85%; max-width: 1300px; }
@@ -125,17 +127,17 @@ a:hover { text-decoration: none; color: #0097e9; }
 
 p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 1.5rem; margin-bottom: 1.5rem; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 300; color: #292929; line-height: 3rem; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: normal; color: #292929; line-height: 1.5rem; }
 
 p { font-weight: normal; font-size: 1rem; }
 
-h1 { font-size: 3rem; }
+h1 { font-size: 2rem; line-height: 3rem; }
 
-h2, legend { font-size: 2rem; }
+h2, legend { font-size: 1.6rem; }
 
-h3 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
 
-h4 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
 
 strong { font-weight: bold; }
 
