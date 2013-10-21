@@ -223,7 +223,7 @@ article h2, article legend { margin: 0; }
 
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
 .site-header__logo { display: block; }
-.site-header__logo img { display: block; margin: 1.5rem 0; height: 3rem; }
+.site-header__logo img { display: block; margin: 1.5rem 0 0.75rem 0; height: 2.25rem; }
 
 /** footer.scss all footer styles go here */
 .site-footer { background: #1e242a; }
