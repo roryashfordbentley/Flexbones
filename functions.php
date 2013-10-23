@@ -1,97 +1,40 @@
 <?php
 
-/*==================================================================== */
-/* CONTENT WIDTH
-/*==================================================================== */
+/**
+ * Flexbones Theme Setup
+ */
 
-	if ( ! isset( $content_width )){
-		$content_width = 620; //GLOBAL CONTENT WIDTH (px)
-	}
+add_action( 'after_setup_theme', 'flexbones_setup' );
 
+function flexbones_setup() {
 
-/*==================================================================== */
-/* CBG THEME SETUP
-/*==================================================================== */
+	// This theme styles the visual editor with editor-style.css to match the theme style.
+	add_editor_style('editor-style.css?' . time());
 
+	// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
+	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
-	add_action( 'after_setup_theme', 'flexbones_setup' );
+	// This theme uses post thumbnails
+	add_theme_support( 'post-thumbnails' );
+
+	// Add default posts and comments RSS feed links to head
+	add_theme_support( 'automatic-feed-links' );
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => 'Primary Navigation',
+	) );
 	
-	function flexbones_setup() {
-	
-		// This theme styles the visual editor with editor-style.css to match the theme style.
-		add_editor_style('editor-style.css?' . time());
-	
-		// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
-		add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
-	
-		// This theme uses post thumbnails
-		add_theme_support( 'post-thumbnails' );
-	
-		// Add default posts and comments RSS feed links to head
-		add_theme_support( 'automatic-feed-links' );
-	
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'primary' => 'Primary Navigation',
-		) );
-		
-		//register sidebars
-		register_sidebar();
-	}
-
-/*==================================================================== */
-/* SET THE EXCERPT LENGTH
-/*==================================================================== */
-
-	function cbg_excerpt_length( $length ) {
-		return 55;
-	}
-	
-	add_filter( 'excerpt_length', 'cbg_excerpt_length' );
-	
-
-/*==================================================================== */
-/* SET THE READ MORE TEXT
-/*==================================================================== */
-
-	/* Replaces the excerpt "more" text by a link */
-
-	function new_excerpt_more($more) {
-	    global $post;
-	    return '... <a href="'. get_permalink($post->ID) . '" class="read-more">' . 'View more.' . '</a>';
-	}
-	add_filter('excerpt_more', 'new_excerpt_more');
-
-
-/*==================================================================== */
-/* Remove inline styles printed when the gallery shortcode is used
-/*==================================================================== */
-
-	add_filter( 'use_default_gallery_style', '__return_false' );
-	
-/*==================================================================== */
-/* ADD GALLERY THUMBNAIL CUSTOM SIZE 
-/*==================================================================== */
-
-//add_image_size( 'gallery-thumb', 300, 195, true );
-
-/*==================================================================== */
-/* STOP TINY MCE Editing BRS
-/*==================================================================== */
-
-function cbnet_tinymce_config( $init ) {
-
-    // Don't remove line breaks
-    $init['remove_linebreaks'] = false; 
-
-    // Pass $init back to WordPress
-    return $init;
+	//register sidebars
+	register_sidebar();
 }
-add_filter('tiny_mce_before_init', 'cbnet_tinymce_config');
 
-/*==================================================================== */
-/* REMOVE Paragraphs round IMAGES 
-/*==================================================================== */
+
+
+/**
+ * Remove Paragraphs Around Images
+ * (the_content)
+ */
 
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -99,9 +42,13 @@ function filter_ptags_on_images($content){
 
 add_filter('the_content', 'filter_ptags_on_images');
 
-/*==================================================================== */
-/* REMOVE IMAGE DIMENSIONS (for responsive imgs)
-/*==================================================================== */
+
+
+/**
+ * Remove Image Dimensions
+ * stops wordpress adding inline width/height to images
+ * (the_content)
+ */
 
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
 add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 ); 
@@ -111,15 +58,19 @@ function remove_thumbnail_dimensions( $html ) {
 	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); return $html; 
 }
 
-/*==================================================================== */
-/* REMOVE ADMIN BAR 
-/*==================================================================== */
+
+
+/**
+ * Hide Admin Bar
+ */
 
 add_filter('show_admin_bar', '__return_false');
 
-/*==================================================================== */
-/* SUB MENU
-/*==================================================================== */	
+
+
+/**
+ * Sub Menu
+ */
 	
 function sub_menu(){
 	
@@ -139,9 +90,12 @@ function sub_menu(){
 	}
 }
 
-/*==================================================================== */
-/* Add parent class to Wp list pages! great for recursive menus!
-/*==================================================================== */	
+
+
+/**
+ * Menu Parent Class
+ * (wp_list_pages)
+ */
 
 function add_parent_class( $css_class, $page, $depth, $args ){
     if ( ! empty( $args['has_children'] ) )
@@ -150,9 +104,12 @@ function add_parent_class( $css_class, $page, $depth, $args ){
 }
 add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
 
-/*==================================================================== */
-/* Add parent class to wp_nav_menu
-/*==================================================================== */       
+
+
+/**
+ * Menu Parent Class
+ * (wp_nav_menu)
+ */     
 
 add_filter('wp_nav_menu_objects', function ($items) {
 
@@ -174,23 +131,11 @@ add_filter('wp_nav_menu_objects', function ($items) {
 
 });
 
-/*==================================================================== */
-/* Wrap Li's in spans from the content to allow for greater styling control
-/*==================================================================== */	
 
-function span_li($content){
-	
-	$content = str_replace( '<li>','<li><span>',$content );
-	$content = str_replace( '</li>','</span></li>',$content );
-	return $content;
-	
-}
 
-add_filter( 'the_content', 'span_li' );
-
-/*==================================================================== */
-/* Dequeue Wordpress JS Files 
-/*==================================================================== */
+/**
+ * Dequeue Scripts
+ */
 
 //remove wordpress jquery
 
@@ -201,14 +146,18 @@ function remove_wp_jquery() {
 
 add_action('init', 'remove_wp_jquery'); // will deregister from head
 
-/*==================================================================== */
-/* Enque JS Files 
-/*==================================================================== */
+
+
+/**
+ * Enqueue Scripts
+ */
 
 
 function barebones_load_js() {
 
- 	/* NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false) */
+ 	/**
+ 	 * NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
+ 	 */
   	
 	// Jquery
 
@@ -242,16 +191,18 @@ function barebones_load_js() {
     wp_localize_script( 'gridtacular', 'stylesheet_root', $stylesheet_root );
 
 	/* if ( is_front_page() ) {
-		wp_enqueue_script('home-page-main-flex-slider');
+		wp_enqueue_script('example');
 	}*/
  
 }
  
 add_action('wp_enqueue_scripts', 'barebones_load_js'); // For use on the Front end (ie. Theme)
 
-/*==================================================================== */
-/* Enque Stylesheet
-/*==================================================================== */
+
+
+/**
+ * Enqueue Stylesheets
+ */
 
 function stylesheet_loader() {
 	wp_register_style( 
@@ -269,24 +220,11 @@ function stylesheet_loader() {
 add_action( 'wp_enqueue_scripts', 'stylesheet_loader' );
 
 
-/*==================================================================== */
-/* Override Default WordPress Search behaviour to surpress 404 redirect
-/*==================================================================== */
 
-function SearchFilter($query) {
-    // If 's' request variable is set but empty
-    if (isset($_GET['s']) && empty($_GET['s']) && $query->is_main_query()){
-        $query->is_search = true;
-        $query->is_home = false;
-    }
-    return $query;
-}
-
-add_filter('pre_get_posts','SearchFilter');
-
-/*==================================================================== */
-/* Wrap images in div
-/*==================================================================== */
+/**
+ * Wrap images In a Div
+ * (when inserting into editor)
+ */
 
 if( is_admin() ) {
  
@@ -297,21 +235,23 @@ if( is_admin() ) {
  
 }
 
-/*==================================================================== */
-/* Get Attachment
-/*==================================================================== */
+
+
+/**
+ * Get Attachment Atributes based on ID
+ * @return Array()
+ */
 
 function wp_get_attachment( $attachment_id ) {
 
     $attachment = get_post( $attachment_id );
+    
     return array(
-        'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
-        'caption' => $attachment->post_excerpt,
-        'description' => $attachment->post_content,
-        'href' => get_permalink( $attachment->ID ),
-        'src' => $attachment->guid,
-        'title' => $attachment->post_title
+        'alt'			=> get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+        'caption'		=> $attachment->post_excerpt,
+        'description'	=> $attachment->post_content,
+        'href'			=> get_permalink( $attachment->ID ),
+        'src'			=> $attachment->guid,
+        'title'			=> $attachment->post_title
     );
 }
-
-
