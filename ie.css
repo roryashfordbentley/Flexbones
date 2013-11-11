@@ -66,9 +66,9 @@ body { position: relative; }
 
 .gridtacular__grid-toggle { background: #41bdb6; }
 
-.gridtacular__baseline-overlay { position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 24px; }
+.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 24px; }
 
-.gridtacular__grid-overlay { position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
+.gridtacular__grid-overlay { display: none; position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
 .gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.3); border-right: 1px solid rgba(210, 210, 210, 0.3); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
 
 /** global.scss Document and Grid setup Font default declarations */
@@ -80,12 +80,15 @@ body { position: relative; }
 
 img { max-width: 100%; }
 
-html { font-size: 87.5%; line-height: 24px; }
+html { font-size: 62.5%; line-height: 24px; }
 
-body { color: #3e3e3e; font-family: georgia, times, "times new roman" sans-serif; -webkit-font-smoothing: antialiased; }
+body { color: #3e3e3e; font-family: helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper { width: 90%; margin: 0 auto; }
-.lt-ie9 .wrapper { width: 85%; max-width: 1300px; }
+.content { padding: 24px 0 0 0; }
+
+.wrapper { *zoom: 1; max-width: 90%; _width: 90%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.wrapper:after { content: ""; display: table; clear: both; }
+.lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
 
 .lt-ie9 .wrapper { width: 1000px; }
 
@@ -114,45 +117,31 @@ a:hover { text-decoration: none; color: #0097e9; }
 
 p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 24px; margin-bottom: 24px; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: normal; color: #292929; line-height: 24px; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 500; color: #292929; line-height: 1.1; }
 
-p { font-weight: normal; font-size: 1rem; }
+p { font-weight: normal; font-size: 1.6rem; }
 
-h1 { font-size: 2rem; line-height: 48px; }
+h1 { font-size: 3.8rem; }
 
-h2, legend { font-size: 1.6rem; }
+h2, legend { font-size: 3.2rem; }
 
-h3 { font-size: 1.4rem; }
+h3 { font-size: 2.4rem; }
 
-h4 { font-size: 1.2rem; }
+h4 { font-size: 1.8rem; }
 
 strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-ul { list-style-type: disc; font-size: 1rem; font-weight: normal; margin-left: 48px; }
+ul { list-style-type: disc; font-size: 1.6rem; font-weight: normal; margin-left: 48px; }
 
-ol { list-style-type: decimal; font-size: 1rem; font-weight: normal; margin-left: 48px; }
+ol { list-style-type: decimal; font-size: 1.6rem; font-weight: normal; margin-left: 48px; }
 
-blockquote { display: block; background: #ccc; border-left: 10px solid #666; width: 40.7407407407%; float: right; margin-right: 0; *margin-left: -20%; display: inline; float: right; padding: 12px 0; margin: 0 0 24px 2.1276595745%; }
-blockquote p { font-size: 1.2; text-align: right; line-height: 24px; font-style: italic; padding: 0 24px; margin: 0; }
-
-date p { font-weight: bold; font-family: helvetica, arial, sans-serif; }
-
-/** tables.scss Table styling */
-table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 24px; font-size: 0.75rem; }
-
-thead { background: #03a7ff; color: #fff; }
-
-tbody tr:nth-child(odd) { background: #f1f1f1; }
-
-tbody tr:nth-child(even) { background: #FFF; }
-
-th, td { height: 24px; padding: 0 24px; }
-
-th { font-weight: bold; height: 48px; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
+/** Responsive Baseline to have a baseline that changes with your content apply the flex-baseline class to the <html> element. To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434 */
+.flex-type { font-size: 62.5%; }
 
 /** ui.scss Forms, buttons, icons, breadcrumbs, pagination */
+/** Forms */
 fieldset div { *zoom: 1; }
 fieldset div:before, fieldset div:after { content: ""; display: table; }
 fieldset div:after { clear: both; }
@@ -165,21 +154,27 @@ textarea { border: 1px solid #ccc; line-height: 24px; height: 96px; margin-botto
 
 .input[type="radio"] { float: left; }
 
-input[type="submit"] { background: #03a7ff; padding: 0 24px; height: 24px; font-family: georgia, times, "times new roman" sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
+input[type="submit"] { background: #03a7ff; padding: 0 24px; height: 24px; font-family: helvetica, arial, sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
 input[type="submit"]:hover { background: #0097e9; color: #fff; }
 input[type="submit"]:visited { color: #fff; }
 
+/** Buttons */
 .button { background: #03a7ff; padding: 0 24px; line-height: 48px; margin: 0 0 24px 0; display: inline-block; font-size: 1rem; font-family: helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
 .button:hover { background: #12acff; color: #fff; }
 .button:visited { color: #fff; }
 
-.search-form { *zoom: 1; }
-.search-form:before, .search-form:after { content: ""; display: table; }
-.search-form:after { clear: both; }
+/** Table styling */
+table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 24px; font-size: 0.75rem; }
 
-.search-input { width: 63.6363636364%; float: left; margin-right: 9.0909090909%; display: inline; }
+thead { background: #03a7ff; color: #fff; }
 
-.search-button { width: 27.2727272727%; float: right; margin-right: 0; *margin-left: -20%; display: inline; font-size: 1rem; }
+tbody tr:nth-child(odd) { background: #f1f1f1; }
+
+tbody tr:nth-child(even) { background: #FFF; }
+
+th, td { height: 24px; padding: 0 24px; }
+
+th { font-weight: bold; height: 48px; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
 
 /* -- _PAGE.SCSS -- */
 /* Styles for Wordpress Pages Includes styles for for specific page templates */
@@ -187,37 +182,25 @@ article { border-bottom: 0.1rem solid #ccc; margin-bottom: 23.9px; }
 article h2, article legend { margin: 0; }
 
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { margin-bottom: 48px; height: 48px; }
+.primary-nav { margin-bottom: 24px; height: 48px; }
 
-.primary-nav__menu { list-style: none; *zoom: 1; font-family: helvetica, arial, sans-serif; margin: 0; border-bottom: 1px solid #ccc; }
+.primary-nav__menu { list-style: none; *zoom: 1; margin: 0; }
 .primary-nav__menu:before, .primary-nav__menu:after { content: ""; display: table; }
 .primary-nav__menu:after { clear: both; }
 
-.primary-nav__menu > .menu-item { margin: 0 0 0 0; display: inline; }
+.primary-nav__menu > .menu-item { margin: 0; display: inline; }
+.lt-ie9 .primary-nav__menu > .menu-item { display: inherit; }
 
-.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0 24px; font-size: 1.2rem; line-height: 48px; }
+.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
 
 .primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #03a7ff; font-weight: bold; }
 
-.primary-nav__menu .parent { position: relative; }
-
-.primary-nav__menu .parent > .sub-menu { display: none; list-style: none; margin: 0; text-align: left; }
-
-.primary-nav__menu .parent:hover > .sub-menu { display: block; }
-
-.primary-nav__menu .sub-menu { position: absolute; background: #e7e7e7; }
-
-.primary-nav__menu .sub-menu .menu-item a, .primary-nav__menu .sub-menu .menu-item a:visited { width: 250px; color: #03a7ff; }
-.primary-nav__menu .sub-menu .menu-item a:hover, .primary-nav__menu .sub-menu .menu-item a:visited:hover { background: #0097e9; margin: 0; color: #fff; }
-
-.primary-nav__menu .sub-menu > .current-menu-item a, .primary-nav__menu .sub-menu > .current-menu-item a:visited, .primary-nav__menu .sub-menu > .current-menu-ancestor a, .primary-nav__menu .sub-menu > .current-menu-ancestor a:visited { color: #fff; background: #36b9ff; font-weight: bold; }
-
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
-.site-header__logo { display: block; }
-.site-header__logo img { display: block; margin: 24px 0 12px 0; height: 36px; }
+.site-header__logo { display: block; margin-bottom: 24px; }
+.site-header__logo img { display: block; }
 
 /** footer.scss all footer styles go here */
-.site-footer { background: #1e242a; }
-.site-footer p { margin: 0; color: #fff; padding: 24px 0; }
+.site-footer { border-top: 1px solid #ccc; }
+.site-footer p { margin: 0; padding: 24px 0; }

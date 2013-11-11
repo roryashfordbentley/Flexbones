@@ -21,10 +21,7 @@ img{ max-width: 100%; }
 
 html { 
 	// The magic, it happens right here
-	font-size: $s_font_size; 
-	@include at-breakpoint($m){ font-size: $m_font_size }
-	@include at-breakpoint($l){ font-size: $l_font_size }
-	@include at-breakpoint($xl){ font-size: $xl_font_size }
+	font-size: $font_size;
 	line-height: $base;
 }
 
@@ -34,11 +31,16 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+.content{
+	padding: $base 0 0 0;
+}
+
 .wrapper {
-	width: 90%;
-	margin: 0 auto;
-	@include at-breakpoint($m){ max-width: 85%; }
-	@include at-breakpoint($l_up){ width: 85%; max-width: 1300px; }
+	@include container;
+	@include at-breakpoint($l_up){ 
+		width: 85%;
+		max-width: 1200px; 
+	}
 }
 
 .lt-ie9 .wrapper{

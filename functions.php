@@ -140,8 +140,11 @@ add_filter('wp_nav_menu_objects', function ($items) {
 //remove wordpress jquery
 
 function remove_wp_jquery() {
-	wp_deregister_script('jquery');
-	wp_deregister_script('jquery-ui');
+  //if statements prevents it deregistering in admin
+  if( !is_admin() ) {
+    wp_deregister_script('jquery');
+    wp_deregister_script('jquery-ui');
+  }
 }
 
 add_action('init', 'remove_wp_jquery'); // will deregister from head
@@ -173,7 +176,7 @@ function barebones_load_js() {
 
   	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
   	wp_enqueue_script( 'modernizr' );
-  	
+
   	// Sitewide Scripts
 
   	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
@@ -209,7 +212,7 @@ function stylesheet_loader() {
 		'page-style', 
     	get_template_directory_uri() . '/style.css', 
     	array(), 
-    	'4.0', 
+    	'1.0', 
     	'all' 
     );
 
@@ -255,3 +258,4 @@ function wp_get_attachment( $attachment_id ) {
         'title'			=> $attachment->post_title
     );
 }
+

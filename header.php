@@ -3,7 +3,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 <?php language_attributes(); ?>"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 <?php language_attributes(); ?>"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9 <?php language_attributes(); ?>"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js gte-ie9 <?php language_attributes(); ?>"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js gte-ie9 flex-type <?php language_attributes(); ?>"> <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,22 +16,4 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
 	<![endif]-->
 </head>
-<body <?php body_class(); ?>>
-<header class="site-header">
-	<div class="wrapper clear">
-		<a href="<?php echo get_home_url(); ?>" class="site-header__logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo"></a>
-		<nav class="primary-nav">
-			<ul class="primary-nav__menu">
-			<?php 
-				//this will fail unless location is defined
-				$args = array(
-					'menu'            => '',
-					'container' => false,
-					'items_wrap'      => '%3$s'
-				);
-			 	wp_nav_menu( $args ); 
-			 ?>
-			</ul>
-		</nav>
-	</div>
-</header>
+<body <?php body_class(); ?> >

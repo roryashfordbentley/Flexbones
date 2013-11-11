@@ -1,0 +1,12 @@
+/**
+ * Responsive Baseline
+ * to have a baseline that changes with your content apply the flex-baseline class to the <html> element.
+ */
+
+
+.flex-type{
+	font-size: $s_font_size; 
+	@include at-breakpoint($m){ font-size: $m_font_size; }
+	@include at-breakpoint($l){ font-size: $l_font_size; }
+	@include at-breakpoint($xl){ font-size: $xl_font_size; }
+}

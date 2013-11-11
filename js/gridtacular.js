@@ -15,7 +15,7 @@
 			showHeight: true,
 			showBaseline: true,
 			showGrid: true,
-			gridColumnsMax: 12, 
+			gridColumnsMax: 16, 
 			container: window,
 			gridContainer: 'wrapper'
 

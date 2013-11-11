@@ -6,27 +6,35 @@
 
 // Scale & Type
 
-$base: 1.5rem;
+$base: 2.4rem;
 
-$s_font_size: 			whole_baseline(14,$base);
-$m_font_size: 			whole_baseline(16,$base);
-$l_font_size: 			whole_baseline(18,$base);
-$xl_font_size: 			whole_baseline(20,$base);
+$font-size: 62.5%;
+
+// If responsive baseline is used:
+
+$s_font_size: 			whole_baseline(10,$base);
+$m_font_size: 			whole_baseline(10,$base);
+$l_font_size: 			whole_baseline(11,$base);
+$xl_font_size: 			whole_baseline(12,$base);
+
 
 // Grid settings (SUSY)
 
-// $total-columns: 		6;  
-$column-width: 			60%;  
-$gutter-width: 			20%;  
+$total-columns: 		6;  
+$column-width: 			6%;  
+$gutter-width: 			2%;  
 $grid-padding: 			0;
+$container-width: 		90%;
+
 
 // Column
 $columns_s:				6;
-$columns_m:				8;
-$columns_l:				12;
-$columns_xl:			12;
+$columns_m:				12;
+$columns_l:				16;
+$columns_xl:			16;
 
 // $media-layout: min-width mq | total columns | max-width mq
+// 
 $s: 					0 $columns_s 640px;
 $m: 					641px $columns_m 880px;
 $m_up: 					641px $columns_m  lt-ie9;
@@ -38,15 +46,15 @@ $ie: 					0 $columns_l lt-ie9;
 // Font Stack
 
 $heading_font: 			helvetica, arial, sans-serif;
-$body_font: 			georgia, times, "times new roman" sans-serif;
+$body_font: 			helvetica, arial, sans-serif;
 
 // Typographic units
 
-$paragraph_size:		1rem; 
-$h1_size:				2rem;  
-$h2_size:				1.6rem;  
-$h3_size:				1.4rem;  
-$h4_size:				1.2rem;  
+$paragraph_size:		1.6rem; 
+$h1_size:				3.8rem;  
+$h2_size:				3.2rem;  
+$h3_size:				2.4rem;  
+$h4_size:				1.8rem;  
 
 // Box sizing
 $border_box: 			true;

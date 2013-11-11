@@ -22,9 +22,9 @@ p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
-	font-weight: normal;
+	font-weight: 500;
 	color: #292929;
-	line-height: $base;
+	line-height: 1.1;
 }
 
 p{
@@ -34,7 +34,6 @@ p{
 
 h1{ 
 	font-size: $h1_size;
-	line-height: $base*2;
 }
 
 h2{ 
@@ -49,54 +48,33 @@ h4{
 	font-size: $h4_size;
 }
 
-
 strong{ font-weight: bold; }
 
 em{ font-style: italic; }
 
 ul {	
 	list-style-type: disc;
-	font-size: 1rem;
+	font-size: $paragraph_size;
 	font-weight: normal;
 	margin-left: $base*2;
-	
-	li{	
-		span{ } //give the span and li different colours if you like
-	}
 }
 
 ol {
 	list-style-type: decimal;
-	font-size: 1rem;
+	font-size: $paragraph_size;
 	font-weight: normal;
 	margin-left: $base*2;
-	
-	li{
-		span{  } //give the span and li different colours if you like
-	}
 } 
 
-blockquote {
-	display:block;
-	background: #ccc;
-	border-left: 10px solid #666;
-	@include span-columns(3 omega,7);
-	float: right;
-	padding: $base/2 0;
+/**
+ * Responsive Baseline
+ * to have a baseline that changes with your content apply the flex-baseline class to the <html> element.
+ * To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434
+ */
 
-	margin: 0 0 $base gutter();
-
-	p{ 
-		font-size: 1.2; 
-		text-align: right; 
-		line-height: $base;
-		font-style: italic;
-		padding: 0 $base;
-		margin: 0;
-	}
-}
-
-date p{
-	font-weight:bold;
-	font-family: $heading_font;
+.flex-type{
+	font-size: $s_font_size; 
+	@include at-breakpoint($m){ font-size: $m_font_size; }
+	@include at-breakpoint($l){ font-size: $l_font_size; }
+	@include at-breakpoint($xl){ font-size: $xl_font_size; }
 }

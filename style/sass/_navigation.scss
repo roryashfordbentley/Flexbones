@@ -6,7 +6,7 @@
 
 // Primary nav container
 .primary-nav{   
-    margin-bottom:$base*2; 
+    margin-bottom:$base; 
     height: $base*2;
 }
 
@@ -14,24 +14,24 @@
 	.primary-nav__menu{
         list-style: none;
         @include clearfix();
-        font-family: $heading_font;
 		margin: 0;
-        border-bottom: 1px solid #ccc;
     }
 	
 	// Menu item
 	.primary-nav__menu > .menu-item{ 
-		margin: 0 0 0 0;
+		margin: 0;
 		display: inline;
+		@include at-breakpoint($l_up){
+			display: inherit;
+		}
+
 	}
 	
 	// Menu item link (block level element with padding + margin applied)
 	.primary-nav__menu > .menu-item a{
     	display: inline-block;
     	color: $text_colour;
-    	padding: 0 $base;
-    	font-size: 1.2rem;
-    	line-height: $base*2;
+    	padding: 0;
 }
 	
 	// Menu item hover
@@ -53,51 +53,3 @@
         color: $blue;
         font-weight: bold;
     }
-
-	// DELETE BELOW IF IT IS A SINGLE TIER MENU
-
-
-	// Dropdown Parent Style
-
-    .primary-nav__menu .parent{
-    	position: relative;	
-    }
-		// Sub menu
-		.primary-nav__menu .parent > .sub-menu{
-            display: none; 
-            list-style: none;
-            margin: 0;
-            text-align: left;
-    	}
-		
-		// Hover state stuff
-    	.primary-nav__menu .parent:hover > .sub-menu{
-	        display: block;
-	    } 
-
-		// Styling for sub-menu items
-
-		.primary-nav__menu .sub-menu{
-			position: absolute;	
-			background: #e7e7e7;
-		}
-
-			.primary-nav__menu .sub-menu .menu-item a, 
-			.primary-nav__menu .sub-menu .menu-item a:visited{
-				width: 250px;
-				color: $blue;
-				&:hover{ 
-					background: darken($blue,5%);
-					margin:0;
-					color: #fff;
-				}
-			}
-
-			.primary-nav__menu .sub-menu > .current-menu-item a,
-			.primary-nav__menu .sub-menu > .current-menu-item a:visited,
-		    .primary-nav__menu .sub-menu > .current-menu-ancestor a,
-		    .primary-nav__menu .sub-menu > .current-menu-ancestor a:visited,{
-		        color: #fff;
-		        background: lighten($blue,10%);
-		        font-weight: bold;
-		    }

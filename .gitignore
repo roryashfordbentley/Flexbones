@@ -4,3 +4,5 @@ style/fire_app_log.txt
 *.scssc
 fire_app_log.txt
 node_modules/
+ie.min.scss
+style.min.scss

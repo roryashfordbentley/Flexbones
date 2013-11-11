@@ -1,0 +1,42 @@
+/**
+ * layouts.scss
+ * Contains rules for the overall layout of eachs ection
+ * e.g. layout would include header, footer, content and sidebar
+ * BUT
+ * layouts.scss should not have ANY rules related to module design/ markup
+ */
+
+
+
+/**
+ * Layout Home
+ */
+
+/**
+ * Layout Standard Page
+ */
+
+.main-index{
+	
+	@include at-breakpoint($l_up){
+		@include span-columns(12 omega,16);
+	}
+}
+
+.sidebar-index{
+	@include at-breakpoint($l_up){
+		@include span-columns(3, 16);
+	}
+}
+
+/**
+ * Layout Blog Archive
+ */
+
+/**
+ * Layout Blog Single
+ */
+
+/**
+ * Layout Contact
+ */

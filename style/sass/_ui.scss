@@ -3,7 +3,9 @@
  * Forms, buttons, icons, breadcrumbs, pagination
  */
 
-// Forms
+/**
+ * Forms
+ */
 
 fieldset{
 	div{
@@ -66,7 +68,9 @@ input[type="submit"]{
 	}
 }
 
-// Buttons
+/**
+ * Buttons
+ */
 	
 .button {
 	background: $blue;
@@ -87,19 +91,36 @@ input[type="submit"]{
 	&:visited{
 		color: #fff;
 	}
-} 
-
-// Search form
-
-.search-form{
-	@include clearfix();
 }
 
-	.search-input{
-		@include span-columns(2,3);
+/**
+ * Table styling
+ */
+
+table { 
+	width: 100%;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin-bottom: $base;
+	font-size: 0.75rem;
+}
+
+	thead{
+		background: $blue;
+		color: #fff;
 	}
 
-	.search-button{
-		@include span-columns(1 omega,3);
-		font-size: 1rem;
+	tbody tr:nth-child(odd) {background: #f1f1f1}
+	tbody tr:nth-child(even) {background: #FFF}
+
+	th,td{
+		height: $base;
+		padding: 0 $base;
+	}
+
+	th{
+		font-weight: bold;
+		height: $base*2;
+		font-family: $heading_font;
+		font-size:1rem;
 	}
