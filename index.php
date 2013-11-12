@@ -47,9 +47,6 @@
 
 			<div class="col col--4"><p>4 col</p></div>
 			<div class="col col--4 col--4--last"><p>4 col</p></div>
-
-			
-
 		</div>
 
 		<h3>Usage</h3>

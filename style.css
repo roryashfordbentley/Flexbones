@@ -25,8 +25,9 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-/** funtions.scss all functions go here */
+/** functions.scss all functions and mixins go here */
 /** Whole Baseline This function checks to see if the font size multiplied by the baseline is a whole number. If not it rounds up the font size to ensure that  the baseline is a whole number, therefore a whole pixel. This fixes browser inconsistencies of rendering sub pixels. */
+/** mixins.scss all mixins go here */
 /** config.scss variables that control global stuff: grids, units font sizes etc */
 /** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
 /** gridtacular.scss: Grid and baseline overlay combined with breakpoint Information */
@@ -70,7 +71,9 @@ body { position: relative; }
 /** global.scss Document and Grid setup Font default declarations */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.clear { overflow: hidden; *zoom: 1; }
+.clear { *zoom: 1; }
+.clear:before, .clear:after { content: ""; display: table; }
+.clear:after { clear: both; }
 
 img { max-width: 100%; }
 
@@ -147,7 +150,9 @@ ol { list-style-type: decimal; font-weight: normal; margin-left: 2.4rem; }
 
 /** ui.scss Forms, buttons, icons, breadcrumbs, pagination */
 /** Forms */
-fieldset div { overflow: hidden; *zoom: 1; }
+fieldset div { *zoom: 1; }
+fieldset div:before, fieldset div:after { content: ""; display: table; }
+fieldset div:after { clear: both; }
 
 label { font-size: 1rem; line-height: 2.4rem; margin-bottom: 2.4rem; display: block; }
 
@@ -199,7 +204,9 @@ pre { background: #eee; border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
 .primary-nav { margin-bottom: 2.4rem; }
 
-.primary-nav__menu { list-style: none; overflow: hidden; *zoom: 1; margin: 0; }
+.primary-nav__menu { list-style: none; *zoom: 1; margin: 0; }
+.primary-nav__menu:before, .primary-nav__menu:after { content: ""; display: table; }
+.primary-nav__menu:after { clear: both; }
 
 .primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; }
 
@@ -211,16 +218,14 @@ pre { background: #eee; border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -
 
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
 .site-logo { display: block; margin-bottom: 2.4rem; }
-.site-logo img { display: block; width: 25%; }
+.site-logo img { display: block; margin: 0 auto; }
+@media (max-width: 640px) { .site-logo img { width: 50%; } }
 
 /** footer.scss all footer styles go here */
 .site-footer { border-top: 1px solid #ccc; }
 .site-footer p { margin: 0; padding: 2.4rem 0; }
 
 /** sidebar.scss */
-.site-logo { display: block; padding: 0 0 2.4rem 0; border-bottom: 1px solid #ccc; margin: 0 0 2.4rem 0; }
-.site-logo img { width: 300px; margin: 0 auto; text-align: center; }
-
 /** Styles for the included example Delete f you like */
 .col { background: #ccc; line-height: 4.8rem; text-align: center; margin-bottom: 2.4rem; border: 1px solid red; border: 1px solid #c4c4c4; }
 .col p { margin: 0; }

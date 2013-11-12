@@ -9,6 +9,9 @@
 
 		img{
 			display: block;
-			width:25%;
+			@include at-breakpoint($s){
+				width:50%;
+			}
+			margin: 0 auto;
 		}
 	}

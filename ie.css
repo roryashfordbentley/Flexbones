@@ -1,203 +1,83 @@
 /*
-Theme Name:     Flexbones Theme 5.0
-Theme URI:      http://roikles.com/
-Description:    A Responsive barebones theme to massively speed up development
-Author:         Rory Ashford
-Author URI:     http://roikles.com
-Version:        5.0
-License:		All work is the property of Rory Ashford
-License URI:	n/a
+Syntax error: File to import not found or unreadable: __mixins.scss.
+              Load paths:
+                /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-2.2.1.0/vendor/assets/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.4/sass
+                /Applications/Fire.app/Contents/Resources/lib/ruby/common/sassy-math-1.2/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/common/modular-scale-1.0.2/stylesheets
+                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.2.2/scss
+                Compass::SpriteImporter
+        on line 48 of /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass/ie.scss
 
-CONTENTS
-
-- Global
-- Wordpress
-- Typography
-- Tables
-- UI
-- Page
-- Navigation
-- Header
-- Footer
-- Sidebar
-
+Backtrace:
+/Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass/ie.scss:48
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:67:in `import'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:65:in `import'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:36:in `css_import?'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:215:in `visit_import'
+org/jruby/RubyBasicObject.java:1673:in `__send__'
+org/jruby/RubyKernel.java:2081:in `send'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+org/jruby/RubyArray.java:2355:in `map'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `visit_children'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+org/jruby/RubyBasicObject.java:1673:in `__send__'
+org/jruby/RubyKernel.java:2081:in `send'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+org/jruby/RubyBasicObject.java:1673:in `__send__'
+org/jruby/RubyKernel.java:2081:in `send'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/engine.rb:315:in `_render'
+/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/engine.rb:262:in `render'
+file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:188:in `compile'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:187:in `compile'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:186:in `compile'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+org/jruby/RubyArray.java:1612:in `each'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+org/jruby/RubyMethod.java:134:in `call'
+org/jruby/RubyProc.java:249:in `call'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/path.rb:73:in `run_callback'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/path.rb:55:in `callback_action'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/path.rb:35:in `update'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/state/directory.rb:39:in `modified'
+org/jruby/RubyArray.java:1612:in `each'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/state/directory.rb:37:in `modified'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/state/directory.rb:18:in `refresh'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/backends/polling.rb:17:in `run'
+org/jruby/RubyArray.java:1612:in `each'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/backends/polling.rb:17:in `run'
+org/jruby/RubyKernel.java:1390:in `loop'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/backends/polling.rb:15:in `run'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/monitor.rb:26:in `run'
+/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm.rb:70:in `monitor'
+file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:39:in `perform'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/ui/tray.rb:588:in `watch'
 */
-html, body, div, span, applet, object, iframe, h1, h2, legend, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
-
-html { line-height: 1; }
-
-ol, ul { list-style: none; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-
-caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
-
-q, blockquote { quotes: none; }
-q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
-
-a img { border: none; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
-
-/** IE fixes Remove media query blocks (leaves bloated code but works) */
-/** funtions.scss all functions go here */
-/** Whole Baseline This function checks to see if the font size multiplied by the baseline is a whole number. If not it rounds up the font size to ensure that  the baseline is a whole number, therefore a whole pixel. This fixes browser inconsistencies of rendering sub pixels. */
-/** mixins.scss all mixins go here */
-/** config.scss variables that control global stuff: grids, units font sizes etc */
-/** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
-/** gridtacular.scss: Grid and baseline overlay combined with breakpoint Information */
-/* Columns Mixin */
-body { position: relative; }
-
-.gridtacular { position: fixed; bottom: 0; right: 0; z-index: 10000; width: 55px; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 13px; line-height: 18px; font-family: Monaco, "Courier New", Courier, monospace; }
-.gridtacular li { display: block; padding: 10px; }
-.gridtacular a { display: block; }
-.gridtacular img { display: block; }
-
-.gridtacular__width { background: #41bd89; }
-
-.gridtacular__height { background: #2a4c5f; }
-
-.gridtacular__width__bg { position: absolute; color: #33996e; font-size: 20px; font-weight: bold; text-align: center; }
-
-.gridtacular__breakpoint { background: #d06857; }
-
-.gridtacular__baseline-toggle { background: #b7c725; }
-
-.gridtacular__grid-toggle { background: #41bdb6; }
-
-.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 24px; }
-
-.gridtacular__grid-overlay { display: none; position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
-.gridtacular__grid-overlay .col { border-left: 1px solid rgba(210, 210, 210, 0.3); border-right: 1px solid rgba(210, 210, 210, 0.3); width: 13.0434782609%; float: left; margin-right: 4.347826087%; display: inline; }
-
-/** global.scss Document and Grid setup Font default declarations */
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-
-.clear { *zoom: 1; }
-.clear:before, .clear:after { content: ""; display: table; }
-.clear:after { clear: both; }
-
-img { max-width: 100%; }
-
-html { font-size: 62.5%; line-height: 1.5; }
-
-body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
-
-.content { padding: 72px 0 0 0; }
-
-.wrapper { *zoom: 1; max-width: 90%; _width: 90%; margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
-.wrapper:after { content: ""; display: table; clear: both; }
-.lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
-
-.lt-ie9 .wrapper { width: 1000px; }
-
-/* -- _WORDPRESS.SCSS -- */
-/* Styles for Wordpress Specific Classes Required if the theme is to go on the wp.org repo */
-.alignleft { float: none; display: block; }
-
-.alignright { float: none; display: block; }
-
-.wp-caption { background: red; }
-
-.wp-caption-text { color: #fff; }
-
-.sticky { font-weight: bold; }
-
-.gallery-caption { background: red; }
-
-.bypostauthor { font-weight: bold; }
-
-.aligncenter { margin: 0 auto; }
-
-/** typography.scss all base font styles, paragraphs, headings, lists */
-a, a:visited { color: #03a7ff; text-decoration: none; }
-
-a:hover { text-decoration: none; color: #0097e9; }
-
-h1, h2, legend, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 24px; }
-
-h1 { font-size: 2rem; }
-
-h2, legend { font-size: 3.2rem; }
-
-h3 { font-size: 2.4rem; }
-
-p, ul, ol { font-weight: 400; font-size: 1.8rem; margin-bottom: 24px; }
-
-.lead { font-size: 2.4em; }
-
-strong { font-weight: bold; }
-
-em { font-style: italic; }
-
-ul { list-style-type: disc; font-weight: normal; margin-left: 24px; }
-
-ol { list-style-type: decimal; font-weight: normal; margin-left: 24px; }
-
-/** Responsive Baseline to have a baseline that changes with your content apply the flex-baseline class to the <html> element. To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434 */
-.flex-type { font-size: 62.5%; }
-
-/** ui.scss Forms, buttons, icons, breadcrumbs, pagination */
-/** Forms */
-fieldset div { *zoom: 1; }
-fieldset div:before, fieldset div:after { content: ""; display: table; }
-fieldset div:after { clear: both; }
-
-label { font-size: 1rem; line-height: 24px; margin-bottom: 24px; display: block; }
-
-input[type="text"], input[type="password"] { border: 1px solid #ccc; height: 24px; margin-bottom: 24px; float: left; display: block; }
-
-textarea { border: 1px solid #ccc; line-height: 24px; height: 96px; margin-bottom: 24px; display: block; width: 48.3870967742%; float: left; margin-right: 3.2258064516%; display: inline; }
-
-.input[type="radio"] { float: left; }
-
-input[type="submit"] { background: #03a7ff; padding: 0 24px; height: 24px; font-family: "Lato", helvetica, arial, sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: "Montserrat", helvetica, arial, sans-serif; }
-input[type="submit"]:hover { background: #0097e9; color: #fff; }
-input[type="submit"]:visited { color: #fff; }
-
-/** Buttons */
-.button { background: #03a7ff; padding: 0 24px; line-height: 48px; margin: 0 0 24px 0; display: inline-block; font-size: 1rem; font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
-.button:hover { background: #12acff; color: #fff; }
-.button:visited { color: #fff; }
-
-/** Table styling */
-table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 24px; font-size: 0.75rem; }
-
-thead { background: #03a7ff; color: #fff; }
-
-tbody tr:nth-child(odd) { background: #f1f1f1; }
-
-tbody tr:nth-child(even) { background: #FFF; }
-
-th, td { height: 24px; padding: 0 24px; }
-
-th { font-weight: bold; height: 48px; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
-
-/** Pre tags */
-pre { background: #eee; border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-size: 1.6rem; font-family: monospace; padding: 24px; margin-bottom: 24px; }
-
-/* -- _PAGE.SCSS -- */
-/* Styles for Wordpress Pages Includes styles for for specific page templates */
-/** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { margin-bottom: 24px; }
-
-.primary-nav__menu { list-style: none; *zoom: 1; margin: 0; }
-.primary-nav__menu:before, .primary-nav__menu:after { content: ""; display: table; }
-.primary-nav__menu:after { clear: both; }
-
-.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; }
-
-.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; background: #eee; margin-bottom: 2px; padding: 6px 12px; }
-
-.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
-
-.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #03a7ff; font-weight: bold; }
-
-/** Header specific declarations Note: navigation has its own document _navigation.scss */
-.site-logo { display: block; margin-bottom: 24px; }
-.site-logo img { display: block; width: 25%; }
-
-/** footer.scss all footer styles go here */
-.site-footer { border-top: 1px solid #ccc; }
-.site-footer p { margin: 0; padding: 24px 0; }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: __mixins.scss.\A               Load paths:\A                 /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-2.2.1.0/vendor/assets/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.4/sass\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/common/sassy-math-1.2/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/common/modular-scale-1.0.2/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.2.2/scss\A                 Compass::SpriteImporter\A         on line 48 of /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass/ie.scss"; }

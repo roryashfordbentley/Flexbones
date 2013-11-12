@@ -1,6 +1,6 @@
 /**
- * funtions.scss
- * all functions go here
+ * functions.scss
+ * all functions and mixins go here
  */
 
 /**
@@ -21,4 +21,20 @@
 	} @else {
 		@return percentage(round($font_size * $baseline) / $baseline / 16);
 	}
+}
+
+/**
+ * mixins.scss
+ * all mixins go here
+ */
+
+// Clearfix
+
+@mixin clearfix() {
+	*zoom:1;
+	&:before, &:after {
+	    content:"";
+	    display:table;
+	}
+	&:after { clear:both; }
 }
