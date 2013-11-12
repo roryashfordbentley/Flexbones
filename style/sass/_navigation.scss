@@ -17,13 +17,14 @@
     }
 	
 	// Menu item
-	.primary-nav__menu > .menu-item{ 
+	.primary-nav__menu .menu-item{ 
 		margin: 0;
 		font-family: $heading_font;
+		font-size: 1.6rem;
 	}
 	
 	// Menu item link (block level element with padding + margin applied)
-	.primary-nav__menu > .menu-item a{
+	.primary-nav__menu .menu-item a{
     	display: block;
     	color: $text_colour;
     	padding: 0;

@@ -124,3 +124,17 @@ table {
 		font-family: $heading_font;
 		font-size:1rem;
 	}
+
+/**
+ * Pre tags
+ */
+
+pre{
+	background: #eee;
+	border: 1px solid darken(#eee,3%);
+	@include border-radius(4px);
+	font-size: 1.6rem;
+	font-family: monospace;
+	padding: $base;
+	margin-bottom: $base;
+}

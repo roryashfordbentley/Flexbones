@@ -1,3 +1,4 @@
+</div>
 <div class="wrapper">
 	<footer class="site-footer">
 			<p>Built by <a href="https://twitter.com/roikles">@roikles</a> and <a href="https://twitter.com/drizzlyowl">@drizzlyowl</a> 

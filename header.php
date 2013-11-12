@@ -11,10 +11,29 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat:400' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
 	<![endif]-->
 </head>
 <body <?php body_class(); ?> >
+<div class="wrapper content">
+	<header class="site-header">	
+		<a href="<?php echo get_home_url(); ?>" class="site-logo">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo">
+		</a>		
+		<nav class="primary-nav">
+			<ul class="primary-nav__menu">
+			<?php 
+				//this will fail unless location is defined in WP-admin / menu
+				$args = array(
+					'menu' => '',
+					'container' => false,
+					'items_wrap' => '%3$s'
+				);
+			 	wp_nav_menu( $args ); 
+			 ?>
+			</ul>
+		</nav>
+	</header>	

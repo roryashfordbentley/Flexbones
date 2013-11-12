@@ -1,0 +1,43 @@
+/**
+ * Styles for the included example Delete f you like
+ */
+
+.col{
+	background: #ccc;
+	line-height: $base*2;
+	text-align: center;
+	margin-bottom: $base;
+	border: 1px solid red;
+	border: 1px solid darken(#ccc,3%);
+	p{
+		margin:0;
+	}
+}
+
+.col--1{
+	@include span-columns(1,8);
+}
+
+	.col--1--last{
+		@include span-columns(1 omega,8);
+	}
+
+.col--2{
+	@include span-columns(2,8);
+}
+
+	.col--2--last{
+		@include span-columns(2 omega,8);
+	}
+
+.col--4{
+	@include span-columns(4,8);
+}
+
+	.col--4--last{
+		@include span-columns(4 omega,8);
+	}
+
+.col--8{
+
+}

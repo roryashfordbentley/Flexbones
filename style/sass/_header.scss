@@ -3,11 +3,12 @@
  * Note: navigation has its own document _navigation.scss
  */
 
-	.site-header__logo{
+	.site-logo{
 		display: block;
 		margin-bottom: $base;
 
 		img{
 			display: block;
+			width:25%;
 		}
 	}

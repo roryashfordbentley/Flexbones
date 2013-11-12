@@ -60,12 +60,12 @@ body { position: relative; }
 @media (min-width: 641px) and (max-width: 880px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(0, 0, 0, 0.02); }
   .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
   .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
-@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 4.7619047619%; float: left; margin-right: 1.5873015873%; background: rgba(0, 0, 0, 0.02); }
-  .gridtacular__grid-overlay .col:nth-child(16) { width: 4.7619047619%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n + 17) { display: none; } }
-@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 4.7619047619%; float: left; margin-right: 1.5873015873%; background: rgba(0, 0, 0, 0.02); }
-  .gridtacular__grid-overlay .col:nth-child(16) { width: 4.7619047619%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n + 17) { display: none; } }
+@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(0, 0, 0, 0.02); }
+  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
+@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.3829787234%; float: left; margin-right: 2.1276595745%; background: rgba(0, 0, 0, 0.02); }
+  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.3829787234%; float: right; margin-right: 0; }
+  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
 
 /** global.scss Document and Grid setup Font default declarations */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -76,11 +76,11 @@ img { max-width: 100%; }
 
 html { font-size: 62.5%; line-height: 1.5; }
 
-body { color: #3e3e3e; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
-.content { padding: 2.4rem 0 0 0; }
+.content { padding: 7.2rem 0 0 0; }
 
-.wrapper { *zoom: 1; max-width: 90%; _width: 90%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.wrapper { *zoom: 1; max-width: 90%; _width: 90%; margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
 .wrapper:after { content: ""; display: table; clear: both; }
 @media (min-width: 881px) { .wrapper { width: 85%; max-width: 1200px; } }
 .lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
@@ -110,7 +110,7 @@ a, a:visited { color: #03a7ff; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #0097e9; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 1.3; margin-bottom: 2.4rem; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 2.4rem; }
 
 h1 { font-size: 2rem; }
 @media (min-width: 641px) and (max-width: 880px) { h1 { font-size: 2.2rem; } }
@@ -127,18 +127,17 @@ h3 { font-size: 2.4rem; }
 @media (min-width: 881px) and (max-width: 1200px) { h3 { font-size: 2.4rem; } }
 @media (min-width: 1200px) { h3 { font-size: 2.4rem; } }
 
-p, ul, ol { font-weight: 400; font-size: 1.4rem; margin-bottom: 2.4rem; }
-@media (min-width: 641px) and (max-width: 880px) { p, ul, ol { font-size: 1.6rem; } }
-@media (min-width: 881px) and (max-width: 1200px) { p, ul, ol { font-size: 1.7rem; } }
-@media (min-width: 1200px) { p, ul, ol { font-size: 1.8rem; } }
+p, ul, ol { font-weight: 400; font-size: 1.8rem; margin-bottom: 2.4rem; }
+
+.lead { font-size: 2.4em; }
 
 strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-ul { list-style-type: disc; font-weight: normal; margin-left: 4.8rem; }
+ul { list-style-type: disc; font-weight: normal; margin-left: 2.4rem; }
 
-ol { list-style-type: decimal; font-weight: normal; margin-left: 4.8rem; }
+ol { list-style-type: decimal; font-weight: normal; margin-left: 2.4rem; }
 
 /** Responsive Baseline to have a baseline that changes with your content apply the flex-baseline class to the <html> element. To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434 */
 .flex-type { font-size: 62.5%; }
@@ -180,44 +179,60 @@ th, td { height: 2.4rem; padding: 0 2.4rem; }
 
 th { font-weight: bold; height: 4.8rem; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
 
+/** Pre tags */
+pre { background: #eee; border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-size: 1.6rem; font-family: monospace; padding: 2.4rem; margin-bottom: 2.4rem; }
+
 /** layouts.scss Contains rules for the overall layout of eachs ection e.g. layout would include header, footer, content and sidebar BUT layouts.scss should not have ANY rules related to module design/ markup */
 /** Layout Home */
 /** Layout Standard Page */
-@media (min-width: 881px) { .main-index { width: 68.253968254%; float: right; margin-right: 0; } }
-.lt-ie9 .main-index { width: 68.253968254%; float: right; margin-right: 0; *margin-left: -2%; display: inline; }
+@media (min-width: 881px) { .main-index { width: 65.9574468085%; float: right; margin-right: 0; } }
+.lt-ie9 .main-index { width: 65.9574468085%; float: right; margin-right: 0; #margin-left: -2%; display: inline; }
 
-@media (min-width: 881px) { .sidebar-index { width: 23.8095238095%; float: left; margin-right: 1.5873015873%; } }
-.lt-ie9 .sidebar-index { width: 23.8095238095%; float: left; margin-right: 1.5873015873%; display: inline; }
+@media (min-width: 881px) { .site-header { width: 23.4042553191%; float: left; margin-right: 2.1276595745%; } }
+.lt-ie9 .site-header { width: 23.4042553191%; float: left; margin-right: 2.1276595745%; display: inline; }
 
 /** Layout Blog Archive */
 /** Layout Blog Single */
 /** Layout Contact */
 /* -- _PAGE.SCSS -- */
 /* Styles for Wordpress Pages Includes styles for for specific page templates */
-article { border-bottom: 0.1rem solid #ccc; margin-bottom: 2.3rem; }
-article h2, article legend { margin: 0; }
-
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
 .primary-nav { margin-bottom: 2.4rem; }
 
 .primary-nav__menu { list-style: none; overflow: hidden; *zoom: 1; margin: 0; }
 
-.primary-nav__menu > .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; }
+.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; }
 
-.primary-nav__menu > .menu-item a { display: block; color: #3e3e3e; padding: 0; background: #eee; margin-bottom: 2px; padding: 0.6rem 1.2rem; }
+.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; background: #eee; margin-bottom: 2px; padding: 0.6rem 1.2rem; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
 
 .primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #03a7ff; font-weight: bold; }
 
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
-.site-header__logo { display: block; margin-bottom: 2.4rem; }
-.site-header__logo img { display: block; }
+.site-logo { display: block; margin-bottom: 2.4rem; }
+.site-logo img { display: block; width: 25%; }
 
 /** footer.scss all footer styles go here */
 .site-footer { border-top: 1px solid #ccc; }
 .site-footer p { margin: 0; padding: 2.4rem 0; }
 
 /** sidebar.scss */
-.site-logo { display: block; padding: 0 0 2.4rem 0; border-bottom: 1px solid #ccc; }
+.site-logo { display: block; padding: 0 0 2.4rem 0; border-bottom: 1px solid #ccc; margin: 0 0 2.4rem 0; }
 .site-logo img { width: 300px; margin: 0 auto; text-align: center; }
+
+/** Styles for the included example Delete f you like */
+.col { background: #ccc; line-height: 4.8rem; text-align: center; margin-bottom: 2.4rem; border: 1px solid red; border: 1px solid #c4c4c4; }
+.col p { margin: 0; }
+
+.col--1 { width: 9.6774193548%; float: left; margin-right: 3.2258064516%; display: inline; }
+
+.col--1--last { width: 9.6774193548%; float: right; margin-right: 0; #margin-left: -2%; display: inline; }
+
+.col--2 { width: 22.5806451613%; float: left; margin-right: 3.2258064516%; display: inline; }
+
+.col--2--last { width: 22.5806451613%; float: right; margin-right: 0; #margin-left: -2%; display: inline; }
+
+.col--4 { width: 48.3870967742%; float: left; margin-right: 3.2258064516%; display: inline; }
+
+.col--4--last { width: 48.3870967742%; float: right; margin-right: 0; #margin-left: -2%; display: inline; }
