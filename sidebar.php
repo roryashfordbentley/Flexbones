@@ -1,5 +1,5 @@
 <header class="sidebar-index">	
-	<a href="<?php echo get_home_url(); ?>" class="site-header__logo">
+	<a href="<?php echo get_home_url(); ?>" class="site-logo">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo">
 	</a>		
 	<nav class="primary-nav">

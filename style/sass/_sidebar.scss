@@ -3,6 +3,19 @@
  */
 
 .sidebar-index{
-	background: #eee;
-	padding: $base;
+	//background: #eee;
+	//padding: $base;
 }
+
+	.site-logo{
+		display: block;
+		padding: 0 0 $base 0;
+		border-bottom: 1px solid #ccc;
+		
+		img{
+			width: 300px;
+			margin: 0 auto;
+			text-align: center;
+
+		}
+	}

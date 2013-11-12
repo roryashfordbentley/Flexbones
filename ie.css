@@ -80,9 +80,9 @@ body { position: relative; }
 
 img { max-width: 100%; }
 
-html { font-size: 62.5%; line-height: 24px; }
+html { font-size: 62.5%; line-height: 1.5; }
 
-body { color: #3e3e3e; font-family: helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { color: #3e3e3e; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
 .content { padding: 24px 0 0 0; }
 
@@ -115,27 +115,23 @@ a, a:visited { color: #03a7ff; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #0097e9; }
 
-p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 24px; margin-bottom: 24px; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 1.3; margin-bottom: 24px; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 500; color: #292929; line-height: 1.1; }
-
-p { font-weight: normal; font-size: 1.6rem; }
-
-h1 { font-size: 3.8rem; }
+h1 { font-size: 2rem; }
 
 h2, legend { font-size: 3.2rem; }
 
 h3 { font-size: 2.4rem; }
 
-h4 { font-size: 1.8rem; }
+p, ul, ol { font-weight: 400; font-size: 1.4rem; margin-bottom: 24px; }
 
 strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-ul { list-style-type: disc; font-size: 1.6rem; font-weight: normal; margin-left: 48px; }
+ul { list-style-type: disc; font-weight: normal; margin-left: 48px; }
 
-ol { list-style-type: decimal; font-size: 1.6rem; font-weight: normal; margin-left: 48px; }
+ol { list-style-type: decimal; font-weight: normal; margin-left: 48px; }
 
 /** Responsive Baseline to have a baseline that changes with your content apply the flex-baseline class to the <html> element. To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434 */
 .flex-type { font-size: 62.5%; }
@@ -154,12 +150,12 @@ textarea { border: 1px solid #ccc; line-height: 24px; height: 96px; margin-botto
 
 .input[type="radio"] { float: left; }
 
-input[type="submit"] { background: #03a7ff; padding: 0 24px; height: 24px; font-family: helvetica, arial, sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
+input[type="submit"] { background: #03a7ff; padding: 0 24px; height: 24px; font-family: "Lato", helvetica, arial, sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: "Montserrat", helvetica, arial, sans-serif; }
 input[type="submit"]:hover { background: #0097e9; color: #fff; }
 input[type="submit"]:visited { color: #fff; }
 
 /** Buttons */
-.button { background: #03a7ff; padding: 0 24px; line-height: 48px; margin: 0 0 24px 0; display: inline-block; font-size: 1rem; font-family: helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
+.button { background: #03a7ff; padding: 0 24px; line-height: 48px; margin: 0 0 24px 0; display: inline-block; font-size: 1rem; font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
 .button:hover { background: #12acff; color: #fff; }
 .button:visited { color: #fff; }
 
@@ -174,7 +170,7 @@ tbody tr:nth-child(even) { background: #FFF; }
 
 th, td { height: 24px; padding: 0 24px; }
 
-th { font-weight: bold; height: 48px; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
+th { font-weight: bold; height: 48px; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
 
 /* -- _PAGE.SCSS -- */
 /* Styles for Wordpress Pages Includes styles for for specific page templates */
@@ -182,16 +178,15 @@ article { border-bottom: 0.1rem solid #ccc; margin-bottom: 23.9px; }
 article h2, article legend { margin: 0; }
 
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { margin-bottom: 24px; height: 48px; }
+.primary-nav { margin-bottom: 24px; }
 
 .primary-nav__menu { list-style: none; *zoom: 1; margin: 0; }
 .primary-nav__menu:before, .primary-nav__menu:after { content: ""; display: table; }
 .primary-nav__menu:after { clear: both; }
 
-.primary-nav__menu > .menu-item { margin: 0; display: inline; }
-.lt-ie9 .primary-nav__menu > .menu-item { display: inherit; }
+.primary-nav__menu > .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; }
 
-.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0; }
+.primary-nav__menu > .menu-item a { display: block; color: #3e3e3e; padding: 0; background: #eee; margin-bottom: 2px; padding: 6px 12px; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
 

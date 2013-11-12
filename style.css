@@ -74,9 +74,9 @@ body { position: relative; }
 
 img { max-width: 100%; }
 
-html { font-size: 62.5%; line-height: 2.4rem; }
+html { font-size: 62.5%; line-height: 1.5; }
 
-body { color: #3e3e3e; font-family: helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { color: #3e3e3e; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
 .content { padding: 2.4rem 0 0 0; }
 
@@ -105,38 +105,40 @@ body { color: #3e3e3e; font-family: helvetica, arial, sans-serif; -webkit-font-s
 
 .aligncenter { margin: 0 auto; }
 
-/** Responsive Baseline to have a baseline that changes with your content apply the flex-baseline class to the <html> element. */
-.flex-type { font-size: 62.5%; }
-@media (min-width: 641px) and (max-width: 880px) { .flex-type { font-size: 62.5%; } }
-@media (min-width: 881px) and (max-width: 1200px) { .flex-type { font-size: 67.7083333333%; } }
-@media (min-width: 1200px) { .flex-type { font-size: 75.5208333333%; } }
-
 /** typography.scss all base font styles, paragraphs, headings, lists */
 a, a:visited { color: #03a7ff; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #0097e9; }
 
-p, h1, h2, legend, h3, h4, h4, h5, h6, ul, ol { line-height: 2.4rem; margin-bottom: 2.4rem; }
+h1, h2, legend, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 1.3; margin-bottom: 2.4rem; }
 
-h1, h2, legend, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 500; color: #292929; line-height: 1.1; }
-
-p { font-weight: normal; font-size: 1.6rem; }
-
-h1 { font-size: 3.8rem; }
+h1 { font-size: 2rem; }
+@media (min-width: 641px) and (max-width: 880px) { h1 { font-size: 2.2rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { h1 { font-size: 3.8rem; } }
+@media (min-width: 1200px) { h1 { font-size: 4rem; } }
 
 h2, legend { font-size: 3.2rem; }
+@media (min-width: 641px) and (max-width: 880px) { h2, legend { font-size: 3.2rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { h2, legend { font-size: 3.2rem; } }
+@media (min-width: 1200px) { h2, legend { font-size: 3.2rem; } }
 
 h3 { font-size: 2.4rem; }
+@media (min-width: 641px) and (max-width: 880px) { h3 { font-size: 2.4rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { h3 { font-size: 2.4rem; } }
+@media (min-width: 1200px) { h3 { font-size: 2.4rem; } }
 
-h4 { font-size: 1.8rem; }
+p, ul, ol { font-weight: 400; font-size: 1.4rem; margin-bottom: 2.4rem; }
+@media (min-width: 641px) and (max-width: 880px) { p, ul, ol { font-size: 1.6rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { p, ul, ol { font-size: 1.7rem; } }
+@media (min-width: 1200px) { p, ul, ol { font-size: 1.8rem; } }
 
 strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-ul { list-style-type: disc; font-size: 1.6rem; font-weight: normal; margin-left: 4.8rem; }
+ul { list-style-type: disc; font-weight: normal; margin-left: 4.8rem; }
 
-ol { list-style-type: decimal; font-size: 1.6rem; font-weight: normal; margin-left: 4.8rem; }
+ol { list-style-type: decimal; font-weight: normal; margin-left: 4.8rem; }
 
 /** Responsive Baseline to have a baseline that changes with your content apply the flex-baseline class to the <html> element. To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434 */
 .flex-type { font-size: 62.5%; }
@@ -156,12 +158,12 @@ textarea { border: 1px solid #ccc; line-height: 2.4rem; height: 9.6rem; margin-b
 
 .input[type="radio"] { float: left; }
 
-input[type="submit"] { background: #03a7ff; padding: 0 2.4rem; height: 2.4rem; font-family: helvetica, arial, sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: helvetica, arial, sans-serif; }
+input[type="submit"] { background: #03a7ff; padding: 0 2.4rem; height: 2.4rem; font-family: "Lato", helvetica, arial, sans-serif; font-size: 1rem; font-weight: bold; color: #fff; border: 0; float: left; font-family: "Montserrat", helvetica, arial, sans-serif; }
 input[type="submit"]:hover { background: #0097e9; color: #fff; }
 input[type="submit"]:visited { color: #fff; }
 
 /** Buttons */
-.button { background: #03a7ff; padding: 0 2.4rem; line-height: 4.8rem; margin: 0 0 2.4rem 0; display: inline-block; font-size: 1rem; font-family: helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
+.button { background: #03a7ff; padding: 0 2.4rem; line-height: 4.8rem; margin: 0 0 2.4rem 0; display: inline-block; font-size: 1rem; font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: bold; color: #fff; }
 .button:hover { background: #12acff; color: #fff; }
 .button:visited { color: #fff; }
 
@@ -176,16 +178,16 @@ tbody tr:nth-child(even) { background: #FFF; }
 
 th, td { height: 2.4rem; padding: 0 2.4rem; }
 
-th { font-weight: bold; height: 4.8rem; font-family: helvetica, arial, sans-serif; font-size: 1rem; }
+th { font-weight: bold; height: 4.8rem; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
 
 /** layouts.scss Contains rules for the overall layout of eachs ection e.g. layout would include header, footer, content and sidebar BUT layouts.scss should not have ANY rules related to module design/ markup */
 /** Layout Home */
 /** Layout Standard Page */
-@media (min-width: 881px) { .main-index { width: 74.6031746032%; float: right; margin-right: 0; } }
-.lt-ie9 .main-index { width: 74.6031746032%; float: right; margin-right: 0; *margin-left: -2%; display: inline; }
+@media (min-width: 881px) { .main-index { width: 68.253968254%; float: right; margin-right: 0; } }
+.lt-ie9 .main-index { width: 68.253968254%; float: right; margin-right: 0; *margin-left: -2%; display: inline; }
 
-@media (min-width: 881px) { .sidebar-index { width: 17.4603174603%; float: left; margin-right: 1.5873015873%; } }
-.lt-ie9 .sidebar-index { width: 17.4603174603%; float: left; margin-right: 1.5873015873%; display: inline; }
+@media (min-width: 881px) { .sidebar-index { width: 23.8095238095%; float: left; margin-right: 1.5873015873%; } }
+.lt-ie9 .sidebar-index { width: 23.8095238095%; float: left; margin-right: 1.5873015873%; display: inline; }
 
 /** Layout Blog Archive */
 /** Layout Blog Single */
@@ -196,15 +198,13 @@ article { border-bottom: 0.1rem solid #ccc; margin-bottom: 2.3rem; }
 article h2, article legend { margin: 0; }
 
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { margin-bottom: 2.4rem; height: 4.8rem; }
+.primary-nav { margin-bottom: 2.4rem; }
 
 .primary-nav__menu { list-style: none; overflow: hidden; *zoom: 1; margin: 0; }
 
-.primary-nav__menu > .menu-item { margin: 0; display: inline; }
-@media (min-width: 881px) { .primary-nav__menu > .menu-item { display: inherit; } }
-.lt-ie9 .primary-nav__menu > .menu-item { display: inherit; }
+.primary-nav__menu > .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; }
 
-.primary-nav__menu > .menu-item a { display: inline-block; color: #3e3e3e; padding: 0; }
+.primary-nav__menu > .menu-item a { display: block; color: #3e3e3e; padding: 0; background: #eee; margin-bottom: 2px; padding: 0.6rem 1.2rem; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #03a7ff; }
 
@@ -219,4 +219,5 @@ article h2, article legend { margin: 0; }
 .site-footer p { margin: 0; padding: 2.4rem 0; }
 
 /** sidebar.scss */
-.sidebar-index { background: #eee; padding: 2.4rem; }
+.site-logo { display: block; padding: 0 0 2.4rem 0; border-bottom: 1px solid #ccc; }
+.site-logo img { width: 300px; margin: 0 auto; text-align: center; }

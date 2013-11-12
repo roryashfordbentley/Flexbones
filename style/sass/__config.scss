@@ -10,14 +10,6 @@ $base: 2.4rem;
 
 $font-size: 62.5%;
 
-// If responsive baseline is used:
-
-$s_font_size: 			whole_baseline(10,$base);
-$m_font_size: 			whole_baseline(10,$base);
-$l_font_size: 			whole_baseline(11,$base);
-$xl_font_size: 			whole_baseline(12,$base);
-
-
 // Grid settings (SUSY)
 
 $total-columns: 		6;  
@@ -26,15 +18,15 @@ $gutter-width: 			2%;
 $grid-padding: 			0;
 $container-width: 		90%;
 
-
 // Column
+// 
 $columns_s:				6;
 $columns_m:				12;
 $columns_l:				16;
 $columns_xl:			16;
 
 // $media-layout: min-width mq | total columns | max-width mq
-// 
+
 $s: 					0 $columns_s 640px;
 $m: 					641px $columns_m 880px;
 $m_up: 					641px $columns_m  lt-ie9;
@@ -45,16 +37,8 @@ $ie: 					0 $columns_l lt-ie9;
 
 // Font Stack
 
-$heading_font: 			helvetica, arial, sans-serif;
-$body_font: 			helvetica, arial, sans-serif;
-
-// Typographic units
-
-$paragraph_size:		1.6rem; 
-$h1_size:				3.8rem;  
-$h2_size:				3.2rem;  
-$h3_size:				2.4rem;  
-$h4_size:				1.8rem;  
+$heading_font: 			'Montserrat', helvetica, arial, sans-serif;
+$body_font: 			'Lato', helvetica, arial, sans-serif;
 
 // Box sizing
 $border_box: 			true;

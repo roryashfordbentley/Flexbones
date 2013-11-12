@@ -7,7 +7,6 @@
 </div>
 
 <div class="gridtacular"></div>
-<?php //print_r( debug_backtrace() ); ?>
 <?php wp_footer(); //important! ?>
 </body>
 </html>

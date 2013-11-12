@@ -7,7 +7,6 @@
 // Primary nav container
 .primary-nav{   
     margin-bottom:$base; 
-    height: $base*2;
 }
 
 	// The first ul
@@ -20,18 +19,17 @@
 	// Menu item
 	.primary-nav__menu > .menu-item{ 
 		margin: 0;
-		display: inline;
-		@include at-breakpoint($l_up){
-			display: inherit;
-		}
-
+		font-family: $heading_font;
 	}
 	
 	// Menu item link (block level element with padding + margin applied)
 	.primary-nav__menu > .menu-item a{
-    	display: inline-block;
+    	display: block;
     	color: $text_colour;
     	padding: 0;
+    	background: #eee;
+    	margin-bottom: 2px;
+    	padding: $base/4 $base/2;
 }
 	
 	// Menu item hover

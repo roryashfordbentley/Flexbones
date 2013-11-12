@@ -4,6 +4,32 @@
  * paragraphs, headings, lists
  */
 
+// Typographic units
+
+// Para
+$p_s:					1.4rem; 
+$p_m:					1.6rem; 
+$p_l:					1.7rem; 
+$p_xl:					1.8rem; 
+
+// H1
+$h1_s:					2rem; 
+$h1_m:					2.2rem; 
+$h1_l:					3.8rem; 
+$h1_xl:					4rem;  
+// h2
+$h2_s:					3.2rem; 
+$h2_m:					3.2rem; 
+$h2_l:					3.2rem; 
+$h2_xl:					3.2rem; 
+//h3
+$h3_s:					2.4rem; 
+$h3_m:					2.4rem; 
+$h3_l:					2.4rem; 
+$h3_xl:					2.4rem;
+
+// Links
+
 a,
 a:visited{
 	color: $link;
@@ -15,37 +41,84 @@ a:hover{
 	color: $link_hover;
 }
 
-p,h1,h2,h3,h4,h4,h5,h6,ul,ol{
-	line-height: $base;
-	margin-bottom: $base;
-}
+// All Headings
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading_font;
-	font-weight: 500;
+	font-weight: 700;
 	color: #292929;
-	line-height: 1.1;
-}
-
-p{
-	font-weight: normal;
-	font-size: $paragraph_size;
+	line-height: 1.3;
+	margin-bottom: $base;
 }
 
 h1{ 
-	font-size: $h1_size;
+	font-size: $h1_s;
+	@include at-breakpoint($m){ 	
+		font-size: $h1_m;
+
+	}
+
+	@include at-breakpoint($l){ 
+		font-size: $h1_l;
+
+	}
+	
+	@include at-breakpoint($xl){ 
+		font-size: $h1_xl;
+
+	}
 }
 
 h2{ 
-	font-size: $h2_size;
+	font-size: $h2_s;
+	@include at-breakpoint($m){ 	
+		font-size: $h2_m;
+	}
+
+	@include at-breakpoint($l){ 
+		font-size: $h2_l;
+	}
+	
+	@include at-breakpoint($xl){ 
+		font-size: $h2_xl;
+	}
 }
 
 h3{ 
-	font-size: $h3_size;
+	font-size: $h3_s;
+	@include at-breakpoint($m){ 	
+		font-size: $h3_m;
+	}
+
+	@include at-breakpoint($l){ 
+		font-size: $h3_l;
+	}
+	
+	@include at-breakpoint($xl){ 
+		font-size: $h3_xl;
+	}
 }
 
-h4{ 
-	font-size: $h4_size;
+
+// Paragraph and lists 
+
+p,ul,ol{
+	font-weight: 400;
+	font-size: $p_s;
+	margin-bottom: $base;
+	
+	@include at-breakpoint($m){ 	
+		font-size: $p_m;
+	}
+
+	@include at-breakpoint($l){ 
+		font-size: $p_l;
+	}
+	
+	@include at-breakpoint($xl){ 
+		font-size: $p_xl;
+	}
+
 }
 
 strong{ font-weight: bold; }
@@ -54,14 +127,12 @@ em{ font-style: italic; }
 
 ul {	
 	list-style-type: disc;
-	font-size: $paragraph_size;
 	font-weight: normal;
 	margin-left: $base*2;
 }
 
 ol {
 	list-style-type: decimal;
-	font-size: $paragraph_size;
 	font-weight: normal;
 	margin-left: $base*2;
 } 
@@ -72,9 +143,11 @@ ol {
  * To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434
  */
 
+// Alternatively... if you want responsive type+baseline based on the html font size...
+
 .flex-type{
-	font-size: $s_font_size; 
-	@include at-breakpoint($m){ font-size: $m_font_size; }
-	@include at-breakpoint($l){ font-size: $l_font_size; }
-	@include at-breakpoint($xl){ font-size: $xl_font_size; }
+	font-size: whole_baseline(10,$base); 
+	@include at-breakpoint($m){ font-size: whole_baseline(10,$base); }
+	@include at-breakpoint($l){ font-size: whole_baseline(11,$base); }
+	@include at-breakpoint($xl){ font-size: whole_baseline(12,$base); }
 }

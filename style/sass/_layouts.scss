@@ -19,13 +19,13 @@
 .main-index{
 	
 	@include at-breakpoint($l_up){
-		@include span-columns(12 omega,16);
+		@include span-columns(11 omega,16);
 	}
 }
 
 .sidebar-index{
 	@include at-breakpoint($l_up){
-		@include span-columns(3, 16);
+		@include span-columns(4, 16);
 	}
 }
 

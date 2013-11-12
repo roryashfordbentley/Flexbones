@@ -20,9 +20,8 @@
 img{ max-width: 100%; }  
 
 html { 
-	// The magic, it happens right here
 	font-size: $font_size;
-	line-height: $base;
+	line-height: 1.5;
 }
 
 body {
