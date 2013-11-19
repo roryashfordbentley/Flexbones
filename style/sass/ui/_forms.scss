@@ -1,0 +1,46 @@
+/**
+ * Forms
+ */
+
+form{
+	font-family: $body_font;
+}
+
+label {
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+}
+
+input[type="text"], 
+input[type="password"],
+textarea{
+	display: block;
+	margin: 0 0 $base 0;
+	width: 100%;
+	height: $base;
+	border: 0;
+	padding: 0 $base/4; 
+	outline: none;
+	@include border-radius($radius);
+	@include box-shadow(inset darken(#ccc,15%) 0 0 1px); //emulate border without affecting height
+	
+	&:focus{
+		background: #eff;
+		@include box-shadow(inset $blue 0 0 5px);
+	}
+}
+
+input[type="text"], 
+input[type="password"]{
+	
+}
+
+textarea{
+	height: $base*6;
+}
+
+input[type="submit"]{
+	@extend .btn;
+}

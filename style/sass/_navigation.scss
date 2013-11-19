@@ -12,7 +12,6 @@
 	// The first ul
 	.primary-nav__menu{
         list-style: none;
-        @include clearfix();
 		margin: 0;
     }
 	
@@ -28,9 +27,9 @@
     	display: block;
     	color: $text_colour;
     	padding: 0;
-    	background: #eee;
+    	border-bottom: 1px solid #eee;
     	margin-bottom: 2px;
-    	padding: $base/4 $base/2;
+    	//padding: $base/4 0;
 }
 	
 	// Menu item hover
@@ -38,7 +37,7 @@
 		
 		a,a:visited{
 			//background: $blue; 
-			color: $blue;
+			color: $link;
 		}
     }
 
@@ -49,6 +48,6 @@
     .primary-nav__menu > .current-menu-ancestor a:visited,
     .primary-nav__menu > .current-post-parent a,
 	.primary-nav__menu > .current-post-parent a:visited{
-        color: $blue;
+        color: $link;
         font-weight: bold;
     }

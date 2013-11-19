@@ -1,17 +1,16 @@
-/**
- * functions.scss
- * all functions and mixins go here
- */
+////
+// functions.scss
+// all functions and mixins go here
 
-/**
- * Whole Baseline
- * This function checks to see if the font size
- * multiplied by the baseline is a whole number.
- * If not it rounds up the font size to ensure that 
- * the baseline is a whole number, therefore a whole
- * pixel. This fixes browser inconsistencies of rendering
- * sub pixels.
- */
+////
+ // Whole Baseline
+ // This function checks to see if the font size
+ // multiplied by the baseline is a whole number.
+ // If not it rounds up the font size to ensure that 
+ // the baseline is a whole number, therefore a whole
+ // pixel. This fixes browser inconsistencies of rendering
+ // sub pixels.
+////
 
 @function whole_baseline($font_size,$baseline){
 
@@ -23,10 +22,10 @@
 	}
 }
 
-/**
- * mixins.scss
- * all mixins go here
- */
+////
+ // mixins.scss
+ // all mixins go here
+////
 
 // Clearfix
 

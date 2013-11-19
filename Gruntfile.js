@@ -30,7 +30,12 @@ module.exports = function(grunt) {
                         'js/rem_polyfill.js',
                         'js/gridtacular.js', 
                         'js/scripts.js',
-                        'js/ga.js'
+                        'js/ga.js',
+                        'js/prettify/prettify.js',
+                        'js/prettify/css.js',
+                        'js/prettify/scss.js',
+                        'js/prettify/sql.js',
+                        'js/prettify/yaml.js'
                     ]
                 }
             }

@@ -5,8 +5,15 @@
  */
 
 // If $border-box is true then use box sizing border box
-@if($border_box == true){
-	*{ @include box-sizing(border-box); }
+
+*{
+	margin: 0;
+    padding: 0;
+    position: relative;
+
+    @if($border_box == true){
+		@include box-sizing(border-box);
+	}
 }
 
 // Clearfix
@@ -14,10 +21,6 @@
 .clear{
 	@include clearfix();
 }
-
-// Responsive Images
-
-img{ max-width: 100%; }  
 
 html { 
 	font-size: $font_size;
@@ -28,10 +31,6 @@ body {
 	color: $text_colour;
 	font-family: $body_font;
 	-webkit-font-smoothing: antialiased;
-}
-
-.content{
-	padding: $base*3 0 0 0;
 }
 
 .wrapper {

@@ -1,0 +1,16 @@
+/**
+ * Responsive Baseline
+ * to have a baseline that changes with your content apply the flex-baseline class to the <html> element.
+ * To ensure baselines are whole pixel values some font values may contain decimals e.g. 16.23434
+ */
+
+/**
+ * This is an experimental module and not fit for production at this time.
+ */
+
+.flex-type{
+	font-size: whole_baseline(10,$base); 
+	@include at-breakpoint($m){ font-size: whole_baseline(10,$base); }
+	@include at-breakpoint($l){ font-size: whole_baseline(11,$base); }
+	@include at-breakpoint($xl){ font-size: whole_baseline(12,$base); }
+}

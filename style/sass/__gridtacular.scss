@@ -1,11 +1,9 @@
-/**
- * gridtacular.scss:
- * Grid and baseline overlay combined with breakpoint
- * Information
- */
+////
+// gridtacular.scss:
+// Grid and baseline overlay combined with breakpoint
+// Information
 
-
-/* Columns Mixin */
+// Columns Mixin
 
 @mixin gridtacular_columns($breakpoint,$columns) {
 	
@@ -32,97 +30,126 @@ body{
 
 .gridtacular{
 	position:fixed;
-	bottom:0;
-	right:0;
-	z-index:10000;
-	width: 55px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+	background: $turquoise;
+	@include at-breakpoint($m){ background: darken($turquoise, 5%); }
+	@include at-breakpoint($l){ background: darken($turquoise, 10%); }
+	@include at-breakpoint($xl){ background: darken($turquoise, 15%); }
+
+
 	color: #fff;
 	list-style: none; 
-	margin:0; 
-	padding:0;
-	font-size:13px;
-	line-height: 18px;
+	margin: 0; 
+	padding: 0;
+	font-size: 12px;
+	line-height: 24px;
 	font-family: Monaco, "Courier New", Courier, monospace;
 
 	li{
-		display: block;
-		padding: 10px;
+		display: inline-block;
+		padding: 0 6px;
+		margin: 0;
+		border-right: 1px solid lighten(#41bdb6, 10%);
 	}
 
-	a{
-		display: block;
-	}
+	a{ display: block; }
 
-	img{
-		display: block;
-	}
+	img{ display: block; }
 }
 
-	.gridtacular__width{
-		background:#41bd89;
+	// Gridtacular Buttons
+
+	.g-button{
+		cursor: pointer;
+		border: none;
+		background: none;
+		outline: none;
+		color: lighten(#41bdb6, 20%);
+		font-weight: $bold;
+		font-family: Monaco, "Courier New", Courier, monospace;
 	}
 
-	.gridtacular__height{
-		background:#2a4c5f;
-	}
-		
-		.gridtacular__width__bg{
-			position: absolute;
-			color: #33996e;
-			font-size: 20px;
-			font-weight: bold;
-			text-align: center;
+		.g-button--grid--active, 
+		.g-button--baseline--active{
+			color: #fff;
 		}
+	
+	// Breakpoint
 
 	.gridtacular__breakpoint{
-		background:#d06857;
-	}
-	
-	.gridtacular__baseline-toggle{
-		background:#b7c725;
-	}
-	
-	.gridtacular__grid-toggle{
-		background:#41bdb6;
+		font-weight: bold;
+		img{
+			width: 20px;
+		}
 	}
 
-.gridtacular__baseline-overlay{
-	display: none;
-	position: absolute;
-	width: auto;
-	overflow: hidden;
-	z-index: 100;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	// Using a 50px high background image but resizing it down to 
-	background-image: url("images/baseline.png"); 
-	// Realistic baseline heights it appears as a hairline stroke!
-	background-size: 100% $base;
-}
-
-.gridtacular__grid-overlay{
-	display: none;
-	position: absolute;
-	width: auto;
-	z-index: 100;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	// Width
 	
-	.col{
-		border-left: 1px solid rgba(210,210,210,0.3);
-		border-right: 1px solid rgba(210,210,210,0.3);
-		@include span-columns(1,$columns_s);
+	.gridtacular__width{
 		
-		// Small breakpoint
-		@include gridtacular_columns($s,$columns_s);
-		@include gridtacular_columns($m,$columns_m);
-		@include gridtacular_columns($l,$columns_l);
-		@include gridtacular_columns($xl,$columns_xl);
 	}
-}
+
+	// Height
+
+	.gridtacular__height{
+		
+	}
+
+	// Baseline toggle
+
+	.gridtacular__baseline-toggle{
+		
+		float: right;
+	}
+
+	.gridtacular__baseline-overlay{
+		display: none;
+		position: absolute;
+		width: auto;
+		overflow: hidden;
+		z-index: 100;
+		pointer-events: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		// Using a 50px high background image but resizing it down to 
+		background-image: url("images/baseline.png"); 
+		// Change $base to appropriate baseline height
+		background-size: 100% $base;
+	}
+
+	// Grid toggle
+
+	.gridtacular__grid-toggle{
+		//background:#41bdb6;
+		float: right;
+	}
+
+	.gridtacular__grid-overlay{
+		display: none;
+		position: absolute;
+		width: auto;
+		z-index: 100;
+		pointer-events: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+		.col{
+			pointer-events: none;
+			border-left: 1px solid rgba(210,210,210,0.3);
+			border-right: 1px solid rgba(210,210,210,0.3);
+			@include span-columns(1,$columns_s);
+			
+			// Small breakpoint
+			@include gridtacular_columns($s,$columns_s);
+			@include gridtacular_columns($m,$columns_m);
+			@include gridtacular_columns($l,$columns_l);
+			@include gridtacular_columns($xl,$columns_xl);
+		}
+	}

@@ -1,83 +1,256 @@
 /*
-Syntax error: File to import not found or unreadable: __mixins.scss.
-              Load paths:
-                /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-2.2.1.0/vendor/assets/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.4/sass
-                /Applications/Fire.app/Contents/Resources/lib/ruby/common/sassy-math-1.2/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/common/modular-scale-1.0.2/stylesheets
-                /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.2.2/scss
-                Compass::SpriteImporter
-        on line 48 of /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass/ie.scss
-
-Backtrace:
-/Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass/ie.scss:48
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:67:in `import'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:65:in `import'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/import_node.rb:36:in `css_import?'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:215:in `visit_import'
-org/jruby/RubyBasicObject.java:1673:in `__send__'
-org/jruby/RubyKernel.java:2081:in `send'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-org/jruby/RubyArray.java:2355:in `map'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `visit_children'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
-org/jruby/RubyBasicObject.java:1673:in `__send__'
-org/jruby/RubyKernel.java:2081:in `send'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
-org/jruby/RubyBasicObject.java:1673:in `__send__'
-org/jruby/RubyKernel.java:2081:in `send'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/engine.rb:315:in `_render'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.3/lib/sass/engine.rb:262:in `render'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:188:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:187:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:186:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-org/jruby/RubyArray.java:1612:in `each'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-org/jruby/RubyMethod.java:134:in `call'
-org/jruby/RubyProc.java:249:in `call'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/path.rb:73:in `run_callback'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/path.rb:55:in `callback_action'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/path.rb:35:in `update'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/state/directory.rb:39:in `modified'
-org/jruby/RubyArray.java:1612:in `each'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/state/directory.rb:37:in `modified'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/state/directory.rb:18:in `refresh'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyArray.java:1612:in `each'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyKernel.java:1390:in `loop'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/backends/polling.rb:15:in `run'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm/monitor.rb:26:in `run'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/fssm-0.2.9-tka-patched/lib/fssm.rb:70:in `monitor'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:39:in `perform'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/ui/tray.rb:588:in `watch'
+Theme Name:     Flexbones Theme 5.0
+Theme URI:      http://roikles.com/
+Description:    A Responsive barebones theme to massively speed up development
+Author:         Rory Ashford
+Author URI:     http://roikles.com
+Version:        5.0
+License:		All work is the property of Rory Ashford
+License URI:	n/a
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: __mixins.scss.\A               Load paths:\A                 /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-2.2.1.0/vendor/assets/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.4/sass\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/common/sassy-math-1.2/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/common/modular-scale-1.0.2/stylesheets\A                 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.2.2/scss\A                 Compass::SpriteImporter\A         on line 48 of /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones/style/sass/ie.scss"; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
+body { position: relative; }
+
+.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #41bdb6; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
+.gridtacular li { display: inline-block; padding: 0 6px; margin: 0; border-right: 1px solid #66cbc5; }
+.gridtacular a { display: block; }
+.gridtacular img { display: block; }
+
+.g-button { cursor: pointer; border: none; background: none; outline: none; color: #8cd8d3; font-weight: 700; font-family: Monaco, "Courier New", Courier, monospace; }
+
+.g-button--grid--active, .g-button--baseline--active { color: #fff; }
+
+.gridtacular__breakpoint { font-weight: bold; }
+.gridtacular__breakpoint img { width: 20px; }
+
+.gridtacular__baseline-toggle { float: right; }
+
+.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 24px; }
+
+.gridtacular__grid-toggle { float: right; }
+
+.gridtacular__grid-overlay { display: none; position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
+.gridtacular__grid-overlay .col { pointer-events: none; border-left: 1px solid rgba(210, 210, 210, 0.3); border-right: 1px solid rgba(210, 210, 210, 0.3); width: 12.5874125875%; float: left; margin-right: 4.8951048951%; display: inline; }
+
+/** global.scss Document and Grid setup Font default declarations */
+* { margin: 0; padding: 0; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.clear { *zoom: 1; }
+.clear:before, .clear:after { content: ""; display: table; }
+.clear:after { clear: both; }
+
+html { font-size: 62.5%; line-height: 1.5; }
+
+body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.wrapper { *zoom: 1; max-width: 90%; _width: 90%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.wrapper:after { content: ""; display: table; clear: both; }
+.lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
+
+.lt-ie9 .wrapper { width: 1000px; }
+
+/* -- _WORDPRESS.SCSS -- */
+/* Styles for Wordpress Specific Classes Required if the theme is to go on the wp.org repo */
+.alignleft { float: none; display: block; }
+
+.alignright { float: none; display: block; }
+
+.wp-caption { background: red; }
+
+.wp-caption-text { color: #fff; }
+
+.sticky { font-weight: bold; }
+
+.gallery-caption { background: red; }
+
+.bypostauthor { font-weight: bold; }
+
+.aligncenter { margin: 0 auto; }
+
+/** typography.scss all base font styles, paragraphs, headings, lists */
+p, ul, ol, input, textarea { font-weight: 400; font-size: 1.4rem; }
+
+p, ul, ol { margin-bottom: 24px; }
+
+.lead { font-size: 1.82rem; line-height: 1.3; }
+
+.small { font-size: 1.2rem; line-height: 1.3; }
+
+a, a:visited { color: #41bdb6; text-decoration: none; font-weight: 700; }
+
+a:hover { text-decoration: none; color: #66cbc5; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 24px; }
+
+h1 { font-size: 2.8rem; }
+
+h2 { font-size: 2.4rem; }
+
+h3 { font-size: 1.8rem; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+ul { list-style-type: disc; margin-left: 24px; }
+
+ol { list-style-type: decimal; font-weight: normal; margin-left: 24px; }
+
+/** Buttons */
+.btn, input[type="submit"] { display: block; background: #41bdb6; border: none; height: 36px; margin: 0 0 12px 0; padding: 0 12px; color: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; outline: none; }
+
+.btn:hover, input[type="submit"]:hover { background: #53c4be; color: #fff; }
+
+.btn:visited, input[type="submit"]:visited { color: #fff; }
+
+/** Forms */
+form { font-family: "Lato", helvetica, arial, sans-serif; }
+
+label { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; display: block; }
+
+input[type="text"], input[type="password"], textarea { display: block; margin: 0 0 24px 0; width: 100%; height: 24px; border: 0; padding: 0 6px; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset #a6a6a6 0 0 1px; -moz-box-shadow: inset #a6a6a6 0 0 1px; box-shadow: inset #a6a6a6 0 0 1px; }
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus { background: #eff; -webkit-box-shadow: inset #03a7ff 0 0 5px; -moz-box-shadow: inset #03a7ff 0 0 5px; box-shadow: inset #03a7ff 0 0 5px; }
+
+textarea { height: 144px; }
+
+/** Table styling */
+table { width: 100%; background: #fff; border: 1px solid #ccc; margin-bottom: 24px; font-size: 0.75rem; }
+
+thead { background: #03a7ff; color: #fff; }
+
+tbody tr:nth-child(odd) { background: #f1f1f1; }
+
+tbody tr:nth-child(even) { background: #FFF; }
+
+th, td { height: 24px; padding: 0 24px; }
+
+th { font-weight: bold; height: 48px; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
+
+/* Tomorrow Night Eighties Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* Pretty printing styles. Used with prettify.js. */
+/* plain text */
+.pln { color: #cccccc; }
+
+@media screen { /* string content */
+  .str { color: #99cc99; }
+  /* a keyword */
+  .kwd { color: #cc99cc; }
+  /* a comment */
+  .com { color: #999999; }
+  /* a type name */
+  .typ { color: #6699cc; }
+  /* a literal value */
+  .lit { color: #f99157; }
+  /* punctuation */
+  .pun { color: #cccccc; }
+  /* lisp open bracket */
+  .opn { color: #cccccc; }
+  /* lisp close bracket */
+  .clo { color: #cccccc; }
+  /* a markup tag name */
+  .tag { color: #f2777a; }
+  /* a markup attribute name */
+  .atn { color: #f99157; }
+  /* a markup attribute value */
+  .atv { color: #66cccc; }
+  /* a declaration */
+  .dec { color: #f99157; }
+  /* a variable name */
+  .var { color: #f2777a; }
+  /* a function name */
+  .fun { color: #6699cc; } }
+/* Style */
+.prettyprint { background: #2d2d2d; font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-size: 1.6rem; padding: 0; margin-bottom: 24px; }
+
+ol.linenums { padding: 0 0 0 36px; margin-bottom: 0; }
+ol.linenums li { color: #fff; padding: 0 0 0 24px; margin: 0 24px 0 0; }
+
+/** layouts.scss Contains rules for the overall layout of eachs ection e.g. layout would include header, footer, content and sidebar BUT layouts.scss should not have ANY rules related to module design/ markup */
+/** Layout Home */
+/** Layout Standard Page */
+/*.main-index{
+	
+	@include at-breakpoint($l_up){
+		@include span-columns(8 omega,12);
+	}
+}
+
+.site-header{
+	@include at-breakpoint($l_up){
+		@include span-columns(3, 12);
+	}
+}*/
+/** Layout Blog Archive */
+/** Layout Blog Single */
+/** Layout Contact */
+/* -- _PAGE.SCSS -- */
+/* Styles for Wordpress Pages Includes styles for for specific page templates */
+/** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
+.primary-nav { margin-bottom: 24px; }
+
+.primary-nav__menu { list-style: none; margin: 0; }
+
+.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; }
+
+.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; border-bottom: 1px solid #eee; margin-bottom: 2px; }
+
+.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #41bdb6; }
+
+.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: bold; }
+
+/** Header specific declarations Note: navigation has its own document _navigation.scss */
+/** footer.scss all footer styles go here */
+/** sidebar.scss */
+/** Styles for the included example Delete if you like */
+.lt-ie9 .main-index { width: 65.8703071672%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+
+.lt-ie9 .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
+
+.site-logo__portrait { margin-bottom: 24px; display: none; }
+.lt-ie9 .site-logo__portrait { display: block; }
+
+.site-logo__landscape { margin-bottom: 24px; }
+.lt-ie9 .site-logo__landscape { display: none; }
+
+.content { padding: 24px 0 0 0; }
+.lt-ie9 .content { padding: 72px 0 0 0; }
+
+.example-image { margin-bottom: 24px; }
+.lt-ie9 .example-image { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; display: inline; }
+
+.lt-ie9 .example-image--last { width: 48.1865284974%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+
+.example-grid .col { background: #ccc; line-height: 48px; height: 48px; text-align: center; margin-bottom: 24px; border: 1px solid red; border: 1px solid #c4c4c4; font-size: 1.6rem; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+
+.lt-ie9 .example-grid .col--1 { width: 9.3264248705%; float: left; margin-right: 3.6269430051%; display: inline; }
+
+.lt-ie9 .example-grid .col--1--last { width: 9.3264248705%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+
+.lt-ie9 .example-grid .col--2 { width: 22.2797927461%; float: left; margin-right: 3.6269430051%; display: inline; }
+
+.lt-ie9 .example-grid .col--2--last { width: 22.2797927461%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+
+.lt-ie9 .example-grid .col--4 { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; display: inline; }
+
+.lt-ie9 .example-grid .col--4--last { width: 48.1865284974%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+
+.site-footer { border-top: 1px solid #ccc; }
+.site-footer p { margin: 0; padding: 24px 0; }

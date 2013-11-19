@@ -6,12 +6,14 @@
 
 
 $blue:					#03a7ff;
+$spice_orange: 			#e86118;
+$turquoise: 			#41bdb6;
 
 // Links / Anchors
 
-$link: 					$blue;
-$link_hover: 			darken($blue,5%);
-$link_visited: 			$blue;
+$link: 					$turquoise;
+$link_hover: 			lighten($link,10%);
+$link_visited: 			$link;
 
 // Element Colours / Gradients
 

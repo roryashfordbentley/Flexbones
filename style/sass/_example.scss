@@ -1,43 +1,127 @@
 /**
- * Styles for the included example Delete f you like
+ * Styles for the included example Delete if you like
  */
 
-.col{
+// Layout 
+
+.main-index{
+	
+	@include at-breakpoint($l_up){
+		@include span-columns(8 omega,12);
+	}
+}
+
+.site-header{
+	@include at-breakpoint($l_up){
+		@include span-columns(3, 12);
+	}
+}
+
+// Logo
+
+.site-logo__portrait{
+	margin-bottom: $base;
+	display: none;
+
+	@include at-breakpoint($l_up){
+		display: block;
+	}
+}
+
+.site-logo__landscape{
+	margin-bottom: $base;
+
+	@include at-breakpoint($l_up){
+		display: none;
+	}
+}
+
+// pad all the content at the top
+
+.content{
+	padding: $base 0 0 0;
+
+	@include at-breakpoint($l_up){
+		padding: $base*3 0 0 0;
+	}
+}
+
+// Images Example
+
+.example-image-container{
+	
+}
+
+	.example-image{
+		@include at-breakpoint($l_up){
+			@include span-columns(4,8);
+		}
+		margin-bottom: $base;
+	}
+
+		.example-image--last{
+			@include at-breakpoint($l_up){
+				@include span-columns(4 omega,8);
+			}
+		}
+
+// grid columns example
+
+.example-grid .col{
 	background: #ccc;
 	line-height: $base*2;
+	height: $base*2;
 	text-align: center;
 	margin-bottom: $base;
 	border: 1px solid red;
 	border: 1px solid darken(#ccc,3%);
-	p{
-		margin:0;
+	font-size: 1.6rem;
+	@include border-radius($radius);
+}
+
+.example-grid .col--1{
+	@include at-breakpoint($m_up){
+		@include span-columns(1,8);
 	}
 }
 
-.col--1{
-	@include span-columns(1,8);
-}
-
-	.col--1--last{
-		@include span-columns(1 omega,8);
+	.example-grid .col--1--last{
+		@include at-breakpoint($m_up){
+			@include span-columns(1 omega,8);
+		}
 	}
 
-.col--2{
-	@include span-columns(2,8);
+.example-grid .col--2{
+	@include at-breakpoint($m_up){
+		@include span-columns(2,8);
+	}
 }
 
-	.col--2--last{
-		@include span-columns(2 omega,8);
+	.example-grid .col--2--last{
+		@include at-breakpoint($m_up){
+			@include span-columns(2 omega,8);
+		}
 	}
 
-.col--4{
-	@include span-columns(4,8);
+.example-grid .col--4{
+	@include at-breakpoint($m_up){
+		@include span-columns(4,8);
+	}
 }
 
-	.col--4--last{
-		@include span-columns(4 omega,8);
+	.example-grid .col--4--last{
+		@include at-breakpoint($m_up){
+			@include span-columns(4 omega,8);
+		}
 	}
 
-.col--8{
 
+// Footer
+
+.site-footer{
+	border-top: 1px solid #ccc;
+	p {
+		margin: 0;	
+		padding: $base 0;
+	}
 }

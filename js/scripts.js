@@ -4,8 +4,17 @@
  * scripts.js should be called in the site footer
  */
 
-jQuery(document).ready(function($) { 
+jQuery(document).ready(function($) {
 
-	// script execution
+});
+
+
+// Initialise Gridtacular
+jQuery(window).load(function(){
+	
+	//initialise Gridacular
+	jQuery('.gridtacular').gridtacular({
+		//showBaseline: false
+	});
 
 });

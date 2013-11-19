@@ -10,7 +10,7 @@ License URI:	n/a
 */
 
 // HELPERS
-@import "compass/reset";
+
 @import "compass/css3";
 @import "compass/css3/box-sizing";
 @import "susy";
@@ -36,7 +36,14 @@ License URI:	n/a
 @import "_global.scss";
 @import "_wordpress.scss";
 @import "_typography.scss";
-@import "_ui.scss";
+
+// Default UI
+
+@import "ui/_buttons.scss";
+@import "ui/_forms.scss";
+@import "ui/_tables.scss";
+@import "ui/_pretty-code.scss";
+@import "ui/_imgs.scss";
 
 // Element Styles
 @import "_layouts.scss";

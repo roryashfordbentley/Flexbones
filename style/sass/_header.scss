@@ -2,16 +2,3 @@
  * Header specific declarations
  * Note: navigation has its own document _navigation.scss
  */
-
-	.site-logo{
-		display: block;
-		margin-bottom: $base;
-
-		img{
-			display: block;
-			@include at-breakpoint($s){
-				width:50%;
-			}
-			margin: 0 auto;
-		}
-	}

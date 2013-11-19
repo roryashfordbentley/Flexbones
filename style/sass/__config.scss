@@ -1,8 +1,7 @@
-/**
- * config.scss
- * variables that control global stuff:
- * grids, units font sizes etc
- */
+////
+// config.scss
+// variables that control global stuff:
+// grids, units font sizes etc
 
 // Scale & Type
 
@@ -14,12 +13,12 @@ $font-size: 62.5%;
 
 $total-columns: 		6;  
 $column-width: 			6%;  
-$gutter-width: 			2%;  
+$gutter-width: 			2.3333333333%;  
 $grid-padding: 			0;
 $container-width: 		90%;
 
 // Column
-// 
+
 $columns_s:				6;
 $columns_m:				12;
 $columns_l:				12;
@@ -41,4 +40,41 @@ $heading_font: 			'Montserrat', helvetica, arial, sans-serif;
 $body_font: 			'Lato', helvetica, arial, sans-serif;
 
 // Box sizing
+
 $border_box: 			true;
+
+// Border Radius
+
+$radius:				4px;
+
+// Typography
+
+// Para
+$p_s:					1.4rem;
+$p_m:					1.4rem;
+$p_l:					1.6rem;
+$p_xl:					1.8rem;
+
+// h1
+$h1_s:					2.8rem; 
+$h1_m:					3.4rem; 
+$h1_l:					3.8rem; 
+$h1_xl:					4.0rem;  
+
+// h2
+$h2_s:					2.4rem; 
+$h2_m:					2.8rem; 
+$h2_l:					3.0rem; 
+$h2_xl:					3.2rem; 
+
+// h3
+$h3_s:					1.8rem; 
+$h3_m:					2.0rem; 
+$h3_l:					2.2rem; 
+$h3_xl:					2.4rem;
+
+// Weights
+
+$medium: 				400;
+$bold: 					700;
+
