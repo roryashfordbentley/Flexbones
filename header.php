@@ -20,7 +20,7 @@
 <body <?php body_class(); ?> onload="prettyPrint()">
 <div class="wrapper content">
 	<header class="site-header">	
-		<a href="<?php echo get_home_url(); ?>" class="site-logo clear">
+		<a href="<?php echo get_home_url(); ?>" class="site-logo">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/example/logo-portrait.png" alt="portrait logo" class="site-logo__portrait">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/example/logo-landscape.png" alt="landscape logo" class="site-logo__landscape">
 		</a>		

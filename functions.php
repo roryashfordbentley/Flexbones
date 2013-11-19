@@ -30,6 +30,20 @@ function filter_ptags_on_images($content){
 add_filter('the_content', 'filter_ptags_on_images');
 
 /**
+ * Stop TINY MCE editting br's
+ */
+
+function cbnet_tinymce_config( $init ) {
+
+    // Don't remove line breaks
+    $init['remove_linebreaks'] = false; 
+
+    // Pass $init back to WordPress
+    return $init;
+}
+add_filter('tiny_mce_before_init', 'cbnet_tinymce_config');
+
+/**
  * Wrap images In a Div
  * (when inserting into editor)
  */
@@ -188,19 +202,39 @@ add_action('wp_enqueue_scripts', 'flexbones_load_js'); // For use on the Front e
  */
 
 function stylesheet_loader() {
-	wp_register_style( 
-		'page-style', 
-		get_template_directory_uri() . '/style.css', 
-		array(), 
-		'1.0', 
-		'all' 
-	);
+	
+	if ( !is_page( 'baseline-grid' ) ) {
+		
+		wp_register_style( 
+			'page-style', 
+			get_template_directory_uri() . '/style.css', 
+			array(), 
+			'1.0', 
+			'all' 
+		);
+
+		 wp_enqueue_style( 'page-style' );
+
+	} else {
+		
+		wp_register_style( 
+			'baseline-style', 
+			get_template_directory_uri() . '/baseline.css', 
+			array(), 
+			'1.0', 
+			'all' 
+		);
+
+		wp_enqueue_style( 'baseline-style' );
+	}
 
   // enqueing:
-  wp_enqueue_style( 'page-style' );
+ 
+
 }
 
 add_action( 'wp_enqueue_scripts', 'stylesheet_loader' );
+
 
 /**
  * Get Attachment Atributes based on ID

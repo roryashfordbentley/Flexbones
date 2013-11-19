@@ -113,6 +113,8 @@ ul { list-style-type: disc; margin-left: 24px; }
 
 ol { list-style-type: decimal; font-weight: normal; margin-left: 24px; }
 
+label { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; display: block; }
+
 /** Buttons */
 .btn, input[type="submit"] { display: block; background: #41bdb6; border: none; height: 36px; margin: 0 0 12px 0; padding: 0 12px; color: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; outline: none; }
 
@@ -122,8 +124,6 @@ ol { list-style-type: decimal; font-weight: normal; margin-left: 24px; }
 
 /** Forms */
 form { font-family: "Lato", helvetica, arial, sans-serif; }
-
-label { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; display: block; }
 
 input[type="text"], input[type="password"], textarea { display: block; margin: 0 0 24px 0; width: 100%; height: 24px; border: 0; padding: 0 6px; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset #a6a6a6 0 0 1px; -moz-box-shadow: inset #a6a6a6 0 0 1px; box-shadow: inset #a6a6a6 0 0 1px; }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus { background: #eff; -webkit-box-shadow: inset #03a7ff 0 0 5px; -moz-box-shadow: inset #03a7ff 0 0 5px; box-shadow: inset #03a7ff 0 0 5px; }
@@ -204,18 +204,6 @@ ol.linenums li { color: #fff; padding: 0 0 0 24px; margin: 0 24px 0 0; }
 /* -- _PAGE.SCSS -- */
 /* Styles for Wordpress Pages Includes styles for for specific page templates */
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-.primary-nav { margin-bottom: 24px; }
-
-.primary-nav__menu { list-style: none; margin: 0; }
-
-.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; }
-
-.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; border-bottom: 1px solid #eee; margin-bottom: 2px; }
-
-.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #41bdb6; }
-
-.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: bold; }
-
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
 /** footer.scss all footer styles go here */
 /** sidebar.scss */
@@ -229,6 +217,18 @@ ol.linenums li { color: #fff; padding: 0 0 0 24px; margin: 0 24px 0 0; }
 
 .site-logo__landscape { margin-bottom: 24px; }
 .lt-ie9 .site-logo__landscape { display: none; }
+
+.primary-nav { margin-bottom: 24px; }
+
+.primary-nav__menu { list-style: none; margin: 0; }
+
+.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; line-height: 48px; height: 48px; }
+
+.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; border-bottom: 1px solid #eee; }
+
+.primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #41bdb6; }
+
+.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: bold; }
 
 .content { padding: 24px 0 0 0; }
 .lt-ie9 .content { padding: 72px 0 0 0; }
