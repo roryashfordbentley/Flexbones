@@ -1,7 +1,12 @@
 Flexbones Wordpress Theme
 =========
 
-1. Features
+Demo
+--------
+
+[Flexbones Demo](http://www.roikles.com/flexbones/)
+
+Features
 --------
 
 * __Lightweight__
@@ -10,7 +15,7 @@ Flexbones Wordpress Theme
 * __Modular SASS__ 
 * __gridtacular.js__
 
-2. Overview
+Overview
 --------
 
 Not another barebones theme! I built this to speed up the process of developing responsive wordpress themes. It uses SASS/ Compass and the Susy Grid system to allow speedy development.
@@ -22,7 +27,7 @@ The included sass styles are focused on functional CSS rather than presentationa
 Also bundled is our up coming browser tool Gridtacular that give at-a-glance information on the current page dimensions and breakpoint along with the ability to toggle both a grid overlay and a baseline grid overlay.
 
 
-3. Dependencies
+Dependencies
 --------
 
 CSS Preprocessing tools
