@@ -88,6 +88,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks('grunt-contrib-clean');
 
+    // now that we've loaded the package.json and the node_modules we set the base path
+  // for the actual execution of the tasks
+  grunt.file.setBase('../')
+
     // Default task(s).
 
     grunt.registerTask('default', ['jshint', 'uglify','cssmin']);

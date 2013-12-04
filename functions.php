@@ -169,7 +169,7 @@ function flexbones_load_js() {
 	wp_register_script( 'prettify', get_template_directory_uri( ) . '/js/prettify/prettify.js', array(), '1', true );
 	wp_register_script( 'prettify-scss', get_template_directory_uri( ) . '/js/prettify/lang-scss.js', array(), '1', true );
 	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
-	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular.js', array( 'jquery' ), '1', true );
+	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular/gridtacular.js', array( 'jquery' ), '1', true );
 	
 	/**
 	 * Enqueue Scripts
@@ -202,34 +202,16 @@ add_action('wp_enqueue_scripts', 'flexbones_load_js'); // For use on the Front e
  */
 
 function stylesheet_loader() {
-	
-	if ( !is_page( 'baseline-grid' ) ) {
 		
-		wp_register_style( 
-			'page-style', 
-			get_template_directory_uri() . '/style.css', 
-			array(), 
-			'1.0', 
-			'all' 
-		);
+	wp_register_style( 
+		'page-style', 
+		get_template_directory_uri() . '/style.css', 
+		array(), 
+		'1.0', 
+		'all' 
+	);
 
-		 wp_enqueue_style( 'page-style' );
-
-	} else {
-		
-		wp_register_style( 
-			'baseline-style', 
-			get_template_directory_uri() . '/baseline.css', 
-			array(), 
-			'1.0', 
-			'all' 
-		);
-
-		wp_enqueue_style( 'baseline-style' );
-	}
-
-  // enqueing:
- 
+	 wp_enqueue_style( 'page-style' );
 
 }
 
