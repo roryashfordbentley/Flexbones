@@ -1,8 +1,7 @@
-style/fire_app_log.txt
 # Ignore sass-cache files.
 *.sass-cache*
 *.scssc
 fire_app_log.txt
-node_modules/
+grunt/node_modules/
 ie.min.scss
 style.min.scss

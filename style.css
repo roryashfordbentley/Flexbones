@@ -1,25 +1,25 @@
 /*
-Theme Name:     Flexbones Theme 5.0
+Theme Name:     Flexbones Theme 1.5
 Theme URI:      http://roikles.com/
 Description:    A Responsive barebones theme to massively speed up development
 Author:         Rory Ashford
 Author URI:     http://roikles.com
-Version:        5.0
+Version:        1.5
 License:		All work is the property of Rory Ashford
 License URI:	n/a
 */
 /** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
 body { position: relative; }
 
-.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #41bdb6; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
-@media (min-width: 641px) and (max-width: 880px) { .gridtacular { background: #3aaaa4; } }
-@media (min-width: 881px) and (max-width: 1200px) { .gridtacular { background: #349791; } }
-@media (min-width: 1200px) { .gridtacular { background: #2d847f; } }
-.gridtacular li { display: inline-block; padding: 0 6px; margin: 0; border-right: 1px solid #66cbc5; }
+.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #eea112; border-top: 3px solid #fff; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
+@media (min-width: 641px) and (max-width: 880px) { .gridtacular { background: #7dca35; } }
+@media (min-width: 881px) and (max-width: 1200px) { .gridtacular { background: #36afd6; } }
+@media (min-width: 1200px) { .gridtacular { background: #823a9c; } }
+.gridtacular li { display: inline-block; padding: 0 6px; margin: 0; border-right: 1px solid #fff; }
 .gridtacular a { display: block; }
 .gridtacular img { display: block; }
 
-.g-button { cursor: pointer; border: none; background: none; outline: none; color: #8cd8d3; font-weight: 700; font-family: Monaco, "Courier New", Courier, monospace; }
+.g-button { cursor: pointer; border: none; background: none; outline: none; color: #fff; font-weight: 700; font-family: Monaco, "Courier New", Courier, monospace; }
 
 .g-button--grid--active, .g-button--baseline--active { color: #fff; }
 
@@ -28,7 +28,7 @@ body { position: relative; }
 
 .gridtacular__baseline-toggle { float: right; }
 
-.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 2.4rem; }
+.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("js/gridtacular/images/baseline.png"); background-size: 100% 2.4rem; }
 
 .gridtacular__grid-toggle { float: right; }
 
@@ -56,9 +56,9 @@ body { position: relative; }
 
 html { font-size: 62.5%; line-height: 1.5; }
 
-body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { color: #2e3131; font-family: "vollkorn", georgia, sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper { *zoom: 1; max-width: 90%; _width: 90%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.wrapper { *zoom: 1; max-width: 92%; _width: 92%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 .wrapper:after { content: ""; display: table; clear: both; }
 @media (min-width: 881px) { .wrapper { width: 85%; max-width: 1200px; } }
 .lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
@@ -84,43 +84,43 @@ body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webki
 .aligncenter { margin: 0 auto; }
 
 /** typography.scss all base font styles, paragraphs, headings, lists */
-p, ul, ol, input, textarea { font-weight: 400; font-size: 1.4rem; }
-@media (min-width: 641px) and (max-width: 880px) { p, ul, ol, input, textarea { font-size: 1.4rem; } }
-@media (min-width: 881px) and (max-width: 1200px) { p, ul, ol, input, textarea { font-size: 1.6rem; } }
-@media (min-width: 1200px) { p, ul, ol, input, textarea { font-size: 1.8rem; } }
+p, ul, ol, input, textarea { font-weight: 400; font-size: 1.6rem; }
+@media (min-width: 641px) and (max-width: 880px) { p, ul, ol, input, textarea { font-size: 1.8rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { p, ul, ol, input, textarea { font-size: 2rem; } }
+@media (min-width: 1200px) { p, ul, ol, input, textarea { font-size: 2.2rem; } }
 
 p, ul, ol { margin-bottom: 2.4rem; }
 
-.lead { font-size: 1.82rem; line-height: 1.3; }
-@media (min-width: 641px) and (max-width: 880px) { .lead { font-size: 1.82rem; } }
-@media (min-width: 881px) and (max-width: 1200px) { .lead { font-size: 2.4rem; } }
-@media (min-width: 1200px) { .lead { font-size: 2.7rem; } }
+.lead { font-size: 2.08rem; line-height: 1.3; }
+@media (min-width: 641px) and (max-width: 880px) { .lead { font-size: 2.34rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { .lead { font-size: 3rem; } }
+@media (min-width: 1200px) { .lead { font-size: 3.3rem; } }
 
 .small { font-size: 1.2rem; line-height: 1.3; }
 @media (min-width: 641px) and (max-width: 880px) { .small { font-size: 1.2rem; } }
 @media (min-width: 881px) and (max-width: 1200px) { .small { font-size: 1.3rem; } }
 @media (min-width: 1200px) { .small { font-size: 1.5rem; } }
 
-a, a:visited { color: #41bdb6; text-decoration: none; font-weight: 700; }
+a, a:visited { color: #41bdb6; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #66cbc5; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 2.4rem; }
+h1, h2, h3, h4, h5, h6 { font-family: "vollkorn", georgia, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 2.4rem; }
 
-h1 { font-size: 2.8rem; }
-@media (min-width: 641px) and (max-width: 880px) { h1 { font-size: 3.4rem; } }
-@media (min-width: 881px) and (max-width: 1200px) { h1 { font-size: 3.8rem; } }
-@media (min-width: 1200px) { h1 { font-size: 4rem; } }
+h1 { font-size: 2.56rem; }
+@media (min-width: 641px) and (max-width: 880px) { h1 { font-size: 3.84rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { h1 { font-size: 5.12rem; } }
+@media (min-width: 1200px) { h1 { font-size: 6.4rem; } }
 
-h2 { font-size: 2.4rem; }
-@media (min-width: 641px) and (max-width: 880px) { h2 { font-size: 2.8rem; } }
-@media (min-width: 881px) and (max-width: 1200px) { h2 { font-size: 3rem; } }
-@media (min-width: 1200px) { h2 { font-size: 3.2rem; } }
+h2 { font-size: 1.92rem; }
+@media (min-width: 641px) and (max-width: 880px) { h2 { font-size: 2.88rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { h2 { font-size: 3.84rem; } }
+@media (min-width: 1200px) { h2 { font-size: 4.8rem; } }
 
-h3 { font-size: 1.8rem; }
-@media (min-width: 641px) and (max-width: 880px) { h3 { font-size: 2rem; } }
-@media (min-width: 881px) and (max-width: 1200px) { h3 { font-size: 2.2rem; } }
-@media (min-width: 1200px) { h3 { font-size: 2.4rem; } }
+h3 { font-size: 1.44rem; }
+@media (min-width: 641px) and (max-width: 880px) { h3 { font-size: 2.16rem; } }
+@media (min-width: 881px) and (max-width: 1200px) { h3 { font-size: 2.88rem; } }
+@media (min-width: 1200px) { h3 { font-size: 3.6rem; } }
 
 strong { font-weight: bold; }
 
@@ -140,9 +140,9 @@ label { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; display:
 .btn:visited, input[type="submit"]:visited { color: #fff; }
 
 /** Forms */
-form { font-family: "Lato", helvetica, arial, sans-serif; }
+form { font-family: "vollkorn", georgia, sans-serif; }
 
-input[type="text"], input[type="password"], textarea { display: block; margin: 0 0 2.4rem 0; width: 100%; height: 2.4rem; border: 0; padding: 0 0.6rem; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset #a6a6a6 0 0 1px; -moz-box-shadow: inset #a6a6a6 0 0 1px; box-shadow: inset #a6a6a6 0 0 1px; }
+input[type="text"], input[type="password"], textarea { display: block; margin: 0 0 2.4rem 0; width: 100%; height: 2.4rem; border: 0; padding: 0 0.6rem; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; border: 1px solid #a6a6a6; }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus { background: #eff; -webkit-box-shadow: inset #03a7ff 0 0 5px; -moz-box-shadow: inset #03a7ff 0 0 5px; box-shadow: inset #03a7ff 0 0 5px; }
 
 textarea { height: 14.4rem; }
@@ -158,7 +158,7 @@ tbody tr:nth-child(even) { background: #FFF; }
 
 th, td { height: 2.4rem; padding: 0 2.4rem; }
 
-th { font-weight: bold; height: 4.8rem; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
+th { font-weight: bold; height: 4.8rem; font-family: "vollkorn", georgia, sans-serif; font-size: 1rem; }
 
 /* Tomorrow Night Eighties Theme */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
@@ -236,35 +236,36 @@ figure img { display: block; }
 /** footer.scss all footer styles go here */
 /** sidebar.scss */
 /** Styles for the included example Delete if you like */
-@media (min-width: 881px) { .main-index { width: 65.8703071672%; float: right; margin-right: 0; } }
-.lt-ie9 .main-index { width: 65.8703071672%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -1px; }
 
-@media (min-width: 881px) { .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
+p { line-height: 1.4; }
 
-.site-logo__portrait { margin-bottom: 2.4rem; display: none; }
-@media (min-width: 881px) { .site-logo__portrait { display: block; } }
-.lt-ie9 .site-logo__portrait { display: block; }
+@media (min-width: 881px) { .main { width: 74.4027303754%; float: right; margin-right: 0; } }
+.lt-ie9 .main { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+.main h1 { border-bottom: 1px solid #bbb; }
 
-.site-logo__landscape { margin-bottom: 2.4rem; }
-@media (min-width: 881px) { .site-logo__landscape { display: none; } }
-.lt-ie9 .site-logo__landscape { display: none; }
+@media (min-width: 881px) { .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
+.lt-ie9 .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
+
+.site-logo-link { margin-bottom: 1.2rem; display: block; }
+
+.site-logo { float: right; }
 
 .primary-nav { margin-bottom: 2.4rem; }
 
-.primary-nav__menu { list-style: none; margin: 0; }
+.primary-nav__menu { list-style: none; margin: 0; text-align: right; }
 
-.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; line-height: 4.8rem; height: 4.8rem; }
+.primary-nav__menu .menu-item { margin: 0; font-family: "vollkorn", georgia, sans-serif; font-size: 1.6rem; line-height: 4.8rem; height: 4.8rem; }
 
-.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; border-bottom: 1px solid #eee; }
+.primary-nav__menu .menu-item a { display: block; color: #2e3131; padding: 0; border-bottom: 1px solid #eee; font-weight: 400; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #41bdb6; }
 
-.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: bold; }
+.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: 400; }
 
 .content { padding: 2.4rem 0 0 0; }
-@media (min-width: 881px) { .content { padding: 7.2rem 0 0 0; } }
-.lt-ie9 .content { padding: 7.2rem 0 0 0; }
+@media (min-width: 881px) { .content { padding: 4.8rem 0 0 0; } }
+.lt-ie9 .content { padding: 4.8rem 0 0 0; }
 
 .example-image { margin-bottom: 2.4rem; }
 @media (min-width: 881px) { .example-image { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; } }

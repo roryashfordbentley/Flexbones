@@ -15,7 +15,7 @@ $total-columns: 		6;
 $column-width: 			6%;  
 $gutter-width: 			2.3333333333%;  
 $grid-padding: 			0;
-$container-width: 		90%;
+$container-width: 		92%;
 
 // Column
 
@@ -36,8 +36,8 @@ $ie: 					0 $columns_l lt-ie9;
 
 // Font Stack
 
-$heading_font: 			'Montserrat', helvetica, arial, sans-serif;
-$body_font: 			'Lato', helvetica, arial, sans-serif;
+$heading_font: 			'vollkorn', georgia, sans-serif;
+$body_font: 			$heading_font;
 
 // Box sizing
 
@@ -50,28 +50,32 @@ $radius:				4px;
 // Typography
 
 // Para
-$p_s:					1.4rem;
-$p_m:					1.4rem;
-$p_l:					1.6rem;
-$p_xl:					1.8rem;
+
+$p_xl:					2.2rem;
+$p_l:					2rem;
+$p_m:					1.8rem;
+$p_s:					1.6rem;
 
 // h1
-$h1_s:					2.8rem; 
-$h1_m:					3.4rem; 
-$h1_l:					3.8rem; 
-$h1_xl:					4.0rem;  
+
+$h1_xl:					6.4rem;
+$h1_l:					$h1_xl * 0.8;
+$h1_m:					$h1_xl * 0.6;
+$h1_s:					$h1_xl * 0.4;
 
 // h2
-$h2_s:					2.4rem; 
-$h2_m:					2.8rem; 
-$h2_l:					3.0rem; 
-$h2_xl:					3.2rem; 
+
+$h2_xl:					4.8rem; 
+$h2_l:					$h2_xl * 0.8; 
+$h2_m:					$h2_xl * 0.6; 
+$h2_s:					$h2_xl * 0.4; 
 
 // h3
-$h3_s:					1.8rem; 
-$h3_m:					2.0rem; 
-$h3_l:					2.2rem; 
-$h3_xl:					2.4rem;
+
+$h3_xl:					3.6rem;
+$h3_l:					$h3_xl * 0.8; 
+$h3_m:					$h3_xl * 0.6; 
+$h3_s:					$h3_xl * 0.4; 
 
 // Weights
 

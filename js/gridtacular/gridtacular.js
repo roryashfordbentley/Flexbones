@@ -150,14 +150,3 @@
 	};
 
 }( jQuery ));
-
-
-jQuery(document).ready(function($) { 
-
-	//initialise the module
-
-		/*$('.gridtacular').gridtacular({
-			showWidth: true,showHeight: false,
-		});*/
-
-});

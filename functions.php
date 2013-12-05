@@ -30,7 +30,7 @@ function filter_ptags_on_images($content){
 add_filter('the_content', 'filter_ptags_on_images');
 
 /**
- * Stop TINY MCE editting br's
+ * Stop Tiny MCE editting br's
  */
 
 function cbnet_tinymce_config( $init ) {
@@ -44,7 +44,7 @@ function cbnet_tinymce_config( $init ) {
 add_filter('tiny_mce_before_init', 'cbnet_tinymce_config');
 
 /**
- * Wrap images In a Div
+ * Wrap images in a div
  * (when inserting into editor)
  */
 
@@ -63,13 +63,13 @@ if( is_admin() ) {
  * (the_content)
  */
 
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
-add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 ); 
-add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
-
 function remove_thumbnail_dimensions( $html ) { 
 	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); return $html; 
 }
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 ); 
+add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
 
 /**
  * Hide Admin Bar
@@ -106,7 +106,7 @@ function sub_menu(){
 
 function add_parent_class( $css_class, $page, $depth, $args ){
 	if ( ! empty( $args['has_children'] ) )
-		$css_class[] = 'parent slide_down';
+		$css_class[] = 'parent';
 	return $css_class;
 }
 add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
@@ -166,10 +166,8 @@ function flexbones_load_js() {
 	wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
 	wp_register_script('jquery-ui','//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', array(), '1.10.3', true);
 	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
-	wp_register_script( 'prettify', get_template_directory_uri( ) . '/js/prettify/prettify.js', array(), '1', true );
-	wp_register_script( 'prettify-scss', get_template_directory_uri( ) . '/js/prettify/lang-scss.js', array(), '1', true );
-	wp_register_script( 'sitewide-scripts', get_template_directory_uri( ) . '/js/scripts.js', array( 'jquery' ), '1', true );
-	wp_register_script( 'gridtacular', get_template_directory_uri( ) . '/js/gridtacular/gridtacular.js', array( 'jquery' ), '1', true );
+	wp_register_script( 'sitewide-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.1', true );
+	wp_register_script( 'gridtacular', get_template_directory_uri() . '/js/gridtacular/gridtacular.js', array( 'jquery' ), '1', true );
 	
 	/**
 	 * Enqueue Scripts
@@ -178,8 +176,6 @@ function flexbones_load_js() {
 	wp_enqueue_script( 'jquery' );
 	//wp_enqueue_script( 'jquery-ui' );
 	wp_enqueue_script( 'modernizr' );
-	wp_enqueue_script( 'prettify' );
-	wp_enqueue_script( 'prettify-scss' );
 	wp_enqueue_script( 'sitewide-scripts' );
 	wp_enqueue_script( 'gridtacular' );
 
@@ -212,11 +208,9 @@ function stylesheet_loader() {
 	);
 
 	 wp_enqueue_style( 'page-style' );
-
 }
 
 add_action( 'wp_enqueue_scripts', 'stylesheet_loader' );
-
 
 /**
  * Get Attachment Atributes based on ID

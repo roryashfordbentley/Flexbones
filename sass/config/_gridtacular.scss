@@ -34,10 +34,11 @@ body{
 	left: 0;
 	right: 0;
 	z-index: 10000;
-	background: $turquoise;
-	@include at-breakpoint($m){ background: darken($turquoise, 5%); }
-	@include at-breakpoint($l){ background: darken($turquoise, 10%); }
-	@include at-breakpoint($xl){ background: darken($turquoise, 15%); }
+	background: #eea112;
+	border-top: 3px solid #fff;
+	@include at-breakpoint($m){ background: #7dca35; }
+	@include at-breakpoint($l){ background: #36afd6; }
+	@include at-breakpoint($xl){ background: #823a9c; }
 
 
 	color: #fff;
@@ -46,13 +47,14 @@ body{
 	padding: 0;
 	font-size: 12px;
 	line-height: 24px;
+	height: 24px;
 	font-family: Monaco, "Courier New", Courier, monospace;
 
 	li{
 		display: inline-block;
 		padding: 0 6px;
 		margin: 0;
-		border-right: 1px solid lighten(#41bdb6, 10%);
+		border-right: 1px solid #fff;
 	}
 
 	a{ display: block; }
@@ -67,7 +69,7 @@ body{
 		border: none;
 		background: none;
 		outline: none;
-		color: lighten(#41bdb6, 20%);
+		color: #fff;
 		font-weight: $bold;
 		font-family: Monaco, "Courier New", Courier, monospace;
 	}
@@ -84,18 +86,6 @@ body{
 		img{
 			width: 20px;
 		}
-	}
-
-	// Width
-	
-	.gridtacular__width{
-		
-	}
-
-	// Height
-
-	.gridtacular__height{
-		
 	}
 
 	// Baseline toggle
@@ -117,8 +107,8 @@ body{
 		bottom: 0;
 		left: 0;
 		// Using a 50px high background image but resizing it down to 
-		background-image: url("images/baseline.png"); 
-		// Change $base to appropriate baseline height
+		background-image: url("js/gridtacular/images/baseline.png"); 
+		// Change $base to suitable baseline height
 		background-size: 100% $base;
 	}
 

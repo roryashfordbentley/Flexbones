@@ -8,10 +8,9 @@ jQuery(document).ready(function($) {
 
 });
 
-
 // Initialise Gridtacular
 jQuery(window).load(function(){
-	
+
 	//initialise Gridacular
 	jQuery('.gridtacular').gridtacular({
 		//showBaseline: false

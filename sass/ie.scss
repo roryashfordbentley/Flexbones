@@ -1,41 +1,47 @@
 /*
-Theme Name:     Flexbones Theme 5.0
+Theme Name:     Flexbones Theme 1.5
 Theme URI:      http://roikles.com/
 Description:    A Responsive barebones theme to massively speed up development
 Author:         Rory Ashford
 Author URI:     http://roikles.com
-Version:        5.0
+Version:        1.5
 License:		All work is the property of Rory Ashford
 License URI:	n/a
 */
 
 // HELPERS
-
+@import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/box-sizing";
 @import "susy";
 
 // Funtions
 
-@import "__functions.scss";
+@import "config/_functions.scss";
 
 // Config
 
-@import "__config.scss";
+@import "config/_config.scss";
+
+$breakpoint-media-output: false;
+$breakpoint-ie-output: true;
+$breakpoint-raw-output: false;
+$base: 24px;
 
 // Vars
 
-@import "__colour.scss";
+@import "config/_colour.scss";
 
 // Dev Tools
 
-@import "__gridtacular.scss";
+@import "config/_gridtacular.scss";
 
 // Global Styles
  
 @import "_global.scss";
 @import "_wordpress.scss";
 @import "_typography.scss";
+//@import "_flex-type.scss";
 
 // Default UI
 
@@ -43,7 +49,6 @@ License URI:	n/a
 @import "ui/_forms.scss";
 @import "ui/_tables.scss";
 @import "ui/_pretty-code.scss";
-@import "ui/_imgs.scss";
 
 // Element Styles
 @import "_layouts.scss";

@@ -17,8 +17,8 @@ textarea{
 	padding: 0 $base/4; 
 	outline: none;
 	@include border-radius($radius);
-	@include box-shadow(inset darken(#ccc,15%) 0 0 1px); //emulate border without affecting height
-	
+	//@include box-shadow(inset darken(#ccc,15%) 0 0 1px); //emulate border without affecting height
+	border: 1px solid darken(#ccc,15%);
 	&:focus{
 		background: #eff;
 		@include box-shadow(inset $blue 0 0 5px);

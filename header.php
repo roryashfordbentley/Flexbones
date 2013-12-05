@@ -12,17 +12,17 @@
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat:400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
 	<![endif]-->
 </head>
-<body <?php body_class(); ?> onload="prettyPrint()">
+<body <?php body_class(); ?>>
 <div class="wrapper content">
 	<header class="site-header">	
-		<a href="<?php echo get_home_url(); ?>" class="site-logo">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/example/logo-portrait.png" alt="portrait logo" class="site-logo__portrait">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/example/logo-landscape.png" alt="landscape logo" class="site-logo__landscape">
+		<a href="<?php echo get_home_url(); ?>" class="site-logo-link clear">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-dark-small.png" alt="portrait logo" class="site-logo">
 		</a>		
 		<nav class="primary-nav">
 			<ul class="primary-nav__menu">

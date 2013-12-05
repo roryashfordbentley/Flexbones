@@ -2,39 +2,44 @@
  * Styles for the included example Delete if you like
  */
 
+// Type Overrides
+
+h1,h2,h3,h4,h5,h6{
+	letter-spacing: -1px;
+}
+
+p{
+	line-height: 1.4;
+}
+
 // Layout 
 
-.main-index{
-	
+.main{	
 	@include at-breakpoint($l_up){
-		@include span-columns(8 omega,12);
+		@include span-columns(9 omega,12);
+	}
+
+	h1{
+		border-bottom: 1px solid #bbb;
 	}
 }
 
 .site-header{
 	@include at-breakpoint($l_up){
-		@include span-columns(3, 12);
+		@include span-columns(2, 12);
 	}
 }
 
 // Logo
 
-.site-logo__portrait{
-	margin-bottom: $base;
-	display: none;
-
-	@include at-breakpoint($l_up){
-		display: block;
-	}
+.site-logo-link{
+	margin-bottom: $base/2;
+	display: block;
 }
 
-.site-logo__landscape{
-	margin-bottom: $base;
-
-	@include at-breakpoint($l_up){
-		display: none;
+	.site-logo{
+		float: right;
 	}
-}
 
 // Nav
 
@@ -47,6 +52,7 @@
 	.primary-nav__menu{
         list-style: none;
 		margin: 0;
+		text-align: right;
     }
 	
 	// Menu item
@@ -64,7 +70,7 @@
     	color: $text_colour;
     	padding: 0;
     	border-bottom: 1px solid #eee;
-    	//padding: $base/4 0;
+    	font-weight: $medium;
 }
 	
 	// Menu item hover
@@ -84,7 +90,7 @@
     .primary-nav__menu > .current-post-parent a,
 	.primary-nav__menu > .current-post-parent a:visited{
         color: $link;
-        font-weight: bold;
+        font-weight: $medium;
     }
 
 // pad all the content at the top
@@ -93,7 +99,7 @@
 	padding: $base 0 0 0;
 
 	@include at-breakpoint($l_up){
-		padding: $base*3 0 0 0;
+		padding: $base*2 0 0 0;
 	}
 }
 

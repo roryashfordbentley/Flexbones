@@ -28,14 +28,9 @@ module.exports = function(grunt) {
                 files: {
                     'js/scripts.min.js': [
                         'js/rem_polyfill.js',
-                        'js/gridtacular.js', 
+                        'js/gridtacular/gridtacular.js',
                         'js/scripts.js',
-                        'js/ga.js',
-                        'js/prettify/prettify.js',
-                        'js/prettify/css.js',
-                        'js/prettify/scss.js',
-                        'js/prettify/sql.js',
-                        'js/prettify/yaml.js'
+                        'js/ga.js'
                     ]
                 }
             }
@@ -59,25 +54,6 @@ module.exports = function(grunt) {
                 ext: '.min.css'
             }
         },
-
-        /*copy: {
-            main: {
-                files: [
-                    // includes files within path
-                    {expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
-
-                    // includes files within path and its sub-directories
-                    {expand: true, src: ['path/**'], dest: 'dest/'},
-
-                    // makes all src relative to cwd
-                    {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-
-                    // flattens results to a single level
-                    {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'}
-                ]
-            }
-        }*/
-
     });
 
     // Load the plugins
@@ -85,12 +61,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.loadNpmTasks('grunt-contrib-clean');
 
     // now that we've loaded the package.json and the node_modules we set the base path
   // for the actual execution of the tasks
-  grunt.file.setBase('../')
+  grunt.file.setBase('../');
 
     // Default task(s).
 

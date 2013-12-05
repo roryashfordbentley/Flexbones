@@ -1,10 +1,10 @@
 /*
-Theme Name:     Flexbones Theme 5.0
+Theme Name:     Flexbones Theme 1.5
 Theme URI:      http://roikles.com/
 Description:    A Responsive barebones theme to massively speed up development
 Author:         Rory Ashford
 Author URI:     http://roikles.com
-Version:        5.0
+Version:        1.5
 License:		All work is the property of Rory Ashford
 License URI:	n/a
 */
@@ -28,12 +28,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /** colour.scss define basic colours and then apply them to vars e.g. $blue and $nav_bg: $blue; */
 body { position: relative; }
 
-.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #41bdb6; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
-.gridtacular li { display: inline-block; padding: 0 6px; margin: 0; border-right: 1px solid #66cbc5; }
+.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #eea112; border-top: 3px solid #fff; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
+.gridtacular li { display: inline-block; padding: 0 6px; margin: 0; border-right: 1px solid #fff; }
 .gridtacular a { display: block; }
 .gridtacular img { display: block; }
 
-.g-button { cursor: pointer; border: none; background: none; outline: none; color: #8cd8d3; font-weight: 700; font-family: Monaco, "Courier New", Courier, monospace; }
+.g-button { cursor: pointer; border: none; background: none; outline: none; color: #fff; font-weight: 700; font-family: Monaco, "Courier New", Courier, monospace; }
 
 .g-button--grid--active, .g-button--baseline--active { color: #fff; }
 
@@ -42,7 +42,7 @@ body { position: relative; }
 
 .gridtacular__baseline-toggle { float: right; }
 
-.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("images/baseline.png"); background-size: 100% 24px; }
+.gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background-image: url("js/gridtacular/images/baseline.png"); background-size: 100% 24px; }
 
 .gridtacular__grid-toggle { float: right; }
 
@@ -58,9 +58,9 @@ body { position: relative; }
 
 html { font-size: 62.5%; line-height: 1.5; }
 
-body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { color: #2e3131; font-family: "vollkorn", georgia, sans-serif; -webkit-font-smoothing: antialiased; }
 
-.wrapper { *zoom: 1; max-width: 90%; _width: 90%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.wrapper { *zoom: 1; max-width: 92%; _width: 92%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 .wrapper:after { content: ""; display: table; clear: both; }
 .lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
 
@@ -85,25 +85,25 @@ body { color: #525252; font-family: "Lato", helvetica, arial, sans-serif; -webki
 .aligncenter { margin: 0 auto; }
 
 /** typography.scss all base font styles, paragraphs, headings, lists */
-p, ul, ol, input, textarea { font-weight: 400; font-size: 1.4rem; }
+p, ul, ol, input, textarea { font-weight: 400; font-size: 1.6rem; }
 
 p, ul, ol { margin-bottom: 24px; }
 
-.lead { font-size: 1.82rem; line-height: 1.3; }
+.lead { font-size: 2.08rem; line-height: 1.3; }
 
 .small { font-size: 1.2rem; line-height: 1.3; }
 
-a, a:visited { color: #41bdb6; text-decoration: none; font-weight: 700; }
+a, a:visited { color: #41bdb6; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #66cbc5; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", helvetica, arial, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 24px; }
+h1, h2, h3, h4, h5, h6 { font-family: "vollkorn", georgia, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 24px; }
 
-h1 { font-size: 2.8rem; }
+h1 { font-size: 2.56rem; }
 
-h2 { font-size: 2.4rem; }
+h2 { font-size: 1.92rem; }
 
-h3 { font-size: 1.8rem; }
+h3 { font-size: 1.44rem; }
 
 strong { font-weight: bold; }
 
@@ -123,9 +123,9 @@ label { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; display:
 .btn:visited, input[type="submit"]:visited { color: #fff; }
 
 /** Forms */
-form { font-family: "Lato", helvetica, arial, sans-serif; }
+form { font-family: "vollkorn", georgia, sans-serif; }
 
-input[type="text"], input[type="password"], textarea { display: block; margin: 0 0 24px 0; width: 100%; height: 24px; border: 0; padding: 0 6px; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset #a6a6a6 0 0 1px; -moz-box-shadow: inset #a6a6a6 0 0 1px; box-shadow: inset #a6a6a6 0 0 1px; }
+input[type="text"], input[type="password"], textarea { display: block; margin: 0 0 24px 0; width: 100%; height: 24px; border: 0; padding: 0 6px; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; border: 1px solid #a6a6a6; }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus { background: #eff; -webkit-box-shadow: inset #03a7ff 0 0 5px; -moz-box-shadow: inset #03a7ff 0 0 5px; box-shadow: inset #03a7ff 0 0 5px; }
 
 textarea { height: 144px; }
@@ -141,7 +141,7 @@ tbody tr:nth-child(even) { background: #FFF; }
 
 th, td { height: 24px; padding: 0 24px; }
 
-th { font-weight: bold; height: 48px; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1rem; }
+th { font-weight: bold; height: 48px; font-family: "vollkorn", georgia, sans-serif; font-size: 1rem; }
 
 /* Tomorrow Night Eighties Theme */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
@@ -208,30 +208,33 @@ ol.linenums li { color: #fff; padding: 0 0 0 24px; margin: 0 24px 0 0; }
 /** footer.scss all footer styles go here */
 /** sidebar.scss */
 /** Styles for the included example Delete if you like */
-.lt-ie9 .main-index { width: 65.8703071672%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -1px; }
 
-.lt-ie9 .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
+p { line-height: 1.4; }
 
-.site-logo__portrait { margin-bottom: 24px; display: none; }
-.lt-ie9 .site-logo__portrait { display: block; }
+.lt-ie9 .main { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+.main h1 { border-bottom: 1px solid #bbb; }
 
-.site-logo__landscape { margin-bottom: 24px; }
-.lt-ie9 .site-logo__landscape { display: none; }
+.lt-ie9 .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
+
+.site-logo-link { margin-bottom: 12px; display: block; }
+
+.site-logo { float: right; }
 
 .primary-nav { margin-bottom: 24px; }
 
-.primary-nav__menu { list-style: none; margin: 0; }
+.primary-nav__menu { list-style: none; margin: 0; text-align: right; }
 
-.primary-nav__menu .menu-item { margin: 0; font-family: "Montserrat", helvetica, arial, sans-serif; font-size: 1.6rem; line-height: 48px; height: 48px; }
+.primary-nav__menu .menu-item { margin: 0; font-family: "vollkorn", georgia, sans-serif; font-size: 1.6rem; line-height: 48px; height: 48px; }
 
-.primary-nav__menu .menu-item a { display: block; color: #525252; padding: 0; border-bottom: 1px solid #eee; }
+.primary-nav__menu .menu-item a { display: block; color: #2e3131; padding: 0; border-bottom: 1px solid #eee; font-weight: 400; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #41bdb6; }
 
-.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: bold; }
+.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: 400; }
 
 .content { padding: 24px 0 0 0; }
-.lt-ie9 .content { padding: 72px 0 0 0; }
+.lt-ie9 .content { padding: 48px 0 0 0; }
 
 .example-image { margin-bottom: 24px; }
 .lt-ie9 .example-image { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; display: inline; }
