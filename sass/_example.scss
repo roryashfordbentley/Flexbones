@@ -45,7 +45,7 @@ p{
 
 // Primary nav container
 .primary-nav{   
-    margin-bottom:$base; 
+    margin-bottom: $base; 
 }
 
 	// The first ul
@@ -58,10 +58,8 @@ p{
 	// Menu item
 	.primary-nav__menu .menu-item{ 
 		margin: 0;
-		font-family: $heading_font;
 		font-size: 1.6rem;
 		line-height: $base*2;
-		height: $base*2;
 	}
 	
 	// Menu item link (block level element with padding + margin applied)
@@ -83,12 +81,12 @@ p{
     }
 
 	// The active page
-    .primary-nav__menu > .current-menu-item a,
-    .primary-nav__menu > .current-menu-item a:visited,
-    .primary-nav__menu > .current-menu-ancestor a,
-    .primary-nav__menu > .current-menu-ancestor a:visited,
-    .primary-nav__menu > .current-post-parent a,
-	.primary-nav__menu > .current-post-parent a:visited{
+    .primary-nav__menu .current-menu-item a,
+    .primary-nav__menu .current-menu-item a:visited,
+    .primary-nav__menu .current-menu-ancestor a,
+    .primary-nav__menu .current-menu-ancestor a:visited,
+    .primary-nav__menu .current-post-parent a,
+	.primary-nav__menu .current-post-parent a:visited{
         color: $link;
         font-weight: $medium;
     }

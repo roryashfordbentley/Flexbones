@@ -78,63 +78,83 @@ add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
 add_filter('show_admin_bar', '__return_false');
 
 /**
- * Sub Menu
- */
-	
-function sub_menu(){
-	
-	global $post;
-	
-	if($post){
-		
-		if($post->post_parent){
-			$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-		} else {
-			$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-		} 
-		
-		if ($children) {
-			echo '<ul>' . $children . '</ul>';
-		}
-	}
-}
-
-/**
- * Menu Parent Class
- * (wp_list_pages)
+ * Menu fix for realsies
+ * First we add a custom walker to output the menu depth
+ * then we strip out all the bloated default classes except for a few useful ones
+ * Finally we replace the current active classes with a custom class
  */
 
-function add_parent_class( $css_class, $page, $depth, $args ){
-	if ( ! empty( $args['has_children'] ) )
-		$css_class[] = 'parent';
-	return $css_class;
-}
-add_filter( 'page_css_class', 'add_parent_class', 10, 4 );
-
-/**
- * Menu Parent Class
- * (wp_nav_menu)
- */     
-
-add_filter('wp_nav_menu_objects', function ($items) {
-
-	$hasSub = function ($menu_item_id, $items) {
-		foreach ($items as $item) {
-			if ($item->menu_item_parent && $item->menu_item_parent == $menu_item_id) {
-				return true;
-			}
-		}
-		return false;
-	};
-
-	foreach ($items as $item) {
-		if ($hasSub($item->ID, $items)) {
-			$item->classes[] = 'parent';
-		}
+class walker_texas_ranger extends Walker_Nav_Menu {
+	function start_lvl(&$output, $depth = 1, $args=array()) {
+		$depth = $depth + 1;
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"sub-menu sub-menu--" . $depth . "\">\n";
 	}
-	return $items;    
 
-});
+}
+
+//Deletes all CSS classes and id's, except for those listed in the array below
+function custom_wp_nav_menu($var) {
+	return is_array($var) ? array_intersect($var, array(
+		//List of allowed menu classes
+		'menu-item',
+		'current_page_parent',
+		'current_page_ancestor',
+		'current_page_item',
+		'current_page_parent',
+		'current_page_ancestor'
+		)
+	) : '';
+}
+add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
+add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
+add_filter('page_css_class', 'custom_wp_nav_menu');
+
+//Replaces "current-menu-item" with "active"
+
+function menu_class_renamer($var){
+	/**
+	 * function to rename classes
+	 * 
+	 */
+}
+
+
+function change_active_class($text){
+    $replace = array(
+        //List of menu item classes that should be changed to "active"
+        'current_page_item' => 'menu-item--active',
+        //'current_page_parent' => 'menu-item--active',
+        //'current_page_ancestor' => 'menu-item--active'
+    );
+    $text = str_replace(array_keys($replace), $replace, $text);
+    return $text;
+}
+add_filter ('wp_nav_menu','change_active_class');
+
+
+function change_parent_class($text){
+    $replace = array(
+        //List of menu item classes that should be changed to "active"
+        'current-menu-parent' => 'menu-item--parent',
+        'current-page-parent' => 'menu-item--parent',
+        'current_page_parent' => 'menu-item--parent'
+    );
+    $text = str_replace(array_keys($replace), $replace, $text);
+    return $text;
+}
+add_filter ('wp_nav_menu','change_parent_class');
+
+
+
+
+//Deletes empty classes
+function strip_empty_classes($menu) {
+    $menu = str_replace('class=""','',$menu);
+    return $menu;
+}
+add_filter ('nav_menu_css_class','strip_empty_classes');
+
 
 /**
  * Dequeue Scripts
@@ -164,7 +184,7 @@ function flexbones_load_js() {
 	 */
 	
 	wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
-	wp_register_script('jquery-ui','//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', array(), '1.10.3', true);
+	wp_register_script( 'jquery-ui','//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', array(), '1.10.3', true);
 	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
 	wp_register_script( 'sitewide-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.1', true );
 	wp_register_script( 'gridtacular', get_template_directory_uri() . '/js/gridtacular/gridtacular.js', array( 'jquery' ), '1', true );

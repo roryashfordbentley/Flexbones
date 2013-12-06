@@ -107,17 +107,17 @@ a:hover { text-decoration: none; color: #66cbc5; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "vollkorn", georgia, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 2.4rem; }
 
-h1 { font-size: 2.56rem; }
+h1 { font-size: 3.84rem; }
 @media (min-width: 641px) and (max-width: 880px) { h1 { font-size: 3.84rem; } }
 @media (min-width: 881px) and (max-width: 1200px) { h1 { font-size: 5.12rem; } }
 @media (min-width: 1200px) { h1 { font-size: 6.4rem; } }
 
-h2 { font-size: 1.92rem; }
+h2 { font-size: 2.88rem; }
 @media (min-width: 641px) and (max-width: 880px) { h2 { font-size: 2.88rem; } }
 @media (min-width: 881px) and (max-width: 1200px) { h2 { font-size: 3.84rem; } }
 @media (min-width: 1200px) { h2 { font-size: 4.8rem; } }
 
-h3 { font-size: 1.44rem; }
+h3 { font-size: 2.16rem; }
 @media (min-width: 641px) and (max-width: 880px) { h3 { font-size: 2.16rem; } }
 @media (min-width: 881px) and (max-width: 1200px) { h3 { font-size: 2.88rem; } }
 @media (min-width: 1200px) { h3 { font-size: 3.6rem; } }
@@ -255,13 +255,13 @@ p { line-height: 1.4; }
 
 .primary-nav__menu { list-style: none; margin: 0; text-align: right; }
 
-.primary-nav__menu .menu-item { margin: 0; font-family: "vollkorn", georgia, sans-serif; font-size: 1.6rem; line-height: 4.8rem; height: 4.8rem; }
+.primary-nav__menu .menu-item { margin: 0; font-size: 1.6rem; line-height: 4.8rem; }
 
 .primary-nav__menu .menu-item a { display: block; color: #2e3131; padding: 0; border-bottom: 1px solid #eee; font-weight: 400; }
 
 .primary-nav__menu .menu-item:hover a, .primary-nav__menu .menu-item:hover a:visited { color: #41bdb6; }
 
-.primary-nav__menu > .current-menu-item a, .primary-nav__menu > .current-menu-item a:visited, .primary-nav__menu > .current-menu-ancestor a, .primary-nav__menu > .current-menu-ancestor a:visited, .primary-nav__menu > .current-post-parent a, .primary-nav__menu > .current-post-parent a:visited { color: #41bdb6; font-weight: 400; }
+.primary-nav__menu .current-menu-item a, .primary-nav__menu .current-menu-item a:visited, .primary-nav__menu .current-menu-ancestor a, .primary-nav__menu .current-menu-ancestor a:visited, .primary-nav__menu .current-post-parent a, .primary-nav__menu .current-post-parent a:visited { color: #41bdb6; font-weight: 400; }
 
 .content { padding: 2.4rem 0 0 0; }
 @media (min-width: 881px) { .content { padding: 4.8rem 0 0 0; } }

@@ -5,18 +5,18 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9 <?php language_attributes(); ?>"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js gte-ie9 <?php language_attributes(); ?>"> <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php global $page, $paged; wp_title( '|', true, 'right' ); bloginfo( 'name' ); if ( $paged >= 2 || $page >= 2 ){ echo ' | ' . sprintf( 'Page %s', max( $paged, $page ) ); } ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat:400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<?php wp_head(); ?>
-	<!--[if lt IE 9]>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
-	<![endif]-->
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php global $page, $paged; wp_title( '|', true, 'right' ); bloginfo( 'name' ); if ( $paged >= 2 || $page >= 2 ){ echo ' | ' . sprintf( 'Page %s', max( $paged, $page ) ); } ?></title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat:400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<?php wp_head(); ?>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style/stylesheets/ie.css" />
+<![endif]-->
 </head>
 <body <?php body_class(); ?>>
 <div class="wrapper content">
@@ -31,7 +31,8 @@
 				$args = array(
 					'menu' => '',
 					'container' => false,
-					'items_wrap' => '%3$s'
+					'items_wrap' => '%3$s',
+					'walker' => new walker_texas_ranger()
 				);
 			 	wp_nav_menu( $args ); 
 			 ?>

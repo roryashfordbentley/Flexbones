@@ -47,7 +47,7 @@ $border_box: 			true;
 
 $radius:				4px;
 
-// Typography
+// Typography Sizes (add for each breakpoint as required)
 
 // Para
 
@@ -61,21 +61,21 @@ $p_s:					1.6rem;
 $h1_xl:					6.4rem;
 $h1_l:					$h1_xl * 0.8;
 $h1_m:					$h1_xl * 0.6;
-$h1_s:					$h1_xl * 0.4;
+$h1_s:					$h1_xl * 0.6;
 
 // h2
 
 $h2_xl:					4.8rem; 
 $h2_l:					$h2_xl * 0.8; 
 $h2_m:					$h2_xl * 0.6; 
-$h2_s:					$h2_xl * 0.4; 
+$h2_s:					$h2_xl * 0.6; 
 
 // h3
 
 $h3_xl:					3.6rem;
 $h3_l:					$h3_xl * 0.8; 
 $h3_m:					$h3_xl * 0.6; 
-$h3_s:					$h3_xl * 0.4; 
+$h3_s:					$h3_xl * 0.6; 
 
 // Weights
 
