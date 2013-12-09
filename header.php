@@ -1,9 +1,9 @@
 <?php if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start("ob_gzhandler"); else ob_start(); ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 <?php language_attributes(); ?>"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 <?php language_attributes(); ?>"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9 <?php language_attributes(); ?>"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js gte-ie9 <?php language_attributes(); ?>"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 " <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js gte-ie9" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,17 +25,16 @@
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-dark-small.png" alt="portrait logo" class="site-logo">
 		</a>		
 		<nav class="primary-nav">
-			<ul class="primary-nav__menu">
-			<?php 
-				//this will fail unless location is defined in WP-admin / menu
-				$args = array(
-					'menu' => '',
-					'container' => false,
-					'items_wrap' => '%3$s',
-					'walker' => new walker_texas_ranger()
-				);
-			 	wp_nav_menu( $args ); 
-			 ?>
+			<ul class="nav-menu"> 
+				<?php 
+					$args = array(
+						'menu' => '',
+						'container' => false,
+						'items_wrap' => '%3$s',
+						'walker' => new walker_texas_ranger()
+					);
+				 	wp_nav_menu( $args ); 
+				 ?>
 			</ul>
 		</nav>
 	</header>	

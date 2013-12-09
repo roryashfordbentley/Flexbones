@@ -21,6 +21,7 @@ p{
 
 	h1{
 		border-bottom: 1px solid #bbb;
+		padding: 0;
 	}
 }
 
@@ -49,21 +50,22 @@ p{
 }
 
 	// The first ul
-	.primary-nav__menu{
+	.nav-menu{
         list-style: none;
 		margin: 0;
 		text-align: right;
     }
 	
 	// Menu item
-	.primary-nav__menu .menu-item{ 
+	.nav-menu .menu-item{ 
 		margin: 0;
 		font-size: 1.6rem;
-		line-height: $base*2;
+		//min-height: $base*2;
+		padding: $base/2 0;
 	}
 	
 	// Menu item link (block level element with padding + margin applied)
-	.primary-nav__menu .menu-item a{
+	.nav-menu .menu-item a{
     	display: block;
     	color: $text_colour;
     	padding: 0;
@@ -72,24 +74,28 @@ p{
 }
 	
 	// Menu item hover
-    .primary-nav__menu .menu-item:hover{
-		
-		a,a:visited{
-			//background: $blue; 
-			color: $link;
-		}
+    .nav-menu .menu-item > a:hover{
+		color: $link;
     }
 
 	// The active page
-    .primary-nav__menu .current-menu-item a,
-    .primary-nav__menu .current-menu-item a:visited,
-    .primary-nav__menu .current-menu-ancestor a,
-    .primary-nav__menu .current-menu-ancestor a:visited,
-    .primary-nav__menu .current-post-parent a,
-	.primary-nav__menu .current-post-parent a:visited{
+    .nav-menu .menu-item--active > a,
+    .nav-menu .menu-item--active > a:visited{
         color: $link;
         font-weight: $medium;
     }
+
+    .nav-menu .menu-item--active .sub-menu li{
+    	color: $text_colour;
+    }
+	
+	//sub menu style
+    .nav-menu .sub-menu{
+    	margin: 0;
+    	list-style: none;
+    }
+
+    //
 
 // pad all the content at the top
 
