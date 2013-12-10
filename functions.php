@@ -12,7 +12,7 @@
 		add_theme_support( 'automatic-feed-links' );
 
 		register_nav_menus( array(
-			'primary' => 'Primary Navigation',
+			'main_menu' => 'main menu',
 		) );
 		
 		register_sidebar();
@@ -64,121 +64,111 @@
 	add_filter('show_admin_bar', '__return_false');
 
 /**
- * Menu fix for realsies
- * First we add a custom walker to output the menu depth
- * then we strip out all the bloated default classes except for a few useful ones
- * Finally we replace the current active classes with a custom class
+ * The Flexbones mega menu!!!
  */
 
-	class walker_texas_ranger extends Walker_Nav_Menu {
-		function start_lvl(&$output, $depth = 1, $args=array()) {
-			$depth = $depth + 1;
-			$indent = str_repeat("\t", $depth);
-			$output .= "\n$indent<ul class=\"sub-menu sub-menu--" . $depth . "\">\n";
-		}
+class walker_texas_ranger extends Walker_Nav_Menu {
 
-		/*function start_el(&$output, $item, $depth = 1, $args = array(), $id = 0){
-			
-			if($depth > 1){
-				$sub_menu_class = 'sub-menu__item';
-			} else {
-				$sub_menu_class = '';
-			}
+	// value declared with walker
+	//private $css_class_prefix;
 
-			$indent = str_repeat("\t", $depth);
-			$output .= "\n$indent<li class=\"menu-item $sub_menu_class\">\n";
-		}*/
+	function __construct($css_class_prefix, $item_class_inheritance) {
+		$this->css_class_prefix = $css_class_prefix;
+		$this->item_class_inheritance = $item_class_inheritance;
+	}
 
-		function start_el(&$output, $item, $depth = 1, $args = array(), $id = 0){
-           global $wp_query;
-           $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+	/* check for children */
 
-           $class_names = $value = '';
+	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ){
+        $id_field = $this->db_fields['id'];
+        if ( is_object( $args[0] ) ) {
+            $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
+        }
+        return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+    }
 
-           $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+	/**
+	 * [start_lvl description]
+	 */
+	
+	function start_lvl(&$output, $depth = 1, $args=array()) {
+		$real_depth = $depth + 1;
+		$indent = str_repeat("\t", $real_depth);
 
-           $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-           $class_names = ' class="'. esc_attr( $class_names ) . '"';
+		$classes = array(
+	        //$this->css_class_prefix . '__sub',
+	       	$this->css_class_prefix . '__sub-menu',
+	        $this->css_class_prefix . '__sub-menu--' . $real_depth
+        );
+	    $class_names = implode( ' ', $classes );
 
-           $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
-
-           $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-           $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-           $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-           $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-
-           $description  = ! empty( $item->description ) ? '<span>'.esc_attr( $item->description ).'</span>' : '';
-
-            $item_output = $args->before;
-            $item_output .= '<a'. $attributes .'>';
-            $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
-            $item_output .= $description.$args->link_after;
-            $item_output .= '</a>';
-            $item_output .= $args->after;
-
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-		}
+		$output .= "\n" . $indent . '<ul class="'. $class_names .'">' ."\n";
+	}
+  
+	// add main/sub classes to li's and links
+	 
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		
+		global $wp_query;
+		
+		$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+
+		// class names
+		// if the inheritance value is true add __item classes to all li's
+		// regardless of depth (depth classes remain intact)
+		
+		if ($this->item_class_inheritance){
+			$inherited_item_class = $this->css_class_prefix . '__item';
+		} else {
+			$inherited_item_class = '';
+		}
+
+		//parent class
+		
+		if ( $args->has_children ) {
+			$parent_class = $this->css_class_prefix . '__item--parent';
+        } else {
+        	$parent_class = '';
+        }
+
+		// depth dependent classes
+		
+		$depth_classes = array(
+		    ( $depth == 0 ? $this->css_class_prefix . '__item' : $this->css_class_prefix . '__sub-menu__item' ),
+		    ( $depth >=1 ? $this->css_class_prefix . '__sub-menu--' . $depth . '--item' : '' ) 
+		);
+		
+		$depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+
+		// passed classes
+		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		// $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) ); // original classes
+		$current_page_class = in_array("current-menu-item",$item->classes) ? $this->css_class_prefix . '__item--active' : 'nope';
+		$item_id_class = $this->css_class_prefix . '__item--'. $item->ID;
+
+		// build Li's
+		$output .= $indent . '<li class="' . $current_page_class . ' ' . $inherited_item_class .' ' . $depth_class_names . ' '. $item_id_class . ' ' . $parent_class .'">';
+
+		// link attributes
+		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+		//$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
+
+		$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+		    $args->before,
+		    $attributes,
+		    $args->link_before,
+		    apply_filters( 'the_title', $item->title, $item->ID ),
+		    $args->link_after,
+		    $args->after
+		);
+
+		// filter Li's
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
-
-	//Deletes all CSS classes and id's, except for those listed in the array below
-
-	function nav_strip_classes($var) {
-		return is_array($var) ? array_intersect($var, array(
-			//List of allowed menu classes
-			'menu-item',
-			'current_page_parent',
-			'current_page_ancestor',
-			'current_page_item',
-			'current_page_parent',
-			'current_page_ancestor',
-			'current-menu-parent',
-			'current-page-parent',
-			'current_page_parent',
-			'menu-item--parent'
-			)
-		) : '';
-	}
-	add_filter('nav_menu_css_class', 'nav_strip_classes');
-	add_filter('nav_menu_item_id', 'nav_strip_classes');
-	add_filter('page_css_class', 'nav_strip_classes');
-
-	// Change active nav class
-
-	function nav_change_active_class($text){
-	    $replace = array(
-	        //List of menu item classes that should be changed to "active"
-	        'current_page_item' => 'menu-item--active',
-	        'current_page_parent' => 'menu-item--parent',
-	        'current_page_ancestor' => 'menu-item--ancestor'
-	    );
-	    $text = str_replace(array_keys($replace), $replace, $text);
-	    return $text;
-	}
-	add_filter ('wp_nav_menu','nav_change_active_class');
-
-	// adds a parent class to parent li's
-
-	function nav_add_parent_class ($items) {
-
-	    $has_sub = function($menu_item_id, $items) {
-	        foreach ($items as $item) {
-	            if ($item->menu_item_parent && $item->menu_item_parent == $menu_item_id) {
-	                return true;
-	            }
-	        }
-	        return false;
-	    };
-
-	    foreach ($items as $item) {
-	        if ($has_sub($item->ID, $items)) {
-	            $item->classes[] = 'menu-item--parent';
-	        }
-	    }
-	    return $items;
-	}
-
-	add_filter('wp_nav_menu_objects', 'nav_add_parent_class');
+}
 
 /**
  * Dequeue Scripts

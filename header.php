@@ -24,17 +24,24 @@
 		<a href="<?php echo get_home_url(); ?>" class="site-logo-link clear">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-dark-small.png" alt="portrait logo" class="site-logo">
 		</a>		
-		<nav class="primary-nav">
-			<ul class="nav-menu"> 
-				<?php 
-					$args = array(
-						'menu' => '',
-						'container' => false,
-						'items_wrap' => '%3$s',
-						'walker' => new walker_texas_ranger()
-					);
-				 	wp_nav_menu( $args ); 
-				 ?>
-			</ul>
+		<nav class="primary-nav"> 
+			<?php 
+				$location 				= 'main_menu';
+				$css_class_prefix 		= 'main-menu';
+				$item_class_inheritance =  true; 
+				
+				$args = array(
+					'theme_location' 	=> $location,
+					'menu_class' 		=> $css_class_prefix,
+					'container'			=> false,
+					//'items_wrap' 		=> '%3$s',
+					'walker' 			=> new walker_texas_ranger($css_class_prefix, $item_class_inheritance)
+				);
+			?>
+			<?php if (has_nav_menu($location)): ?>
+				 <?php wp_nav_menu( $args ); ?>
+			<?php else: ?>
+				<p>you must define a menu in WP-admin<p>
+			 <?php endif; ?>
 		</nav>
 	</header>	

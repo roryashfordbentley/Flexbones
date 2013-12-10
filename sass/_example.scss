@@ -44,56 +44,61 @@ p{
 
 // Nav
 
+/**
+ Not sure where to document this yet.
+ NEW MENU CLASSES
+
+.menu-prefix{}
+.menu-prefix__item{}
+.menu-prefix__item--active{}
+.menu-prefix__item--parent{}
+.menu-prefix__item--(id){}
+
+.menu-prefix__sub--(depth){}
+.menu-prefix__sub--(depth)__item{}
+.menu-prefix__sub--(depth)__item--active{}
+.menu-prefix__sub--(depth)__item--parent{} 
+ */
+
+
 // Primary nav container
 .primary-nav{   
     margin-bottom: $base; 
 }
 
-	// The first ul
-	.nav-menu{
-        list-style: none;
+	// The main ul
+	.main-menu, .main-menu__sub-menu{
 		margin: 0;
 		text-align: right;
     }
 	
 	// Menu item
-	.nav-menu .menu-item{ 
+	.main-menu__item{ 
 		margin: 0;
 		font-size: 1.6rem;
-		//min-height: $base*2;
-		padding: $base/2 0;
+		list-style: none;
 	}
 	
-	// Menu item link (block level element with padding + margin applied)
-	.nav-menu .menu-item a{
-    	display: block;
-    	color: $text_colour;
-    	padding: 0;
-    	border-bottom: 1px solid #eee;
-    	font-weight: $medium;
-}
-	
-	// Menu item hover
-    .nav-menu .menu-item > a:hover{
-		color: $link;
-    }
+		// Menu item link (block level element with padding + margin applied)
+		.main-menu__item a{
+	    	display: block;
+	    	color: $text_colour;
+	    	padding: $base/2 0;
+	    	border-bottom: 1px solid #eee;
+	    	font-weight: $medium;
+		}
+		
+		// Menu item hover
+	    .main-menu__item > a:hover{
+			color: $link;
+	    }
 
-	// The active page
-    .nav-menu .menu-item--active > a,
-    .nav-menu .menu-item--active > a:visited{
-        color: $link;
-        font-weight: $medium;
-    }
-
-    .nav-menu .menu-item--active .sub-menu li{
-    	color: $text_colour;
-    }
-	
-	//sub menu style
-    .nav-menu .sub-menu{
-    	margin: 0;
-    	list-style: none;
-    }
+		// The active page
+	    .main-menu__item--active > a,
+	    .main-menu__item--active > a:visited{
+	        color: $link;
+	        font-weight: $medium;
+	    }
 
     //
 

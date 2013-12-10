@@ -221,21 +221,29 @@ p { line-height: 1.4; }
 
 .site-logo { float: right; }
 
+/** Not sure where to document this yet. NEW MENU CLASSES
+
+.menu-prefix{}
+.menu-prefix__item{}
+.menu-prefix__item--active{}
+.menu-prefix__item--parent{}
+.menu-prefix__item--(id){}
+
+.menu-prefix__sub--(depth){}
+.menu-prefix__sub--(depth)__item{}
+.menu-prefix__sub--(depth)__item--active{}
+.menu-prefix__sub--(depth)__item--parent{}  */
 .primary-nav { margin-bottom: 24px; }
 
-.nav-menu { list-style: none; margin: 0; text-align: right; }
+.main-menu, .main-menu__sub-menu { margin: 0; text-align: right; }
 
-.nav-menu .menu-item { margin: 0; font-size: 1.6rem; padding: 12px 0; }
+.main-menu__item { margin: 0; font-size: 1.6rem; list-style: none; }
 
-.nav-menu .menu-item a { display: block; color: #2e3131; padding: 0; border-bottom: 1px solid #eee; font-weight: 400; }
+.main-menu__item a { display: block; color: #2e3131; padding: 12px 0; border-bottom: 1px solid #eee; font-weight: 400; }
 
-.nav-menu .menu-item > a:hover { color: #41bdb6; }
+.main-menu__item > a:hover { color: #41bdb6; }
 
-.nav-menu .menu-item--active > a, .nav-menu .menu-item--active > a:visited { color: #41bdb6; font-weight: 400; }
-
-.nav-menu .menu-item--active .sub-menu li { color: #2e3131; }
-
-.nav-menu .sub-menu { margin: 0; list-style: none; }
+.main-menu__item--active > a, .main-menu__item--active > a:visited { color: #41bdb6; font-weight: 400; }
 
 .content { padding: 24px 0 0 0; }
 .lt-ie9 .content { padding: 48px 0 0 0; }
