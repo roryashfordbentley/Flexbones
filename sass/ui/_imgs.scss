@@ -6,7 +6,10 @@
 
 // Responsive Images
 
-img{ max-width: 100%; }  
+img{ 
+	max-width: 100%; 
+	height: auto;
+}  
 
 figure{
 	display: inline-block;
@@ -28,6 +31,6 @@ figure{
 		right: 0;
 	}
 
-figure img{
-	display: block;
-}
+	figure img{
+		display: block;
+	}

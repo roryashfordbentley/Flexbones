@@ -35,10 +35,9 @@ License URI:	n/a
  
 @import "_global.scss";
 @import "_wordpress.scss";
-@import "_typography.scss";
 
 // Default UI
-
+@import "ui/_typography.scss";
 @import "ui/_buttons.scss";
 @import "ui/_forms.scss";
 @import "ui/_tables.scss";
