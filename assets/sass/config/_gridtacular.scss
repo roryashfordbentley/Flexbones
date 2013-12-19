@@ -5,20 +5,11 @@
 
 // Columns Mixin
 
-@mixin gridtacular_columns($breakpoint,$columns) {
-	
-	@include at-breakpoint($breakpoint){ 
-		
+@mixin gridtacular_columns($breakpoint,$columns) {	
+	@include at-breakpoint($breakpoint){ 	
 		@include span-columns(1,$columns); 
-
-		&:nth-child(#{$columns}){ 
-			@include span-columns(1 omega,$columns); 
-		}
-
-		&:nth-child(n + #{$columns + 1} ){
-			display: none;
-		}
-		
+		&:nth-child(#{$columns}){ @include span-columns(1 omega,$columns); }
+		&:nth-child(n + #{$columns + 1} ){ display: none; }
 		background: rgba(0,0,0,0.02);
 	}
 }
@@ -95,6 +86,12 @@ body{
 		float: right;
 	}
 
+	// Grid toggle
+
+	.gridtacular__grid-toggle{
+		float: right;
+	}
+
 	.gridtacular__baseline-overlay{
 		display: none;
 		position: absolute;
@@ -108,14 +105,8 @@ body{
 		left: 0;
 		// Using a 50px high background image but resizing it down to 
 		background-image: url("js/gridtacular/images/baseline.png"); 
-		// Change $base to suitable baseline height
-		background-size: 100% $base;
-	}
-
-	// Grid toggle
-
-	.gridtacular__grid-toggle{
-		float: right;
+		// Change base() to suitable baseline height
+		background-size: 100% base();
 	}
 
 	.gridtacular__grid-overlay{

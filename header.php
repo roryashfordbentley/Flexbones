@@ -22,7 +22,7 @@
 <div class="wrapper content">
 	<header class="site-header">	
 		<a href="<?php echo get_home_url(); ?>" class="site-logo-link clear">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-dark-small.png" alt="portrait logo" class="site-logo">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/logo-dark-small.png" alt="portrait logo" class="site-logo">
 		</a>		
 		<nav class="primary-nav"> 
 			<?php 

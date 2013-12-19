@@ -14,15 +14,10 @@ img{
 figure{
 	display: inline-block;
 	position: relative;
-	vertical-align: top;
-
-	&:hover figcaption{
-		visibility: hidden;
-	}
 }
 
 	figcaption{
-		padding: $base/4;
+		padding: $base(0.25);
 		background: rgba(33,33,33,0.75);
 		color: #fff;
 		position: absolute;
@@ -34,3 +29,6 @@ figure{
 	figure img{
 		display: block;
 	}
+
+// SVGizzle
+

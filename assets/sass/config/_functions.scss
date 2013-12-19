@@ -22,11 +22,6 @@
 	}
 }
 
-////
- // mixins.scss
- // all mixins go here
-////
-
 // Clearfix
 
 @mixin clearfix() {
@@ -36,4 +31,26 @@
 	    display:table;
 	}
 	&:after { clear:both; }
+}
+
+// handle all units with a sensible IE fallback
+
+@function typesize($multiplier:1){
+	//$is_ie is global and set in style.scss/ie.scss
+	@if( $is_ie == true ){
+		@return ($multiplier * $type_size_ie);
+	} @else {
+		@return $multiplier * $type_size;
+	}
+}
+
+// handle all units with a sensible IE fallback
+
+@function base($multiplier:1){
+	//$is_ie is global and set in style.scss/ie.scss
+	@if( $is_ie == true ){
+		@return $multiplier * $base_ie;
+	} @else {
+		@return $multiplier * $base;
+	}
 }

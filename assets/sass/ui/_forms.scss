@@ -10,14 +10,13 @@ input[type="text"],
 input[type="password"],
 textarea{
 	display: block;
-	margin: 0 0 $base 0;
+	margin: 0 0 base() 0;
 	width: 100%;
-	height: $base;
+	height: base();
 	border: 0;
-	padding: 0 $base/4; 
+	padding: 0 base(0.25); 
 	outline: none;
 	@include border-radius($radius);
-	//@include box-shadow(inset darken(#ccc,15%) 0 0 1px); //emulate border without affecting height
 	border: 1px solid darken(#ccc,15%);
 	&:focus{
 		background: #eff;
@@ -31,7 +30,7 @@ input[type="password"]{
 }
 
 textarea{
-	height: $base*6;
+	height: base(6);
 }
 
 input[type="submit"]{

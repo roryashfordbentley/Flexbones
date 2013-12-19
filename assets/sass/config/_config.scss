@@ -5,9 +5,35 @@
 
 // Scale & Type
 
-$base: 2.4rem;
+// Global font sizes for different breakpoints ( applied to html element )
 
-$font-size: 62.5%;
+$font-size: 			100%;
+$font-size-m: 			100%;
+$font-size-l: 			112.5%;
+$font-size-xl: 			125%;
+
+// Type defaults ( used when calling typesize() )
+
+$type_size: 			1rem;
+$type_size_ie: 			16px;
+
+// size defaults ( used when calling base() )
+
+$base: 					1.5rem;
+$base_ie: 				24px;
+
+// Typography Sizes (add for each breakpoint as required)
+
+// font size bases
+$p:						typesize(1);
+$lead:					typesize(1.4);
+$h1:					typesize(4);
+$h2:					typesize(3); 
+$h3:					typesize(2);
+
+// Weights
+$medium: 				400;
+$bold: 					700;
 
 // Grid settings (SUSY)
 
@@ -25,7 +51,6 @@ $columns_l:				12;
 $columns_xl:			12;
 
 // $media-layout: min-width mq | total columns | max-width mq
-
 $s: 					0 $columns_s 640px;
 $m: 					641px $columns_m 880px;
 $m_up: 					641px $columns_m  lt-ie9;
@@ -35,50 +60,12 @@ $xl: 					1200px $columns_xl;
 $ie: 					0 $columns_l lt-ie9;			
 
 // Font Stack
-
 $heading_font: 			'vollkorn', georgia, sans-serif;
 $body_font: 			$heading_font;
 
 // Box sizing
-
 $border_box: 			true;
 
 // Border Radius
-
 $radius:				4px;
-
-// Typography Sizes (add for each breakpoint as required)
-
-// Para
-
-$p_xl:					2.2rem;
-$p_l:					2rem;
-$p_m:					1.8rem;
-$p_s:					1.6rem;
-
-// h1
-
-$h1_xl:					6.4rem;
-$h1_l:					$h1_xl * 0.8;
-$h1_m:					$h1_xl * 0.6;
-$h1_s:					$h1_xl * 0.6;
-
-// h2
-
-$h2_xl:					4.8rem; 
-$h2_l:					$h2_xl * 0.8; 
-$h2_m:					$h2_xl * 0.6; 
-$h2_s:					$h2_xl * 0.6; 
-
-// h3
-
-$h3_xl:					3.6rem;
-$h3_l:					$h3_xl * 0.8; 
-$h3_m:					$h3_xl * 0.6; 
-$h3_s:					$h3_xl * 0.6; 
-
-// Weights
-
-$medium: 				400;
-$bold: 					700;
 
