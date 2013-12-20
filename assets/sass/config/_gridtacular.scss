@@ -105,8 +105,8 @@ body{
 		left: 0;
 		// Using a 50px high background image but resizing it down to 
 		background-image: url("js/gridtacular/images/baseline.png"); 
-		// Change base() to suitable baseline height
-		background-size: 100% base();
+		// Change size() to suitable baseline height
+		background-size: 100% size();
 	}
 
 	.gridtacular__grid-overlay{

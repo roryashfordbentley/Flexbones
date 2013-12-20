@@ -1,5 +1,5 @@
 /**
- * Styles for the included example Delete if you like
+ * Styles for the included example Delete as you like
  */
 
 // Type Overrides
@@ -27,20 +27,35 @@ p{
 
 .site-header{
 	@include at-breakpoint($l_up){
+		@include span-columns(3, 12);
+	}
+
+	@include at-breakpoint($xl){
 		@include span-columns(2, 12);
 	}
 }
 
 // Logo
 
-.site-logo-link{
-	margin-bottom: base(0.5);
+.site-logo{
+	margin-bottom: size(0.5);
 	display: block;
 }
 
-	.site-logo{
+	.site-logo__img{
 		float: right;
+		width: 70px;
+		height: 70px;
+		background: #010101 url('assets/imgs/logo-dark.png') no-repeat;
+		background: #010101 url('assets/imgs/logo.svg') no-repeat, none;
+		background-size: cover;
 	}
+
+.logo {
+
+}
+
+
 
 // Nav
 
@@ -61,9 +76,11 @@ p{
  */
 
 
+/* Navigataur would work nicely here */
+
 // Primary nav container
 .primary-nav{   
-    margin-bottom: base(1); 
+    margin-bottom: size(1); 
 }
 
 	// The main ul
@@ -83,7 +100,7 @@ p{
 		.main-menu__item a{
 	    	display: block;
 	    	color: $text_colour;
-	    	padding: base(0.5) 0;
+	    	padding: size(0.5) 0;
 	    	border-bottom: 1px solid #eee;
 	    	font-weight: $medium;
 		}
@@ -100,87 +117,15 @@ p{
 	        font-weight: $medium;
 	    }
 
-    //
-
 // pad all the content at the top
 
 .content{
-	padding: base(1) 0 0 0;
+	padding: size(1) 0 0 0;
 
 	@include at-breakpoint($l_up){
-		padding: base(2) 0 0 0;
+		padding: size(2) 0 0 0;
 	}
 }
-
-// Images Example
-
-.example-image-container{
-	
-}
-
-	.example-image{
-		@include at-breakpoint($l_up){
-			@include span-columns(4,8);
-		}
-		margin-bottom: base(1);
-	}
-
-		.example-image--last{
-			@include at-breakpoint($l_up){
-				@include span-columns(4 omega,8);
-			}
-		}
-
-// grid columns example
-
-.example-grid .col{
-	background: #ccc;
-	line-height: base(2);
-	height: base(2);
-	text-align: center;
-	margin-bottom: base(1);
-	border: 1px solid red;
-	border: 1px solid darken(#ccc,3%);
-	font-size: typesize(1);
-	@include border-radius($radius);
-}
-
-.example-grid .col--1{
-	@include at-breakpoint($m_up){
-		@include span-columns(1,8);
-	}
-}
-
-	.example-grid .col--1--last{
-		@include at-breakpoint($m_up){
-			@include span-columns(1 omega,8);
-		}
-	}
-
-.example-grid .col--2{
-	@include at-breakpoint($m_up){
-		@include span-columns(2,8);
-	}
-}
-
-	.example-grid .col--2--last{
-		@include at-breakpoint($m_up){
-			@include span-columns(2 omega,8);
-		}
-	}
-
-.example-grid .col--4{
-	@include at-breakpoint($m_up){
-		@include span-columns(4,8);
-	}
-}
-
-	.example-grid .col--4--last{
-		@include at-breakpoint($m_up){
-			@include span-columns(4 omega,8);
-		}
-	}
-
 
 // Footer
 
@@ -188,6 +133,6 @@ p{
 	border-top: 1px solid #ccc;
 	p {
 		margin: 0;	
-		padding: base(1) 0;
+		padding: size(1) 0;
 	}
 }

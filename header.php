@@ -21,9 +21,9 @@
 <body <?php body_class(); ?>>
 <div class="wrapper content">
 	<header class="site-header">	
-		<a href="<?php echo get_home_url(); ?>" class="site-logo-link clear">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/logo-dark-small.png" alt="portrait logo" class="site-logo">
-		</a>		
+		<a href="<?php echo get_home_url(); ?>" class="site-logo clear">
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="logo" class="site-logo__img">
+		</a>	
 		<nav class="primary-nav"> 
 			<?php 
 				$location 				= 'main_menu';

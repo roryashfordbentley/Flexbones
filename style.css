@@ -69,8 +69,8 @@ body { color: #2e3131; font-family: "vollkorn", georgia, sans-serif; -webkit-fon
 
 .wrapper { *zoom: 1; max-width: 92%; _width: 92%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 .wrapper:after { content: ""; display: table; clear: both; }
-@media (min-width: 881px) { .wrapper { width: 85%; max-width: 1200px; } }
-.lt-ie9 .wrapper { width: 85%; max-width: 1200px; }
+@media (min-width: 881px) { .wrapper { width: 95%; max-width: 1200px; } }
+.lt-ie9 .wrapper { width: 95%; max-width: 1200px; }
 
 .lt-ie9 .wrapper { width: 1000px; }
 
@@ -184,7 +184,7 @@ figure img { display: block; }
 /** Header specific declarations Note: navigation has its own document _navigation.scss */
 /** footer.scss all footer styles go here */
 /** sidebar.scss */
-/** Styles for the included example Delete if you like */
+/** Styles for the included example Delete as you like */
 h1, h2, h3, h4, h5, h6 { letter-spacing: -1px; }
 
 p { line-height: 1.4; }
@@ -193,12 +193,13 @@ p { line-height: 1.4; }
 .lt-ie9 .main { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
 .main h1 { border-bottom: 1px solid #bbb; padding: 0; }
 
-@media (min-width: 881px) { .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
+@media (min-width: 881px) { .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
+.lt-ie9 .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
+@media (min-width: 1200px) { .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
 
-.site-logo-link { margin-bottom: 0.75rem; display: block; }
+.site-logo { margin-bottom: 0.75rem; display: block; }
 
-.site-logo { float: right; }
+.site-logo__img { float: right; width: 70px; height: 70px; background: #010101 url("assets/imgs/logo-dark.png") no-repeat; background: #010101 url("assets/imgs/logo.svg") no-repeat, none; background-size: cover; }
 
 /** Not sure where to document this yet. NEW MENU CLASSES
 
@@ -212,6 +213,7 @@ p { line-height: 1.4; }
 .menu-prefix__sub--(depth)__item{}
 .menu-prefix__sub--(depth)__item--active{}
 .menu-prefix__sub--(depth)__item--parent{}  */
+/* Navigataur would work nicely here */
 .primary-nav { margin-bottom: 1.5rem; }
 
 .main-menu, .main-menu__sub-menu { margin: 0; text-align: right; }
@@ -227,33 +229,6 @@ p { line-height: 1.4; }
 .content { padding: 1.5rem 0 0 0; }
 @media (min-width: 881px) { .content { padding: 3rem 0 0 0; } }
 .lt-ie9 .content { padding: 3rem 0 0 0; }
-
-.example-image { margin-bottom: 1.5rem; }
-@media (min-width: 881px) { .example-image { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; } }
-.lt-ie9 .example-image { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; display: inline; }
-
-@media (min-width: 881px) { .example-image--last { width: 48.1865284974%; float: right; margin-right: 0; } }
-.lt-ie9 .example-image--last { width: 48.1865284974%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-.example-grid .col { background: #ccc; line-height: 3rem; height: 3rem; text-align: center; margin-bottom: 1.5rem; border: 1px solid red; border: 1px solid #c4c4c4; font-size: 1rem; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
-
-@media (min-width: 641px) { .example-grid .col--1 { width: 9.3264248705%; float: left; margin-right: 3.6269430051%; } }
-.lt-ie9 .example-grid .col--1 { width: 9.3264248705%; float: left; margin-right: 3.6269430051%; display: inline; }
-
-@media (min-width: 641px) { .example-grid .col--1--last { width: 9.3264248705%; float: right; margin-right: 0; } }
-.lt-ie9 .example-grid .col--1--last { width: 9.3264248705%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) { .example-grid .col--2 { width: 22.2797927461%; float: left; margin-right: 3.6269430051%; } }
-.lt-ie9 .example-grid .col--2 { width: 22.2797927461%; float: left; margin-right: 3.6269430051%; display: inline; }
-
-@media (min-width: 641px) { .example-grid .col--2--last { width: 22.2797927461%; float: right; margin-right: 0; } }
-.lt-ie9 .example-grid .col--2--last { width: 22.2797927461%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) { .example-grid .col--4 { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; } }
-.lt-ie9 .example-grid .col--4 { width: 48.1865284974%; float: left; margin-right: 3.6269430051%; display: inline; }
-
-@media (min-width: 641px) { .example-grid .col--4--last { width: 48.1865284974%; float: right; margin-right: 0; } }
-.lt-ie9 .example-grid .col--4--last { width: 48.1865284974%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
 
 .site-footer { border-top: 1px solid #ccc; }
 .site-footer p { margin: 0; padding: 1.5rem 0; }
