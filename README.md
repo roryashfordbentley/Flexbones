@@ -13,6 +13,8 @@ Features
 * __Responsive__ 
 * __Minimalistic Template Approach__ 
 * __Modular SASS__ 
+* __Modular functions.php__
+* __Grunt__
 * __gridtacular.js__
 
 Overview
@@ -35,3 +37,13 @@ CSS Preprocessing tools
 * [SASS](http://sass-lang.com)
 * [Compass](http://compass-style.org)
 * [Susy](http://susy.oddbird.net/)
+
+Roadmap
+--------
+
+1. Write full documentation
+2. Get a domain for demos and docs
+3. X-Browser testing
+4. Create a woo-commerce Flexbones sub-theme
+5. Add a CSS only responsive menu
+6. Improve DRY development within the theme
