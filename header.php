@@ -20,28 +20,32 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="wrapper content">
-	<header class="site-header">	
+	<header class="site-header clear">	
 		<a href="<?php echo get_home_url(); ?>" class="site-logo clear">
 			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="logo" class="site-logo__img">
-		</a>	
-		<nav class="primary-nav"> 
-			<?php 
-				$location 				= 'main_menu';
-				$css_class_prefix 		= 'main-menu';
-				$item_class_inheritance =  true; 
-				
-				$args = array(
-					'theme_location' 	=> $location,
-					'menu_class' 		=> $css_class_prefix,
-					'container'			=> false,
-					//'items_wrap' 		=> '%3$s',
-					'walker' 			=> new walker_texas_ranger($css_class_prefix, $item_class_inheritance)
-				);
-			?>
-			<?php if (has_nav_menu($location)): ?>
-				 <?php wp_nav_menu( $args ); ?>
-			<?php else: ?>
-				<p>you must define a menu in WP-admin<p>
-			 <?php endif; ?>
+		</a>
+		<label for="toggle" class="menu-toggle"></label>
+		<input type="checkbox" id="toggle" class="menu-toggle-checkbox clear" />
+		<nav class="primary-nav">
+    		<ul class="main-menu">
+				<?php 
+					$location 				= 'main_menu';
+					$css_class_prefix 		= 'main-menu';
+					$item_class_inheritance =  true; 
+					
+					$args = array(
+						'theme_location' 	=> $location,
+						'menu_class' 		=> $css_class_prefix,
+						'container'			=> false,
+						//'items_wrap' 		=> '%3$s',
+						'walker' 			=> new walker_texas_ranger($css_class_prefix, $item_class_inheritance)
+					);
+				?>
+				<?php if (has_nav_menu($location)): ?>
+					 <?php wp_nav_menu( $args ); ?>
+				<?php else: ?>
+					<p>you must define a menu in WP-admin<p>
+				 <?php endif; ?>
+			</ul>
 		</nav>
 	</header>	

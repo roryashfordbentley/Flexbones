@@ -15,7 +15,12 @@ p{
 // Layout 
 
 .main{	
-	@include at-breakpoint($l_up){
+	@include at-breakpoint($m_up){
+		@include span-columns(9 omega,12);
+	}
+
+
+	@include at-breakpoint($xl){
 		@include span-columns(9 omega,12);
 	}
 
@@ -26,11 +31,18 @@ p{
 }
 
 .site-header{
-	@include at-breakpoint($l_up){
+	position: relative;
+	@include at-breakpoint($s){
+		background:  #010101;
+		@include bleed(1);	
+		margin-bottom: size(2);
+	}
+
+	@include at-breakpoint($m){
 		@include span-columns(3, 12);
 	}
 
-	@include at-breakpoint($xl){
+	@include at-breakpoint($l_up){
 		@include span-columns(2, 12);
 	}
 }
@@ -38,55 +50,82 @@ p{
 // Logo
 
 .site-logo{
-	margin-bottom: size(0.5);
+	margin: size(0.25) 0 0 0;
 	display: block;
+	float: left;
+	@include at-breakpoint($m_up){
+		float: none;
+	}
 }
 
 	.site-logo__img{
-		float: right;
-		width: 70px;
-		height: 70px;
+		width: 40px;
+		height: 40px;
 		background: #010101 url('assets/imgs/logo-dark.png') no-repeat;
-		background: #010101 url('assets/imgs/logo.svg') no-repeat, none;
+		
+		@include modernizr('.svg'){
+			background: #010101 url('assets/imgs/logo.svg') no-repeat;
+			background-size: contain;
+		}
+
+		@include at-breakpoint($m_up){
+			width: 70px;
+			height: 70px;
+			float: right;
+		}
+
 		background-size: cover;
 	}
 
-.logo {
+//mobile menu toggle
 
+.menu-toggle-checkbox{
+	opacity: 0;
 }
 
+.menu-toggle{
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: size(0.25) 0;
+	//border: 2px solid #fff;
+	float: right;
+	outline: none; 
+	position: relative; 
+	cursor: pointer; 
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	user-select: none;
 
+	@include modernizr('.svg'){
+		background: #010101 url('assets/imgs/menu-btn.svg') no-repeat;
+		background-size: contain;
+	}
 
-// Nav
+	@include at-breakpoint($m_up){
+		display: none;
+	}
+}
 
-/**
- Not sure where to document this yet.
- NEW MENU CLASSES
-
-.menu-prefix{}
-.menu-prefix__item{}
-.menu-prefix__item--active{}
-.menu-prefix__item--parent{}
-.menu-prefix__item--(id){}
-
-.menu-prefix__sub--(depth){}
-.menu-prefix__sub--(depth)__item{}
-.menu-prefix__sub--(depth)__item--active{}
-.menu-prefix__sub--(depth)__item--parent{} 
- */
-
+.menu-toggle-checkbox:checked + .primary-nav{
+	display: block;
+}	
 
 /* Navigataur would work nicely here */
 
 // Primary nav container
 .primary-nav{   
-    margin-bottom: size(1); 
+    display: none;
+    margin-top: 30px;
+    @include at-breakpoint($m_up){
+    	display:block;
+    }
 }
 
 	// The main ul
 	.main-menu, .main-menu__sub-menu{
 		margin: 0;
-		text-align: right;
+		
     }
 	
 	// Menu item
@@ -94,15 +133,28 @@ p{
 		margin: 0;
 		font-size: typesize(1);
 		list-style: none;
+
 	}
 	
 		// Menu item link (block level element with padding + margin applied)
 		.main-menu__item a{
 	    	display: block;
-	    	color: $text_colour;
+	    	color: #fff;
 	    	padding: size(0.5) 0;
-	    	border-bottom: 1px solid #eee;
+	    	border-bottom: 1px solid #bbb;
 	    	font-weight: $medium;
+	    	text-align: center;
+	    	@include at-breakpoint($s){
+	    		@include bleed(1);
+	    		background: lighten(#010101,25%);
+	    		border-bottom: 1px solid lighten(#010101,20%);
+	    	}
+
+	    	@include at-breakpoint($m_up){
+	    		color: $text_colour;
+	    		background: auto;
+	    		text-align: right;
+	    	}
 		}
 		
 		// Menu item hover
@@ -115,14 +167,14 @@ p{
 	    .main-menu__item--active > a:visited{
 	        color: $link;
 	        font-weight: $medium;
+	        background: lighten(#010101,30%);
 	    }
 
 // pad all the content at the top
 
 .content{
-	padding: size(1) 0 0 0;
 
-	@include at-breakpoint($l_up){
+	@include at-breakpoint($m_up){
 		padding: size(2) 0 0 0;
 	}
 }

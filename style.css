@@ -93,17 +93,17 @@ body { color: #2e3131; font-family: "vollkorn", georgia, sans-serif; -webkit-fon
 .aligncenter { margin: 0 auto; }
 
 /** typography.scss all base font styles, paragraphs, headings, lists */
-p, ul, ol, input, textarea { font-weight: 400; font-size: 1rem; }
+p, ul, ol, input, textarea { font-weight: 400; font-size: 1.125rem; }
 
 p, ul, ol { margin-bottom: 1.5rem; }
 
-.lead { font-size: 1.4rem; line-height: 1.3; }
+.lead, h1 + p { font-size: 1.4rem; line-height: 1.3; }
 
 .small { font-size: 1.2rem; line-height: 1.3; }
 
-a, a:visited { color: #41bdb6; text-decoration: none; }
+a, a:visited { color: #03a7ff; text-decoration: none; }
 
-a:hover { text-decoration: none; color: #66cbc5; }
+a:hover { text-decoration: none; color: #36b9ff; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "vollkorn", georgia, sans-serif; font-weight: 400; color: #292929; line-height: 1.3; margin-bottom: 1.5rem; }
 
@@ -124,9 +124,9 @@ ol { list-style-type: decimal; font-weight: normal; margin-left: 1.5rem; }
 label { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; display: block; }
 
 /** Buttons */
-.btn, input[type="submit"] { display: block; background: #41bdb6; border: none; height: 2.25rem; margin: 0 0 0.75rem 0; padding: 0 0.75rem; color: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; outline: none; }
+.btn, input[type="submit"] { display: block; background: #03a7ff; border: none; height: 2.25rem; margin: 0 0 0.75rem 0; padding: 0 0.75rem; color: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; outline: none; }
 
-.btn:hover, input[type="submit"]:hover { background: #53c4be; color: #fff; }
+.btn:hover, input[type="submit"]:hover { background: #1db0ff; color: #fff; }
 
 .btn:visited, input[type="submit"]:visited { color: #fff; }
 
@@ -181,26 +181,6 @@ figure img { display: block; }
 /* -- _PAGE.SCSS -- */
 /* Styles for Wordpress Pages Includes styles for for specific page templates */
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
-/** Header specific declarations Note: navigation has its own document _navigation.scss */
-/** footer.scss all footer styles go here */
-/** sidebar.scss */
-/** Styles for the included example Delete as you like */
-h1, h2, h3, h4, h5, h6 { letter-spacing: -1px; }
-
-p { line-height: 1.4; }
-
-@media (min-width: 881px) { .main { width: 74.4027303754%; float: right; margin-right: 0; } }
-.lt-ie9 .main { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-.main h1 { border-bottom: 1px solid #bbb; padding: 0; }
-
-@media (min-width: 881px) { .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
-@media (min-width: 1200px) { .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-
-.site-logo { margin-bottom: 0.75rem; display: block; }
-
-.site-logo__img { float: right; width: 70px; height: 70px; background: #010101 url("assets/imgs/logo-dark.png") no-repeat; background: #010101 url("assets/imgs/logo.svg") no-repeat, none; background-size: cover; }
-
 /** Not sure where to document this yet. NEW MENU CLASSES
 
 .menu-prefix{}
@@ -213,21 +193,62 @@ p { line-height: 1.4; }
 .menu-prefix__sub--(depth)__item{}
 .menu-prefix__sub--(depth)__item--active{}
 .menu-prefix__sub--(depth)__item--parent{}  */
-/* Navigataur would work nicely here */
-.primary-nav { margin-bottom: 1.5rem; }
+/** Header specific declarations Note: navigation has its own document _navigation.scss */
+/** footer.scss all footer styles go here */
+/** sidebar.scss */
+/** Styles for the included example Delete as you like */
+h1, h2, h3, h4, h5, h6 { letter-spacing: -1px; }
 
-.main-menu, .main-menu__sub-menu { margin: 0; text-align: right; }
+p { line-height: 1.4; }
+
+@media (min-width: 641px) { .main { width: 74.4027303754%; float: right; margin-right: 0; } }
+.lt-ie9 .main { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+@media (min-width: 1200px) { .main { width: 74.4027303754%; float: right; margin-right: 0; } }
+.main h1 { border-bottom: 1px solid #bbb; padding: 0; }
+
+.site-header { position: relative; }
+@media (max-width: 640px) { .site-header { background: #010101; margin-left: -17.4825174825%; padding-left: 17.4825174825%; margin-right: -17.4825174825%; padding-right: 17.4825174825%; margin-bottom: 3rem; } }
+@media (min-width: 641px) and (max-width: 880px) { .site-header { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
+@media (min-width: 881px) { .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
+.lt-ie9 .site-header { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
+
+.site-logo { margin: 0.375rem 0 0 0; display: block; float: left; }
+@media (min-width: 641px) { .site-logo { float: none; } }
+.lt-ie9 .site-logo { float: none; }
+
+.site-logo__img { width: 40px; height: 40px; background: #010101 url("assets/imgs/logo-dark.png") no-repeat; background-size: cover; }
+.svg .site-logo__img { background: #010101 url("assets/imgs/logo.svg") no-repeat; background-size: contain; }
+@media (min-width: 641px) { .site-logo__img { width: 70px; height: 70px; float: right; } }
+.lt-ie9 .site-logo__img { width: 70px; height: 70px; float: right; }
+
+.menu-toggle-checkbox { opacity: 0; }
+
+.menu-toggle { display: block; width: 40px; height: 40px; margin: 0.375rem 0; float: right; outline: none; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.svg .menu-toggle { background: #010101 url("assets/imgs/menu-btn.svg") no-repeat; background-size: contain; }
+@media (min-width: 641px) { .menu-toggle { display: none; } }
+.lt-ie9 .menu-toggle { display: none; }
+
+.menu-toggle-checkbox:checked + .primary-nav { display: block; }
+
+/* Navigataur would work nicely here */
+.primary-nav { display: none; margin-top: 30px; }
+@media (min-width: 641px) { .primary-nav { display: block; } }
+.lt-ie9 .primary-nav { display: block; }
+
+.main-menu, .main-menu__sub-menu { margin: 0; }
 
 .main-menu__item { margin: 0; font-size: 1rem; list-style: none; }
 
-.main-menu__item a { display: block; color: #2e3131; padding: 0.75rem 0; border-bottom: 1px solid #eee; font-weight: 400; }
+.main-menu__item a { display: block; color: #fff; padding: 0.75rem 0; border-bottom: 1px solid #bbb; font-weight: 400; text-align: center; }
+@media (max-width: 640px) { .main-menu__item a { margin-left: -17.4825174825%; padding-left: 17.4825174825%; margin-right: -17.4825174825%; padding-right: 17.4825174825%; background: #414141; border-bottom: 1px solid #343434; } }
+@media (min-width: 641px) { .main-menu__item a { color: #2e3131; background: auto; text-align: right; } }
+.lt-ie9 .main-menu__item a { color: #2e3131; background: auto; text-align: right; }
 
-.main-menu__item > a:hover { color: #41bdb6; }
+.main-menu__item > a:hover { color: #03a7ff; }
 
-.main-menu__item--active > a, .main-menu__item--active > a:visited { color: #41bdb6; font-weight: 400; }
+.main-menu__item--active > a, .main-menu__item--active > a:visited { color: #03a7ff; font-weight: 400; background: #4e4e4e; }
 
-.content { padding: 1.5rem 0 0 0; }
-@media (min-width: 881px) { .content { padding: 3rem 0 0 0; } }
+@media (min-width: 641px) { .content { padding: 3rem 0 0 0; } }
 .lt-ie9 .content { padding: 3rem 0 0 0; }
 
 .site-footer { border-top: 1px solid #ccc; }

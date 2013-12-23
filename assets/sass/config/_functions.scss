@@ -33,6 +33,18 @@
 	&:after { clear:both; }
 }
 
+// Modernizr
+// Call this mixin to only apply styles on supported 
+// browsers anddevices.
+// The ampersand pulls in the parent selector
+// 
+@mixin modernizr($selector){
+
+	#{$selector} &	{
+		@content;
+	}
+}
+
 // handle all units with a sensible IE fallback
 
 @function typesize($multiplier:1){

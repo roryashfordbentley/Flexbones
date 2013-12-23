@@ -25,7 +25,7 @@ ol{
 
 // Big text ideal for the first paragraph in an article
 
-.lead{
+.lead, h1 + p{
 	font-size: $lead;
 	line-height: 1.3;
 }
