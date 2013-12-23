@@ -25,7 +25,7 @@
 			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="logo" class="site-logo__img">
 		</a>
 		<label for="toggle" class="menu-toggle"></label>
-		<input type="checkbox" id="toggle" class="menu-toggle-checkbox clear" />
+		<input type="checkbox" id="toggle" class="menu-toggle-checkbox" />
 		<nav class="primary-nav">
     		<ul class="main-menu">
 				<?php 

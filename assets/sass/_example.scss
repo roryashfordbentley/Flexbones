@@ -80,7 +80,7 @@ p{
 //mobile menu toggle
 
 .menu-toggle-checkbox{
-	opacity: 0;
+	visibility: hidden;
 }
 
 .menu-toggle{
@@ -144,6 +144,7 @@ p{
 	    	border-bottom: 1px solid #bbb;
 	    	font-weight: $medium;
 	    	text-align: center;
+	    	
 	    	@include at-breakpoint($s){
 	    		@include bleed(1);
 	    		background: lighten(#010101,25%);
@@ -152,7 +153,7 @@ p{
 
 	    	@include at-breakpoint($m_up){
 	    		color: $text_colour;
-	    		background: auto;
+	    		background: none;
 	    		text-align: right;
 	    	}
 		}
@@ -168,6 +169,9 @@ p{
 	        color: $link;
 	        font-weight: $medium;
 	        background: lighten(#010101,30%);
+	        @include at-breakpoint($m_up){
+				background: none;
+	        }
 	    }
 
 // pad all the content at the top

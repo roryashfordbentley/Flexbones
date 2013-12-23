@@ -23,7 +23,7 @@ function load_js() {
 	
 	wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
 	wp_register_script( 'jquery-ui','//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', array(), '1.10.3', true);
-	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', false );
+	wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', array(), '2.7.1', false );
 	wp_register_script( 'sitewide-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '1.1', true );
 	wp_register_script( 'gridtacular', get_template_directory_uri() . '/assets/js/gridtacular/gridtacular.js', array( 'jquery' ), '1', true );
 	
