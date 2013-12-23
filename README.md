@@ -65,7 +65,7 @@ This function checks to see if the font size multiplied by the baseline is a who
 	}
 }
 ```
-** Sass **
+**Sass**
 
 ```
 .whole-baseline{
@@ -73,7 +73,7 @@ This function checks to see if the font size multiplied by the baseline is a who
 }
 ```
 
-** Html **
+**Html**
 
 ```
 <html class="whole-baseline">
