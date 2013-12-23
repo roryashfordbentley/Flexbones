@@ -45,11 +45,11 @@ CSS Preprocessing tools
 ## Documentation
 
 1. [Helper Mixins](#helper-mixins--functions)
-	1.[Whole Baseline Function](#whole-baseline-function)
-	2.[Clearfix Mixin](#clearfix-mixin)
-	3.[Modernizr Mixin](#modernizr-mixin)
-	4.[Size Function](#size-function)
-	5.[Typesize Function](#typesize-function)
+	1. [Whole Baseline Function](#whole-baseline-function)
+	2. [Clearfix Mixin](#clearfix-mixin)
+	3. [Modernizr Mixin](#modernizr-mixin)
+	4. [Size Function](#size-function)
+	5. [Typesize Function](#typesize-function)
 
 ### Helper mixins & functions
 
