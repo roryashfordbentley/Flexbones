@@ -46,9 +46,13 @@ CSS Preprocessing tools
 
 ### Helper mixins & functions
 
-#### Whole Baseline function
+#### Whole Baseline function 
+
+**(sass/config/_functions.scss)**
 
 This function checks to see if the font size multiplied by the baseline is a whole number. If not it rounds up the font size to ensure that the baseline is a whole number, therefore a whole pixel. This fixes browser inconsistencies of rendering sub pixels. (Please note this feature is **Experimental**).
+
+**Function** 
 
 ```
 @function whole_baseline($font_size,$baseline){
@@ -60,6 +64,21 @@ This function checks to see if the font size multiplied by the baseline is a who
 		@return percentage(round($font_size * $baseline) / $baseline / 16);
 	}
 }
+```
+** Sass **
+
+```
+.whole-baseline{
+	font-size: whole_baseline(10,$base); }
+}
+```
+
+** Html **
+
+```
+<html class="whole-baseline">
+	
+</html>
 ```
 
 
