@@ -1,4 +1,3 @@
-////
 // config.scss
 // variables that control global stuff:
 // grids, units font sizes etc
@@ -25,14 +24,18 @@ $base_ie: 				24px;
 // Typography Sizes (add for each breakpoint as required)
 
 // font size bases
-$p:						typesize(1.125);
-$lead:					typesize(1.4);
-$h1:					typesize(4);
-$h2:					typesize(3); 
-$h3:					typesize(2);
+$h1:					typesize(3);
+$h2:					typesize(2.25); 
+$h3:					typesize(1.75);
+$h4:					typesize(1.125);
+$p:						typesize(1);
+$lead:					typesize(1.5);
+
 
 // Weights
+$light: 				300;
 $medium: 				400;
+$semibold: 				600;
 $bold: 					700;
 
 // Grid settings (SUSY)
@@ -60,7 +63,7 @@ $xl: 					1200px $columns_xl;
 $ie: 					0 $columns_l lt-ie9;			
 
 // Font Stack
-$heading_font: 			'vollkorn', georgia, sans-serif;
+$heading_font: 			'Open Sans', helvetica, arial, sans-serif;
 $body_font: 			$heading_font;
 
 // Box sizing

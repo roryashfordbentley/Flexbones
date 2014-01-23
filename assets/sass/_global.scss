@@ -23,18 +23,11 @@
 }
 
 html { 
-	line-height: 1.5;
-
 	font-size: $font-size;
-	@include at-breakpoint($m){
-		font-size: $font-size-m;
-	}
-	@include at-breakpoint($l){
-		font-size: $font-size-l;
-	}
-	@include at-breakpoint($xl){
-		font-size: $font-size-xl;
-	}
+	line-height: 1.5;
+	@include at-breakpoint($m){ font-size: $font-size-m; }
+	@include at-breakpoint($l){ font-size: $font-size-l; }
+	@include at-breakpoint($xl){ font-size: $font-size-xl; }
 }
 
 body {
@@ -49,8 +42,4 @@ body {
 		width: 95%;
 		max-width: 1200px; 
 	}
-}
-
-.lt-ie9 .wrapper{
-	width: 1000px;
 }
