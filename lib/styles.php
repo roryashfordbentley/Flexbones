@@ -12,7 +12,7 @@ function stylesheet_loader() {
 		'all' 
 	);
 
-	wp_enqueue_style( 'page-style' );
+	wp_enqueue_style('page-style');
 }
 
-add_action( 'wp_enqueue_scripts', 'stylesheet_loader' );
+add_action('wp_enqueue_scripts', 'stylesheet_loader');

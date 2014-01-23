@@ -5,7 +5,7 @@
 
 function remove_wp_jquery() {
 	//if statements prevents it deregistering in admin
-	if( !is_admin() ) {
+	if(!is_admin()) {
 		wp_deregister_script('jquery');
 		wp_deregister_script('jquery-ui');
 	}
@@ -28,7 +28,7 @@ function load_js() {
 	// Enqueue Scripts
 
 	wp_enqueue_script('jquery');
-	//wp_enqueue_script( 'jquery-ui' );
+	//wp_enqueue_script('jquery-ui');
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('sitewide-scripts');
 	wp_enqueue_script('gridtacular');

@@ -29,8 +29,8 @@ add_filter('tiny_mce_before_init', 'cbnet_tinymce_config');
  */
 
 if( is_admin() ) {
-	add_filter( 'image_send_to_editor', 'wp_image_wrap_init', 10, 8 );    
-	function wp_image_wrap_init( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
+	add_filter('image_send_to_editor', 'wp_image_wrap_init', 10, 8 );    
+	function wp_image_wrap_init($html, $id, $caption, $title, $align, $url, $size, $alt) {
 		return '<div class="content-image flex-image">'. $html .'</div>';
 	}
 }

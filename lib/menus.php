@@ -118,7 +118,7 @@ function get_flexbones_menu($location = "main_menu", $css_class_prefix = 'main-m
 	
 	if (has_nav_menu($location)){
 		return wp_nav_menu($args);
-	} else{
+	}else{
 		return "<p>You need to first define a menu in WP-admin<p>";
 	}
 }
