@@ -65,3 +65,29 @@
 		@return $multiplier * $base;
 	}
 }
+
+// Grid generator
+
+@mixin susycss($class,$cols,$total_cols){
+	
+	#{$class}{
+		@include span-columns($cols,$total_cols);
+	}
+
+	@each $breakpoint in ('m',$m), ('m_up',$m_up), ('l',$l), ('l_up',$l_up), ('xl',$xl) {
+		$bp_name: nth($breakpoint, 1);
+		$bp_var: nth($breakpoint, 2);
+
+		#{$class}--#{$bp_name}{
+			@include at-breakpoint( $bp_var ){
+				@include span-columns( $cols,$total_cols );
+			}
+		}
+
+		#{$class}--#{$bp_name}--omega{
+			@include at-breakpoint( $bp_var ){
+				@include span-columns( $cols omega,$total_cols );
+			}
+		}
+	}
+}
