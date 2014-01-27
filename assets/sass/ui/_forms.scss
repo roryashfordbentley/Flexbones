@@ -1,38 +1,45 @@
 /**
  * Forms
+ * some basic form styling, give the form a class 'flexform'
  */
 
-form{
-	font-family: $body_font;
-}
+.flexform{
 
-input[type="text"], 
-input[type="password"],
-textarea{
-	display: block;
-	margin: 0 0 size() 0;
-	width: 100%;
-	height: size();
-	border: 0;
-	padding: 0 size(0.25); 
-	outline: none;
-	@include border-radius($radius);
-	border: 1px solid darken(#ccc,15%);
-	&:focus{
-		background: #eff;
-		@include box-shadow(inset $blue 0 0 5px);
+	input, 
+	select, 
+	textarea, 
+	button{
+		font-family: inherit;
+		font-size: typesize(1);
+		outline: none;
 	}
-}
 
-input[type="text"], 
-input[type="password"]{
-	
-}
+	input[type="text"], 
+	input[type="password"],
+	input[type="email"], 
+	input[type="tel"],
+	textarea{
+		display: block;
+		margin: 0 0 size(1) 0;
+		width: 100%;
+		height: size(1);
+		border: none;
+		padding: 0 size(0.25); 
+		outline: none;
+		@include border-radius($radius);
+		border: 1px solid darken(#ccc,15%);
+		&:focus{
+			background: #eff;
+			@include box-shadow(inset $blue 0 0 5px);
+		}
+	}
 
-textarea{
-	height: size(6);
-}
+	textarea{
+		min-height: size(6);
+	}
 
-input[type="submit"]{
-	@extend .btn;
+	input[type="submit"]{
+		@extend .btn;
+	}
+
 }
