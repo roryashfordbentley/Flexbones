@@ -7,7 +7,7 @@
 // Responsive Images
 
 img{ 
-	width: inherit;  /* IE8 Fix */
+	width: auto;  /* IE8 Fix */
 	max-width: 100%; 
 	height: auto;
 }  
@@ -18,8 +18,7 @@ a img{
 
 
 figure{
-	display: inline-block;
-	position: relative;
+
 }
 
 	figcaption{

@@ -171,11 +171,9 @@ th, td { padding: 0.75rem; }
 th { font-weight: 400; font-family: helvetica, arial, sans-serif; font-size: 1.2rem; }
 
 /** _imgs.scss Global Image values Default captions e.t.c */
-img { width: inherit; /* IE8 Fix */ max-width: 100%; height: auto; }
+img { width: auto; /* IE8 Fix */ max-width: 100%; height: auto; }
 
 a img { border: 0; }
-
-figure { display: inline-block; position: relative; }
 
 figcaption { padding: 0.375rem; background: #212121; background: rgba(33, 33, 33, 0.75); color: #fff; position: absolute; bottom: 0; left: 0; right: 0; }
 
