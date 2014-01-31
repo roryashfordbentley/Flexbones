@@ -39,7 +39,7 @@ body {
 .wrapper {
 	@include container;
 	@include at-breakpoint($l_up){ 
-		width: 95%;
+		width: 90%;
 		max-width: 1200px; 
 	}
 }

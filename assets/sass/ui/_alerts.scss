@@ -1,0 +1,29 @@
+/**
+ * Buttons
+ */
+
+.alert {
+	background: lighten($clr_default,30%);
+	border-left: size(0.25) solid $clr_default;
+	color: darken($clr_default,10%);
+	padding: size(0.5);
+	margin: 0 0 size(1) 0;
+}
+
+.alert--success{
+	background: lighten($clr_success,30%);
+	border-left: size(0.25) solid $clr_success;
+	color: darken($clr_success,10%);
+}
+
+.alert--warning{
+	background: lighten($clr_warning,30%);
+	border-left: size(0.25) solid $clr_warning;
+	color: darken($clr_warning,10%);
+}
+
+.alert--problem{
+	background: lighten($clr_problem,30%);
+	border-left: size(0.25) solid $clr_problem;
+	color: darken($clr_problem,10%);
+}

@@ -1,7 +1,6 @@
 # Ignore sass-cache files.
 *.sass-cache*
 *.scssc
-fire_app_log.txt
 grunt/node_modules/
 ie.min.scss
 style.min.scss

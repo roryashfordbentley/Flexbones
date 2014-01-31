@@ -7,9 +7,15 @@
 // Responsive Images
 
 img{ 
+	width: inherit;  /* IE8 Fix */
 	max-width: 100%; 
 	height: auto;
 }  
+
+a img{
+	border: 0;
+}
+
 
 figure{
 	display: inline-block;
@@ -17,7 +23,8 @@ figure{
 }
 
 	figcaption{
-		padding: $base(0.25);
+		padding: size(0.25);
+		background: rgb(33,33,33);
 		background: rgba(33,33,33,0.75);
 		color: #fff;
 		position: absolute;

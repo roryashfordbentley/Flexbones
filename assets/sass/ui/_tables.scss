@@ -5,27 +5,28 @@
 table { 
 	width: 100%;
 	background: #fff;
-	border: 1px solid #ccc;
-	margin-bottom: $base;
-	font-size: 0.75rem;
+	//border: 1px solid #949393;
+	margin-bottom: size(1);
+	font-size: typesize(1);
+	border-collapse: collapse;
+	margin-bottom: size(1);
 }
 
 	thead{
-		background: $blue;
+		background: $clr_default;
 		color: #fff;
+		text-align: left;
 	}
 
 	tbody tr:nth-child(odd) {background: #f1f1f1}
-	tbody tr:nth-child(even) {background: #FFF}
+	tbody tr:nth-child(even) {background: #eae8e8}
 
 	th,td{
-		height: $base;
-		padding: 0 $base;
+		padding: size(0.5);
 	}
 
 	th{
-		font-weight: bold;
-		height: $base*2;
+		font-weight: $medium;		
 		font-family: $heading_font;
-		font-size:1rem;
+		font-size: typesize(1.2);
 	}

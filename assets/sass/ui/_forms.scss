@@ -3,43 +3,50 @@
  * some basic form styling, give the form a class 'flexform'
  */
 
-.flexform{
+// Label
 
-	input, 
-	select, 
-	textarea, 
-	button{
-		font-family: inherit;
-		font-size: typesize(1);
-		outline: none;
+.flexform label {
+	font-size: typesize(0.75);
+	font-weight: $medium;
+	text-transform: uppercase;
+	display: block;
+	margin: 0 0 size(0.5) 0;
+}
+
+.flexform input, 
+.flexform select, 
+.flexform textarea{
+	font-family: inherit;
+	font-size: typesize(1);
+	outline: none;
+}
+
+.flexform input{
+	display: block;
+	margin: 0 0 size(1) 0;
+	width: 100%;
+	border: none;
+	padding: size(0.25); 
+	outline: none;
+	@include border-radius($radius);
+	border: 1px solid #949393;
+	&:focus{
+		background: #f1efef;
+		@include box-shadow(inset #ccc 0 0 5px);
 	}
+}
 
-	input[type="text"], 
-	input[type="password"],
-	input[type="email"], 
-	input[type="tel"],
-	textarea{
-		display: block;
-		margin: 0 0 size(1) 0;
-		width: 100%;
-		height: size(1);
-		border: none;
-		padding: 0 size(0.25); 
-		outline: none;
-		@include border-radius($radius);
-		border: 1px solid darken(#ccc,15%);
-		&:focus{
-			background: #eff;
-			@include box-shadow(inset $blue 0 0 5px);
-		}
-	}
+.flexform textarea{
+	min-height: size(6);
+	width: 100%;
+	@include border-radius($radius);
+	border: 1px solid darken(#ccc,15%);
+	padding: size(0.25); 
+	margin: 0 0 size(1) 0;
+}
 
-	textarea{
-		min-height: size(6);
-	}
-
-	input[type="submit"]{
-		@extend .btn;
-	}
-
+.flexform input[type="submit"]{
+	@extend .btn;
+	display: inline-block;
+	width: auto;
 }
