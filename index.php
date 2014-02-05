@@ -141,7 +141,7 @@
 
 			<div class="flexform-group">
 				<input type="submit" name="confirm" value="Confirm" class="btn btn--success">
-				<input type="submit" name="confirm" value="Cancel" class="btn btn--warning">
+				<input type="submit" name="confirm" value="Cancel" class="btn btn--problem">
 			</div>
 
 		</form>

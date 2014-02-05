@@ -5,7 +5,7 @@
 
 // Label
 
-.flexform label {
+label {
 	font-size: typesize(0.75);
 	font-weight: $medium;
 	text-transform: uppercase;
@@ -13,16 +13,16 @@
 	margin: 0 0 size(0.5) 0;
 }
 
-.flexform input, 
-.flexform select, 
-.flexform textarea{
+input, 
+select, 
+textarea{
 	font-family: inherit;
 	font-size: typesize(1);
 	outline: none;
 }
 
-.flexform input{
-	display: block;
+input{
+	display: inline-block;
 	margin: 0 0 size(1) 0;
 	width: 100%;
 	border: none;
@@ -36,17 +36,11 @@
 	}
 }
 
-.flexform textarea{
+textarea{
 	min-height: size(6);
 	width: 100%;
 	@include border-radius($radius);
 	border: 1px solid darken(#ccc,15%);
 	padding: size(0.25); 
 	margin: 0 0 size(1) 0;
-}
-
-.flexform input[type="submit"]{
-	@extend .btn;
-	display: inline-block;
-	width: auto;
 }

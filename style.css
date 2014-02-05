@@ -119,22 +119,23 @@ ul { list-style-type: disc; margin: 0 0 1.5rem 1.5rem; }
 ol { list-style-type: decimal; font-weight: normal; margin: 0 0 1.5rem 1.5rem; }
 
 /** Buttons */
-.btn, .flexform input[type="submit"], input[type="submit"].btn, .flexform input[type="submit"] { display: block; background: #3498db; border: none; min-width: 6rem; margin: 0 0 1.5rem 0; padding: 0.75rem 1.125rem; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; outline: none; font-size: 0.75rem; font-family: inherit; color: #fff; cursor: pointer; }
-.btn:hover, .flexform input[type="submit"]:hover, input[type="submit"].btn:hover, .flexform input[type="submit"]:hover { background: #4aa3df; }
-.btn:active, .flexform input[type="submit"]:active, input[type="submit"].btn:active, .flexform input[type="submit"]:active { background: #258cd1; }
-.btn:visited, .flexform input[type="submit"]:visited, input[type="submit"].btn:visited, .flexform input[type="submit"]:visited { color: #fff; }
+.btn { display: inline-block; background: #3498db; border: none; min-width: 6rem; width: auto; margin: 0 0 1.5rem 0; padding: 0.75rem 1.125rem; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; outline: none; font-size: 0.75rem; font-family: inherit; color: #fff; cursor: pointer; }
+.btn:hover { background: #4aa3df; }
+.btn:active { background: #258cd1; }
+.btn:visited { color: #fff; }
+.btn:focus { background: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 
-.btn--success, input[type="submit"].btn--success { background: #2ecc71; }
-.btn--success:hover, input[type="submit"].btn--success:hover { background: #40d47e; }
-.btn--success:active, input[type="submit"].btn--success:active { background: #29b765; }
+.btn--success { background: #2ecc71; }
+.btn--success:hover { background: #40d47e; }
+.btn--success:active { background: #29b765; }
 
-.btn--warning, input[type="submit"].btn--warning { background: #e67e22; }
-.btn--warning:hover, input[type="submit"].btn--warning:hover { background: #e98b39; }
-.btn--warning:active, input[type="submit"].btn--warning:active { background: #d67118; }
+.btn--warning { background: #e67e22; }
+.btn--warning:hover { background: #e98b39; }
+.btn--warning:active { background: #d67118; }
 
-.btn--problem, input[type="submit"].btn--warning { background: #e74c3c; }
-.btn--problem:hover, input[type="submit"].btn--warning:hover { background: #ea6153; }
-.btn--problem:active, input[type="submit"].btn--warning:active { background: #e43725; }
+.btn--problem { background: #e74c3c; }
+.btn--problem:hover { background: #ea6153; }
+.btn--problem:active { background: #e43725; }
 
 /** Buttons */
 .alert { background: #b6daf2; border-left: 0.375rem solid #3498db; color: #217dbb; padding: 0.75rem; margin: 0 0 1.5rem 0; }
@@ -146,16 +147,14 @@ ol { list-style-type: decimal; font-weight: normal; margin: 0 0 1.5rem 1.5rem; }
 .alert--problem { background: #f8c9c4; border-left: 0.375rem solid #e74c3c; color: #d62c1a; }
 
 /** Forms some basic form styling, give the form a class 'flexform' */
-.flexform label { font-size: 0.75rem; font-weight: 400; text-transform: uppercase; display: block; margin: 0 0 0.75rem 0; }
+label { font-size: 0.75rem; font-weight: 400; text-transform: uppercase; display: block; margin: 0 0 0.75rem 0; }
 
-.flexform input, .flexform select, .flexform textarea { font-family: inherit; font-size: 1rem; outline: none; }
+input, select, textarea { font-family: inherit; font-size: 1rem; outline: none; }
 
-.flexform input { display: block; margin: 0 0 1.5rem 0; width: 100%; border: none; padding: 0.375rem; outline: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: 1px solid #949393; }
-.flexform input:focus { background: #f1efef; -webkit-box-shadow: inset #cccccc 0 0 5px; -moz-box-shadow: inset #cccccc 0 0 5px; box-shadow: inset #cccccc 0 0 5px; }
+input { display: inline-block; margin: 0 0 1.5rem 0; width: 100%; border: none; padding: 0.375rem; outline: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: 1px solid #949393; }
+input:focus { background: #f1efef; -webkit-box-shadow: inset #cccccc 0 0 5px; -moz-box-shadow: inset #cccccc 0 0 5px; box-shadow: inset #cccccc 0 0 5px; }
 
-.flexform textarea { min-height: 9rem; width: 100%; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: 1px solid #a6a6a6; padding: 0.375rem; margin: 0 0 1.5rem 0; }
-
-.flexform input[type="submit"] { display: inline-block; width: auto; }
+textarea { min-height: 9rem; width: 100%; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: 1px solid #a6a6a6; padding: 0.375rem; margin: 0 0 1.5rem 0; }
 
 /** Table styling */
 table { width: 100%; background: #fff; margin-bottom: 1.5rem; font-size: 1rem; border-collapse: collapse; margin-bottom: 1.5rem; }
@@ -180,314 +179,33 @@ figcaption { padding: 0.375rem; background: #212121; background: rgba(33, 33, 33
 figure img { display: block; }
 
 /** Grid */
-.grid__1-12 { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; display: inline; }
+/** Lets build some custom grids */
+/** Flexbones grid columns, center, push */
+/** .grid__1-6--s{} .grid__2-6--s{} .grid__3-6--s{} .grid__4-6--s{} .grid__5-6--s{}  .grid__1-12--m{} .grid__2-12--m{} .grid__3-12--m{} .grid__4-12--m{} .grid__5-12--m{} .grid__6-12--m{} .grid__7-12--m{} .grid__8-12--m{} .grid__9-12--m{} .grid__10-12--m{} .grid__11-12--m{}  */
+/** At Breakpoint  */
+.test { width: 34; margin-right: 6; }
 
-.grid__1-12--omega { width: 6.1433447099%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
+.test-2 { width: 34; margin-right: 6; }
 
-@media (min-width: 641px) and (max-width: 880px) { .grid__1-12--m { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; } }
+/*@include grid(6);
+@include grid(12, m m_up l l_up xl);
 
-@media (min-width: 641px) and (max-width: 880px) { .grid__1-12--m--omega { width: 6.1433447099%; float: right; margin-right: 0; } }
 
-@media (min-width: 641px) { .grid__1-12--m_up { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__1-12--m_up { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; display: inline; }
 
-@media (min-width: 641px) { .grid__1-12--m_up--omega { width: 6.1433447099%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__1-12--m_up--omega { width: 6.1433447099%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
 
-@media (min-width: 881px) and (max-width: 1200px) { .grid__1-12--l { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; } }
 
-@media (min-width: 881px) and (max-width: 1200px) { .grid__1-12--l--omega { width: 6.1433447099%; float: right; margin-right: 0; } }
 
-@media (min-width: 881px) { .grid__1-12--l_up { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__1-12--l_up { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__1-12--l_up--omega { width: 6.1433447099%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__1-12--l_up--omega { width: 6.1433447099%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__1-12--xl { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__1-12--xl--omega { width: 6.1433447099%; float: right; margin-right: 0; } }
-
-.grid__2-12 { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__2-12--omega { width: 14.6757679181%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__2-12--m { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__2-12--m--omega { width: 14.6757679181%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__2-12--m_up { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__2-12--m_up { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__2-12--m_up--omega { width: 14.6757679181%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__2-12--m_up--omega { width: 14.6757679181%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__2-12--l { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__2-12--l--omega { width: 14.6757679181%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__2-12--l_up { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__2-12--l_up { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__2-12--l_up--omega { width: 14.6757679181%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__2-12--l_up--omega { width: 14.6757679181%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__2-12--xl { width: 14.6757679181%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__2-12--xl--omega { width: 14.6757679181%; float: right; margin-right: 0; } }
-
-.grid__3-12 { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__3-12--omega { width: 23.2081911263%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__3-12--m { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__3-12--m--omega { width: 23.2081911263%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__3-12--m_up { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__3-12--m_up { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__3-12--m_up--omega { width: 23.2081911263%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__3-12--m_up--omega { width: 23.2081911263%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__3-12--l { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__3-12--l--omega { width: 23.2081911263%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__3-12--l_up { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__3-12--l_up { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__3-12--l_up--omega { width: 23.2081911263%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__3-12--l_up--omega { width: 23.2081911263%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__3-12--xl { width: 23.2081911263%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__3-12--xl--omega { width: 23.2081911263%; float: right; margin-right: 0; } }
-
-.grid__4-12 { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__4-12--omega { width: 31.7406143345%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__4-12--m { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__4-12--m--omega { width: 31.7406143345%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__4-12--m_up { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__4-12--m_up { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__4-12--m_up--omega { width: 31.7406143345%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__4-12--m_up--omega { width: 31.7406143345%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__4-12--l { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__4-12--l--omega { width: 31.7406143345%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__4-12--l_up { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__4-12--l_up { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__4-12--l_up--omega { width: 31.7406143345%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__4-12--l_up--omega { width: 31.7406143345%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__4-12--xl { width: 31.7406143345%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__4-12--xl--omega { width: 31.7406143345%; float: right; margin-right: 0; } }
-
-.grid__5-12 { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__5-12--omega { width: 40.2730375427%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__5-12--m { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__5-12--m--omega { width: 40.2730375427%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__5-12--m_up { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__5-12--m_up { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__5-12--m_up--omega { width: 40.2730375427%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__5-12--m_up--omega { width: 40.2730375427%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__5-12--l { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__5-12--l--omega { width: 40.2730375427%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__5-12--l_up { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__5-12--l_up { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__5-12--l_up--omega { width: 40.2730375427%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__5-12--l_up--omega { width: 40.2730375427%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__5-12--xl { width: 40.2730375427%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__5-12--xl--omega { width: 40.2730375427%; float: right; margin-right: 0; } }
-
-.grid__6-12 { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__6-12--omega { width: 48.8054607509%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__6-12--m { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__6-12--m--omega { width: 48.8054607509%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__6-12--m_up { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__6-12--m_up { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__6-12--m_up--omega { width: 48.8054607509%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__6-12--m_up--omega { width: 48.8054607509%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__6-12--l { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__6-12--l--omega { width: 48.8054607509%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__6-12--l_up { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__6-12--l_up { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__6-12--l_up--omega { width: 48.8054607509%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__6-12--l_up--omega { width: 48.8054607509%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__6-12--xl { width: 48.8054607509%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__6-12--xl--omega { width: 48.8054607509%; float: right; margin-right: 0; } }
-
-.grid__7-12 { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__7-12--omega { width: 57.3378839591%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__7-12--m { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__7-12--m--omega { width: 57.3378839591%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__7-12--m_up { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__7-12--m_up { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__7-12--m_up--omega { width: 57.3378839591%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__7-12--m_up--omega { width: 57.3378839591%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__7-12--l { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__7-12--l--omega { width: 57.3378839591%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__7-12--l_up { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__7-12--l_up { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__7-12--l_up--omega { width: 57.3378839591%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__7-12--l_up--omega { width: 57.3378839591%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__7-12--xl { width: 57.3378839591%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__7-12--xl--omega { width: 57.3378839591%; float: right; margin-right: 0; } }
-
-.grid__8-12 { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__8-12--omega { width: 65.8703071672%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__8-12--m { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__8-12--m--omega { width: 65.8703071672%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__8-12--m_up { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__8-12--m_up { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__8-12--m_up--omega { width: 65.8703071672%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__8-12--m_up--omega { width: 65.8703071672%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__8-12--l { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__8-12--l--omega { width: 65.8703071672%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__8-12--l_up { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__8-12--l_up { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__8-12--l_up--omega { width: 65.8703071672%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__8-12--l_up--omega { width: 65.8703071672%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__8-12--xl { width: 65.8703071672%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__8-12--xl--omega { width: 65.8703071672%; float: right; margin-right: 0; } }
-
-.grid__1-12 { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__1-12--omega { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__1-12--m { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__1-12--m--omega { width: 74.4027303754%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__1-12--m_up { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__1-12--m_up { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__1-12--m_up--omega { width: 74.4027303754%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__1-12--m_up--omega { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__1-12--l { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__1-12--l--omega { width: 74.4027303754%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__1-12--l_up { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__1-12--l_up { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__1-12--l_up--omega { width: 74.4027303754%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__1-12--l_up--omega { width: 74.4027303754%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__1-12--xl { width: 74.4027303754%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__1-12--xl--omega { width: 74.4027303754%; float: right; margin-right: 0; } }
-
-.grid__10-12 { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__10-12--omega { width: 82.9351535836%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__10-12--m { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__10-12--m--omega { width: 82.9351535836%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__10-12--m_up { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__10-12--m_up { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__10-12--m_up--omega { width: 82.9351535836%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__10-12--m_up--omega { width: 82.9351535836%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__10-12--l { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__10-12--l--omega { width: 82.9351535836%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__10-12--l_up { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__10-12--l_up { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__10-12--l_up--omega { width: 82.9351535836%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__10-12--l_up--omega { width: 82.9351535836%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__10-12--xl { width: 82.9351535836%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__10-12--xl--omega { width: 82.9351535836%; float: right; margin-right: 0; } }
-
-.grid__11-12 { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-.grid__11-12--omega { width: 91.4675767918%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__11-12--m { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 641px) and (max-width: 880px) { .grid__11-12--m--omega { width: 91.4675767918%; float: right; margin-right: 0; } }
-
-@media (min-width: 641px) { .grid__11-12--m_up { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__11-12--m_up { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 641px) { .grid__11-12--m_up--omega { width: 91.4675767918%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__11-12--m_up--omega { width: 91.4675767918%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__11-12--l { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 881px) and (max-width: 1200px) { .grid__11-12--l--omega { width: 91.4675767918%; float: right; margin-right: 0; } }
-
-@media (min-width: 881px) { .grid__11-12--l_up { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; } }
-.lt-ie9 .grid__11-12--l_up { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; display: inline; }
-
-@media (min-width: 881px) { .grid__11-12--l_up--omega { width: 91.4675767918%; float: right; margin-right: 0; } }
-.lt-ie9 .grid__11-12--l_up--omega { width: 91.4675767918%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-@media (min-width: 1200px) { .grid__11-12--xl { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; } }
-
-@media (min-width: 1200px) { .grid__11-12--xl--omega { width: 91.4675767918%; float: right; margin-right: 0; } }
-
+@include susycss( '.grid__1-12',  1,12  );
+@include susycss( '.grid__2-12',  2,12  );
+@include susycss( '.grid__3-12',  3,12  );
+@include susycss( '.grid__4-12',  4,12  );
+@include susycss( '.grid__5-12',  5,12  );
+@include susycss( '.grid__6-12',  6,12  );
+@include susycss( '.grid__7-12',  7,12  );
+@include susycss( '.grid__8-12',  8,12  );
+@include susycss( '.grid__1-12',  9,12  );
+@include susycss( '.grid__10-12', 10,12 );
+@include susycss( '.grid__11-12', 11,12 );*/
 /** Page CSS */
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
 /** Not sure where to document this yet. NEW MENU CLASSES

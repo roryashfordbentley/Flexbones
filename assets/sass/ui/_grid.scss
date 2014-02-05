@@ -2,6 +2,147 @@
  * Grid
  */
 
+/**
+ * Lets build some custom grids
+ */
+
+
+/**
+ * Flexbones grid
+ * columns, center, push
+ */
+
+
+// Grid settings (SUSY)
+
+$global-column-width: 	70;  
+$global-gutter-width: 	30;
+
+// Column
+
+$columns_s:				6;
+$columns_m:				12;
+$columns_l:				12;
+$columns_xl:			12;
+
+// $media-layout: 		min / max
+$s: 					0 640px;
+$m: 					641px 880px;
+$m_up: 					641px;
+$l: 					881px 1200px;
+$l_up: 					881px;
+$xl: 					1200px;
+
+
+/**
+ * .grid__1-6--s{}
+ * .grid__2-6--s{}
+ * .grid__3-6--s{}
+ * .grid__4-6--s{}
+ * .grid__5-6--s{}
+ *
+ * .grid__1-12--m{}
+ * .grid__2-12--m{}
+ * .grid__3-12--m{}
+ * .grid__4-12--m{}
+ * .grid__5-12--m{}
+ * .grid__6-12--m{}
+ * .grid__7-12--m{}
+ * .grid__8-12--m{}
+ * .grid__9-12--m{}
+ * .grid__10-12--m{}
+ * .grid__11-12--m{}
+ *      
+ */
+
+/**
+ * At Breakpoint
+ * 
+ */
+
+@mixin at-bp($bp){
+
+	$min-width: nth($bp,1);
+	$max-width: nth($bp,2);
+
+	// if min and max are passed use both otherwise just use the minimum
+
+	@if($min-width and $max-width){
+		@media (min-width: $min-width) and (max-width: $max-width){
+			@content;
+		}
+	} @else {
+		@media (min-width: $min-width){
+			@content;
+		}
+	}
+}
+
+
+@mixin span($col,$total_cols,$omega:''){
+
+	$total-gutters: $total_cols - 1;
+
+	$gutter-width: 	$global-gutter-width / $total-gutters;
+	$col-width: 	$global-column-width + (( $gutter-width - $total-cols ) - $total-cols) * $total-cols;
+
+					//$global-column-width + (( $global-gutter-width / $total-gutters ) - $total-cols ) * $total-cols;
+
+	@if($omega == omega){
+		width: $col-width;
+	} @else{
+		width: $col-width;
+		margin-right: $gutter-width;
+	}
+}
+
+.test{
+	@include span(1,6);
+}
+
+.test-2{
+	@include span(2,6);
+}
+
+
+//@span-columns(1,6)
+
+@mixin grid_output($class,$cols,$total_cols){
+	
+	#{$class}{
+		@include span-columns($cols,$total_cols);
+	}
+
+	#{$class}--omega{
+		@include span-columns( $cols omega,$total_cols );
+	}
+
+	@each $breakpoint in ('m',$m), ('m_up',$m_up), ('l',$l), ('l_up',$l_up), ('xl',$xl) {
+		$bp_name: nth($breakpoint, 1);
+		$bp_var: nth($breakpoint, 2);
+
+		#{$class}--#{$bp_name}{
+			@include at-breakpoint( $bp_var ){
+				@include span-columns( $cols,$total_cols );
+			}
+		}
+
+		#{$class}--#{$bp_name}--omega{
+			@include at-breakpoint( $bp_var ){
+				@include span-columns( $cols omega,$total_cols );
+			}
+		}
+	}
+}
+
+/*@include grid(6);
+@include grid(12, m m_up l l_up xl);
+
+
+
+
+
+
 @include susycss( '.grid__1-12',  1,12  );
 @include susycss( '.grid__2-12',  2,12  );
 @include susycss( '.grid__3-12',  3,12  );
@@ -12,4 +153,4 @@
 @include susycss( '.grid__8-12',  8,12  );
 @include susycss( '.grid__1-12',  9,12  );
 @include susycss( '.grid__10-12', 10,12 );
-@include susycss( '.grid__11-12', 11,12 );
+@include susycss( '.grid__11-12', 11,12 );*/
