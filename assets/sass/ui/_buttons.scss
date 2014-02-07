@@ -2,11 +2,12 @@
  * Buttons
  */
 
-.btn, input[type="submit"].btn{
-	display: block;
+.btn{
+	display: inline-block;
 	background: $clr_default;
 	border: none;
 	min-width: size(4);
+	width: auto;
 	margin: 0 0 size(1) 0;
 	padding: size(0.5) size(0.75);
 	@include border-radius($radius);
@@ -27,9 +28,15 @@
 	&:visited{
 		color: #fff;
 	}
+
+	&:focus{
+		// this is to remove any input focus styles
+		background: none;
+		@include box-shadow(none);
+	}
 }
 
-.btn--success, input[type="submit"].btn--success{
+.btn--success{
 
 	background: $clr_success;
 
@@ -42,7 +49,7 @@
 	}
 }
 
-.btn--warning, input[type="submit"].btn--warning{
+.btn--warning{
 
 	background: $clr_warning;
 
@@ -55,7 +62,7 @@
 	}
 }
 
-.btn--problem, input[type="submit"].btn--warning{
+.btn--error{
 
 	background: $clr_problem;
 
@@ -67,5 +74,3 @@
 		background: darken($clr_problem,5%);
 	}
 }
-
-

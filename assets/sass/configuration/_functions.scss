@@ -66,9 +66,10 @@
 	}
 }
 
-// Grid generator
 
-@mixin susycss($class,$cols,$total_cols){
+// Output SUSY grid
+
+@mixin susygrid($class,$cols,$total_cols){
 	
 	#{$class}{
 		@include span-columns($cols,$total_cols);
@@ -93,5 +94,14 @@
 				@include span-columns( $cols omega,$total_cols );
 			}
 		}
+	}
+}
+
+// Grid generator
+
+@mixin creategrid($total_columns){
+
+	@for $i from 1 through $total_columns {
+		@include susygrid('.grid__#{$i}-#{$total_columns}',$i,$total_columns);
 	}
 }

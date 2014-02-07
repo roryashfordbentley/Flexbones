@@ -99,7 +99,7 @@
 		<p>This is a standard alert flash, for general use.</p>
 	</div>
 
-	<div class="alert alert--problem">
+	<div class="alert alert--error">
 		<p>This is a standard alert flash, for general use.</p>
 	</div>
 
@@ -141,7 +141,7 @@
 
 			<div class="flexform-group">
 				<input type="submit" name="confirm" value="Confirm" class="btn btn--success">
-				<input type="submit" name="confirm" value="Cancel" class="btn btn--warning">
+				<input type="submit" name="confirm" value="Cancel" class="btn btn--error">
 			</div>
 
 		</form>
@@ -207,13 +207,6 @@
 
 
 	</section>
-
-
-
-
-
-
-
 
 
 	<section class="main main--index" role="main"> 

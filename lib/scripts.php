@@ -5,10 +5,12 @@
 
 function remove_wp_jquery() {
 	//if statements prevents it deregistering in admin
-	if(!is_admin()) {
+
+	if(!in_array($GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php')) AND !is_admin() ){
 		wp_deregister_script('jquery');
 		wp_deregister_script('jquery-ui');
 	}
+
 }
 
 add_action('init', 'remove_wp_jquery'); // will deregister from head

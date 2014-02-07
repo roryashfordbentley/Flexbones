@@ -22,7 +22,7 @@
 	color: darken($clr_warning,10%);
 }
 
-.alert--problem{
+.alert--error{
 	background: lighten($clr_problem,30%);
 	border-left: size(0.25) solid $clr_problem;
 	color: darken($clr_problem,10%);

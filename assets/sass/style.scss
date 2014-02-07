@@ -25,15 +25,6 @@ $is_ie: false;
 // Config
 @import "configuration/_vars.scss";
 
-//Uncomment for IE
-
-/*
-$breakpoint-media-output: false;
-$breakpoint-ie-output: true;
-$breakpoint-raw-output: false;
-$base: 24px;
-*/
-
 // Vars
 @import "configuration/_colour.scss";
 
