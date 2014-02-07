@@ -25,19 +25,12 @@ $is_ie: false;
 // Config
 @import "configuration/_vars.scss";
 
-//Uncomment for IE
-
-/*
-$breakpoint-media-output: false;
-$breakpoint-ie-output: true;
-$breakpoint-raw-output: false;
-$base: 24px;
-*/
+@import "ui/_grid.scss";
 
 // Vars
 @import "configuration/_colour.scss";
 
-// Dev Tools
+// Gridtacular
 @import "configuration/_gridtacular.scss";
 
 // Global Styles
@@ -51,7 +44,7 @@ $base: 24px;
 @import "ui/_forms.scss";
 @import "ui/_tables.scss";
 @import "ui/_imgs.scss";
-@import "ui/_grid.scss";
+
 
 // Element Styles
 @import "_page.scss";

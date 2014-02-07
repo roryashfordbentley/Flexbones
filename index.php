@@ -108,6 +108,17 @@
 	<h1>Forms</h1>
 	<hr><br>
 
+	<div class="clear">
+		<div class="span-1">span-1</div>
+		<div class="span-2">span-1</div>
+		<div class="span-3">span-1</div>
+		<div class="span-2">span-1</div>
+		<div class="span-3">span-1</div>
+		<div class="span-1--omega">span-1</div>
+	</div>
+	
+
+
 	<div class="flexform clear">
 		<form>
 			<div class="clear">

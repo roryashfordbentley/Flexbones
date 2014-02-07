@@ -6,8 +6,9 @@
 
 @mixin gridtacular_columns($breakpoint,$columns) {	
 	@include at-breakpoint($breakpoint){ 	
-		@include span-columns(1,$columns); 
-		&:nth-child(#{$columns}){ @include span-columns(1 omega,$columns); }
+
+		@include span(1,$columns); 
+		&:nth-child(#{$columns}){ @include span(1,$columns,omega); }
 		&:nth-child(n + #{$columns + 1} ){ display: none; }
 		background: rgba(0,0,0,0.02);
 	}
@@ -26,9 +27,9 @@ body{
 	z-index: 10000;
 	background: #eea112;
 	border-top: 3px solid #fff;
-	@include at-breakpoint($m){ background: #7dca35; }
-	@include at-breakpoint($l){ background: #36afd6; }
-	@include at-breakpoint($xl){ background: #823a9c; }
+	@include at-bp($m){ background: #7dca35; }
+	@include at-bp($l){ background: #36afd6; }
+	@include at-bp($xl){ background: #823a9c; }
 
 
 	color: #fff;

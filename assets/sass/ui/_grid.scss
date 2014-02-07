@@ -2,108 +2,109 @@
  * Grid
  */
 
-/**
- * Lets build some custom grids
- */
-
-
-/**
- * Flexbones grid
- * columns, center, push
- */
-
-
 // Grid settings (SUSY)
 
-$global-column-width: 	70;  
-$global-gutter-width: 	30;
+$global-gutter-width: 	3%;
 
 // Column
 
-$columns_s:				6;
-$columns_m:				12;
-$columns_l:				12;
-$columns_xl:			12;
-
-// $media-layout: 		min / max
-$s: 					0 640px;
-$m: 					641px 880px;
-$m_up: 					641px;
-$l: 					881px 1200px;
-$l_up: 					881px;
-$xl: 					1200px;
+$columns_s:		6;
+$columns_m:		12;
+$columns_l:		12;
+$columns_xl:	12;
 
 
 /**
- * .grid__1-6--s{}
- * .grid__2-6--s{}
- * .grid__3-6--s{}
- * .grid__4-6--s{}
- * .grid__5-6--s{}
- *
- * .grid__1-12--m{}
- * .grid__2-12--m{}
- * .grid__3-12--m{}
- * .grid__4-12--m{}
- * .grid__5-12--m{}
- * .grid__6-12--m{}
- * .grid__7-12--m{}
- * .grid__8-12--m{}
- * .grid__9-12--m{}
- * .grid__10-12--m{}
- * .grid__11-12--m{}
- *      
+ * Media Query settings
  */
+
+// $bp: 		min / max
+$s: 			0, 		640px;
+$m: 			641px, 	880px;
+$m_up: 			641px, 	false;
+$l: 			881px, 	1200px;
+$l_up: 			881px, 	false;
+$xl: 			1200px, false;
 
 /**
  * At Breakpoint
- * 
  */
 
-@mixin at-bp($bp){
 
-	$min-width: nth($bp,1);
-	$max-width: nth($bp,2);
+@mixin at-bp($bp) {
+	$min-width          : nth($bp,1);
+	$max-width          : nth($bp,2);
 
-	// if min and max are passed use both otherwise just use the minimum
-
-	@if($min-width and $max-width){
-		@media (min-width: $min-width) and (max-width: $max-width){
+	@if($max-width != false){
+		@media (min-width: $min-width) and (max-width: $max-width) {
 			@content;
 		}
 	} @else {
-		@media (min-width: $min-width){
+		@media (min-width: $min-width) {
 			@content;
 		}
 	}
+
+	@content;
+
 }
 
 
-@mixin span($col,$total_cols,$omega:''){
 
-	$total-gutters: $total_cols - 1;
+@mixin span($span-columns, $total-columns, $omega:''){
 
-	$gutter-width: 	$global-gutter-width / $total-gutters;
-	$col-width: 	$global-column-width + (( $gutter-width - $total-cols ) - $total-cols) * $total-cols;
+	$column-plus-gutter: 	(1 / $total-columns * 100) * 1%;
+	$total-gutters: 		$total-columns - 1;
+	$gutter-width: 			$global-gutter-width;
+	$column-width:  		(100 - ($gutter-width * $total-gutters)) / $total-columns;
+	
+	// Add additional column and gutter widths when spanning multiple columns
 
-					//$global-column-width + (( $global-gutter-width / $total-gutters ) - $total-cols ) * $total-cols;
+	@if($span-columns > 1){
+
+		$multi-column-width: ($column-width * $span-columns) + ( $gutter-width * ($span-columns - 1) ) ;
+		@include grid-css-output($multi-column-width, $omega);
+
+	} @else {
+
+		@include grid-css-output($column-width, $omega);
+
+	}
+
+}
+
+@mixin grid-css-output($width, $omega){
 
 	@if($omega == omega){
-		width: $col-width;
-	} @else{
-		width: $col-width;
+		width: $width;
+		float: right;
+	} @else {
+		width: $width;
 		margin-right: $gutter-width;
+		float: left;
 	}
 }
 
-.test{
-	@include span(1,6);
+
+.span-1{
+	@include span(1,12);
+	background: pink;
 }
 
-.test-2{
-	@include span(2,6);
+.span-2{
+	@include span(2,12);
+	background: pink;
 }
 
+.span-3{
+	@include span(3,12);
+	background: pink;
+}
+
+.span-1--omega{
+	@include span(1,12, omega);
+	background: red;
+}
 
 //@span-columns(1,6)
 
@@ -137,11 +138,6 @@ $xl: 					1200px;
 
 /*@include grid(6);
 @include grid(12, m m_up l l_up xl);
-
-
-
-
-
 
 @include susycss( '.grid__1-12',  1,12  );
 @include susycss( '.grid__2-12',  2,12  );

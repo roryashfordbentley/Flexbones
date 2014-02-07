@@ -8,15 +8,41 @@ Version:        1.7
 License:		All work is the property of Rory Ashford
 License URI:	n/a
 */
-/*
-$breakpoint-media-output: false;
-$breakpoint-ie-output: true;
-$breakpoint-raw-output: false;
-$base: 24px;
-*/
+/*$s: 					0 $columns_s 640px;
+$m: 					641px $columns_m 880px;
+$m_up: 					641px $columns_m  lt-ie9;
+$l: 					881px $columns_l 1200px;
+$l_up: 					881px $columns_l  lt-ie9;
+$xl: 					1200px $columns_xl;	
+$ie: 					0 $columns_l lt-ie9;*/
+/** Grid */
+/** Media Query settings */
+/** At Breakpoint */
+.span-1 { width: 5.5833333333%; margin-right: 3%; float: left; background: pink; }
+
+.span-2 { width: 14.1666666667%; margin-right: 3%; float: left; background: pink; }
+
+.span-3 { width: 22.75%; margin-right: 3%; float: left; background: pink; }
+
+.span-1--omega { width: 5.5833333333%; float: right; background: red; }
+
+/*@include grid(6);
+@include grid(12, m m_up l l_up xl);
+
+@include susycss( '.grid__1-12',  1,12  );
+@include susycss( '.grid__2-12',  2,12  );
+@include susycss( '.grid__3-12',  3,12  );
+@include susycss( '.grid__4-12',  4,12  );
+@include susycss( '.grid__5-12',  5,12  );
+@include susycss( '.grid__6-12',  6,12  );
+@include susycss( '.grid__7-12',  7,12  );
+@include susycss( '.grid__8-12',  8,12  );
+@include susycss( '.grid__1-12',  9,12  );
+@include susycss( '.grid__10-12', 10,12 );
+@include susycss( '.grid__11-12', 11,12 );*/
 body { position: relative; }
 
-.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #eea112; border-top: 3px solid #fff; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
+.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #eea112; border-top: 3px solid #fff; background: #7dca35; background: #36afd6; background: #823a9c; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
 @media (min-width: 641px) and (max-width: 880px) { .gridtacular { background: #7dca35; } }
 @media (min-width: 881px) and (max-width: 1200px) { .gridtacular { background: #36afd6; } }
 @media (min-width: 1200px) { .gridtacular { background: #823a9c; } }
@@ -38,19 +64,10 @@ body { position: relative; }
 .gridtacular__baseline-overlay { display: none; position: absolute; width: auto; overflow: hidden; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; background: url("assets/js/gridtacular/images/baseline.png"); background-size: 100% 1.5rem; }
 
 .gridtacular__grid-overlay { display: none; position: absolute; width: auto; z-index: 100; pointer-events: none; top: 0; right: 0; bottom: 0; left: 0; }
-.gridtacular__grid-overlay .col { pointer-events: none; border-left: 1px solid rgba(210, 210, 210, 0.3); border-right: 1px solid rgba(210, 210, 210, 0.3); width: 12.5874125875%; float: left; margin-right: 4.8951048951%; display: inline; }
-@media (max-width: 640px) { .gridtacular__grid-overlay .col { width: 12.5874125875%; float: left; margin-right: 4.8951048951%; background: rgba(0, 0, 0, 0.02); }
-  .gridtacular__grid-overlay .col:nth-child(6) { width: 12.5874125875%; float: right; margin-right: 0; }
+.gridtacular__grid-overlay .col { pointer-events: none; border-left: 1px solid rgba(210, 210, 210, 0.3); border-right: 1px solid rgba(210, 210, 210, 0.3); width: 11.5120274914%; float: left; margin-right: 6.1855670103%; display: inline; }
+@media (max-width: 640px) { .gridtacular__grid-overlay .col { width: 14.1666666667%; margin-right: 3%; float: left; background: rgba(0, 0, 0, 0.02); }
+  .gridtacular__grid-overlay .col:nth-child(6) { width: 14.1666666667%; float: right; }
   .gridtacular__grid-overlay .col:nth-child(n + 7) { display: none; } }
-@media (min-width: 641px) and (max-width: 880px) { .gridtacular__grid-overlay .col { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; background: rgba(0, 0, 0, 0.02); }
-  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.1433447099%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
-@media (min-width: 881px) and (max-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; background: rgba(0, 0, 0, 0.02); }
-  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.1433447099%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
-@media (min-width: 1200px) { .gridtacular__grid-overlay .col { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; background: rgba(0, 0, 0, 0.02); }
-  .gridtacular__grid-overlay .col:nth-child(12) { width: 6.1433447099%; float: right; margin-right: 0; }
-  .gridtacular__grid-overlay .col:nth-child(n + 13) { display: none; } }
 
 /** global.scss Document and Grid setup Font default declarations */
 * { margin: 0; padding: 0; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -60,16 +77,11 @@ body { position: relative; }
 .clear:after { clear: both; }
 
 html { font-size: 100%; line-height: 1.5; }
-@media (min-width: 641px) and (max-width: 880px) { html { font-size: 100%; } }
-@media (min-width: 881px) and (max-width: 1200px) { html { font-size: 112.5%; } }
-@media (min-width: 1200px) { html { font-size: 125%; } }
 
 body { color: #2e3131; font-family: helvetica, arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
 .wrapper { *zoom: 1; max-width: 92%; _width: 92%; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 .wrapper:after { content: ""; display: table; clear: both; }
-@media (min-width: 881px) { .wrapper { width: 90%; max-width: 1200px; } }
-.lt-ie9 .wrapper { width: 90%; max-width: 1200px; }
 
 /* Wordpress Specific CSS Required if the theme is to go on the wp.org repo */
 .alignleft { float: none; display: block; }
@@ -178,34 +190,6 @@ figcaption { padding: 0.375rem; background: #212121; background: rgba(33, 33, 33
 
 figure img { display: block; }
 
-/** Grid */
-/** Lets build some custom grids */
-/** Flexbones grid columns, center, push */
-/** .grid__1-6--s{} .grid__2-6--s{} .grid__3-6--s{} .grid__4-6--s{} .grid__5-6--s{}  .grid__1-12--m{} .grid__2-12--m{} .grid__3-12--m{} .grid__4-12--m{} .grid__5-12--m{} .grid__6-12--m{} .grid__7-12--m{} .grid__8-12--m{} .grid__9-12--m{} .grid__10-12--m{} .grid__11-12--m{}  */
-/** At Breakpoint  */
-.test { width: 34; margin-right: 6; }
-
-.test-2 { width: 34; margin-right: 6; }
-
-/*@include grid(6);
-@include grid(12, m m_up l l_up xl);
-
-
-
-
-
-
-@include susycss( '.grid__1-12',  1,12  );
-@include susycss( '.grid__2-12',  2,12  );
-@include susycss( '.grid__3-12',  3,12  );
-@include susycss( '.grid__4-12',  4,12  );
-@include susycss( '.grid__5-12',  5,12  );
-@include susycss( '.grid__6-12',  6,12  );
-@include susycss( '.grid__7-12',  7,12  );
-@include susycss( '.grid__8-12',  8,12  );
-@include susycss( '.grid__1-12',  9,12  );
-@include susycss( '.grid__10-12', 10,12 );
-@include susycss( '.grid__11-12', 11,12 );*/
 /** Page CSS */
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
 /** Not sure where to document this yet. NEW MENU CLASSES
