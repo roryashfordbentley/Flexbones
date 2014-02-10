@@ -4,13 +4,15 @@
 // e.g. $blue and $nav_bg: $blue;
 
 $clr_blue:					#3498db;
-
+$clr_green: 				#2ecc71;
+$clr_orange:				#f38728;
+$clr_red:					#e74c3c;
 // ui colors
 
 $clr_default: 				$clr_blue;
-$clr_success: 				#2ecc71; // Green
-$clr_warning: 				#e67e22; // Orange
-$clr_problem: 				#e74c3c; // Red
+$clr_success: 				$clr_green;
+$clr_warning: 				$clr_orange;
+$clr_error: 				$clr_red;
 
 // Links / Anchors
 

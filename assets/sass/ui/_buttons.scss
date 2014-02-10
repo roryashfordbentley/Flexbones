@@ -64,13 +64,13 @@
 
 .btn--error{
 
-	background: $clr_problem;
+	background: $clr_error;
 
 	&:hover{
-		background: lighten($clr_problem,5%);
+		background: lighten($clr_error,5%);
 	}
 
 	&:active{
-		background: darken($clr_problem,5%);
+		background: darken($clr_error,5%);
 	}
 }

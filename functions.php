@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Functions php pulls required files from the lib folder
- * for better organisation and editing.
+ * Functions are all located in the lib folder
  */
 
 $root = 'lib';

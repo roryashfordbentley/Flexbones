@@ -37,9 +37,7 @@ class walker_texas_ranger extends Walker_Nav_Menu {
 	// add main/sub classes to li's and links
 	 
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		
 		global $wp_query;
-		
 		$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
 
 		/**
@@ -74,7 +72,7 @@ class walker_texas_ranger extends Walker_Nav_Menu {
 		// passed classes
 		$classes = empty($item->classes) ? array() : (array) $item->classes;
 		// $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) ); // original classes
-		$current_page_class = in_array("current-menu-item",$item->classes) ? $this->css_class_prefix . '__item--active' : 'nope';
+		$current_page_class = in_array("current-menu-item",$item->classes) ? $this->css_class_prefix . '__item--active' : '';
 		$item_id_class = $this->css_class_prefix . '__item--'. $item->ID;
 		// build Li's
 		$output .= $indent . '<li class="' . $current_page_class . ' ' . $inherited_item_class .' ' . $depth_class_names . ' '. $item_id_class . ' ' . $parent_class .'">';
@@ -98,6 +96,7 @@ class walker_texas_ranger extends Walker_Nav_Menu {
 		// filter Li's
 		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 	}
+	
 }
 
 /**
@@ -122,4 +121,3 @@ function get_flexbones_menu($location = "main_menu", $css_class_prefix = 'main-m
 		return "<p>You need to first define a menu in WP-admin<p>";
 	}
 }
-

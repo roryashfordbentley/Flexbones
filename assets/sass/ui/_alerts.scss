@@ -23,7 +23,7 @@
 }
 
 .alert--error{
-	background: lighten($clr_problem,30%);
-	border-left: size(0.25) solid $clr_problem;
-	color: darken($clr_problem,10%);
+	background: lighten($clr_error,30%);
+	border-left: size(0.25) solid $clr_error;
+	color: darken($clr_error,10%);
 }

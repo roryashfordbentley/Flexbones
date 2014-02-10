@@ -11,19 +11,16 @@ $font-size-m: 			100%;
 $font-size-l: 			112.5%;
 $font-size-xl: 			125%;
 
-// Type defaults ( used when calling typesize() )
+// Type size default ( used when calling typesize() )
 
 $type_size: 			1rem;
-$type_size_ie: 			16px;
 
-// size defaults ( used when calling size() )
+// Base unit (1.5x default font size)
 
 $base: 					1.5rem;
-$base_ie: 				24px;
 
-// Typography Sizes (add for each breakpoint as required)
+// Font Sizes
 
-// font size bases
 $h1:					typesize(3);
 $h2:					typesize(2.25); 
 $h3:					typesize(1.75);
@@ -31,12 +28,17 @@ $h4:					typesize(1.125);
 $p:						typesize(1);
 $lead:					typesize(1.5);
 
+// Font Weights
 
-// Weights
 $light: 				300;
 $medium: 				400;
 $semibold: 				600;
 $bold: 					700;
+
+// Font Stack
+
+$heading_font: 			helvetica, arial, sans-serif;
+$body_font: 			$heading_font;
 
 // Grid settings (SUSY)
 
@@ -53,22 +55,21 @@ $columns_m:				12;
 $columns_l:				12;
 $columns_xl:			12;
 
+// Media Queries
 // $media-layout: min-width mq | total columns | max-width mq
-$s: 					0 $columns_s 640px;
-$m: 					641px $columns_m 880px;
-$m_up: 					641px $columns_m  lt-ie9;
-$l: 					881px $columns_l 1200px;
-$l_up: 					881px $columns_l  lt-ie9;
-$xl: 					1200px $columns_xl;	
-$ie: 					0 $columns_l lt-ie9;			
 
-// Font Stack
-$heading_font: 			helvetica, arial, sans-serif;
-$body_font: 			$heading_font;
+$s: 					0      $columns_s 640px;
+$m: 					641px  $columns_m 880px;
+$m_up: 					641px  $columns_m;
+$l: 					881px  $columns_l 1200px;
+$l_up: 					881px  $columns_l;
+$xl: 					1200px $columns_xl;	
+$ie: 					0 $columns_l;
 
 // Box sizing
+
 $border_box: 			true;
 
 // Border Radius
-$radius:				2px;
 
+$radius:				2px;

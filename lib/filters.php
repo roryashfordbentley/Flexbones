@@ -1,39 +1,39 @@
 <?php
+
 /**
  * Remove Paragraphs Around Images
  * (the_content)
  */
 
-function filter_ptags_on_images($content){
+function flexbones_remove_img_p($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
-add_filter('the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'flexbones_remove_img_p');
 
 /**
- * Stop Tiny MCE editting br's
+ * Prevent Admin Editor removing br's
  */
 
-function cbnet_tinymce_config($init) {
-    // Don't remove line breaks
+function flexbones_preserve_brs($init) {
     $init['remove_linebreaks'] = false; 
-
-    // Pass $init back to WordPress
     return $init;
 }
-add_filter('tiny_mce_before_init', 'cbnet_tinymce_config');
+
+add_filter('tiny_mce_before_init', 'flexbones_preserve_brs');
 
 /**
  * Wrap images in a div
  * (when inserting into editor)
  */
-
-if( is_admin() ) {
-	add_filter('image_send_to_editor', 'wp_image_wrap_init', 10, 8 );    
-	function wp_image_wrap_init($html, $id, $caption, $title, $align, $url, $size, $alt) {
-		return '<div class="content-image flex-image">'. $html .'</div>';
+  
+function flexbones_img_wrap($html, $id, $caption, $title, $align, $url, $size, $alt) {
+	if( is_admin() ) {
+		return '<div class="content-image">'. $html .'</div>';
 	}
 }
+
+add_filter('image_send_to_editor', 'flexbones_img_wrap', 10, 8 );
 
 /**
  * Hide Admin Bar
@@ -45,13 +45,28 @@ add_filter('show_admin_bar', '__return_false');
  * Remove bloat from wordpress html head
  */
 
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wp_generator');
-//remove_action('wp_head', 'feed_links');
-//remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'index_rel_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'feed_links_extra', 3);
-remove_action('wp_head', 'start_post_rel_link', 10, 0);
-remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+function flexbones_trim_head(){
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wp_generator');
+	remove_action('wp_head', 'feed_links');
+	remove_action('wp_head', 'feed_links', 2);
+	remove_action('wp_head', 'index_rel_link');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'feed_links_extra', 3);
+	remove_action('wp_head', 'start_post_rel_link', 10, 0);
+	remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+	remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+}
+
+add_action( 'init', 'flexbones_trim_head' );
+
+/**
+ * Remove recent comment inline CSS
+ */
+
+function flexbones_remove_inline_css() {
+	global $wp_widget_factory;
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'  ) );
+}
+
+add_action( 'widgets_init', 'flexbones_remove_inline_css' );

@@ -69,39 +69,54 @@
 
 // Output SUSY grid
 
-@mixin susygrid($class,$cols,$total_cols){
-	
-	#{$class}{
-		@include span-columns($cols,$total_cols);
+@mixin susy_grid($class,$columns,$total_columns,$bp_name:null){
+
+	$grid_class: null;
+	$push_class: null;
+
+	@if($bp_name == null){
+		$grid_class: #{$class}__#{$columns}-#{$total_columns};
+		$push_class: #{'.push'}__#{$columns}-#{$total_columns};
+	} @else {
+		$grid_class: #{$class}__#{$columns}-#{$total_columns}--#{$bp_name};
+		$push_class: #{'.push'}__#{$columns}-#{$total_columns}--#{$bp_name};
 	}
 
-	#{$class}--omega{
-		@include span-columns( $cols omega,$total_cols );
+	// Regular class
+	#{$grid_class}{
+		@include span-columns($columns,$total_columns);
 	}
 
-	@each $breakpoint in ('m',$m), ('m_up',$m_up), ('l',$l), ('l_up',$l_up), ('xl',$xl) {
-		$bp_name: nth($breakpoint, 1);
-		$bp_var: nth($breakpoint, 2);
+	// Omega Class
 
-		#{$class}--#{$bp_name}{
-			@include at-breakpoint( $bp_var ){
-				@include span-columns( $cols,$total_cols );
-			}
-		}
+	#{$grid_class}--omega{
+		@include span-columns($columns omega,$total_columns);
+	}
 
-		#{$class}--#{$bp_name}--omega{
-			@include at-breakpoint( $bp_var ){
-				@include span-columns( $cols omega,$total_cols );
-			}
-		}
+	// Push Class
+
+	#{$push_class}{ 
+		@include push($columns,$total_columns);
 	}
 }
 
 // Grid generator
 
-@mixin creategrid($total_columns){
+@mixin create_grid($prefix,$total_columns,$bp_name:null,$breakpoint:null){
 
-	@for $i from 1 through $total_columns {
-		@include susygrid('.grid__#{$i}-#{$total_columns}',$i,$total_columns);
-	}
+	@if($breakpoint == null){
+		@for $i from 1 through $total_columns {
+			@include susy_grid($prefix,$i,$total_columns,null);
+		}
+	} @else {
+		@include at-breakpoint( $breakpoint ){
+			@for $i from 1 through $total_columns {
+				@include susy_grid($prefix,$i,$total_columns,$bp_name);
+			}
+		}
+	}	
 }
+
+
+
+
