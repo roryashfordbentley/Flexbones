@@ -95,7 +95,7 @@ a, a:visited { color: #3498db; text-decoration: none; }
 
 a:hover { text-decoration: none; color: #217dbb; border-bottom: 1px solid #217dbb; }
 
-h1, h2, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 600; color: #292929; line-height: 1.3; letter-spacing: -1px; margin-bottom: 1.5rem; }
+h1, h2, h3, h4, h5, h6 { font-family: helvetica, arial, sans-serif; font-weight: 700; color: #292929; line-height: 1.3; letter-spacing: -1px; margin-bottom: 1.5rem; }
 
 h1 { font-size: 3rem; }
 
