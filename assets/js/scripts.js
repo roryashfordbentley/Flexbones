@@ -21,7 +21,7 @@ yepnope([{
 	nope: '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'
 }]);
 
-// Initialise Gridtacular
+
 jQuery(window).load(function(){
 
 	//initialise Gridacular

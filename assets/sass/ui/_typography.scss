@@ -40,19 +40,18 @@ p{
 	line-height: 1.3;
 }
 
-
 // Links
 
 a,
 a:visited{
 	color: $link;
 	text-decoration: none;
+	@extend strong;
 }
 
 a:hover{
-	text-decoration: none;
 	color: $link_hover;
-	border-bottom: 1px solid $link_hover;
+	text-decoration: underline;
 }
 
 // Headings

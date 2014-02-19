@@ -58,41 +58,66 @@
 	<h1>Buttons</h1>
 	<hr><br>
 
-	<button class="btn">
-		Normal
-	</button>
+	<p>This paragraph of text contains a <a href="#" class="btn btn--default btn--inline">button</a> that you can press and everything will be ok. By adding a little extra text we can see how this looks when presented over multiple lines</p>
 
-	<button class="btn btn--success">
-		Success
-	</button>
+	<p>
+		<button class="btn btn--default btn--medium">
+			Default
+		</button>
 
-	<button class="btn btn--warning">
-		Warning
-	</button>
+		<button class="btn btn--success btn--medium">
+			Success
+		</button>
 
-	<button class="btn btn--error">
-		Problem
-	</button>
+		<button class="btn btn--warning btn--medium">
+			Warning
+		</button>
 
+		<button class="btn btn--error btn--medium">
+			Error
+		</button>
+
+		<button class="btn btn--disabled btn--medium">
+			Disabled
+		</button>
+	</p>
+	<p>
+		<button class="btn btn--default btn--small">
+			Small
+		</button>
+
+		<button class="btn btn--default btn--medium">
+			Medium
+		</button>
+
+		<button class="btn btn--default btn--large">
+			Large
+		</button>
+	</p>
+	<p>
+		<button class="btn btn--default btn--large btn--block">
+			Block Button
+		</button>
+	</p>
 	<!-- Alerts -->
 
 	<h1>Alerts</h1>
 	<hr><br>
 
 	<div class="alert">
-		<p>This is a standard alert flash, for general use.</p>
+		<p>This is a standard alert, for general use.</p>
 	</div>
 
 	<div class="alert alert--success">
-		<p>This is a standard alert flash, for general use.</p>
+		<p>This is a success alert, for confirmation.</p>
 	</div>
 
 	<div class="alert alert--warning">
-		<p>This is a standard alert flash, for general use.</p>
+		<p>This is a warning alert, for issue notification.</p>
 	</div>
 
 	<div class="alert alert--error">
-		<p>This is a standard alert flash, for general use.</p>
+		<p>This is an error alert, for problems and errors.</p>
 	</div>
 
 	<!-- Forms -->
