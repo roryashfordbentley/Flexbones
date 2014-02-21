@@ -61,6 +61,19 @@ function flexbones_trim_head(){
 add_action( 'init', 'flexbones_trim_head' );
 
 /**
+ * Remove all WooCommerce scripts and styles
+ *
+ * @author WP Smith
+ * @since 1.0.0
+ */
+function remove_woocommerce_styles_and_scripts() {
+    remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
+    remove_action( 'wp_enqueue_scripts', array( $GLOBALS['woocommerce'], 'frontend_scripts' ) );
+}
+define( 'WOOCOMMERCE_USE_CSS', false );
+add_action( 'init', 'remove_woocommerce_styles_and_scripts', 99 );
+
+/**
  * Remove recent comment inline CSS
  */
 
