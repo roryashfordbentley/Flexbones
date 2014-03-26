@@ -3,31 +3,32 @@
  */
 
 .alert {
-	
+	display: block;
+	border: 1px solid;
+	margin: 0 0 size(1) 0;
+	padding: size(0.25) size(0.5);
 }
 
 	.alert--default{
 		background: lighten($clr_default,30%);
-		border-left: size(0.25) solid $clr_default;
-		color: darken($clr_default,10%);
-		padding: size(0.5);
-		margin: 0 0 size(1) 0;
+		border-color: $clr_default;
+		color: $clr_default;	
 	}
 
 	.alert--success{
 		background: lighten($clr_success,30%);
-		border-left: size(0.25) solid $clr_success;
-		color: darken($clr_success,10%);
+		border-color: $clr_success;
+		color: $clr_success;
 	}
 
 	.alert--warning{
 		background: lighten($clr_warning,30%);
-		border-left: size(0.25) solid $clr_warning;
-		color: darken($clr_warning,10%);
+		border-color: $clr_warning;
+		color: $clr_warning;
 	}
 
 	.alert--error{
 		background: lighten($clr_error,30%);
-		border-left: size(0.25) solid $clr_error;
-		color: darken($clr_error,10%);
+		border-color: $clr_error;
+		color: $clr_error;
 	}

@@ -105,12 +105,12 @@
 @mixin create_grid($prefix,$total_columns,$bp_name:null,$breakpoint:null){
 
 	@if($breakpoint == null){
-		@for $i from 1 through $total_columns {
+		@for $i from 1 through $total_columns - 1 {
 			@include susy_grid($prefix,$i,$total_columns,null);
 		}
 	} @else {
 		@include at-breakpoint( $breakpoint ){
-			@for $i from 1 through $total_columns {
+			@for $i from 1 through $total_columns - 1 {
 				@include susy_grid($prefix,$i,$total_columns,$bp_name);
 			}
 		}

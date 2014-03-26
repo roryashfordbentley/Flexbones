@@ -7,22 +7,28 @@
 
 		var obj = $(this);
 
-		var defaults = $.extend({
+		var defaults = $.extend(true,{
             
-            // Default gridtacular settings
+            // Show current breakpoint name
 			showBreakpoint: true,
+			// Show the page width
 			showWidth: true,
+			// Show the page height
 			showHeight: true,
+			// Enable the baseline grid functionality overlay
 			showBaseline: true,
+			// Enable the grid columns functionality overlay
 			showGrid: true,
-			gridColumnsMax: 12, 
+			// Maximum number of columns
+			gridColumnsMax: 12,
+			// Container that you will calculate the width of
 			container: window,
+			// The grid container (should be the same as on the live site)
 			gridContainer: 'wrapper'
 
         }, userSettings );
 
 		// Class definitions
-
 		var components = {
 			breakpoint: "gridtacular__breakpoint",
 			width: "gridtacular__width",
@@ -120,14 +126,14 @@
 
 		// Baseline toggle button
 
-		$('.gridtacular__baseline-toggle').append( '<button class="g-button g-button--baseline">Baseline</button>' );
+		/*$('.gridtacular__baseline-toggle').append( '<button class="g-button g-button--baseline">Baseline</button>' );
 
 		$('body').append( '<div class="' + components.baseline + '"></div>' );
 		
 		$('.gridtacular__baseline-toggle').click(function() {
 			$('.' + components.baseline).toggle();
 			$('.g-button--baseline').toggleClass('g-button--baseline--active');
-		});
+		});*/
 
 		// Background grid toggle button
 

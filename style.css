@@ -10,13 +10,11 @@ License URI:	n/a
 */
 body { position: relative; }
 
-.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; background: #eea112; border-top: 3px solid #fff; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 24px; height: 24px; font-family: Monaco, "Courier New", Courier, monospace; }
+.gridtacular { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; color: #fff; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 2; height: 24px; font-family: Monaco, "Courier New", Courier, monospace; background: #eea112; }
 @media (min-width: 641px) and (max-width: 880px) { .gridtacular { background: #7dca35; } }
 @media (min-width: 881px) and (max-width: 1200px) { .gridtacular { background: #36afd6; } }
 @media (min-width: 1200px) { .gridtacular { background: #823a9c; } }
 .gridtacular li { display: inline-block; padding: 0 6px; margin: 0; border-right: 1px solid #fff; }
-.gridtacular a { display: block; }
-.gridtacular img { display: block; }
 
 .g-button { cursor: pointer; border: none; background: none; outline: none; color: #fff; font-weight: 700; font-family: Monaco, "Courier New", Courier, monospace; }
 
@@ -156,13 +154,15 @@ ol { list-style-type: decimal; font-weight: normal; margin: 0 0 1.5rem 1.5rem; }
 .btn--block { width: 100%; }
 
 /** Buttons */
-.alert--default { background: #b6daf2; border-left: 0.375rem solid #3498db; color: #217dbb; padding: 0.75rem; margin: 0 0 1.5rem 0; }
+.alert { display: block; border: 1px solid; margin: 0 0 1.5rem 0; padding: 0.375rem 0.75rem; }
 
-.alert--success { background: #a8ebc4; border-left: 0.375rem solid #2ecc71; color: #25a25a; }
+.alert--default { background: #b6daf2; border-color: #3498db; color: #3498db; }
 
-.alert--warning { background: #fbd8b9; border-left: 0.375rem solid #f38728; color: #dc6d0c; }
+.alert--success { background: #a8ebc4; border-color: #2ecc71; color: #2ecc71; }
 
-.alert--error { background: #f8c9c4; border-left: 0.375rem solid #e74c3c; color: #d62c1a; }
+.alert--warning { background: #fbd8b9; border-color: #f38728; color: #f38728; }
+
+.alert--error { background: #f8c9c4; border-color: #e74c3c; color: #e74c3c; }
 
 /** Forms some basic form styling, give the form a class 'flexform' */
 label { font-size: 0.75rem; font-weight: 400; text-transform: uppercase; display: block; margin: 0 0 0.75rem 0; }
@@ -230,12 +230,6 @@ figure img { display: block; }
 
 .push__5-6 { margin-left: 87.4125874125%; }
 
-.grid__6-6 { width: 100%; float: left; margin-right: 4.8951048951%; display: inline; }
-
-.grid__6-6--omega { width: 100%; float: right; margin-right: 0; *margin-left: -2.3333333333%; display: inline; }
-
-.push__6-6 { margin-left: 104.8951048951%; }
-
 @media (max-width: 640px) { .grid__1-6--s { width: 12.5874125875%; float: left; margin-right: 4.8951048951%; }
   .grid__1-6--s--omega { width: 12.5874125875%; float: right; margin-right: 0; }
   .push__1-6--s { margin-left: 17.4825174825%; }
@@ -250,10 +244,7 @@ figure img { display: block; }
   .push__4-6--s { margin-left: 69.93006993%; }
   .grid__5-6--s { width: 82.5174825175%; float: left; margin-right: 4.8951048951%; }
   .grid__5-6--s--omega { width: 82.5174825175%; float: right; margin-right: 0; }
-  .push__5-6--s { margin-left: 87.4125874125%; }
-  .grid__6-6--s { width: 100%; float: left; margin-right: 4.8951048951%; }
-  .grid__6-6--s--omega { width: 100%; float: right; margin-right: 0; }
-  .push__6-6--s { margin-left: 104.8951048951%; } }
+  .push__5-6--s { margin-left: 87.4125874125%; } }
 @media (min-width: 641px) and (max-width: 880px) { .grid__1-12--m { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; }
   .grid__1-12--m--omega { width: 6.1433447099%; float: right; margin-right: 0; }
   .push__1-12--m { margin-left: 8.5324232082%; }
@@ -286,10 +277,7 @@ figure img { display: block; }
   .push__10-12--m { margin-left: 85.3242320819%; }
   .grid__11-12--m { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; }
   .grid__11-12--m--omega { width: 91.4675767918%; float: right; margin-right: 0; }
-  .push__11-12--m { margin-left: 93.8566552901%; }
-  .grid__12-12--m { width: 100%; float: left; margin-right: 2.3890784983%; }
-  .grid__12-12--m--omega { width: 100%; float: right; margin-right: 0; }
-  .push__12-12--m { margin-left: 102.3890784983%; } }
+  .push__11-12--m { margin-left: 93.8566552901%; } }
 @media (min-width: 641px) { .grid__1-12--m_up { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; }
   .grid__1-12--m_up--omega { width: 6.1433447099%; float: right; margin-right: 0; }
   .push__1-12--m_up { margin-left: 8.5324232082%; }
@@ -322,10 +310,7 @@ figure img { display: block; }
   .push__10-12--m_up { margin-left: 85.3242320819%; }
   .grid__11-12--m_up { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; }
   .grid__11-12--m_up--omega { width: 91.4675767918%; float: right; margin-right: 0; }
-  .push__11-12--m_up { margin-left: 93.8566552901%; }
-  .grid__12-12--m_up { width: 100%; float: left; margin-right: 2.3890784983%; }
-  .grid__12-12--m_up--omega { width: 100%; float: right; margin-right: 0; }
-  .push__12-12--m_up { margin-left: 102.3890784983%; } }
+  .push__11-12--m_up { margin-left: 93.8566552901%; } }
 @media (min-width: 881px) and (max-width: 1200px) { .grid__1-12--l { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; }
   .grid__1-12--l--omega { width: 6.1433447099%; float: right; margin-right: 0; }
   .push__1-12--l { margin-left: 8.5324232082%; }
@@ -358,10 +343,7 @@ figure img { display: block; }
   .push__10-12--l { margin-left: 85.3242320819%; }
   .grid__11-12--l { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; }
   .grid__11-12--l--omega { width: 91.4675767918%; float: right; margin-right: 0; }
-  .push__11-12--l { margin-left: 93.8566552901%; }
-  .grid__12-12--l { width: 100%; float: left; margin-right: 2.3890784983%; }
-  .grid__12-12--l--omega { width: 100%; float: right; margin-right: 0; }
-  .push__12-12--l { margin-left: 102.3890784983%; } }
+  .push__11-12--l { margin-left: 93.8566552901%; } }
 @media (min-width: 881px) { .grid__1-12--l_up { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; }
   .grid__1-12--l_up--omega { width: 6.1433447099%; float: right; margin-right: 0; }
   .push__1-12--l_up { margin-left: 8.5324232082%; }
@@ -394,10 +376,7 @@ figure img { display: block; }
   .push__10-12--l_up { margin-left: 85.3242320819%; }
   .grid__11-12--l_up { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; }
   .grid__11-12--l_up--omega { width: 91.4675767918%; float: right; margin-right: 0; }
-  .push__11-12--l_up { margin-left: 93.8566552901%; }
-  .grid__12-12--l_up { width: 100%; float: left; margin-right: 2.3890784983%; }
-  .grid__12-12--l_up--omega { width: 100%; float: right; margin-right: 0; }
-  .push__12-12--l_up { margin-left: 102.3890784983%; } }
+  .push__11-12--l_up { margin-left: 93.8566552901%; } }
 @media (min-width: 1200px) { .grid__1-12--xl { width: 6.1433447099%; float: left; margin-right: 2.3890784983%; }
   .grid__1-12--xl--omega { width: 6.1433447099%; float: right; margin-right: 0; }
   .push__1-12--xl { margin-left: 8.5324232082%; }
@@ -430,10 +409,7 @@ figure img { display: block; }
   .push__10-12--xl { margin-left: 85.3242320819%; }
   .grid__11-12--xl { width: 91.4675767918%; float: left; margin-right: 2.3890784983%; }
   .grid__11-12--xl--omega { width: 91.4675767918%; float: right; margin-right: 0; }
-  .push__11-12--xl { margin-left: 93.8566552901%; }
-  .grid__12-12--xl { width: 100%; float: left; margin-right: 2.3890784983%; }
-  .grid__12-12--xl--omega { width: 100%; float: right; margin-right: 0; }
-  .push__12-12--xl { margin-left: 102.3890784983%; } }
+  .push__11-12--xl { margin-left: 93.8566552901%; } }
 /** Page CSS */
 /** navigation.scss All nav menu styles go here Currently the Dropdown only supports 1 level */
 /** Not sure where to document this yet. NEW MENU CLASSES

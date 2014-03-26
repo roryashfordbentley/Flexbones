@@ -104,7 +104,7 @@
 	<h1>Alerts</h1>
 	<hr><br>
 
-	<div class="alert">
+	<div class="alert alert--default">
 		<p>This is a standard alert, for general use.</p>
 	</div>
 
@@ -155,8 +155,8 @@
 			</div>
 
 			<div class="flexform-group">
-				<input type="submit" name="confirm" value="Confirm" class="btn btn--success">
-				<input type="submit" name="confirm" value="Cancel" class="btn btn--error">
+				<input type="submit" name="confirm" value="Confirm" class="btn btn--success btn--medium">
+				<input type="submit" name="confirm" value="Cancel" class="btn btn--error btn--medium">
 			</div>
 		</form>
 	</div>
