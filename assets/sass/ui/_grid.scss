@@ -1,18 +1,188 @@
 /**
- * Grid
+ * Flexbones Grid
+ * v1.0
  */
 
+
+/**
+ * Variables
+ */
+
+/**
+ * Configuration
+ *
+ * | x |y|
+ * |   | |
+ * +--z--+
+ *
+ *  x = single-column-width
+ *  y = gutter-width
+ *  z = column = gutter (total width / number of columns)
+ */
+
+// What percentage X (column width) is of Z (column + gutter)
+
+$column_width: 90%;
+
+// What percentage Y (column width) is of Z (column + gutter)							
+
+$gutter_width: 10%;
+
+
+// calculate the percentage width of each column based on the total columns
+
+@function fb_grid_base_size($total_columns){
+	// Base size is the core percentage. 
+	// E.g. 12 col grid would be 1/12 = 8.333333333 (which would be the percentage width)
+
+	@return 1 / $total_columns;
+}
+
+// Returns the calculated with of a column based on the total number of columns and the desired column width
+
+@function calc_col_width($total_columns) {
+	@return fb_grid_base_size($total_columns) * $column_width;
+}
+
+@function calc_gutter_width($total_columns) {
+	@return fb_grid_base_size($total_columns) * $gutter_width;
+}
+
+// Calculate the column width dynamically
+
+@function fb_grid_column_width($columns, $total_columns){
+
+	@if($columns == 1){
+		@return calc_col_width($total_columns);
+	} @else {
+		@return ($columns * calc_col_width($total_columns)) + (($columns - 1) * calc_gutter_width($total_columns));
+	}
+}
+
+// Calculate the gutter width dynamically
+
+@function fb_grid_gutter_width($total_columns){
+	@return fb_grid_base_size($total_columns) * $gutter_width;
+}
+
+// Calculates and outputs the columns,
+
+@mixin flexbones_grid_col_creator($class,$columns,$total_columns,$bp_name:null){
+
+	$grid_class: null;
+
+	@if($bp_name == null){
+		$grid_class: #{$class}__#{$columns}-#{$total_columns};
+	} @else {
+		$grid_class: #{$class}__#{$columns}-#{$total_columns}--#{$bp_name};
+	}
+
+	// CSS Class
+	#{$grid_class}{
+		width: fb_grid_column_width($columns, $total_columns);
+		margin-left: fb_grid_gutter_width($total_columns);
+	}
+}
+
+// to do
+@mixin flexbones_wrappers($bp_name:null){
+	
+}
+
+@mixin flexbones_grid($prefix,$total_columns,$bp_name:null,$breakpoint:null){
+
+	@if($breakpoint == null){
+		@for $i from 1 through $total_columns - 1 {
+			@include flexbones_grid_col_creator($prefix,$i,$total_columns,null);
+		}
+	} @else {
+		@include at-breakpoint( $breakpoint ){
+			@for $i from 1 through $total_columns - 1 {
+				@include flexbones_grid_col_creator($prefix,$i,$total_columns,$bp_name);
+			}
+		}
+	}	
+}
+
+// 0 6 640px
+
+@mixin at-breakpoint($vars){
+	
+	// If no second argument is supplied
+	
+	$min: nth($vars,1);
+	$max: nth($vars,2);
+
+
+	@if($max == null){
+		@media (min-width: nth($vars,1)){
+			@content;
+		}
+	} @else{
+		@media (min-width: nth($vars,1) ) and (max-width: nth($vars,2) ){
+			@content;
+		}
+	}
+}
+
+@mixin span-columns($columns, $total_columns){
+	width: ($columns * calc_col_width($total_columns)) + (($columns - 1) * calc_gutter_width($total_columns));
+	margin-left: fb_grid_gutter_width($total_columns);
+}
+
+
+// needs media queries for different margins
+
+.grid-wrapper{
+	margin-left: -#{fb_grid_gutter_width(6)};
+	@extend .clear;
+	@include at-breakpoint($m){ 
+		margin-left: -#{fb_grid_gutter_width(12)}; 
+	}
+	@include at-breakpoint($m_up){ 
+		margin-left: -#{fb_grid_gutter_width(12)}; 
+	}
+	@include at-breakpoint($l){ 
+		margin-left: -#{fb_grid_gutter_width(12)}; 
+	}
+	@include at-breakpoint($l_up){ 
+		margin-left: -#{fb_grid_gutter_width(12)}; 
+	}
+	@include at-breakpoint($xl){ 
+		margin-left: -#{fb_grid_gutter_width(12)}; 
+	}
+}
+
+
+$grid_class:'.grid';
+
+#{$grid_class}{
+	float: left;
+}
+
 // Default 
-@include create_grid('.grid', 6);
+@include flexbones_grid(#{$grid_class}, 6);
+
 // Small
-@include create_grid('.grid', 6, 's',$s);
+ 
+@include flexbones_grid(#{$grid_class}, 6, 's',$s);
+
 // Medium
-@include create_grid('.grid', 12,'m',$m);
+ 
+@include flexbones_grid(#{$grid_class}, 12,'m',$m);
+
 // Medium up
-@include create_grid('.grid', 12,'m_up',$m_up);
+ 
+@include flexbones_grid(#{$grid_class}, 12,'m_up',$m_up);
+
 // Large
-@include create_grid('.grid', 12,'l',$l);
+ 
+@include flexbones_grid(#{$grid_class}, 12,'l',$l);
+
 // Large up
-@include create_grid('.grid', 12,'l_up',$l_up);
+ 
+@include flexbones_grid(#{$grid_class}, 12,'l_up',$l_up);
+
 // Xtra large
-@include create_grid('.grid', 12,'xl',$xl);
+
+@include flexbones_grid(#{$grid_class}, 12,'xl',$xl);

@@ -1,5 +1,22 @@
 <section class="main main--styleguide">
-		
+	
+	<h1>Grid</h1>
+	<hr><br>
+
+	<div class="grid-wrapper">
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+
+		<div class="grid grid__2-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__4-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__5-6" style="background: red; margin-bottom: 10px;">Test</div>
+	</div>
+
 	<!-- Headings -->
 
 	<h1>Headings</h1>
@@ -37,7 +54,7 @@
 	<h1>Images</h1>
 	<hr><br>
 
-	<div class="clear">
+	<div class="grid-wrapper">
 		<div class="grid__3-6">
 			<figure>
 				<a href="#"><img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH"></a>
@@ -127,7 +144,7 @@
 
 	<div class="flexform clear">
 		<form>
-			<div class="clear">
+			<div class="grid-wrapper">
 				<div class="flexform-group grid__6-12--m_up">
 					<label>First Name</label>
 					<input type="text" name="name">
@@ -138,7 +155,7 @@
 					<input type="text" name="name">
 				</div>
 			</div>
-			<div class="clear">
+			<div class="grid-wrapper">
 				<div class="flexform-group grid__6-12--m_up">
 					<label>Age</label>
 					<input type="number" min="12" max="100" step="2" value="21">
@@ -149,7 +166,7 @@
 					<input type="email" name="email">
 				</div>
 			</div>
-			<div class="clear">
+			<div class="grid-wrapper">
 				<label>Description</label>
 				<textarea></textarea>
 			</div>
@@ -160,5 +177,4 @@
 			</div>
 		</form>
 	</div>
-
-	</section>
+</section>

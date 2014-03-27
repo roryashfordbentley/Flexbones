@@ -57,14 +57,23 @@ $columns_xl:			12;
 
 // Media Queries
 // $media-layout: min-width mq | total columns | max-width mq
+// 
+// CHANGE THIS TO REMOVE NUMBER OF COLUMNS EVENTUALLY
 
-$s: 					0      $columns_s 640px;
+/*$s: 					0      $columns_s 640px;
 $m: 					641px  $columns_m 880px;
 $m_up: 					641px  $columns_m;
 $l: 					881px  $columns_l 1200px;
 $l_up: 					881px  $columns_l;
 $xl: 					1200px $columns_xl;	
-$ie: 					0 $columns_l;
+$ie: 					0 $columns_l;*/
+
+$s: 					0, 		640px;
+$m: 					641px,	880px;
+$m_up: 					641px,	null;
+$l: 					881px, 	1200px;
+$l_up: 					881px,	null;
+$xl: 					1200px,	null;	
 
 // Box sizing
 

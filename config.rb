@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
 
-output_style = :compact
+output_style = :expanded
 preferred_syntax = :scss
 Sass::Script::Number.precision = 10
 http_path = "/"

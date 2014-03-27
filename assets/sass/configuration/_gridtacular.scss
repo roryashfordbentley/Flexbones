@@ -7,7 +7,7 @@
 @mixin gridtacular_columns($breakpoint,$columns) {	
 	@include at-breakpoint($breakpoint){ 	
 		@include span-columns(1,$columns); 
-		&:nth-child(#{$columns}){ @include span-columns(1 omega,$columns); }
+		&:nth-child(#{$columns}){ @include span-columns(1,$columns); }
 		&:nth-child(n + #{$columns + 1} ){ display: none; }
 		background: rgba(0,0,0,0.02);
 	}

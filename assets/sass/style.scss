@@ -17,13 +17,15 @@ $is_ie: false;
 // Helpers
 @import "compass/css3";
 @import "compass/css3/box-sizing";
-@import "susy";
+//@import "susy";
 
 // Funtions
 @import "configuration/_functions.scss";
 
 // Config
 @import "configuration/_vars.scss";
+
+@import "ui/_grid.scss";
 
 // Vars
 @import "configuration/_colour.scss";
@@ -42,7 +44,6 @@ $is_ie: false;
 @import "ui/_forms.scss";
 @import "ui/_tables.scss";
 @import "ui/_imgs.scss";
-@import "ui/_grid.scss";
 
 // Element Styles
 @import "_page.scss";
