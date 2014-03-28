@@ -3,24 +3,24 @@
 	<h1>Grid</h1>
 	<hr><br>
 
-	<div class="grid-wrapper">
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+	<div class="grid">
+		<div class="grid__item grid__item__6-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 
-		<div class="grid grid__2-6 grid__4-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__4-6 grid__8-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6 grid__2-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__5-6 grid__10-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__4-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__4-6 grid__item__8-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__1-6 grid__item__2-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__5-6 grid__item__10-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 	</div>
 
 	<!-- Headings -->
@@ -60,13 +60,13 @@
 	<h1>Images</h1>
 	<hr><br>
 
-	<div class="grid-wrapper">
-		<div class="grid__3-6">
+	<div class="grid">
+		<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
 			<figure>
 				<a href="#"><img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH"></a>
 			</figure>
 		</div>
-		<div class="grid__3-6--omega">
+		<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
 			<figure>
 				<img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH">
 				<figcaption>With <del>cat</del> caption</figcaption>
@@ -148,31 +148,31 @@
 	<h1>Forms</h1>
 	<hr><br>
 
-	<div class="flexform clear">
+	<div class="flexform">
 		<form>
-			<div class="grid-wrapper">
-				<div class="flexform-group grid__6-12--m_up">
+			<div class="grid">
+				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
 					<label>First Name</label>
 					<input type="text" name="name">
 				</div>
 
-				<div class="flexform-group grid__6-12--m_up--omega">
+				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
 					<label>Last Name</label>
 					<input type="text" name="name">
 				</div>
 			</div>
 			<div class="grid-wrapper">
-				<div class="flexform-group grid__6-12--m_up">
+				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
 					<label>Age</label>
 					<input type="number" min="12" max="100" step="2" value="21">
 				</div>
 
-				<div class="flexform-group grid__6-12--m_up--omega">
+				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
 					<label>Email</label>
 					<input type="email" name="email">
 				</div>
 			</div>
-			<div class="grid-wrapper">
+			<div>
 				<label>Description</label>
 				<textarea></textarea>
 			</div>
