@@ -17,15 +17,14 @@ $is_ie: false;
 // Helpers
 @import "compass/css3";
 @import "compass/css3/box-sizing";
+@import "configuration/_flexbones_grid.scss";
 //@import "susy";
 
 // Funtions
 @import "configuration/_functions.scss";
 
 // Config
-@import "configuration/_vars.scss";
-
-@import "ui/_grid.scss";
+@import "configuration/_setup.scss";
 
 // Vars
 @import "configuration/_colour.scss";

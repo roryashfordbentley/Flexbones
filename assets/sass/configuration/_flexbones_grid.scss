@@ -1,0 +1,135 @@
+// _flexbones_grid.scss
+// Dynamically create responsive grids
+
+
+// calculate the percentage width of each column based on the total columns
+
+@function fb_grid_base_size($total_columns){
+	
+	// Base size is the core percentage. 
+	// E.g. 12 col grid would be 1/12 = 8.333333333 (which would be the percentage width)
+
+	@return 1 / $total_columns;
+}
+
+// Returns the calculated with of a column based on the total number of columns and the desired column width
+
+@function calc_col_width($total_columns) {
+	@return fb_grid_base_size($total_columns) * $column_width;
+}
+
+@function calc_gutter_width($total_columns) {
+	@return fb_grid_base_size($total_columns) * $gutter_width;
+}
+
+
+// Calculate the column width dynamically
+
+@function fb_grid_column_width($columns, $total_columns){
+
+	@if($columns == 1){
+		@return calc_col_width($total_columns);
+	} @else {
+		@return ($columns * calc_col_width($total_columns)) + (($columns - 1) * calc_gutter_width($total_columns));
+	}
+}
+
+
+// Calculate the gutter width dynamically
+
+@function fb_grid_gutter_width($total_columns){
+	@return fb_grid_base_size($total_columns) * $gutter_width;
+}
+
+
+// Calculates and outputs the columns,
+
+@mixin fb_grid_col_creator($class,$columns,$total_columns,$bp_name:null){
+
+	$g_class: null;
+
+	@if($bp_name == null){
+		$g_class: #{$class}__#{$columns}-#{$total_columns};
+	} @else {
+		$g_class: #{$class}__#{$columns}-#{$total_columns}--#{$bp_name};
+	}
+
+	// CSS Class
+	#{$g_class}{
+		width: fb_grid_column_width($columns, $total_columns);
+		margin-left: fb_grid_gutter_width($total_columns);
+	}
+}
+
+@mixin fb_grid($prefix,$total_columns,$bp_name:null,$breakpoint:null){
+
+	@if($breakpoint == null){
+		
+		@for $i from 1 through $total_columns - 1 {
+			@include fb_grid_col_creator($prefix,$i,$total_columns,null);
+		}
+
+		// Create a grid wrapper
+		// dry SASS and easy set up BUT not the dryest CSS.
+		@include grid-wrapper($total_columns, null);
+		
+	} @else {
+	
+		@include at-breakpoint( $breakpoint ){
+	
+			@for $i from 1 through $total_columns - 1 {
+				@include fb_grid_col_creator($prefix,$i,$total_columns,$bp_name);
+			}
+
+		}
+
+		// Create a grid wrapper
+		// dry SASS and easy set up BUT not the dryest CSS.
+		@include grid-wrapper($total_columns, $breakpoint);
+	
+	}	
+}
+
+// 0 640px
+
+@mixin at-breakpoint($vars){
+	
+	// If no second argument is supplied
+	
+	$min: nth($vars,1);
+	$max: nth($vars,2);
+
+	@if($max == null){
+		@media (min-width: nth($vars,1)){
+			@content;
+		}
+	} @else{
+		@media (min-width: nth($vars,1) ) and (max-width: nth($vars,2) ){
+			@content;
+		}
+	}
+}
+
+// Drop a grid in on the fly
+
+@mixin span-columns($columns, $total_columns){
+	width: ($columns * calc_col_width($total_columns)) + (($columns - 1) * calc_gutter_width($total_columns));
+	margin-left: fb_grid_gutter_width($total_columns);
+}
+
+
+// Creates a wrapper that handles the negative margins  on the grid at different breakpoints.
+
+@mixin grid-wrapper($total_columns, $mq: null){
+	.grid-wrapper{
+
+		@if($mq == null){
+			margin-left: -#{fb_grid_gutter_width($total_columns)};
+		} @else {
+			@include at-breakpoint($mq){ 
+				margin-left: -#{fb_grid_gutter_width($total_columns)}; 
+			}
+		}
+	}
+
+}

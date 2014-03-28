@@ -4,17 +4,23 @@
 	<hr><br>
 
 	<div class="grid-wrapper">
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 
-		<div class="grid grid__2-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__4-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__1-6" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid grid__5-6" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__2-6 grid__4-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__4-6 grid__8-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__1-6 grid__2-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid grid__5-6 grid__10-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 	</div>
 
 	<!-- Headings -->
@@ -47,7 +53,7 @@
 	<h1>Text</h1>
 	<hr><br>
 
-	<p>Oh, so they have <i>Internet</i> on <strong>computers</strong> now! <del>where is my coat</del> <a href="#">I'd Click that</a></p>
+	<p>Oh, so they have <em>Internet</em> on <strong>computers</strong> now! <del>where is my coat</del> <a href="#">I'd Click that</a></p>
 
 	<!-- Images -->
 
