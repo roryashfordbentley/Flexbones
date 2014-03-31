@@ -5,17 +5,17 @@
 
 	<div class="grid">
 		<div class="grid__item grid__item__6-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up grid__push__2-12--m-up" style="background: blue; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up" style="background: green; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: orange; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: yellow; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: pink; margin-bottom: 10px;">Test</div>
+		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: brown; margin-bottom: 10px;">Test</div>
 		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
+		
 
 		<div class="grid__item grid__item__2-6 grid__item__4-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>
 		<div class="grid__item grid__item__4-6 grid__item__8-12--m-up" style="background: red; margin-bottom: 10px;">Test</div>

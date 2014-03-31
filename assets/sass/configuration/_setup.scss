@@ -67,9 +67,9 @@ $xl: 					1200px,	null;
 
 // Establish grids at each breakpoint
 
-@include fb_grid(#{$grid_class}, $columns_s);
-@include fb_grid(#{$grid_class}, $columns_m, 'm-up', $m_up);
-@include fb_grid(#{$grid_class}, $columns_l, 'l-up', $l_up);
+@include grid(#{$grid_class}, $columns_s);
+@include grid(#{$grid_class}, $columns_m, 'm-up', $m_up);
+@include grid(#{$grid_class}, $columns_l, 'l-up', $l_up);
 
 // Box sizing
 
