@@ -1,0 +1,15 @@
+/**
+ * _reset.scss
+ * CSS reset
+ * Nothing fancy
+ */
+
+*{
+	margin: 0;
+    padding: 0;
+    position: relative;
+
+    @if($border_box == true){
+		@include box-sizing(border-box);
+	}
+}

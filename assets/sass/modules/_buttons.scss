@@ -1,6 +1,6 @@
 /**
+ * _buttons.scss
  * Buttons
- * 
  */
 
 .btn{
@@ -24,11 +24,6 @@
 		@include box-shadow(none);
 	}
 }
-
-	/**
-	 * Button purposes
-	 * Default, Success, Warning, Error, Disabled
-	 */
 
 	.btn--default{
 

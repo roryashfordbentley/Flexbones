@@ -20,12 +20,3 @@ yepnope([{
 	test: Modernizr.mq,
 	nope: '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'
 }]);
-
-
-jQuery(window).load(function(){
-
-	//initialise Gridacular
-	jQuery('.gridtacular').gridtacular({});
-
-});
-

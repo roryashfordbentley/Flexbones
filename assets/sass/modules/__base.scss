@@ -1,0 +1,58 @@
+/**
+ * __base.scss
+ * Main configuration
+ */
+
+
+// Base font sizes for different media queries
+
+$base_font_size: 		100%;
+$base_font_size_m: 		100%;
+$base_font_size_l: 		112.5%;
+$base_font_size_xl: 	125%;
+
+// Type size default ( used when calling typesize() )
+
+$type_size: 		1rem;
+
+// Base unit (1.5x default font size)
+
+$base: 				1.5rem;
+
+// Font Sizes
+
+$h1:				typesize(3);
+$h2:				typesize(2.25); 
+$h3:				typesize(1.75);
+$h4:				typesize(1.125);
+$p:					typesize(1);
+$lead:				typesize(1.5);
+
+// Font Weights
+
+$light: 			300;
+$medium: 			400;
+$semibold: 			600;
+$bold: 				700;
+
+// Font Stack
+
+$heading_font: 		helvetica, arial, sans-serif;
+$body_font: 		$heading_font;
+
+// Media Queries
+	
+$s: 				0, 		640px;
+$m: 				641px,	880px;
+$m_up: 				641px,	null;
+$l: 				881px, 	1200px;
+$l_up: 				881px,	null;
+$xl: 				1200px,	null;
+
+// Box sizing
+
+$border_box: 		true;
+
+// Border Radius
+
+$radius:			3px;

@@ -1,0 +1,406 @@
+/**
+ * _grid.scss
+ * Not another f****** grid system!
+ */
+
+// Set up the default grid column class
+
+$grid_class: 	'.col--';
+$push_class:	'.push--';
+$gutter_width:	30px;
+
+
+@function column_width($number_of_columns,$total_columns) {
+	
+	$single_col_width: 100 / $total_columns * 1%;
+	@return $single_col_width * $number_of_columns;
+
+}
+
+// Sets gutter width to 0 if not set.
+
+@function gutter_width(){
+
+	@if($gutter_width != null){
+		@return $gutter_width;
+	} @else {
+		@return 0;
+	}	
+}
+
+// At-Breakpoint is a shortcut mixin for outputting media queries
+// Just supply a Sass list as an argument with a min/max
+
+@mixin at-breakpoint($min,$max:null){
+	@if($max == null){
+		@media (min-width: $min){
+			@content;
+		}
+	} @else {	
+		@media (min-width: $min) and (max-width: $max){
+			@content;
+		}
+	}
+}
+
+// Drop a grid in on the fly
+
+@mixin span-columns($columns, $total_columns){
+	width: column_width($columns,$total_columns);
+	padding-left: $gutter_width;
+}
+
+
+// assume prefix is .push-- for now
+
+@mixin grid_push($prefix: null, $breakpoint: null){
+
+
+	// Selective output control
+
+	$require_halfs: 	true;
+	$require_thirds:	true;
+	$require_quarters: 	true;
+	$require_fifths:	true;
+	$require_sixths: 	true;
+	$require_sevenths: 	false;
+	$require_eighths: 	false;
+	$require_tenths: 	false;
+	$require_twelfths: 	false;
+
+	//only include 7ths/8ths/10ths/12ths at the larger breakpoints
+
+	@if($breakpoint == "--m" or $breakpoint == "--m-up" or $breakpoint == "--l" or $breakpoint == "--l-up" or $breakpoint == "--xl"){
+		$require_sevenths: 	true;
+		$require_eighths: 	true;
+		$require_tenths: 	true;
+		$require_twelfths: 	true;
+	}
+	
+	@if($require_halfs == true){
+
+		/**
+		 * Half
+		 */
+
+		#{$prefix}one-half#{$breakpoint}		{ margin-left: column_width(1,2); }
+
+	}
+	
+	
+	@if($require_thirds == true){
+
+		/**
+		 * Thirds
+		 */
+
+		#{$prefix}one-third#{$breakpoint}		{ margin-left: column_width(1,3); }
+		#{$prefix}two-thirds#{$breakpoint}		{ margin-left: column_width(2,3); }
+	}
+	
+	@if($require_quarters == true){
+
+		/**
+		 * Quarters
+		 */
+		
+		#{$prefix}one-quarter#{$breakpoint}		{ margin-left: column_width(1,4); }
+		#{$prefix}two-quarters#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}three-quarters#{$breakpoint}	{ margin-left: column_width(3,4); }
+	}
+
+	@if($require_fifths == true){
+
+		/**
+		 * Fifths
+		 */
+		
+		#{$prefix}one-fifth#{$breakpoint}		{ margin-left: column_width(1,5); }
+		#{$prefix}two-fifths#{$breakpoint}		{ margin-left: column_width(2,5); }
+		#{$prefix}three-fifths#{$breakpoint}	{ margin-left: column_width(3,5); }
+		#{$prefix}four-fifths#{$breakpoint}		{ margin-left: column_width(4,5); }
+
+	}
+
+	@if($require_sixths == true){
+
+		/**
+		 * Sixths
+		 */
+		
+		#{$prefix}one-sixth#{$breakpoint}		{ margin-left: column_width(1,6); }
+		#{$prefix}two-sixths#{$breakpoint}		{ @extend #{$prefix}one-third#{$breakpoint} }
+		#{$prefix}three-sixths#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}four-sixths#{$breakpoint}		{ @extend #{$prefix}two-thirds#{$breakpoint} }
+		#{$prefix}five-sixths#{$breakpoint}		{ margin-left: column_width(5,6); }
+
+	}
+
+	@if($require_eighths == true){
+
+		/**
+		 * Eights
+		 */
+		
+		#{$prefix}one-eighth#{$breakpoint}		{ margin-left: column_width(1,8); }
+		#{$prefix}two-eighths#{$breakpoint}		{ @extend #{$prefix}one-quarter#{$breakpoint} }
+		#{$prefix}three-eighths#{$breakpoint}	{ margin-left: column_width(3,8); }
+		#{$prefix}four-eighths#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}five-eighths#{$breakpoint}	{ margin-left: column_width(5,8); }
+		#{$prefix}six-eighths#{$breakpoint}		{ @extend #{$prefix}three-quarters#{$breakpoint} }
+		#{$prefix}seven-eighths#{$breakpoint}	{ margin-left: column_width(6,8); }
+
+	}
+
+	@if($require_tenths == true){
+
+		/**
+		 * Tenths
+		 */
+		
+		#{$prefix}one-tenth#{$breakpoint}		{ margin-left: column_width(1,10); }
+		#{$prefix}two-tenths#{$breakpoint}		{ @extend #{$prefix}one-fifth#{$breakpoint} }
+		#{$prefix}three-tenths#{$breakpoint}	{ margin-left: column_width(3,10); }
+		#{$prefix}four-tenths#{$breakpoint}		{ @extend #{$prefix}two-fifths#{$breakpoint} }
+		#{$prefix}five-tenths#{$breakpoint}		{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}six-tenths#{$breakpoint}		{ @extend #{$prefix}three-fifths#{$breakpoint} }
+		#{$prefix}seven-tenths#{$breakpoint}	{ margin-left: column_width(7,10); }
+		#{$prefix}eight-tenths#{$breakpoint}	{ @extend #{$prefix}four-fifths#{$breakpoint} }
+		#{$prefix}nine-tenths#{$breakpoint}		{ margin-left: column_width(9,10); }
+
+	}
+
+	@if($require_twelfths == true){
+
+		/**
+		 * Twelfths
+		 */
+		
+		#{$prefix}one-twelfth#{$breakpoint}		{ margin-left: column_width(1,12); }
+		#{$prefix}two-twelfths#{$breakpoint}	{ @extend #{$prefix}one-sixth#{$breakpoint} }
+		#{$prefix}three-twelfths#{$breakpoint}	{ @extend #{$prefix}one-quarter#{$breakpoint} }
+		#{$prefix}four-twelfths#{$breakpoint}	{ @extend #{$prefix}one-third#{$breakpoint} }
+		#{$prefix}five-twelfths#{$breakpoint}	{ margin-left: column_width(5,12); }
+		#{$prefix}six-twelfths#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}seven-twelfths#{$breakpoint}	{ margin-left: column_width(7,12); }
+		#{$prefix}eight-twelfths#{$breakpoint}	{ @extend #{$prefix}two-thirds#{$breakpoint} }
+		#{$prefix}nine-twelfths#{$breakpoint}	{ @extend #{$prefix}three-quarters#{$breakpoint} }
+		#{$prefix}ten-twelfths#{$breakpoint}	{ @extend #{$prefix}five-sixths#{$breakpoint} }
+		#{$prefix}eleven-twelfths#{$breakpoint}	{ margin-left: column_width(9,12); }
+
+	}
+}
+
+
+@mixin grid_columns($prefix: null, $breakpoint: null){
+
+	// Selective output control
+
+	$require_whole: 	true;
+	$require_halfs: 	true;
+	$require_thirds:	true;
+	$require_quarters: 	true;
+	$require_fifths:	true;
+	$require_sixths: 	true;
+	$require_sevenths: 	false;
+	$require_eighths: 	false;
+	$require_tenths: 	false;
+	$require_twelfths: 	false;
+	$require_omega: 	true;
+
+	//only include 7ths/8ths/10ths/12ths at the larger breakpoints
+
+	@if($breakpoint == "--m" or $breakpoint == "--m-up" or $breakpoint == "--l" or $breakpoint == "--l-up" or $breakpoint == "--xl"){
+		$require_sevenths: 	true;
+		$require_eighths: 	true;
+		$require_tenths: 	true;
+		$require_twelfths: 	true;
+	}
+
+	@if($require_whole == true){
+		
+		/**
+		 * Whole
+		 */
+
+		#{$prefix}one-whole#{$breakpoint}		{ width: 100%; }
+	
+	}
+
+	@if($require_halfs == true){
+
+		/**
+		 * Half
+		 */
+
+		#{$prefix}one-half#{$breakpoint}		{ width: column_width(1,2); }
+
+	}
+	
+	@if($require_thirds == true){
+
+		/**
+		 * Thirds
+		 */
+
+		#{$prefix}one-third#{$breakpoint}		{ width: column_width(1,3); }
+		#{$prefix}two-thirds#{$breakpoint}		{ width: column_width(2,3); }
+	}
+	
+	@if($require_quarters == true){
+
+		/**
+		 * Quarters
+		 */
+		
+		#{$prefix}one-quarter#{$breakpoint}		{ width: column_width(1,4); }
+		#{$prefix}two-quarters#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}three-quarters#{$breakpoint}	{ width: column_width(3,4); }
+	}
+
+	@if($require_fifths == true){
+
+		/**
+		 * Fifths
+		 */
+		
+		#{$prefix}one-fifth#{$breakpoint}		{ width: column_width(1,5); }
+		#{$prefix}two-fifths#{$breakpoint}		{ width: column_width(2,5); }
+		#{$prefix}three-fifths#{$breakpoint}	{ width: column_width(3,5); }
+		#{$prefix}four-fifths#{$breakpoint}		{ width: column_width(4,5); }
+
+	}
+
+	@if($require_sixths == true){
+
+		/**
+		 * Sixths
+		 */
+		
+		#{$prefix}one-sixth#{$breakpoint}		{ width: column_width(1,6); }
+		#{$prefix}two-sixths#{$breakpoint}		{ @extend #{$prefix}one-third#{$breakpoint} }
+		#{$prefix}three-sixths#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}four-sixths#{$breakpoint}		{ @extend #{$prefix}two-thirds#{$breakpoint} }
+		#{$prefix}five-sixths#{$breakpoint}		{ width: column_width(5,6); }
+
+	}
+
+	@if($require_eighths == true){
+
+		/**
+		 * Eights
+		 */
+		
+		#{$prefix}one-eighth#{$breakpoint}		{ width: column_width(1,8); }
+		#{$prefix}two-eighths#{$breakpoint}		{ @extend #{$prefix}one-quarter#{$breakpoint} }
+		#{$prefix}three-eighths#{$breakpoint}	{ width: column_width(3,8); }
+		#{$prefix}four-eighths#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}five-eighths#{$breakpoint}	{ width: column_width(5,8); }
+		#{$prefix}six-eighths#{$breakpoint}		{ @extend #{$prefix}three-quarters#{$breakpoint} }
+		#{$prefix}seven-eighths#{$breakpoint}	{ width: column_width(6,8); }
+
+	}
+
+	@if($require_tenths == true){
+
+		/**
+		 * Tenths
+		 */
+		
+		#{$prefix}one-tenth#{$breakpoint}		{ width: column_width(1,10); }
+		#{$prefix}two-tenths#{$breakpoint}		{ @extend #{$prefix}one-fifth#{$breakpoint} }
+		#{$prefix}three-tenths#{$breakpoint}	{ width: column_width(3,10); }
+		#{$prefix}four-tenths#{$breakpoint}		{ @extend #{$prefix}two-fifths#{$breakpoint} }
+		#{$prefix}five-tenths#{$breakpoint}		{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}six-tenths#{$breakpoint}		{ @extend #{$prefix}three-fifths#{$breakpoint} }
+		#{$prefix}seven-tenths#{$breakpoint}	{ width: column_width(7,10); }
+		#{$prefix}eight-tenths#{$breakpoint}	{ @extend #{$prefix}four-fifths#{$breakpoint} }
+		#{$prefix}nine-tenths#{$breakpoint}		{ width: column_width(9,10); }
+
+	}
+
+	@if($require_twelfths == true){
+
+		/**
+		 * Twelfths
+		 */
+		
+		#{$prefix}one-twelfth#{$breakpoint}		{ width: column_width(1,12); }
+		#{$prefix}two-twelfths#{$breakpoint}	{ @extend #{$prefix}one-sixth#{$breakpoint} }
+		#{$prefix}three-twelfths#{$breakpoint}	{ @extend #{$prefix}one-quarter#{$breakpoint} }
+		#{$prefix}four-twelfths#{$breakpoint}	{ @extend #{$prefix}one-third#{$breakpoint} }
+		#{$prefix}five-twelfths#{$breakpoint}	{ width: column_width(5,12); }
+		#{$prefix}six-twelfths#{$breakpoint}	{ @extend #{$prefix}one-half#{$breakpoint} }
+		#{$prefix}seven-twelfths#{$breakpoint}	{ width: column_width(7,12); }
+		#{$prefix}eight-twelfths#{$breakpoint}	{ @extend #{$prefix}two-thirds#{$breakpoint} }
+		#{$prefix}nine-twelfths#{$breakpoint}	{ @extend #{$prefix}three-quarters#{$breakpoint} }
+		#{$prefix}ten-twelfths#{$breakpoint}	{ @extend #{$prefix}five-sixths#{$breakpoint} }
+		#{$prefix}eleven-twelfths#{$breakpoint}	{ width: column_width(9,12); }
+
+	}
+
+	/**
+	 * Omega class
+	 */
+
+	@if($require_omega == true){
+		#{$prefix}omega#{$breakpoint}			{float: right;}
+	}
+
+}
+
+/**
+ * Generate grid
+ * pulls together the grid wrapper, columns and gutter settings
+ * call once per required breakpoint
+ */
+
+@mixin generate_grid($grid_class, $push_class, $columns, $bp_class_modifier: null, $bp_min_max: null){
+	
+	@if( $bp_class_modifier != null and $bp_min_max != null){
+
+		@include at-breakpoint($bp_min_max){
+			@include grid_columns($grid_class, $bp_class_modifier);
+			@include grid_push($push_class, $bp_class_modifier);
+		}
+
+	} @else {
+		@include grid_columns($grid_class);
+		@include grid_push($push_class);
+	}
+}
+
+
+/**
+ * Generate setup & output
+ */
+
+// Grid wrapper
+
+.grid{
+	@include clearfix();
+	margin-left: -$gutter_width;
+}
+
+	//remove gutters if necessary
+	
+	.grid--full{
+		margin-left: 0;
+
+		> [class^="col--"]{
+			padding-left: 0;
+		}
+	}
+
+
+// Float all items beginning with the grid prefix 
+// e.g. 'col--'
+
+// it bugs me that below doesn't accept a class name beginning with a full stop
+// e.g. '.col--''
+
+[class^="col--"]{
+	position: relative;
+	float: left;
+	padding-left: gutter_width();
+}

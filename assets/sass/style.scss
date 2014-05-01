@@ -1,52 +1,56 @@
 /*
-Theme Name:     Flexbones Theme Beta 1.7
+Theme Name:     Flexbones Theme Beta 2 Beta
 Theme URI:      http://roikles.com/
-Description:    A Responsive minimal theme
+Description:    A minimal responsive wordpress boilerplate
 Author:         Rory Ashford
 Author URI:     http://roikles.com
-Version:        1.7
+Version:        2.0 Beta
 License:		All work is the property of Rory Ashford
 License URI:	n/a
 */
 
-// Firstly: is this an IE specific stylesheet?
-// Changes units from rems to pixels for older IE versions
 
-$is_ie: false;
+// External
+// 3rd party sass libs and tools
 
-// Helpers
 @import "compass/css3";
 @import "compass/css3/box-sizing";
-@import "configuration/_flexbones_grid.scss";
-//@import "susy";
 
-// Funtions
-@import "configuration/_functions.scss";
+// Partials
+// Mixins, functions and any sass files that dont produce output
 
-// Config
-@import "configuration/_setup.scss";
+@import "partial/_clearfix.scss";
+@import "partial/_grid.scss";
+@import "partial/_modernizr.scss";
+@import "partial/_size.scss";
+@import "partial/_typesize.scss";
 
-// Vars
-@import "configuration/_colour.scss";
+// Modules 
+// module components, modular and reuseable
 
-// Dev Tools
-@import "configuration/_gridtacular.scss";
+@import "modules/__base.scss";
+@import "modules/_colours.scss";
+@import "modules/_grid.scss";
+@import "modules/_alerts.scss";
+@import "modules/_buttons.scss";
+@import "modules/_clear.scss";
+@import "modules/_forms.scss";
+@import "modules/_imgs.scss";
+@import "modules/_navigation.scss";
+@import "modules/_reset.scss";
+@import "modules/_tables.scss";
+@import "modules/_typography.scss";
+@import "modules/_wordpress.scss";
 
-// Global Styles
-@import "_global.scss";
-@import "_wordpress.scss";
+// Section
+// Styles for pages an elements that aren't reuseable
 
-// UI
-@import "ui/_typography.scss";
-@import "ui/_buttons.scss";
-@import "ui/_alerts.scss";
-@import "ui/_forms.scss";
-@import "ui/_tables.scss";
-@import "ui/_imgs.scss";
+@import "section/_html-body.scss";
+@import "section/_header.scss";
+@import "section/_footer.scss";
+@import "section/_sidebar.scss";
 
-// Element Styles
-@import "_page.scss";
-@import "_navigation.scss";
-@import "_header.scss";
-@import "_footer.scss";
-@import "_sidebar.scss";
+
+	// Example Section 
+	// @import "section/contact-us/map.scss";
+	// @import "section/contact-us/form.scss";

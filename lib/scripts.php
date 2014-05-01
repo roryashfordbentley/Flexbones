@@ -23,7 +23,6 @@ function flexbones_load_js() {
 	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '2.7.1', false);
 	wp_register_script('yepnope', '//cdnjs.cloudflare.com/ajax/libs/yepnope/1.5.4/yepnope.min.js', array(), '1.5.4', true);
 	wp_register_script('sitewide-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '1.1', true);
-	wp_register_script('gridtacular', get_template_directory_uri() . '/assets/js/gridtacular/gridtacular.js', array( 'jquery' ), '1', true);
 	
 	// Enqueue Scripts
 	
@@ -31,7 +30,6 @@ function flexbones_load_js() {
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('yepnope');
 	wp_enqueue_script('sitewide-scripts');
-	wp_enqueue_script('gridtacular');
 }
  
 add_action('wp_enqueue_scripts', 'flexbones_load_js'); // For use on the Front end (ie. Theme

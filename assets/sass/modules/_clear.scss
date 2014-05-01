@@ -1,0 +1,5 @@
+// Clearfix
+
+.clear{
+	@include clearfix();
+}

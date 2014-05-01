@@ -11,3 +11,5 @@ get_template_part($root . '/filters');
 get_template_part($root . '/menus');
 get_template_part($root . '/scripts');
 get_template_part($root . '/styles');
+get_template_part($root . '/fonts');
+get_template_part($root . '/cpts');

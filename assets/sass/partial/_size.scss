@@ -1,0 +1,7 @@
+// handle all units with a sensible IE fallback
+
+@function size($multiplier:1){
+
+	@return $multiplier * $base;
+
+}

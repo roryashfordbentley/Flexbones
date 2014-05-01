@@ -1,26 +1,15 @@
-<section class="main main--styleguide">
+<div class="wrapper">
 	
 	<h1>Grid</h1>
 	<hr><br>
 
 	<div class="grid">
-		<div class="grid__item grid__item__6-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up grid__push__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__3-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__2-6 grid__item__1-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		
-
-		<div class="grid__item grid__item__2-6 grid__item__4-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__4-6 grid__item__8-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__1-6 grid__item__2-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
-		<div class="grid__item grid__item__5-6 grid__item__10-12--m-up"><div style="background: red; margin-bottom: 10px;">Test</div></div>
+		<div class="col--one-whole  col--one-half--m-up"><div style="background: red; margin-bottom: 30px; padding: 10px;">.one-whole / .one-half--m-up</div></div>
+		<div class="col--one-whole  col--one-half--m-up"><div style="background: red; margin-bottom: 30px; padding: 10px;">.one-whole / .one-half--m-up</div></div>
+		<div class="col--one-half  col--one-quarter--m-up"><div style="background: red; margin-bottom: 30px; padding: 10px;">.one-half / .one-quarter--m-up</div></div>
+		<div class="col--one-half  col--one-quarter--m-up"><div style="background: red; margin-bottom: 30px; padding: 10px;">.one-half / .one-quarter--m-up</div></div>
+		<div class="col--one-half  col--one-quarter--m-up"><div style="background: red; margin-bottom: 30px; padding: 10px;">.one-half / .one-quarter--m-up</div></div>
+		<div class="col--one-half  col--one-quarter--m-up"><div style="background: red; margin-bottom: 30px; padding: 10px;">.one-half / .one-quarter--m-up</div></div>
 	</div>
 
 	<!-- Headings -->
@@ -61,12 +50,12 @@
 	<hr><br>
 
 	<div class="grid">
-		<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
+		<div class="col--one-whole  col--one-half--m-up">
 			<figure>
 				<a href="#"><img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH"></a>
 			</figure>
 		</div>
-		<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
+		<div class="col--one-whole  col--one-half--m-up">
 			<figure>
 				<img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH">
 				<figcaption>With <del>cat</del> caption</figcaption>
@@ -151,23 +140,22 @@
 	<div class="flexform">
 		<form>
 			<div class="grid">
-				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
+				<div class="col--one-whole  col--one-half--m-up">
 					<label>First Name</label>
 					<input type="text" name="name">
 				</div>
 
-				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
+				<div class="col--one-whole  col--one-half--m-up">
 					<label>Last Name</label>
 					<input type="text" name="name">
 				</div>
-			</div>
-			<div class="grid-wrapper">
-				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
+
+				<div class="col--one-whole  col--one-half--m-up">
 					<label>Age</label>
 					<input type="number" min="12" max="100" step="2" value="21">
 				</div>
 
-				<div class="grid__item grid__item__6-6 grid__item__6-12--m-up">
+				<div class="col--one-whole  col--one-half--m-up">
 					<label>Email</label>
 					<input type="email" name="email">
 				</div>
@@ -183,4 +171,4 @@
 			</div>
 		</form>
 	</div>
-</section>
+</div>
