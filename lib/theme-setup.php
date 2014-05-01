@@ -13,3 +13,17 @@ function flexbones_setup() {
 }
 
 add_action('after_setup_theme', 'flexbones_setup');
+
+/**
+ * Shortcut to the assets folder
+ * easier to read than get_stylesheet_directory_uri() . '/assets/folder'
+ * direct output and get_ output
+ */
+
+function get_assets($subdir){
+	return get_stylesheet_directory_uri() .'/assets'.(!$subdir ? '/'. $subdir : '');
+}
+
+function assets($subdir){
+	echo get_stylesheet_directory_uri() .'/assets'.(!$subdir ? '/'. $subdir : '');
+}
