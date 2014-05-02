@@ -50,7 +50,7 @@ function add_cpt($cpt_name,$cpt_description,$dashicon){
 				'search_items'        => 'Search' . $cpt_name,
 				'not_found'           => 'No ' . $cpt_name .' Found',
 				'not_found_in_trash'  => 'No ' . $cpt_name .' Found in Trash',
-				'parent'       		=> 'Parent' . $cpt_name
+				'parent'       		  => 'Parent' . $cpt_name
 			),
 		) 
 	);

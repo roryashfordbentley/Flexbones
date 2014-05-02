@@ -1,14 +1,16 @@
 /**
- * _grid.scss
- * Not another f****** grid system!
+ * Set up the default grid column class
  */
 
-// Set up the default grid column class
-
-$grid_class: 	'.col--';
-$push_class:	'.push--';
+$grid_class: 	'col';
+$push_class:	'push';
 $gutter_width:	30px;
 
+
+/**
+ * Works out the percent width of columns
+ * (gutters can be any unit but columns are always percent bases)
+ */
 
 @function column_width($number_of_columns,$total_columns) {
 	
@@ -17,7 +19,11 @@ $gutter_width:	30px;
 
 }
 
-// Sets gutter width to 0 if not set.
+
+/**
+ * Gutter Width
+ * Sets gutter width to 0 if not set.
+ */
 
 @function gutter_width(){
 
@@ -28,8 +34,12 @@ $gutter_width:	30px;
 	}	
 }
 
-// At-Breakpoint is a shortcut mixin for outputting media queries
-// Just supply a Sass list as an argument with a min/max
+
+/**
+ * at-breakpoint
+ * a mixin for outputting inline media queries
+ * Just supply a Sass list as an argument with a min/max
+ */
 
 @mixin at-breakpoint($min,$max:null){
 	@if($max == null){
@@ -43,7 +53,12 @@ $gutter_width:	30px;
 	}
 }
 
-// Drop a grid in on the fly
+
+/**
+ * Span Columns
+ * Used to set grids semantically from within 
+ * the stylesheet with no additional HTML markup
+ */
 
 @mixin span-columns($columns, $total_columns){
 	width: column_width($columns,$total_columns);
@@ -51,36 +66,29 @@ $gutter_width:	30px;
 }
 
 
-// assume prefix is .push-- for now
+/**
+ * Push
+ * Modular push system, only use what you need to 
+ */
 
-@mixin grid_push($prefix: null, $breakpoint: null){
+@mixin grid_push($prefix: null, $breakpoint: null, $grid_options: null){
+
+	$require_whole: 	map-get(map-get($grid_options, sizes), whole);
+	$require_halfs: 	map-get(map-get($grid_options, sizes), halfs);
+	$require_thirds:	map-get(map-get($grid_options, sizes), thirds);
+	$require_quarters: 	map-get(map-get($grid_options, sizes), quarters);
+	$require_fifths:	map-get(map-get($grid_options, sizes), fifths);
+	$require_sixths: 	map-get(map-get($grid_options, sizes), sixths);
+	$require_sevenths: 	map-get(map-get($grid_options, sizes), sevenths);
+	$require_eighths: 	map-get(map-get($grid_options, sizes), eights);
+	$require_tenths: 	map-get(map-get($grid_options, sizes), tenths);
+	$require_twelfths: 	map-get(map-get($grid_options, sizes), twelfths);
 
 
-	// Selective output control
-
-	$require_halfs: 	true;
-	$require_thirds:	true;
-	$require_quarters: 	true;
-	$require_fifths:	true;
-	$require_sixths: 	true;
-	$require_sevenths: 	false;
-	$require_eighths: 	false;
-	$require_tenths: 	false;
-	$require_twelfths: 	false;
-
-	//only include 7ths/8ths/10ths/12ths at the larger breakpoints
-
-	@if($breakpoint == "--m" or $breakpoint == "--m-up" or $breakpoint == "--l" or $breakpoint == "--l-up" or $breakpoint == "--xl"){
-		$require_sevenths: 	true;
-		$require_eighths: 	true;
-		$require_tenths: 	true;
-		$require_twelfths: 	true;
-	}
-	
 	@if($require_halfs == true){
 
 		/**
-		 * Half
+		 * Half#{$breakpoint}
 		 */
 
 		#{$prefix}one-half#{$breakpoint}		{ margin-left: column_width(1,2); }
@@ -91,7 +99,7 @@ $gutter_width:	30px;
 	@if($require_thirds == true){
 
 		/**
-		 * Thirds
+		 * Thirds#{$breakpoint}
 		 */
 
 		#{$prefix}one-third#{$breakpoint}		{ margin-left: column_width(1,3); }
@@ -101,7 +109,7 @@ $gutter_width:	30px;
 	@if($require_quarters == true){
 
 		/**
-		 * Quarters
+		 * Quarters#{$breakpoint}
 		 */
 		
 		#{$prefix}one-quarter#{$breakpoint}		{ margin-left: column_width(1,4); }
@@ -112,7 +120,7 @@ $gutter_width:	30px;
 	@if($require_fifths == true){
 
 		/**
-		 * Fifths
+		 * Fifths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-fifth#{$breakpoint}		{ margin-left: column_width(1,5); }
@@ -125,7 +133,7 @@ $gutter_width:	30px;
 	@if($require_sixths == true){
 
 		/**
-		 * Sixths
+		 * Sixths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-sixth#{$breakpoint}		{ margin-left: column_width(1,6); }
@@ -139,7 +147,7 @@ $gutter_width:	30px;
 	@if($require_eighths == true){
 
 		/**
-		 * Eights
+		 * Eights#{$breakpoint}
 		 */
 		
 		#{$prefix}one-eighth#{$breakpoint}		{ margin-left: column_width(1,8); }
@@ -155,7 +163,7 @@ $gutter_width:	30px;
 	@if($require_tenths == true){
 
 		/**
-		 * Tenths
+		 * Tenths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-tenth#{$breakpoint}		{ margin-left: column_width(1,10); }
@@ -173,7 +181,7 @@ $gutter_width:	30px;
 	@if($require_twelfths == true){
 
 		/**
-		 * Twelfths
+		 * Twelfths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-twelfth#{$breakpoint}		{ margin-left: column_width(1,12); }
@@ -192,65 +200,57 @@ $gutter_width:	30px;
 }
 
 
-@mixin grid_columns($prefix: null, $breakpoint: null){
+@mixin grid_columns($prefix: null, $breakpoint: null, $grid_options: null){
+	
+	$require_whole: 	map-get(map-get($grid_options, sizes), whole);
+	$require_halfs: 	map-get(map-get($grid_options, sizes), halfs);
+	$require_thirds:	map-get(map-get($grid_options, sizes), thirds);
+	$require_quarters: 	map-get(map-get($grid_options, sizes), quarters);
+	$require_fifths:	map-get(map-get($grid_options, sizes), fifths);
+	$require_sixths: 	map-get(map-get($grid_options, sizes), sixths);
+	$require_sevenths: 	map-get(map-get($grid_options, sizes), sevenths);
+	$require_eighths: 	map-get(map-get($grid_options, sizes), eights);
+	$require_tenths: 	map-get(map-get($grid_options, sizes), tenths);
+	$require_twelfths: 	map-get(map-get($grid_options, sizes), twelfths);
 
-	// Selective output control
-
-	$require_whole: 	true;
-	$require_halfs: 	true;
-	$require_thirds:	true;
-	$require_quarters: 	true;
-	$require_fifths:	true;
-	$require_sixths: 	true;
-	$require_sevenths: 	false;
-	$require_eighths: 	false;
-	$require_tenths: 	false;
-	$require_twelfths: 	false;
-	$require_omega: 	true;
-
-	//only include 7ths/8ths/10ths/12ths at the larger breakpoints
-
-	@if($breakpoint == "--m" or $breakpoint == "--m-up" or $breakpoint == "--l" or $breakpoint == "--l-up" or $breakpoint == "--xl"){
-		$require_sevenths: 	true;
-		$require_eighths: 	true;
-		$require_tenths: 	true;
-		$require_twelfths: 	true;
-	}
 
 	@if($require_whole == true){
 		
 		/**
-		 * Whole
+		 * Whole#{$breakpoint}
 		 */
 
 		#{$prefix}one-whole#{$breakpoint}		{ width: 100%; }
 	
 	}
 
+
 	@if($require_halfs == true){
 
 		/**
-		 * Half
+		 * Half#{$breakpoint}
 		 */
 
 		#{$prefix}one-half#{$breakpoint}		{ width: column_width(1,2); }
 
 	}
 	
+
 	@if($require_thirds == true){
 
 		/**
-		 * Thirds
+		 * Thirds#{$breakpoint}
 		 */
 
 		#{$prefix}one-third#{$breakpoint}		{ width: column_width(1,3); }
 		#{$prefix}two-thirds#{$breakpoint}		{ width: column_width(2,3); }
 	}
+
 	
 	@if($require_quarters == true){
 
 		/**
-		 * Quarters
+		 * Quarters#{$breakpoint}
 		 */
 		
 		#{$prefix}one-quarter#{$breakpoint}		{ width: column_width(1,4); }
@@ -258,10 +258,11 @@ $gutter_width:	30px;
 		#{$prefix}three-quarters#{$breakpoint}	{ width: column_width(3,4); }
 	}
 
+
 	@if($require_fifths == true){
 
 		/**
-		 * Fifths
+		 * Fifths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-fifth#{$breakpoint}		{ width: column_width(1,5); }
@@ -271,10 +272,11 @@ $gutter_width:	30px;
 
 	}
 
+
 	@if($require_sixths == true){
 
 		/**
-		 * Sixths
+		 * Sixths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-sixth#{$breakpoint}		{ width: column_width(1,6); }
@@ -285,10 +287,11 @@ $gutter_width:	30px;
 
 	}
 
+
 	@if($require_eighths == true){
 
 		/**
-		 * Eights
+		 * Eights#{$breakpoint}
 		 */
 		
 		#{$prefix}one-eighth#{$breakpoint}		{ width: column_width(1,8); }
@@ -301,10 +304,11 @@ $gutter_width:	30px;
 
 	}
 
+
 	@if($require_tenths == true){
 
 		/**
-		 * Tenths
+		 * Tenths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-tenth#{$breakpoint}		{ width: column_width(1,10); }
@@ -319,10 +323,11 @@ $gutter_width:	30px;
 
 	}
 
+
 	@if($require_twelfths == true){
 
 		/**
-		 * Twelfths
+		 * Twelfths#{$breakpoint}
 		 */
 		
 		#{$prefix}one-twelfth#{$breakpoint}		{ width: column_width(1,12); }
@@ -339,15 +344,57 @@ $gutter_width:	30px;
 
 	}
 
+
 	/**
-	 * Omega class
+	 * Omega class#{$breakpoint}
 	 */
 
-	@if($require_omega == true){
-		#{$prefix}omega#{$breakpoint}			{float: right;}
-	}
+	#{$prefix}omega#{$breakpoint}			{float: right;}
+
 
 }
+
+/**
+ * Grid wrapper
+ */
+
+@mixin grid_wrapper($gutter){
+	.grid{
+		@include clearfix();
+		margin-left: -$gutter;
+	}
+}
+
+/**
+ * Grid with no gutters
+ */
+
+@mixin grid_wrapper_full(){
+	.grid--full{
+		margin-left: 0;
+
+		> [class^="#{$grid_class}"]{
+			padding-left: 0;
+		}
+	}
+}
+
+
+/**
+ * Float all items beginning with the grid prefix
+ * e.g. 'col--'
+
+ * 
+ */
+
+@mixin grid_margins($gutter){
+	[class^="#{$grid_class}"]{
+		position: relative;
+		float: left;
+		padding-left: $gutter;
+	}	
+}
+
 
 /**
  * Generate grid
@@ -355,52 +402,29 @@ $gutter_width:	30px;
  * call once per required breakpoint
  */
 
-@mixin generate_grid($grid_class, $push_class, $columns, $bp_class_modifier: null, $bp_min_max: null){
+@mixin generate_grid($grid_options){
 	
-	@if( $bp_class_modifier != null and $bp_min_max != null){
+	$columns: 		map-get(map-get($grid_options, options), columns);
+	$suffix: 		map-get(map-get($grid_options, options), suffix);
+	$breakpoint: 	map-get(map-get($grid_options, options), breakpoint);
+	$gutter: 		map-get(map-get($grid_options, options), gutter);
 
-		@include at-breakpoint($bp_min_max){
-			@include grid_columns($grid_class, $bp_class_modifier);
-			@include grid_push($push_class, $bp_class_modifier);
+
+	@if( $suffix != null and $breakpoint != null){
+
+		@include at-breakpoint($breakpoint){
+			@include grid_columns(#{'.' + $grid_class + '--'}, #{'--' + $suffix }, $grid_options);
+			@include grid_push(#{'.' + $push_class + '--'}, #{'--' + $suffix }, $grid_options);
+			@include grid_wrapper($gutter);
+			@include grid_margins($gutter);
 		}
 
 	} @else {
-		@include grid_columns($grid_class);
-		@include grid_push($push_class);
-	}
-}
-
-
-/**
- * Generate setup & output
- */
-
-// Grid wrapper
-
-.grid{
-	@include clearfix();
-	margin-left: -$gutter_width;
-}
-
-	//remove gutters if necessary
-	
-	.grid--full{
-		margin-left: 0;
-
-		> [class^="col--"]{
-			padding-left: 0;
-		}
+		@include grid_columns(#{'.' + $grid_class + '--'}, $suffix, $grid_options);
+		@include grid_push(#{'.' + $push_class + '--'}, $suffix, $grid_options);
+		@include grid_wrapper($gutter);
+		@include grid_margins($gutter);
 	}
 
-
-// Float all items beginning with the grid prefix 
-// e.g. 'col--'
-
-// it bugs me that below doesn't accept a class name beginning with a full stop
-// e.g. '.col--''
-
-[class^="col--"]{
-	position: relative;
-	float: left;
-	padding-left: gutter_width();
+	//@include grid_margins($gutter);
 }

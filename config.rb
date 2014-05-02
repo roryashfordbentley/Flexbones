@@ -1,6 +1,7 @@
 # Require any additional compass plugins here.
 
-output_style = :compressed
+output_style = :compact #:nested, :expanded, :compact, or :compressed.
+environment = :production
 preferred_syntax = :scss
 Sass::Script::Number.precision = 10
 http_path = "/"
