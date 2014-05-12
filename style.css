@@ -8,7 +8,9 @@ Version:        2.0 Beta
 License:		All work is the property of Rory Ashford
 License URI:	n/a
 */
-/** Set up the default grid column class */
+/** Grid functions and mixins */
+/** Set defaults incase they aren't defined */
+/** Clearfix */
 /** Works out the percent width of columns (gutters can be any unit but columns are always percent bases) */
 /** Gutter Width Sets gutter width to 0 if not set. */
 /** at-breakpoint a mixin for outputting inline media queries Just supply a Sass list as an argument with a min/max */

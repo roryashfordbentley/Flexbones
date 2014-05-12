@@ -1,11 +1,28 @@
 /**
- * Set up the default grid column class
+ * Grid functions and mixins
  */
 
-$grid_class: 	'col';
-$push_class:	'push';
-$gutter_width:	30px;
+/**
+ * Set defaults incase they aren't defined
+ */
 
+
+$grid_class: 	'col' !default;
+$push_class:	'push' !default;
+
+
+/**
+ * Clearfix
+ */
+
+@mixin clearfix() {
+	*zoom:1;
+	&:before, &:after {
+	    content:"";
+	    display:table;
+	}
+	&:after { clear:both; }
+}
 
 /**
  * Works out the percent width of columns
@@ -358,7 +375,7 @@ $gutter_width:	30px;
  * Grid wrapper
  */
 
-@mixin grid_wrapper($gutter){
+@mixin grid($gutter){
 	.grid{
 		@include clearfix();
 		margin-left: -$gutter;
@@ -369,7 +386,7 @@ $gutter_width:	30px;
  * Grid with no gutters
  */
 
-@mixin grid_wrapper_full(){
+@mixin grid_full(){
 	.grid--full{
 		margin-left: 0;
 
@@ -415,14 +432,14 @@ $gutter_width:	30px;
 		@include at-breakpoint($breakpoint){
 			@include grid_columns(#{'.' + $grid_class + '--'}, #{'--' + $suffix }, $grid_options);
 			@include grid_push(#{'.' + $push_class + '--'}, #{'--' + $suffix }, $grid_options);
-			@include grid_wrapper($gutter);
+			@include grid($gutter);
 			@include grid_margins($gutter);
 		}
 
 	} @else {
 		@include grid_columns(#{'.' + $grid_class + '--'}, $suffix, $grid_options);
 		@include grid_push(#{'.' + $push_class + '--'}, $suffix, $grid_options);
-		@include grid_wrapper($gutter);
+		@include grid($gutter);
 		@include grid_margins($gutter);
 	}
 
