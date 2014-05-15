@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Create a custom Post Type
@@ -9,7 +9,7 @@
 // quickly add post types
 function add_cpt($cpt_name,$cpt_description,$dashicon){
 	register_post_type(
-		$cpt_name, array(  
+		$cpt_name, array(
 			'label'             => $cpt_name,
 			'description'       => $cpt_name,
 			'public'            => true,
@@ -34,25 +34,24 @@ function add_cpt($cpt_name,$cpt_description,$dashicon){
 			),
 			'taxonomies'    => array(
 				'post_tag',
-				'sections',
 			),
 			'labels'        => array(
 				'name'                => $cpt_name,
 				'singular_name'       => $cpt_name,
 				'menu_name'           => $cpt_name,
-				'add_new'             => 'Add' . $cpt_name,
-				'add_new_item'        => 'Add New' . $cpt_name,
-				'edit'                => 'Edit',
-				'edit_item'           => 'Edit' . $cpt_name,
-				'new_item'            => 'New' . $cpt_name,
-				'view'                => 'View' . $cpt_name,
-				'view_item'           => 'View' . $cpt_name,
-				'search_items'        => 'Search' . $cpt_name,
+				'add_new'             => 'Add ' . $cpt_name,
+				'add_new_item'        => 'Add New ' . $cpt_name,
+				'edit'                => 'Edit ',
+				'edit_item'           => 'Edit ' . $cpt_name,
+				'new_item'            => 'New ' . $cpt_name,
+				'view'                => 'View ' . $cpt_name,
+				'view_item'           => 'View ' . $cpt_name,
+				'search_items'        => 'Search ' . $cpt_name,
 				'not_found'           => 'No ' . $cpt_name .' Found',
 				'not_found_in_trash'  => 'No ' . $cpt_name .' Found in Trash',
-				'parent'       		  => 'Parent' . $cpt_name
+				'parent'       		  => 'Parent ' . $cpt_name
 			),
-		) 
+		)
 	);
 }
 
