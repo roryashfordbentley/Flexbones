@@ -11,9 +11,6 @@
  */
 
 yepnope([{
-	test : Modernizr.cssremunit,
-	nope : stylesheet_root['dir'] +'/assets/js/remfallback.js'
-},{
 	test : Modernizr.rgba,
 	nope : '//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js'
 },{
