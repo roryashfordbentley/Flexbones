@@ -23,18 +23,25 @@ function flexbones_preserve_brs($init) {
 add_filter('tiny_mce_before_init', 'flexbones_preserve_brs');
 
 /**
- * Wrap images in a div
+ * Wrap images in figure/figcaption
  * (when inserting into editor)
  */
-  
+
 function flexbones_img_wrap($html, $id, $caption, $title, $align, $url, $size, $alt) {
-	if( is_admin() ) {
-		return '<div class="content-image">'. $html .'</div>';
+	
+	$url = wp_get_attachment_url($id);
+	$html5 = "<figure class='align-$align  news-article__figure'>";
+	$html5 .= "<img src='$url' alt='$title' />";
+	
+	if ($caption) {
+    	$html5 .= "<figcaption class='news-article__figure--caption'>$caption</figcaption>";
 	}
+	$html5 .= "</figure>";
+	
+	return $html5;
 }
 
-add_filter('image_send_to_editor', 'flexbones_img_wrap', 10, 8 );
-
+add_filter('image_send_to_editor', 'flexbones_img_wrap', 10, 9 );
 /**
  * Hide Admin Bar
  */
