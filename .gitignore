@@ -1,7 +1,7 @@
 # Ignore sass-cache files.
 *.sass-cache*
 *.scssc
-grunt/node_modules/
+node_modules/
 ie.min.scss
 style.min.scss
 config.codekit
