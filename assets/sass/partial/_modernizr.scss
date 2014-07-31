@@ -5,7 +5,7 @@
 
 @mixin modernizr($selector){
 
-	#{$selector} &	{
-		@content;
-	}
+    #{$selector} &  {
+        @content;
+    }
 }

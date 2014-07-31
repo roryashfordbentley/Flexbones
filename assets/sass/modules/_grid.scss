@@ -3,80 +3,81 @@
  * Responsive grids setup
  */
 
-$columns_s: 6;
-$columns_m: 12;
-$columns_l: 12;
+// Debug
+
+$grid_debug: true;
 
 // Content wrapper
 
 .wrapper {
-	margin: 0 auto;
-	width: 90%;
-	@include at-breakpoint($l_up){ 
-		width: 90%;
-		max-width: 1100px; 
-	}
+    margin: 0 auto;
+    width: 90%;
+    @include at-breakpoint($l_up){ 
+        width: 90%;
+        max-width: 1100px; 
+    }
 }
 
 // Grid setup
 // Establish grids at each breakpoint
 
 $default_grid: (
-	options: (
-		columns: 		6,
-		suffix:			null,
-		breakpoint: 	null,
-		gutter: 		size(1)
-	),
-	sizes: (
-		whole: 			true,
-		halfs: 			true,
-		thirds:			true,
-		quarters: 		true,
-		sixths: 		true
-	)
+    options (
+        columns         6,
+        suffix          null,
+        breakpoint      null,
+        gutter          size(1)
+    ),
+    sizes (
+        whole           true,
+        halfs           true,
+        thirds          true,
+        quarters        true,
+        sixths          true
+    )
 );
 
 @include generate_grid($default_grid);
 
-
 $medium_grid: (
-	options: (
-		columns: 		12,
-		suffix:			'm-up',
-		breakpoint: 	$m_up,
-		gutter: 		size(1)
-	),
-	sizes: (
-		whole: 			true,
-		halfs: 			true,
-		thirds:			true,
-		quarters: 		true,
-		sixths: 		true,
-		eights: 		true,
-		twelfths: 		true
-	)
+    options (
+        columns         12,
+        suffix          'm',
+        breakpoint      $m_up,
+        gutter          size(1)
+    ),  
+    sizes (
+        whole           true,
+        halfs           true,
+        thirds          true,
+        quarters        true,
+        sixths          true,
+        eights          true,
+        twelfths        true
+    )
 );
 
 @include generate_grid($medium_grid);
 
 
 $large_grid: (
-	options: (
-		columns: 		12,
-		suffix:			'l-up',
-		breakpoint: 	$l_up,
-		gutter: 		size(1)
-	),
-	sizes: (
-		whole: 			true,
-		halfs: 			true,
-		thirds:			true,
-		quarters: 		true,
-		sixths: 		true,
-		eights: 		true,
-		twelfths: 		true
-	)
+    options (
+        columns         12,
+        suffix          'l',
+        breakpoint      $l_up,
+        gutter          size(1)
+    ),
+    sizes (
+        whole           true,
+        halfs           true,
+        thirds          true,
+        quarters        true,
+        fifths          true,
+        sixths          true,
+        sevenths        true,
+        eights          true,
+        twelfths        true
+    )
 );
 
 @include generate_grid($large_grid);

@@ -12,69 +12,71 @@ ul,
 ol,
 input, 
 textarea{
-	font-weight: $medium;
-	font-size: $p;
+    font-weight: $medium;
+    font-size: $size_p;
 }
 
 // Paragraph Styles
 
 p{
-	margin-bottom: size(1);	
+    margin-bottom: size(1); 
 
-	&:last-child{
-		margin: 0;
-	}
+    &:last-child{
+        margin: 0;
+    }
 }
 
 // Big text ideal for the first paragraph in an article
 
 .lead{
-	font-size: $lead;
-	line-height: 1.3;
+    font-size: $size_lead;
 }
 
 // Small type ideal for captions
 
 .small{
-	font-size: typesize(0.75);
-	line-height: 1.3;
+    font-size: $size_small;
 }
 
 // Links
 
 a,
 a:visited{
-	color: $link;
-	text-decoration: none;
-	@extend strong;
+    color: $link;
+    text-decoration: none;
+    @extend strong;
 }
 
 a:hover{
-	color: $link_hover;
-	text-decoration: underline;
+    color: $link_hover;
+    text-decoration: underline;
 }
 
 // Headings
 
 h1,h2,h3,h4,h5,h6{
-	font-family: $heading_font;
-	font-weight: $bold;
-	color: #292929;
-	line-height: 1.3;
-	letter-spacing: -1px;
-	margin-bottom: size(1);
+    font-family: $heading_font;
+    font-weight: $bold;
+    color: #292929;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    margin-bottom: size(1);
 }
 
 h1{ 
-	font-size: $h1;
+    font-size: $size_h1;
 }
 
 h2{ 
-	font-size: $h2;
+    font-size: $size_h2;
 }
 
 h3{ 
-	font-size: $h3;
+    font-size: $size_h3;
+}
+
+h4{ 
+    font-size: $size_h4;
 }
 
 // Text transforms
@@ -85,13 +87,13 @@ em{ font-style: italic; }
 
 // Lists
 
-ul {	
-	list-style-type: disc;
-	margin: 0 0 size(1) size(1);
+ul {    
+    list-style-type: disc;
+    margin: 0 0 size(1) size(1);
 }
 
 ol {
-	list-style-type: decimal;
-	font-weight: normal;
-	margin: 0 0 size(1) size(1);
+    list-style-type: decimal;
+    font-weight: normal;
+    margin: 0 0 size(1) size(1);
 }

@@ -6,45 +6,43 @@
 // Label
 
 label {
-	font-size: typesize(0.75);
-	font-weight: $medium;
-	text-transform: uppercase;
-	display: block;
-	margin: 0 0 size(0.5) 0;
+    font-size: typesize(14);
+    font-weight: $medium;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 size(0.5) 0;
 }
 
 input, 
 select, 
 textarea{
-	font-family: inherit;
-	font-size: typesize(1);
-	outline: none;
+    font-family: inherit;
+    font-size: typesize(16);
+    outline: none;
 }
 
 input{
-	display: inline-block;
-	margin: 0 0 size(1) 0;
-	width: 100%;
-	border: none;
-	padding: size(0.25); 
-	outline: none;
-	@include border-radius($radius);
-	border: 1px solid #949393;
-	&:focus{
-		background: #f7f6f6;
-		@include box-shadow(inset #ccc 0 0 5px);
-	}
+    display: inline-block;
+    margin: 0 0 size(1) 0;
+    width: 100%;
+    border: none;
+    padding: size(0.25); 
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #949393;
+    &:focus{
+        background: #f7f6f6;
+    }
 }
 
 textarea{
-	min-height: size(6);
-	width: 100%;
-	@include border-radius($radius);
-	border: 1px solid darken(#ccc,15%);
-	padding: size(0.25); 
-	margin: 0 0 size(1) 0;
-	&:focus{
-		background: #f7f6f6;
-		@include box-shadow(inset #ccc 0 0 5px);
-	}
+    min-height: size(6);
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid darken(#ccc,15%);
+    padding: size(0.25); 
+    margin: 0 0 size(1) 0;
+    &:focus{
+        background: #f7f6f6;
+    }
 }

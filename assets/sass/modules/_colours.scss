@@ -4,26 +4,26 @@
  * prefix colour variables with 'clr'
  */
 
-$clr_blue:					#3498db;
-$clr_green: 				#2ecc71;
-$clr_orange:				#f38728;
-$clr_red:					#e74c3c;
-$clr_washed_gray: 			#ebebeb;
+$clr_blue:                  #3498db;
+$clr_green:                 #2ecc71;
+$clr_orange:                #f38728;
+$clr_red:                   #e74c3d;
+$clr_washed_gray:           #ebebeb;
 
 // ui colors
 
-$clr_default: 				$clr_blue;
-$clr_success: 				$clr_green;
-$clr_warning: 				$clr_orange;
-$clr_error: 				$clr_red;
-$clr_disabled: 				$clr_washed_gray;
+$clr_default:               $clr_blue;
+$clr_success:               $clr_green;
+$clr_warning:               $clr_orange;
+$clr_error:                 $clr_red;
+$clr_disabled:              $clr_washed_gray;
 
 // Links / Anchors
 
-$link: 					$clr_blue;
-$link_hover: 			darken($link,10%);
-$link_visited: 			$link;
+$link:                  $clr_blue;
+$link_hover:            darken($link,10%);
+$link_visited:          $link;
 
 // Element Colours / Gradients
 
-$text_colour:			#2e3131;
+$text_colour:           #2e3131;

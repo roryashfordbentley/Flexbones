@@ -3,56 +3,56 @@
  * Main configuration
  */
 
-
-// Base font sizes for different media queries
-
-$base_font_size: 		100%;
-$base_font_size_m: 		100%;
-$base_font_size_l: 		112.5%;
-$base_font_size_xl: 	125%;
-
-// Type size default ( used when calling typesize() )
-
-$type_size: 		1rem;
-
-// Base unit (1.5x default font size)
-
-$base: 				1.5rem;
-
-// Font Sizes
-
-$h1:				typesize(3);
-$h2:				typesize(2.25); 
-$h3:				typesize(1.75);
-$h4:				typesize(1.125);
-$p:					typesize(1);
-$lead:				typesize(1.5);
-
-// Font Weights
-
-$light: 			300;
-$medium: 			400;
-$semibold: 			600;
-$bold: 				700;
-
-// Font Stack
-
-$heading_font: 		helvetica, arial, sans-serif;
-$body_font: 		$heading_font;
-
 // Media Queries
-	
-$s: 				0, 		640px;
-$m: 				641px,	880px;
-$m_up: 				641px,	null;
-$l: 				881px, 	1200px;
-$l_up: 				881px,	null;
-$xl: 				1200px,	null;
+// Define breakpoints as a sass list
+// Here we use s,m,l,xl to identify breakpoints 
+// but you can use whatever you like.
+    
+$s:                     0,      640px;
+$m:                     641px,  880px;
+$m_up:                  641px,  null;
+$l:                     881px,  1200px;
+$l_up:                  881px,  null;
+$xl:                    1200px, null;
 
 // Box sizing
 
-$border_box: 		true;
+$border_box:            true;
 
-// Border Radius
 
-$radius:			3px;
+// Base font sizes for different media queries
+
+$base_font_size:        62.5%;
+$base_font_size_m:      62.5%;
+$base_font_size_l:      62.5%;
+$base_font_size_xl:     75%;
+
+// Type size default ( used when calling typesize() )
+
+$type_size:             0.1rem; //used to allow a scale that is reminiscent of pixel sizing e.g. 16,24 instead of 1.125
+
+// Base unit (1.5x default font size)
+
+$base:                  2.4rem;
+
+// Font Sizes
+
+$size_h1:               typesize(40);
+$size_h2:               typesize(30); 
+$size_h3:               typesize(24);
+$size_h4:               typesize(18);
+$size_p:                typesize(16);
+$size_lead:             typesize(24);
+$size_small:            typesize(12);
+
+// Font Weights
+
+$light:                 300;
+$medium:                400;
+$semibold:              600;
+$bold:                  700;
+
+// Font Stack
+
+$heading_font:          "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$body_font:             $heading_font;

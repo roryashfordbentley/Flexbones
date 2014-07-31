@@ -4,127 +4,127 @@
  */
 
 .btn{
-	display: inline-block;
-	width: auto;
-	margin: 0;
-	font-size: inherit;
-	font-family: inherit;
-	font-weight: inherit;
-	color: #fff;
-	cursor: pointer;
-	border: none;
-	@include border-radius($radius);
-	outline: none;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
 
-	&:hover{
-		text-decoration:none;
-	}
+    &:hover{
+        text-decoration:none;
+    }
 
-	&:focus{
-		@include box-shadow(none);
-	}
+    &:focus{
+        box-shadow: none;
+    }
 }
 
-	.btn--default{
+    .btn--default{
 
-		background: $clr_default;
+        background: $clr_default;
 
-		&:hover{
-			background: lighten($clr_default,8%);
-		}
+        &:hover{
+            background: lighten($clr_default,8%);
+        }
 
-		&:active{
-			background: darken($clr_default,5%);
-		}
+        &:active{
+            background: darken($clr_default,5%);
+        }
 
-		&:visited{
-			color: #fff;
-		}
-	}
+        &:visited{
+            color: #fff;
+        }
+    }
 
-	.btn--success{
+    .btn--success{
 
-		background: $clr_success;
+        background: $clr_success;
 
-		&:hover{
-			background: lighten($clr_success,8%);
-		}
+        &:hover{
+            background: lighten($clr_success,8%);
+        }
 
-		&:active{
-			background: darken($clr_success,5%);
-		}
-	}
+        &:active{
+            background: darken($clr_success,5%);
+        }
+    }
 
-	.btn--warning{
+    .btn--warning{
 
-		background: $clr_warning;
+        background: $clr_warning;
 
-		&:hover{
-			background: lighten($clr_warning,8%);
-		}
+        &:hover{
+            background: lighten($clr_warning,8%);
+        }
 
-		&:active{
-			background: darken($clr_warning,8%);
-		}
-	}
+        &:active{
+            background: darken($clr_warning,8%);
+        }
+    }
 
-	.btn--error{
+    .btn--error{
 
-		background: $clr_error;
+        background: $clr_error;
 
-		&:hover{
-			background: lighten($clr_error,8%);
-		}
+        &:hover{
+            background: lighten($clr_error,8%);
+        }
 
-		&:active{
-			background: darken($clr_error,5%);
-		}
-	}
+        &:active{
+            background: darken($clr_error,5%);
+        }
+    }
 
-	.btn--disabled,
-	.btn--disabled:hover,
+    .btn--disabled,
+    .btn--disabled:hover,
     .btn--disabled:active,
     .btn--disabled:focus{
-    	cursor: text;
-    	background: $clr_disabled;
+        cursor: text;
+        background: $clr_disabled;
     }
 
     /**
      * Button sizes
      */
     
-	.btn--small{
-		padding: 0 size(0.25);
-		line-height: 1.5;
-	}
+    .btn--small{
+        padding: 0 size(0.25);
+        line-height: 1.5;
+    }
 
-	.btn--medium{
-		padding: 0 size(0.5);
-		line-height: 2;
-	}
+    .btn--medium{
+        padding: 0 size(0.5);
+        line-height: 2;
+    }
 
-	.btn--large{
-		padding: 0 size(1);
-		line-height: 3;
-	}	
+    .btn--large{
+        padding: 0 size(1);
+        line-height: 3;
+    }   
 
-	/**
-	* Inline button
-	* Place a button within a paragraph of text
-	*/
+    /**
+    * Inline button
+    * Place a button within a paragraph of text
+    */
 
-	.btn--inline{
-		line-height: inherit;
-		font-size: inherit;
-		padding: 0 size(0.25);
-	}
+    .btn--inline{
+        line-height: inherit;
+        font-size: inherit;
+        padding: 0 size(0.25);
+    }
 
-	/**
-	* Block button
-	* 100% width button that spans container
-	*/
+    /**
+    * Block button
+    * 100% width button that spans container
+    */
 
-	.btn--block{
-		width: 100%;
-	}
+    .btn--block{
+        width: 100%;
+    }
 

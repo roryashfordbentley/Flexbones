@@ -1,31 +1,53 @@
 /**
 * gruntfile.js
-* Run 'grunt' from this folder in the command line to execute.
-* Check CMD for any errors.
 */
 
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        compass: {
+        
+        /**
+         * Sass Compiling Task
+         *
+         * Compiles Sass stylesheets using libsass via node-sass
+         * Very quick BUT doesn't fully support latest sass release
+         * due to libsass being behind.
+         */
+
+        sass: {
             dist: {
+                files: {
+                    'style.css' : 'assets/sass/style.scss'
+                }
+            },
+            dev: {
                 options: {
-                    sassDir: 'assets/sass',
-                    cssDir: ''
+                     outputStyle: 'compressed',
+                     precision: '10'
+                },
+                files: {
+                    'style.css' : 'assets/sass/style.scss'
                 }
             }
         },
+
+        /**
+         * Watch Task
+         * 
+         * Watches for filesystem changes and triggers other tasks
+         * based on the below optiions
+         */
+
         watch: {
             scss: {
                 files: '**/*.scss',
-                tasks: 'compass',
                 options: {
                     livereload: false
                 }
-
             },
             css: {
-                 files: '**/*.css',
+                files: '**/*.scss',
+                tasks: ['sass','notify:watchsass'],
             },
             markup: {
                 files: '**/*.php'
@@ -35,12 +57,21 @@ module.exports = function(grunt) {
                     '**/*.js',
                     '!assets/js/min/*.js'
                 ],
-                tasks: ['concat','uglify']
+                tasks: ['concat','uglify','notify:watchjs']
             },
             options: {
+                spawn: false,
                 livereload: true
             }
         },
+
+        /**
+         * Concatenate Task
+         *
+         * Merges a supplied array of .js files into a single .js file
+         * Files can be excluded by adding a ! prefix.
+         */
+
         concat: {
             options: {
                 // define a string to put between each file in the concatenated output
@@ -50,14 +81,19 @@ module.exports = function(grunt) {
                 // the files to concatenate
                 src: [
                     'assets/js/libs/*.js',
-                    'assets/js/*.js',
-                    '!assets/js/nominify/*.js',
-                    '!assets/js/maps.js'
+                    'assets/js/*.js'
                 ],
                 // the location of the resulting JS file
                 dest: 'assets/js/min/scripts.min.js'
             }
         },
+
+        /**
+         * Uglify Task
+         * This task minifies a single .js file (scripts.min.js)
+         * To be called once the concat task has completed
+         */
+
         uglify: {
             options: {
                 banner: '/*Build date/time <%= grunt.template.today("dd/mm/yyyy h:MM:ss") %>*/\n'
@@ -65,15 +101,48 @@ module.exports = function(grunt) {
             all: {
                 files: { 'assets/js/min/scripts.min.js':'assets/js/min/scripts.min.js'}
             }
+        },
+
+        /**
+         * Notify Task
+         * Native OS notification system
+         * Dispalys a notification on completion or failure.
+         */
+
+        notify: {
+            watchsass: {
+                options: {
+                    title: 'Compile Complete',
+                    message: 'SASS compiled successfully'
+                }
+            },
+            watchjs: {
+                options: {
+                    title: 'JS Minify Complete',
+                    message: 'Scripts successfully concatonated and minified'
+                }
+            }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-compass');
+
+    /**
+     * Load Plugins
+     * Load the required plugins
+     */
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-sass'); //libsass via nodesass
+    grunt.loadNpmTasks('grunt-notify');
 
+    /**
+     * Register Tasks
+     * create and register tasks including the 'default'
+     * task that is run when you execute 'grunt'
+     */
 
-    grunt.registerTask('default',['watch','concat','uglify']);    
+    grunt.registerTask('default',['watch','concat','uglify','notify']);    
     grunt.registerTask('minifyjs',['concat','uglify']);
 
 }

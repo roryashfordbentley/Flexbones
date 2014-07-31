@@ -1,24 +1,27 @@
 /*
 Theme Name:     Flexbones
 Theme URI:      http://roikles.com/
-Description:    A minimal responsive wordpress boilerplate
+Description:    A minimal responsive wordpress starter theme
 Author:         Rory Ashford
 Author URI:     http://roikles.com
 Version:        2.0 Beta
-License:		All work is the property of Rory Ashford
-License URI:	n/a
+License:        All work is the property of Rory Ashford
+License URI:    n/a
 */
 
-
-// External
-// 3rd party sass libs and tools
-
-@import "compass/css3";
-@import "compass/css3/box-sizing";
+/**
+    ________          __                         
+   / ____/ /__  _  __/ /_  ____  ____  ___  _____
+  / /_  / / _ \| |/_/ __ \/ __ \/ __ \/ _ \/ ___/
+ / __/ / /  __/>  </ /_/ / /_/ / / / /  __(__  ) 
+/_/   /_/\___/_/|_/_.___/\____/_/ /_/\___/____/  
+                                                 
+ */
 
 // Partials
 // Mixins, functions and any sass files that dont produce output
 
+@import "partial/_sass-list-maps.scss";
 @import "partial/_clearfix.scss";
 @import "partial/_grid.scss";
 @import "partial/_modernizr.scss";
@@ -51,6 +54,6 @@ License URI:	n/a
 @import "section/_sidebar.scss";
 
 
-	// Example Section 
-	// @import "section/contact-us/map.scss";
-	// @import "section/contact-us/form.scss";
+    // Example Section 
+    // @import "section/contact-us/map.scss";
+    // @import "section/contact-us/form.scss";

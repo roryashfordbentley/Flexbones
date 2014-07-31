@@ -2,6 +2,6 @@
 
 @function size($multiplier:1){
 
-	@return $multiplier * $base;
+    @return $multiplier * $base;
 
 }

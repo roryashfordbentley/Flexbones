@@ -5,15 +5,15 @@
 
 
 html { 
-	font-size: $base-font-size;
-	line-height: 1.5;
-	@include at-breakpoint($m){ font-size: $base-font-size-m; }
-	@include at-breakpoint($l){ font-size: $base-font-size-l; }
-	@include at-breakpoint($xl){ font-size: $base-font-size-xl; }
+    font-size: $base-font-size;
+    line-height: 1.5;
+    @include at-breakpoint($m){ font-size: $base-font-size-m; }
+    @include at-breakpoint($l){ font-size: $base-font-size-l; }
+    @include at-breakpoint($xl){ font-size: $base-font-size-xl; }
 }
 
-	body {
-		color: $text_colour;
-		font-family: $body_font;
-		-webkit-font-smoothing: antialiased;
-	}
+    body {
+        color: $text_colour;
+        font-family: $body_font;
+        -webkit-font-smoothing: antialiased;
+    }

@@ -5,11 +5,11 @@
  */
 
 *{
-	margin: 0;
+    margin: 0;
     padding: 0;
     position: relative;
 
     @if($border_box == true){
-		@include box-sizing(border-box);
-	}
+        box-sizing: border-box;
+    }
 }
