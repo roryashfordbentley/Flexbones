@@ -1,6 +1,6 @@
 # Flexbones Wordpress Theme
 
-!(http://roikles.com/etc/flexbones-github-header.jpg "Flexbones")
+![flexbones image](http://roikles.com/etc/flexbones-github-header.jpg "Flexbones")
 
 
 Flexbones is a responsive starter theme. Flexible, simple and the CSS is under 10kb! It cleans up all the out of the box Wordpress bloat and leaves you with a clean, organised start to your project. The project has an MIT license and if you use it for anything please let me know!
