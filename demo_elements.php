@@ -21,7 +21,6 @@
     <h2>Heading 2 (h2) <a href="#">link</a></h2>
     <h3>Heading 3 (h3) <a href="#">link</a></h3>
     <h4>Heading 4 (h4) <a href="#">link</a></h4>
-    <h5>Heading 5 (h5) <a href="#">link</a></h5>
 
     <!-- Headings + text -->
 

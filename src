@@ -790,7 +790,10 @@ html {
 body {
   color: #2e3131;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), to(#0000ff));
+  background: -webkit-linear-gradient(#ff0000, #0000ff);
+  background: linear-gradient(#ff0000, #0000ff); }
 
 /**
  * _header.scss

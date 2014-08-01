@@ -1,10 +1,10 @@
 /*
 Theme Name:     Flexbones
-Theme URI:      http://roikles.com/
-Description:    A minimal responsive wordpress starter theme
+Theme URI:      http://github.com/roikles/flexbones
+Description:    A responsive wordpress starter theme
 Author:         Rory Ashford
 Author URI:     http://roikles.com
-Version:        2.0 Beta
+Version:        2.0.0
 License:        All work is the property of Rory Ashford
 License URI:    n/a
 */
@@ -46,14 +46,9 @@ License URI:    n/a
 @import "modules/_wordpress.scss";
 
 // Section
-// Styles for pages an elements that aren't reuseable
+// Styles for pages an elements that are not very reuseable
 
 @import "section/_html-body.scss";
 @import "section/_header.scss";
 @import "section/_footer.scss";
 @import "section/_sidebar.scss";
-
-
-    // Example Section 
-    // @import "section/contact-us/map.scss";
-    // @import "section/contact-us/form.scss";

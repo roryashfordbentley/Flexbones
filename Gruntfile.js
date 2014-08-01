@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             },
             dev: {
                 options: {
-                     outputStyle: 'compressed',
+                     outputStyle: 'compact',
                      precision: '10'
                 },
                 files: {
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: '**/*.scss',
-                tasks: ['sass','notify:watchsass'],
+                tasks: ['sass','autoprefixer','notify:watchsass'],
             },
             markup: {
                 files: '**/*.php'
@@ -119,8 +119,23 @@ module.exports = function(grunt) {
             watchjs: {
                 options: {
                     title: 'JS Minify Complete',
-                    message: 'Scripts successfully concatonated and minified'
+                    message: 'Scripts successfully concatenated and minified'
                 }
+            }
+        },
+
+        /**
+         * Autoprefixer
+         * Adds browser based prefixes to CSS3 rules
+         */
+
+        autoprefixer: {
+            single_file: {
+                options: {
+                     browsers: ['last 10 version']
+                },
+                src: 'style.css',
+                dest: 'style.css'
             }
         }
     });
@@ -135,6 +150,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass'); //libsass via nodesass
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     /**
      * Register Tasks
@@ -142,7 +158,6 @@ module.exports = function(grunt) {
      * task that is run when you execute 'grunt'
      */
 
-    grunt.registerTask('default',['watch','concat','uglify','notify']);    
+    grunt.registerTask('default',['watch']);    
     grunt.registerTask('minifyjs',['concat','uglify']);
-
 }
