@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: [
-                    '**/*.js',
+                    'assets/js/**/*.js',
                     '!assets/js/min/*.js'
                 ],
                 tasks: ['concat','uglify','notify:watchjs']
