@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             },
             dev: {
                 options: {
-                     outputStyle: 'compact',
+                     outputStyle: 'compressed',
                      precision: '10'
                 },
                 files: {

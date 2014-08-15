@@ -2,6 +2,3 @@
 *.sass-cache*
 *.scssc
 node_modules/
-ie.min.scss
-style.min.scss
-config.codekit
