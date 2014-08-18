@@ -4,12 +4,17 @@
     <hr><br>
 
     <div class="grid">
-        <div class="col--one-whole  col--one-half--m"><div style="background: #25bcce; margin-bottom: 30px; padding: 10px;"><p>.one-whole / .one-half--m-up</p></div></div>
-        <div class="col--one-whole  col--one-half--m"><div style="background: #25bcce; margin-bottom: 30px; padding: 10px;"><p>.one-whole / .one-half--m-up</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #25bcce; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m-up</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #25bcce; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m-up</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #25bcce; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m-up</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #25bcce; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m-up</p></div></div>
+        <div class="col--one-third"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>one third</p></div></div>
+        <div class="col--one-third  col--omega  col--omega--m  col--omega--l"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>omega</p></div></div>
+    </div>
+
+    <div class="grid">
+        <div class="col--one-whole  col--one-half--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-whole / .one-half--m</p></div></div>
+        <div class="col--one-whole  col--one-half--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-whole / .one-half--m</p></div></div>
+        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
+        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
+        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
+        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
     </div>
 
     <!-- Headings -->
@@ -17,10 +22,10 @@
     <h1>Headings</h1>
     <hr><br>
 
-    <h1>Heading 1 (h1) <a href="#">link</a></h1>
-    <h2>Heading 2 (h2) <a href="#">link</a></h2>
-    <h3>Heading 3 (h3) <a href="#">link</a></h3>
-    <h4>Heading 4 (h4) <a href="#">link</a></h4>
+    <h1>Heading 1 (h1)</h1>
+    <h2>Heading 2 (h2)</h2>
+    <h3>Heading 3 (h3)</h3>
+    <h4>Heading 4 (h4)</h4>
 
     <!-- Headings + text -->
 
@@ -35,13 +40,6 @@
 
     <h3>Heading 3 (h3)</h3>
     <p>Oh, so they have Internet on computers now! I prefer a vehicle that doesn't hurt Mother Earth. It's a go-cart, powered by my own sense of self-satisfaction. Kids, we need to talk for a moment about Krusty Brand Chew Goo Gum Like Substance. We all knew it contained spider eggs, but the hantavirus? That came out of left field. So if you're experiencing numbness and/or comas, send five dollars to antidote, PO box… When I held that gun in my hand, I felt a surge of power…like God must feel when he's holding a gun.</p>
-
-    <!-- Text -->
-
-    <h1>Text</h1>
-    <hr><br>
-
-    <p>Oh, so they have <em>Internet</em> on <strong>computers</strong> now! <del>where is my coat</del> <a href="#">I'd Click that</a></p>
 
     <!-- Images -->
 
@@ -110,26 +108,6 @@
             Block Button
         </button>
     </p>
-    <!-- Alerts -->
-
-    <h1>Alerts</h1>
-    <hr><br>
-
-    <div class="alert alert--default">
-        <p>This is a standard alert, for general use.</p>
-    </div>
-
-    <div class="alert alert--success">
-        <p>This is a success alert, for confirmation.</p>
-    </div>
-
-    <div class="alert alert--warning">
-        <p>This is a warning alert, for issue notification.</p>
-    </div>
-
-    <div class="alert alert--error">
-        <p>This is an error alert, for problems and errors.</p>
-    </div>
 
     <!-- Forms -->
 

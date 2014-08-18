@@ -1,4 +1,7 @@
-// Clearfix
+/**
+ * _clearfix.scss
+ * class to clear floating elements
+ */
 
 .clear{
 	@include clearfix();

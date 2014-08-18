@@ -1,21 +1,33 @@
 /**
  * navigation.scss
- * All nav menu styles go here
- * Currently the Dropdown only supports 1 level
+ * Style menus generated using bem_menu()
  */
 
-/**
- Not sure where to document this yet.
- NEW MENU CLASSES
 
-.menu-prefix{}
-.menu-prefix__item{}
-.menu-prefix__item--active{}
-.menu-prefix__item--parent{}
-.menu-prefix__item--(id){}
 
-.menu-prefix__sub--(depth){}
-.menu-prefix__sub--(depth)__item{}
-.menu-prefix__sub--(depth)__item--active{}
-.menu-prefix__sub--(depth)__item--parent{} 
- */
+/* Top level items */
+.my-menu__item{}
+
+/* Specific link (where x = post_id) */
+.my-menu__item--x{}
+
+/* Parent item */
+.my-menu__item--parent{}
+
+/* Active page item */
+.my-menu__item--active{}
+
+/* Parent of the current active page */
+.my-menu__item--parent--active{}
+
+/* Ancestor of the current active page */
+.my-menu__item--ancestor--active{}
+
+/* Sub menu class */
+.my-menu__sub-menu{}
+
+/* Sub menu item */
+.my-menu__sub-menu__item{}
+
+/* Specific sub menu (where x is the menu depth) */
+.my-menu__sub-menu--x{}
