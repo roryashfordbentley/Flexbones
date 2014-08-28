@@ -542,14 +542,12 @@ ol {
   display: inline-block;
   width: auto;
   margin: 0;
-  font-size: inherit;
+  font-size: 1.6rem;
   font-family: inherit;
   font-weight: inherit;
   color: #fff;
   cursor: pointer;
   border: none;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
   outline: none; }
   .btn:hover {
     text-decoration: none; }
@@ -657,8 +655,6 @@ input {
   border: none;
   padding: 0.6rem;
   outline: none;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
   border: 1px solid #949393; }
   input:focus {
     background: #f7f6f6; }
@@ -666,8 +662,6 @@ input {
 textarea {
   min-height: 14.4rem;
   width: 100%;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
   border: 1px solid #a6a6a6;
   padding: 0.6rem;
   margin: 0 0 2.4rem 0; }

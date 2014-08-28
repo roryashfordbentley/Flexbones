@@ -7,13 +7,12 @@
     display: inline-block;
     width: auto;
     margin: 0;
-    font-size: inherit;
+    font-size: typesize(16);
     font-family: inherit;
     font-weight: inherit;
     color: #fff;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
     outline: none;
 
     &:hover{
