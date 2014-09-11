@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 <!--[if (lte IE 9)]>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <script type="text/javascript" src="<?php assets('js'); ?>/modernizr.js"></script>
+    <script type="text/javascript" src="<?php assets('js'); ?>/libs/modernizr.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" ></script>
 <![endif]-->
 <?php wp_head(); ?>

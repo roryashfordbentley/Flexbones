@@ -80,6 +80,7 @@ module.exports = function(grunt) {
             dist: {
                 // the files to concatenate
                 src: [
+                    '!assets/js/libs/modernizr.js',
                     'assets/js/libs/*.js',
                     'assets/js/*.js'
                 ],
