@@ -3,11 +3,15 @@
  * Responsive grids setup
  */
 
-// Debug
+/**
+ * Debug
+ */
 
 $debug_active: true;
 
-// Content wrapper
+/**
+ * Content wrapper
+ */
 
 .wrapper {
     margin: 0 auto;
@@ -33,14 +37,7 @@ $default_grid: (
         columns         6,
         suffix          null,
         breakpoint      null,
-        gutter          size(1),
-    ),
-    sizes (
-        whole           true,
-        halfs           true,
-        thirds          true,
-        quarters        true,
-        sixths          true
+        gutter          30px
     ),
     debug (
         display         $debug_active,
@@ -60,17 +57,8 @@ $medium_grid: (
         columns         12,
         suffix          'm',
         breakpoint      $m,
-        gutter          size(1)
+        gutter          30px
     ),  
-    sizes (
-        whole           true,
-        halfs           true,
-        thirds          true,
-        quarters        true,
-        sixths          true,
-        eights          true,
-        twelfths        true
-    ),
     debug (
         display         $debug_active,
         background      #9ed927,
@@ -89,17 +77,7 @@ $large_grid: (
         columns         12,
         suffix          'l',
         breakpoint      $l,
-        gutter          size(1),
-        debug           true,
-    ),
-    sizes (
-        whole           true,
-        halfs           true,
-        thirds          true,
-        quarters        true,
-        sixths          true,
-        eights          true,
-        twelfths        true
+        gutter          30px
     ),
     debug (
         display         $debug_active,

@@ -1,12 +1,13 @@
 /**
- * Grid functions and mixins
+ * Flexbones Grid System
+ * Version 1.1
  */
+
 
 /**
- * Set defaults incase they aren't defined
+ * Set default classes (SHOULD BE IN GRID-SETUP)
  */
-
-$column_class:  'col' !default;
+$column_class:  'span' !default;
 $push_class:    'push' !default;
 
 
@@ -14,7 +15,6 @@ $push_class:    'push' !default;
  * Works out the percent width of columns
  * (gutters can be any unit but columns are always percent bases)
  */
-
 @function column_width($number_of_columns,$total_columns) {
     
     $single_col_width: 100 / $total_columns * 1%;
@@ -27,7 +27,6 @@ $push_class:    'push' !default;
  * Gutter Width
  * Sets gutter width to 0 if not set.
  */
-
 @function gutter_width(){
 
     @if($gutter_width != null){
@@ -43,7 +42,6 @@ $push_class:    'push' !default;
  * a mixin for outputting inline media queries
  * Just supply a Sass list as an argument with a min/max
  */
-
 @mixin at-breakpoint($min,$max:null){
     @if($max == null){
         @media (min-width: $min){
@@ -62,7 +60,6 @@ $push_class:    'push' !default;
  * Used to set grids semantically from within 
  * the stylesheet with no additional HTML markup
  */
-
 @mixin span-columns($columns, $total_columns){
     width: column_width($columns,$total_columns);
     padding-left: $gutter_width;
@@ -70,290 +67,9 @@ $push_class:    'push' !default;
 
 
 /**
- * Push
- * Modular push system, only use what you need to 
- */
-
-@mixin grid_push($prefix: null, $breakpoint: null, $grid_options: null){
-
-    $require_whole:     map-get(map-get($grid_options, sizes), whole);
-    $require_halfs:     map-get(map-get($grid_options, sizes), halfs);
-    $require_thirds:    map-get(map-get($grid_options, sizes), thirds);
-    $require_quarters:  map-get(map-get($grid_options, sizes), quarters);
-    $require_fifths:    map-get(map-get($grid_options, sizes), fifths);
-    $require_sixths:    map-get(map-get($grid_options, sizes), sixths);
-    $require_sevenths:  map-get(map-get($grid_options, sizes), sevenths);
-    $require_eighths:   map-get(map-get($grid_options, sizes), eights);
-    $require_tenths:    map-get(map-get($grid_options, sizes), tenths);
-    $require_twelfths:  map-get(map-get($grid_options, sizes), twelfths);
-
-
-    @if($require_halfs == true){
-
-        /**
-         * Half#{$breakpoint}
-         */
-
-        #{$prefix}one-half#{$breakpoint}        { margin-left: column_width(1,2); }
-
-    }
-    
-    
-    @if($require_thirds == true){
-
-        /**
-         * Thirds#{$breakpoint}
-         */
-
-        #{$prefix}one-third#{$breakpoint}       { margin-left: column_width(1,3); }
-        #{$prefix}two-thirds#{$breakpoint}      { margin-left: column_width(2,3); }
-    }
-    
-    @if($require_quarters == true){
-
-        /**
-         * Quarters#{$breakpoint}
-         */
-        
-        #{$prefix}one-quarter#{$breakpoint}     { margin-left: column_width(1,4); }
-        #{$prefix}two-quarters#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}three-quarters#{$breakpoint}  { margin-left: column_width(3,4); }
-    }
-
-    @if($require_fifths == true){
-
-        /**
-         * Fifths#{$breakpoint}
-         */
-        
-        #{$prefix}one-fifth#{$breakpoint}       { margin-left: column_width(1,5); }
-        #{$prefix}two-fifths#{$breakpoint}      { margin-left: column_width(2,5); }
-        #{$prefix}three-fifths#{$breakpoint}    { margin-left: column_width(3,5); }
-        #{$prefix}four-fifths#{$breakpoint}     { margin-left: column_width(4,5); }
-
-    }
-
-    @if($require_sixths == true){
-
-        /**
-         * Sixths#{$breakpoint}
-         */
-        
-        #{$prefix}one-sixth#{$breakpoint}       { margin-left: column_width(1,6); }
-        #{$prefix}two-sixths#{$breakpoint}      { @extend #{$prefix}one-third#{$breakpoint} }
-        #{$prefix}three-sixths#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}four-sixths#{$breakpoint}     { @extend #{$prefix}two-thirds#{$breakpoint} }
-        #{$prefix}five-sixths#{$breakpoint}     { margin-left: column_width(5,6); }
-
-    }
-
-    @if($require_eighths == true){
-
-        /**
-         * Eights#{$breakpoint}
-         */
-        
-        #{$prefix}one-eighth#{$breakpoint}      { margin-left: column_width(1,8); }
-        #{$prefix}two-eighths#{$breakpoint}     { @extend #{$prefix}one-quarter#{$breakpoint} }
-        #{$prefix}three-eighths#{$breakpoint}   { margin-left: column_width(3,8); }
-        #{$prefix}four-eighths#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}five-eighths#{$breakpoint}    { margin-left: column_width(5,8); }
-        #{$prefix}six-eighths#{$breakpoint}     { @extend #{$prefix}three-quarters#{$breakpoint} }
-        #{$prefix}seven-eighths#{$breakpoint}   { margin-left: column_width(6,8); }
-
-    }
-
-    @if($require_tenths == true){
-
-        /**
-         * Tenths#{$breakpoint}
-         */
-        
-        #{$prefix}one-tenth#{$breakpoint}       { margin-left: column_width(1,10); }
-        #{$prefix}two-tenths#{$breakpoint}      { @extend #{$prefix}one-fifth#{$breakpoint} }
-        #{$prefix}three-tenths#{$breakpoint}    { margin-left: column_width(3,10); }
-        #{$prefix}four-tenths#{$breakpoint}     { @extend #{$prefix}two-fifths#{$breakpoint} }
-        #{$prefix}five-tenths#{$breakpoint}     { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}six-tenths#{$breakpoint}      { @extend #{$prefix}three-fifths#{$breakpoint} }
-        #{$prefix}seven-tenths#{$breakpoint}    { margin-left: column_width(7,10); }
-        #{$prefix}eight-tenths#{$breakpoint}    { @extend #{$prefix}four-fifths#{$breakpoint} }
-        #{$prefix}nine-tenths#{$breakpoint}     { margin-left: column_width(9,10); }
-
-    }
-
-    @if($require_twelfths == true){
-
-        /**
-         * Twelfths#{$breakpoint}
-         */
-        
-        #{$prefix}one-twelfth#{$breakpoint}     { margin-left: column_width(1,12); }
-        #{$prefix}two-twelfths#{$breakpoint}    { @extend #{$prefix}one-sixth#{$breakpoint} }
-        #{$prefix}three-twelfths#{$breakpoint}  { @extend #{$prefix}one-quarter#{$breakpoint} }
-        #{$prefix}four-twelfths#{$breakpoint}   { @extend #{$prefix}one-third#{$breakpoint} }
-        #{$prefix}five-twelfths#{$breakpoint}   { margin-left: column_width(5,12); }
-        #{$prefix}six-twelfths#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}seven-twelfths#{$breakpoint}  { margin-left: column_width(7,12); }
-        #{$prefix}eight-twelfths#{$breakpoint}  { @extend #{$prefix}two-thirds#{$breakpoint} }
-        #{$prefix}nine-twelfths#{$breakpoint}   { @extend #{$prefix}three-quarters#{$breakpoint} }
-        #{$prefix}ten-twelfths#{$breakpoint}    { @extend #{$prefix}five-sixths#{$breakpoint} }
-        #{$prefix}eleven-twelfths#{$breakpoint} { margin-left: column_width(9,12); }
-
-    }
-}
-
-
-@mixin grid_columns($prefix: null, $breakpoint: null, $grid_options: null){
-    
-    $require_whole:     map-get(map-get($grid_options, sizes), whole);
-    $require_halfs:     map-get(map-get($grid_options, sizes), halfs);
-    $require_thirds:    map-get(map-get($grid_options, sizes), thirds);
-    $require_quarters:  map-get(map-get($grid_options, sizes), quarters);
-    $require_fifths:    map-get(map-get($grid_options, sizes), fifths);
-    $require_sixths:    map-get(map-get($grid_options, sizes), sixths);
-    $require_sevenths:  map-get(map-get($grid_options, sizes), sevenths);
-    $require_eighths:   map-get(map-get($grid_options, sizes), eights);
-    $require_tenths:    map-get(map-get($grid_options, sizes), tenths);
-    $require_twelfths:  map-get(map-get($grid_options, sizes), twelfths);
-
-
-    @if($require_whole == true){
-        
-        /**
-         * Whole#{$breakpoint}
-         */
-
-        #{$prefix}one-whole#{$breakpoint}       { width: 100%; }
-    
-    }
-
-
-    @if($require_halfs == true){
-
-        /**
-         * Half#{$breakpoint}
-         */
-
-        #{$prefix}one-half#{$breakpoint}        { width: column_width(1,2); }
-
-    }
-    
-
-    @if($require_thirds == true){
-
-        /**
-         * Thirds#{$breakpoint}
-         */
-
-        #{$prefix}one-third#{$breakpoint}       { width: column_width(1,3); }
-        #{$prefix}two-thirds#{$breakpoint}      { width: column_width(2,3); }
-    }
-
-    
-    @if($require_quarters == true){
-
-        /**
-         * Quarters#{$breakpoint}
-         */
-        
-        #{$prefix}one-quarter#{$breakpoint}     { width: column_width(1,4); }
-        #{$prefix}two-quarters#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}three-quarters#{$breakpoint}  { width: column_width(3,4); }
-    }
-
-
-    @if($require_fifths == true){
-
-        /**
-         * Fifths#{$breakpoint}
-         */
-        
-        #{$prefix}one-fifth#{$breakpoint}       { width: column_width(1,5); }
-        #{$prefix}two-fifths#{$breakpoint}      { width: column_width(2,5); }
-        #{$prefix}three-fifths#{$breakpoint}    { width: column_width(3,5); }
-        #{$prefix}four-fifths#{$breakpoint}     { width: column_width(4,5); }
-
-    }
-
-
-    @if($require_sixths == true){
-
-        /**
-         * Sixths#{$breakpoint}
-         */
-        
-        #{$prefix}one-sixth#{$breakpoint}       { width: column_width(1,6); }
-        #{$prefix}two-sixths#{$breakpoint}      { @extend #{$prefix}one-third#{$breakpoint} }
-        #{$prefix}three-sixths#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}four-sixths#{$breakpoint}     { @extend #{$prefix}two-thirds#{$breakpoint} }
-        #{$prefix}five-sixths#{$breakpoint}     { width: column_width(5,6); }
-
-    }
-
-
-    @if($require_eighths == true){
-
-        /**
-         * Eights#{$breakpoint}
-         */
-        
-        #{$prefix}one-eighth#{$breakpoint}      { width: column_width(1,8); }
-        #{$prefix}two-eighths#{$breakpoint}     { @extend #{$prefix}one-quarter#{$breakpoint} }
-        #{$prefix}three-eighths#{$breakpoint}   { width: column_width(3,8); }
-        #{$prefix}four-eighths#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}five-eighths#{$breakpoint}    { width: column_width(5,8); }
-        #{$prefix}six-eighths#{$breakpoint}     { @extend #{$prefix}three-quarters#{$breakpoint} }
-        #{$prefix}seven-eighths#{$breakpoint}   { width: column_width(6,8); }
-
-    }
-
-
-    @if($require_tenths == true){
-
-        /**
-         * Tenths#{$breakpoint}
-         */
-        
-        #{$prefix}one-tenth#{$breakpoint}       { width: column_width(1,10); }
-        #{$prefix}two-tenths#{$breakpoint}      { @extend #{$prefix}one-fifth#{$breakpoint} }
-        #{$prefix}three-tenths#{$breakpoint}    { width: column_width(3,10); }
-        #{$prefix}four-tenths#{$breakpoint}     { @extend #{$prefix}two-fifths#{$breakpoint} }
-        #{$prefix}five-tenths#{$breakpoint}     { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}six-tenths#{$breakpoint}      { @extend #{$prefix}three-fifths#{$breakpoint} }
-        #{$prefix}seven-tenths#{$breakpoint}    { width: column_width(7,10); }
-        #{$prefix}eight-tenths#{$breakpoint}    { @extend #{$prefix}four-fifths#{$breakpoint} }
-        #{$prefix}nine-tenths#{$breakpoint}     { width: column_width(9,10); }
-
-    }
-
-
-    @if($require_twelfths == true){
-
-        /**
-         * Twelfths#{$breakpoint}
-         */
-        
-        #{$prefix}one-twelfth#{$breakpoint}     { width: column_width(1,12); }
-        #{$prefix}two-twelfths#{$breakpoint}    { @extend #{$prefix}one-sixth#{$breakpoint} }
-        #{$prefix}three-twelfths#{$breakpoint}  { @extend #{$prefix}one-quarter#{$breakpoint} }
-        #{$prefix}four-twelfths#{$breakpoint}   { @extend #{$prefix}one-third#{$breakpoint} }
-        #{$prefix}five-twelfths#{$breakpoint}   { width: column_width(5,12); }
-        #{$prefix}six-twelfths#{$breakpoint}    { @extend #{$prefix}one-half#{$breakpoint} }
-        #{$prefix}seven-twelfths#{$breakpoint}  { width: column_width(7,12); }
-        #{$prefix}eight-twelfths#{$breakpoint}  { @extend #{$prefix}two-thirds#{$breakpoint} }
-        #{$prefix}nine-twelfths#{$breakpoint}   { @extend #{$prefix}three-quarters#{$breakpoint} }
-        #{$prefix}ten-twelfths#{$breakpoint}    { @extend #{$prefix}five-sixths#{$breakpoint} }
-        #{$prefix}eleven-twelfths#{$breakpoint} { width: column_width(9,12); }
-
-    }
-}
-
-
-/**
  * Grid wrapper
  */
-
-@mixin grid($gutter){
+@mixin grid_wrapper($gutter){
     .grid{
         *zoom:1;
         &:before, &:after {
@@ -370,8 +86,7 @@ $push_class:    'push' !default;
 /**
  * Grid with no gutters
  */
-
-@mixin grid_full(){
+@mixin grid_wrapper_full(){
     .grid--full{
         margin-left: 0;
 
@@ -384,10 +99,8 @@ $push_class:    'push' !default;
 
 /**
  * Float all items beginning with the grid prefix
- * e.g. 'col--'
- * 
+ * e.g. 'span--'
  */
-
 @mixin grid_margins($gutter){
     [class^="#{$column_class}"]{
         position: relative;
@@ -396,25 +109,48 @@ $push_class:    'push' !default;
     }   
 }
 
+
+/**
+ * New grid columns
+ * requires prefix, breakpoint, grid options (including number of columns)
+ */
+@mixin grid_columns($prefix: null, $suffix: null, $breakpoint: null, $columns: null){
+
+    @for $i from 1 through $columns{
+        #{$prefix}#{$i}-#{$columns}#{$suffix}{
+            width: column_width($i,$columns);
+        }
+    }
+}
+
+
+/**
+ * Push class
+ */
+@mixin grid_push($prefix: null, $suffix: null, $breakpoint: null, $columns: null){
+
+    @for $i from 1 through $columns - 1{
+        #{$prefix}#{$i}-#{$columns}#{$suffix}{
+            width: column_width($i,$columns);
+        }
+    }
+}
+
+
 /**
 * Omega class
 */
-
-@mixin grid_omega($prefix, $suffix: null){
+@mixin grid_omega($prefix: null, $suffix: null){
     #{$prefix}omega#{$suffix} {
         float: right;
     }
 }
 
    
-
-
-
 /**
  * Debug 
  * Outputs the current breakpoint name to quickly debug each breakpoint.
  */
-
 @mixin debug_grid($breakpoint_name,$debug_bg: #000){
     body:after{
         position: fixed;
@@ -436,7 +172,6 @@ $push_class:    'push' !default;
  * pulls together the grid wrapper, columns and gutter settings
  * call once per required breakpoint
  */
-
 @mixin generate_grid($grid_options){
     
     $columns:       map-get(map-get($grid_options, options), columns);
@@ -447,25 +182,33 @@ $push_class:    'push' !default;
     $debug_bg:      map-get(map-get($grid_options, debug), background);
     $debug_name:    map-get(map-get($grid_options, debug), name);
 
+    $column_prefix: #{'.' + $column_class + '--'};
+    $push_prefix: #{'.' + $push_class + '--'};
+    $bp_suffix: #{'--' + $suffix };
+
     @if( $suffix != null and $breakpoint != null){
 
         @include at-breakpoint($breakpoint){
-            @include grid_columns(#{'.' + $column_class + '--'}, #{'--' + $suffix }, $grid_options);
-            @include grid_push(#{'.' + $push_class + '--'}, #{'--' + $suffix }, $grid_options);
-            @include grid($gutter);
+
+            @include grid_columns($column_prefix, $bp_suffix, $breakpoint, $columns); //new!
+            
+            @include grid_push($push_prefix, $bp_suffix, $breakpoint, $columns); //new!
+
+            @include grid_wrapper($gutter);
             @include grid_margins($gutter);
-            @include grid_omega(#{'.' + $column_class + '--'}, #{'--' + $suffix} );
+
+            @include grid_omega($column_prefix, $bp_suffix);
+           
             @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg) }
         }
 
     } @else {
-        @include grid_columns(#{'.' + $column_class + '--'}, $suffix, $grid_options);
-        @include grid_push(#{'.' + $push_class + '--'}, $suffix, $grid_options);
-        @include grid($gutter);
+        @include grid_columns($column_prefix, null, null, $columns); //new!
+        @include grid_push($push_prefix, null, null, $columns); //new!
+
+        @include grid_wrapper($gutter);
         @include grid_margins($gutter);
-        @include grid_omega(#{'.' + $column_class + '--'}, null );
+        @include grid_omega($column_prefix, null );
         @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg)  }
     }
-
-    //@include grid_margins($gutter);
 }
