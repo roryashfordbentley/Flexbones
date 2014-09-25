@@ -174,41 +174,45 @@ $push_class:    'push' !default;
  */
 @mixin generate_grid($grid_options){
     
-    $columns:       map-get(map-get($grid_options, options), columns);
-    $suffix:        map-get(map-get($grid_options, options), suffix);
-    $breakpoint:    map-get(map-get($grid_options, options), breakpoint);
-    $gutter:        map-get(map-get($grid_options, options), gutter);
-    $debug_display: map-get(map-get($grid_options, debug), display);
-    $debug_bg:      map-get(map-get($grid_options, debug), background);
-    $debug_name:    map-get(map-get($grid_options, debug), name);
+    @each $grid in $grid_options{
+        $columns:       map-get(map-get(map-get($grid, columns), options), $grid);
+        $suffix:        map-get(map-get($grid, options), suffix);
+        $breakpoint:    map-get(map-get($grid, options), breakpoint);
+        $gutter:        map-get(map-get($grid, options), gutter);
+        $debug_display: map-get(map-get($grid, debug), display);
+        $debug_bg:      map-get(map-get($grid, debug), background);
+        $debug_name:    map-get(map-get($grid, debug), name);
 
-    $column_prefix: #{'.' + $column_class + '--'};
-    $push_prefix: #{'.' + $push_class + '--'};
-    $bp_suffix: #{'--' + $suffix };
+        $column_prefix: #{'.' + $column_class + '--'};
+        $push_prefix: #{'.' + $push_class + '--'};
+        $bp_suffix: #{'--' + $suffix };
 
-    @if( $suffix != null and $breakpoint != null){
+        @if( $suffix != null and $breakpoint != null){
 
-        @include at-breakpoint($breakpoint){
+            @include at-breakpoint($breakpoint){
 
-            @include grid_columns($column_prefix, $bp_suffix, $breakpoint, $columns); //new!
-            
-            @include grid_push($push_prefix, $bp_suffix, $breakpoint, $columns); //new!
+                @include grid_columns($column_prefix, $bp_suffix, $breakpoint, $columns); //new!
+                
+                @include grid_push($push_prefix, $bp_suffix, $breakpoint, $columns); //new!
+
+                @include grid_wrapper($gutter);
+                @include grid_margins($gutter);
+
+                @include grid_omega($column_prefix, $bp_suffix);
+               
+                @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg) }
+            }
+
+        } @else {
+            @include grid_columns($column_prefix, null, null, $columns); //new!
+            @include grid_push($push_prefix, null, null, $columns); //new!
 
             @include grid_wrapper($gutter);
             @include grid_margins($gutter);
-
-            @include grid_omega($column_prefix, $bp_suffix);
-           
-            @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg) }
+            @include grid_omega($column_prefix, null );
+            @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg)  }
         }
-
-    } @else {
-        @include grid_columns($column_prefix, null, null, $columns); //new!
-        @include grid_push($push_prefix, null, null, $columns); //new!
-
-        @include grid_wrapper($gutter);
-        @include grid_margins($gutter);
-        @include grid_omega($column_prefix, null );
-        @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg)  }
     }
+
+    
 }

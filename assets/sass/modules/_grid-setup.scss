@@ -28,62 +28,54 @@ $debug_active: true;
  * Define grids here
  */
 
+
 /**
- * Small Grid
+ * NEW MASTER GRID DEFINITION
  */
 
-$default_grid: (
-    options (
-        columns         6,
-        suffix          null,
-        breakpoint      null,
-        gutter          30px
+$grid_args:(
+
+    default(
+        options (
+            columns         6,
+            suffix          null,
+            breakpoint      null,
+            gutter          30px
+        ),
+        debug (
+            display         $debug_active,
+            background      #13a2f7,
+            name            'Small'
+        )
     ),
-    debug (
-        display         $debug_active,
-        background      #13a2f7,
-        name            'Small'
-    )
-);
-
-@include generate_grid($default_grid);
-
-/**
- * Medium Grid
- */
-
-$medium_grid: (
-    options (
-        columns         12,
-        suffix          'm',
-        breakpoint      $m,
-        gutter          30px
-    ),  
-    debug (
-        display         $debug_active,
-        background      #9ed927,
-        name            'Medium'
-    )
-);
-
-@include generate_grid($medium_grid);
-
-/**
- * Large Grid
- */
-
-$large_grid: (
-    options (
-        columns         12,
-        suffix          'l',
-        breakpoint      $l,
-        gutter          30px
+    medium(
+        options (
+            columns         12,
+            suffix          'm',
+            breakpoint      $m,
+            gutter          30px
+        ),  
+        debug (
+            display         $debug_active,
+            background      #9ed927,
+            name            'Medium'
+        )
     ),
-    debug (
-        display         $debug_active,
-        background      #ff645f,
-        name            'Large',
+    large(
+        options (
+            columns         12,
+            suffix          'l',
+            breakpoint      $l,
+            gutter          30px
+        ),
+        debug (
+            display         $debug_active,
+            background      #ff645f,
+            name            'Large'
+        )
     )
+
 );
 
-@include generate_grid($large_grid);
+@include generate_grid($grid_args);
+
