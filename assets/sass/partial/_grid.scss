@@ -172,16 +172,16 @@ $push_class:    'push' !default;
  * pulls together the grid wrapper, columns and gutter settings
  * call once per required breakpoint
  */
-@mixin generate_grid($grid_options){
+@mixin generate_grid($grid_args){
     
-    @each $grid in $grid_options{
-        $columns:       map-get(map-get(map-get($grid, columns), options), $grid);
-        $suffix:        map-get(map-get($grid, options), suffix);
-        $breakpoint:    map-get(map-get($grid, options), breakpoint);
-        $gutter:        map-get(map-get($grid, options), gutter);
-        $debug_display: map-get(map-get($grid, debug), display);
-        $debug_bg:      map-get(map-get($grid, debug), background);
-        $debug_name:    map-get(map-get($grid, debug), name);
+    @each $grid in $grid_args{
+        $columns:       map-get-z($grid,options,columns);
+        $suffix:        map-get-z($grid,options,suffix);
+        $breakpoint:    map-get-z($grid,options,breakpoint);
+        $gutter:        map-get-z($grid,options,gutter);
+        $debug_display: map-get-z($grid,debug,display);
+        $debug_bg:      map-get-z($grid,debug,background);
+        $debug_name:    map-get-z($grid,debug,name);
 
         $column_prefix: #{'.' + $column_class + '--'};
         $push_prefix: #{'.' + $push_class + '--'};
