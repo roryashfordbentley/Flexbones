@@ -4,12 +4,6 @@
  */
 
 /**
- * Debug
- */
-
-$debug_active: true;
-
-/**
  * Content wrapper
  */
 
@@ -28,53 +22,44 @@ $debug_active: true;
  * Define grids here
  */
 
-
-/**
- * NEW MASTER GRID DEFINITION
- */
-
 $grid_args:(
-
-    default(
-        options (
+    config (
+        columnclass         'span--',
+        pushclass           'push--',
+        debug               true
+    ),
+    grids (
+        default (
             columns         6,
             suffix          null,
             breakpoint      null,
-            gutter          30px
+            gutter          30px,
+            debug (
+                background  #13a2f7,
+                name        'Small'
+            )
         ),
-        debug (
-            display         $debug_active,
-            background      #13a2f7,
-            name            'Small'
-        )
-    ),
-    medium(
-        options (
+        medium (
             columns         12,
-            suffix          'm',
+            suffix          '--m',
             breakpoint      $m,
-            gutter          30px
-        ),  
-        debug (
-            display         $debug_active,
-            background      #9ed927,
-            name            'Medium'
-        )
-    ),
-    large(
-        options (
-            columns         12,
-            suffix          'l',
-            breakpoint      $l,
-            gutter          30px
+            gutter          30px,
+            debug (
+                background  #9ed927,
+                name        'Medium'
+            )
         ),
-        debug (
-            display         $debug_active,
-            background      #ff645f,
-            name            'Large'
+        large (
+            columns         12,
+            suffix          '--l',
+            breakpoint      $l,
+            gutter          30px,
+            debug (
+                background  #ff645f,
+                name        'Large'
+            )
         )
     )
-
 );
 
-@include generate_grid($grid_args);
+@include grid_generate($grid_args);

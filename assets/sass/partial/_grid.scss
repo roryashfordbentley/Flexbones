@@ -1,17 +1,29 @@
 /**
  * Flexbones Grid System
+ * 
  * Version 1.1
+ * Author: Rory Ashford
  */
 
 
 /**
- * Set default classes (SHOULD BE IN GRID-SETUP)
+ * Clearfix mixin
+ *
+ * Used to clea1r the floats within each grid
  */
-$column_class:  'span' !default;
-$push_class:    'push' !default;
+@mixin clearfix() {
+    *zoom:1;
+    &:before, &:after {
+        content:"";
+        display:table;
+    }
+    &:after { clear:both; }
+}
 
 
 /**
+ *Column Width
+ * 
  * Works out the percent width of columns
  * (gutters can be any unit but columns are always percent bases)
  */
@@ -24,31 +36,22 @@ $push_class:    'push' !default;
 
 
 /**
- * Gutter Width
- * Sets gutter width to 0 if not set.
- */
-@function gutter_width(){
-
-    @if($gutter_width != null){
-        @return $gutter_width;
-    } @else {
-        @return 0;
-    }   
-}
-
-
-/**
- * at-breakpoint
+ * At Breakpoint
+ * 
  * a mixin for outputting inline media queries
  * Just supply a Sass list as an argument with a min/max
+ * If there are no min and max values supplied then it 
+ * doesnt ouput a media query
  */
 @mixin at-breakpoint($min,$max:null){
     @if($max == null){
         @media (min-width: $min){
             @content;
         }
-    } @else {   
-        @media (min-width: $min) and (max-width: $max){
+    } @elseif($min == null AND $max == null) {
+        @content;
+    } @else{
+         @media (min-width: $min) and (max-width: $max){
             @content;
         }
     }
@@ -68,16 +71,12 @@ $push_class:    'push' !default;
 
 /**
  * Grid wrapper
+ *
+ * This needs revising and combining with .wrapper
  */
 @mixin grid_wrapper($gutter){
     .grid{
-        *zoom:1;
-        &:before, &:after {
-            content:"";
-            display:table;
-        }
-        &:after { clear:both; }
-        
+        @include clearfix();
         margin-left: -$gutter;
     }
 }
@@ -98,11 +97,13 @@ $push_class:    'push' !default;
 
 
 /**
+ * Grid Margins
+ * 
  * Float all items beginning with the grid prefix
  * e.g. 'span--'
  */
-@mixin grid_margins($gutter){
-    [class^="#{$column_class}"]{
+@mixin grid_margins($gutter,$prefix){
+    [class^="#{$prefix}"]{
         position: relative;
         float: left;
         padding-left: $gutter;
@@ -111,8 +112,10 @@ $push_class:    'push' !default;
 
 
 /**
- * New grid columns
- * requires prefix, breakpoint, grid options (including number of columns)
+ * Grid Columns
+ * 
+ * Set the grid column widths based on the number of 
+ * columns divided by the total number of columns.
  */
 @mixin grid_columns($prefix: null, $suffix: null, $breakpoint: null, $columns: null){
 
@@ -125,7 +128,10 @@ $push_class:    'push' !default;
 
 
 /**
- * Push class
+ * Push Class
+ *
+ * Set the push classes that will incrementally indent
+ * the column by a maximum number of total-columns -1
  */
 @mixin grid_push($prefix: null, $suffix: null, $breakpoint: null, $columns: null){
 
@@ -139,6 +145,10 @@ $push_class:    'push' !default;
 
 /**
 * Omega class
+*
+* An omega declaration that is breakpoint specific
+* Basically it floats an element to the right taking
+* it out of order potentially.
 */
 @mixin grid_omega($prefix: null, $suffix: null){
     #{$prefix}omega#{$suffix} {
@@ -149,9 +159,11 @@ $push_class:    'push' !default;
    
 /**
  * Debug 
- * Outputs the current breakpoint name to quickly debug each breakpoint.
+ * 
+ * Outputs the current breakpoint name to quickly debug 
+ * each breakpoint.
  */
-@mixin debug_grid($breakpoint_name,$debug_bg: #000){
+@mixin grid_debug($breakpoint_name,$debug_bg: #000){
     body:after{
         position: fixed;
         display: block;
@@ -168,51 +180,48 @@ $push_class:    'push' !default;
 
 
 /**
- * Generate grid
- * pulls together the grid wrapper, columns and gutter settings
- * call once per required breakpoint
+ * Prepare Grid
+ *
+ * Pulls the whole thing together ready for output
+ * kept seperate from grid_generate as it is DRYer 
+ * this way.
  */
-@mixin generate_grid($grid_args){
-    
-    @each $grid in $grid_args{
-        $columns:       map-get-z($grid,options,columns);
-        $suffix:        map-get-z($grid,options,suffix);
-        $breakpoint:    map-get-z($grid,options,breakpoint);
-        $gutter:        map-get-z($grid,options,gutter);
-        $debug_display: map-get-z($grid,debug,display);
-        $debug_bg:      map-get-z($grid,debug,background);
-        $debug_name:    map-get-z($grid,debug,name);
 
-        $column_prefix: #{'.' + $column_class + '--'};
-        $push_prefix: #{'.' + $push_class + '--'};
-        $bp_suffix: #{'--' + $suffix };
+@mixin grid_generate($grid_args){
 
-        @if( $suffix != null and $breakpoint != null){
+    // This solution will ONLY work with libsass and 
+    // sass-list-maps polyfill, will add code for 
+    // sass3.3+ support later
 
-            @include at-breakpoint($breakpoint){
+    $grids: map-get-z($grid_args, grids);
 
-                @include grid_columns($column_prefix, $bp_suffix, $breakpoint, $columns); //new!
-                
-                @include grid_push($push_prefix, $bp_suffix, $breakpoint, $columns); //new!
+    $column_name: map-get-z($grid_args, config, columnclass);
+    $column_prefix: #{'.' + $column_name};
+    $push_prefix: #{'.' + map-get-z($grid_args, config, pushclass)};
 
-                @include grid_wrapper($gutter);
-                @include grid_margins($gutter);
+    $debug_display: map-get-z($grid_args, config, debug);
 
-                @include grid_omega($column_prefix, $bp_suffix);
-               
-                @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg) }
-            }
+    @each $grid in $grids{
+        $columns:       map-get(value($grid),columns);
+        $suffix:        map-get(value($grid),suffix);
+        $breakpoint:    map-get(value($grid),breakpoint);
+        $gutter:        map-get(value($grid),gutter);
 
-        } @else {
-            @include grid_columns($column_prefix, null, null, $columns); //new!
-            @include grid_push($push_prefix, null, null, $columns); //new!
+        // Debug info
+        $debug_bg:      map-get-z(value($grid),debug,background);
+        $debug_name:    map-get-z(value($grid),debug,name);
 
+        // Include the necessary mixins to generate the grids
+
+        @include at-breakpoint($breakpoint){
             @include grid_wrapper($gutter);
-            @include grid_margins($gutter);
-            @include grid_omega($column_prefix, null );
-            @if( $debug_display = true ){ @include debug_grid($debug_name,$debug_bg)  }
-        }
+            @include grid_margins($gutter,$column_name);
+            @include grid_columns($column_prefix, $suffix, $breakpoint, $columns);
+            @include grid_push($push_prefix, $suffix, $breakpoint, $columns);
+            @include grid_omega($column_prefix, $suffix);
+            @if( $debug_display = true ){ 
+                @include grid_debug($debug_name,$debug_bg) 
+            }    
+        }    
     }
-
-    
 }

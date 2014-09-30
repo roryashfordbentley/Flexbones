@@ -4,18 +4,24 @@
     <hr><br>
 
     <div class="grid">
-        <div class="col--one-third"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>one third</p></div></div>
-        <div class="col--one-third  col--omega  col--omega--m  col--omega--l"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>omega</p></div></div>
+        <div class="span--6-6  span--3-12--m">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        </div>
+
+        <div class="span--6-6  span--3-12--m">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        </div>
+
+        <div class="span--6-6  span--3-12--m">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        </div>
+
+        <div class="span--6-6  span--3-12--m">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        </div>
+    
     </div>
 
-    <div class="grid">
-        <div class="col--one-whole  col--one-half--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-whole / .one-half--m</p></div></div>
-        <div class="col--one-whole  col--one-half--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-whole / .one-half--m</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
-        <div class="col--one-half  col--one-quarter--m"><div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>.one-half / .one-quarter--m</p></div></div>
-    </div>
 
     <!-- Headings -->
 
