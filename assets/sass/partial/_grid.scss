@@ -27,11 +27,9 @@
  * Works out the percent width of columns
  * (gutters can be any unit but columns are always percent bases)
  */
-@function column_width($number_of_columns,$total_columns) {
-    
-    $single_col_width: 100 / $total_columns * 1%;
-    @return $single_col_width * $number_of_columns;
-
+@function column-width($number-of-columns,$total-columns) {
+    $single-col-width: 100 / $total-columns * 1%;
+    @return $single-col-width * $number-of-columns;
 }
 
 
@@ -44,11 +42,11 @@
  * doesnt ouput a media query
  */
 @mixin at-breakpoint($min,$max:null){
-    @if($max == null){
+    @if($max == null and $min != null){
         @media (min-width: $min){
             @content;
         }
-    } @elseif($min == null AND $max == null) {
+    } @elseif($min == null and $max == null) {
         @content;
     } @else{
          @media (min-width: $min) and (max-width: $max){
@@ -63,9 +61,9 @@
  * Used to set grids semantically from within 
  * the stylesheet with no additional HTML markup
  */
-@mixin span-columns($columns, $total_columns){
-    width: column_width($columns,$total_columns);
-    padding-left: $gutter_width;
+@mixin span-columns($columns, $total-columns){
+    width: column-width($columns,$total-columns);
+    padding-left: $gutter-width;
 }
 
 
@@ -74,7 +72,7 @@
  *
  * This needs revising and combining with .wrapper
  */
-@mixin grid_wrapper($gutter){
+@mixin grid-wrapper($gutter){
     .grid{
         @include clearfix();
         margin-left: -$gutter;
@@ -85,11 +83,11 @@
 /**
  * Grid with no gutters
  */
-@mixin grid_wrapper_full(){
+@mixin grid-wrapper-full(){
     .grid--full{
         margin-left: 0;
 
-        > [class^="#{$column_class}"]{
+        > [class^="#{$column-class}"]{
             padding-left: 0;
         }
     }
@@ -102,12 +100,35 @@
  * Float all items beginning with the grid prefix
  * e.g. 'span--'
  */
-@mixin grid_margins($gutter,$prefix){
+@mixin grid-margins($gutter,$prefix,$float:true){
     [class^="#{$prefix}"]{
         position: relative;
-        float: left;
+        @if($float == true){
+            float: left;
+        }
+   
         padding-left: $gutter;
     }   
+}
+
+
+/**
+ * Equivalent Fractions
+ *
+ * This function will add additional classes
+ * to make the grid system more expressive.
+ * Instead of writing 3/12 you can also write 1/4
+ * with this function
+ */
+@function equivalent-fractions($numerator,$denominator){
+    $fractions: ();
+    @for $i from -$numerator through -1{
+        @if($numerator % abs($i) == 0 and $denominator % abs($i) == 0){
+            $fractions: map-merge($fractions, abs($i) #{$numerator/abs($i)}-#{$denominator/abs($i)});
+        }     
+    }
+    // return map of all fractions
+    @return $fractions;
 }
 
 
@@ -117,11 +138,18 @@
  * Set the grid column widths based on the number of 
  * columns divided by the total number of columns.
  */
-@mixin grid_columns($prefix: null, $suffix: null, $breakpoint: null, $columns: null){
-
-    @for $i from 1 through $columns{
-        #{$prefix}#{$i}-#{$columns}#{$suffix}{
-            width: column_width($i,$columns);
+@mixin grid-columns($prefix: null, $suffix: null, $columns: null){
+    @for $i from 1 through $columns - 1{
+        $css-classes: equivalent-fractions($i,$columns);
+        $column-class: null;
+        
+        @each $css-class in $css-classes{
+            $column-class: $column-class, 
+            #{ $prefix }#{ value( $css-class ) }#{ $suffix };
+        }
+        
+        #{$column-class}{
+            width: column-width($i,$columns);
         }
     }
 }
@@ -133,11 +161,19 @@
  * Set the push classes that will incrementally indent
  * the column by a maximum number of total-columns -1
  */
-@mixin grid_push($prefix: null, $suffix: null, $breakpoint: null, $columns: null){
 
+@mixin grid-push($prefix: null, $suffix: null, $columns: null){
     @for $i from 1 through $columns - 1{
-        #{$prefix}#{$i}-#{$columns}#{$suffix}{
-            width: column_width($i,$columns);
+        $css-classes: equivalent-fractions($i,$columns);
+        $push-class: null;
+        
+        @each $css-class in $css-classes{
+            $push-class: $push-class, 
+            #{ $prefix }#{ value($css-class) }#{ $suffix };
+        }
+        
+        #{$push-class}{
+            width: column-width($i,$columns);
         }
     }
 }
@@ -150,7 +186,7 @@
 * Basically it floats an element to the right taking
 * it out of order potentially.
 */
-@mixin grid_omega($prefix: null, $suffix: null){
+@mixin grid-omega($prefix: null, $suffix: null){
     #{$prefix}omega#{$suffix} {
         float: right;
     }
@@ -163,7 +199,7 @@
  * Outputs the current breakpoint name to quickly debug 
  * each breakpoint.
  */
-@mixin grid_debug($breakpoint_name,$debug_bg: #000){
+@mixin grid-debug($breakpoint-name,$debug-bg: #000){
     body:after{
         position: fixed;
         display: block;
@@ -173,33 +209,33 @@
         font-size: 14px;
         font-weight: bold;
         color: white;
-        background: $debug_bg;
-        content: "#{$breakpoint_name}";
+        background: $debug-bg;
+        content: "#{$breakpoint-name}";
     }
 }
 
 
 /**
- * Prepare Grid
+ * Grid Generate
  *
  * Pulls the whole thing together ready for output
- * kept seperate from grid_generate as it is DRYer 
+ * kept seperate from grid-generate as it is DRYer 
  * this way.
  */
 
-@mixin grid_generate($grid_args){
+@mixin grid-generate($grid-args){
 
     // This solution will ONLY work with libsass and 
     // sass-list-maps polyfill, will add code for 
     // sass3.3+ support later
 
-    $grids: map-get-z($grid_args, grids);
+    $grids: map-get-z($grid-args, grids);
 
-    $column_name: map-get-z($grid_args, config, columnclass);
-    $column_prefix: #{'.' + $column_name};
-    $push_prefix: #{'.' + map-get-z($grid_args, config, pushclass)};
+    $column-name: map-get-z($grid-args, config, columnclass);
+    $column-prefix: #{'.' + $column-name};
+    $push-prefix: #{'.' + map-get-z($grid-args, config, pushclass)};
 
-    $debug_display: map-get-z($grid_args, config, debug);
+    $debug-display: map-get-z($grid-args, config, debug);
 
     @each $grid in $grids{
         $columns:       map-get(value($grid),columns);
@@ -208,19 +244,26 @@
         $gutter:        map-get(value($grid),gutter);
 
         // Debug info
-        $debug_bg:      map-get-z(value($grid),debug,background);
-        $debug_name:    map-get-z(value($grid),debug,name);
+        $debug-bg:      map-get-z(value($grid),debug,background);
+        $debug-name:    map-get-z(value($grid),debug,name);
 
         // Include the necessary mixins to generate the grids
+        
+        /**
+         * #{$columns} column grid at #{$debug-name} breakpoint
+         */
 
         @include at-breakpoint($breakpoint){
-            @include grid_wrapper($gutter);
-            @include grid_margins($gutter,$column_name);
-            @include grid_columns($column_prefix, $suffix, $breakpoint, $columns);
-            @include grid_push($push_prefix, $suffix, $breakpoint, $columns);
-            @include grid_omega($column_prefix, $suffix);
-            @if( $debug_display = true ){ 
-                @include grid_debug($debug_name,$debug_bg) 
+            @include grid-wrapper($gutter);
+            
+            @if($breakpoint != null){
+                @include grid-margins($gutter,$column-name,true);
+            }
+            @include grid-columns($column-prefix,$suffix,$columns);
+            @include grid-push($push-prefix, $suffix, $columns);
+            @include grid-omega($column-prefix, $suffix);
+            @if( $debug-display == true ){ 
+                @include grid-debug($debug-name,$debug-bg) 
             }    
         }    
     }

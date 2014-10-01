@@ -4,24 +4,23 @@
     <hr><br>
 
     <div class="grid">
-        <div class="span--6-6  span--3-12--m">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        <div class="span--6-12--m  span--3-12--l">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
 
-        <div class="span--6-6  span--3-12--m">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        <div class="span--6-12--m  span--3-12--l">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
 
-        <div class="span--6-6  span--3-12--m">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        <div class="span--6-12--m  span--3-12--l">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
 
-        <div class="span--6-6  span--3-12--m">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;">asdf</div>
+        <div class="span--6-12--m  span--3-12--l">
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
     
     </div>
-
 
     <!-- Headings -->
 
@@ -53,12 +52,12 @@
     <hr><br>
 
     <div class="grid">
-        <div class="col--one-whole  col--one-half--m">
+        <div class="span--6-12--m">
             <figure>
                 <a href="#"><img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH"></a>
             </figure>
         </div>
-        <div class="col--one-whole  col--one-half--m">
+        <div class="span--6-12--m">
             <figure>
                 <img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH">
                 <figcaption>With <del>cat</del> caption</figcaption>
