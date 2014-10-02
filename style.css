@@ -58,6 +58,7 @@ License URI:    n/a
  * Grid Margins
  * 
  * Float all items beginning with the grid prefix
+ * Adds  negative padding to each row
  * e.g. 'span--'
  */
 /**
@@ -152,6 +153,10 @@ License URI:    n/a
     display: table; }
   .grid:after {
     clear: both; }
+
+[class^="span--"] {
+  position: relative;
+  padding-left: 30px; }
 
 .span--1-6 {
   width: 16.6666666667%; }

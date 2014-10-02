@@ -98,15 +98,16 @@
  * Grid Margins
  * 
  * Float all items beginning with the grid prefix
+ * Adds  negative padding to each row
  * e.g. 'span--'
  */
 @mixin grid-margins($gutter,$prefix,$float:true){
     [class^="#{$prefix}"]{
         position: relative;
         @if($float == true){
-            float: left;
+           float: left; 
         }
-   
+        
         padding-left: $gutter;
     }   
 }
@@ -222,7 +223,6 @@
  * kept seperate from grid-generate as it is DRYer 
  * this way.
  */
-
 @mixin grid-generate($grid-args){
 
     // This solution will ONLY work with libsass and 
@@ -255,10 +255,13 @@
 
         @include at-breakpoint($breakpoint){
             @include grid-wrapper($gutter);
-            
             @if($breakpoint != null){
                 @include grid-margins($gutter,$column-name,true);
+            }@else{
+                @include grid-margins($gutter,$column-name,false);
             }
+           
+            
             @include grid-columns($column-prefix,$suffix,$columns);
             @include grid-push($push-prefix, $suffix, $columns);
             @include grid-omega($column-prefix, $suffix);
