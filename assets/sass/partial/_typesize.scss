@@ -1,5 +1,0 @@
-// handle all units with a sensible IE fallback
-
-@function typesize($multiplier:1){
-    @return $multiplier * $type_size;
-}

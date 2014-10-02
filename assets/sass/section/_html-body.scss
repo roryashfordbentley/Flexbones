@@ -5,11 +5,11 @@
 
 
 html { 
-    font-size: $base-font-size;
+    font-size: $font_size;
+    @include at-breakpoint($m){ font-size: $font_size_m; }
+    @include at-breakpoint($l){ font-size: $font_size_l; }
+    @include at-breakpoint($xl){ font-size: $font_size_xl; }
     line-height: 1.5;
-    @include at-breakpoint($m){ font-size: $base-font-size-m; }
-    @include at-breakpoint($l){ font-size: $base-font-size-l; }
-    @include at-breakpoint($xl){ font-size: $base-font-size-xl; }
 }
 
     body {

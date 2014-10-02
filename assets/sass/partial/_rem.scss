@@ -1,0 +1,5 @@
+// handle all units with a sensible IE fallback
+
+@function rem($multiplier:1){
+    @return $multiplier/10 * 1rem;
+}

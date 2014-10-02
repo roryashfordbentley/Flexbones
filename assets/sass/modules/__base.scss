@@ -20,28 +20,20 @@ $border_box:            true;
 
 // Base font sizes for different media queries
 
-$base_font_size:        62.5%;
-$base_font_size_m:      62.5%;
-$base_font_size_l:      62.5%;
-$base_font_size_xl:     75%;
-
-// Type size default ( used when calling typesize() )
-
-$type_size:             0.1rem; //used to allow a scale that is reminiscent of pixel sizing e.g. 16,24 instead of 1.125
-
-// Base unit (1.5x default font size)
-
-$base:                  2.4rem;
+$font_size:        62.5%;
+$font_size_m:      62.5%;
+$font_size_l:      62.5%;
+$font_size_xl:     75%;
 
 // Font Sizes
 
-$size_h1:               typesize(40);
-$size_h2:               typesize(30); 
-$size_h3:               typesize(24);
-$size_h4:               typesize(18);
-$size_p:                typesize(16);
-$size_lead:             typesize(24);
-$size_small:            typesize(12);
+$size_h1:               rem(40);
+$size_h2:               rem(30); 
+$size_h3:               rem(24);
+
+$size_p:                rem(16);
+$size_lead:             rem(24);
+$size_small:            rem(12);
 
 // Font Weights
 

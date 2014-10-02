@@ -30,7 +30,6 @@
     <h1>Heading 1 (h1)</h1>
     <h2>Heading 2 (h2)</h2>
     <h3>Heading 3 (h3)</h3>
-    <h4>Heading 4 (h4)</h4>
 
     <!-- Headings + text -->
 
@@ -119,38 +118,37 @@
     <h1>Forms</h1>
     <hr><br>
 
-    <div class="flexform">
-        <form>
-            <div class="grid">
-                <div class="col--one-whole  col--one-half--m">
-                    <label>First Name</label>
-                    <input type="text" name="name">
-                </div>
-
-                <div class="col--one-whole  col--one-half--m">
-                    <label>Last Name</label>
-                    <input type="text" name="name">
-                </div>
-
-                <div class="col--one-whole  col--one-half--m">
-                    <label>Age</label>
-                    <input type="number" min="12" max="100" step="2" value="21">
-                </div>
-
-                <div class="col--one-whole  col--one-half--m">
-                    <label>Email</label>
-                    <input type="email" name="email">
-                </div>
-            </div>
-            <div>
-                <label>Description</label>
-                <textarea></textarea>
+    <form>
+        <div class="grid">
+            <div class="span--1-2--m">
+                <label>First Name</label>
+                <input type="text" name="name">
             </div>
 
-            <div class="flexform-group">
-                <input type="submit" name="confirm" value="Confirm" class="btn btn--success btn--medium">
-                <input type="submit" name="confirm" value="Cancel" class="btn btn--error btn--medium">
+            <div class="span--1-2--m">
+                <label>Last Name</label>
+                <input type="text" name="name">
             </div>
-        </form>
-    </div>
+
+            <div class="span--1-2--m">
+                <label>Age</label>
+                <input type="number" min="12" max="100" step="2" value="21">
+            </div>
+
+            <div class="span--1-2--m">
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+        </div>
+        <div>
+            <label>Description</label>
+            <textarea></textarea>
+        </div>
+
+        <div class="flexform-group">
+            <input type="submit" name="confirm" value="Confirm" class="btn btn--success btn--medium">
+            <input type="submit" name="confirm" value="Cancel" class="btn btn--error btn--medium">
+        </div>
+    </form>
+
 </div>
