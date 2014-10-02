@@ -423,82 +423,16 @@ ol {
   width: auto;
   margin: 0;
   font-size: 1.6rem;
-  font-family: inherit;
-  font-weight: inherit;
   color: #fff;
   cursor: pointer;
   border: none;
-  outline: none; }
+  outline: none;
+  webkit-font-smoothing: antialiased; }
   .btn:hover {
     text-decoration: none; }
   .btn:focus {
     -webkit-box-shadow: none;
             box-shadow: none; }
-
-.btn--default {
-  background: #3498db; }
-  .btn--default:hover {
-    background: #57aae1; }
-  .btn--default:active {
-    background: #258cd1; }
-  .btn--default:visited {
-    color: #fff; }
-
-.btn--success {
-  background: #2ecc71; }
-  .btn--success:hover {
-    background: #4cd786; }
-  .btn--success:active {
-    background: #29b764; }
-
-.btn--warning {
-  background: #f38728; }
-  .btn--warning:hover {
-    background: #f59c4f; }
-  .btn--warning:active {
-    background: #e5720d; }
-
-.btn--error {
-  background: #e74c3d; }
-  .btn--error:hover {
-    background: #eb6d61; }
-  .btn--error:active {
-    background: #e43626; }
-
-.btn--disabled, .btn--disabled:hover, .btn--disabled:active, .btn--disabled:focus {
-  cursor: text;
-  background: #ebebeb; }
-
-/**
-     * Button sizes
-     */
-.btn--small {
-  padding: 0 0.6rem;
-  line-height: 1.5; }
-
-.btn--medium {
-  padding: 0 1.2rem;
-  line-height: 2; }
-
-.btn--large {
-  padding: 0 2.4rem;
-  line-height: 3; }
-
-/**
-    * Inline button
-    * Place a button within a paragraph of text
-    */
-.btn--inline {
-  line-height: inherit;
-  font-size: inherit;
-  padding: 0 0.6rem; }
-
-/**
-    * Block button
-    * 100% width button that spans container
-    */
-.btn--block {
-  width: 100%; }
 
 /**
  * _clearfix.scss

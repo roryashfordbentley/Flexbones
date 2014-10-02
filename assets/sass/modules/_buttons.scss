@@ -8,12 +8,11 @@
     width: auto;
     margin: 0;
     font-size: typesize(16);
-    font-family: inherit;
-    font-weight: inherit;
     color: #fff;
     cursor: pointer;
     border: none;
     outline: none;
+    webkit-font-smoothing: antialiased;
 
     &:hover{
         text-decoration:none;
@@ -23,107 +22,4 @@
         box-shadow: none;
     }
 }
-
-    .btn--default{
-
-        background: $clr_default;
-
-        &:hover{
-            background: lighten($clr_default,8%);
-        }
-
-        &:active{
-            background: darken($clr_default,5%);
-        }
-
-        &:visited{
-            color: #fff;
-        }
-    }
-
-    .btn--success{
-
-        background: $clr_success;
-
-        &:hover{
-            background: lighten($clr_success,8%);
-        }
-
-        &:active{
-            background: darken($clr_success,5%);
-        }
-    }
-
-    .btn--warning{
-
-        background: $clr_warning;
-
-        &:hover{
-            background: lighten($clr_warning,8%);
-        }
-
-        &:active{
-            background: darken($clr_warning,8%);
-        }
-    }
-
-    .btn--error{
-
-        background: $clr_error;
-
-        &:hover{
-            background: lighten($clr_error,8%);
-        }
-
-        &:active{
-            background: darken($clr_error,5%);
-        }
-    }
-
-    .btn--disabled,
-    .btn--disabled:hover,
-    .btn--disabled:active,
-    .btn--disabled:focus{
-        cursor: text;
-        background: $clr_disabled;
-    }
-
-    /**
-     * Button sizes
-     */
-    
-    .btn--small{
-        padding: 0 size(0.25);
-        line-height: 1.5;
-    }
-
-    .btn--medium{
-        padding: 0 size(0.5);
-        line-height: 2;
-    }
-
-    .btn--large{
-        padding: 0 size(1);
-        line-height: 3;
-    }   
-
-    /**
-    * Inline button
-    * Place a button within a paragraph of text
-    */
-
-    .btn--inline{
-        line-height: inherit;
-        font-size: inherit;
-        padding: 0 size(0.25);
-    }
-
-    /**
-    * Block button
-    * 100% width button that spans container
-    */
-
-    .btn--block{
-        width: 100%;
-    }
 

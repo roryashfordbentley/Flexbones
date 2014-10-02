@@ -4,19 +4,19 @@
     <hr><br>
 
     <div class="grid">
-        <div class="span--6-12--m  span--3-12--l">
+        <div class="span--1-2--m  span--1-4--l">
             <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
 
-        <div class="span--6-12--m  span--3-12--l">
+        <div class="span--1-2--m  span--1-4--l">
             <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
 
-        <div class="span--6-12--m  span--3-12--l">
+        <div class="span--1-2--m  span--1-4--l">
             <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
 
-        <div class="span--6-12--m  span--3-12--l">
+        <div class="span--1-2--m  span--1-4--l">
             <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
         </div>
     
