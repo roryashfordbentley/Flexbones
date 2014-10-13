@@ -40,13 +40,13 @@ module.exports = function(grunt) {
 
         watch: {
             scss: {
-                files: '**/*.scss',
+                files: 'assets/sass/**/*.scss',
                 options: {
                     livereload: false
                 }
             },
             css: {
-                files: '**/*.scss',
+                files: 'assets/sass/**/*.scss',
                 tasks: ['sass','autoprefixer','notify:watchsass'],
             },
             markup: {

@@ -4,24 +4,30 @@
  */
 
 /**
- * Content wrapper
+ * Wrapper
+ *
+ * Project specific rather than grid
+ * specific so not suitable to add
+ * to the grid system.
  */
-
 .wrapper {
     margin: 0 auto;
     width: 90%;
     @include at-breakpoint($l){ 
         width: 90%;
-        max-width: 1100px; 
+        max-width: 1200px; 
     }
 }
 
 
 /**
  * Grid setup
- * Define grids here
+ * 
+ * Provide maps to setup grid system
+ * add infinite breakpoints, breakpoint
+ * independant number of columns and 
+ * gutters, debug breakpoints.
  */
-
 $grid_args:(
     config (
         columnclass         'span--',
@@ -30,10 +36,10 @@ $grid_args:(
     ),
     grids (
         default (
-            columns         6,
+            columns         12,
             suffix          null,
             breakpoint      null,
-            gutter          30px,
+            gutter          10px,
             debug (
                 background  #13a2f7,
                 name        'Small'
@@ -43,7 +49,7 @@ $grid_args:(
             columns         12,
             suffix          '--m',
             breakpoint      $m,
-            gutter          30px,
+            gutter          20px,
             debug (
                 background  #9ed927,
                 name        'Medium'

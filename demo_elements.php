@@ -2,25 +2,287 @@
     
     <h1>Grid</h1>
     <hr><br>
+    <p>The tests are based on the OOCSS <a href="http://oocss.org/grids_docs.html">litmus test</a></p>
 
+    <h2>Halves</h2>
+
+    <code>
+        <pre>
+&lt;div class="span--1-2">
+    &lt;p>span--1-2&lt;/p>
+&lt;/div>
+&lt;div class="span--1-2">
+    &lt;p>span--1-2&lt;/p>
+&lt;/div></pre>
+    </code>
     <div class="grid">
-        <div class="span--1-2--m  span--1-4--l">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
+        <div class="span--1-2">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-2</p></div>
         </div>
-
-        <div class="span--1-2--m  span--1-4--l">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
+        <div class="span--1-2">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-2</p></div>
         </div>
-
-        <div class="span--1-2--m  span--1-4--l">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
-        </div>
-
-        <div class="span--1-2--m  span--1-4--l">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--6-12--m  span--3-12--l</p></div>
-        </div>
-    
     </div>
+
+
+    <h2>Thirds</h2>
+
+    <code>
+        <pre>
+&lt;div class="span--1-3">
+    &lt;p>span--1-3&lt;/p>
+&lt;/div>
+&lt;div class="span--1-3">
+    &lt;p>span--1-3&lt;/p>
+&lt;/div>
+&lt;div class="span--1-3">
+    &lt;p>span--1-3&lt;/p>
+&lt;/div>
+
+&lt;div class="span--1-3">
+    &lt;p>span--1-3&lt;/p>
+&lt;/div>
+&lt;div class="span--2-3">
+    &lt;p>span--2-3&lt;/p>
+&lt;/div></pre>
+    </code>
+    <div class="grid">
+        <div class="span--1-3">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-3</p></div>
+        </div>
+        <div class="span--1-3">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-3</p></div>
+        </div>
+        <div class="span--1-3">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-3</p></div>
+        </div>
+         <div class="span--1-3">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-3</p></div>
+        </div>
+        <div class="span--2-3">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--2-3</p></div>
+        </div>
+    </div>
+
+     <h2>Quarters</h2>
+
+    <code>
+        <pre>
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+&lt;div class="span--2-4">
+    &lt;p>span--2-4&lt;/p>
+&lt;/div>
+
+&lt;div class="span--1-4">
+    &lt;p>span--1-4&lt;/p>
+&lt;/div>
+&lt;div class="span--3-4">
+    &lt;p>span--3-4&lt;/p>
+&lt;/div></pre>
+    </code>
+    <div class="grid">
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div>
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div>
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div> 
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div>
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div> 
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div>
+        <div class="span--2-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--2-4</p></div>
+        </div>
+        <div class="span--1-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-4</p></div>
+        </div> 
+        <div class="span--3-4">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--3-4</p></div>
+        </div>
+    </div>
+
+    <h2>Fifths</h2>
+
+    <code>
+        <pre>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--1-5">
+    &lt;p>span--1-5&lt;/p>
+&lt;/div>
+&lt;div class="span--2-5">
+    &lt;p>span--2-5&lt;/p>
+&lt;/div>
+
+&lt;div class="span--2-5">
+    &lt;p>span--2-5&lt;/p>
+&lt;/div>
+&lt;div class="span--3-5">
+    &lt;p>span--3-5&lt;/p>
+&lt;/div></pre>
+    </code>
+    <div class="grid">
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+        <div class="span--1-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-5</p></div>
+        </div>
+         <div class="span--2-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--2-5</p></div>
+        </div>
+
+        <div class="span--2-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--2-5</p></div>
+        </div>
+        <div class="span--3-5">
+            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--3-5</p></div>
+        </div>
+    </div>
+
+    <h2>Complex Nesting</h2>
+
+    
+    <div class="grid">
+        <div class="span--1-5">
+            <div style="background: #1abc9c;">
+                <h3>1/5</h3>
+                <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+        </div>
+        <div class="span--3-5">
+            <div style="background: #1abc9c;">
+                <h3>3/5</h3>
+
+                <div class="grid">
+                    <div class="span--1-2">
+                        <div style="background: #e74c3c;">
+                            <h3>1/2</h3>
+                           <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="span--1-2">
+                        <div style="background: #c0392b;">
+                            <h3>1/2</h3>
+                            <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="span--1-3">
+                        <div style="background: #f39c12;">
+                            <h3>1/3</h3>
+                            <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="span--2-3">
+                        <div style="background: #f39c12;">
+                            <h3>2/3</h3>
+
+                            <div class="grid">
+                                <div class="span--1-2">
+                                    <div style="background: #f1c40f;">
+                                        <h3>1/2</h3>
+                                        <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
+                                    </div>
+                                </div>
+                                <div class="span--1-2">
+                                    <div style="background: #f1c40f;">
+                                        <h3>1/2</h3>
+                                        <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
+                                    </div>
+                                </div>
+
+                                <div class="span--1-1">
+                                    <div style="background: #9b59b6;">
+                                        <h3>1/1</h3>
+                                        <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+         <div class="span--1-5">
+            <div style="background: #1abc9c;">
+                <h3>1/5</h3>
+                <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Headings -->
 
@@ -71,7 +333,7 @@
     <h1>Buttons</h1>
     <hr><br>
 
-    <p>This paragraph of text contains a <a href="#" class="btn btn--default btn--inline">button</a> that you can press and everything will be ok. By adding a little extra text we can see how this looks when presented over multiple lines</p>
+    <p>This paragraph of text contains a <a href="#" class="btn">nice long link to something wicked</a> that you can press and everything will be ok. By adding a little extra text we can see how this looks when presented over multiple lines</p>
 
     <p>
         <button class="btn btn--default btn--medium">

@@ -40,13 +40,27 @@ a,
 a:visited{
     color: $link;
     text-decoration: none;
-    @extend strong;
+    display: inline-block;
+    webkit-font-smoothing: antialiased;
+    background-image: linear-gradient(to top,
+        rgba(0,0,0,0) 11%,
+        $text_colour 11%,
+        $text_colour 16%,
+        rgba(0,0,0,0) 16%
+    );
 }
 
 a:hover{
     color: $link_hover;
-    text-decoration: underline;
+    text-decoration: none;
+    background-image: linear-gradient(to top,
+        rgba(0,0,0,0) 11%,
+        $link_hover 11%,
+        $link_hover 16%,
+        rgba(0,0,0,0) 16%
+    );
 }
+
 
 // Headings
 
@@ -82,4 +96,14 @@ ul {
 ol {
     list-style-type: decimal;
     font-weight: normal;
+}
+
+// Pre
+
+pre{
+    font-size: rem(13);
+    padding: rem(10) rem(20);
+    background: #102d48;
+    color: white;
+    margin-bottom: rem(24);
 }

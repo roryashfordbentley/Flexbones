@@ -9,7 +9,7 @@
 /**
  * Clearfix mixin
  *
- * Used to clea1r the floats within each grid
+ * Used to clear the floats within each grid
  */
 @mixin clearfix() {
     *zoom:1;
@@ -22,10 +22,10 @@
 
 
 /**
- *Column Width
+ * Column Width
  * 
- * Works out the percent width of columns
- * (gutters can be any unit but columns are always percent bases)
+ * Works out the percent width of columns (gutters can be 
+ * any unit but columns are always percent bases)
  */
 @function column-width($number-of-columns,$total-columns) {
     $single-col-width: 100 / $total-columns * 1%;
@@ -68,14 +68,16 @@
 
 
 /**
- * Grid wrapper
+ * Grid
  *
- * This needs revising and combining with .wrapper
+ * Called once per breakpoint as the gutters may be different
  */
 @mixin grid-wrapper($gutter){
     .grid{
         @include clearfix();
         margin-left: -$gutter;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -83,7 +85,7 @@
 /**
  * Grid with no gutters
  */
-@mixin grid-wrapper-full(){
+@mixin grid-wrapper-full($column-class){
     .grid--full{
         margin-left: 0;
 
@@ -101,14 +103,12 @@
  * Adds  negative padding to each row
  * e.g. 'span--'
  */
-@mixin grid-margins($gutter,$prefix,$float:true){
+@mixin grid-margins($gutter,$prefix){
     [class^="#{$prefix}"]{
         position: relative;
-        @if($float == true){
-           float: left; 
-        }
-        
+        float: left;
         padding-left: $gutter;
+        display: flex;
     }   
 }
 
@@ -139,8 +139,8 @@
  * Set the grid column widths based on the number of 
  * columns divided by the total number of columns.
  */
-@mixin grid-columns($prefix: null, $suffix: null, $columns: null){
-    @for $i from 1 through $columns - 1{
+@mixin grid-columns($prefix: null, $suffix: null, $columns: null, $fifths: false, $sevenths: false){
+    @for $i from 1 through $columns{
         $css-classes: equivalent-fractions($i,$columns);
         $column-class: null;
         
@@ -151,6 +151,30 @@
         
         #{$column-class}{
             width: column-width($i,$columns);
+        }
+    }
+
+    // Add fifths where total columns
+    // doesnt divide into fifths.
+    @if($fifths == true){
+        @for $i from 1 through 5{
+            $fifth_class: #{$prefix}#{$i}+'-5'+ #{$suffix};
+
+            #{$fifth_class}{
+                width: column-width($i,5);
+            }
+        }
+    }
+
+    // Add sevenths where total columns
+    // doesnt divide into fifths.
+    @if($sevenths == true){
+        @for $i from 1 through 7{
+            $seventh_class: #{$prefix}#{$i}+'-7'+ #{$suffix};
+
+            #{$seventh_class}{
+                width: column-width($i,7);
+            }
         }
     }
 }
@@ -230,11 +254,9 @@
     // sass3.3+ support later
 
     $grids: map-get-z($grid-args, grids);
-
     $column-name: map-get-z($grid-args, config, columnclass);
     $column-prefix: #{'.' + $column-name};
     $push-prefix: #{'.' + map-get-z($grid-args, config, pushclass)};
-
     $debug-display: map-get-z($grid-args, config, debug);
 
     @each $grid in $grids{
@@ -255,14 +277,9 @@
 
         @include at-breakpoint($breakpoint){
             @include grid-wrapper($gutter);
-            @if($breakpoint != null){
-                @include grid-margins($gutter,$column-name,true);
-            }@else{
-                @include grid-margins($gutter,$column-name,false);
-            }
-           
-            
-            @include grid-columns($column-prefix,$suffix,$columns);
+            @include grid-wrapper-full($column-name);
+            @include grid-margins($gutter,$column-name);
+            @include grid-columns($column-prefix,$suffix,$columns,true, true);
             @include grid-push($push-prefix, $suffix, $columns);
             @include grid-omega($column-prefix, $suffix);
             @if( $debug-display == true ){ 
