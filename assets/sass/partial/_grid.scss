@@ -65,7 +65,7 @@
  */
 @mixin span-columns($columns, $total-columns){
     width: column-width($columns,$total-columns);
-    padding-left: $gutter-width;
+    padding-left: $gutter-width; 
 }
 
 
@@ -79,7 +79,37 @@
         margin-left: -$gutter;
         display: flex;
         flex-wrap: wrap;
-        //@include clearfix();
+        @include clearfix();
+    }
+}
+
+/**
+ * Equal height Grid items
+ * Uses flexbox so no IE support but there is a polyfill:
+ * http://osvaldas.info/flexbox-based-responsive-equal-height-blocks-with-javascript-fallback
+ */
+
+@mixin grid-wrapper-equal-height($gutter,$column-name){
+    .grid--equal-height{
+        display: flex;
+        flex-wrap: wrap;
+
+        /**
+         * Proposal to fix block level elements 
+         * within flexbox container losing 100% width
+         * Commented out as its pretty ugly right now.
+         */
+
+        /*& > [class^="#{$column-name}"]{
+            display: flex;
+            & > div, 
+            & > section,
+            & > article,
+            & > aside,
+            & > figure{
+                width: 100%;
+            }
+        }*/
     }
 }
 
@@ -110,7 +140,6 @@
         position: relative;
         float: left;
         padding-left: $gutter;
-        display: flex;
     }   
 }
 
@@ -280,6 +309,7 @@
         @include at-breakpoint($breakpoint){
             @include grid-wrapper($gutter);
             @include grid-wrapper-full($column-name);
+            @include grid-wrapper-equal-height($gutter,$column-name);
             @include grid-margins($gutter,$column-name);
             @include grid-columns($column-prefix,$suffix,$columns,true, true);
             @include grid-push($push-prefix, $suffix, $columns);

@@ -99,7 +99,7 @@
     &lt;p>span--1-1  span--3-4--m&lt;/p>
 &lt;/div></pre>
     </code>
-    <div class="grid">
+    <div class="grid  grid--equal-height">
         <div class="span--1-1  span--1-4--m">
             <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
         </div>
@@ -119,7 +119,7 @@
             <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
         </div>
         <div class="span--1-1  span--2-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--2-4--m</p></div>
+            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--2-4--m</p></div>
         </div>
         <div class="span--1-1  span--1-4--m">
             <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
@@ -314,12 +314,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     <hr><br>
 
     <div class="grid">
-        <div class="span--6-12--m">
+        <div class="span--1-1  span--1-2--m">
             <figure>
-                <a href="#"><img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH"></a>
+                <img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH">
             </figure>
         </div>
-        <div class="span--6-12--m">
+        <div class="span--1-1  span--1-2--m">
             <figure>
                 <img src="http://placekitten.com/600/400" alt="KITTEH KITTEH KITTEH">
                 <figcaption>With <del>cat</del> caption</figcaption>
@@ -331,51 +331,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
     <!-- Buttons -->
 
-    <h1>Buttons</h1>
-    <hr><br>
-
-    <p>This paragraph of text contains a <a href="#" class="btn">nice long link to something wicked</a> that you can press and everything will be ok. By adding a little extra text we can see how this looks when presented over multiple lines</p>
-
-    <p>
-        <button class="btn btn--default btn--medium">
-            Default
-        </button>
-
-        <button class="btn btn--success btn--medium">
-            Success
-        </button>
-
-        <button class="btn btn--warning btn--medium">
-            Warning
-        </button>
-
-        <button class="btn btn--error btn--medium">
-            Error
-        </button>
-
-        <button class="btn btn--disabled btn--medium">
-            Disabled
-        </button>
-    </p>
-    <p>
-        <button class="btn btn--default btn--small">
-            Small
-        </button>
-
-        <button class="btn btn--default btn--medium">
-            Medium
-        </button>
-
-        <button class="btn btn--default btn--large">
-            Large
-        </button>
-    </p>
-    <p>
-        <button class="btn btn--default btn--large btn--block">
-            Block Button
-        </button>
-    </p>
-
     <!-- Forms -->
 
     <h1>Forms</h1>
@@ -383,35 +338,43 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
     <form>
         <div class="grid">
-            <div class="span--1-2--m">
-                <label>First Name</label>
-                <input type="text" name="name">
+            <div class="span--1-1  span--1-2--m">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" name="name">
+                </div>
             </div>
 
-            <div class="span--1-2--m">
+            <div class="span--1-1  span--1-2--m">
+                <div>
                 <label>Last Name</label>
                 <input type="text" name="name">
+                </div>
             </div>
 
-            <div class="span--1-2--m">
-                <label>Age</label>
-                <input type="number" min="12" max="100" step="2" value="21">
+            <div class="span--1-1  span--1-2--m">
+                <div>
+                    <label>Age</label>
+                    <input type="number" min="12" max="100" step="2" value="21">
+                </div>
             </div>
 
-            <div class="span--1-2--m">
-                <label>Email</label>
-                <input type="email" name="email">
+            <div class="span--1-1  span--1-2--m">
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+            <div class="span--1-1">
+                <div>
+                    <label>Description</label>
+                    <textarea></textarea>
+                </div>
             </div>
         </div>
-        <div>
-            <label>Description</label>
-            <textarea></textarea>
-        </div>
 
-        <div class="flexform-group">
-            <input type="submit" name="confirm" value="Confirm" class="btn btn--success btn--medium">
-            <input type="submit" name="confirm" value="Cancel" class="btn btn--error btn--medium">
-        </div>
+        <input type="submit" name="confirm" value="Confirm" class="btn">
+        <input type="submit" name="confirm" value="Cancel" class="btn">
     </form>
 
 </div>
