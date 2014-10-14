@@ -16,6 +16,8 @@
     &:before, &:after {
         content:"";
         display:table;
+        flex-basis: 0; // flexbox clear fix 
+        order: 1; // flexbox clear fix
     }
     &:after { clear:both; }
 }
@@ -74,10 +76,10 @@
  */
 @mixin grid-wrapper($gutter){
     .grid{
-        @include clearfix();
         margin-left: -$gutter;
         display: flex;
         flex-wrap: wrap;
+        //@include clearfix();
     }
 }
 
