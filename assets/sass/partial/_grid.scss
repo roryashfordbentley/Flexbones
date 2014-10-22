@@ -136,11 +136,17 @@
  * e.g. 'span--'
  */
 @mixin grid-margins($gutter,$prefix){
-    [class^="#{$prefix}"]{
-        position: relative;
+
+    .grid > * {
         float: left;
+        position: relative;
+    }
+    
+    //crazy selector but it reduces specificity
+
+    [class^="#{$prefix}"] + [class^="#{$prefix}"]{
         padding-left: $gutter;
-    }   
+    }
 }
 
 
