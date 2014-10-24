@@ -1,3 +1,24 @@
+<style>
+    .demo-block{
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+        /*height: 8rem;*/
+        /*border-top: 1px solid #00e1fb;
+        border-bottom: 1px solid #6f10d9;
+
+        background-image: linear-gradient(to bottom right,#00d2ff, #3a7bd5),linear-gradient(to bottom right,#00d2ff, #3a7bd5);
+        background-size:1px 100%;
+        background-position:0 0, 100% 0;
+        background-repeat:no-repeat;*/
+
+        background-image: linear-gradient(to bottom right,#00d2ff, #3a7bd5);
+        border-radius: 4px;
+        
+    }
+
+</style>
+
 <div class="wrapper">
     
     <h1>Grid</h1>
@@ -5,284 +26,167 @@
     <p>The tests are based on the OOCSS <a href="http://oocss.org/grids_docs.html">litmus test</a></p>
     <p>To demonstrate the responsive potential of the grid each element will be set to span a full column width at the mobile breakpoint. You can control it however you like and the grid doesn't require an element to span a whole column.</p>
 
-    <h2>Halves</h2>
+    <h2>Basic Grid layout structure</h2>
 
-    <code>
-        <pre>
-&lt;div class="span--1-1  span--1-2--m">
-    &lt;p>span--1-2&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-2--m">
-    &lt;p>span--1-2&lt;/p>
-&lt;/div></pre>
-    </code>
+    <h3>Halves</h3>
+
     <div class="grid">
         <div class="span--1-1  span--1-2--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-2--m</p></div>
+            <div class="demo-block"><p>span--1-1<br> span--1-2--m</p></div>
         </div>
         <div class="span--1-1  span--1-2--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-2--m</p></div>
+            <div class="demo-block"><p>span--1-1<br> span--1-2--m</p></div>
         </div>
     </div>
 
 
-    <h2>Thirds</h2>
-
-    <code>
-        <pre>
-&lt;div class="span--1-1  span--1-3--m">
-    &lt;p>span--1-3&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-3--m">
-    &lt;p>span--1-3&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-3--m">
-    &lt;p>span--1-3&lt;/p>
-&lt;/div>
-
-&lt;div class="span--1-1  span--1-3--m">
-    &lt;p>span--1-3&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--2-3--m">
-    &lt;p>span--2-3&lt;/p>
-&lt;/div></pre>
-    </code>
-    <div class="grid">
-        <div class="span--1-1  span--1-3--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-3--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-3--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-3--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-3--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-3--m</p></div>
-        </div>
-         <div class="span--1-1  span--1-3--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-3--m</p></div>
-        </div>
-        <div class="span--1-1  span--2-3--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--2-3--m</p></div>
-        </div>
-    </div>
-
-     <h2>Quarters</h2>
-
-    <code>
-        <pre>
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--2-4--m">
-    &lt;p>span--1-1  span--2-4--m&lt;/p>
-&lt;/div>
-
-&lt;div class="span--1-1  span--1-4--m">
-    &lt;p>span--1-1  span--1-4--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--3-4--m">
-    &lt;p>span--1-1  span--3-4--m&lt;/p>
-&lt;/div></pre>
-    </code>
-    <div class="grid  grid--equal-height">
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div> 
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div> 
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div>
-        <div class="span--1-1  span--2-4--m">
-            <div style="background: #e0e0e0; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--2-4--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-4--m</p></div>
-        </div> 
-        <div class="span--1-1  span--3-4--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--3-4--m</p></div>
-        </div>
-    </div>
-
-    <h2>Fifths</h2>
-
-    <code>
-        <pre>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--1-5--m">
-    &lt;p>span--1-1  span--1-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--2-5--m">
-    &lt;p>span--1-1  span--2-5--m&lt;/p>
-&lt;/div>
-
-&lt;div class="span--1-1  span--2-5--m">
-    &lt;p>span--1-1  span--2-5--m&lt;/p>
-&lt;/div>
-&lt;div class="span--1-1  span--3-5--m">
-    &lt;p>span--1-1  span--3-5--m&lt;/p>
-&lt;/div></pre>
-    </code>
-    <div class="grid">
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--1-5--m</p></div>
-        </div>
-         <div class="span--1-1  span--2-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--2-5--m</p></div>
-        </div>
-
-        <div class="span--1-1  span--2-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--2-5--m</p></div>
-        </div>
-        <div class="span--1-1  span--3-5--m">
-            <div style="background: #e0e0e0; width: 100%; margin-bottom: 30px; padding: 10px;"><p>span--1-1  span--3-5--m</p></div>
-        </div>
-    </div>
-
-    <h2>Complex Nesting</h2>
+    <h3>Thirds</h3>
 
     
     <div class="grid">
-        <div class="span--1-1  span--1-5--m">
-            <div style="background: #1abc9c; width: 100%; margin-bottom: 30px;">
-                <h3>1/5</h3>
-                <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
+        <div class="span--1-1  span--1-3--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-3--m</p></div>
         </div>
-        <div class="span--1-1  span--3-5--m">
-            <div style="background: #1abc9c; width: 100%; margin-bottom: 30px;">
-                <h3>3/5</h3>
-
-                <div class="grid">
-                    <div class="span--1-2">
-                        <div style="background: #e74c3c; width: 100%; margin-bottom: 30px;">
-                            <h3>1/2</h3>
-                           <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
-                        </div>
-                    </div>
-                    <div class="span--1-2">
-                        <div style="background: #e74c3c; width: 100%; margin-bottom: 30px;">
-                            <h3>1/2</h3>
-                            <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid">
-                    <div class="span--1-3">
-                        <div style="background: #f39c12; width: 100%; margin-bottom: 30px;">
-                            <h3>1/3</h3>
-                            <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
-                        </div>
-                    </div>
-                    <div class="span--2-3">
-                        <div style="background: #f39c12; width: 100%; margin-bottom: 30px;">
-                            <h3>2/3</h3>
-
-                            <div class="grid">
-                                <div class="span--1-2">
-                                    <div style="background: #f1c40f; width: 100%; margin-bottom: 30px;">
-                                        <h3>1/2</h3>
-                                        <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
-                                    </div>
-                                </div>
-                                <div class="span--1-2">
-                                    <div style="background: #f1c40f; width: 100%; margin-bottom: 30px;">
-                                        <h3>1/2</h3>
-                                        <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
-                                    </div>
-                                </div>
-
-                                <div class="span--1-1">
-                                    <div style="background: #9b59b6; width: 100%; margin-bottom: 30px;">
-                                        <h3>1/1</h3>
-                                        <p style="font-size: 12px;">Lorem ipsum dolar sit amet.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="span--1-1  span--1-3--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-3--m</p></div>
         </div>
-         <div class="span--1-1  span--1-5--m">
-            <div style="background: #1abc9c; width: 100%; margin-bottom: 30px;">
-                <h3>1/5</h3>
-                <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
+        <div class="span--1-1  span--1-3--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-3--m</p></div>
+        </div>
+         <div class="span--1-1  span--1-3--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-3--m</p></div>
+        </div>
+        <div class="span--1-1  span--2-3--m">
+            <div class="demo-block"><p>span--1-1<br> span--2-3--m</p></div>
         </div>
     </div>
+
+     <h3>Quarters</h3>
+
+    
+    <div class="grid  grid--equal-height">
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div> 
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div> 
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--2-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--2-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div> 
+        <div class="span--1-1  span--3-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--3-4--m</p></div>
+        </div>
+    </div>
+
+    <h3>Fifths</h3>
+
+    <div class="grid  grid--equal-height">
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-5--m</p></div>
+        </div>
+         <div class="span--1-1  span--2-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--2-5--m</p></div>
+        </div>
+
+        <div class="span--1-1  span--2-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--2-5--m</p></div>
+        </div>
+        <div class="span--1-1  span--3-5--m">
+            <div class="demo-block"><p>span--1-1<br> span--3-5--m</p></div>
+        </div>
+    </div>
+
+    <h3>Sevenths</h3>
+
+    <div class="grid">
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-7--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-7--m</p></div>
+        </div>
+    </div>
+
+    <h2>Additional Grid functions</h2>
+    
+    <h3>Push classes</h3>
+
+    <p>Push classes adds a left margin that is equivilant to a unit (or multipleunits) of a grid.</p>
+
+     <div class="grid">
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-4--m  push--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m<br> push--1-4--m</p></div>
+        </div>
+    </div>
+
+    <h3>Omega classes</h3>
+
+    <p>Omega classes allow us to define a grid item that will appear after all the others. Omega must be applied per breakpoint, it does not scale up for obvious reasons.</p>
+
+     <div class="grid">
+        <div class="span--1-1  span--1-4--m">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m</p></div>
+        </div>
+        <div class="span--1-1  span--1-4--m  span--omega--m  span--omega--l">
+            <div class="demo-block"><p>span--1-1<br> span--1-4--m<br> push--1-4--m</p></div>
+        </div>
+    </div>
+
 
 
     <!-- Headings -->
@@ -326,10 +230,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </figure>
         </div>
     </div>
-
-    
-
-    <!-- Buttons -->
 
     <!-- Forms -->
 

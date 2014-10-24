@@ -23,7 +23,8 @@ License URI:    n/a
 
 @import "partial/_sass-list-maps.scss";
 @import "partial/_clearfix.scss";
-@import "partial/_grid.scss";
+@import "compass";
+@import "gridtacular";
 @import "partial/_rem.scss";
 
 // Modules 
