@@ -7,14 +7,16 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         
         /**
-         * Sass Compiling Task
+         * Libsass Compiling Task
          *
+         * DISABLED UNTIL IT UPDATES TO SASS 3x FULLY
+         * 
          * Compiles Sass stylesheets using libsass via node-sass
          * Very quick BUT doesn't fully support latest sass release
          * due to libsass being behind.
          */
 
-        sass: {
+        /*sass: {
             dist: {
                 files: {
                     'style.css' : 'assets/sass/style.scss'
@@ -29,7 +31,27 @@ module.exports = function(grunt) {
                     'style.css' : 'assets/sass/style.scss'
                 }
             }
+        },*/
+
+
+        /**
+         * Grunt Sass Task (rubysass)
+         *
+         * Handles compiling of Sass scripts
+         */
+        
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded',
+                    precision: 10
+                },
+                files: {
+                    'style.css': 'assets/sass/style.scss',
+                }
+            }
         },
+
 
         /**
          * Watch Task
@@ -149,7 +171,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-sass'); //libsass via nodesass
+    //grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-autoprefixer');
 

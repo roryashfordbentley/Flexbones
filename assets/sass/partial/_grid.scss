@@ -25,9 +25,9 @@
 // 
 // Works out the percent width of columns (gutters can be 
 // any unit but columns are always percent bases)
-@function column-width($number-of-columns,$total-columns) {
-    $single-col-width: 100 / $total-columns * 1%;
-    @return $single-col-width * $number-of-columns;
+@function column-width($number_of_columns,$total_columns) {
+    $single_col_width: 100 / $total_columns * 1%;
+    @return $single_col_width * $number_of_columns;
 }
 
 
@@ -56,8 +56,8 @@
 // 
 // Used to set grids semantically from within 
 // the stylesheet with no additional HTML markup
-@mixin span-columns($columns, $total-columns){
-    width: column-width($columns,$total-columns);
+@mixin span-columns($columns, $total_columns){
+    width: column-width($columns,$total_columns);
     padding-left: $gutter-width; 
 }
 
@@ -93,7 +93,7 @@
 // EXPERIMENTAL (Disabled in current build)
 // feels extremely hacky, doesnt scale particularly well
 // should it be called per media query?
-@mixin grid-equal-height($gutter,$column-name){
+@mixin grid-equal-height($gutter,$column_name){
     .grid--equal-height{
         display: flex;
         flex-wrap: wrap;
@@ -109,7 +109,7 @@
 
 
 // Grid with no gutters
-@mixin grid-no-gutter($column-class,$suffix: null){
+@mixin grid-no-gutter($column_class,$suffix: null){
     .grid--no-gutter#{$suffix}{
         margin-left: 0;
 
@@ -130,7 +130,8 @@
     $fractions: ();
     @for $i from -$numerator through -1{
         @if($numerator % abs($i) == 0 and $denominator % abs($i) == 0){
-            $fractions: map-merge($fractions, abs($i) #{$numerator/abs($i)}-#{$denominator/abs($i)});
+            $fraction: (abs($i): #{$numerator/abs($i)}-#{$denominator/abs($i)});
+            $fractions: map-merge($fractions, $fraction);
         }     
     }
     // return map of all fractions
@@ -144,15 +145,15 @@
 // columns divided by the total number of columns.
 @mixin grid-columns($prefix: null, $suffix: null, $columns: null, $fifths: false, $sevenths: false){
     @for $i from 1 through $columns{
-        $css-classes: equivalent-fractions($i,$columns);
-        $column-class: null;
+        $css_classes: equivalent-fractions($i,$columns);
+        $column_class: null;
         
-        @each $css-class in $css-classes{
-            $column-class: $column-class, 
-            #{ $prefix }#{ value( $css-class ) }#{ $suffix };
+        @each $key, $css_class in $css_classes{
+            $full_css_class: #{$prefix}#{$css-class}#{$suffix};
+            $column_class: $column_class, $full_css_class;
         }
         
-        #{$column-class}{
+        #{$column_class}{
             width: column-width($i,$columns);
         }
     }
@@ -161,7 +162,7 @@
     // doesnt divide into fifths.
     @if($fifths == true){
         @for $i from 1 through 5{
-            $fifth_class: #{$prefix}#{$i}+'-5'+ #{$suffix};
+            $fifth_class: #{$prefix}#{$i}-5#{$suffix};
 
             #{$fifth_class}{
                 width: column-width($i,5);
@@ -173,7 +174,7 @@
     // doesnt divide into fifths.
     @if($sevenths == true){
         @for $i from 1 through 7{
-            $seventh_class: #{$prefix}#{$i}+'-7'+ #{$suffix};
+            $seventh_class: #{$prefix}#{$i}-7#{$suffix};
 
             #{$seventh_class}{
                 width: column-width($i,7);
@@ -189,15 +190,15 @@
 // the column by a maximum number of total-columns -1
 @mixin grid-push($prefix: null, $suffix: null, $columns: null){
     @for $i from 1 through $columns - 1{
-        $css-classes: equivalent-fractions($i,$columns);
-        $push-class: null;
+        $css_classes: equivalent-fractions($i,$columns);
+        $push_class: null;
         
-        @each $css-class in $css-classes{
-            $push-class: $push-class, 
-            #{ $prefix }#{ value($css-class) }#{ $suffix };
+        @each $key, $css_class in $css_classes{
+            $full_css_class: #{$prefix}#{$css_class}#{$suffix};
+            $push_class: $push_class, $full_css_class;
         }
         
-        #{$push-class}{
+        #{$push_class}{
             margin-left: column-width($i,$columns);
         }
     }
@@ -220,7 +221,7 @@
 //
 // Outputs the current breakpoint name to quickly debug 
 // each breakpoint.
-@mixin grid-debug($breakpoint-name,$debug-bg: #000){
+@mixin grid-debug($breakpoint_name,$debug_bg: #000){
     body:after{
         position: fixed;
         display: block;
@@ -247,33 +248,32 @@
     // sass-list-maps polyfill, will add code for 
     // sass3.3+ support later
 
-    $grids: map-get-z($grid-args, grids);
-    $column-name: map-get-z($grid-args, config, columnclass);
-    $column-prefix: #{'.' + $column-name};
-    $push-prefix: #{'.' + map-get-z($grid-args, config, pushclass)};
-    $debug-display: map-get-z($grid-args, config, debug);
+    $grids: map-get($grid_args, grids);
+    $column_name: map-get(map-get($grid_args, config), columnclass);
+    $column_prefix: #{'.' + $column_name};
+    $push_prefix: #{'.' + map-get(map-get($grid_args, config), pushclass)};
+    $debug_display: map-get(map-get($grid_args, config), debug);
 
-    @each $grid in $grids{
-        $columns:       map-get(value($grid),columns);
-        $suffix:        map-get(value($grid),suffix);
-        $breakpoint:    map-get(value($grid),breakpoint);
-        $gutter:        map-get(value($grid),gutter);
+    @each $grid_name, $grid_map in $grids{
+        $columns:       map-get($grid_map,columns);
+        $suffix:        map-get($grid_map,suffix);
+        $breakpoint:    map-get($grid_map,breakpoint);
+        $gutter:        map-get($grid_map,gutter);
 
         // Debug info
-        $debug-bg:      map-get-z(value($grid),debug,background);
-        $debug-name:    map-get-z(value($grid),debug,name);
+        $debug-bg:      map-get(map-get($grid_map, debug), background);
+        $debug-name:    map-get(map-get($grid_map, debug), name);
 
         // Include the necessary mixins to generate the grids
 
         @include at-breakpoint($breakpoint){
             @include grid($gutter);
-            @include grid-no-gutter($column-name,$suffix);
-            //@include grid-equal-height($gutter,$column-name); //Currently disabled
-            @include grid-columns($column-prefix,$suffix,$columns,true, true);
-            @include grid-push($push-prefix, $suffix, $columns);
-            @include grid-omega($column-prefix, $suffix);
-            @if( $debug-display == true ){ 
-                @include grid-debug($debug-name,$debug-bg) 
+            @include grid-no-gutter($column_name,$suffix);
+            @include grid-columns($column_prefix,$suffix,$columns,true, true);
+            @include grid-push($push_prefix, $suffix, $columns);
+            @include grid-omega($column_prefix, $suffix);
+            @if( $debug_display == true ){ 
+                @include grid-debug($debug_name,$debug_bg) 
             }    
         }    
     }
