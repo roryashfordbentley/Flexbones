@@ -13,24 +13,11 @@
 .wrapper {
     margin: 0 auto;
     width: 90%;
-    @include at-breakpoint($l){ 
+    @include at-breakpoint($mq_large_min){ 
         width: 90%;
         max-width: 1200px; 
     }
-
-    * + *{
-        margin-top: rem(24);
-    }
-
 }
-
-    .grid{
-        margin-top: 0;
-    }
-
-    .grid > * {
-        margin-top: rem(24);
-    }
 
 
 /**
@@ -41,42 +28,46 @@
  * independant number of columns and 
  * gutters, debug breakpoints.
  */
+
 $grid_args:(
     config: (
         columnclass:         'span--',
         pushclass:           'push--',
-        debug:               true
+        debug:               true,
+        push:                true,
+        omega:               true
     ),
     grids: (
-        default: (
+        small: (
             columns:         12,
             suffix:          null,
-            breakpoint:      null,
             gutter:          10px,
-            debug: (
-                background:  #13a2f7,
-                name:        'Small'
-            )
+            debug_name:      'Small',
+            debug_bg:        #13a2f7,
+            fifths:          true,
+            sevenths:        true
         ),
         medium: (
-            columns:         12,
-            suffix:          '--m',
-            breakpoint:      $m,
-            gutter:          20px,
-            debug: (
-                background:  #9ed927,
-                name:        'Medium'
-            )
+            columns:        12,
+            suffix:         '--m',
+            breakpoint_min: 800px,
+            breakpoint_max: null,
+            gutter:         20px,
+            debug_name:     'Medium',
+            debug_bg:       #13a2f7,
+            fifths:         true,
+            sevenths:       true
         ),
         large: (
-            columns:         12,
-            suffix:          '--l',
-            breakpoint:      $l,
-            gutter:          30px,
-            debug: (
-                background:  #ff645f,
-                name:        'Large'
-            )
+            columns:        12,
+            suffix:         '--l',
+            breakpoint_min: 11 00px,
+            breakpoint_max: null,
+            gutter:         30px,
+            debug_name:     'Large',
+            debug_bg:       #13a2f7,
+            fifths:         true,
+            sevenths:       true
         )
     )
 );

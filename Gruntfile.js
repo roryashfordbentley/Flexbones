@@ -3,35 +3,11 @@
 */
 
 module.exports = function(grunt) {
+
+    require('time-grunt')(grunt); // time-grunt
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
-        /**
-         * Libsass Compiling Task
-         *
-         * DISABLED UNTIL IT UPDATES TO SASS 3x FULLY
-         * 
-         * Compiles Sass stylesheets using libsass via node-sass
-         * Very quick BUT doesn't fully support latest sass release
-         * due to libsass being behind.
-         */
-
-        /*sass: {
-            dist: {
-                files: {
-                    'style.css' : 'assets/sass/style.scss'
-                }
-            },
-            dev: {
-                options: {
-                     outputStyle: 'expanded',
-                     precision: '10'
-                },
-                files: {
-                    'style.css' : 'assets/sass/style.scss'
-                }
-            }
-        },*/
 
 
         /**
@@ -43,6 +19,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
+                    sourcemap: 'auto',
                     style: 'expanded',
                     precision: 10
                 },
@@ -63,13 +40,10 @@ module.exports = function(grunt) {
         watch: {
             scss: {
                 files: 'assets/sass/**/*.scss',
+                tasks: ['sass','notify:watchsass'],
                 options: {
                     livereload: false
                 }
-            },
-            css: {
-                files: 'assets/sass/**/*.scss',
-                tasks: ['sass','autoprefixer','notify:watchsass'],
             },
             markup: {
                 files: '**/*.php'
@@ -86,6 +60,7 @@ module.exports = function(grunt) {
                 livereload: true
             }
         },
+
 
         /**
          * Concatenate Task
@@ -111,6 +86,7 @@ module.exports = function(grunt) {
             }
         },
 
+
         /**
          * Uglify Task
          * This task minifies a single .js file (scripts.min.js)
@@ -125,6 +101,7 @@ module.exports = function(grunt) {
                 files: { 'assets/js/min/scripts.min.js':'assets/js/min/scripts.min.js'}
             }
         },
+
 
         /**
          * Notify Task
@@ -144,8 +121,15 @@ module.exports = function(grunt) {
                     title: 'JS Minify Complete',
                     message: 'Scripts successfully concatenated and minified'
                 }
+            },
+            imagemin: {
+                options: {
+                    title: 'Image minimising complete',
+                    message: 'All images within source directory succesfully minified'
+                }
             }
         },
+
 
         /**
          * Autoprefixer
@@ -160,8 +144,68 @@ module.exports = function(grunt) {
                 src: 'style.css',
                 dest: 'style.css'
             }
+        },
+
+
+        /**
+         * Imagemin
+         * Reduce image filesize
+         * Supports PNG, JPG, GIF, ICO
+         * Looks in assets/imgs folder for matching files
+         * Add additional folders if needed
+         *
+         * 
+         */
+
+        imagemin: {
+            options: {
+                optimizationLevel: 3
+            },
+            build: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/imgs/',
+                    src: ['**/*.{png,jpg,gif,ico}'],
+                    dest: 'assets/imgs/'
+                }]
+            }
+        },
+
+
+        /**
+         * SVG2PNG
+         * Converts SVG files to PNG
+         * Works nicely with svgeezy.
+         */
+
+        svg2png: {
+            all: {
+                files: [{ 
+                    cwd: 'assets/imgs/', 
+                    src: ['**/*.svg'], 
+                    dest: 'assets/imgs/' 
+                }]
+            }
+        },
+
+
+        /**
+         * Pixrem
+         * insert pixel fallback for rem values
+         */
+        
+        pixrem: {
+            options: {
+                rootvalue: '62.5%',
+            },
+            dist: {
+                src: 'style.css',
+                dest: 'style.css'
+            }
         }
+
     });
+
 
     /**
      * Load Plugins
@@ -171,10 +215,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    //grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-svg2png');
+    //grunt.loadNpmTasks('grunt-sass'); // Libsass
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-pixrem');
 
     /**
      * Register Tasks
@@ -182,6 +229,7 @@ module.exports = function(grunt) {
      * task that is run when you execute 'grunt'
      */
 
-    grunt.registerTask('default',['watch']);    
+    grunt.registerTask('default',['watch','autoprefixer','pixrem']);    
     grunt.registerTask('minifyjs',['concat','uglify']);
+    grunt.registerTask('imageoptimiser',['imagemin','notify:imagemin','grunt-svg2png']);
 }

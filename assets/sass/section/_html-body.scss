@@ -6,10 +6,10 @@
 
 html { 
     font-size: $font_size;
-    @include at-breakpoint($m){ font-size: $font_size_m; }
-    @include at-breakpoint($l){ font-size: $font_size_l; }
-    @include at-breakpoint($xl){ font-size: $font_size_xl; }
-    line-height: 1.5;
+    @include at-breakpoint($mq_medium_min){ font-size: $font_size_m; }
+    @include at-breakpoint($mq_large_min){ font-size: $font_size_l; }
+    @include at-breakpoint($mq_extralarge_min){ font-size: $font_size_xl; }
+    line-height: $line-height;
 }
 
     body {

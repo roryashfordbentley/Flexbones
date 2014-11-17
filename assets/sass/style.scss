@@ -21,13 +21,11 @@ License URI:    n/a
 // Partials
 // Mixins, functions and any sass files that dont produce output
 
-//@import "partial/_sass-list-maps.scss";
 @import "partial/_clearfix.scss";
-
-@import "partial/_grid.scss";
+@import "partial/_gridtacular.scss";
 @import "partial/_rem.scss";
 
-// Modules 
+// Modules
 // module components, modular and reuseable
 
 @import "modules/__base.scss";

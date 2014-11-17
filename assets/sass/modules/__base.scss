@@ -8,15 +8,25 @@
 // Here we use s,m,l,xl to identify breakpoints 
 // but you can use whatever you like.
     
-$s:                     0,       800px;
-$m:                     800px,   null;
-$l:                     1000px,  null;
-$xl:                    1400px,  null;
+$mq_small_min:          null;
+$mq_small_max:          null;
+
+$mq_medium_min:         800px;
+$mq_medium_max:         null;
+
+$mq_large_min:          1000px;
+$mq_large_max:          null;
+
+$mq_extralarge_min:     1200px;
+$mq_extralarge_max:     null;
+
+// Line height
+
+$line-height:           1.5;
 
 // Box sizing
 
 $border_box:            true;
-
 
 // Base font sizes for different media queries
 

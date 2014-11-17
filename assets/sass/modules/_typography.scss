@@ -26,8 +26,7 @@ p{
 
 // Links
 
-a,
-a:visited{
+%link {
     color: $link;
     text-decoration: none;
     display: inline-block;
@@ -38,17 +37,28 @@ a:visited{
         $text_colour 16%,
         rgba(0,0,0,0) 16%
     );
+
+    &:hover{
+        color: $link_hover;
+        text-decoration: none;
+        background-image: linear-gradient(to top,
+            rgba(0,0,0,0) 11%,
+            $link_hover 11%,
+            $link_hover 16%,
+            rgba(0,0,0,0) 16%
+        );
+    }
+
+
 }
 
-a:hover{
-    color: $link_hover;
-    text-decoration: none;
-    background-image: linear-gradient(to top,
-        rgba(0,0,0,0) 11%,
-        $link_hover 11%,
-        $link_hover 16%,
-        rgba(0,0,0,0) 16%
-    );
+// links within paragraphs
+// Extends %link
+
+
+p a,
+p a:visited{
+    @extend %link;
 }
 
 
@@ -92,8 +102,4 @@ ol {
 
 pre{
     font-size: rem(13);
-    padding: rem(10) rem(20);
-    background: #102d48;
-    color: white;
-    margin-bottom: rem(24);
 }

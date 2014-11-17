@@ -34,9 +34,7 @@ License URI:    n/a
   margin: 0;
   padding: 0;
   position: relative;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /**
@@ -60,17 +58,6 @@ License URI:    n/a
     max-width: 1200px;
   }
 }
-.wrapper * + * {
-  margin-top: 2.4rem;
-}
-
-.grid {
-  margin-top: 0;
-}
-
-.grid > * {
-  margin-top: 2.4rem;
-}
 
 /**
  * Grid setup
@@ -87,13 +74,6 @@ License URI:    n/a
 .grid:before, .grid:after {
   content: "";
   display: table;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
 }
 .grid:after {
   clear: both;
@@ -108,6 +88,7 @@ License URI:    n/a
 .grid--no-gutter {
   margin-left: 0;
 }
+
 .grid--no-gutter > * {
   padding-left: 0;
 }
@@ -277,13 +258,6 @@ body:after {
   .grid:before, .grid:after {
     content: "";
     display: table;
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
   }
   .grid:after {
     clear: both;
@@ -298,6 +272,7 @@ body:after {
   .grid--no-gutter--m {
     margin-left: 0;
   }
+
   .grid--no-gutter--m > * {
     padding-left: 0;
   }
@@ -455,11 +430,11 @@ body:after {
     font-size: 14px;
     font-weight: bold;
     color: white;
-    background: #9ed927;
+    background: #13a2f7;
     content: "Medium";
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 11 0px) {
   .grid {
     margin-left: -30px;
     *zoom: 1;
@@ -467,13 +442,6 @@ body:after {
   .grid:before, .grid:after {
     content: "";
     display: table;
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
   }
   .grid:after {
     clear: both;
@@ -488,6 +456,7 @@ body:after {
   .grid--no-gutter--l {
     margin-left: 0;
   }
+
   .grid--no-gutter--l > * {
     padding-left: 0;
   }
@@ -645,7 +614,7 @@ body:after {
     font-size: 14px;
     font-weight: bold;
     color: white;
-    background: #ff645f;
+    background: #13a2f7;
     content: "Large";
   }
 }
@@ -663,22 +632,17 @@ textarea {
   font-size: 1.6rem;
 }
 
-a,
-a:visited {
+p a,
+p a:visited {
   color: #2e3131;
   text-decoration: none;
   display: inline-block;
   webkit-font-smoothing: antialiased;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(11%, transparent), color-stop(11%, #2e3131), color-stop(16%, #2e3131), color-stop(16%, transparent));
-  background-image: -webkit-linear-gradient(bottom, transparent 11%, #2e3131 11%, #2e3131 16%, transparent 16%);
   background-image: linear-gradient(to top, transparent 11%, #2e3131 11%, #2e3131 16%, transparent 16%);
 }
-
-a:hover {
+p a:hover {
   color: #e3446d;
   text-decoration: none;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(11%, transparent), color-stop(11%, #e3446d), color-stop(16%, #e3446d), color-stop(16%, transparent));
-  background-image: -webkit-linear-gradient(bottom, transparent 11%, #e3446d 11%, #e3446d 16%, transparent 16%);
   background-image: linear-gradient(to top, transparent 11%, #e3446d 11%, #e3446d 16%, transparent 16%);
 }
 
@@ -718,10 +682,6 @@ ol {
 
 pre {
   font-size: 1.3rem;
-  padding: 1rem 2rem;
-  background: #102d48;
-  color: white;
-  margin-bottom: 2.4rem;
 }
 
 /**
@@ -741,8 +701,7 @@ pre {
   text-decoration: none;
 }
 .btn:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /**
@@ -755,13 +714,6 @@ pre {
 .clear:before, .clear:after {
   content: "";
   display: table;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
 }
 .clear:after {
   clear: both;
@@ -890,7 +842,7 @@ html {
     font-size: 62.5%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   html {
     font-size: 62.5%;
   }
@@ -913,3 +865,5 @@ body {
 /**
  * sidebar.scss
  */
+
+/*# sourceMappingURL=style.css.map */
