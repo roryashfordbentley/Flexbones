@@ -1,5 +1,6 @@
 /**
  * Scripts.js
- * User scripts and plugin instantiations
- * scripts.js should be called in the site footer
+ * Require scripts for use with Browserify
  */
+
+var googleanalytics = require('./libs/google-analytics.js');

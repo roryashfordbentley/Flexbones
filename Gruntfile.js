@@ -77,9 +77,7 @@ module.exports = function(grunt) {
             dist: {
                 // the files to concatenate
                 src: [
-                    '!assets/js/libs/modernizr.js',
-                    'assets/js/libs/*.js',
-                    'assets/js/*.js'
+                    'assets/js/min/scripts.min.js',
                 ],
                 // the location of the resulting JS file
                 dest: 'assets/js/min/scripts.min.js'
@@ -106,7 +104,7 @@ module.exports = function(grunt) {
         /**
          * Notify Task
          * Native OS notification system
-         * Dispalys a notification on completion or failure.
+         * Displays a notification on completion or failure.
          */
 
         notify: {
@@ -122,7 +120,7 @@ module.exports = function(grunt) {
                     message: 'Scripts successfully concatenated and minified'
                 }
             },
-            imagemin: {
+            images: {
                 options: {
                     title: 'Image minimising complete',
                     message: 'All images within source directory succesfully minified'
@@ -202,34 +200,75 @@ module.exports = function(grunt) {
                 src: 'style.css',
                 dest: 'style.css'
             }
-        }
+        },
 
+
+        /**
+         * Browserify
+         *
+         * Node style dependency management
+         */
+        
+        browserify: {
+            'assets/js/scripts.min.js': ['assets/js/scripts.js'] // dest/src
+        }
     });
 
 
     /**
-     * Load Plugins
-     * Load the required plugins
+     * Register Tasks (also load them as needed)
+     * create and register tasks and also load 
+     * npm tasks as needed
      */
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-svg2png');
-    //grunt.loadNpmTasks('grunt-sass'); // Libsass
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-notify');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-pixrem');
 
     /**
-     * Register Tasks
-     * create and register tasks including the 'default'
-     * task that is run when you execute 'grunt'
+     * Default Task / Watch Task
      */
 
-    grunt.registerTask('default',['watch','autoprefixer','pixrem']);    
-    grunt.registerTask('minifyjs',['concat','uglify']);
-    grunt.registerTask('imageoptimiser',['imagemin','notify:imagemin','grunt-svg2png']);
+    grunt.registerTask('default', [], function () { 
+        grunt.loadNpmTasks('grunt-contrib-watch');
+        grunt.loadNpmTasks('grunt-autoprefixer');
+        grunt.loadNpmTasks('grunt-pixrem');
+        grunt.loadNpmTasks('grunt-notify');
+
+        grunt.task.run('watch','autoprefixer','pixrem');
+    });
+
+   
+    /**
+     * Minify JS Task
+     */
+    
+    grunt.registerTask('minifyjs', [], function () {
+        grunt.loadNpmTasks('grunt-contrib-concat');
+        grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-notify');
+
+        grunt.task.run('concat','uglify');
+    });
+
+
+    /**
+     * JS Browserify Build Task
+     */
+
+    grunt.registerTask('jsbuild', [], function () {
+        grunt.loadNpmTasks('grunt-browserify');
+        grunt.loadNpmTasks('grunt-notify');
+
+        grunt.task.run('browserify');
+    });
+
+    /**
+     * Optimise Images Task
+     */
+    
+    grunt.registerTask('images', [], function () {
+        grunt.loadNpmTasks('grunt-contrib-imagemin');
+        grunt.loadNpmTasks('grunt-svg2png');
+        grunt.loadNpmTasks('grunt-notify');
+        
+        grunt.task.run('imagemin','svg2png','notify:images');
+    });
 }
