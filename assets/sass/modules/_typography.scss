@@ -17,44 +17,8 @@ textarea{
 }
 
 
-// Paragraph Styles
-
-p{
-
-}
-
-
-// Links
-
-%link {
-    color: $link;
-    text-decoration: none;
-    display: inline-block;
-    webkit-font-smoothing: antialiased;
-    background-image: linear-gradient(to top,
-        rgba(0,0,0,0) 11%,
-        $text_colour 11%,
-        $text_colour 16%,
-        rgba(0,0,0,0) 16%
-    );
-
-    &:hover{
-        color: $link_hover;
-        text-decoration: none;
-        background-image: linear-gradient(to top,
-            rgba(0,0,0,0) 11%,
-            $link_hover 11%,
-            $link_hover 16%,
-            rgba(0,0,0,0) 16%
-        );
-    }
-
-
-}
-
 // links within paragraphs
 // Extends %link
-
 
 p a,
 p a:visited{

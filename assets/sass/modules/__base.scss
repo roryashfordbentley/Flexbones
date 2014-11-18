@@ -11,32 +11,40 @@
 $mq_small_min:          null;
 $mq_small_max:          null;
 
+// Alias
+$s: ($mq_small_min, $mq_small_max);
+
 $mq_medium_min:         800px;
 $mq_medium_max:         null;
+
+// Alias
+$m: ($mq_medium_min, $mq_medium_max);
 
 $mq_large_min:          1000px;
 $mq_large_max:          null;
 
+// Alias
+$l: ($mq_large_min, $mq_large_max);
+
 $mq_extralarge_min:     1200px;
 $mq_extralarge_max:     null;
 
-// Line height
+// Alias
+$xl: ($mq_extralarge_min,$mq_extralarge_max);
 
+// Line height
 $line-height:           1.5;
 
 // Box sizing
-
 $border_box:            true;
 
 // Base font sizes for different media queries
-
 $font_size:             62.5%;
 $font_size_m:           62.5%;
 $font_size_l:           62.5%;
 $font_size_xl:          62.5%;
 
 // Font Sizes
-
 $size_h1:               rem(36);
 $size_h2:               rem(24); 
 $size_h3:               rem(18);
@@ -46,13 +54,11 @@ $size_lead:             rem(24);
 $size_small:            rem(12);
 
 // Font Weights
-
 $light:                 300;
 $medium:                400;
 $semibold:              600;
 $bold:                  700;
 
 // Font Stack
-
 $heading_font:          "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $body_font:             $heading_font;
