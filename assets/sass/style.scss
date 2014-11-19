@@ -19,17 +19,18 @@ License URI:    n/a
  */
 
 // Partials
-// Mixins, functions and any sass files that dont produce output
+// Mixins, functions and configs that dont produce output
 
 @import "partial/_clearfix.scss";
 @import "partial/_gridtacular.scss";
 @import "partial/_rem.scss";
+@import "partial/__base.scss";
+@import "partial/__colours.scss";
+@import "partial/_links.scss";
 
 // Modules
 // module components, modular and reuseable
 
-@import "modules/__base.scss";
-@import "modules/_colours.scss";
 @import "modules/_reset.scss";
 @import "modules/_grid-setup.scss";
 @import "modules/_typography.scss";

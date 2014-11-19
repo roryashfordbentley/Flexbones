@@ -20,7 +20,7 @@ add_action('init', 'flexbones_custom_jquery');
 function flexbones_load_js() {
     // NAME / LOCATION / DEPENDENCIES (accepts array) / VERSION / IN FOOTER (true | false)
     wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), '1.11.1', true);
-    wp_register_script('scripts', get_template_directory_uri() . '/assets/js/min/scripts.min.js', array( 'jquery' ), '1', true);
+    wp_register_script('scripts', get_template_directory_uri() . '/scripts.min.js', array( 'jquery' ), '1', true);
 
     // Enqueue Scripts
     wp_enqueue_script('scripts');

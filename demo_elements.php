@@ -3,18 +3,8 @@
         color: #fff;
         padding: 1rem;
         text-align: center;
-        /*height: 8rem;*/
-        /*border-top: 1px solid #00e1fb;
-        border-bottom: 1px solid #6f10d9;
-
-        background-image: linear-gradient(to bottom right,#00d2ff, #3a7bd5),linear-gradient(to bottom right,#00d2ff, #3a7bd5);
-        background-size:1px 100%;
-        background-position:0 0, 100% 0;
-        background-repeat:no-repeat;*/
-
         background-image: linear-gradient(to bottom right,#00d2ff, #3a7bd5);
-        border-radius: 4px;
-        
+        border-radius: 4px; 
     }
 
 </style>
