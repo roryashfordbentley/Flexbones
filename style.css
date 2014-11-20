@@ -25,16 +25,15 @@ License URI:    n/a
  * define basic colours and then apply them to vars
  * prefix colour variables with 'clr'
  */
-p a,
-p a:visited {
+p a, p a:visited {
   color: #2e3131;
   text-decoration: none;
   display: inline-block;
-  background-image: linear-gradient(to top, transparent 11%, #2e3131 11%, #2e3131 16%, transparent 16%); }
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #2e3131 11%, #2e3131 16%, rgba(0, 0, 0, 0) 16%); }
   p a:hover {
     color: #e3446d;
     text-decoration: none;
-    background-image: linear-gradient(to top, transparent 11%, #e3446d 11%, #e3446d 16%, transparent 16%); }
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #e3446d 11%, #e3446d 16%, rgba(0, 0, 0, 0) 16%); }
 
 /**
  * _reset.scss
@@ -353,7 +352,9 @@ body:after {
     font-weight: bold;
     color: white;
     background: #13a2f7;
-    content: "Medium"; } }
+    content: "Medium"; }
+ }
+
 @media (min-width: 11 0px) {
   .grid {
     margin-left: -30px;
@@ -493,17 +494,15 @@ body:after {
     font-weight: bold;
     color: white;
     background: #13a2f7;
-    content: "Large"; } }
+    content: "Large"; }
+ }
+
 /**
  * typography.scss
  * all base font styles,
  * paragraphs, headings, lists
  */
-p,
-ul,
-ol,
-input,
-textarea {
+p, ul, ol, input, textarea {
   font-weight: 400;
   font-size: 1.6rem; }
 
@@ -572,9 +571,7 @@ pre {
 label {
   display: block; }
 
-input,
-select,
-textarea {
+input, select, textarea {
   font-family: inherit;
   outline: none; }
 
@@ -687,5 +684,3 @@ body {
 /**
  * sidebar.scss
  */
-
-/*# sourceMappingURL=style.css.map */
