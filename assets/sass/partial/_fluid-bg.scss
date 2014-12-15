@@ -1,0 +1,20 @@
+/**
+ * _fluid-bg.scss
+ * 
+ * mixin used where fluid, scalable background 
+ * images are needed.
+ *
+ * background-image must be defined outside
+ * the mixin and make sure not to use the background 
+ * shortcode.
+ */
+
+@mixin fluid-background(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+//alias, because I am forgetful!
+@mixin fluid-bg(){
+    @include fluid-background();
+}

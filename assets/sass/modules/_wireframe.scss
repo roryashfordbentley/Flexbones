@@ -1,0 +1,48 @@
+/**
+ * wf UI
+ *
+ * A collection of common design patterns with a wf style
+ * to rapidly develop mockups.
+ */
+
+// Menu 
+
+
+.main-menu{
+    @include clearfix();
+    //font-family: "Redacted";
+    padding: $base 0;
+}
+
+    .main-menu__home{
+        float: left;
+        width: 42px;
+    }
+
+    .main-menu__list{
+        float: right;
+        margin: 0;
+        list-style: none;
+    }
+
+        .main-menu__item{
+            float: left;
+            padding: $base;
+            margin-left: -1px;
+        }
+
+            .main-menu__item a{
+                text-decoration: none;
+            }
+
+    .wf-btn{
+        @extend .btn;
+        border-radius: rem(5);
+        font-size: rem(18);
+        a, 
+        a:visited{ 
+            display: block;
+            padding: $base/2;
+            text-decoration: none;
+        }
+    }

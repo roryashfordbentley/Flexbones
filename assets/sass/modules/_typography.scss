@@ -14,6 +14,11 @@ input,
 textarea{
     font-weight: $medium;
     font-size: $size_p;
+    margin-bottom: $base;
+
+    &:last-child{
+        margin-bottom:0;
+    }
 }
 
 
@@ -31,6 +36,7 @@ p a:visited{
 h1,h2,h3,h4,h5,h6{
     font-family: $heading_font;
     font-weight: $bold;
+    margin-bottom: $base;
 }
 
 h1{ 
@@ -59,13 +65,9 @@ em{
 
 // Lists
 
-ul {    
-    list-style-type: disc;
-}
-
-ol {
-    list-style-type: decimal;
-    font-weight: normal;
+ul,ol {    
+    //list-style-type: disc;
+    margin-left: $base;
 }
 
 // Pre
@@ -73,3 +75,27 @@ ol {
 pre{
     font-size: rem(13);
 }
+
+// Text align classes
+.txt-left{
+    text-align: center;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.txt-right{
+    text-align: right;
+}
+
+// Primo text
+// A large important block of text
+
+.primo{
+    p{
+        font-size: $size_primo;
+    }
+}
+
+

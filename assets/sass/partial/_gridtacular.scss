@@ -226,6 +226,16 @@
     }
 }
 
+// Center Class
+
+@mixin grid-center($prefix: null, $suffix: null){
+    //have to pass the grid class to override the float
+    .grid > #{$prefix}center#{$suffix} {
+        margin: 0 auto;
+        float: none;
+    }
+}
+
 
 // Debug 
 //
@@ -335,6 +345,7 @@
                 @include grid($gutter);
                 @include grid-no-gutter($column_name,$suffix);
                 @include grid-columns($column_prefix,$suffix,$columns,$fifths,$sevenths);
+                @include grid-center($column_prefix, $suffix);
                 
                 @if($push){
                     @include grid-push($push_prefix, $suffix, $columns);

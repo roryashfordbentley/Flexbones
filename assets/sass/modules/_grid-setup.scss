@@ -4,7 +4,7 @@
  */
 
 /**
- * Wrapper
+ * Wrappers
  *
  * Project specific rather than grid
  * specific so not suitable to add
@@ -12,12 +12,18 @@
  */
 .wrapper {
     margin: 0 auto;
-    width: 90%;
-    @include at-breakpoint($mq_large_min){ 
+    @include at-breakpoint($l){ 
         width: 90%;
         max-width: 1200px; 
     }
 }
+
+    .wrapper--small {
+        @include at-breakpoint($l){ 
+            width: 60%;
+            max-width: 1200px; 
+        }
+    }
 
 
 /**
@@ -41,7 +47,7 @@ $grid_args:(
         small: (
             columns:         12,
             suffix:          null,
-            gutter:          10px,
+            gutter:          $base,
             debug_name:      'Small',
             debug_bg:        #13a2f7,
             fifths:          true,
@@ -52,7 +58,7 @@ $grid_args:(
             suffix:         '--m',
             breakpoint_min: 800px,
             breakpoint_max: null,
-            gutter:         20px,
+            gutter:         $base,
             debug_name:     'Medium',
             debug_bg:       #13a2f7,
             fifths:         true,
@@ -61,9 +67,9 @@ $grid_args:(
         large: (
             columns:        12,
             suffix:         '--l',
-            breakpoint_min: 11 00px,
+            breakpoint_min: 1100px,
             breakpoint_max: null,
-            gutter:         30px,
+            gutter:         $base,
             debug_name:     'Large',
             debug_bg:       #13a2f7,
             fifths:         true,

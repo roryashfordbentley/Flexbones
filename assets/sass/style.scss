@@ -21,12 +21,14 @@ License URI:    n/a
 // Partials
 // Mixins, functions and configs that dont produce output
 
-@import "partial/_clearfix.scss";
+//@import "partial/_clearfix.scss";
 @import "partial/_gridtacular.scss";
 @import "partial/_rem.scss";
 @import "partial/__base.scss";
 @import "partial/__colours.scss";
 @import "partial/_links.scss";
+@import "partial/_fluid-bg.scss";
+@import "partial/_aspect-ratios.scss";
 
 // Modules
 // module components, modular and reuseable
@@ -41,6 +43,7 @@ License URI:    n/a
 @import "modules/_navigation.scss";
 @import "modules/_tables.scss";
 @import "modules/_wordpress.scss";
+@import "modules/_wireframe.scss";
 
 // Section
 // Styles for pages an elements that are not very reuseable
@@ -49,3 +52,6 @@ License URI:    n/a
 @import "section/_header.scss";
 @import "section/_footer.scss";
 @import "section/_sidebar.scss";
+@import "section/_belt.scss";
+@import "section/_box.scss";
+@import "section/_billboard.scss";

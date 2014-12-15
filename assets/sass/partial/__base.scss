@@ -6,8 +6,7 @@
 // Media Queries
 // Define breakpoints as a sass list
 // Here we use s,m,l,xl to identify breakpoints 
-// but you can use whatever you like.
-    
+// but you can use whatever you like.   
 $mq_small_min:          null;
 $mq_small_max:          null;
 
@@ -32,6 +31,12 @@ $mq_extralarge_max:     null;
 // Alias
 $xl: ($mq_extralarge_min,$mq_extralarge_max);
 
+// Project size defaults
+
+// Base size (used to maintain consistent 
+// sizing of borders, margins etc across the project)
+$base:                  rem(24);
+
 // Line height
 $line-height:           1.5;
 
@@ -42,7 +47,7 @@ $border_box:            true;
 $font_size:             62.5%;
 $font_size_m:           62.5%;
 $font_size_l:           62.5%;
-$font_size_xl:          62.5%;
+$font_size_xl:          75%;
 
 // Font Sizes
 $size_h1:               rem(36);
@@ -50,7 +55,7 @@ $size_h2:               rem(24);
 $size_h3:               rem(18);
 
 $size_p:                rem(16);
-$size_lead:             rem(24);
+$size_primo:            rem(20);
 $size_small:            rem(12);
 
 // Font Weights
@@ -60,5 +65,5 @@ $semibold:              600;
 $bold:                  700;
 
 // Font Stack
-$heading_font:          "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$heading_font:          Helvetica, Arial, sans-serif;
 $body_font:             $heading_font;

@@ -1,0 +1,16 @@
+/**
+ * _aspect-ratios.scss
+ *
+ * Mixin to display block level elements at
+ * fixed aspect ratios using padding top
+ * on an :after pseudo element.
+ */
+
+@mixin aspect-ratio($h,$v){
+    
+    &:after{
+        padding-top: ($v / $h)  * 100%;
+        display: block;
+        content: '';
+    }
+}

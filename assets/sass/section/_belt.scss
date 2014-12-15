@@ -1,0 +1,32 @@
+/**
+ * _belt.scss
+ *
+ *  Belt is a block of content that spans across the 
+ *  whole container and is padded all the way around.
+ *  Ideal for introductory text.
+ *
+ *  Useage: 
+ *  <div class="belt">[content]</div>
+ */
+
+.belt{
+    padding: 5%;
+    @include at-breakpoint($m){
+        padding: $base;
+    }
+}
+
+    .belt--large{
+        padding: 5%;
+        @include at-breakpoint($m){
+           padding: $base * 4;
+        }
+    }
+
+    .belt--tint-dark{
+        background: darken(#fff,5%);
+    }
+
+    .belt--bg{
+        @include fluid-bg();
+    }
