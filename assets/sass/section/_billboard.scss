@@ -9,8 +9,11 @@
     position: relative;
     transform-style: preserve-3d; // Fixes problems with blurry half pixel rendering
     img{ width: 100%; }
-    @include fluid-background();
-    @include aspect-ratio(2,1);
+    @include fluid-background(true);
+    @include aspect-ratio(1.5,1);
+    @include at-breakpoint($m){
+       @include aspect-ratio(3,1);
+    }
 }
 
     .billboard__caption{

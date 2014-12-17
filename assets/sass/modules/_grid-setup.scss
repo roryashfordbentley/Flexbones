@@ -1,33 +1,6 @@
 /**
  * _grid.scss
  * Responsive grids setup
- */
-
-/**
- * Wrappers
- *
- * Project specific rather than grid
- * specific so not suitable to add
- * to the grid system.
- */
-.wrapper {
-    margin: 0 auto;
-    @include at-breakpoint($l){ 
-        width: 90%;
-        max-width: 1200px; 
-    }
-}
-
-    .wrapper--small {
-        @include at-breakpoint($l){ 
-            width: 60%;
-            max-width: 1200px; 
-        }
-    }
-
-
-/**
- * Grid setup
  * 
  * Provide maps to setup grid system
  * add infinite breakpoints, breakpoint
@@ -39,9 +12,7 @@ $grid_args:(
     config: (
         columnclass:         'span--',
         pushclass:           'push--',
-        debug:               true,
-        push:                true,
-        omega:               true
+        debug:               true
     ),
     grids: (
         small: (
@@ -49,9 +20,7 @@ $grid_args:(
             suffix:          null,
             gutter:          $base,
             debug_name:      'Small',
-            debug_bg:        #13a2f7,
-            fifths:          true,
-            sevenths:        true
+            debug_bg:        #DABB3A,
         ),
         medium: (
             columns:        12,
@@ -60,9 +29,7 @@ $grid_args:(
             breakpoint_max: null,
             gutter:         $base,
             debug_name:     'Medium',
-            debug_bg:       #13a2f7,
-            fifths:         true,
-            sevenths:       true
+            debug_bg:       #1EA061,
         ),
         large: (
             columns:        12,
@@ -72,8 +39,6 @@ $grid_args:(
             gutter:         $base,
             debug_name:     'Large',
             debug_bg:       #13a2f7,
-            fifths:         true,
-            sevenths:       true
         )
     )
 );

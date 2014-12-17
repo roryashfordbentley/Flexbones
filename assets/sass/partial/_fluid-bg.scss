@@ -9,12 +9,17 @@
  * shortcode.
  */
 
-@mixin fluid-background(){
+@mixin fluid-background($fixed:false){
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @if($fixed){
+        background-attachment: fixed;
+    }
 }
-//alias, because I am forgetful!
-@mixin fluid-bg(){
-    @include fluid-background();
+
+//alias, because forgetful!
+@mixin fluid-bg($fixed:false){
+    @include fluid-background($fixed);
 }

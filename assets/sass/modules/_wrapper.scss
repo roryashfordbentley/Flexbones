@@ -1,0 +1,20 @@
+/**
+ * _wrapper.scss
+ *
+ * wrappers are set-width content blocks that 
+ * determine how wide the content area should be.
+ */
+.wrapper {
+    margin: 0 auto;
+    @include at-breakpoint($l){ 
+        width: 90%;
+        max-width: 1200px; 
+    }
+}
+
+    .wrapper--small {
+        @include at-breakpoint($l){ 
+            width: 75%;
+            max-width: 1200px; 
+        }
+    }

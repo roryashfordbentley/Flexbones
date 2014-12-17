@@ -23,10 +23,14 @@
         }
     }
 
-    .belt--tint-dark{
+    .belt--tint{
         background: darken(#fff,5%);
     }
 
     .belt--bg{
         @include fluid-bg();
     }
+
+        .belt--bg--fixed{
+            @include fluid-bg(true);
+        }

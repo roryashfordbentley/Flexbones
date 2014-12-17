@@ -1,2 +1,643 @@
-p a,p a:visited{color:#2e3131;text-decoration:none;display:inline-block;background-image:-webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 11%, #2e3131 11%, #2e3131 16%, rgba(0, 0, 0, 0) 16%);background-image:linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #2e3131 11%, #2e3131 16%, rgba(0, 0, 0, 0) 16%)}p a:hover{color:#e3446d;text-decoration:none;background-image:-webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 11%, #e3446d 11%, #e3446d 16%, rgba(0, 0, 0, 0) 16%);background-image:linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #e3446d 11%, #e3446d 16%, rgba(0, 0, 0, 0) 16%)}*{margin:0;padding:0;position:relative;box-sizing:border-box}audio,canvas,iframe,img,svg,video{vertical-align:middle}.wrapper{margin:0 auto}@media (min-width: 1000px){.wrapper{width:90%;max-width:1200px;}}@media (min-width: 1000px){.wrapper--small{width:60%;max-width:1200px;}}.grid{margin-left:-2.4rem;*zoom:1}.grid:before,.grid:after{content:"";display:table}.grid:after{clear:both}.grid>*{float:left;position:relative;padding-left:2.4rem}.grid--no-gutter{margin-left:0}.grid--no-gutter>*{padding-left:0}.span--1-12{width:8.33333%}.span--1-6,.span--2-12{width:16.66667%}.span--1-4,.span--3-12{width:25%}.span--1-3,.span--2-6,.span--4-12{width:33.33333%}.span--5-12{width:41.66667%}.span--1-2,.span--2-4,.span--3-6,.span--6-12{width:50%}.span--7-12{width:58.33333%}.span--2-3,.span--4-6,.span--8-12{width:66.66667%}.span--3-4,.span--9-12{width:75%}.span--5-6,.span--10-12{width:83.33333%}.span--11-12{width:91.66667%}.span--1-1,.span--2-2,.span--3-3,.span--4-4,.span--6-6,.span--12-12{width:100%}.span--1-5{width:20%}.span--2-5{width:40%}.span--3-5{width:60%}.span--4-5{width:80%}.span--5-5{width:100%}.span--1-7{width:14.28571%}.span--2-7{width:28.57143%}.span--3-7{width:42.85714%}.span--4-7{width:57.14286%}.span--5-7{width:71.42857%}.span--6-7{width:85.71429%}.span--7-7{width:100%}.grid>.span--center{margin:0 auto;float:none}.push--1-12{margin-left:8.33333%}.push--1-6,.push--2-12{margin-left:16.66667%}.push--1-4,.push--3-12{margin-left:25%}.push--1-3,.push--2-6,.push--4-12{margin-left:33.33333%}.push--5-12{margin-left:41.66667%}.push--1-2,.push--2-4,.push--3-6,.push--6-12{margin-left:50%}.push--7-12{margin-left:58.33333%}.push--2-3,.push--4-6,.push--8-12{margin-left:66.66667%}.push--3-4,.push--9-12{margin-left:75%}.push--5-6,.push--10-12{margin-left:83.33333%}.push--11-12{margin-left:91.66667%}.span--omega{float:right}body:after{position:fixed;display:block;bottom:10px;right:10px;padding:5px 20px;font-size:14px;font-weight:bold;color:white;background:#13a2f7;content:"Small"}@media (min-width: 800px){.grid{margin-left:-2.4rem;*zoom:1}.grid:before,.grid:after{content:"";display:table}.grid:after{clear:both}.grid>*{float:left;position:relative;padding-left:2.4rem}.grid--no-gutter--m{margin-left:0}.grid--no-gutter--m>*{padding-left:0}.span--1-12--m{width:8.33333%}.span--1-6--m,.span--2-12--m{width:16.66667%}.span--1-4--m,.span--3-12--m{width:25%}.span--1-3--m,.span--2-6--m,.span--4-12--m{width:33.33333%}.span--5-12--m{width:41.66667%}.span--1-2--m,.span--2-4--m,.span--3-6--m,.span--6-12--m{width:50%}.span--7-12--m{width:58.33333%}.span--2-3--m,.span--4-6--m,.span--8-12--m{width:66.66667%}.span--3-4--m,.span--9-12--m{width:75%}.span--5-6--m,.span--10-12--m{width:83.33333%}.span--11-12--m{width:91.66667%}.span--1-1--m,.span--2-2--m,.span--3-3--m,.span--4-4--m,.span--6-6--m,.span--12-12--m{width:100%}.span--1-5--m{width:20%}.span--2-5--m{width:40%}.span--3-5--m{width:60%}.span--4-5--m{width:80%}.span--5-5--m{width:100%}.span--1-7--m{width:14.28571%}.span--2-7--m{width:28.57143%}.span--3-7--m{width:42.85714%}.span--4-7--m{width:57.14286%}.span--5-7--m{width:71.42857%}.span--6-7--m{width:85.71429%}.span--7-7--m{width:100%}.grid>.span--center--m{margin:0 auto;float:none}.push--1-12--m{margin-left:8.33333%}.push--1-6--m,.push--2-12--m{margin-left:16.66667%}.push--1-4--m,.push--3-12--m{margin-left:25%}.push--1-3--m,.push--2-6--m,.push--4-12--m{margin-left:33.33333%}.push--5-12--m{margin-left:41.66667%}.push--1-2--m,.push--2-4--m,.push--3-6--m,.push--6-12--m{margin-left:50%}.push--7-12--m{margin-left:58.33333%}.push--2-3--m,.push--4-6--m,.push--8-12--m{margin-left:66.66667%}.push--3-4--m,.push--9-12--m{margin-left:75%}.push--5-6--m,.push--10-12--m{margin-left:83.33333%}.push--11-12--m{margin-left:91.66667%}.span--omega--m{float:right}body:after{position:fixed;display:block;bottom:10px;right:10px;padding:5px 20px;font-size:14px;font-weight:bold;color:white;background:#13a2f7;content:"Medium"}}@media (min-width: 1100px){.grid{margin-left:-2.4rem;*zoom:1}.grid:before,.grid:after{content:"";display:table}.grid:after{clear:both}.grid>*{float:left;position:relative;padding-left:2.4rem}.grid--no-gutter--l{margin-left:0}.grid--no-gutter--l>*{padding-left:0}.span--1-12--l{width:8.33333%}.span--1-6--l,.span--2-12--l{width:16.66667%}.span--1-4--l,.span--3-12--l{width:25%}.span--1-3--l,.span--2-6--l,.span--4-12--l{width:33.33333%}.span--5-12--l{width:41.66667%}.span--1-2--l,.span--2-4--l,.span--3-6--l,.span--6-12--l{width:50%}.span--7-12--l{width:58.33333%}.span--2-3--l,.span--4-6--l,.span--8-12--l{width:66.66667%}.span--3-4--l,.span--9-12--l{width:75%}.span--5-6--l,.span--10-12--l{width:83.33333%}.span--11-12--l{width:91.66667%}.span--1-1--l,.span--2-2--l,.span--3-3--l,.span--4-4--l,.span--6-6--l,.span--12-12--l{width:100%}.span--1-5--l{width:20%}.span--2-5--l{width:40%}.span--3-5--l{width:60%}.span--4-5--l{width:80%}.span--5-5--l{width:100%}.span--1-7--l{width:14.28571%}.span--2-7--l{width:28.57143%}.span--3-7--l{width:42.85714%}.span--4-7--l{width:57.14286%}.span--5-7--l{width:71.42857%}.span--6-7--l{width:85.71429%}.span--7-7--l{width:100%}.grid>.span--center--l{margin:0 auto;float:none}.push--1-12--l{margin-left:8.33333%}.push--1-6--l,.push--2-12--l{margin-left:16.66667%}.push--1-4--l,.push--3-12--l{margin-left:25%}.push--1-3--l,.push--2-6--l,.push--4-12--l{margin-left:33.33333%}.push--5-12--l{margin-left:41.66667%}.push--1-2--l,.push--2-4--l,.push--3-6--l,.push--6-12--l{margin-left:50%}.push--7-12--l{margin-left:58.33333%}.push--2-3--l,.push--4-6--l,.push--8-12--l{margin-left:66.66667%}.push--3-4--l,.push--9-12--l{margin-left:75%}.push--5-6--l,.push--10-12--l{margin-left:83.33333%}.push--11-12--l{margin-left:91.66667%}.span--omega--l{float:right}body:after{position:fixed;display:block;bottom:10px;right:10px;padding:5px 20px;font-size:14px;font-weight:bold;color:white;background:#13a2f7;content:"Large"}}p,ul,ol,input,textarea{font-weight:400;font-size:1.6rem;margin-bottom:2.4rem}p:last-child,ul:last-child,ol:last-child,input:last-child,textarea:last-child{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-family:Helvetica,Arial,sans-serif;font-weight:700;margin-bottom:2.4rem}h1{font-size:3.6rem}h2{font-size:2.4rem}h3{font-size:1.8rem}strong{font-weight:bold}em{font-style:italic}ul,ol{margin-left:2.4rem}pre{font-size:1.3rem}.txt-left{text-align:center}.txt-center{text-align:center}.txt-right{text-align:right}.primo p{font-size:2rem}.btn,.wf-btn{display:inline-block;width:auto;margin:0;cursor:pointer;border:none;outline:none;webkit-font-smoothing:antialiased}.btn:hover,.wf-btn:hover{text-decoration:none}.btn:focus,.wf-btn:focus{box-shadow:none}.clear{*zoom:1}.clear:before,.clear:after{content:"";display:table}.clear:after{clear:both}label{display:block}input,select,textarea{font-family:inherit;outline:none}input{display:inline-block;width:100%;border:none;outline:none;border:1px solid #ccc}input:focus{background:#f7f6f6}textarea{width:100%;border:1px solid #ccc}textarea:focus{background:#f7f6f6}img{width:auto;max-width:100%;height:auto}a img{border:0}.alignleft{float:none;display:block}.alignright{float:none;display:block}.wp-caption{background:red}.wp-caption-text{color:#fff}.sticky{font-weight:bold}.gallery-caption{background:red}.bypostauthor{font-weight:bold}.aligncenter{margin:0 auto}.main-menu{*zoom:1;padding:2.4rem 0}.main-menu:before,.main-menu:after{content:"";display:table}.main-menu:after{clear:both}.main-menu__home{float:left;width:42px}.main-menu__list{float:right;margin:0;list-style:none}.main-menu__item{float:left;padding:2.4rem;margin-left:-1px}.main-menu__item a{text-decoration:none}.wf-btn{border-radius:0.5rem;font-size:1.8rem}.wf-btn a,.wf-btn a:visited{display:block;padding:1.2rem;text-decoration:none}html{font-size:62.5%;line-height:1.5}@media (min-width: 800px){html{font-size:62.5%;}}@media (min-width: 1000px){html{font-size:62.5%;}}@media (min-width: 1200px){html{font-size:75%;}}body{color:#2e3131;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}.belt{padding:5%}@media (min-width: 800px){.belt{padding:2.4rem;}}.belt--large{padding:5%}@media (min-width: 800px){.belt--large{padding:9.6rem;}}.belt--tint-dark{background:#f2f2f2}.belt--bg{background-repeat:no-repeat;background-size:cover;background-position:center center}.box{padding:2.4rem;margin:0 0 2.4rem 0}@media (min-width: 800px){.box{margin:1.2rem 0;}}.box--bg{background:#fff}.box--last{margin:0}@media (min-width: 800px){.box--last{margin:1.2rem 0 0 0;}}.billboard{position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;background-repeat:no-repeat;background-size:cover;background-position:center center}.billboard img{width:100%}.billboard:after{padding-top:50%;display:block;content:''}.billboard__caption{position:absolute;top:0;width:95%}@media (min-width: 800px){.billboard__caption{width:50%;}}.billboard__caption--center{top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}
+/*
+Theme Name:     Flexbones
+Theme URI:      http://github.com/roikles/flexbones
+Description:    A responsive wordpress starter theme
+Author:         Rory Ashford
+Author URI:     http://roikles.com
+Version:        2.0.0
+License:        All work is the property of Rory Ashford
+License URI:    n/a
+*/
+/**
+    ________          __                         
+   / ____/ /__  _  __/ /_  ____  ____  ___  _____
+  / /_  / / _ \| |/_/ __ \/ __ \/ __ \/ _ \/ ___/
+ / __/ / /  __/>  </ /_/ / /_/ / / / /  __(__  ) 
+/_/   /_/\___/_/|_/_.___/\____/_/ /_/\___/____/  
+                                                 
+ */
+/**
+ * __base.scss
+ * Main configuration
+ */
+/**
+ * colour.scss
+ * define basic colours and then apply them to vars
+ * prefix colour variables with 'clr'
+ */
+/**
+ * color function
+ *
+ * returns sub map elements
+ * usage background: clr(nav,bg);
+ */
+/**
+ * _fluid-bg.scss
+ * 
+ * mixin used where fluid, scalable background 
+ * images are needed.
+ *
+ * background-image must be defined outside
+ * the mixin and make sure not to use the background 
+ * shortcode.
+ */
+/**
+ * _aspect-ratios.scss
+ *
+ * Mixin to display block level elements at
+ * fixed aspect ratios using padding top
+ * on an :after pseudo element.
+ */
+/**
+ * _reset.scss
+ * CSS reset
+ * Nothing fancy
+ */
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle; }
+
+/**
+ * _wrapper.scss
+ *
+ * wrappers are set-width content blocks that 
+ * determine how wide the content area should be.
+ */
+.wrapper {
+  margin: 0 auto; }
+  @media (min-width: 1000px) {
+    .wrapper {
+      width: 90%;
+      max-width: 1200px; } }
+
+@media (min-width: 1000px) {
+  .wrapper--small {
+    width: 75%;
+    max-width: 1200px; } }
+
+/**
+ * _grid.scss
+ * Responsive grids setup
+ * 
+ * Provide maps to setup grid system
+ * add infinite breakpoints, breakpoint
+ * independant number of columns and 
+ * gutters, debug breakpoints.
+ */
+.grid {
+  margin-left: -2.4rem;
+  *zoom: 1; }
+  .grid:before, .grid:after {
+    content: "";
+    display: table; }
+  .grid:after {
+    clear: both; }
+
+.grid > * {
+  float: left;
+  position: relative;
+  padding-left: 2.4rem; }
+
+.grid--no-gutter {
+  margin-left: 0; }
+
+.grid--no-gutter > * {
+  padding-left: 0; }
+
+.span--1-12 {
+  width: 8.33333%; }
+
+.span--1-6, .span--2-12 {
+  width: 16.66667%; }
+
+.span--1-4, .span--3-12 {
+  width: 25%; }
+
+.span--1-3, .span--2-6, .span--4-12 {
+  width: 33.33333%; }
+
+.span--5-12 {
+  width: 41.66667%; }
+
+.span--1-2, .span--2-4, .span--3-6, .span--6-12 {
+  width: 50%; }
+
+.span--7-12 {
+  width: 58.33333%; }
+
+.span--2-3, .span--4-6, .span--8-12 {
+  width: 66.66667%; }
+
+.span--3-4, .span--9-12 {
+  width: 75%; }
+
+.span--5-6, .span--10-12 {
+  width: 83.33333%; }
+
+.span--11-12 {
+  width: 91.66667%; }
+
+.span--1-1, .span--2-2, .span--3-3, .span--4-4, .span--6-6, .span--12-12 {
+  width: 100%; }
+
+.grid > .span--center {
+  margin: 0 auto;
+  float: none; }
+
+.span--omega {
+  float: right; }
+
+body:after {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  padding: 5px 25px 5px 10px;
+  border-left: 5px solid #f2e7bb;
+  font-size: 12px;
+  font-weight: bold;
+  color: #faf6e6;
+  background: #DABB3A;
+  content: "Small:  "; }
+
+@media (min-width: 800px) {
+  .grid {
+    margin-left: -2.4rem;
+    *zoom: 1; }
+    .grid:before, .grid:after {
+      content: "";
+      display: table; }
+    .grid:after {
+      clear: both; }
+
+  .grid > * {
+    float: left;
+    position: relative;
+    padding-left: 2.4rem; }
+
+  .grid--no-gutter--m {
+    margin-left: 0; }
+
+  .grid--no-gutter--m > * {
+    padding-left: 0; }
+
+  .span--1-12--m {
+    width: 8.33333%; }
+
+  .span--1-6--m, .span--2-12--m {
+    width: 16.66667%; }
+
+  .span--1-4--m, .span--3-12--m {
+    width: 25%; }
+
+  .span--1-3--m, .span--2-6--m, .span--4-12--m {
+    width: 33.33333%; }
+
+  .span--5-12--m {
+    width: 41.66667%; }
+
+  .span--1-2--m, .span--2-4--m, .span--3-6--m, .span--6-12--m {
+    width: 50%; }
+
+  .span--7-12--m {
+    width: 58.33333%; }
+
+  .span--2-3--m, .span--4-6--m, .span--8-12--m {
+    width: 66.66667%; }
+
+  .span--3-4--m, .span--9-12--m {
+    width: 75%; }
+
+  .span--5-6--m, .span--10-12--m {
+    width: 83.33333%; }
+
+  .span--11-12--m {
+    width: 91.66667%; }
+
+  .span--1-1--m, .span--2-2--m, .span--3-3--m, .span--4-4--m, .span--6-6--m, .span--12-12--m {
+    width: 100%; }
+
+  .grid > .span--center--m {
+    margin: 0 auto;
+    float: none; }
+
+  .span--omega--m {
+    float: right; }
+
+  body:after {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    right: 0;
+    padding: 5px 25px 5px 10px;
+    border-left: 5px solid #72e5ad;
+    font-size: 12px;
+    font-weight: bold;
+    color: #9dedc6;
+    background: #1EA061;
+    content: "Medium:  min: 800px  "; }
+ }
+
+@media (min-width: 1100px) {
+  .grid {
+    margin-left: -2.4rem;
+    *zoom: 1; }
+    .grid:before, .grid:after {
+      content: "";
+      display: table; }
+    .grid:after {
+      clear: both; }
+
+  .grid > * {
+    float: left;
+    position: relative;
+    padding-left: 2.4rem; }
+
+  .grid--no-gutter--l {
+    margin-left: 0; }
+
+  .grid--no-gutter--l > * {
+    padding-left: 0; }
+
+  .span--1-12--l {
+    width: 8.33333%; }
+
+  .span--1-6--l, .span--2-12--l {
+    width: 16.66667%; }
+
+  .span--1-4--l, .span--3-12--l {
+    width: 25%; }
+
+  .span--1-3--l, .span--2-6--l, .span--4-12--l {
+    width: 33.33333%; }
+
+  .span--5-12--l {
+    width: 41.66667%; }
+
+  .span--1-2--l, .span--2-4--l, .span--3-6--l, .span--6-12--l {
+    width: 50%; }
+
+  .span--7-12--l {
+    width: 58.33333%; }
+
+  .span--2-3--l, .span--4-6--l, .span--8-12--l {
+    width: 66.66667%; }
+
+  .span--3-4--l, .span--9-12--l {
+    width: 75%; }
+
+  .span--5-6--l, .span--10-12--l {
+    width: 83.33333%; }
+
+  .span--11-12--l {
+    width: 91.66667%; }
+
+  .span--1-1--l, .span--2-2--l, .span--3-3--l, .span--4-4--l, .span--6-6--l, .span--12-12--l {
+    width: 100%; }
+
+  .grid > .span--center--l {
+    margin: 0 auto;
+    float: none; }
+
+  .span--omega--l {
+    float: right; }
+
+  body:after {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    right: 0;
+    padding: 5px 25px 5px 10px;
+    border-left: 5px solid #a7dcfc;
+    font-size: 12px;
+    font-weight: bold;
+    color: #d8f0fe;
+    background: #13a2f7;
+    content: "Large:  min: 1100px  "; }
+ }
+
+/**
+ * typography.scss
+ * all base font styles,
+ * paragraphs, headings, lists
+ */
+p, ul, ol, input, textarea {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 2.4rem; }
+  p:last-child, ul:last-child, ol:last-child, input:last-child, textarea:last-child {
+    margin-bottom: 0; }
+
+a {
+  color: color(link, default);
+  text-decoration: none;
+  display: inline-block; }
+
+a:hover {
+  color: color(link, hover); }
+
+p a, p a:visited {
+  text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  color: #242424; }
+
+h1 {
+  font-size: 3.6rem; }
+
+h2 {
+  font-size: 2.4rem; }
+
+h3 {
+  font-size: 1.8rem; }
+
+ul, ol {
+  margin-left: 2.4rem; }
+
+.txt-left {
+  text-align: center; }
+
+.txt-center {
+  text-align: center; }
+
+.txt-right {
+  text-align: right; }
+
+/**
+ * _buttons.scss
+ * Buttons
+ */
+.btn {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  webkit-font-smoothing: antialiased; }
+  .btn:focus {
+    box-shadow: none; }
+
+/**
+ * _clearfix.scss
+ * class to clear floating elements
+ */
+.clear {
+  *zoom: 1; }
+  .clear:before, .clear:after {
+    content: "";
+    display: table; }
+  .clear:after {
+    clear: both; }
+
+/**
+ * _forms/scss
+ * Bassic form css setup
+ */
+label {
+  display: block; }
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none; }
+
+input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc; }
+  input:focus {
+    background: #f7f6f6; }
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc; }
+  textarea:focus {
+    background: #f7f6f6; }
+
+/**
+ * _imgs.scss
+ * Global Image values
+ * Default captions e.t.c
+ */
+img {
+  width: auto;
+  /* IE8 Fix */
+  max-width: 100%;
+  height: auto; }
+
+a img {
+  border: 0; }
+
+/**
+ * navigation.scss
+ * Style menus generated using bem_menu()
+ * Based on Wordpress BEM Menus
+ * Full Documentation here: 
+ * https://github.com/roikles/Wordpress-Bem-Menu
+ */
+/** 
+ * Horizontal Menu (includes logo).
+ *
+ * <nav class="h-menu">
+ *     <a href="#" class="h-menu__home">
+ *         <svg class="logo"></svg>
+ *     </a>
+ *     <ul class="h-menu__list">
+ *         <li class="h-menu__item  h-menu__item--active"><a href="#">Home</a></li>
+ *         <li class="h-menu__item"><a href="#">Name</a></li>  
+ *         <li class="h-menu__item"><a href="#">Name</a></li>
+ *     </ul>
+ * </nav>
+ *
+ */
+.h-menu {
+  *zoom: 1; }
+  .h-menu:before, .h-menu:after {
+    content: "";
+    display: table; }
+  .h-menu:after {
+    clear: both; }
+
+.h-menu__home {
+  float: left;
+  display: block; }
+
+.h-menu__list {
+  float: right;
+  margin: 0;
+  list-style: none;
+  *zoom: 1; }
+  .h-menu__list:before, .h-menu__list:after {
+    content: "";
+    display: table; }
+  .h-menu__list:after {
+    clear: both; }
+
+.h-menu__item {
+  float: left;
+  line-height: 64px; }
+
+.h-menu__item a {
+  text-decoration: none; }
+
+/**
+ * _tables.scss
+ * Table styling
+ */
+/**
+ * html-body.scss
+ * styles applied to the html and body elements
+ */
+html {
+  font-size: 50%;
+  line-height: 1.5; }
+  @media (min-width: 800px) {
+    html {
+      font-size: 62.5%; } }
+  @media (min-width: 1000px) {
+    html {
+      font-size: 62.5%; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 75%; } }
+
+body {
+  color: #636767;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+/**
+ * _header.scss
+ * Header specific declarations
+ */
+/**
+ * _footer.scss
+ * Footer specific declarations
+ */
+/**
+ * sidebar.scss
+ */
+/**
+ * _belt.scss
+ *
+ *  Belt is a block of content that spans across the 
+ *  whole container and is padded all the way around.
+ *  Ideal for introductory text.
+ *
+ *  Useage: 
+ *  <div class="belt">[content]</div>
+ */
+.belt {
+  padding: 5%; }
+  @media (min-width: 800px) {
+    .belt {
+      padding: 2.4rem; } }
+
+.belt--large {
+  padding: 5%; }
+  @media (min-width: 800px) {
+    .belt--large {
+      padding: 9.6rem; } }
+
+.belt--tint {
+  background: #f2f2f2; }
+
+.belt--bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.belt--bg--fixed {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+/**
+ * _box.scss
+ *
+ * Box is a CSS object, characterised by
+ * padding all round and has a bottom margin 
+ * for visually seperating content.
+ */
+.box {
+  padding: 2.4rem;
+  margin: 0 0 2.4rem 0; }
+  @media (min-width: 800px) {
+    .box {
+      margin: 1.2rem 0; } }
+
+.box--bg {
+  background: #fff; }
+
+.box--last {
+  margin: 0; }
+  @media (min-width: 800px) {
+    .box--last {
+      margin: 1.2rem 0 0 0; } }
+
+/**
+ * _billboard.scss
+ *
+ * The big image/slider image
+ * displayed prominently across the top of pages.
+ */
+.billboard {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+  .billboard img {
+    width: 100%; }
+  .billboard:after {
+    padding-top: 66.66667%;
+    display: block;
+    content: ''; }
+  @media (min-width: 800px) {
+    .billboard:after {
+      padding-top: 33.33333%;
+      display: block;
+      content: ''; }
+ }
+
+.billboard__caption {
+  position: absolute;
+  top: 0;
+  width: 95%; }
+  @media (min-width: 800px) {
+    .billboard__caption {
+      width: 50%; } }
+
+.billboard__caption--center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+/**
+ * _primo.scss
+ * Primo is a large important block of text
+ * often near the top of pages.
+ */
+.primo p {
+  font-size: 1.8rem; }
 /*# sourceMappingURL=style.css.map */

@@ -20,7 +20,7 @@
         background: #fff;
     }
     
-    // Remove the bottom margin a the bottom
+    // Remove the bottom margin
     .box--last{
         margin: 0;
         @include at-breakpoint($m){

@@ -13,7 +13,7 @@ html {
 }
 
     body {
-        color: $text_colour;
+        color: clr(text,default);
         font-family: $body_font;
         -webkit-font-smoothing: antialiased;
     }

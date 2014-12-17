@@ -1,0 +1,34 @@
+/**
+ * colour.scss
+ * define basic colours and then apply them to vars
+ * prefix colour variables with 'clr'
+ */
+
+// Colours
+$clr_gray:                #636767;
+$clr_gray_dark:           #242424;
+
+
+// UI Color Map
+$colors: (
+    text: (
+        default:    $clr_gray,
+        heading:    $clr_gray_dark
+    ),
+    links: (
+        default:    $clr_gray,
+        hover:      darken($clr_gray,15%),
+        visited:    $clr_gray,
+    )
+);
+
+
+/**
+ * color function
+ *
+ * returns sub map elements
+ * usage background: clr(nav,bg);
+ */
+@function clr($element, $color, $map: $colors) {
+    @return map-get(map-get($map, $element), $color);
+}

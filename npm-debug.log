@@ -7,13 +7,13 @@
 6 info compile-sass Flexbones@0.1.0
 7 verbose unsafe-perm in lifecycle true
 8 info Flexbones@0.1.0 Failed to exec compile-sass script
-9 error Flexbones@0.1.0 compile-sass: `node-sass assets/sass/style.scss style.css && autoprefixer style.css`
+9 error Flexbones@0.1.0 compile-sass: `node-sass --output-style expanded --source-map style.css.map assets/sass/style.scss style.css && autoprefixer style.css`
 9 error Exit status 1
 10 error Failed at the Flexbones@0.1.0 compile-sass script.
 10 error This is most likely a problem with the Flexbones package,
 10 error not with npm itself.
 10 error Tell the author that this fails on your system:
-10 error     node-sass assets/sass/style.scss style.css && autoprefixer style.css
+10 error     node-sass --output-style expanded --source-map style.css.map assets/sass/style.scss style.css && autoprefixer style.css
 10 error You can get their info via:
 10 error     npm owner ls Flexbones
 10 error There is likely additional logging output above.

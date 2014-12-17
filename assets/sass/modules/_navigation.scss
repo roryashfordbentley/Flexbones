@@ -1,33 +1,50 @@
 /**
  * navigation.scss
  * Style menus generated using bem_menu()
+ * Based on Wordpress BEM Menus
+ * Full Documentation here: 
+ * https://github.com/roikles/Wordpress-Bem-Menu
  */
 
 
+/** 
+ * Horizontal Menu (includes logo).
+ *
+ * <nav class="h-menu">
+ *     <a href="#" class="h-menu__home">
+ *         <svg class="logo"></svg>
+ *     </a>
+ *     <ul class="h-menu__list">
+ *         <li class="h-menu__item  h-menu__item--active"><a href="#">Home</a></li>
+ *         <li class="h-menu__item"><a href="#">Name</a></li>  
+ *         <li class="h-menu__item"><a href="#">Name</a></li>
+ *     </ul>
+ * </nav>
+ *
+ */
 
-/* Top level items */
-.my-menu__item{}
+.h-menu{
+    @include clearfix();
+}
 
-/* Specific link (where x = post_id) */
-.my-menu__item--x{}
+    // contains logo
+    .h-menu__home{
+        float: left;
+        display: block;
+    }
 
-/* Parent item */
-.my-menu__item--parent{}
+    .h-menu__list{
+        float: right;
+        margin: 0;
+        list-style: none;
+        @include clearfix();
+    }
 
-/* Active page item */
-.my-menu__item--active{}
+        .h-menu__item{
+            float: left;
+            line-height: 64px; // same height as logo
+        }
 
-/* Parent of the current active page */
-.my-menu__item--parent--active{}
-
-/* Ancestor of the current active page */
-.my-menu__item--ancestor--active{}
-
-/* Sub menu class */
-.my-menu__sub-menu{}
-
-/* Sub menu item */
-.my-menu__sub-menu__item{}
-
-/* Specific sub menu (where x is the menu depth) */
-.my-menu__sub-menu--x{}
+            .h-menu__item a{
+                text-decoration: none;
+            }

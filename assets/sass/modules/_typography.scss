@@ -6,7 +6,6 @@
  */
 
 // Shared paragraph sizes
-
 p,
 ul,
 ol,
@@ -21,22 +20,29 @@ textarea{
     }
 }
 
+// Links
+a {
+    color: color(link,default);
+    text-decoration: none;
+    display: inline-block;
+}
 
-// links within paragraphs
-// Extends %link
+    a:hover{
+        color: color(link,hover);
+    }
 
 p a,
 p a:visited{
-    @extend %link;
+    text-decoration: underline;
 }
 
 
 // Headings
-
 h1,h2,h3,h4,h5,h6{
     font-family: $heading_font;
     font-weight: $bold;
     margin-bottom: $base;
+    color: clr(text,heading);
 }
 
 h1{ 
@@ -51,30 +57,12 @@ h3{
     font-size: $size_h3;
 }
 
-// Text transforms
-
-strong{ 
-    font-weight: bold; 
-}
-
-// Italics
-
-em{ 
-    font-style: italic; 
-}
 
 // Lists
-
 ul,ol {    
-    //list-style-type: disc;
     margin-left: $base;
 }
 
-// Pre
-
-pre{
-    font-size: rem(13);
-}
 
 // Text align classes
 .txt-left{
@@ -88,14 +76,3 @@ pre{
 .txt-right{
     text-align: right;
 }
-
-// Primo text
-// A large important block of text
-
-.primo{
-    p{
-        font-size: $size_primo;
-    }
-}
-
-

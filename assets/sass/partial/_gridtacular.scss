@@ -242,18 +242,32 @@
 // Outputs the current breakpoint name to quickly debug 
 // each breakpoint.
 
-@mixin grid-debug($breakpoint_name,$debug_bg: #000){
+@mixin grid-debug($bp_name,$mq_min,$mq_max,$debug_bg: #000){
     body:after{
         position: fixed;
         display: block;
-        bottom: 10px;
-        right: 10px;
-        padding: 5px 20px;
-        font-size: 14px;
+        bottom: 0;
+        right: 0;
+        padding: 5px 25px 5px 10px;
+        border-left: 5px solid lighten($debug_bg,30%);
+        font-size: 12px;
         font-weight: bold;
-        color: white;
+        color: lighten($debug_bg,40%);
         background: $debug_bg;
-        content: "#{$breakpoint_name}";
+
+        @if($mq_min){
+            $mq_min_val: " min: #{$mq_min} ";
+        } @else{
+            $mq_min_val: "";
+        }
+
+        @if($mq_max){
+            $mq_max_val: " max: #{$mq_max} ";
+        } @else{
+            $mq_max_val: "";
+        }
+
+        content: "#{$bp_name}: #{$mq_min_val} #{$mq_max_val}";
     }
 }
 
@@ -356,7 +370,7 @@
                 }
 
                 @if($debug_display){ 
-                    @include grid-debug($debug_name,$debug_bg) 
+                    @include grid-debug($debug_name,$breakpoint_min,$breakpoint_max, $debug_bg) 
                 } 
 
             }
