@@ -1,26 +1,184 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'compile-sass' ]
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'autoprefixer',
+1 verbose cli   '--save-dev' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 verbose run-script [ 'precompile-sass', 'compile-sass', 'postcompile-sass' ]
-5 info precompile-sass Flexbones@0.1.0
-6 info compile-sass Flexbones@0.1.0
-7 verbose unsafe-perm in lifecycle true
-8 info Flexbones@0.1.0 Failed to exec compile-sass script
-9 error Flexbones@0.1.0 compile-sass: `node-sass --output-style expanded --source-map style.css.map assets/sass/style.scss style.css && autoprefixer style.css`
-9 error Exit status 1
-10 error Failed at the Flexbones@0.1.0 compile-sass script.
-10 error This is most likely a problem with the Flexbones package,
-10 error not with npm itself.
-10 error Tell the author that this fails on your system:
-10 error     node-sass --output-style expanded --source-map style.css.map assets/sass/style.scss style.css && autoprefixer style.css
-10 error You can get their info via:
-10 error     npm owner ls Flexbones
-10 error There is likely additional logging output above.
-11 error System Darwin 14.0.0
-12 error command "node" "/usr/local/bin/npm" "run" "compile-sass"
-13 error cwd /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones
-14 error node -v v0.10.32
-15 error npm -v 1.4.28
-16 error code ELIFECYCLE
-17 verbose exit [ 1, true ]
+4 warn package.json Flexbones@0.1.0 No repository field.
+5 warn package.json sass@0.5.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'autoprefixer', null ]
+8 verbose cache add name=undefined spec="autoprefixer" args=["autoprefixer",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'autoprefixer',
+9 verbose parsed url   path: 'autoprefixer',
+9 verbose parsed url   href: 'autoprefixer' }
+10 silly lockFile 87dfe145-autoprefixer autoprefixer
+11 verbose lock autoprefixer /Users/roryashford/.npm/87dfe145-autoprefixer.lock
+12 silly lockFile 87dfe145-autoprefixer autoprefixer
+13 silly lockFile 87dfe145-autoprefixer autoprefixer
+14 verbose addNamed [ 'autoprefixer', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 5b54af58-autoprefixer autoprefixer@
+17 verbose lock autoprefixer@ /Users/roryashford/.npm/5b54af58-autoprefixer.lock
+18 silly addNameRange { name: 'autoprefixer', range: '*', hasData: false }
+19 verbose request where is /autoprefixer
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 214c9193bc447456
+22 verbose url raw /autoprefixer
+23 verbose url resolving [ 'https://registry.npmjs.org/', './autoprefixer' ]
+24 verbose url resolved https://registry.npmjs.org/autoprefixer
+25 verbose request where is https://registry.npmjs.org/autoprefixer
+26 info trying registry request attempt 1 at 16:10:22
+27 verbose etag "5H7XB722SNMU9Z54DCZZAT3BA"
+28 http GET https://registry.npmjs.org/autoprefixer
+29 http 304 https://registry.npmjs.org/autoprefixer
+30 silly registry.get cb [ 304,
+30 silly registry.get   { date: 'Thu, 19 Feb 2015 16:10:23 GMT',
+30 silly registry.get     server: 'Apache',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'last-modified': 'Thu, 19 Feb 2015 16:10:23 GMT',
+30 silly registry.get     'cache-control': 'max-age=60',
+30 silly registry.get     etag: '"5H7XB722SNMU9Z54DCZZAT3BA"',
+30 silly registry.get     age: '37',
+30 silly registry.get     'x-served-by': 'cache-lhr6327-LHR',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1424362223.070265,VS0,VE2',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'content-length': '0',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 verbose etag https://registry.npmjs.org/autoprefixer from cache
+32 silly addNameRange number 2 { name: 'autoprefixer', range: '*', hasData: true }
+33 silly addNameRange versions [ 'autoprefixer',
+33 silly addNameRange   [ '0.1.20130409',
+33 silly addNameRange     '0.2.20130413',
+33 silly addNameRange     '0.3.20130423',
+33 silly addNameRange     '0.3.20130424',
+33 silly addNameRange     '0.3.20130427',
+33 silly addNameRange     '0.3.20130502',
+33 silly addNameRange     '0.4.20130507',
+33 silly addNameRange     '0.4.20130515',
+33 silly addNameRange     '0.4.20130521',
+33 silly addNameRange     '0.4.20130524',
+33 silly addNameRange     '0.4.20130528',
+33 silly addNameRange     '0.4.20130530',
+33 silly addNameRange     '0.4.20130603',
+33 silly addNameRange     '0.5.20130615',
+33 silly addNameRange     '0.5.20130616',
+33 silly addNameRange     '0.5.20130617',
+33 silly addNameRange     '0.5.20130625',
+33 silly addNameRange     '0.5.20130626',
+33 silly addNameRange     '0.5.20130629',
+33 silly addNameRange     '0.6.20130716',
+33 silly addNameRange     '0.6.20130721',
+33 silly addNameRange     '0.6.20130728',
+33 silly addNameRange     '0.6.20130729',
+33 silly addNameRange     '0.6.20130730',
+33 silly addNameRange     '0.6.20130731',
+33 silly addNameRange     '0.7.20130805',
+33 silly addNameRange     '0.7.20130806',
+33 silly addNameRange     '0.7.20130807',
+33 silly addNameRange     '0.7.20130808',
+33 silly addNameRange     '0.7.20130810',
+33 silly addNameRange     '0.7.20130824',
+33 silly addNameRange     '0.8.20130902',
+33 silly addNameRange     '0.8.20130903',
+33 silly addNameRange     '0.8.20130906',
+33 silly addNameRange     '0.8.20130911',
+33 silly addNameRange     '0.8.20130919',
+33 silly addNameRange     '0.8.20130923',
+33 silly addNameRange     '0.8.20131001',
+33 silly addNameRange     '0.8.20131006',
+33 silly addNameRange     '0.8.20131007',
+33 silly addNameRange     '0.8.20131009',
+33 silly addNameRange     '0.8.20131015',
+33 silly addNameRange     '0.8.20131017',
+33 silly addNameRange     '0.8.20131020',
+33 silly addNameRange     '0.8.20131029',
+33 silly addNameRange     '0.8.20131104',
+33 silly addNameRange     '0.8.20131209',
+33 silly addNameRange     '0.8.20131213',
+33 silly addNameRange     '1.0.20131222',
+33 silly addNameRange     '1.0.20140103',
+33 silly addNameRange     '1.0.20140109',
+33 silly addNameRange     '1.0.20140110',
+33 silly addNameRange     '1.0.20140117',
+33 silly addNameRange     '1.0.20140130',
+33 silly addNameRange     '1.0.20140203',
+33 silly addNameRange     '1.0.20140213',
+33 silly addNameRange     '1.1.20140218',
+33 silly addNameRange     '1.1.20140222',
+33 silly addNameRange     '1.1.20140226',
+33 silly addNameRange     '1.1.20140302',
+33 silly addNameRange     '1.1.20140319',
+33 silly addNameRange     '1.1.20140327',
+33 silly addNameRange     '1.1.20140403',
+33 silly addNameRange     '1.1.20140410',
+33 silly addNameRange     '1.1.20140429',
+33 silly addNameRange     '1.1.20140430',
+33 silly addNameRange     '1.1.20140510',
+33 silly addNameRange     '1.1.20140512',
+33 silly addNameRange     '1.1.20140521',
+33 silly addNameRange     '1.1.20140523',
+33 silly addNameRange     '1.1.20140605',
+33 silly addNameRange     '1.2.0',
+33 silly addNameRange     '1.3.0',
+33 silly addNameRange     '1.3.1',
+33 silly addNameRange     '2.0.0',
+33 silly addNameRange     '2.0.1',
+33 silly addNameRange     '2.0.2',
+33 silly addNameRange     '2.1.0',
+33 silly addNameRange     '2.1.1',
+33 silly addNameRange     '2.2.0',
+33 silly addNameRange     '3.0.0',
+33 silly addNameRange     '3.1.0',
+33 silly addNameRange     '4.0.0',
+33 silly addNameRange     '5.0.0',
+33 silly addNameRange     '5.1.0' ] ]
+34 verbose addNamed [ 'autoprefixer', '5.1.0' ]
+35 verbose addNamed [ '5.1.0', '5.1.0' ]
+36 silly lockFile 16b624bd-autoprefixer-5-1-0 autoprefixer@5.1.0
+37 verbose lock autoprefixer@5.1.0 /Users/roryashford/.npm/16b624bd-autoprefixer-5-1-0.lock
+38 silly lockFile 51b60104-oprefixer-autoprefixer-5-1-0-tgz https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz
+39 verbose lock https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz /Users/roryashford/.npm/51b60104-oprefixer-autoprefixer-5-1-0-tgz.lock
+40 verbose addRemoteTarball [ 'https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz',
+40 verbose addRemoteTarball   '2db51c2461b294c35b7745e197791735cf54af41' ]
+41 info retry fetch attempt 1 at 16:10:23
+42 verbose fetch to= /var/folders/8d/nmc92njn5xbgqp4tv5cx1s4c0000gn/T/npm-4408-ul-CUJh8/registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz
+43 http GET https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz
+44 http 200 https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz
+45 silly lockFile 51b60104-oprefixer-autoprefixer-5-1-0-tgz https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz
+46 silly lockFile 51b60104-oprefixer-autoprefixer-5-1-0-tgz https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.1.0.tgz
+47 silly lockFile 16b624bd-autoprefixer-5-1-0 autoprefixer@5.1.0
+48 silly lockFile 16b624bd-autoprefixer-5-1-0 autoprefixer@5.1.0
+49 silly lockFile 5b54af58-autoprefixer autoprefixer@
+50 silly lockFile 5b54af58-autoprefixer autoprefixer@
+51 error Error: EACCES, mkdir '/Users/roryashford/.npm/autoprefixer/5.1.0'
+51 error  { [Error: EACCES, mkdir '/Users/roryashford/.npm/autoprefixer/5.1.0']
+51 error   errno: 3,
+51 error   code: 'EACCES',
+51 error   path: '/Users/roryashford/.npm/autoprefixer/5.1.0',
+51 error   parent: 'Flexbones' }
+52 error Please try running this command again as root/Administrator.
+53 error System Darwin 14.0.0
+54 error command "node" "/usr/local/bin/npm" "install" "autoprefixer" "--save-dev"
+55 error cwd /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones
+56 error node -v v0.10.32
+57 error npm -v 1.4.28
+58 error path /Users/roryashford/.npm/autoprefixer/5.1.0
+59 error code EACCES
+60 error errno 3
+61 error stack Error: EACCES, mkdir '/Users/roryashford/.npm/autoprefixer/5.1.0'
+62 verbose exit [ 3, true ]
