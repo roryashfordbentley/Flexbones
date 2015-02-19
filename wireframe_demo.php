@@ -48,6 +48,7 @@
 </header>
 
 <section class="dummy-content">
+    
     <div class="billboard" style="background-image: url(https://unsplash.it/1600/800?blur);">
         <div class="[ billboard__caption  billboard__caption--center ]  txt-center">
             <h1>Billboard Introduction</h1>
@@ -56,18 +57,22 @@
     </div>
     
     <div class="belt  belt--large">
-        <div class="[ wrapper  wrapper--small ] txt-center">
+        <g-wrapper class="[ wrapper  wrapper--small ] txt-center">
             <div class="primo">
                 <h1> Belt element with primo text</h1>
                 <p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
             </div>
-        </div>
+        </g-wrapper>
     </div>
 
     <div class="belt  belt--large  belt--bg"  style="background-image: url(https://unsplash.it/1500/750?blur);">
-        <div class="wrapper">
-            <div class="grid">
-                <div class="span--1-1  span--1-2--m">
+        
+        <g-wrapper class="wrapper">
+            
+            <g-grid class="grid">
+            
+                <g-item class="span--1-1  span--1-2--m">
+            
                     <div class="box  box--bg">
                         <h2>Box element with background</h2>
                         <ul>
@@ -77,9 +82,11 @@
                         </ul>
                         <button class="wf-btn"><a href="#" >Get Started</a></button>
                     </div>
-                </div>
+            
+                </g-item>
 
-                <div class="span--1-1  span--1-2--m">
+                <g-item class="span--1-1  span--1-2--m">
+                    
                     <div class="box  box--bg  box--last">
                         <h2>Box element with background</h2>
                         <ul>
@@ -89,39 +96,51 @@
                         </ul>
                         <button class="wf-btn"><a href="#">Get Started</a></button>
                     </div>
-                </div>
-            </div>
-        </div>
+
+                </g-item>
+
+            </g-grid>
+
+        </g-wrapper>
+
     </div>
 
     <div class="belt  belt--large">
-        <div class="[ wrapper  wrapper--small ] txt-center">
+        <g-wrapper class="[ wrapper  wrapper--small ] txt-center">
             <div class="primo">
                 <h1>Another primo belt</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-        </div>
+        </g-wrapper>
     </div>
 
     <div class="belt  belt--large  belt--tint">
-        <div class="wrapper">
-            <div class="wrapper">
-                <div class="grid">
-                    <div class="span--1-1  span--1-2--m">
-                        <div class="box">
-                            <h1>Box no background</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                        
-                        </div>
+        
+        <g-wrapper class="wrapper">
+
+            <g-grid class="grid">
+                
+                <g-item class="span--1-1  span--1-2--m">
+                   
+                    <div class="box">
+                        <h1>Box no background</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                        
                     </div>
 
-                    <div class="span--1-1  span--1-2--m">
-                        <div class="box  box--last">
-                            <h1>Box no background</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                        
-                        </div>
+                </g-item>
+
+                <g-item class="span--1-1  span--1-2--m">
+                   
+                    <div class="box  box--last">
+                        <h1>Box no background</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                        
                     </div>
-                </div>
-            </div>
-        </div>
+
+                </g-item>
+
+            </g-grid>
+
+        </g-wrapper>
+
     </div>
 </section>
