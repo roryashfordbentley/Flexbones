@@ -1,34 +1,48 @@
-/**
- * __base.scss
- * Main configuration
- */
+////
+// Base
+// Variables and setup
+// 
+// @author Rory Ashford
+////
 
+////
 // Media Queries
-// Define breakpoints as a sass list
-// Here we use s,m,l,xl to identify breakpoints 
-// but you can use whatever you like.   
+////
+
+// Small media query minimum width
 $mq_small_min:          null;
+
+// Small media query maximum width
 $mq_small_max:          null;
 
-// Alias
+// S/Small
 $s: ($mq_small_min, $mq_small_max);
 
+// Medium media query minimum width
 $mq_medium_min:         800px;
+
+// Medium media query maximum width
 $mq_medium_max:         null;
 
-// Alias
+// M/Medium
 $m: ($mq_medium_min, $mq_medium_max);
 
+// Large media query minimum width
 $mq_large_min:          1000px;
+
+// Large media query maximum width
 $mq_large_max:          null;
 
-// Alias
+// L/Large
 $l: ($mq_large_min, $mq_large_max);
 
+// Extra Large media query minimum width
 $mq_extralarge_min:     1200px;
+
+// Extra Large media query maximum width
 $mq_extralarge_max:     null;
 
-// Alias
+// XL/XLarge
 $xl: ($mq_extralarge_min,$mq_extralarge_max);
 
 // Project size defaults
@@ -37,33 +51,59 @@ $xl: ($mq_extralarge_min,$mq_extralarge_max);
 // sizing of borders, margins etc across the project)
 $base:                  2.4rem;
 
-// Line height
+// Default Line height
 $line-height:           1.5;
 
-// Box sizing
-$border_box:            true;
+////
+// Font Sizes
+////
 
-// Base font sizes for different media queries
+// Default Font size
 $font_size:             50%;
+
+// Default medium font size
 $font_size_m:           62.5%;
+
+// Default large font size
 $font_size_l:           62.5%;
+
+// Default extra large font size
 $font_size_xl:          75%;
 
-// Font Sizes
+// Heading 1 font size
 $size_h1:               3.6rem;
+
+// Heading 2 font size
 $size_h2:               2.4rem; 
+
+// Heading 3 font size
 $size_h3:               1.8rem;
 
+// Paragraph font size
 $size_p:                1.5rem;
-$size_primo:            1.8rem;
-$size_small:            1.2rem;
 
+////
 // Font Weights
+////
+
+// Light font-weight
 $light:                 300;
+
+// Medium font-weight
 $medium:                400;
+
+// Semibold font-weight
 $semibold:              600;
+
+// Bold font-weight
 $bold:                  700;
 
-// Font Stack
+////
+// Font families
+////
+
+// Heading Font
 $heading_font:          Helvetica, Arial, sans-serif;
+
+// Body font
 $body_font:             $heading_font;

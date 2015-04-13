@@ -1,28 +1,20 @@
-//
-// Flexbones Grid System
-// 
-// Version 0.3.5
-// Author: Rory Ashford
-
-// Clearfix mixin
-//
-// Used to clear the floats within each grid
-
-@mixin clearfix() {
-    *zoom:1;
-    &:before, &:after {
-        content:"";
-        display:table;
-    }
-    &:after { clear:both; }
-}
+////
+// Gridtacular
+////
 
 
+////
 // Map Get Z
 //
-// A cleaner way to deal with nested map values
+// A cleaner way to deal with nested map values.
 // Created by lunelson [https://github.com/lunelson/sass-list-maps]
-
+//
+// @arg {map} $list - provide a Sass map to be traversed
+// @arg {array} $keys... - provide the array keys per depth comma seperated
+// 
+// @example scss - Map Get Z
+//     map-get-z(map, first-child-key, second-child-key);
+////
 @function map-get-z($list, $keys...) {
   @if $list == null { @return $list; }
   $length: length($keys);
@@ -37,25 +29,32 @@
   @return $list;
 }
 
-
+////
 // Column Width
 // 
 // Works out the percent width of columns (gutters can be 
 // any unit but columns are always percent bases)
-
+// 
+// @arg {int} $list - provide a Sass map to be traversed
+// @arg {int} $keys... - provide the array keys per depth comma seperated
+// 
+// @example scss - Map Get Z
+//     map-get-z(map, first-child-key, second-child-key);
+////
 @function column-width($number_of_columns,$total_columns) {
     $single_col_width: 100 / $total_columns * 1%;
     @return $single_col_width * $number_of_columns;
 }
 
 
+//// 
 // At Breakpoint
 // 
 // A mixin for outputting inline media queries
 // Just supply a Sass list as an argument with a min/max
 // If there are no min and max values supplied then it 
 // doesnt ouput a media query
-
+////
 @mixin at-breakpoint($min,$max:null){
     @if($max == null and $min != null){
         @media (min-width: $min){
@@ -71,17 +70,19 @@
 }
 
 
+////
 // Span Columns
 // 
 // Used to set grids semantically from within 
 // the stylesheet with no additional HTML markup
-
+////
 @mixin span-columns($columns, $total_columns){
     width: column-width($columns,$total_columns);
     padding-left: $gutter-width; 
 }
 
 
+////
 // Grid
 //
 // Called once per breakpoint as the gutters may be different
@@ -89,7 +90,7 @@
 // Adds negative padding to each row
 // Display flex and flex-wrap are used here to prevent content from 
 // floating into above elements
-
+////
 @mixin grid($gutter){
     .grid{
         display: block;
@@ -106,9 +107,9 @@
 
 }
 
-
+////
 // Grid with no gutters
-
+////
 @mixin grid-no-gutter($column_class,$suffix: null){
     .grid--no-gutter#{$suffix}{
         margin-left: 0;
@@ -120,13 +121,13 @@
         }
 }
 
-
+////
 // Equivalent Fractions
 //
 // This function will add additional classes
 // to make the grid system more expressive.
 // Instead of writing 4/12 you can also write 1/3
-
+////
 @function equivalent-fractions($numerator,$denominator){
     $fractions: ();
     @for $i from -$numerator through -1{
@@ -139,12 +140,12 @@
     @return $fractions;
 }
 
-
+////
 // Grid Columns
 // 
 // Set the grid column widths based on the number of 
 // columns divided by the total number of columns.
-
+////
 @mixin grid-columns($prefix: null, $suffix: null, $columns: null, $fifths: false, $sevenths: false){
     // Loop through the total grid columns
     
@@ -191,12 +192,12 @@
     }
 }
 
-
+////
 // Push Class
 //
 // Set the push classes that will incrementally indent
 // the column by a maximum number of total-columns -1
-
+////
 @mixin grid-push($prefix: null, $suffix: null, $columns: null){
     @for $i from 1 through $columns - 1{
         $css_classes: equivalent-fractions($i,$columns);
@@ -214,25 +215,25 @@
     }
 }
 
-
+////
 // Omega class
 //
 // An omega declaration that is breakpoint specific
 // Basically it floats an element to the right taking
 // it out of order potentially.
-
+////
 @mixin grid-omega($prefix: null, $suffix: null){
     #{$prefix}omega#{$suffix} {
         float: right;
     }
 }
 
-
+////
 // Debug 
 //
 // Outputs the current breakpoint name to quickly debug 
 // each breakpoint.
-
+////
 @mixin grid-debug($breakpoint_name,$debug_bg: #000){
     body:after{
         position: fixed;
@@ -248,13 +249,13 @@
     }
 }
 
-
+////
 // Grid Generate
 //
 // Pulls the whole thing together ready for output
 // kept seperate from grid-generate as it is DRYer 
 // this way.
-
+////
 @mixin grid-generate($grid_args){
      
     // Set variable defaults

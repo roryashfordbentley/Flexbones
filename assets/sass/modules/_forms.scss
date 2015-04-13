@@ -1,14 +1,14 @@
-/**
- * _forms/scss
- * Bassic form css setup
- */
+////
+// Forms
+////
 
-// Label
-
+// Make all labels block level elements
 label {
     display: block;
 }
 
+// Inherit the body font and remove the
+// webkit outline
 input, 
 select, 
 textarea{
@@ -16,6 +16,9 @@ textarea{
     outline: none;
 }
 
+// Reset some of ios/webkit specific styles
+// Add a border to isolate input from 
+// background
 input{
     display: inline-block;
     width: 100%;
@@ -27,6 +30,8 @@ input{
     }
 }
 
+// Set textarea width to 100% and add a
+// border to match the input style.
 textarea{
     width: 100%;
     border: 1px solid #ccc; 

@@ -1,7 +1,10 @@
-/**
- * html-body.scss
- * styles applied to the html and body elements
- */
+////
+/// html / body
+/// 
+/// Responsive grids setup
+/// 
+/// @author Rory Ashford
+////
 
 
 html { 
@@ -13,7 +16,6 @@ html {
 }
 
     body {
-        color: clr(text,default);
         font-family: $body_font;
         -webkit-font-smoothing: antialiased;
     }

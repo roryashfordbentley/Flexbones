@@ -1,21 +1,20 @@
-/**
- * _wrapper.scss
- *
- * wrappers are set-width content blocks that 
- * determine how wide the content area should be.
- * Generally used in conjunction with Gridtacular
- */
+////
+// Wrapper
+////
+
+// Wrapper class is used to set a block of content
+// to a specified width and max-width
 .wrapper {
     margin: 0 auto;
+    width: 90%;
     @include at-breakpoint($l){ 
-        width: 90%;
         max-width: 1200px; 
     }
 }
-
+    // A thinner wrapper modifier
     .wrapper--small {
+        width: 75%;
         @include at-breakpoint($l){ 
-            width: 75%;
             max-width: 1200px; 
         }
     }

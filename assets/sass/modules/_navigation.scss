@@ -1,50 +1,38 @@
-/**
- * navigation.scss
- * Style menus generated using bem_menu()
- * Based on Wordpress BEM Menus
- * Full Documentation here: 
- * https://github.com/roikles/Wordpress-Bem-Menu
- */
+////
+// Navigation
+// 
+// Style menus generated using bem_menu()
+// Based on Wordpress BEM Menus
+// Full Documentation here: 
+// https://github.com/roikles/Wordpress-Bem-Menu
+////
 
+// Menu class prefix
+$menu_prefix: 'main-menu';
 
-/** 
- * Horizontal Menu (includes logo).
- *
- * <nav class="h-menu">
- *     <a href="#" class="h-menu__home">
- *         <svg class="logo"></svg>
- *     </a>
- *     <ul class="h-menu__list">
- *         <li class="h-menu__item  h-menu__item--active"><a href="#">Home</a></li>
- *         <li class="h-menu__item"><a href="#">Name</a></li>  
- *         <li class="h-menu__item"><a href="#">Name</a></li>
- *     </ul>
- * </nav>
- *
- */
+// Top level items
+// .#{$menu_prefix}__item{}
 
-.h-menu{
-    @include clearfix();
-}
+// Specific link (where x = post_id)
+// .#{$menu_prefix}__item--x{}
 
-    // contains logo
-    .h-menu__home{
-        float: left;
-        display: block;
-    }
+// Parent item
+// .#{$menu_prefix}__item--parent{}
 
-    .h-menu__list{
-        float: right;
-        margin: 0;
-        list-style: none;
-        @include clearfix();
-    }
+// Active page item
+// .#{$menu_prefix}__item--active{}
 
-        .h-menu__item{
-            float: left;
-            line-height: 64px; // same height as logo
-        }
+// Parent of the current active page
+// .#{$menu_prefix}__item--parent--active{}
 
-            .h-menu__item a{
-                text-decoration: none;
-            }
+// Ancestor of the current active page
+// .#{$menu_prefix}__item--ancestor--active{}
+
+// sub menu class
+// .#{$menu_prefix}__sub-menu{}
+
+// sub menu item
+// .#{$menu_prefix}__sub-menu__item{}
+
+// Specific sub menu (where x is the menu depth)
+// .#{$menu_prefix}__sub-menu--x{}

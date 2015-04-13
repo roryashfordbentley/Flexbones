@@ -1,8 +1,8 @@
-/**
- * _clearfix.scss
- * class to clear floating elements
- */
+////
+// Clear
+////
 
+// Clear class apply to container of floated elements
 .clear{
 	@include clearfix();
 }

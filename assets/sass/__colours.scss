@@ -1,34 +1,28 @@
-/**
- * colour.scss
- * define basic colours and then apply them to vars
- * prefix colour variables with 'clr'
- */
+////
+/// Grid Setup
+/// 
+/// define basic colours and then apply them to vars
+/// prefix colour variables with 'clr'
+/// @author Rory Ashford
+////
 
 // Colours
-$clr_gray:                #636767;
-$clr_gray_dark:           #242424;
-
+$clr_gray:          #636767;
 
 // UI Color Map
 $colors: (
     text: (
-        default:    $clr_gray,
-        heading:    $clr_gray_dark
+        default:    $clr_gray
     ),
     links: (
-        default:    $clr_gray,
-        hover:      darken($clr_gray,15%),
-        visited:    $clr_gray,
+        default:    blue,
+        hover:      darken(blue,15%),
+        visited:    blue
     )
 );
 
 
-/**
- * color function
- *
- * returns sub map elements
- * usage background: clr(nav,bg);
- */
+// clr function for outputting map[ped data above
 @function clr($element, $color, $map: $colors) {
     @return map-get(map-get($map, $element), $color);
 }

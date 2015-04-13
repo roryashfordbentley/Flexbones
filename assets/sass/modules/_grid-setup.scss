@@ -1,13 +1,17 @@
-/**
- * _grid.scss
- * Responsive grids setup
- * 
- * Provide maps to setup grid system
- * add infinite breakpoints, breakpoint
- * independant number of columns and 
- * gutters, debug breakpoints.
- */
+////
+// Grid Setup
+// 
+// Responsive grids setup
+// 
+// Provide maps to setup grid system
+// add infinite breakpoints, breakpoint
+// independant number of columns and 
+// gutters, debug breakpoints.
+////
 
+// Grid arguments map
+// Setup the grid breakpoints, features
+// and class prefixes.
 $grid_args:(
     config: (
         columnclass:         'span--',
@@ -43,4 +47,6 @@ $grid_args:(
     )
 );
 
+// Instantiate Gritacular grid
+// using the above options
 @include grid_generate($grid_args);

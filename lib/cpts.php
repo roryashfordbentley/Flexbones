@@ -2,6 +2,10 @@
 
 /**
  * Add Custom Post Types to WordPress
+ *
+ * For info on the post type icons gop here for reference:
+ * https://developer.wordpress.org/resource/dashicons/#editor-textcolor
+ * uncomment add_action to use.
  */
 
 //add_action('init', 'flexbones_cpts');
@@ -37,18 +41,18 @@ function flexbones_cpts() {
         ),
         'labels'                => array(
             'name'                  => $single_name,
-            'singular_name'         => 'Service',
-            'menu_name'             => 'Service',
-            'add_new'               => 'Add Service',
-            'add_new_item'          => 'Add New Service',
+            'singular_name'         => $single_name,
+            'menu_name'             => $single_name,
+            'add_new'               => 'Add ' . $single_name,
+            'add_new_item'          => 'Add New ' . $single_name . ' item',
             'edit'                  => 'Edit',
             'edit_item'             => 'Edit Service',
             'new_item'              => 'New '. $single_name,
-            'view'                  => 'View Service',
-            'view_item'             => 'View Service',
-            'search_items'          => 'Search Service',
+            'view'                  => 'View '. $single_name,
+            'view_item'             => 'View '. $single_name . ' item',
+            'search_items'          => 'Search ' . $plural_name,
             'not_found'             => 'No '. $single_name . 'Found',
-            'not_found_in_trash'    => 'No Services Found in Trash',
+            'not_found_in_trash'    => 'No '. $plural_name .' Found in Trash',
             'parent'                => 'Parent '. $single_name
         ),
     );

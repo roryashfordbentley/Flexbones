@@ -3,4 +3,4 @@
  * Require scripts for use with Browserify
  */
 
-var gridtacular = require('./libs/gridtacular.js');
+var gridtacular = require('./libs/gridtacular/gridtacular.js');

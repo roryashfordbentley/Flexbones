@@ -4,14 +4,14 @@
   "description": "Build everything using NPM",
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
-    "compile-sass": "node-sass --output-style compressed --source-map source.css.map assets/sass/style.scss style.css && autoprefixer style.css && pixrem -i style.css -o style.css --rootvalue 10px",
+    "compile-sass": "node-sass --output-style compressed --source-map source.css.map assets/sass/style.scss style.css && autoprefixer style.css",
     "browserify-js": "browserify assets/js/scripts.js -o scripts.min.js",
     "uglify-js": "uglify scripts.min.js -o scripts.min.js",
     "optimise-images": "imageoptim -d assets/imgs",
     "svg-to-png": "svg2png assets/imgs",
     "build-images": "npm run svg-to-png && npm run optimise-images",
     "watch-sass": "fsmonitor -d 'assets/sass' -s '+*.scss' npm run compile-sass",
-    "watch-js": "fsmonitor -d 'assets/js' -s '+*.js' npm run browserify-js && uglify-js",
+    "watch-js": "fsmonitor -d 'assets/js' -s '+*.js' npm run browserify-js",
     "watch": "livereload & npm run watch-sass & npm run watch-js"
   },
   "devDependencies": {

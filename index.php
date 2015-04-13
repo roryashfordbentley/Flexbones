@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-    <?php get_template_part('wireframe_demo'); ?>
+    <!-- Content!! -->
 <?php get_footer(); ?>

@@ -18,39 +18,41 @@ License URI:    n/a
                                                  
  */
 
+////
+// Global Configuration
+////
+@import "__base";
+@import "__colours";
+
+////
 // Partials
 // Mixins, functions and configs that dont produce output
+////
+@import "partial/_clearfix";
+@import "partial/_gridtacular";
+@import "partial/_rem";
+@import "partial/_fluid-bg";
+@import "partial/_aspect-ratios";
 
-// Global Configuration
-@import "__base.scss";
-@import "__colours.scss";
-
-@import "partial/_clearfix.scss";
-@import "partial/_gridtacular.scss";
-@import "partial/_rem.scss";
-@import "partial/_fluid-bg.scss";
-@import "partial/_aspect-ratios.scss";
-
+////
 // Modules
 // module components, modular and reuseable
-@import "modules/_reset.scss";
-@import "modules/_wrapper.scss";
-@import "modules/_grid-setup.scss";
-@import "modules/_typography.scss";
-@import "modules/_buttons.scss";
-@import "modules/_clear.scss";
-@import "modules/_forms.scss";
-@import "modules/_imgs.scss";
-@import "modules/_navigation.scss";
-@import "modules/_tables.scss";
+////
+@import "modules/_reset";
+@import "modules/_wrapper";
+@import "modules/_grid-setup";
+@import "modules/_typography";
+@import "modules/_buttons";
+@import "modules/_clear";
+@import "modules/_forms";
+@import "modules/_imgs";
+@import "modules/_navigation";
+@import "modules/_tables";
 
+////
 // Section
 // Styles for pages an elements that are not very reuseable
-@import "section/_html-body.scss";
-@import "section/_header.scss";
-@import "section/_footer.scss";
-@import "section/_sidebar.scss";
-@import "section/_belt.scss";
-@import "section/_box.scss";
-@import "section/_billboard.scss";
-@import "section/_primo.scss";
+////
+@import "section/_html-body";
+@import "section/_header";
+@import "section/_footer";

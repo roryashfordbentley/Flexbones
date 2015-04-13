@@ -12,17 +12,6 @@ function flexbones_remove_img_p($content){
 add_filter('the_content', 'flexbones_remove_img_p');
 
 /**
- * Prevent Admin Editor removing br's
- */
-
-function flexbones_preserve_brs($init) {
-    $init['remove_linebreaks'] = false; 
-    return $init;
-}
-
-add_filter('tiny_mce_before_init', 'flexbones_preserve_brs');
-
-/**
  * Hide Admin Bar
  */
 

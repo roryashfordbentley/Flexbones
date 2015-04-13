@@ -1,11 +1,8 @@
+////
+// Typography
+////
 
-/**
- * typography.scss
- * all base font styles,
- * paragraphs, headings, lists
- */
-
-// Shared paragraph sizes
+// shared type styles for common elements
 p,
 ul,
 ol,
@@ -26,23 +23,21 @@ a {
     text-decoration: none;
     display: inline-block;
 }
-
+    // Link hover state
     a:hover{
         color: color(link,hover);
     }
 
+// Paragraph link
 p a,
 p a:visited{
     text-decoration: underline;
 }
 
-
 // Headings
 h1,h2,h3,h4,h5,h6{
     font-family: $heading_font;
     font-weight: $bold;
-    margin-bottom: $base;
-    color: clr(text,heading);
 }
 
 h1{ 
@@ -57,22 +52,7 @@ h3{
     font-size: $size_h3;
 }
 
-
 // Lists
 ul,ol {    
     margin-left: $base;
-}
-
-
-// Text align classes
-.txt-left{
-    text-align: center;
-}
-
-.txt-center{
-    text-align: center;
-}
-
-.txt-right{
-    text-align: right;
 }
