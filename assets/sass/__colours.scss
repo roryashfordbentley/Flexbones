@@ -1,20 +1,13 @@
 ////
 /// Grid Setup
-///
+/// 
 /// define basic colours and then apply them to vars
 /// prefix colour variables with 'clr'
 /// @author Rory Ashford
 ////
 
 // Colours
-$clr_gray:          #666666;
-$clr_blue: 			#3899DC;
-$clr_blue_dark: 	#028ABF;
-$clr_navy: 			#293645;
-$clr_light_blue:    #E5F3F8;
-$clr_facebook: 		#485475;
-$clr_twitter: 		#699EC9;
-
+$clr_gray:          #636767;
 
 // UI Color Map
 $colors: (
@@ -22,19 +15,9 @@ $colors: (
         default:    $clr_gray
     ),
     links: (
-        default:    #41515A,
-        hover:      $clr_blue_dark,
-        visited:    #41515A,
-        border: 	$clr_blue
-    ),
-    button: (
-		default: 	$clr_blue,
-		hover: 		$clr_blue_dark,
-		focus: 		$clr_blue_dark
-    ),
-    brand: (
-		primary:	$clr_blue_dark,
-		secondary: 	$clr_navy,
+        default:    blue,
+        hover:      darken(blue,15%),
+        visited:    blue
     )
 );
 

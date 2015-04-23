@@ -1,39 +1,5 @@
 ////
 /// Footer
-///
+/// 
 /// @author Rory Ashford
 ////
-
-footer{
-	padding: rem(80) 0;
-	background: url('assets/imgs/turbine.png') no-repeat -85px center,
-				$clr_navy;
-}
-
-	.footer__col{
-		margin-bottom: rem(20);
-
-		@include at-breakpoint($m){
-			margin-bottom: 0;
-		}
-	}
-
-	.footer__col p,
-	.footer__col ul,
-	.footer__col li,
-	.footer__col strong,
-	.footer__col a{
-		color: #8C9AA2;
-		margin-bottom: 0;
-	}
-
-	.footer__col h3,
-	.footer__col h2{
-		margin-bottom: $size_p;
-	}
-
-	.footer__col ul,
-	.footer__col li{
-		list-style-type: none;
-		margin: 0;
-	}

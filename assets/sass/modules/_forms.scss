@@ -9,25 +9,19 @@ label {
 
 // Inherit the body font and remove the
 // webkit outline
-input,
-select,
+input, 
+select, 
 textarea{
     font-family: inherit;
     outline: none;
-    vertical-align: middle;
-    display: block;
-    width: 100%;
-
-    @include at-breakpoint($m){
-        width: auto;
-        display: inline-block;
-    }
 }
 
 // Reset some of ios/webkit specific styles
-// Add a border to isolate input from
+// Add a border to isolate input from 
 // background
 input{
+    display: inline-block;
+    width: 100%;
     border: none;
     outline: none;
     border: 1px solid #ccc;
@@ -39,81 +33,9 @@ input{
 // Set textarea width to 100% and add a
 // border to match the input style.
 textarea{
-    border: 1px solid #ccc;
+    width: 100%;
+    border: 1px solid #ccc; 
     &:focus{
         background: #f7f6f6;
     }
 }
-
-input,textarea{
-    padding: rem(8) rem(10);
-}
-
-/**
- * Gravity Forms
- */
-
-.gform_fields{
-    list-style-type: none;
-    margin: 0;
-}
-    .gfield{
-        margin-bottom: $size_p;
-    }
-
-    // this validation container should be hidden from users
-    .gform_validation_container{
-        display: none;
-    }
-
-    .gfield_required{
-        color: red;
-    }
-
-    .gfield_description{
-        font-size: rem(12);
-        margin-bottom: rem(6);
-    }
-
-    // This class is added to a form that has failed validation
-    .validation_error{
-        display: inline-block;
-        font-size: rem(12);
-        padding: rem(5) rem(10);
-        background: mix(white, red, 80%);
-        color: red;
-        border: 1px solid red;
-        margin-bottom: $size_p;
-    }
-
-    // This class is added to a form field that has failed validation
-    .validation_message{
-        display: inline-block;
-        font-size: rem(12);
-        color: red;
-    }
-
-    // This class is applied to form fields that are split into multiple fields
-    // i.e (Firstname / Lastname)
-    .ginput_complex{
-        @include clearfix();
-
-        > span{
-            display: block;
-            float: left;
-            width: 50%;
-        }
-
-        @include at-breakpoint($m){
-            > span{
-                display: inline-block;
-                float: none;
-                width: auto;
-            }
-        }
-
-        input{
-            margin-bottom: 0;
-        }
-    }
-

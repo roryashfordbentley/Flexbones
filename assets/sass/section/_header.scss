@@ -1,40 +1,5 @@
 ////
 /// Header
-///
+/// 
 /// @author Rory Ashford
 ////
-
-.site-header{
-	padding: rem(20);
-
-	@include at-breakpoint($m){
-		padding: rem(40);
-	}
-}
-
-	.site-logo{
-		display: block;
-	}
-
-	.return-home-link{
-		display: block;
-	}
-
-	.header-contact{
-		font-weight: $bold;
-		text-align: left;
-		margin: rem(10);
-		font-size: $size_h3;
-
-		@include at-breakpoint($m){
-			text-align: right;
-			margin: 0 0 $base/2 0;
-		}
-	}
-
-.toggle-mobile-menu{
-	display: block;
-	@include at-breakpoint($m){
-		display: none;
-	}
-}

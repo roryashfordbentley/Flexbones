@@ -1,58 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/**
- * Gridtacular.js
- * 
- * Adds custom html elements to  truly seperate
- * structure from content. Completely optional
- * as Gridtacular uses classes for all element
- * targetting.
- *
- * To use the custom HTML elements below simply 
- * include this .js file at the end of the page 
- * before the closing </body> tag. 
- */
-
-
-/**
- * Require polyfill for IE8 and below.
- */
-
-var customElementPolyfill = require('./register-element-polyfill.js');
-
-/**
- * Wrapper element
- * <g-wrapper></g-wrapper>
- */
- var gridWrapper = document.registerElement('g-wrapper', {
-    extends: 'div',
-    prototype: object.create(HTMLDivElement.prototype)
- });
-
- var wrapperDom = new gridWrapper();
- document.body.appendChild(wrapperDom);
-
-/** 
- * Grid element
- * <g-grid></g-grid>
- */
-var gridRow = document.registerElement('g-grid', {
-    extends: 'div',
-    prototype: object.create(HTMLDivElement.prototype)
-});
-var rowDom = new gridRow();
-document.body.appendChild(rowDom);
-
-/** 
- * grid item element
- * <g-item></g-item>
- */
-var gridItem = document.registerElement('g-item',{
-    extends: 'div',
-    prototype: object.create(HTMLDivElement.prototype)
-});
-var itemDom = new gridItem();
-document.body.appendChild(itemDom);
-},{"./register-element-polyfill.js":2}],2:[function(require,module,exports){
 /*!
 Copyright (C) 2014 by WebReflection
 
@@ -705,11 +650,3 @@ document[REGISTER_ELEMENT] = function registerElement(type, options) {
 };
 
 }(window, document, Object, 'registerElement'));
-},{}],3:[function(require,module,exports){
-/**
- * Scripts.js
- * Require scripts for use with Browserify
- */
-
-var gridtacular = require('./libs/gridtacular/gridtacular.js');
-},{"./libs/gridtacular/gridtacular.js":1}]},{},[3]);

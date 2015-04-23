@@ -6,12 +6,11 @@
 p,
 ul,
 ol,
-input,
+input, 
 textarea{
     font-weight: $medium;
     font-size: $size_p;
     margin-bottom: $base;
-    color: clr(text,default);
 
     &:last-child{
         margin-bottom:0;
@@ -20,13 +19,13 @@ textarea{
 
 // Links
 a {
-    color: clr(links,default);
+    color: color(link,default);
     text-decoration: none;
     display: inline-block;
 }
     // Link hover state
     a:hover{
-        color: clr(links,hover);
+        color: color(link,hover);
     }
 
 // Paragraph link
@@ -39,32 +38,21 @@ p a:visited{
 h1,h2,h3,h4,h5,h6{
     font-family: $heading_font;
     font-weight: $bold;
-    color: clr(brand,primary);
 }
 
-h1{
+h1{ 
     font-size: $size_h1;
 }
 
-h2{
+h2{ 
     font-size: $size_h2;
 }
 
-h3{
+h3{ 
     font-size: $size_h3;
 }
 
 // Lists
-ul,ol {
+ul,ol {    
     margin-left: $base;
-}
-
-strong{
-    font-weight: $bold;
-    color: inherit;
-}
-
-em{
-    font-style: italic;
-    color: inherit;
 }

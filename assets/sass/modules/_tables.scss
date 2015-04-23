@@ -1,38 +1,3 @@
 ////
 // Tables
 ////
-
-table{
-	border: 1px solid #ccc;
-	border-collapse: collapse;
-	width: 100%;
-	max-width: 100%;
-	margin-bottom: $base;
-
-	caption{
-		background: clr(brand,primary);
-		color: white;
-		padding: rem(5);
-		margin-bottom: 0;
-		font-size: rem(14);
-		text-align: left;
-		font-weight: $bold;
-	}
-
-	td,th{
-		font-size: rem(12);
-		padding: rem(3) rem(5);
-		border: 1px solid #ccc;
-	}
-
-	th{
-		color: clr(brand,secondary);
-		text-align: left;
-		line-height: 1;
-	}
-
-	td{
-		color: clr(text,default);
-	}
-}
-

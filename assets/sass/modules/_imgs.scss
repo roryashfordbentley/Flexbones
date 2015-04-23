@@ -3,15 +3,13 @@
 ////
 
 // Make images responsive by default
-img{
+img{ 
     width: auto;        // IE8 Fix
     max-width: 100%;    // Responsive Images
     height: auto;
-	vertical-align: middle;
-}
+}  
 
 // Remove border on images wrapper with an anchor
 a img{
-	outline: none;
     border: 0;
 }
