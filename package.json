@@ -4,7 +4,7 @@
   "description": "Build everything using NPM",
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
-    "compile-sass": "node-sass --output-style compressed --source-map source.css.map assets/sass/style.scss style.css && autoprefixer style.css",
+    "compile-sass": "node-sass --output-style expanded --source-map source.css.map assets/sass/style.scss style.css && autoprefixer style.css",
     "browserify-js": "browserify assets/js/scripts.js -o scripts.min.js",
     "uglify-js": "uglify scripts.min.js -o scripts.min.js",
     "optimise-images": "imageoptim -d assets/imgs",

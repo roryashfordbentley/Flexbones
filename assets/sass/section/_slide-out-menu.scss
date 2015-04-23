@@ -1,0 +1,55 @@
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+	.toggle-mobile-menu {
+	    background-color: #3184a1;
+	    color: #fff;
+	}
+	.toggle-mobile-menu:focus {
+	    outline: none
+	}
+
+/* general style for all menus */
+nav.mobile-menu {
+    position: fixed;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 500;
+
+    @include at-breakpoint($m){
+        display: none;
+    }
+}
+button.close-menu {
+    background-color: $clr_blue_dark;
+    margin-bottom: rem(20);
+    color: #fff;
+}
+button.close-menu:focus {
+    outline: none
+}
+
+/* Left slide-out panel */
+nav.slide-menu-left {
+	position: fixed;
+    top: 0;
+    width: rem(300);
+    height: 100%;
+}
+nav.slide-menu-left li {
+    display: block;
+}
+nav.slide-menu-left {
+    left: rem(-300);
+}
+body.sml-open nav.slide-menu-left {
+    left: 0
+}

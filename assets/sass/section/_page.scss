@@ -1,0 +1,22 @@
+/**
+ * All styles here will be applied to all internal pages
+ */
+
+.content-container{
+	padding: rem(20) 0;
+
+	@include at-breakpoint($m){
+		padding: rem(40) 0;
+	}
+
+	@include at-breakpoint($l){
+		padding: rem(80) 0;
+	}
+
+	h1:first-child{
+		margin-bottom: $size_h1;
+	}
+}
+
+.single-page-content{
+}

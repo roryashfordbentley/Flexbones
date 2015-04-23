@@ -10,12 +10,12 @@ License URI:    n/a
 */
 
 /**
-    ________          __                         
+    ________          __
    / ____/ /__  _  __/ /_  ____  ____  ___  _____
   / /_  / / _ \| |/_/ __ \/ __ \/ __ \/ _ \/ ___/
- / __/ / /  __/>  </ /_/ / /_/ / / / /  __(__  ) 
-/_/   /_/\___/_/|_/_.___/\____/_/ /_/\___/____/  
-                                                 
+ / __/ / /  __/>  </ /_/ / /_/ / / / /  __(__  )
+/_/   /_/\___/_/|_/_.___/\____/_/ /_/\___/____/
+
  */
 
 ////
@@ -54,5 +54,22 @@ License URI:    n/a
 // Styles for pages an elements that are not very reuseable
 ////
 @import "section/_html-body";
+@import "section/_feature-text";
 @import "section/_header";
 @import "section/_footer";
+@import "section/_slider";
+@import "section/_tiles";
+@import "section/_page";
+@import "section/_testimonials";
+@import "section/_sidebar";
+@import "section/_split-page";
+@import "section/_embed";
+@import "section/_billboard";
+@import "section/_turbines";
+@import "section/_slide-out-menu";
+
+////
+// Fonts
+// Font icons to be used for UX
+////
+@import "fonts/font-awesome";

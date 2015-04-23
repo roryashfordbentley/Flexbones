@@ -1,38 +1,100 @@
 ////
 // Navigation
-// 
+//
 // Style menus generated using bem_menu()
 // Based on Wordpress BEM Menus
-// Full Documentation here: 
+// Full Documentation here:
 // https://github.com/roikles/Wordpress-Bem-Menu
 ////
 
 // Menu class prefix
 $menu_prefix: 'main-menu';
+$mobile_prefix: 'mobile-menu';
 
 // Top level items
-// .#{$menu_prefix}__item{}
+.#{$menu_prefix}{
+	display: none;
+
+	@include at-breakpoint($l){
+		@include clearfix();
+		display: block;
+		float: right;
+	}
+}
+
+.#{$menu_prefix}__item{
+	display: inline-block;
+	margin-left: rem(10);
+
+	a{
+		color: clr(links,default);
+		display: block;
+		padding: rem(2) 0;
+		line-height: 1;
+		font-size: rem(18);
+		font-weight: $bold;
+		transition: 1s;
+	}
+
+	a:hover{
+		color: clr(links,hover);
+	}
+}
 
 // Specific link (where x = post_id)
-// .#{$menu_prefix}__item--x{}
+//.#{$menu_prefix}__item--x{}
 
 // Parent item
-// .#{$menu_prefix}__item--parent{}
+.#{$menu_prefix}__item--parent{}
 
 // Active page item
-// .#{$menu_prefix}__item--active{}
+.#{$menu_prefix}__item--active,
+.#{$menu_prefix}__item--parent--active,
+.#{$menu_prefix}__item--ancestor--active{
+
+	a{
+		border-bottom: 2px solid clr(links,border);
+	}
+
+	a:hover{
+		color: clr(links,hover);
+	}
+}
 
 // Parent of the current active page
-// .#{$menu_prefix}__item--parent--active{}
+.#{$menu_prefix}__item--parent--active{}
 
 // Ancestor of the current active page
-// .#{$menu_prefix}__item--ancestor--active{}
+.#{$menu_prefix}__item--ancestor--active{}
 
 // sub menu class
-// .#{$menu_prefix}__sub-menu{}
+.#{$menu_prefix}__sub-menu{}
 
 // sub menu item
-// .#{$menu_prefix}__sub-menu__item{}
+.#{$menu_prefix}__sub-menu__item{}
 
 // Specific sub menu (where x is the menu depth)
-// .#{$menu_prefix}__sub-menu--x{}
+.#{$menu_prefix}__sub-menu--x{}
+
+
+/* Mobile Menu styles */
+.mobile-menu{
+	background: clr(brand,secondary);
+}
+
+	.mobile-menu-list{
+		margin: 0;
+		list-style-type: none;
+	}
+
+		.mobile-menu-list__item a{
+			display: block;
+			color: white;
+			padding: rem(10) rem(20);
+			font-size: $size_h2;
+			font-weight: $bold;
+		}
+
+		.mobile-menu-list__item--active a{
+			background: clr(brand,primary)
+		}

@@ -3,15 +3,52 @@
 ////
 
 .btn{
+    transition: .1s;
     display: inline-block;
     width: auto;
     margin: 0;
     cursor: pointer;
     border: none;
     outline: none;
+    background: clr(brand,primary);
+    color: white;
+    border-radius: 3px;
+    line-height: 1;
+    padding: rem(10) rem(15);
+    font-size: $size_p;
+
     webkit-font-smoothing: antialiased;
 
     &:focus{
         box-shadow: none;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background: $clr_blue_dark;
+    }
+}
+
+    .btn--call-to-action{
+        font-size: $size_h3;
+        font-weight: $bold;
+    }
+
+    .btn--dark{
+        background: clr(brand,secondary);
+
+        &:hover{
+            background: $clr_blue;
+        }
+    }
+
+
+/* Anchors using button class */
+a.btn{
+    list-style-type: none;
+
+    &:hover{
+        text-decoration: none;
+        color: white;
     }
 }

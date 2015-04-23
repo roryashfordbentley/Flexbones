@@ -1,0 +1,34 @@
+.feature-block{
+	padding: rem(80) 0;
+	text-align: center;
+
+	hr{
+		border: 0;
+		height: 2px;
+		background: clr(brand,primary);
+		width: 100%;
+		max-width: 450px;
+		margin: rem(30) auto;
+	}
+
+}
+
+	.feature-block__heading{
+		font-weight: $light;
+		font-size: rem(64);
+	}
+
+	.feature-block__subheading{
+		font-weight: $medium;
+		font-size: rem(26);
+		color: clr(text,default);
+	}
+
+	.feature-block__content{
+		max-width: 960px;
+		margin: 0 auto;
+
+		p{
+			font-size: rem(16);
+		}
+	}

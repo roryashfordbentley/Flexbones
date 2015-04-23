@@ -1,13 +1,13 @@
 ////
 /// html / body
-/// 
+///
 /// Responsive grids setup
-/// 
+///
 /// @author Rory Ashford
 ////
 
 
-html { 
+html {
     font-size: $font_size;
     @include at-breakpoint($mq_medium_min){ font-size: $font_size_m; }
     @include at-breakpoint($mq_large_min){ font-size: $font_size_l; }
@@ -16,6 +16,16 @@ html {
 }
 
     body {
+    	position: relative;
         font-family: $body_font;
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    .container{
+        z-index: 10;
+        top: 0;
+        left: 0;
+        position: relative;
+        transition: all 0.3s;
     }
