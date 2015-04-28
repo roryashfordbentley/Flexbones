@@ -12,7 +12,7 @@
     "build-images": "npm run svg-to-png && npm run optimise-images",
     "watch-sass": "fsmonitor -d 'assets/sass' -s '+*.scss' npm run compile-sass",
     "watch-js": "fsmonitor -d 'assets/js' -s '+*.js' npm run browserify-js",
-    "watch": "livereload & npm run watch-sass & npm run watch-js"
+    "watch": "livereload . -i 3000 & npm run watch-sass & npm run watch-js"
   },
   "devDependencies": {
     "autoprefixer": "^5.1.0",

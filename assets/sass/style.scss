@@ -29,10 +29,12 @@ License URI:    n/a
 // Mixins, functions and configs that dont produce output
 ////
 @import "partial/_clearfix";
+@import "partial/_at-breakpoint";
 @import "partial/_gridtacular";
 @import "partial/_rem";
 @import "partial/_fluid-bg";
 @import "partial/_aspect-ratios";
+@import "partial/_flex-type";
 
 ////
 // Modules

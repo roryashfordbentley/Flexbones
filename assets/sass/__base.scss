@@ -2,7 +2,6 @@
 // Base
 // Variables and setup
 // 
-// @author Rory Ashford
 ////
 
 ////
@@ -16,7 +15,7 @@ $mq_small_min:          null;
 $mq_small_max:          null;
 
 // S/Small
-$s: ($mq_small_min, $mq_small_max);
+$s: $mq_small_min $mq_small_max;
 
 // Medium media query minimum width
 $mq_medium_min:         800px;
@@ -25,7 +24,7 @@ $mq_medium_min:         800px;
 $mq_medium_max:         null;
 
 // M/Medium
-$m: ($mq_medium_min, $mq_medium_max);
+$m: $mq_medium_min $mq_medium_max;
 
 // Large media query minimum width
 $mq_large_min:          1000px;
@@ -34,7 +33,7 @@ $mq_large_min:          1000px;
 $mq_large_max:          null;
 
 // L/Large
-$l: ($mq_large_min, $mq_large_max);
+$l: $mq_large_min $mq_large_max;
 
 // Extra Large media query minimum width
 $mq_extralarge_min:     1200px;
@@ -43,7 +42,7 @@ $mq_extralarge_min:     1200px;
 $mq_extralarge_max:     null;
 
 // XL/XLarge
-$xl: ($mq_extralarge_min,$mq_extralarge_max);
+$xl: $mq_extralarge_min $mq_extralarge_max;
 
 // Project size defaults
 

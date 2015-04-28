@@ -17,7 +17,7 @@
 10 error You can get their info via:
 10 error     npm owner ls Flexbones
 10 error There is likely additional logging output above.
-11 error System Darwin 14.1.0
+11 error System Darwin 14.3.0
 12 error command "node" "/usr/local/bin/npm" "run" "compile-sass"
 13 error cwd /Applications/MAMP/htdocs/barebones/wp-content/themes/flexbones
 14 error node -v v0.10.32
