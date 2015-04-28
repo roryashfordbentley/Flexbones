@@ -1,18 +1,14 @@
 ////
-/// Grid Setup
-/// 
-/// define basic colours and then apply them to vars
-/// prefix colour variables with 'clr'
-/// @author Rory Ashford
+// Grid Setup
+// 
+// define basic colours and then apply them to vars
+// prefix colour variables with 'clr'
 ////
-
-// Colours
-$clr_gray:          #636767;
 
 // UI Color Map
 $colors: (
     text: (
-        default:    $clr_gray
+        default:    grey
     ),
     links: (
         default:    blue,

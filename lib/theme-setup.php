@@ -15,7 +15,7 @@ function flexbones_setup() {
     register_nav_menus(array(
         'main_menu' => 'main menu'
     ));
-    register_sidebar();
+    register_sidebar(array('id'=>'sidebar-1')); 
 }
 
 add_action('after_setup_theme', 'flexbones_setup');
