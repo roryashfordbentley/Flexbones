@@ -9,9 +9,19 @@
 
 html { 
     font-size: $font_size;
-    @include at-breakpoint($mq_medium_min){ font-size: $font_size_m; }
-    @include at-breakpoint($mq_large_min){ font-size: $font_size_l; }
-    @include at-breakpoint($mq_extralarge_min){ font-size: $font_size_xl; }
+    
+    @include at-breakpoint($mq_medium_min){ 
+        font-size: $font_size_m; 
+    }
+
+    @include at-breakpoint($mq_large_min){ 
+        font-size: $font_size_l; 
+    }
+
+    @include at-breakpoint($mq_extralarge_min){ 
+        font-size: $font_size_xl; 
+    }
+
     line-height: $line-height;
 }
 
