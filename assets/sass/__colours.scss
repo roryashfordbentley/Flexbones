@@ -17,7 +17,6 @@ $colors: (
     )
 );
 
-
 // clr function for outputting map[ped data above
 @function clr($element, $color, $map: $colors) {
     @return map-get(map-get($map, $element), $color);

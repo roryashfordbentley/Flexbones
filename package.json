@@ -1,31 +1,41 @@
 {
   "name": "Flexbones",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Build everything using NPM",
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
-    "compile-sass": "node-sass --output-style expanded assets/sass/style.scss style.css && postcss --use autoprefixer -o style.css style.css",
-    "browserify-js": "browserify assets/js/scripts.js -o scripts.min.js",
-    "uglify-js": "uglify scripts.min.js -o scripts.min.js",
-    "optimise-images": "imageoptim -d assets/imgs",
-    "svg-to-png": "svg2png assets/imgs",
-    "build-images": "npm run svg-to-png -s && npm run optimise-images -s",
-    "watch-sass": "fsmonitor -d 'assets/sass' -s '+*.scss' npm run compile-sass -s",
-    "watch-js": "fsmonitor -d 'assets/js' -s '+*.js' npm run browserify-js -s",
-    "watch": "livereload . -i 3000 & npm run watch-sass -s & npm run watch-js -s"
+    "watch:sass": "fsmonitor -d 'assets/sass' -s '+*.scss' node-sass --output-style expanded assets/sass/style.scss style.css",
+    "watch:browserify": "browserify assets/js/scripts.js -o scripts.min.js",
+    "watch:js": "fsmonitor -d 'assets/js' -s '+*.js' npm run watch:browserify -s",
+    "watch": "livereload . -i 3000 & npm run watch:sass & npm run watch:js",
+    "build:css": "postcss --use autoprefixer -o style.css style.css",
+    "build:uglify-js": "uglifyjs scripts.min.js -o scripts.min.js",
+    "build:optimise-images": "imageoptim --directory assets/imgs --quit",
+    "build:svg-to-png": "svg2png assets/imgs",
+    "build:compile": "rsync -av $(pwd)/ $(pwd)/build --exclude='.DS_Store'  --exclude='*.md' --exclude='.git' --exclude='.gitignore' --exclude='node_modules' --exclude='package.json' --exclude='npm-debug.log' --exclude='assets/sass' --exclude='assets/js' --exclude='build'",
+    "build": "npm run build:css & npm run build:uglify-js & npm run build:svg-to-png -s && npm run build:optimise-images -s && npm run build:compile"
   },
   "devDependencies": {
+    "autoprefixer": "^5.2.0",
     "browserify": "^8.1.3",
-    "chalk-cli": "^1.0.1",
+    "cssnano": "^2.4.0",
     "fsmonitor": "^0.2.4",
-    "imageoptim-cli": "^1.11.4",
-    "livereload": "^0.3.6",
+    "imageoptim-cli": "^1.11.6",
+    "livereload": "^0.3.7",
     "node-sass": "^2.0.1",
     "pixrem-cli": "^1.0.3",
-    "postcss-cli": "^1.4.0",
+    "postcss-cli": "^1.5.0",
+    "postcss-svg-fallback": "^1.0.2",
     "sass": "^0.5.0",
-    "svg2png": "^1.1.0",
     "svg2png-cli": "^1.1.1",
     "uglify-js": "^2.4.15"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-global-shim"
+    ]
+  },
+  "browserify-global-shim": {
+    "jQuery": "$"
   }
 }
