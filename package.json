@@ -8,19 +8,20 @@
     "watch:browserify": "browserify assets/js/scripts.js -o scripts.min.js",
     "watch:js": "fsmonitor -d 'assets/js' -s '+*.js' npm run watch:browserify -s",
     "watch": "livereload . -i 3000 & npm run watch:sass & npm run watch:js",
-    "build:css": "postcss --use autoprefixer -o style.css style.css",
+    "build:autoprefix-css": "postcss --use autoprefixer -o style.css style.css",
+    "build:minify-css": "cssnano --no-convertvalues",
     "build:uglify-js": "uglifyjs scripts.min.js -o scripts.min.js",
-    "build:optimise-images": "imageoptim --directory assets/imgs --quit",
+    "build:optimise-images": "imagemin assets/imgs assets/imgs",
     "build:svg-to-png": "svg2png assets/imgs",
     "build:compile": "rsync -av $(pwd)/ $(pwd)/build --exclude='.DS_Store'  --exclude='*.md' --exclude='.git' --exclude='.gitignore' --exclude='node_modules' --exclude='package.json' --exclude='npm-debug.log' --exclude='assets/sass' --exclude='assets/js' --exclude='build'",
-    "build": "npm run build:css & npm run build:uglify-js & npm run build:svg-to-png -s && npm run build:optimise-images -s && npm run build:compile"
+    "build": "npm run build:autoprefix-css && npm run build:minify-css & npm run build:uglify-js & npm run build:svg-to-png -s && npm run build:optimise-images -s && npm run build:compile"
   },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
     "browserify": "^8.1.3",
     "cssnano": "^2.4.0",
     "fsmonitor": "^0.2.4",
-    "imageoptim-cli": "^1.11.6",
+    "imagemin-cli": "^1.0.0",
     "livereload": "^0.3.7",
     "node-sass": "^2.0.1",
     "pixrem-cli": "^1.0.3",
@@ -29,13 +30,5 @@
     "sass": "^0.5.0",
     "svg2png-cli": "^1.1.1",
     "uglify-js": "^2.4.15"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-global-shim"
-    ]
-  },
-  "browserify-global-shim": {
-    "jQuery": "$"
   }
 }
