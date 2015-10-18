@@ -8,8 +8,6 @@
 
 
 html {
-    font-size: $font_size;
-
     @include flextype(
         $s $font_size $line-height,
         $m $font_size_m $line-height,
