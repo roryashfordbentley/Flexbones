@@ -1,31 +1,25 @@
 ////
 /// html / body
-/// 
+///
 /// Responsive grids setup
-/// 
+///
 /// @author Rory Ashford
 ////
 
 
-html { 
+html {
     font-size: $font_size;
-    
-    @include at-breakpoint($mq_medium_min){ 
-        font-size: $font_size_m; 
-    }
 
-    @include at-breakpoint($mq_large_min){ 
-        font-size: $font_size_l; 
-    }
-
-    @include at-breakpoint($mq_extralarge_min){ 
-        font-size: $font_size_xl; 
-    }
-
-    line-height: $line-height;
+    @include flextype(
+        $s $font_size $line-height,
+        $m $font_size_m $line-height,
+        $l $font_size_l $line-height,
+        $xl $font_size_xl $line-height
+    );
 }
 
     body {
         font-family: $body_font;
         -webkit-font-smoothing: antialiased;
+        color: clr(text,default);
     }

@@ -6,7 +6,7 @@
 p,
 ul,
 ol,
-input, 
+input,
 textarea{
     font-weight: $medium;
     margin-bottom: $base;
@@ -18,12 +18,13 @@ textarea{
 
 // Links
 a {
-    text-decoration: none;
     display: inline-block;
+    color: clr(links,default);
+    text-decoration: none;
 }
     // Link hover state
     a:hover{
-        color: color(link,hover);
+        color: clr(links,hover);
     }
 
 // Paragraph link
@@ -38,19 +39,19 @@ h1,h2,h3,h4,h5,h6{
     font-weight: $bold;
 }
 
-h1{ 
+h1{
     font-size: $size_h1;
 }
 
-h2{ 
+h2{
     font-size: $size_h2;
 }
 
-h3{ 
+h3{
     font-size: $size_h3;
 }
 
 // Lists
-ul,ol {    
+ul,ol {
     margin-left: $base;
 }
