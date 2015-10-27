@@ -3,4 +3,5 @@
 *.scssc
 node_modules/
 npm-debug.log
+build/
 *.map
