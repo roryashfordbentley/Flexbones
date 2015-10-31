@@ -1,7 +1,8 @@
 # Ignore sass-cache files.
 *.sass-cache*
 *.scssc
-node_modules/
+node_modules/*
 npm-debug.log
 build/
 *.map
+build/*

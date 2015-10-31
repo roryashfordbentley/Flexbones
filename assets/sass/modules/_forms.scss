@@ -9,22 +9,22 @@ label {
 
 // Inherit the body font and remove the
 // webkit outline
-input, 
-select, 
+input,
+select,
 textarea{
     font-family: inherit;
     outline: none;
 }
 
 // Reset some of ios/webkit specific styles
-// Add a border to isolate input from 
+// Add a border to isolate input from
 // background
 input{
     display: inline-block;
     width: 100%;
-    border: none;
     outline: none;
     border: 1px solid #ccc;
+
     &:focus{
         background: #f7f6f6;
     }
@@ -34,7 +34,8 @@ input{
 // border to match the input style.
 textarea{
     width: 100%;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
+
     &:focus{
         background: #f7f6f6;
     }

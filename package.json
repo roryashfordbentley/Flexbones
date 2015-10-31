@@ -1,6 +1,6 @@
 {
   "name": "Flexbones",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Build everything using NPM",
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
@@ -23,7 +23,7 @@
     "fsmonitor": "^0.2.4",
     "imagemin-cli": "^1.0.0",
     "livereload": "^0.3.7",
-    "node-sass": "^2.0.1",
+    "node-sass": "^3.3.3",
     "pixrem-cli": "^1.0.3",
     "postcss-cli": "^1.5.0",
     "postcss-svg-fallback": "^1.0.2",

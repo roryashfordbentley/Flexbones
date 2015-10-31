@@ -2,7 +2,7 @@
 // At breakpoint
 ////
 
-@mixin at-breakpoint($min,$max:null){
+@mixin at-breakpoint($min, $max:null){
     @if($max == null and $min != null){
         @media (min-width: $min){
             @content;

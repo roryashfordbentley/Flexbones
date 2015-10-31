@@ -6,7 +6,7 @@
  */
 
 function flexbones_remove_img_p($content){
-   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 add_filter('the_content', 'flexbones_remove_img_p');
@@ -49,3 +49,35 @@ function flexbones_remove_inline_css() {
 }
 
 add_action( 'widgets_init', 'flexbones_remove_inline_css' );
+
+/**
+ * Modify wp_title() to print pretty page titles
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+function flexbones_wp_title( $title, $sep ) {
+    if ( is_feed() ) {
+        return $title;
+    }
+
+    global $page, $paged;
+
+    // Add the blog name
+    $title .= get_bloginfo( 'name', 'display' );
+
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_home() || is_front_page() ) ) {
+        $title .= " $sep $site_description";
+    }
+
+    // Add a page number if necessary:
+    if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+        $title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+    }
+
+    return $title;
+}
+add_filter( 'wp_title', 'flexbones_wp_title', 10, 2 );
