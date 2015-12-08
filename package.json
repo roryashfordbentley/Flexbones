@@ -8,13 +8,19 @@
     "watch:browserify": "browserify assets/js/scripts.js -o scripts.min.js",
     "watch:js": "fsmonitor -d 'assets/js' -s '+*.js' npm run watch:browserify -s",
     "watch": "livereload . -i 3000 & npm run watch:sass & npm run watch:js",
+    "db:localhost-to-staging": "wp search-replace http://localhost/project-name http://staging.codebluedigital.com/project-name",
+    "db:localhost-to-live": "wp search-replace http://localhost/project-name http://project-name.com",
+    "db:live-to-localhost": "wp search-replace http://project-name.com http://localhost/project-name",
+    "db:staging-to-localhost": "wp search-replace http://localhost/project-name http://staging.codebluedigital.com/project-name",
+    "build:db:localhost-to-staging":"npm run db:localhost-to-staging && wp db export $(pwd)/build/db-for-staging.sql && npm run db:staging-to-localhost",
+    "build:db:localhost-to-live":"npm run db:localhost-to-live && wp db export $(pwd)/build/db-for-live.sql && npm run db:live-to-localhost",
     "build:autoprefix-css": "postcss --use autoprefixer -o style.css style.css",
     "build:minify-css": "cssnano style.css style.css --no-convertValues",
     "build:uglify-js": "uglifyjs scripts.min.js -o scripts.min.js",
     "build:optimise-images": "imagemin assets/imgs assets/imgs",
     "build:svg-to-png": "svg2png assets/imgs",
     "build:compile": "rsync -av $(pwd)/ $(pwd)/build --exclude='.DS_Store'  --exclude='*.md' --exclude='.git' --exclude='.gitignore' --exclude='node_modules' --exclude='package.json' --exclude='npm-debug.log' --exclude='assets/sass' --exclude='assets/js' --exclude='build'",
-    "build": "npm run build:autoprefix-css && npm run build:minify-css & npm run build:uglify-js & npm run build:svg-to-png -s && npm run build:optimise-images -s && npm run build:compile"
+    "build": "npm run build:autoprefix-css && npm run build:minify-css & npm run build:uglify-js & npm run build:svg-to-png -s && npm run build:optimise-images -s && npm run build:compile && npm run build:db:localhost-to-staging"
   },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
