@@ -11,22 +11,22 @@
 @mixin flextype($type_styles...){
     @each $val in $type_styles {
     
-        $mq_combined: nth($val,1);
-        $mq_min: nth(nth($val,1),1);
-        $mq_max: nth(nth($val,1),2);
-    
+        //$mq_combined: nth($val,1);
+        $mq_min: nth($val,1);
+        $mq_max: nth($val,2);
+
         @if length($val) == 1 {
             @error "Not enough arguments";
-        } @else if length($val) == 2 {
-            @include at-breakpoint($mq_min, $mq_max){
-                font-size: nth($val,2);
-            }
         } @else if length($val) == 3 {
             @include at-breakpoint($mq_min, $mq_max){
-                font-size: nth($val,2);
-                line-height: nth($val,3);
+                font-size: nth($val,3);
             }
-        } @else if length($val) > 3 {
+        } @else if length($val) == 4 {
+            @include at-breakpoint($mq_min, $mq_max){
+                font-size: nth($val,3);
+                line-height: nth($val,4);
+            }
+        } @else if length($val) > 4 {
             @error "Too many arguments";
         }
     }
