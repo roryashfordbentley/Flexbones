@@ -5,7 +5,7 @@
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
     "db-export": "wp search-replace http://localhost/barebones http://staging.codebluedigital.com/flexbones && wp db export $(pwd)/db-export.sql && wp search-replace http://staging.codebluedigital.com/flexbones http://localhost/barebones",
-    "generate-css":"node-sass --output-style expanded assets/sass/style.scss style.css && postcss --use autoprefixer -o style.css style.css && cssnano style.css style.css --no-convertValues",
+    "generate-css":"node-sass --output-style expanded assets/sass/style.scss style.css && pixrem -i style.css -o style.css -r 10px && postcss --use autoprefixer -o style.css style.css && cssnano style.css style.css --no-autoprefixer --no-convertValues",
     "browserify": "browserify assets/js/scripts.js -o scripts.min.js && uglifyjs scripts.min.js -o scripts.min.js",
     "watch:sass": "fsmonitor -d 'assets/sass' -s '+*.scss' npm run generate-css",
     "watch:js": "fsmonitor -d 'assets/js' -s '+*.js' npm run browserify -s",
