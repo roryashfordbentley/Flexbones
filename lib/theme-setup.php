@@ -13,9 +13,11 @@ function flexbones_setup() {
         'gallery', 
         'caption' 
     ));
+
     register_nav_menus(array(
         'main_menu' => 'main menu'
     ));
+    
     register_sidebar(array('id'=>'sidebar-1')); 
 }
 
