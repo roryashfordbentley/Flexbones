@@ -25,36 +25,37 @@ License URI:    n/a
 @import "__colours";
 
 ////
-// Partials
-// Mixins, functions and configs that dont produce output
+// Tools
+// Mixins, functions and configs that generally dont produce output
 ////
-@import "partial/_clearfix";
-@import "partial/_at-breakpoint";
-@import "partial/_gridtacular";
-@import "partial/_rem";
-@import "partial/_fluid-bg";
-@import "partial/_aspect-ratios";
-@import "partial/_flex-type";
+@import "tools/_clearfix";
+@import "tools/_at-breakpoint";
+@import "tools/_gridtacular";
+@import "tools/_rem";
+@import "tools/_fluid-bg";
+@import "tools/_aspect-ratios";
+@import "tools/_flex-type";
 
 ////
-// Modules
-// module components, modular and reuseable
+// Globals
+// Reusable front end components
 ////
-@import "modules/_reset";
-@import "modules/_wrapper";
-@import "modules/_grid-setup";
-@import "modules/_typography";
-@import "modules/_buttons";
-@import "modules/_clear";
-@import "modules/_forms";
-@import "modules/_imgs";
-@import "modules/_navigation";
-@import "modules/_tables";
+@import "globals/_reset";
+@import "globals/_html-body";
+@import "globals/_wrapper";
+@import "globals/_grid-setup";
+@import "globals/_typography";
+@import "globals/_buttons";
+@import "globals/_clear";
+@import "globals/_forms";
+@import "globals/_imgs";
+@import "globals/_navigation";
+@import "globals/_tables";
 
 ////
-// Section
-// Styles for pages an elements that are not very reuseable
+// Project
+// Project specific styles go in here
 ////
-@import "section/_html-body";
-@import "section/_header";
-@import "section/_footer";
+
+@import "project/_header";
+@import "project/_footer";
