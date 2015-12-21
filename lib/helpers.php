@@ -1,3 +1,4 @@
+<?php 
 /**
  * Shortcut to the assets folder
  * easier to read than get_stylesheet_directory_uri() . '/assets/folder'
