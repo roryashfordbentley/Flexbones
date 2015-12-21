@@ -36,8 +36,24 @@ function add_address_customizer($wp_customize) {
         'priority'      => 30,
     ) );
  
-    // Phone Number
+    // Address
+    $wp_customize->add_setting("address", array(
+        "default"       => "",
+        "transport"     => "refresh",
+    ));
 
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "address",
+        array(
+            "label" => "Enter Company Address",
+            "section" => "contact_details",
+            "settings" => "address",
+            "type" => "textarea"
+        )
+    ));
+
+    // Phone Number
     $wp_customize->add_setting("phone_number", array(
         "default"       => "",
         "transport"     => "refresh",
@@ -55,7 +71,6 @@ function add_address_customizer($wp_customize) {
     ));
 
     // Fax Number
-
     $wp_customize->add_setting("fax_number", array(
         "default"       => "",
         "transport"     => "refresh",
@@ -73,7 +88,6 @@ function add_address_customizer($wp_customize) {
     ));
 
     // Email Address
-
     $wp_customize->add_setting("email_address", array(
         "default"       => "",
         "transport"     => "refresh",
