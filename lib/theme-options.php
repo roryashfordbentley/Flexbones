@@ -11,7 +11,7 @@
 
 
 /**
- * Remove unecesarrty theme customisations
+ * Remove unused theme customisations
  */
 
 add_action('customize_register', 'remove_customize_bloat');
@@ -24,6 +24,9 @@ function remove_customize_bloat($wp_customize) {
 
 /**
  * Contact Details
+ *
+ * Adds a section to the theme customizer for
+ * company contact details.
  */
 
 add_action('customize_register', 'add_address_customizer');
@@ -108,6 +111,10 @@ function add_address_customizer($wp_customize) {
 
 /**
  * Contact Details
+ *
+ * Adds a section to the theme customizer for
+ * adding and updating URLs to social media
+ * profiles
  */
 
 add_action('customize_register', 'add_social_links');
@@ -206,3 +213,89 @@ function add_social_links($wp_customize) {
     ));  
 
 }
+
+/**
+ * Flexbones Settings
+ *
+ * Super serial chops for devs.
+ */
+
+add_action( 'customize_register', 'flexbones_options' );
+
+function flexbones_options($wp_customize) {
+
+    $wp_customize->add_section( 'flexbones_options', array(
+        'title'         => 'Flexbones Options',
+        'priority'      => 50,
+    ) );
+
+    // oEmbed Settings
+    $wp_customize->add_setting( 'oembed_setting', array(
+    'default'           =>  true,
+    'transport'         =>  'refresh'
+     ) );
+
+    $wp_customize->add_control(
+    'oembed_setting',
+    array(
+        'section'       => 'flexbones_options',
+        'label'         => 'Enable oEmbed support?',
+        'type'          => 'checkbox'
+         )
+    );
+
+    // WP-API Settings
+    $wp_customize->add_setting( 'wp_api_setting', array(
+    'default'           =>  false,
+    'transport'         =>  'refresh'
+     ) );
+
+    $wp_customize->add_control(
+    'wp_api_setting',
+    array(
+        'section'       => 'flexbones_options',
+        'label'         => 'Enable the REST API?',
+        'type'          => 'checkbox'
+         )
+    );
+}
+
+/**
+ * Check oEmbed settings 
+ * 
+ * if not checked (false) then remove the oEmbed output
+ */
+
+add_action( 'init', 'flexbones_oembed_settings' );
+
+function flexbones_oembed_settings(){
+
+    if( get_theme_mod('oembed_setting') == false ){
+        remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+        wp_deregister_script( 'wp-embed' );
+    }
+
+}
+
+
+/**
+ * Check WP REST API settings 
+ * 
+ * if not checked (false) then remove the oEmbed output
+ */
+
+add_action( 'init', 'flexbones_api_settings' );
+
+function flexbones_api_settings(){
+
+    if( get_theme_mod('wp_api_setting') == false ){
+        add_filter('rest_enabled', '_return_false');
+        add_filter('rest_jsonp_enabled', '_return_false');
+        remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+    }
+
+}
+
+
+
+
