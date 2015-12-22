@@ -14,13 +14,14 @@ function flexbones_cpts() {
     $post_type_name = "";
     $single_name    = "";
     $plural_name    = "";
+    $description    = "";
     $icon           = "";
 
     $post_type_options = array(
         'label'                 => $single_name,
         'description'           => $description,
         'public'                => true,
-        'menu_icon'             => 'dashicons-book',
+        'menu_icon'             => $icon,
         'show_ui'               => true,
         'show_in_menu'          => true,
         'capability_type'       => 'post',
@@ -46,12 +47,12 @@ function flexbones_cpts() {
             'add_new'               => 'Add ' . $single_name,
             'add_new_item'          => 'Add New ' . $single_name . ' item',
             'edit'                  => 'Edit',
-            'edit_item'             => 'Edit Service',
+            'edit_item'             => 'Edit ' . $single_name,
             'new_item'              => 'New '. $single_name,
             'view'                  => 'View '. $single_name,
             'view_item'             => 'View '. $single_name . ' item',
             'search_items'          => 'Search ' . $plural_name,
-            'not_found'             => 'No '. $single_name . 'Found',
+            'not_found'             => 'No '. $single_name . ' Found',
             'not_found_in_trash'    => 'No '. $plural_name .' Found in Trash',
             'parent'                => 'Parent '. $single_name
         ),
