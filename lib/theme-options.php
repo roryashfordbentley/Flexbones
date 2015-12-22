@@ -11,7 +11,7 @@
 
 
 /**
- * Remove unecesarrty theme cusatomisations
+ * Remove unecesarrty theme customisations
  */
 
 add_action('customize_register', 'remove_customize_bloat');
@@ -103,5 +103,106 @@ function add_address_customizer($wp_customize) {
             "type" => "input"
         )
     ));
+
+}
+
+/**
+ * Contact Details
+ */
+
+add_action('customize_register', 'add_social_links');
+
+function add_social_links($wp_customize) {
+ 
+    // Add a section 
+    $wp_customize->add_section( 'social_links', array(
+        'title'         => 'Social Media Links',
+        'priority'      => 40,
+    ) );
+ 
+    // Facebook
+    $wp_customize->add_setting("facebook_link", array(
+        "default"       => "",
+        "transport"     => "refresh"
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "facebook_link",
+        array(
+            "label"     => "Enter Facebook link",
+            "section"   => "social_links",
+            "settings"  => "facebook_link",
+            "type"      => "input"
+        )
+    ));
+
+    // Twitter
+    $wp_customize->add_setting("twitter_link", array(
+        "default"       => "",
+        "transport"     => "refresh"
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "twitter_link",
+        array(
+            "label"     => "Enter Twitter link",
+            "section"   => "social_links",
+            "settings"  => "twitter_link",
+            "type"      => "input"
+        )
+    ));
+
+    // Linkedin
+    $wp_customize->add_setting("linkedin_link", array(
+        "default"       => "",
+        "transport"     => "refresh"
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "linkedin_link",
+        array(
+            "label"     => "Enter Linkedin link",
+            "section"   => "social_links",
+            "settings"  => "linkedin_link",
+            "type"      => "input"
+        )
+    ));
+
+    // Instagram
+    $wp_customize->add_setting("instagram_link", array(
+        "default"       => "",
+        "transport"     => "refresh"
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "instagram_link",
+        array(
+            "label"     => "Enter Instagram link",
+            "section"   => "social_links",
+            "settings"  => "instagram_link",
+            "type"      => "input"
+        )
+    ));
+
+    // Google+
+    $wp_customize->add_setting("googleplus_link", array(
+        "default"       => "",
+        "transport"     => "refresh"
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "googleplus_link",
+        array(
+            "label"     => "Enter Google+ link",
+            "section"   => "social_links",
+            "settings"  => "googleplus_link",
+            "type"      => "input"
+        )
+    ));  
 
 }
