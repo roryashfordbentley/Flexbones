@@ -6,8 +6,10 @@
   "scripts": {
     "db-export": "wp search-replace http://localhost/barebones http://staging.codebluedigital.com/flexbones && wp db export $(pwd)/db-export.sql && wp search-replace http://staging.codebluedigital.com/flexbones http://localhost/barebones",
     "generate-css":"node-sass --output-style expanded assets/sass/style.scss style.css && pixrem -i style.css -o style.css -r 10px && postcss --use autoprefixer -o style.css style.css && cssnano style.css style.css --no-autoprefixer --no-convertValues",
+    "generate-admin-css":"node-sass --output-style expanded assets/sass/admin/admin.scss style-admin.css && pixrem -i style-admin.css -o style-admin.css -r 10px && postcss --use autoprefixer -o style-admin.css style-admin.css && cssnano style-admin.css style-admin.css --no-autoprefixer --no-convertValues",
     "browserify": "browserify assets/js/scripts.js -o scripts.min.js && uglifyjs scripts.min.js -o scripts.min.js",
-    "watch:sass": "fsmonitor -d 'assets/sass' -s '+*.scss' npm run generate-css",
+    "css":"npm run generate-css && npm run generate-admin-css",
+    "watch:sass": "fsmonitor -d 'assets/sass' -s '+*.scss' npm run css",
     "watch:js": "fsmonitor -d 'assets/js' -s '+*.js' npm run browserify -s",
     "watch": "livereload & npm run watch:sass & npm run watch:js",
     "build:compile": "rsync -av $(pwd)/ $(pwd)/build --exclude='.DS_Store'  --exclude='*.md' --exclude='.git' --exclude='.gitignore' --exclude='node_modules' --exclude='package.json' --exclude='npm-debug.log' --exclude='assets/sass' --exclude='assets/js' --exclude='build'",
