@@ -229,7 +229,22 @@ function flexbones_options($wp_customize) {
         'priority'      => 50,
     ) );
 
-    // oEmbed Settings
+    // Admin bar settings
+    $wp_customize->add_setting( 'admin_bar_setting', array(
+    'default'           =>  false,
+    'transport'         =>  'refresh'
+     ) );
+
+    $wp_customize->add_control(
+    'admin_bar_setting',
+    array(
+        'section'       => 'flexbones_options',
+        'label'         => 'Enable frontend admin bar?',
+        'type'          => 'checkbox'
+         )
+    );
+
+    // oEmbed settings
     $wp_customize->add_setting( 'oembed_setting', array(
     'default'           =>  true,
     'transport'         =>  'refresh'
@@ -296,6 +311,16 @@ function flexbones_api_settings(){
 
 }
 
+/**
+ * Check Admin bar settings
+ */
 
+add_action( 'init', 'flexbones_admin_bar_settings' );
 
+function flexbones_admin_bar_settings(){
 
+    if( get_theme_mod('admin_bar_setting') == false ){
+        add_filter('show_admin_bar', '__return_false');
+    }
+
+}

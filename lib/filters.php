@@ -12,12 +12,6 @@ function flexbones_remove_img_p($content){
 add_filter('the_content', 'flexbones_remove_img_p');
 
 /**
- * Hide Admin Bar
- */
-
-add_filter('show_admin_bar', '__return_false');
-
-/**
  * Remove bloat from wordpress html head
  */
 
