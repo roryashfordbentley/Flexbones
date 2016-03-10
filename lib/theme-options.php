@@ -304,8 +304,8 @@ add_action( 'init', 'flexbones_api_settings' );
 function flexbones_api_settings(){
 
     if( get_theme_mod('wp_api_setting') == false ){
-        add_filter('rest_enabled', '_return_false');
-        add_filter('rest_jsonp_enabled', '_return_false');
+        add_filter('rest_enabled', '__return_false');
+        add_filter('rest_jsonp_enabled', '__return_false');
         remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
     }
 
