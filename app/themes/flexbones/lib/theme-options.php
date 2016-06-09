@@ -324,3 +324,52 @@ function flexbones_admin_bar_settings(){
     }
 
 }
+
+/**
+ * Alias the function to get the theme options
+ *
+ * Original is unsemantic and bollocks
+ */
+function flexbones_setting($value){
+    return get_theme_mod($value);
+}
+
+
+/**
+ * Get Lat/Long from postcode
+ *
+ * Use the postcodes.io API to automatically generate
+ * Lat/Long values
+ */
+function get_lat_long($postcode){
+    
+    if (!$postcode) {
+        return;
+    }
+
+    $curl = curl_init();
+    
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'api.postcodes.io/postcodes/'. $postcode,
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+
+    // return an array from the decoded json
+    $decoded = json_decode($response, true);
+
+    $output = array();
+    $output['latitude'] = $decoded['result']['latitude'];
+    $output['longitude'] = $decoded['result']['longitude'];
+
+    //$output['latitude'] = 'foo';
+    //$output['longitude'] = 'bar';
+    echo 'TESTING';
+
+    return $output;
+
+}
+

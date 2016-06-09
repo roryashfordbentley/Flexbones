@@ -1,7 +1,7 @@
 # Security
 #
 # Dont execute anything that contains the string 'php'
-# This WILL cause problems with Gravity PDF Extended as they run php from the uplaods folder
+# This WILL cause problems with Gravity PDF Extended as they run php from the uploads folder
 
 <FilesMatch "\.(php|php\.)$">
 Order Allow,Deny
