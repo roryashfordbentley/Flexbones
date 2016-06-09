@@ -1,0 +1,359 @@
+////
+// Gridtacular
+////
+
+
+////
+// Map Get Z
+//
+// A cleaner way to deal with nested map values.
+// Created by lunelson [https://github.com/lunelson/sass-list-maps]
+//
+// @arg {map} $list - provide a Sass map to be traversed
+// @arg {array} $keys... - provide the array keys per depth comma seperated
+// 
+// @example scss - Map Get Z
+//     map-get-z(map, first-child-key, second-child-key);
+////
+@function map-get-z($list, $keys...) {
+  @if $list == null { @return $list; }
+  $length: length($keys);
+  $list: map-get($list, nth($keys, 1));
+  @if $length > 1 {
+    @for $n from 2 through $length {
+      @if $list == null { @return $list; }
+      $list: map-get($list, nth($keys, $n));
+    }
+    @return $list;
+  }
+  @return $list;
+}
+
+////
+// Column Width
+// 
+// Works out the percent width of columns (gutters can be 
+// any unit but columns are always percent bases)
+// 
+// @arg {int} $list - provide a Sass map to be traversed
+// @arg {int} $keys... - provide the array keys per depth comma seperated
+// 
+// @example scss - Map Get Z
+//     map-get-z(map, first-child-key, second-child-key);
+////
+@function column-width($number_of_columns,$total_columns) {
+    $single_col_width: 100 / $total_columns * 1%;
+    @return $single_col_width * $number_of_columns;
+}
+
+
+//// 
+// At Breakpoint
+// 
+// A mixin for outputting inline media queries
+// Just supply a Sass list as an argument with a min/max
+// If there are no min and max values supplied then it 
+// doesnt ouput a media query
+////
+@mixin at-breakpoint($min,$max:null){
+    @if($max == null and $min != null){
+        @media (min-width: $min){
+            @content;
+        }
+    } @elseif($min == null and $max == null) {
+        @content;
+    } @else{
+         @media (min-width: $min) and (max-width: $max){
+            @content;
+        }
+    }
+}
+
+
+////
+// Span Columns
+// 
+// Used to set grids semantically from within 
+// the stylesheet with no additional HTML markup
+////
+@mixin span-columns($columns, $total_columns){
+    width: column-width($columns,$total_columns);
+    padding-left: $gutter-width; 
+}
+
+
+////
+// Grid
+//
+// Called once per breakpoint as the gutters may be different
+// Float all direct children of the grid.
+// Adds negative padding to each row
+// Display flex and flex-wrap are used here to prevent content from 
+// floating into above elements
+////
+@mixin grid($gutter){
+    .grid{
+        display: block;
+        margin-left: -$gutter;
+        @include clearfix();
+    }
+
+        // Float children
+        .grid > * {
+            float: left;
+            position: relative;
+            padding-left: $gutter;
+        }
+
+}
+
+////
+// Grid with no gutters
+////
+@mixin grid-no-gutter($column_class,$suffix: null){
+    .grid--no-gutter#{$suffix}{
+        margin-left: 0;
+    }
+
+        // Float children
+        .grid--no-gutter#{$suffix} > * {
+            padding-left: 0;
+        }
+}
+
+////
+// Equivalent Fractions
+//
+// This function will add additional classes
+// to make the grid system more expressive.
+// Instead of writing 4/12 you can also write 1/3
+////
+@function equivalent-fractions($numerator,$denominator){
+    $fractions: ();
+    @for $i from -$numerator through -1{
+        @if($numerator % abs($i) == 0 and $denominator % abs($i) == 0){
+            $fraction: (abs($i): #{$numerator/abs($i)}-#{$denominator/abs($i)});
+            $fractions: map-merge($fractions, $fraction);
+        }     
+    }
+    // return map of all fractions
+    @return $fractions;
+}
+
+////
+// Grid Columns
+// 
+// Set the grid column widths based on the number of 
+// columns divided by the total number of columns.
+////
+@mixin grid-columns($prefix: null, $suffix: null, $columns: null, $fifths: false, $sevenths: false){
+    // Loop through the total grid columns
+    
+    @for $i from 1 through $columns{
+        $css_classes: equivalent-fractions($i,$columns);
+        $column_class: null;
+        
+        // Generate classes from Equivilant fractions
+
+        @each $key, $css_class in $css_classes{
+            $full_css_class: #{$prefix}#{$css-class}#{$suffix};
+            $column_class: $column_class, $full_css_class;
+        }
+        
+        // Output column classes
+
+        #{$column_class}{
+            width: column-width($i,$columns);
+        }
+    }
+
+    // Add fifths where total columns dont divide into fifths.
+    
+    @if($fifths == true){
+        @for $i from 1 through 5{
+            $fifth_class: #{$prefix}#{$i}-5#{$suffix};
+
+            #{$fifth_class}{
+                width: column-width($i,5);
+            }
+        }
+    }
+
+    // Add sevenths where total columns dont divide into sevenths.
+    
+    @if($sevenths == true){
+        @for $i from 1 through 7{
+            $seventh_class: #{$prefix}#{$i}-7#{$suffix};
+
+            #{$seventh_class}{
+                width: column-width($i,7);
+            }
+        }
+    }
+}
+
+////
+// Push Class
+//
+// Set the push classes that will incrementally indent
+// the column by a maximum number of total-columns -1
+////
+@mixin grid-push($prefix: null, $suffix: null, $columns: null){
+    @for $i from 1 through $columns - 1{
+        $css_classes: equivalent-fractions($i,$columns);
+        $push_class: null;
+        
+        @each $key, $css_class in $css_classes{
+            $full_css_class: #{$prefix}#{$css_class}#{$suffix};
+            $push_class: $push_class, $full_css_class;
+        }
+        
+        #{$push_class}{
+            margin-left: column-width($i,$columns);
+        }
+
+    }
+}
+
+////
+// Omega class
+//
+// An omega declaration that is breakpoint specific
+// Basically it floats an element to the right taking
+// it out of order potentially.
+////
+@mixin grid-omega($prefix: null, $suffix: null){
+    #{$prefix}omega#{$suffix} {
+        float: right;
+    }
+}
+
+////
+// Debug 
+//
+// Outputs the current breakpoint name to quickly debug 
+// each breakpoint.
+////
+@mixin grid-debug($breakpoint_name,$debug_bg: #000){
+    body:after{
+        position: fixed;
+        display: block;
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        background: $debug_bg;
+        content: "#{$breakpoint_name}";
+    }
+}
+
+////
+// Grid Generate
+//
+// Pulls the whole thing together ready for output
+// kept seperate from grid-generate as it is DRYer 
+// this way.
+////
+@mixin grid-generate($grid_args){
+     
+    // Set variable defaults
+
+    $default_column_name:   "span--";
+    $default_push:          false;
+    $default_push_name:     "push--";
+    $default_omega:         true;
+    $default_debug_display: false;
+    
+    // If columnclass has been defined
+    $column_name: if( map-has-key(map-get($grid_args, config), columnclass), map-get-z($grid_args, config, columnclass), $default_column_name );
+    
+    // If push has been defined
+    $push: if( map-has-key(map-get($grid_args, config), push), map-get-z($grid_args, config, push), $default_push );
+
+    // If pushclass has been defined
+    $push_name: if( map-has-key(map-get($grid_args, config), pushclass), map-get-z($grid_args, config, pushclass), $default_push_name );
+    
+    // If push has been defined
+    $omega: if( map-has-key(map-get($grid_args, config), omega), map-get-z($grid_args, config, omega), $default_omega );
+
+    // If debug has been defined
+    $debug_display: if( map-has-key(map-get($grid_args, config), debug),map-get-z($grid_args, config, debug), $default_debug_display );
+    
+    // Check that there are defined grids
+    
+    @if( map-has-key($grid_args, grids )) {
+        
+        // Grid default values
+        $grids:             map-get($grid_args, grids);
+        $column_prefix:     #{'.' + $column_name};
+        $push_prefix:       #{'.' + $push_name};
+        
+        @each $grid_name, $grid_map in $grids{
+
+            // Set defaults
+
+            $default_columns:           12;
+            $default_suffix:            null;
+            $default_breakpoint_min:    null;
+            $default_breakpoint_max:    null;
+            $default_gutter:            24px;
+            $default_fifths:            false;
+            $default_sevenths:          false;
+            $default_debug_bg:          #000;
+            $default_debug_name:        $grid_name;
+
+            // If column class has been defined
+            $columns: if( map-has-key($grid_map, columns), map-get($grid_map,columns), $default_columns );
+            
+            // If column class has been defined
+            $suffix: if( map-has-key($grid_map, suffix), map-get($grid_map,suffix), $default_suffix );
+            
+            // If column class has been defined
+            $breakpoint_min: if( map-has-key($grid_map, breakpoint_min), map-get($grid_map,breakpoint_min), $default_breakpoint_min );
+
+            // If column class has been defined
+            $breakpoint_max: if( map-has-key($grid_map, breakpoint_max), map-get($grid_map,breakpoint_max), $default_breakpoint_max );
+            
+            // If column class has been defined
+            $gutter: if( map-has-key($grid_map, gutter), map-get($grid_map,gutter), $default_gutter );
+        
+            // If fifths are enabled
+            $fifths: if( map-has-key($grid_map, fifths), map-get($grid_map,fifths), $default_fifths );
+
+            // If SEVENTHS are enabled
+            $sevenths: if( map-has-key($grid_map, sevenths), map-get($grid_map,sevenths), $default_sevenths );
+
+            // If debug background is defined
+            $debug_bg: if( map-has-key($grid_map, debug_bg), map-get($grid_map, debug_bg), $default_debug_bg );
+
+            // If debug name is defined
+            $debug_name: if( map-has-key($grid_map, debug_name), map-get($grid_map, debug_name), $default_debug_name );
+
+            // Include the necessary mixins to generate the grids
+            @include at-breakpoint($breakpoint_min, $breakpoint_max){
+                
+                @include grid($gutter);
+                @include grid-no-gutter($column_name,$suffix);
+                @include grid-columns($column_prefix,$suffix,$columns,$fifths,$sevenths);
+                
+                @if($push){
+                    @include grid-push($push_prefix, $suffix, $columns);
+                }
+                
+                @if($omega){
+                    @include grid-omega($column_prefix, $suffix);
+                }
+
+                @if($debug_display){ 
+                    @include grid-debug($debug_name,$debug_bg) 
+                } 
+
+            }
+        }
+
+    } @else{
+        @error "No Gridtacular grids defined!";
+    }
+}

@@ -1,0 +1,108 @@
+////
+// Base
+// Variables and setup
+// 
+////
+
+////
+// Media Queries
+////
+
+// Small media query minimum width
+$mq_small_min:          null;
+
+// Small media query maximum width
+$mq_small_max:          null;
+
+// S/Small
+$s: $mq_small_min $mq_small_max;
+
+// Medium media query minimum width
+$mq_medium_min:         800px;
+
+// Medium media query maximum width
+$mq_medium_max:         null;
+
+// M/Medium
+$m: $mq_medium_min $mq_medium_max;
+
+// Large media query minimum width
+$mq_large_min:          1000px;
+
+// Large media query maximum width
+$mq_large_max:          null;
+
+// L/Large
+$l: $mq_large_min $mq_large_max;
+
+// Extra Large media query minimum width
+$mq_extralarge_min:     1200px;
+
+// Extra Large media query maximum width
+$mq_extralarge_max:     null;
+
+// XL/XLarge
+$xl: $mq_extralarge_min $mq_extralarge_max;
+
+// Project size defaults
+
+// Base size (used to maintain consistent 
+// sizing of borders, margins etc across the project)
+$base:                  2.4rem;
+
+// Default Line height
+$line-height:           1.5;
+
+////
+// Font Sizes
+////
+
+// Default Font size
+$font_size:             50%;
+
+// Default medium font size
+$font_size_m:           62.5%;
+
+// Default large font size
+$font_size_l:           62.5%;
+
+// Default extra large font size
+$font_size_xl:          75%;
+
+// Heading 1 font size
+$size_h1:               3.6rem;
+
+// Heading 2 font size
+$size_h2:               2.4rem; 
+
+// Heading 3 font size
+$size_h3:               1.8rem;
+
+// Paragraph font size
+$size_p:                1.5rem;
+
+////
+// Font Weights
+////
+
+// Light font-weight
+$light:                 300;
+
+// Medium font-weight
+$medium:                400;
+
+// Semibold font-weight
+$semibold:              600;
+
+// Bold font-weight
+$bold:                  700;
+
+////
+// Font families
+////
+
+// Heading Font
+$heading_font:          Helvetica, Arial, sans-serif;
+
+// Body font
+$body_font:             $heading_font;

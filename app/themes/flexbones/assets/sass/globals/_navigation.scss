@@ -1,0 +1,38 @@
+////
+// Navigation
+// 
+// Style menus generated using bem_menu()
+// Based on Wordpress BEM Menus
+// Full Documentation here: 
+// https://github.com/roikles/Wordpress-Bem-Menu
+////
+
+// Menu class prefix
+$menu_prefix: 'main-menu';
+
+// Top level items
+// .#{$menu_prefix}__item{}
+
+// Specific link (where x = post_id)
+// .#{$menu_prefix}__item--x{}
+
+// Parent item
+// .#{$menu_prefix}__item--parent{}
+
+// Active page item
+// .#{$menu_prefix}__item--active{}
+
+// Parent of the current active page
+// .#{$menu_prefix}__item--parent--active{}
+
+// Ancestor of the current active page
+// .#{$menu_prefix}__item--ancestor--active{}
+
+// sub menu class
+// .#{$menu_prefix}__sub-menu{}
+
+// sub menu item
+// .#{$menu_prefix}__sub-menu__item{}
+
+// Specific sub menu (where x is the menu depth)
+// .#{$menu_prefix}__sub-menu--x{}

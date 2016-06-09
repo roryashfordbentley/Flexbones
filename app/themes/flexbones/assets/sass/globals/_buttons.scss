@@ -1,0 +1,17 @@
+////
+// Buttons
+////
+
+.btn{
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    webkit-font-smoothing: antialiased;
+
+    &:focus{
+        box-shadow: none;
+    }
+}

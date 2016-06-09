@@ -1,0 +1,23 @@
+////
+// Grid Setup
+// 
+// define basic colours and then apply them to vars
+// prefix colour variables with 'clr'
+////
+
+// UI Color Map
+$colors: (
+    text: (
+        default:    grey
+    ),
+    links: (
+        default:    blue,
+        hover:      darken(blue,15%),
+        visited:    bluea   
+    )
+);
+
+// clr function for outputting map[ped data above
+@function clr($element, $color, $map: $colors) {
+    @return map-get(map-get($map, $element), $color);
+}

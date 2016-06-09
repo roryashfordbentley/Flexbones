@@ -1,0 +1,26 @@
+////
+// Reset
+////
+
+// Reset browser specific margins and padding
+// Set Box sizing to Border box.
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers.
+// 
+// https://github.com/h5bp/html5-boilerplate/issues/440
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}

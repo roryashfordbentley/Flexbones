@@ -1,0 +1,8 @@
+////
+// Rem Mixin
+// 
+// @author Rory Ashford
+////
+@function rem($multiplier:1){
+    @return $multiplier/10 * 1rem;
+}

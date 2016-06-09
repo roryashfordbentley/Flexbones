@@ -1,0 +1,41 @@
+////
+// Flextype
+// 
+// Manageable responsive typography
+////
+
+// Flextype
+// Takes an arglist of mediaqueries, font sizes 
+// and line heights and outputs different sizes
+// at different breakpoints.
+@mixin flextype($type_styles...){
+    @each $val in $type_styles {
+    
+        //$mq_combined: nth($val,1);
+        $mq_min: nth($val,1);
+        $mq_max: nth($val,2);
+
+        @if length($val) == 1 {
+            @error "Not enough arguments";
+        } @else if length($val) == 3 {
+            @include at-breakpoint($mq_min, $mq_max){
+                font-size: nth($val,3);
+            }
+        } @else if length($val) == 4 {
+            @include at-breakpoint($mq_min, $mq_max){
+                font-size: nth($val,3);
+                line-height: nth($val,4);
+            }
+        } @else if length($val) > 4 {
+            @error "Too many arguments";
+        }
+    }
+}
+
+//  Example  usage
+//  
+//  @include flextype(
+//      $m 1.4rem 1.4, 
+//      $l 1.8rem 1.3 
+//  );
+////

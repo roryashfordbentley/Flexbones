@@ -1,0 +1,52 @@
+////
+// Grid Setup
+// 
+// Responsive grids setup
+// 
+// Provide maps to setup grid system
+// add infinite breakpoints, breakpoint
+// independant number of columns and 
+// gutters, debug breakpoints.
+////
+
+// Grid arguments map
+// Setup the grid breakpoints, features
+// and class prefixes.
+$grid_args:(
+    config: (
+        columnclass:         'span--',
+        pushclass:           'push--',
+        debug:               true
+    ),
+    grids: (
+        small: (
+            columns:         12,
+            suffix:          null,
+            gutter:          $base,
+            debug_name:      'Small',
+            debug_bg:        #DABB3A,
+        ),
+        medium: (
+            columns:        12,
+            suffix:         '--m',
+            breakpoint_min: 800px,
+            breakpoint_max: null,
+            gutter:         $base,
+            debug_name:     'Medium',
+            debug_bg:       #1EA061,
+        ),
+        large: (
+            columns:        12,
+            suffix:         '--l',
+            breakpoint_min: 1100px,
+            breakpoint_max: null,
+            gutter:         $base,
+            debug_name:     'Large',
+            debug_bg:       #13a2f7,
+        )
+    )
+);
+
+// Instantiate Gritacular grid
+// using the above options
+@include grid_generate($grid_args);

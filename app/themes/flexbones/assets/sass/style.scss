@@ -1,0 +1,61 @@
+/*!
+Theme Name:     Flexbones
+Theme URI:      http://github.com/roikles/flexbones
+Description:    A responsive wordpress starter theme
+Author:         Rory Ashford
+Author URI:     http://roikles.com
+Version:        3.0.0
+License:        All work is the property of Rory Ashford
+License URI:    n/a
+*/
+
+/*!
+    ________          __                         
+   / ____/ /__  _  __/ /_  ____  ____  ___  _____
+  / /_  / / _ \| |/_/ __ \/ __ \/ __ \/ _ \/ ___/
+ / __/ / /  __/>  </ /_/ / /_/ / / / /  __(__  ) 
+/_/   /_/\___/_/|_/_.___/\____/_/ /_/\___/____/  
+                                                 
+ */
+
+////
+// Global Configuration
+////
+@import "__base";
+@import "__colours";
+
+////
+// Tools
+// Mixins, functions and configs that generally dont produce output
+////
+@import "tools/_clearfix";
+@import "tools/_at-breakpoint";
+@import "tools/_gridtacular";
+@import "tools/_rem";
+@import "tools/_fluid-bg";
+@import "tools/_aspect-ratios";
+@import "tools/_flex-type";
+
+////
+// Globals
+// Reusable front end components
+////
+@import "globals/_reset";
+@import "globals/_html-body";
+@import "globals/_wrapper";
+@import "globals/_grid-setup";
+@import "globals/_typography";
+@import "globals/_buttons";
+@import "globals/_clear";
+@import "globals/_forms";
+@import "globals/_imgs";
+@import "globals/_navigation";
+@import "globals/_tables";
+
+////
+// Project
+// Project specific styles go in here
+////
+
+@import "project/_header";
+@import "project/_footer";
