@@ -34,3 +34,12 @@ function admin_css() {
     wp_enqueue_style('admin-css', get_template_directory_uri() . '/style-admin.css');
 }
 
+/**
+ * get components
+ */
+function get_component($component){
+
+    require_once( get_stylesheet_directory_uri() . '/components/' . $component . '/index.php');
+
+    return true;
+}

@@ -53,9 +53,9 @@ License URI:    n/a
 @import "globals/_tables";
 
 ////
-// Project
-// Project specific styles go in here
+// Components
+// Include the styles for each component here
 ////
 
-@import "project/_header";
-@import "project/_footer";
+@import "../components/header/_index";
+@import "../components/footer/_index";
