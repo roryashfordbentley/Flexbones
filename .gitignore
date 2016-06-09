@@ -7,4 +7,3 @@ build/
 *.map
 .DS_Store
 db-export.sql
-wp/*
