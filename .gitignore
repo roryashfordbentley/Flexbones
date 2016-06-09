@@ -9,3 +9,5 @@ wp/*
 !wp/readme.md
 app/uploads/*
 app/debug.log
+app/plugins
+!app/plugins/index.php
