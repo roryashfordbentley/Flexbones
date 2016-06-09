@@ -10,16 +10,18 @@ if (file_exists(dirname( __FILE__) . '/wp-config-local.php')) {
     include(dirname( __FILE__) . '/wp-config-local.php');
     define('WP_LOCAL_DEV',true);
 } else {
-    define('DB_NAME', '');
-    define('DB_USER', '');
-    define('DB_PASSWORD', '');
-    define('DB_HOST', 'localhost');
+    define("DB_NAME", "");
+    define("DB_USER", "");
+    define("DB_PASSWORD", "");
+    define("DB_HOST", "localhost");
     define("WP_DEBUG",true);
+    define("WP_DEBUG_DISPLAY", false);
+    define("WP_DEBUG_LOG", true);
     define("WP_CONTENT_DIR", dirname(__FILE__). "/app" );
     define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"]. "/flexbones/app");
-    define('UPLOADS', 'app/uploads');
-    define('WP_HOME','http://localhost/flexbones');
-    define('WP_SITEURL','http://localhost/flexbones/wp');
+    define("UPLOADS", "app/uploads");
+    define("WP_HOME","http://localhost/flexbones");
+    define("WP_SITEURL","http://localhost/flexbones/wp");
 }
 
 define('AUTH_KEY',         'Ylxj(%4M|l=Vfi }<,T12&Rrh-h6Jt`,r`3{5HaG]%>n@<:R3Ns$1|[i#/{-5<ON');
