@@ -8,3 +8,5 @@ build/
 .DS_Store
 db-export.sql
 wp/*
+!wp/readme.md
+app/uploads
