@@ -1,7 +1,12 @@
 <?php
 
-define('DB_NAME', 'e3');
+define('DB_NAME', 'barebones');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_HOST', 'localhost');
-define("WP_DEBUG", false);
+define("WP_DEBUG",true);
+define("WP_CONTENT_DIR", dirname(__FILE__). "/app" );
+define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"]. "/flexbones/app");
+define('UPLOADS', 'app/uploads');
+define('WP_HOME','http://localhost/flexbones');
+define('WP_SITEURL','http://localhost/flexbones/wp');

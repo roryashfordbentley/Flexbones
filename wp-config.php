@@ -1,10 +1,26 @@
 <?php
 
-define('DB_NAME', 'barebones');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_HOST', 'localhost');
-define('DB_COLLATE', '');
+$table_prefix  = 'As5fghte_';
+$folder = '/flexbones';
+
+/**
+ * IF a local config exists load vars from there
+ */
+if (file_exists(dirname( __FILE__) . '/wp-config-local.php')) {
+    include(dirname( __FILE__) . '/wp-config-local.php');
+    define('WP_LOCAL_DEV',true);
+} else {
+    define('DB_NAME', '');
+    define('DB_USER', '');
+    define('DB_PASSWORD', '');
+    define('DB_HOST', 'localhost');
+    define("WP_DEBUG",true);
+    define("WP_CONTENT_DIR", dirname(__FILE__). "/app" );
+    define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"]. "/flexbones/app");
+    define('UPLOADS', 'app/uploads');
+    define('WP_HOME','http://localhost/flexbones');
+    define('WP_SITEURL','http://localhost/flexbones/wp');
+}
 
 define('AUTH_KEY',         'Ylxj(%4M|l=Vfi }<,T12&Rrh-h6Jt`,r`3{5HaG]%>n@<:R3Ns$1|[i#/{-5<ON');
 define('SECURE_AUTH_KEY',  'Ph1+vzEq>twte;aQ*F(zNyK]-Zvvl{i0vwaFI5C.+TLg]~JP6@: +K=qLgdCjZAU');
@@ -15,13 +31,11 @@ define('SECURE_AUTH_SALT', 'lJQEl#rSCYza6N,Yn5{1lgx~M)Rx5x_ PxSJ|lZs]x{<;(KL4% R
 define('LOGGED_IN_SALT',   '|9qWp/W%g-T.]CVW_g)a-BTEwU( 8A.@(qZ7v)@}RC`z{[prC=^oX-fKMWD.5DWd');
 define('NONCE_SALT',       'nimJ%+f>u`CYA|Ab5|o-c]/`.xv7p:xQ%fO][3}+rDG@tjM}+n]6I|fsqq>lK5f7');
 
-$table_prefix  = 'As5fghte_';
-$folder = '/flexbones';
+if ( !defined('ABSPATH') )
+    define('ABSPATH', dirname(__FILE__) . '/');
 
-define("WP_DEBUG",true);
-define("WP_CONTENT_DIR", dirname(__FILE__). "/app" );
-define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"] . $folder . "/wp-content");
-define('UPLOADS', 'app/uploads');
+require_once(ABSPATH . 'wp-settings.php');
+
 
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
