@@ -1,28 +1,51 @@
 {
-  "name": "Flexbones",
-  "version": "4.0.0",
-  "description": "Watch for scss and js changes. Minimize and compile.",
+  "name": "FlexbonesBuild",
+  "version": "5.0.0",
+  "description": "Watch sass,js and deploy",
   "author": "Rory Ashford <rory@roikles.com>",
+  "config": {
+    "theme": "wp-content/themes/flexbones",
+    "sass":"wp-content/themes/flexbones/assets/sass/style.scss",
+    "sassfolder":"wp-content/themes/flexbones/assets/sass",
+    "css":"wp-content/themes/flexbones/style.css",
+    "scripts": "wp-content/themes/flexbones/assets/js/scripts.js",
+    "scriptsmin": "wp-content/themes/flexbones/scripts.min.js",
+    "scriptsfolder": "wp-content/themes/flexbones/assets/js",
+    "watch": "wp-content/themes/flexbones/",
+    "watchproxy": "localhost/barebones"
+  },
   "scripts": {
-    "sass:css":"node-sass assets/sass/style.scss style.css --output-style expanded",
-    "sass:postcss": "postcss --use autoprefixer -o style.css style.css",
-    "sass:cssnano": "cssnano style.css style.css --no-autoprefixer --no-convertValues",
-    "sass":"npm run -s sass:css && npm run -s sass:postcss && npm run -s sass:cssnano",
-    "js:browserify": "browserify assets/js/scripts.js -o scripts.min.js",
-    "js:uglify":"uglifyjs scripts.min.js -o scripts.min.js",
-    "js":"npm run -s js:browserify && npm run -s js:uglify",
-    "watch:sass": "fsmonitor -d 'assets/sass' -q '+*.scss' npm run -s sass",
-    "watch:js": "fsmonitor -d 'assets/js' -q '+*.js' npm run -s js",
-    "browsersync":"browser-sync start --files '*.html, *.php, style.css, scripts.min.js' --no-open --proxy 'localhost/barebones'",
-    "watch":"npm run -s browsersync & npm run -s watch:sass & npm run -s watch:js"
+    "sass:css": "node-sass $npm_package_config_sass $npm_package_config_css --output-style expanded",
+    "sass:postcss": "postcss --use autoprefixer -o $npm_package_config_css $npm_package_config_css",
+    "sass:cssnano": "cssnano $npm_package_config_css $npm_package_config_css --no-autoprefixer --no-convertValues",
+    "sass": "npm run -s sass:css && npm run -s sass:postcss",
+    "js:browserify": "browserify $npm_package_config_scripts -o $npm_package_config_scriptsmin",
+    "js:uglify": "uglifyjs $npm_package_config_scriptsmin -o $npm_package_config_scriptsmin",
+    "js": "npm run -s js:browserify && npm run -s js:uglify",
+    "watch:sass": "fsmonitor -d $npm_package_config_sassfolder -q '+*.scss' npm run -s sass",
+    "watch:js": "fsmonitor -d $npm_package_config_scriptsfolder -q '+*.js' npm run -s js",
+    "browsersync": "browser-sync start --files $npm_package_config_theme --files '!.git/*' --no-open --proxy $npm_package_config_watchproxy",
+    "watch": "npm run -s browsersync & npm run -s watch:sass & npm run -s watch:js",
+    "deploy": "sh $(pwd)/deploy.sh",
+    "parker": "parker $npm_package_config_css"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
+    "browserify-shim": "^3.8.12",
     "cssnano": "^3.4.0",
     "cssnano-cli": "^1.0.3",
     "fsmonitor": "^0.2.4",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.3.2",
-    "uglify-js": "^2.6.1"
+    "uglify-js": "^2.6.1",
+    "uncss": "^0.13.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
   }
 }

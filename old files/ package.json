@@ -1,0 +1,25 @@
+{
+  "name": "flexbones-deploy",
+  "version": "1.0.0",
+  "description": "Deploy to servers",
+  "author": "Rory Ashford <rory@roikles.com>",
+  "scripts": {
+    "db-export": "wp search-replace http://localhost/barebones http://staging.codebluedigital.com/flexbones && wp db export $(pwd)/db-export.sql && wp search-replace http://staging.codebluedigital.com/flexbones http://localhost/barebones",
+    "build:compile": "rsync -av $(pwd)/wp-content/themes/flexbones $(pwd)/build --exclude='.DS_Store' --exclude='.git' --exclude='.gitignore' --exclude='node_modules' --exclude='npm-debug.log' --exclude='assets/sass' --exclude='assets/js' --exclude='build'",
+    "build": "npm run db-export && imagemin $(pwd)/wp-content/themes/flexbones/assets/imgs $(pwd)/wp-content/themes/flexbones/assets/imgs && svg2png $(pwd)/wp-content/themes/flexbones/assets/imgs && npm run build:compile"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "cssnano": "^3.4.0",
+    "cssnano-cli": "^1.0.3",
+    "fsmonitor": "^0.2.4",
+    "imagemin-cli": "^2.0.0",
+    "livereload": "^0.4.0",
+    "node-sass": "^3.4.2",
+    "pixrem-cli": "^1.0.3",
+    "postcss-cli": "^2.3.2",
+    "postcss-svg-fallback": "^1.2.3",
+    "svg2png-cli": "^1.1.1",
+    "uglify-js": "^2.6.1"
+  }
+}
