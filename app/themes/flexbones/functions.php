@@ -13,3 +13,4 @@ get_template_part($root . '/filters');
 get_template_part($root . '/menus');
 get_template_part($root . '/scripts');
 get_template_part($root . '/cpts');
+get_template_part($root . '/taxonomies');
