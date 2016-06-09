@@ -1,0 +1,21 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /flexbones/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /flexbones/index.php [L]
+
+</IfModule>
+
+# END WordPress
+
+<IfModule mod_rewrite.c>
+# Attempt to load files from production if
+# they're not in our local version
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule app/uploads/(.*) \
+  http://myproductionsite.com/app/uploads/$1 [NC,L]
+</IfModule>
