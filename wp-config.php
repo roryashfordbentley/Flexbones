@@ -16,10 +16,12 @@ define('LOGGED_IN_SALT',   '|9qWp/W%g-T.]CVW_g)a-BTEwU( 8A.@(qZ7v)@}RC`z{[prC=^o
 define('NONCE_SALT',       'nimJ%+f>u`CYA|Ab5|o-c]/`.xv7p:xQ%fO][3}+rDG@tjM}+n]6I|fsqq>lK5f7');
 
 $table_prefix  = 'As5fghte_';
+$folder = '/flexbones';
 
 define("WP_DEBUG",true);
-define("WP_CONTENT_DIR", dirname(__FILE__). "/wp-content" );
-define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"]. "/e3/wp-content");
+define("WP_CONTENT_DIR", dirname(__FILE__). "/app" );
+define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"] . $folder . "/wp-content");
+define('UPLOADS', 'app/uploads');
 
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
