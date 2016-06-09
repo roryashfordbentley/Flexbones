@@ -1,0 +1,16 @@
+# Security
+#
+# Dont execute anything that contains the string 'php'
+# This WILL cause problems with Gravity PDF Extended as they run php from the uplaods folder
+
+<FilesMatch "\.(php|php\.)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Dont allow any of the listed scripts to be executed within this directory
+# Typically you would never need to execute any code within your uploads dirtectory
+# If you find this breaks something it could be a badly built plugin using this data-store for its code (which is bad!)
+
+Options -ExecCGI
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi

@@ -33,13 +33,12 @@ define('SECURE_AUTH_SALT', 'lJQEl#rSCYza6N,Yn5{1lgx~M)Rx5x_ PxSJ|lZs]x{<;(KL4% R
 define('LOGGED_IN_SALT',   '|9qWp/W%g-T.]CVW_g)a-BTEwU( 8A.@(qZ7v)@}RC`z{[prC=^oX-fKMWD.5DWd');
 define('NONCE_SALT',       'nimJ%+f>u`CYA|Ab5|o-c]/`.xv7p:xQ%fO][3}+rDG@tjM}+n]6I|fsqq>lK5f7');
 
+// Prevent backend file editing
+define('DISALLOW_FILE_EDIT',true);
+
 if ( !defined('ABSPATH') )
     define('ABSPATH', dirname(__FILE__) . '/');
 
 require_once(ABSPATH . 'wp-settings.php');
 
 
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
-
-require_once(ABSPATH . 'wp-settings.php');

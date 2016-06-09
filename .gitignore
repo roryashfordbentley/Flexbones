@@ -8,6 +8,7 @@ db-export.sql
 wp/*
 !wp/readme.md
 app/uploads/*
+!app/uploads/.htaccess
 app/debug.log
 app/plugins
 !app/plugins/index.php
