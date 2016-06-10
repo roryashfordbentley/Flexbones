@@ -1,0 +1,402 @@
+[31mPA[39m[33mRK[39m[32mER[39m-JS
+Total Stylesheets: 1
+Total Stylesheet Size: 6655
+Total Rules: 94
+Total Selectors: 168
+Total Identifiers: 202
+Total Declarations: 160
+Selectors Per Rule: 1.7872340425531914
+Identifiers Per Selector: 1.2023809523809523
+Specificity Per Selector: 8.821428571428571
+Top Selector Specificity: 20
+Top Selector Specificity Selector: .grid:before
+Total Id Selectors: 0
+Total Unique Colors: 5
+Unique Colors: #DABB3A,#CCCCCC,#F7F6F6,#1EA061,#13A2F7
+Total Important Keywords: 0
+Total Media Queries: 4
+Media Queries: (min-width: 800px),(min-width: 1000px),(min-width: 1200px),(min-width: 1100px)
+
+[31maudio,[39m
+[31mcanvas,[39m
+[31miframe,[39m
+[31mimg,[39m
+[31msvg,[39m
+[31mvideo {[39m
+[31m    vertical-align: middle;[39m
+[31m}[39m
+html {
+    font-size: 50%;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+[31m}[39m
+[31m.wrapper {[39m
+[31m    margin: 0 auto;[39m
+[31m    width: 90%;[39m
+[31m}[39m
+[31m@media (min-width: 1000px) {[39m
+[31m    .wrapper {[39m
+[31m        max-width: 1200px;[39m
+[31m    }[39m
+[31m}[39m
+[31m.wrapper--small {[39m
+[31m    width: 75%;[39m
+[31m}[39m
+[31m@media (min-width: 1000px) {[39m
+[31m    .wrapper--small {[39m
+[31m        max-width: 1200px;[39m
+[31m    }[39m
+[31m}[39m
+[31m.grid {[39m
+[31m    display: block;[39m
+[31m    margin-left: -2.4rem;[39m
+[31m    *zoom: 1;[39m
+[31m}[39m
+[31m.grid:after,[39m
+[31m.grid:before {[39m
+[31m    content: "";[39m
+[31m    display: table;[39m
+[31m}[39m
+[31m.grid:after {[39m
+[31m    clear: both;[39m
+[31m}[39m
+[31m.grid > * {[39m
+[31m    float: left;[39m
+[31m    position: relative;[39m
+[31m    padding-left: 2.4rem;[39m
+[31m}[39m
+[31m.grid--no-gutter {[39m
+[31m    margin-left: 0;[39m
+[31m}[39m
+[31m.grid--no-gutter > * {[39m
+[31m    padding-left: 0;[39m
+[31m}[39m
+[31m.span--1-12 {[39m
+[31m    width: 8.33333%;[39m
+[31m}[39m
+[31m.span--1-6,[39m
+[31m.span--2-12 {[39m
+[31m    width: 16.66667%;[39m
+[31m}[39m
+[31m.span--1-4,[39m
+[31m.span--3-12 {[39m
+[31m    width: 25%;[39m
+[31m}[39m
+[31m.span--1-3,[39m
+[31m.span--2-6,[39m
+[31m.span--4-12 {[39m
+[31m    width: 33.33333%;[39m
+[31m}[39m
+[31m.span--5-12 {[39m
+[31m    width: 41.66667%;[39m
+[31m}[39m
+[31m.span--1-2,[39m
+[31m.span--2-4,[39m
+[31m.span--3-6,[39m
+[31m.span--6-12 {[39m
+[31m    width: 50%;[39m
+[31m}[39m
+[31m.span--7-12 {[39m
+[31m    width: 58.33333%;[39m
+[31m}[39m
+[31m.span--2-3,[39m
+[31m.span--4-6,[39m
+[31m.span--8-12 {[39m
+[31m    width: 66.66667%;[39m
+[31m}[39m
+[31m.span--3-4,[39m
+[31m.span--9-12 {[39m
+[31m    width: 75%;[39m
+[31m}[39m
+[31m.span--10-12,[39m
+[31m.span--5-6 {[39m
+[31m    width: 83.33333%;[39m
+[31m}[39m
+[31m.span--11-12 {[39m
+[31m    width: 91.66667%;[39m
+[31m}[39m
+[31m.span--1-1,[39m
+[31m.span--12-12,[39m
+[31m.span--2-2,[39m
+[31m.span--3-3,[39m
+[31m.span--4-4,[39m
+[31m.span--6-6 {[39m
+[31m    width: 100%;[39m
+[31m}[39m
+[31m.span--omega {[39m
+[31m    float: right;[39m
+}
+body:after {
+}
+@media (min-width: 800px) {
+[31m    .grid {[39m
+[31m        display: block;[39m
+[31m        margin-left: -2.4rem;[39m
+[31m        *zoom: 1;[39m
+[31m    }[39m
+[31m    .grid:after,[39m
+[31m    .grid:before {[39m
+[31m        content: "";[39m
+[31m        display: table;[39m
+[31m    }[39m
+[31m    .grid:after {[39m
+[31m        clear: both;[39m
+[31m    }[39m
+[31m    .grid > * {[39m
+[31m        float: left;[39m
+[31m        position: relative;[39m
+[31m        padding-left: 2.4rem;[39m
+[31m    }[39m
+[31m    .grid--no-gutter--m {[39m
+[31m        margin-left: 0;[39m
+[31m    }[39m
+[31m    .grid--no-gutter--m > * {[39m
+[31m        padding-left: 0;[39m
+[31m    }[39m
+[31m    .span--1-12--m {[39m
+[31m        width: 8.33333%;[39m
+[31m    }[39m
+[31m    .span--1-6--m,[39m
+[31m    .span--2-12--m {[39m
+[31m        width: 16.66667%;[39m
+[31m    }[39m
+[31m    .span--1-4--m,[39m
+[31m    .span--3-12--m {[39m
+[31m        width: 25%;[39m
+[31m    }[39m
+[31m    .span--1-3--m,[39m
+[31m    .span--2-6--m,[39m
+[31m    .span--4-12--m {[39m
+[31m        width: 33.33333%;[39m
+[31m    }[39m
+[31m    .span--5-12--m {[39m
+[31m        width: 41.66667%;[39m
+[31m    }[39m
+[31m    .span--1-2--m,[39m
+[31m    .span--2-4--m,[39m
+[31m    .span--3-6--m,[39m
+[31m    .span--6-12--m {[39m
+[31m        width: 50%;[39m
+[31m    }[39m
+[31m    .span--7-12--m {[39m
+[31m        width: 58.33333%;[39m
+[31m    }[39m
+[31m    .span--2-3--m,[39m
+[31m    .span--4-6--m,[39m
+[31m    .span--8-12--m {[39m
+[31m        width: 66.66667%;[39m
+[31m    }[39m
+[31m    .span--3-4--m,[39m
+[31m    .span--9-12--m {[39m
+[31m        width: 75%;[39m
+[31m    }[39m
+[31m    .span--10-12--m,[39m
+[31m    .span--5-6--m {[39m
+[31m        width: 83.33333%;[39m
+[31m    }[39m
+[31m    .span--11-12--m {[39m
+[31m        width: 91.66667%;[39m
+[31m    }[39m
+[31m    .span--1-1--m,[39m
+[31m    .span--12-12--m,[39m
+[31m    .span--2-2--m,[39m
+[31m    .span--3-3--m,[39m
+[31m    .span--4-4--m,[39m
+[31m    .span--6-6--m {[39m
+[31m        width: 100%;[39m
+[31m    }[39m
+[31m    .span--omega--m {[39m
+[31m        float: right;[39m
+[31m    }[39m
+    body:after {
+        position: fixed;
+}
+@media (min-width: 1100px) {
+[31m    .grid {[39m
+[31m        display: block;[39m
+[31m        margin-left: -2.4rem;[39m
+[31m        *zoom: 1;[39m
+[31m    }[39m
+[31m    .grid:after,[39m
+[31m    .grid:before {[39m
+[31m        content: "";[39m
+[31m        display: table;[39m
+[31m    }[39m
+[31m    .grid:after {[39m
+[31m        clear: both;[39m
+[31m    }[39m
+[31m    .grid > * {[39m
+[31m        float: left;[39m
+[31m        position: relative;[39m
+[31m        padding-left: 2.4rem;[39m
+[31m    }[39m
+[31m    .grid--no-gutter--l {[39m
+[31m        margin-left: 0;[39m
+[31m    }[39m
+[31m    .grid--no-gutter--l > * {[39m
+[31m        padding-left: 0;[39m
+[31m    }[39m
+[31m    .span--1-12--l {[39m
+[31m        width: 8.33333%;[39m
+[31m    }[39m
+[31m    .span--1-6--l,[39m
+[31m    .span--2-12--l {[39m
+[31m        width: 16.66667%;[39m
+[31m    }[39m
+[31m    .span--1-4--l,[39m
+[31m    .span--3-12--l {[39m
+[31m        width: 25%;[39m
+[31m    }[39m
+[31m    .span--1-3--l,[39m
+[31m    .span--2-6--l,[39m
+[31m    .span--4-12--l {[39m
+[31m        width: 33.33333%;[39m
+[31m    }[39m
+[31m    .span--5-12--l {[39m
+[31m        width: 41.66667%;[39m
+[31m    }[39m
+[31m    .span--1-2--l,[39m
+[31m    .span--2-4--l,[39m
+[31m    .span--3-6--l,[39m
+[31m    .span--6-12--l {[39m
+[31m        width: 50%;[39m
+[31m    }[39m
+[31m    .span--7-12--l {[39m
+[31m        width: 58.33333%;[39m
+[31m    }[39m
+[31m    .span--2-3--l,[39m
+[31m    .span--4-6--l,[39m
+[31m    .span--8-12--l {[39m
+[31m        width: 66.66667%;[39m
+[31m    }[39m
+[31m    .span--3-4--l,[39m
+[31m    .span--9-12--l {[39m
+[31m        width: 75%;[39m
+[31m    }[39m
+[31m    .span--10-12--l,[39m
+[31m    .span--5-6--l {[39m
+[31m        width: 83.33333%;[39m
+[31m    }[39m
+[31m    .span--11-12--l {[39m
+[31m        width: 91.66667%;[39m
+[31m    }[39m
+[31m    .span--1-1--l,[39m
+[31m    .span--12-12--l,[39m
+[31m    .span--2-2--l,[39m
+[31m    .span--3-3--l,[39m
+[31m    .span--4-4--l,[39m
+[31m    .span--6-6--l {[39m
+[31m        width: 100%;[39m
+[31m    }[39m
+[31m    .span--omega--l {[39m
+[31m        float: right;[39m
+[31m    }[39m
+    body:after {
+        position: fixed;
+    }
+}
+[31minput,[39m
+[31mol,[39m
+[31mp,[39m
+[31mtextarea,[39m
+[31mul {[39m
+[31m    font-weight: 400;[39m
+[31m    margin-bottom: 2.4rem;[39m
+[31m}[39m
+[31minput:last-child,[39m
+[31mol:last-child,[39m
+[31mp:last-child,[39m
+[31mtextarea:last-child,[39m
+[31mul:last-child {[39m
+[31m    margin-bottom: 0;[39m
+[31m}[39m
+[31ma {[39m
+[31m    text-decoration: none;[39m
+[31m    display: inline-block;[39m
+[31m}[39m
+[31ma:hover {[39m
+[31m    color: color(link, hover);[39m
+[31m}[39m
+[31mp a,[39m
+[31mp a:visited {[39m
+[31m    text-decoration: underline;[39m
+[31m}[39m
+[31mh1,[39m
+[31mh2,[39m
+[31mh3,[39m
+[31mh4,[39m
+[31mh5,[39m
+[31mh6 {[39m
+[31m    font-family: Helvetica, Arial, sans-serif;[39m
+[31m    font-weight: 700;[39m
+[31m}[39m
+[31mh1 {[39m
+[31m    font-size: 3.6rem;[39m
+[31m}[39m
+[31mh2 {[39m
+[31m    font-size: 2.4rem;[39m
+[31m}[39m
+[31mh3 {[39m
+[31m    font-size: 1.8rem;[39m
+[31m}[39m
+[31mol,[39m
+[31mul {[39m
+[31m    margin-left: 2.4rem;[39m
+[31m}[39m
+[31m.btn {[39m
+[31m    display: inline-block;[39m
+[31m    width: auto;[39m
+[31m    margin: 0;[39m
+[31m    cursor: pointer;[39m
+[31m    border: none;[39m
+[31m    outline: none;[39m
+[31m    webkit-font-smoothing: antialiased;[39m
+[31m}[39m
+[31m.btn:focus {[39m
+[31m    box-shadow: none;[39m
+[31m}[39m
+[31m.clear {[39m
+[31m    *zoom: 1;[39m
+[31m}[39m
+[31m.clear:after,[39m
+[31m.clear:before {[39m
+[31m    content: "";[39m
+[31m    display: table;[39m
+[31m}[39m
+[31m.clear:after {[39m
+[31m    clear: both;[39m
+[31m}[39m
+[31mlabel {[39m
+[31m    display: block;[39m
+[31m}[39m
+[31minput,[39m
+[31mselect,[39m
+[31mtextarea {[39m
+[31m    font-family: inherit;[39m
+[31m    outline: none;[39m
+[31m}[39m
+[31minput {[39m
+[31m    display: inline-block;[39m
+[31m    width: 100%;[39m
+[31m    border: none;[39m
+[31m    outline: none;[39m
+[31m    border: 1px solid #ccc;[39m
+[31m}[39m
+[31minput:focus {[39m
+[31m    background: #f7f6f6;[39m
+[31m}[39m
+[31mtextarea {[39m
+[31m    width: 100%;[39m
+[31m    border: 1px solid #ccc;[39m
+[31m}[39m
+[31mtextarea:focus {[39m
+[31m    background: #f7f6f6;[39m
+[31m}[39m
+[31mimg {[39m
+[31m    width: auto;[39m
+[31m    max-width: 100%;[39m
+[31m    height: auto;[39m
+[31m}[39m
+[31ma img {[39m
+[31m    border: 0;[39m
+[31m}[39m
