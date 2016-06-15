@@ -5,15 +5,14 @@
   "author": "Rory Ashford <rory@roikles.com>",
   "config": {
     "theme": "app/themes/flexbones",
-    "sass":"app/themes/flexbones/assets/sass/style.scss",
-    "sassfolder":"app/themes/flexbones/assets/sass",
-    "css":"app/themes/flexbones/style.css",
+    "sass": "app/themes/flexbones/assets/sass/style.scss",
+    "sassfolder": "app/themes/flexbones/assets/sass",
+    "css": "app/themes/flexbones/style.css",
     "scripts": "app/themes/flexbones/assets/js/scripts.js",
     "scriptsmin": "app/themes/flexbones/scripts.min.js",
     "scriptsfolder": "app/themes/flexbones/assets/js",
     "watch": "app/themes/flexbones/",
-    "watchproxy": "localhost/flexbones",
-    "templates": "http://localhost/flexbones/**/*.php"
+    "watchproxy": "localhost/flexbones"
   },
   "scripts": {
     "sass:css": "node-sass $npm_package_config_sass $npm_package_config_css --output-style expanded",
@@ -27,11 +26,10 @@
     "watch:js": "fsmonitor -d $npm_package_config_scriptsfolder -q '+*.js' npm run -s js",
     "browsersync": "browser-sync start --files $npm_package_config_theme --files '!.git/*' --no-open --proxy $npm_package_config_watchproxy",
     "watch": "npm run -s browsersync & npm run -s watch:sass & npm run -s watch:js",
-    "deploy": "sh $(pwd)/deploy.sh",
-    "tests:css:parker": "parker $npm_package_config_css --format 'human' > cssreport.txt",
-    "tests:css:uncss":"uncss $npm_package_config_css > usedcsstemp.css $npm_package_config_templates",
-    "tests:css:unusedcss":"prettydiff source:$npm_package_config_css diff:'usedcsstemp.css' readmethod:'filescreen' >> cssreport.txt",
-    "tests:css":"npm run tests:css:parker && npm run tests:css:uncss && npm run tests:css:unusedcss"
+    "deploy": "sh tools/deploy.sh",
+    "tests:css:parker": "parker $npm_package_config_css --format 'human'",
+    "tests:css:unused":"node tools/unused-css-rules.js",
+    "tests:css": "npm run -s tests:css:parker && npm run -s tests:css:unused"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
@@ -41,6 +39,7 @@
     "fsmonitor": "^0.2.4",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.3.2",
+    "prettydiff": "^99.0.1",
     "uglify-js": "^2.6.1",
     "uncss": "^0.13.0"
   },
