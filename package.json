@@ -39,9 +39,7 @@
     "fsmonitor": "^0.2.4",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.3.2",
-    "prettydiff": "^99.0.1",
-    "uglify-js": "^2.6.1",
-    "uncss": "^0.13.0"
+    "uglify-js": "^2.6.1"
   },
   "browserify": {
     "transform": [
