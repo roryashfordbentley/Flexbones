@@ -22,6 +22,7 @@ if (file_exists(dirname( __FILE__) . '/wp-config-local.php')) {
     define("UPLOADS", "app/uploads");
     define("WP_HOME","http://localhost/flexbones");
     define("WP_SITEURL","http://localhost/flexbones/wp");
+    define("WPLANG", "en_GB");
 }
 
 define('AUTH_KEY',         'Ylxj(%4M|l=Vfi }<,T12&Rrh-h6Jt`,r`3{5HaG]%>n@<:R3Ns$1|[i#/{-5<ON');
