@@ -19,7 +19,6 @@ if (file_exists(dirname( __FILE__) . '/wp-config-local.php')) {
     define("WP_DEBUG_LOG", true);
     define("WP_CONTENT_DIR", dirname(__FILE__). "/app" );
     define("WP_CONTENT_URL","http://". $_SERVER["HTTP_HOST"]. "/flexbones/app");
-    define("UPLOADS", "app/uploads");
     define("WP_HOME","http://localhost/flexbones");
     define("WP_SITEURL","http://localhost/flexbones/wp");
     define("WPLANG", "en_GB");
