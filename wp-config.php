@@ -24,6 +24,8 @@ if (file_exists(dirname( __FILE__) . '/wp-config-local.php')) {
     define("WPLANG", "en_GB");
 }
 
+define('DB_CHARSET', 'utf8');
+
 define('AUTH_KEY',         'Ylxj(%4M|l=Vfi }<,T12&Rrh-h6Jt`,r`3{5HaG]%>n@<:R3Ns$1|[i#/{-5<ON');
 define('SECURE_AUTH_KEY',  'Ph1+vzEq>twte;aQ*F(zNyK]-Zvvl{i0vwaFI5C.+TLg]~JP6@: +K=qLgdCjZAU');
 define('LOGGED_IN_KEY',    's!qBz_Dpw:Fe9eplI7viGT$9zydC4J%IQQQa)8W}-W/#c@/bNM7~s~>|0y}@nNtq');
