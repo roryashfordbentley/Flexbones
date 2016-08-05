@@ -30,7 +30,7 @@ License URI:    n/a
 ////
 @import "tools/_clearfix";
 @import "tools/_at-breakpoint";
-@import "tools/_gridtacular";
+@import "tools/_gridtacular-flexbox";
 @import "tools/_rem";
 @import "tools/_fluid-bg";
 @import "tools/_aspect-ratios";
@@ -57,5 +57,5 @@ License URI:    n/a
 // Include the styles for each component here
 ////
 
-@import "../components/header/_index";
-@import "../components/footer/_index";
+//@import "../components/header/_index";
+//@import "../components/footer/_index";

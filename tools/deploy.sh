@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-localUrl="http://localhost/mysite"
-remoteUrl="http://mysite.com"
-remoteUrlRelative="myfolder/mysite"
-remoteUrlPath="/home/myfolder/mysite"
-remoteMysqlDb="databasename"
-remoteMysqlUser="databaseuser"
-remoteMysqlPass="my5ecur3pa55!!111!1"
-remoteSshUsernameHost="me@server.com"
+projectName="Flexbones"
+localUrl="http://localhost/websitename"
+remoteUrl="http://staging.codebluedigital.com/websitename"
+remoteUrlRelative="public_html"
+remoteUrlPath="/home/websitename"
+remoteMysqlDb="dbname"
+remoteMysqlUser="username"
+remoteMysqlPass="pa55w0rd"
+remoteSshUsernameHost="username@varuna.uksrv.co.uk"
 remoteSshPort="722"
 buildFolder="build"
 dbBackupName="db_backup.sql"
@@ -76,6 +77,31 @@ declare -a backupOptions=(
     --exclude='deploy.sh' 
 )
 
+echo $hr
+echo ${lightGreen} $projectName "Deployment" ${nc}
+echo $hr
+echo ""
+echo "${lightGreen}⚡ Local URL:  ${lightBlue} $localUrl"
+echo "${lightGreen}⚡ Remote URL: ${lightBlue} $remoteUrl"
+echo "${lightGreen}⚡ Remote Relative URL: ${lightBlue} $remoteUrlRelative"
+echo "${lightGreen}⚡ Remote URL Path: ${lightBlue} $remoteUrlPath"
+echo "${lightGreen}⚡ Remote Database Name: ${lightBlue} $remoteMysqlDb"
+echo "${lightGreen}⚡ Remote MySQL Username: ${lightBlue} $remoteMysqlUser"
+echo "${lightGreen}⚡ Remote SSH Username: ${lightBlue} $remoteSshUsernameHost"
+echo "${lightGreen}⚡ Remote SSH Port ${lightBlue} $remoteSshPort"
+echo "${lightGreen}⚡ Build Folder: ${lightBlue} $buildFolder"
+echo "${lightGreen}⚡ Database Backup Name: ${lightBlue} $dbBackupName ${nc} "
+echo ""
+echo $hrThin
+# Promt the user to check details 
+read -p "Are you sure you are ready to deploy? Incorrect settings could do irreversible damage if the wrong server is deployed to. Are you sure you wish to continue? [Y/N]" -n 1 -r
+
+
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
 # Run it!!!!!!!!
 echo $hr
 echo $lightBlue
@@ -114,6 +140,6 @@ echo $hrThin
 echo "${lightGreen}⚡ Migrating Database to: [${lightBlue}$remoteUrl${lightGreen}]${nc}"
 
 # Update the database
-ssh ${remoteSshOptions[@]} "mysql -u $remoteMysqlUser --password=$remoteMysqlPass $remoteMysqlDb < $remoteUrlRelative/$dbBackupName"
+# ssh ${remoteSshOptions[@]} "mysql -u $remoteMysqlUser --password=$remoteMysqlPass $remoteMysqlDb < $remoteUrlRelative/$dbBackupName"
 
 echo $hrThin
