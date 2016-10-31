@@ -10,7 +10,7 @@ remoteMysqlPass="pa55w0rd"
 remoteSshUsernameHost="username@varuna.uksrv.co.uk"
 remoteSshPort="722"
 buildFolder="build"
-dbBackupName="db_backup.sql"
+dbBackupName="websitename_"$(date +%Y%m%d_%H%M%S.sql)
 
 # Debug colours
 red='\033[0;31m'
