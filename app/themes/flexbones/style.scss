@@ -28,34 +28,33 @@ License URI:    n/a
 // Tools
 // Mixins, functions and configs that generally dont produce output
 ////
-@import "tools/_clearfix";
-@import "tools/_at-breakpoint";
-@import "tools/_gridtacular-flexbox";
-@import "tools/_rem";
-@import "tools/_fluid-bg";
-@import "tools/_aspect-ratios";
-@import "tools/_flex-type";
+@import "assets/sass/tools/_clearfix";
+@import "assets/sass/tools/_at-breakpoint";
+@import "assets/sass/tools/_gridtacular-flexbox";
+@import "assets/sass/tools/_rem";
+@import "assets/sass/tools/_fluid-bg";
+@import "assets/sass/tools/_aspect-ratios";
+@import "assets/sass/tools/_flex-type";
 
 ////
 // Globals
 // Reusable front end components
 ////
-@import "globals/_reset";
-@import "globals/_html-body";
-@import "globals/_wrapper";
-@import "globals/_grid-setup";
-@import "globals/_typography";
-@import "globals/_buttons";
-@import "globals/_clear";
-@import "globals/_forms";
-@import "globals/_imgs";
-@import "globals/_navigation";
-@import "globals/_tables";
+@import "assets/sass/globals/_reset";
+@import "assets/sass/globals/_html-body";
+@import "assets/sass/globals/_wrapper";
+@import "assets/sass/globals/_grid-setup";
+@import "assets/sass/globals/_typography";
+@import "assets/sass/globals/_buttons";
+@import "assets/sass/globals/_clear";
+@import "assets/sass/globals/_forms";
+@import "assets/sass/globals/_imgs";
+@import "assets/sass/globals/_navigation";
+@import "assets/sass/globals/_tables";
 
 ////
 // Components
 // Include the styles for each component here
 ////
 
-//@import "../components/header/_index";
-//@import "../components/footer/_index";
+// @import "components/header/_index";

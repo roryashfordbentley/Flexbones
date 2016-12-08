@@ -4,7 +4,6 @@
   "description": "Watch sass,js and deploy",
   "author": "Rory Ashford <rory@roikles.com>",
   "config": {
-    "theme": "app/themes/flexbones",
     "sass": "app/themes/flexbones/assets/sass/style.scss",
     "sassfolder": "app/themes/flexbones/assets/sass",
     "css": "app/themes/flexbones/style.css",
