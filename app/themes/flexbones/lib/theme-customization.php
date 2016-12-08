@@ -1,14 +1,7 @@
 <?php
 /**
- * Flexbones Theme Options
+ * Flexbones Theme Customization
  */
-
-/**
- * NEW METHOD
- * Social Network Links
- */
-
-
 
 /**
  * Remove unused theme customisations

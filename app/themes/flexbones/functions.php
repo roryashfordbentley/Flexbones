@@ -7,7 +7,7 @@
 $root = 'lib';
 
 get_template_part($root . '/theme-setup');
-get_template_part($root . '/theme-options');
+get_template_part($root . '/theme-customization');
 get_template_part($root . '/helpers');
 get_template_part($root . '/filters');
 get_template_part($root . '/menus');
