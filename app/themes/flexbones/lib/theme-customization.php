@@ -7,12 +7,14 @@
  * Remove unused theme customisations
  */
 
-add_action('customize_register', 'remove_customize_bloat');
+add_filter( 'customize_loaded_components', 'remove_widgets_panel' );
 
-function remove_customize_bloat($wp_customize) {
-    $wp_customize->remove_panel('widgets');
-    $wp_customize->remove_section( 'static_front_page' );
-    $wp_customize->remove_section( 'title_tagline' );
+function remove_widgets_panel( $components ) {
+    $i = array_search( 'widgets', $components );
+    if ( false !== $i ) {
+        unset( $components[ $i ] );
+    }
+    return $components;
 }
 
 /**
