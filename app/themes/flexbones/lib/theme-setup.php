@@ -30,6 +30,7 @@ add_action('after_setup_theme', 'flexbones_setup');
  */
 
 add_action('admin_enqueue_scripts', 'admin_css');
+
 function admin_css() {
     wp_enqueue_style('admin-css', get_template_directory_uri() . '/style-admin.css');
 }
@@ -60,3 +61,14 @@ function get_component($component){
 
     return true;
 }
+
+/**
+ * Remove hints provided on incorrect user logins.
+ */
+
+add_filter( 'login_errors', 'no_wordpress_errors' );
+
+function no_wordpress_errors(){
+    return 'Incorrect login details.';
+}
+
