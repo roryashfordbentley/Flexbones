@@ -1,3 +1,1 @@
-<footer>
-    
-</footer>
+<!-- html/php content -->
