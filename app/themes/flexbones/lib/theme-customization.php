@@ -7,14 +7,24 @@
  * Remove unused theme customisations
  */
 
-add_filter( 'customize_loaded_components', 'remove_widgets_panel' );
+add_filter( 'customize_loaded_components', 'remove_widgets_customizer' );
 
-function remove_widgets_panel( $components ) {
+function remove_widgets_customizer( $components ) {
     $i = array_search( 'widgets', $components );
     if ( false !== $i ) {
         unset( $components[ $i ] );
     }
     return $components;
+}
+
+/**
+ * Remove 'Additional CSS' from theme customizer
+ */
+
+add_action( 'customize_register', 'remove_css_customizer', 15 );
+
+function remove_css_customizer( $wp_customize ) {
+    $wp_customize->remove_section( 'custom_css' );
 }
 
 /**
@@ -50,6 +60,93 @@ function add_address_customizer($wp_customize) {
             "type" => "textarea"
         )
     ));
+
+    // Post Code
+
+    $wp_customize->add_setting(
+        "post_code",
+        array(
+            "default"       => "",
+            "transport"     => "refresh",
+        )
+    );
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        "post_code",
+        array(
+            "label" => "Enter Post Code",
+            "section" => "contact_details",
+            "settings" => "post_code",
+            "type" => "input"
+        )
+    ));
+
+    // Latitude
+    $wp_customize->add_setting(
+        "latitude",
+        array(
+            "default"       => "asdf",
+            "transport"     => "refresh",
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            "latitude",
+            array(
+                "label" => "Enter Latitude (optional)",
+                "section" => "contact_details",
+                "settings" => "latitude",
+                "type" => "input"
+            )
+        )
+    );
+
+    // Longitude
+    $wp_customize->add_setting("longitude", array(
+        "default"       => "",
+        "transport"     => "refresh",
+    ));
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            "longitude",
+            array(
+                "label" => "Enter Longitude (optional)",
+                "section" => "contact_details",
+                "settings" => "longitude",
+                "type" => "input"
+            )
+        )
+    );
+
+    /**
+     * Set the Latitude and longitude if non present.
+     *
+     * If the post code field is set then run the get_lat_long function to
+     * auto populate the latitude and longitude of the address.
+     */
+    if ($wp_customize->get_setting('post_code')) {
+        
+        // Only call the API and set the coordinates if
+        // the latitude value is blank
+        if ($wp_customize->get_setting('latitude')->value() == '') {
+            $coordinates = get_lat_long($wp_customize->get_setting('post_code')->value());
+            set_theme_mod('latitude', $coordinates['latitude']);
+        }
+
+        // Only call the API and set the coordinates if
+        // the longitude value is blank
+        if ($wp_customize->get_setting('longitude')->value() == '') {
+            $coordinates = get_lat_long($wp_customize->get_setting('post_code')->value());
+            set_theme_mod('longitude', $coordinates['longitude']);
+        }
+
+    }
+    
 
     // Phone Number
     $wp_customize->add_setting("phone_number", array(
@@ -359,10 +456,6 @@ function get_lat_long($postcode){
     $output = array();
     $output['latitude'] = $decoded['result']['latitude'];
     $output['longitude'] = $decoded['result']['longitude'];
-
-    //$output['latitude'] = 'foo';
-    //$output['longitude'] = 'bar';
-    echo 'TESTING';
 
     return $output;
 
