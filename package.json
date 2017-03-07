@@ -23,7 +23,7 @@
     "js": "npm run -s js:browserify && npm run -s js:uglify",
     "watch:sass": "fsmonitor -d $npm_package_config_sassfolder -q '+*.scss' npm run -s sass",
     "watch:js": "fsmonitor -d $npm_package_config_scriptsfolder -q '+*.js' npm run -s js",
-    "browsersync": "browser-sync start --files 'app/themes/flexbones/*, !app/themes/flexbones/**/*.scss, !.git/*' --no-open --proxy $npm_package_config_watchproxy",
+    "browsersync": "browser-sync start --files 'app/themes/gipsil/*, app/themes/gipsil/**/*.php, !app/themes/gipsil/**/*.scss, !.git/*' --no-open --proxy $npm_package_config_watchproxy",
     "watch": "npm run -s browsersync & npm run -s watch:sass & npm run -s watch:js",
     "deploy": "sh tools/deploy.sh",
     "tests:css:parker": "parker $npm_package_config_css --format 'human'",
